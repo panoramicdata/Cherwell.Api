@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse
+    /// TeamsRemoveCustomerFromWorkgroupResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse :  IEquatable<TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse>, IValidatableObject
+    public partial class TeamsRemoveCustomerFromWorkgroupResponse :  IEquatable<TeamsRemoveCustomerFromWorkgroupResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse" /> class.
+        /// Initializes a new instance of the <see cref="TeamsRemoveCustomerFromWorkgroupResponse" /> class.
         /// </summary>
         /// <param name="WorkgroupId">WorkgroupId.</param>
         /// <param name="CustomerRecordId">CustomerRecordId.</param>
@@ -323,7 +323,7 @@ namespace Cherwell.Model
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse(string WorkgroupId = default(string), string CustomerRecordId = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public TeamsRemoveCustomerFromWorkgroupResponse(string WorkgroupId = default(string), string CustomerRecordId = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.WorkgroupId = WorkgroupId;
             this.CustomerRecordId = CustomerRecordId;
@@ -365,7 +365,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse {\n");
+            sb.Append("class TeamsRemoveCustomerFromWorkgroupResponse {\n");
             sb.Append("  WorkgroupId: ").Append(WorkgroupId).Append("\n");
             sb.Append("  CustomerRecordId: ").Append(CustomerRecordId).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
@@ -393,15 +393,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse);
+            return this.Equals(obj as TeamsRemoveCustomerFromWorkgroupResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse instances are equal
+        /// Returns true if TeamsRemoveCustomerFromWorkgroupResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse to be compared</param>
+        /// <param name="other">Instance of TeamsRemoveCustomerFromWorkgroupResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse other)
+        public bool Equals(TeamsRemoveCustomerFromWorkgroupResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

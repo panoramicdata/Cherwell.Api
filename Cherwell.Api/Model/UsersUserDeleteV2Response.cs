@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsUsersUserDeleteV2Response
+    /// UsersUserDeleteV2Response
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsUsersUserDeleteV2Response :  IEquatable<TrebuchetWebApiDataContractsUsersUserDeleteV2Response>, IValidatableObject
+    public partial class UsersUserDeleteV2Response :  IEquatable<UsersUserDeleteV2Response>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsUsersUserDeleteV2Response" /> class.
+        /// Initializes a new instance of the <see cref="UsersUserDeleteV2Response" /> class.
         /// </summary>
         /// <param name="UserRecordId">UserRecordId.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsUsersUserDeleteV2Response(string UserRecordId = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public UsersUserDeleteV2Response(string UserRecordId = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.UserRecordId = UserRecordId;
             this.ErrorCode = ErrorCode;
@@ -358,7 +358,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsUsersUserDeleteV2Response {\n");
+            sb.Append("class UsersUserDeleteV2Response {\n");
             sb.Append("  UserRecordId: ").Append(UserRecordId).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
@@ -385,15 +385,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsUsersUserDeleteV2Response);
+            return this.Equals(obj as UsersUserDeleteV2Response);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsUsersUserDeleteV2Response instances are equal
+        /// Returns true if UsersUserDeleteV2Response instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsUsersUserDeleteV2Response to be compared</param>
+        /// <param name="other">Instance of UsersUserDeleteV2Response to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsUsersUserDeleteV2Response other)
+        public bool Equals(UsersUserDeleteV2Response other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

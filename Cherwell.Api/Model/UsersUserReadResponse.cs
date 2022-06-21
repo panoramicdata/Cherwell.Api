@@ -14,19 +14,19 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsUsersUserReadResponse
+    /// UsersUserReadResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsUsersUserReadResponse :  IEquatable<TrebuchetWebApiDataContractsUsersUserReadResponse>, IValidatableObject
+    public partial class UsersUserReadResponse :  IEquatable<UsersUserReadResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsUsersUserReadResponse" /> class.
+        /// Initializes a new instance of the <see cref="UsersUserReadResponse" /> class.
         /// </summary>
         /// <param name="Error">Error.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="Users">Users.</param>
-        public TrebuchetWebApiDataContractsUsersUserReadResponse(string Error = default(string), string ErrorCode = default(string), bool? HasError = default(bool?), List<TrebuchetWebApiDataContractsUsersUser> Users = default(List<TrebuchetWebApiDataContractsUsersUser>))
+        public UsersUserReadResponse(string Error = default(string), string ErrorCode = default(string), bool? HasError = default(bool?), List<UsersUser> Users = default(List<UsersUser>))
         {
             this.Error = Error;
             this.ErrorCode = ErrorCode;
@@ -53,7 +53,7 @@ namespace Cherwell.Model
         /// Gets or Sets Users
         /// </summary>
         [DataMember(Name="users", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsUsersUser> Users { get; set; }
+        public List<UsersUser> Users { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -61,7 +61,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsUsersUserReadResponse {\n");
+            sb.Append("class UsersUserReadResponse {\n");
             sb.Append("  Error: ").Append(Error).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  HasError: ").Append(HasError).Append("\n");
@@ -87,15 +87,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsUsersUserReadResponse);
+            return this.Equals(obj as UsersUserReadResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsUsersUserReadResponse instances are equal
+        /// Returns true if UsersUserReadResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsUsersUserReadResponse to be compared</param>
+        /// <param name="other">Instance of UsersUserReadResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsUsersUserReadResponse other)
+        public bool Equals(UsersUserReadResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

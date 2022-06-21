@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesSearchItem
+    /// SearchesSearchItem
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesSearchItem :  IEquatable<TrebuchetWebApiDataContractsSearchesSearchItem>, IValidatableObject
+    public partial class SearchesSearchItem :  IEquatable<SearchesSearchItem>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesSearchItem" /> class.
+        /// Initializes a new instance of the <see cref="SearchesSearchItem" /> class.
         /// </summary>
         /// <param name="Association">Association.</param>
         /// <param name="Links">Links.</param>
@@ -30,7 +30,7 @@ namespace Cherwell.Model
         /// <param name="ScopeOwner">ScopeOwner.</param>
         /// <param name="SearchId">SearchId.</param>
         /// <param name="SearchName">SearchName.</param>
-        public TrebuchetWebApiDataContractsSearchesSearchItem(string Association = default(string), List<TrebuchetWebApiDataContractsCoreLink> Links = default(List<TrebuchetWebApiDataContractsCoreLink>), string LocalizedScopeName = default(string), string ParentFolderId = default(string), string Scope = default(string), string ScopeOwner = default(string), string SearchId = default(string), string SearchName = default(string))
+        public SearchesSearchItem(string Association = default(string), List<CoreLink> Links = default(List<CoreLink>), string LocalizedScopeName = default(string), string ParentFolderId = default(string), string Scope = default(string), string ScopeOwner = default(string), string SearchId = default(string), string SearchName = default(string))
         {
             this.Association = Association;
             this.Links = Links;
@@ -51,7 +51,7 @@ namespace Cherwell.Model
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name="links", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCoreLink> Links { get; set; }
+        public List<CoreLink> Links { get; set; }
         /// <summary>
         /// Gets or Sets LocalizedScopeName
         /// </summary>
@@ -89,7 +89,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesSearchItem {\n");
+            sb.Append("class SearchesSearchItem {\n");
             sb.Append("  Association: ").Append(Association).Append("\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
             sb.Append("  LocalizedScopeName: ").Append(LocalizedScopeName).Append("\n");
@@ -119,15 +119,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesSearchItem);
+            return this.Equals(obj as SearchesSearchItem);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesSearchItem instances are equal
+        /// Returns true if SearchesSearchItem instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesSearchItem to be compared</param>
+        /// <param name="other">Instance of SearchesSearchItem to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesSearchItem other)
+        public bool Equals(SearchesSearchItem other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

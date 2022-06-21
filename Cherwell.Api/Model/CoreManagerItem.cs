@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsCoreManagerItem
+    /// CoreManagerItem
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsCoreManagerItem :  IEquatable<TrebuchetWebApiDataContractsCoreManagerItem>, IValidatableObject
+    public partial class CoreManagerItem :  IEquatable<CoreManagerItem>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsCoreManagerItem" /> class.
+        /// Initializes a new instance of the <see cref="CoreManagerItem" /> class.
         /// </summary>
         /// <param name="Association">Association.</param>
         /// <param name="Description">Description.</param>
@@ -35,7 +35,7 @@ namespace Cherwell.Model
         /// <param name="Scope">Scope.</param>
         /// <param name="ScopeOwner">ScopeOwner.</param>
         /// <param name="StandInKey">StandInKey.</param>
-        public TrebuchetWebApiDataContractsCoreManagerItem(string Association = default(string), string Description = default(string), string DisplayName = default(string), string GalleryImage = default(string), string Id = default(string), List<TrebuchetWebApiDataContractsCoreLink> Links = default(List<TrebuchetWebApiDataContractsCoreLink>), string LocalizedScopeName = default(string), string Name = default(string), string ParentFolder = default(string), bool? ParentIsScopeFolder = default(bool?), string Scope = default(string), string ScopeOwner = default(string), string StandInKey = default(string))
+        public CoreManagerItem(string Association = default(string), string Description = default(string), string DisplayName = default(string), string GalleryImage = default(string), string Id = default(string), List<CoreLink> Links = default(List<CoreLink>), string LocalizedScopeName = default(string), string Name = default(string), string ParentFolder = default(string), bool? ParentIsScopeFolder = default(bool?), string Scope = default(string), string ScopeOwner = default(string), string StandInKey = default(string))
         {
             this.Association = Association;
             this.Description = Description;
@@ -81,7 +81,7 @@ namespace Cherwell.Model
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name="links", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCoreLink> Links { get; set; }
+        public List<CoreLink> Links { get; set; }
         /// <summary>
         /// Gets or Sets LocalizedScopeName
         /// </summary>
@@ -124,7 +124,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsCoreManagerItem {\n");
+            sb.Append("class CoreManagerItem {\n");
             sb.Append("  Association: ").Append(Association).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
@@ -159,15 +159,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsCoreManagerItem);
+            return this.Equals(obj as CoreManagerItem);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsCoreManagerItem instances are equal
+        /// Returns true if CoreManagerItem instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsCoreManagerItem to be compared</param>
+        /// <param name="other">Instance of CoreManagerItem to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsCoreManagerItem other)
+        public bool Equals(CoreManagerItem other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsUsersUserListResponse
+    /// UsersUserListResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsUsersUserListResponse :  IEquatable<TrebuchetWebApiDataContractsUsersUserListResponse>, IValidatableObject
+    public partial class UsersUserListResponse :  IEquatable<UsersUserListResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsUsersUserListResponse" /> class.
+        /// Initializes a new instance of the <see cref="UsersUserListResponse" /> class.
         /// </summary>
         /// <param name="Users">Users.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsUsersUserListResponse(List<TrebuchetWebApiDataContractsUsersUserV2> Users = default(List<TrebuchetWebApiDataContractsUsersUserV2>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public UsersUserListResponse(List<UsersUserV2> Users = default(List<UsersUserV2>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.Users = Users;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Model
         /// Gets or Sets Users
         /// </summary>
         [DataMember(Name="users", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsUsersUserV2> Users { get; set; }
+        public List<UsersUserV2> Users { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -358,7 +358,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsUsersUserListResponse {\n");
+            sb.Append("class UsersUserListResponse {\n");
             sb.Append("  Users: ").Append(Users).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
@@ -385,15 +385,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsUsersUserListResponse);
+            return this.Equals(obj as UsersUserListResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsUsersUserListResponse instances are equal
+        /// Returns true if UsersUserListResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsUsersUserListResponse to be compared</param>
+        /// <param name="other">Instance of UsersUserListResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsUsersUserListResponse other)
+        public bool Equals(UsersUserListResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

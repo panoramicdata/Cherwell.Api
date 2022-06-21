@@ -14,18 +14,18 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSecurityRightCategory
+    /// SecurityRightCategory
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSecurityRightCategory :  IEquatable<TrebuchetWebApiDataContractsSecurityRightCategory>, IValidatableObject
+    public partial class SecurityRightCategory :  IEquatable<SecurityRightCategory>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSecurityRightCategory" /> class.
+        /// Initializes a new instance of the <see cref="SecurityRightCategory" /> class.
         /// </summary>
         /// <param name="CategoryDescription">CategoryDescription.</param>
         /// <param name="CategoryId">CategoryId.</param>
         /// <param name="CategoryName">CategoryName.</param>
-        public TrebuchetWebApiDataContractsSecurityRightCategory(string CategoryDescription = default(string), string CategoryId = default(string), string CategoryName = default(string))
+        public SecurityRightCategory(string CategoryDescription = default(string), string CategoryId = default(string), string CategoryName = default(string))
         {
             this.CategoryDescription = CategoryDescription;
             this.CategoryId = CategoryId;
@@ -54,7 +54,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSecurityRightCategory {\n");
+            sb.Append("class SecurityRightCategory {\n");
             sb.Append("  CategoryDescription: ").Append(CategoryDescription).Append("\n");
             sb.Append("  CategoryId: ").Append(CategoryId).Append("\n");
             sb.Append("  CategoryName: ").Append(CategoryName).Append("\n");
@@ -79,15 +79,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSecurityRightCategory);
+            return this.Equals(obj as SecurityRightCategory);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSecurityRightCategory instances are equal
+        /// Returns true if SecurityRightCategory instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSecurityRightCategory to be compared</param>
+        /// <param name="other">Instance of SecurityRightCategory to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSecurityRightCategory other)
+        public bool Equals(SecurityRightCategory other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

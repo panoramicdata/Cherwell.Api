@@ -14,18 +14,18 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest
+    /// TeamsAddUserToTeamRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest :  IEquatable<TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest>, IValidatableObject
+    public partial class TeamsAddUserToTeamRequest :  IEquatable<TeamsAddUserToTeamRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest" /> class.
+        /// Initializes a new instance of the <see cref="TeamsAddUserToTeamRequest" /> class.
         /// </summary>
         /// <param name="TeamId">TeamId.</param>
         /// <param name="UserIsTeamManager">UserIsTeamManager.</param>
         /// <param name="UserRecordId">UserRecordId.</param>
-        public TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest(string TeamId = default(string), bool? UserIsTeamManager = default(bool?), string UserRecordId = default(string))
+        public TeamsAddUserToTeamRequest(string TeamId = default(string), bool? UserIsTeamManager = default(bool?), string UserRecordId = default(string))
         {
             this.TeamId = TeamId;
             this.UserIsTeamManager = UserIsTeamManager;
@@ -54,7 +54,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest {\n");
+            sb.Append("class TeamsAddUserToTeamRequest {\n");
             sb.Append("  TeamId: ").Append(TeamId).Append("\n");
             sb.Append("  UserIsTeamManager: ").Append(UserIsTeamManager).Append("\n");
             sb.Append("  UserRecordId: ").Append(UserRecordId).Append("\n");
@@ -79,15 +79,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest);
+            return this.Equals(obj as TeamsAddUserToTeamRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest instances are equal
+        /// Returns true if TeamsAddUserToTeamRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest to be compared</param>
+        /// <param name="other">Instance of TeamsAddUserToTeamRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest other)
+        public bool Equals(TeamsAddUserToTeamRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

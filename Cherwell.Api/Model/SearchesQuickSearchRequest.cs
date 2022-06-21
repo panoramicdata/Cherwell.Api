@@ -14,17 +14,17 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesQuickSearchRequest
+    /// SearchesQuickSearchRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesQuickSearchRequest :  IEquatable<TrebuchetWebApiDataContractsSearchesQuickSearchRequest>, IValidatableObject
+    public partial class SearchesQuickSearchRequest :  IEquatable<SearchesQuickSearchRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesQuickSearchRequest" /> class.
+        /// Initializes a new instance of the <see cref="SearchesQuickSearchRequest" /> class.
         /// </summary>
         /// <param name="BusObIds">BusObIds.</param>
         /// <param name="SearchText">SearchText.</param>
-        public TrebuchetWebApiDataContractsSearchesQuickSearchRequest(List<string> BusObIds = default(List<string>), string SearchText = default(string))
+        public SearchesQuickSearchRequest(List<string> BusObIds = default(List<string>), string SearchText = default(string))
         {
             this.BusObIds = BusObIds;
             this.SearchText = SearchText;
@@ -47,7 +47,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesQuickSearchRequest {\n");
+            sb.Append("class SearchesQuickSearchRequest {\n");
             sb.Append("  BusObIds: ").Append(BusObIds).Append("\n");
             sb.Append("  SearchText: ").Append(SearchText).Append("\n");
             sb.Append("}\n");
@@ -71,15 +71,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesQuickSearchRequest);
+            return this.Equals(obj as SearchesQuickSearchRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesQuickSearchRequest instances are equal
+        /// Returns true if SearchesQuickSearchRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesQuickSearchRequest to be compared</param>
+        /// <param name="other">Instance of SearchesQuickSearchRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesQuickSearchRequest other)
+        public bool Equals(SearchesQuickSearchRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

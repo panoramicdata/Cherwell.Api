@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse
+    /// OneStepActionsOneStepActionResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse :  IEquatable<TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse>, IValidatableObject
+    public partial class OneStepActionsOneStepActionResponse :  IEquatable<OneStepActionsOneStepActionResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse" /> class.
+        /// Initializes a new instance of the <see cref="OneStepActionsOneStepActionResponse" /> class.
         /// </summary>
         /// <param name="Completed">Completed.</param>
         /// <param name="CurrentPrimaryBusObId">CurrentPrimaryBusObId.</param>
@@ -326,7 +326,7 @@ namespace Cherwell.Model
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse(bool? Completed = default(bool?), string CurrentPrimaryBusObId = default(string), string CurrentPrimaryBusObRecId = default(string), bool? HasNewAccessToken = default(bool?), string NewAccessToken = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public OneStepActionsOneStepActionResponse(bool? Completed = default(bool?), string CurrentPrimaryBusObId = default(string), string CurrentPrimaryBusObRecId = default(string), bool? HasNewAccessToken = default(bool?), string NewAccessToken = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.Completed = Completed;
             this.CurrentPrimaryBusObId = CurrentPrimaryBusObId;
@@ -386,7 +386,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse {\n");
+            sb.Append("class OneStepActionsOneStepActionResponse {\n");
             sb.Append("  Completed: ").Append(Completed).Append("\n");
             sb.Append("  CurrentPrimaryBusObId: ").Append(CurrentPrimaryBusObId).Append("\n");
             sb.Append("  CurrentPrimaryBusObRecId: ").Append(CurrentPrimaryBusObRecId).Append("\n");
@@ -417,15 +417,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse);
+            return this.Equals(obj as OneStepActionsOneStepActionResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse instances are equal
+        /// Returns true if OneStepActionsOneStepActionResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse to be compared</param>
+        /// <param name="other">Instance of OneStepActionsOneStepActionResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse other)
+        public bool Equals(OneStepActionsOneStepActionResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

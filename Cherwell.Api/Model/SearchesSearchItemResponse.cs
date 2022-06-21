@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesSearchItemResponse
+    /// SearchesSearchItemResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesSearchItemResponse :  IEquatable<TrebuchetWebApiDataContractsSearchesSearchItemResponse>, IValidatableObject
+    public partial class SearchesSearchItemResponse :  IEquatable<SearchesSearchItemResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesSearchItemResponse" /> class.
+        /// Initializes a new instance of the <see cref="SearchesSearchItemResponse" /> class.
         /// </summary>
         /// <param name="Root">Root.</param>
         /// <param name="SupportedAssociations">SupportedAssociations.</param>
@@ -323,7 +323,7 @@ namespace Cherwell.Model
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsSearchesSearchItemResponse(TrebuchetWebApiDataContractsSearchesSearchFolder Root = default(TrebuchetWebApiDataContractsSearchesSearchFolder), List<TrebuchetWebApiDataContractsSearchesAssociation> SupportedAssociations = default(List<TrebuchetWebApiDataContractsSearchesAssociation>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public SearchesSearchItemResponse(SearchesSearchFolder Root = default(SearchesSearchFolder), List<SearchesAssociation> SupportedAssociations = default(List<SearchesAssociation>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.Root = Root;
             this.SupportedAssociations = SupportedAssociations;
@@ -337,12 +337,12 @@ namespace Cherwell.Model
         /// Gets or Sets Root
         /// </summary>
         [DataMember(Name="root", EmitDefaultValue=false)]
-        public TrebuchetWebApiDataContractsSearchesSearchFolder Root { get; set; }
+        public SearchesSearchFolder Root { get; set; }
         /// <summary>
         /// Gets or Sets SupportedAssociations
         /// </summary>
         [DataMember(Name="supportedAssociations", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSearchesAssociation> SupportedAssociations { get; set; }
+        public List<SearchesAssociation> SupportedAssociations { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -365,7 +365,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesSearchItemResponse {\n");
+            sb.Append("class SearchesSearchItemResponse {\n");
             sb.Append("  Root: ").Append(Root).Append("\n");
             sb.Append("  SupportedAssociations: ").Append(SupportedAssociations).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
@@ -393,15 +393,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesSearchItemResponse);
+            return this.Equals(obj as SearchesSearchItemResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesSearchItemResponse instances are equal
+        /// Returns true if SearchesSearchItemResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesSearchItemResponse to be compared</param>
+        /// <param name="other">Instance of SearchesSearchItemResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesSearchItemResponse other)
+        public bool Equals(SearchesSearchItemResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

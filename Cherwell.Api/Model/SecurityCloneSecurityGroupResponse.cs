@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSecurityCloneSecurityGroupResponse
+    /// SecurityCloneSecurityGroupResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSecurityCloneSecurityGroupResponse :  IEquatable<TrebuchetWebApiDataContractsSecurityCloneSecurityGroupResponse>, IValidatableObject
+    public partial class SecurityCloneSecurityGroupResponse :  IEquatable<SecurityCloneSecurityGroupResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSecurityCloneSecurityGroupResponse" /> class.
+        /// Initializes a new instance of the <see cref="SecurityCloneSecurityGroupResponse" /> class.
         /// </summary>
         /// <param name="SecurityGroupId">SecurityGroupId.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsSecurityCloneSecurityGroupResponse(string SecurityGroupId = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public SecurityCloneSecurityGroupResponse(string SecurityGroupId = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.SecurityGroupId = SecurityGroupId;
             this.ErrorCode = ErrorCode;
@@ -358,7 +358,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSecurityCloneSecurityGroupResponse {\n");
+            sb.Append("class SecurityCloneSecurityGroupResponse {\n");
             sb.Append("  SecurityGroupId: ").Append(SecurityGroupId).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
@@ -385,15 +385,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSecurityCloneSecurityGroupResponse);
+            return this.Equals(obj as SecurityCloneSecurityGroupResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSecurityCloneSecurityGroupResponse instances are equal
+        /// Returns true if SecurityCloneSecurityGroupResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSecurityCloneSecurityGroupResponse to be compared</param>
+        /// <param name="other">Instance of SecurityCloneSecurityGroupResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSecurityCloneSecurityGroupResponse other)
+        public bool Equals(SecurityCloneSecurityGroupResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

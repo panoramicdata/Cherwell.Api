@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesSearchResultsRequest
+    /// SearchesSearchResultsRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesSearchResultsRequest :  IEquatable<TrebuchetWebApiDataContractsSearchesSearchResultsRequest>, IValidatableObject
+    public partial class SearchesSearchResultsRequest :  IEquatable<SearchesSearchResultsRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesSearchResultsRequest" /> class.
+        /// Initializes a new instance of the <see cref="SearchesSearchResultsRequest" /> class.
         /// </summary>
         /// <param name="Association">Association.</param>
         /// <param name="AssociationName">AssociationName.</param>
@@ -41,7 +41,7 @@ namespace Cherwell.Model
         /// <param name="SearchText">SearchText.</param>
         /// <param name="Sorting">Sorting.</param>
         /// <param name="PromptValues">PromptValues.</param>
-        public TrebuchetWebApiDataContractsSearchesSearchResultsRequest(string Association = default(string), string AssociationName = default(string), string BusObId = default(string), string CustomGridDefId = default(string), string DateTimeFormatting = default(string), string FieldId = default(string), List<string> Fields = default(List<string>), List<TrebuchetWebApiDataContractsSearchesFilterInfo> Filters = default(List<TrebuchetWebApiDataContractsSearchesFilterInfo>), bool? IncludeAllFields = default(bool?), bool? IncludeSchema = default(bool?), int? PageNumber = default(int?), int? PageSize = default(int?), string Scope = default(string), string ScopeOwner = default(string), string SearchId = default(string), string SearchName = default(string), string SearchText = default(string), List<TrebuchetWebApiDataContractsSearchesSortInfo> Sorting = default(List<TrebuchetWebApiDataContractsSearchesSortInfo>), List<TrebuchetWebApiDataContractsCorePromptValue> PromptValues = default(List<TrebuchetWebApiDataContractsCorePromptValue>))
+        public SearchesSearchResultsRequest(string Association = default(string), string AssociationName = default(string), string BusObId = default(string), string CustomGridDefId = default(string), string DateTimeFormatting = default(string), string FieldId = default(string), List<string> Fields = default(List<string>), List<SearchesFilterInfo> Filters = default(List<SearchesFilterInfo>), bool? IncludeAllFields = default(bool?), bool? IncludeSchema = default(bool?), int? PageNumber = default(int?), int? PageSize = default(int?), string Scope = default(string), string ScopeOwner = default(string), string SearchId = default(string), string SearchName = default(string), string SearchText = default(string), List<SearchesSortInfo> Sorting = default(List<SearchesSortInfo>), List<CorePromptValue> PromptValues = default(List<CorePromptValue>))
         {
             this.Association = Association;
             this.AssociationName = AssociationName;
@@ -103,7 +103,7 @@ namespace Cherwell.Model
         /// Gets or Sets Filters
         /// </summary>
         [DataMember(Name="filters", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSearchesFilterInfo> Filters { get; set; }
+        public List<SearchesFilterInfo> Filters { get; set; }
         /// <summary>
         /// Gets or Sets IncludeAllFields
         /// </summary>
@@ -153,12 +153,12 @@ namespace Cherwell.Model
         /// Gets or Sets Sorting
         /// </summary>
         [DataMember(Name="sorting", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSearchesSortInfo> Sorting { get; set; }
+        public List<SearchesSortInfo> Sorting { get; set; }
         /// <summary>
         /// Gets or Sets PromptValues
         /// </summary>
         [DataMember(Name="promptValues", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCorePromptValue> PromptValues { get; set; }
+        public List<CorePromptValue> PromptValues { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -166,7 +166,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesSearchResultsRequest {\n");
+            sb.Append("class SearchesSearchResultsRequest {\n");
             sb.Append("  Association: ").Append(Association).Append("\n");
             sb.Append("  AssociationName: ").Append(AssociationName).Append("\n");
             sb.Append("  BusObId: ").Append(BusObId).Append("\n");
@@ -207,15 +207,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesSearchResultsRequest);
+            return this.Equals(obj as SearchesSearchResultsRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesSearchResultsRequest instances are equal
+        /// Returns true if SearchesSearchResultsRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesSearchResultsRequest to be compared</param>
+        /// <param name="other">Instance of SearchesSearchResultsRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesSearchResultsRequest other)
+        public bool Equals(SearchesSearchResultsRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

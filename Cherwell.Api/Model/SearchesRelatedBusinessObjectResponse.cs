@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse
+    /// SearchesRelatedBusinessObjectResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse :  IEquatable<TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse>, IValidatableObject
+    public partial class SearchesRelatedBusinessObjectResponse :  IEquatable<SearchesRelatedBusinessObjectResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse" /> class.
+        /// Initializes a new instance of the <see cref="SearchesRelatedBusinessObjectResponse" /> class.
         /// </summary>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
@@ -34,7 +34,7 @@ namespace Cherwell.Model
         /// <param name="RelatedBusinessObjects">RelatedBusinessObjects.</param>
         /// <param name="RelationshipId">RelationshipId.</param>
         /// <param name="TotalRecords">TotalRecords.</param>
-        public TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse(string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), List<TrebuchetWebApiDataContractsCoreLink> Links = default(List<TrebuchetWebApiDataContractsCoreLink>), int? PageNumber = default(int?), int? PageSize = default(int?), string ParentBusObId = default(string), string ParentBusObPublicId = default(string), string ParentBusObRecId = default(string), List<TrebuchetWebApiDataContractsBusinessObjectReadResponse> RelatedBusinessObjects = default(List<TrebuchetWebApiDataContractsBusinessObjectReadResponse>), string RelationshipId = default(string), int? TotalRecords = default(int?))
+        public SearchesRelatedBusinessObjectResponse(string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), List<CoreLink> Links = default(List<CoreLink>), int? PageNumber = default(int?), int? PageSize = default(int?), string ParentBusObId = default(string), string ParentBusObPublicId = default(string), string ParentBusObRecId = default(string), List<BusinessObjectReadResponse> RelatedBusinessObjects = default(List<BusinessObjectReadResponse>), string RelationshipId = default(string), int? TotalRecords = default(int?))
         {
             this.ErrorCode = ErrorCode;
             this.ErrorMessage = ErrorMessage;
@@ -69,7 +69,7 @@ namespace Cherwell.Model
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name="links", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCoreLink> Links { get; set; }
+        public List<CoreLink> Links { get; set; }
         /// <summary>
         /// Gets or Sets PageNumber
         /// </summary>
@@ -99,7 +99,7 @@ namespace Cherwell.Model
         /// Gets or Sets RelatedBusinessObjects
         /// </summary>
         [DataMember(Name="relatedBusinessObjects", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsBusinessObjectReadResponse> RelatedBusinessObjects { get; set; }
+        public List<BusinessObjectReadResponse> RelatedBusinessObjects { get; set; }
         /// <summary>
         /// Gets or Sets RelationshipId
         /// </summary>
@@ -117,7 +117,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse {\n");
+            sb.Append("class SearchesRelatedBusinessObjectResponse {\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
             sb.Append("  HasError: ").Append(HasError).Append("\n");
@@ -151,15 +151,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse);
+            return this.Equals(obj as SearchesRelatedBusinessObjectResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse instances are equal
+        /// Returns true if SearchesRelatedBusinessObjectResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse to be compared</param>
+        /// <param name="other">Instance of SearchesRelatedBusinessObjectResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse other)
+        public bool Equals(SearchesRelatedBusinessObjectResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

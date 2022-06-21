@@ -14,17 +14,17 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSecurityGetApiClientSettingsResponseItem
+    /// SecurityGetApiClientSettingsResponseItem
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSecurityGetApiClientSettingsResponseItem :  IEquatable<TrebuchetWebApiDataContractsSecurityGetApiClientSettingsResponseItem>, IValidatableObject
+    public partial class SecurityGetApiClientSettingsResponseItem :  IEquatable<SecurityGetApiClientSettingsResponseItem>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSecurityGetApiClientSettingsResponseItem" /> class.
+        /// Initializes a new instance of the <see cref="SecurityGetApiClientSettingsResponseItem" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="StandInKey">StandInKey.</param>
-        public TrebuchetWebApiDataContractsSecurityGetApiClientSettingsResponseItem(string Name = default(string), string StandInKey = default(string))
+        public SecurityGetApiClientSettingsResponseItem(string Name = default(string), string StandInKey = default(string))
         {
             this.Name = Name;
             this.StandInKey = StandInKey;
@@ -47,7 +47,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSecurityGetApiClientSettingsResponseItem {\n");
+            sb.Append("class SecurityGetApiClientSettingsResponseItem {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  StandInKey: ").Append(StandInKey).Append("\n");
             sb.Append("}\n");
@@ -71,15 +71,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSecurityGetApiClientSettingsResponseItem);
+            return this.Equals(obj as SecurityGetApiClientSettingsResponseItem);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSecurityGetApiClientSettingsResponseItem instances are equal
+        /// Returns true if SecurityGetApiClientSettingsResponseItem instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSecurityGetApiClientSettingsResponseItem to be compared</param>
+        /// <param name="other">Instance of SecurityGetApiClientSettingsResponseItem to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSecurityGetApiClientSettingsResponseItem other)
+        public bool Equals(SecurityGetApiClientSettingsResponseItem other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

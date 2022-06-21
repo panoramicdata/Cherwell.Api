@@ -14,19 +14,19 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse
+    /// SecurityClientSecuritySettingsResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse :  IEquatable<TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse>, IValidatableObject
+    public partial class SecurityClientSecuritySettingsResponse :  IEquatable<SecurityClientSecuritySettingsResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse" /> class.
+        /// Initializes a new instance of the <see cref="SecurityClientSecuritySettingsResponse" /> class.
         /// </summary>
         /// <param name="InternalLoginAllowed">InternalLoginAllowed.</param>
         /// <param name="LdapLoginAllowed">LdapLoginAllowed.</param>
         /// <param name="SamlLoginAllowed">SamlLoginAllowed.</param>
         /// <param name="WindowsLoginAllowed">WindowsLoginAllowed.</param>
-        public TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse(bool? InternalLoginAllowed = default(bool?), bool? LdapLoginAllowed = default(bool?), bool? SamlLoginAllowed = default(bool?), bool? WindowsLoginAllowed = default(bool?))
+        public SecurityClientSecuritySettingsResponse(bool? InternalLoginAllowed = default(bool?), bool? LdapLoginAllowed = default(bool?), bool? SamlLoginAllowed = default(bool?), bool? WindowsLoginAllowed = default(bool?))
         {
             this.InternalLoginAllowed = InternalLoginAllowed;
             this.LdapLoginAllowed = LdapLoginAllowed;
@@ -61,7 +61,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse {\n");
+            sb.Append("class SecurityClientSecuritySettingsResponse {\n");
             sb.Append("  InternalLoginAllowed: ").Append(InternalLoginAllowed).Append("\n");
             sb.Append("  LdapLoginAllowed: ").Append(LdapLoginAllowed).Append("\n");
             sb.Append("  SamlLoginAllowed: ").Append(SamlLoginAllowed).Append("\n");
@@ -87,15 +87,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse);
+            return this.Equals(obj as SecurityClientSecuritySettingsResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse instances are equal
+        /// Returns true if SecurityClientSecuritySettingsResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse to be compared</param>
+        /// <param name="other">Instance of SecurityClientSecuritySettingsResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse other)
+        public bool Equals(SecurityClientSecuritySettingsResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

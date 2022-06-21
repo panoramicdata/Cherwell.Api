@@ -58,9 +58,9 @@ namespace Cherwell.Api
         /// <param name="links">Flag to include hyperlinks in results. Default is false. (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
+        /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/getgalleryimages/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
-        Task<TrebuchetWebApiDataContractsCoreManagerData> CoreGetGalleryImagesFolderV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreManagerData> CoreGetGalleryImagesFolderV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get gallery images by scope and scopeowner
@@ -74,9 +74,9 @@ namespace Cherwell.Api
         /// <param name="links">Flag to include hyperlinks in results. Default is false. (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
+        /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/getgalleryimages/scope/{scope}/scopeowner/{scopeowner}")]
-        Task<TrebuchetWebApiDataContractsCoreManagerData> CoreGetGalleryImagesScopeOwnerV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreManagerData> CoreGetGalleryImagesScopeOwnerV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get gallery images by scope
@@ -89,9 +89,9 @@ namespace Cherwell.Api
         /// <param name="links">Flag to include hyperlinks in results. Default is false. (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
+        /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/getgalleryimages/scope/{scope}")]
-        Task<TrebuchetWebApiDataContractsCoreManagerData> CoreGetGalleryImagesScopeV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreManagerData> CoreGetGalleryImagesScopeV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all gallery images
@@ -103,9 +103,9 @@ namespace Cherwell.Api
         /// <param name="links">Flag to include hyperlinks in results. Default is false. (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
+        /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/getgalleryimages")]
-        Task<TrebuchetWebApiDataContractsCoreManagerData> CoreGetGalleryImagesV1([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreManagerData> CoreGetGalleryImagesV1([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get a  stored value
@@ -117,9 +117,9 @@ namespace Cherwell.Api
         /// <param name="standInKey">The StandIn key for the Stored Value you would like to retrieve.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreStoredValueResponse</returns>
+        /// <returns>Task of CoreStoredValueResponse</returns>
         [Get("/api/V1/getstoredvalue/standinkey/{standInKey}")]
-        Task<TrebuchetWebApiDataContractsCoreStoredValueResponse> CoreGetStoredValueV1([Header("UserAgent")] string userAgent, [AliasAs("standInKey")]string standInKey, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreStoredValueResponse> CoreGetStoredValueV1([Header("UserAgent")] string userAgent, [AliasAs("standInKey")]string standInKey, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get stored values by folder
@@ -134,9 +134,9 @@ namespace Cherwell.Api
         /// <param name="links">Flag to include hyperlinks in results. Default is false. (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
+        /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/storedvalues/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
-        Task<TrebuchetWebApiDataContractsCoreManagerData> CoreGetStoredValuesFolderV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreManagerData> CoreGetStoredValuesFolderV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get stored values by scope owner
@@ -150,9 +150,9 @@ namespace Cherwell.Api
         /// <param name="links">Flag to include hyperlinks in results. Default is false. (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
+        /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/storedvalues/scope/{scope}/scopeowner/{scopeowner}")]
-        Task<TrebuchetWebApiDataContractsCoreManagerData> CoreGetStoredValuesScopeOwnerV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreManagerData> CoreGetStoredValuesScopeOwnerV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get stored values by scope
@@ -165,9 +165,9 @@ namespace Cherwell.Api
         /// <param name="links">Flag to include hyperlinks in results. Default is false. (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
+        /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/storedvalues/scope/{scope}")]
-        Task<TrebuchetWebApiDataContractsCoreManagerData> CoreGetStoredValuesScopeV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreManagerData> CoreGetStoredValuesScopeV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Gets all the stored values in the system
@@ -179,9 +179,9 @@ namespace Cherwell.Api
         /// <param name="links">Flag to include hyperlinks in results. Default is false. (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
+        /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/storedvalues")]
-        Task<TrebuchetWebApiDataContractsCoreManagerData> CoreGetStoredValuesV1([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreManagerData> CoreGetStoredValuesV1([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get a list of the views
@@ -192,9 +192,9 @@ namespace Cherwell.Api
         /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreViewsResponse</returns>
+        /// <returns>Task of CoreViewsResponse</returns>
         [Get("/api/V1/getviews")]
-        Task<TrebuchetWebApiDataContractsCoreViewsResponse> CoreGetViewsV1([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreViewsResponse> CoreGetViewsV1([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Create or update a gallery image
@@ -206,9 +206,9 @@ namespace Cherwell.Api
         /// <param name="request">To create a new gallery image leave the StandIn key blank. To update a gallery image provide the StandIn key of the gallery image you want to update. There are three different ImageTypes allowed: Imported, Url, and File. To use the Imported image type, provide the filename in the Name property, with extension, and provide the image data in a Base64 encoded format in the Base64EncodedImageData property. The max file size is 512k. To use the Url image type,  provide the full network share path to the file in the Name property, ie: \&quot;\\\\\\\\\\\\\\\\networkshare\\\\\\somefolder\\\\\\somefile.jpg\&quot;. If the file is not accessible to all users it will not visible to all users. To use the File image type, provide the full path to the file in the Name property, ie: \&quot;C:\\\\\\somefolder\\\\\\somfile.jpg\&quot;. If the file is not accessible to all users it will not visible to all users. When creating or updating an image, Name and ImageType are always required, and if the image type is \&quot;Imported\&quot;, then the Base64EncodedImageData is also required.  scope, scopeowner, and folder can all be updated independently.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreSaveGalleryImageResponse</returns>
+        /// <returns>Task of CoreSaveGalleryImageResponse</returns>
         [Post("/api/V1/savegalleryimage")]
-        Task<TrebuchetWebApiDataContractsCoreSaveGalleryImageResponse> CoreSaveGalleryImageV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsCoreSaveGalleryImageRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreSaveGalleryImageResponse> CoreSaveGalleryImageV1([Header("UserAgent")] string userAgent, [Body]CoreSaveGalleryImageRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Create or update a stored value
@@ -220,9 +220,9 @@ namespace Cherwell.Api
         /// <param name="request">The stored value to create or update. To update include the StandIn key for the associated stored value. To create, name, scope, type, and value are required.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreStoredValueResponse</returns>
+        /// <returns>Task of CoreStoredValueResponse</returns>
         [Post("/api/V1/savestoredvalue")]
-        Task<TrebuchetWebApiDataContractsCoreStoredValueResponse> CoreSaveStoredValueV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsCoreSaveStoredValueRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreStoredValueResponse> CoreSaveStoredValueV1([Header("UserAgent")] string userAgent, [Body]CoreSaveStoredValueRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Set the culture for the current user

@@ -26,9 +26,9 @@ namespace Cherwell.Api
         /// <param name="approvalAction"></param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsBusinessObjectSaveResponse</returns>
+        /// <returns>Task of BusinessObjectSaveResponse</returns>
         [Post("/api/V1/approval/{approvalRecId}/{approvalAction}")]
-        Task<TrebuchetWebApiDataContractsBusinessObjectSaveResponse> ApprovalActionApprovalV1([Header("UserAgent")] string userAgent, [AliasAs("approvalRecId")]string approvalRecId, [AliasAs("approvalAction")]string approvalAction, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<BusinessObjectSaveResponse> ApprovalActionApprovalV1([Header("UserAgent")] string userAgent, [AliasAs("approvalRecId")]string approvalRecId, [AliasAs("approvalAction")]string approvalAction, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get Approval
@@ -40,9 +40,9 @@ namespace Cherwell.Api
         /// <param name="approvalRecId"></param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsApprovalApprovalReadResponse</returns>
+        /// <returns>Task of ApprovalApprovalReadResponse</returns>
         [Get("/api/V1/approval/{approvalRecId}")]
-        Task<TrebuchetWebApiDataContractsApprovalApprovalReadResponse> ApprovalGetApprovalByRecIdV1([Header("UserAgent")] string userAgent, [AliasAs("approvalRecId")]string approvalRecId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ApprovalApprovalReadResponse> ApprovalGetApprovalByRecIdV1([Header("UserAgent")] string userAgent, [AliasAs("approvalRecId")]string approvalRecId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all waiting Approvals for the current user
@@ -53,9 +53,9 @@ namespace Cherwell.Api
         /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsApprovalGetApprovalsResponse</returns>
+        /// <returns>Task of ApprovalGetApprovalsResponse</returns>
         [Get("/api/V1/getmyapprovals")]
-        Task<TrebuchetWebApiDataContractsApprovalGetApprovalsResponse> ApprovalGetMyApprovalsV1([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ApprovalGetApprovalsResponse> ApprovalGetMyApprovalsV1([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all waiting approvals that were created by the current user
@@ -66,9 +66,9 @@ namespace Cherwell.Api
         /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsApprovalGetApprovalsResponse</returns>
+        /// <returns>Task of ApprovalGetApprovalsResponse</returns>
         [Get("/api/V1/getmypendingapprovals")]
-        Task<TrebuchetWebApiDataContractsApprovalGetApprovalsResponse> ApprovalGetMyPendingApprovalsV1([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ApprovalGetApprovalsResponse> ApprovalGetMyPendingApprovalsV1([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
         #endregion Asynchronous Operations
     }
 }

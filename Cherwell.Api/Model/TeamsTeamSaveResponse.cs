@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsTeamsTeamSaveResponse
+    /// TeamsTeamSaveResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsTeamsTeamSaveResponse :  IEquatable<TrebuchetWebApiDataContractsTeamsTeamSaveResponse>, IValidatableObject
+    public partial class TeamsTeamSaveResponse :  IEquatable<TeamsTeamSaveResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsTeamsTeamSaveResponse" /> class.
+        /// Initializes a new instance of the <see cref="TeamsTeamSaveResponse" /> class.
         /// </summary>
         /// <param name="TeamId">TeamId.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsTeamsTeamSaveResponse(string TeamId = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public TeamsTeamSaveResponse(string TeamId = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.TeamId = TeamId;
             this.ErrorCode = ErrorCode;
@@ -358,7 +358,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsTeamsTeamSaveResponse {\n");
+            sb.Append("class TeamsTeamSaveResponse {\n");
             sb.Append("  TeamId: ").Append(TeamId).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
@@ -385,15 +385,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsTeamsTeamSaveResponse);
+            return this.Equals(obj as TeamsTeamSaveResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsTeamsTeamSaveResponse instances are equal
+        /// Returns true if TeamsTeamSaveResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsTeamsTeamSaveResponse to be compared</param>
+        /// <param name="other">Instance of TeamsTeamSaveResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsTeamsTeamSaveResponse other)
+        public bool Equals(TeamsTeamSaveResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

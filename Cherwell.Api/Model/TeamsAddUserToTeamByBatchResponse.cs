@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse
+    /// TeamsAddUserToTeamByBatchResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse :  IEquatable<TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse>, IValidatableObject
+    public partial class TeamsAddUserToTeamByBatchResponse :  IEquatable<TeamsAddUserToTeamByBatchResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse" /> class.
+        /// Initializes a new instance of the <see cref="TeamsAddUserToTeamByBatchResponse" /> class.
         /// </summary>
         /// <param name="Responses">Responses.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse(List<TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse> Responses = default(List<TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public TeamsAddUserToTeamByBatchResponse(List<TeamsAddUserToTeamResponse> Responses = default(List<TeamsAddUserToTeamResponse>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.Responses = Responses;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Model
         /// Gets or Sets Responses
         /// </summary>
         [DataMember(Name="responses", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse> Responses { get; set; }
+        public List<TeamsAddUserToTeamResponse> Responses { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -358,7 +358,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse {\n");
+            sb.Append("class TeamsAddUserToTeamByBatchResponse {\n");
             sb.Append("  Responses: ").Append(Responses).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
@@ -385,15 +385,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse);
+            return this.Equals(obj as TeamsAddUserToTeamByBatchResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse instances are equal
+        /// Returns true if TeamsAddUserToTeamByBatchResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse to be compared</param>
+        /// <param name="other">Instance of TeamsAddUserToTeamByBatchResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse other)
+        public bool Equals(TeamsAddUserToTeamByBatchResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

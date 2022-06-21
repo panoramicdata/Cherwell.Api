@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsCoreAction
+    /// CoreAction
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsCoreAction :  IEquatable<TrebuchetWebApiDataContractsCoreAction>, IValidatableObject
+    public partial class CoreAction :  IEquatable<CoreAction>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets ActionType
@@ -191,7 +191,7 @@ namespace Cherwell.Model
         [DataMember(Name="loginVisibilityMode", EmitDefaultValue=false)]
         public LoginVisibilityModeEnum? LoginVisibilityMode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsCoreAction" /> class.
+        /// Initializes a new instance of the <see cref="CoreAction" /> class.
         /// </summary>
         /// <param name="ActionCommand">ActionCommand.</param>
         /// <param name="ActionType">ActionType.</param>
@@ -208,7 +208,7 @@ namespace Cherwell.Model
         /// <param name="Name">Name.</param>
         /// <param name="Parameters">Parameters.</param>
         /// <param name="Visible">Visible.</param>
-        public TrebuchetWebApiDataContractsCoreAction(string ActionCommand = default(string), ActionTypeEnum? ActionType = default(ActionTypeEnum?), bool? AlwaysTextAndImage = default(bool?), bool? BeginGroup = default(bool?), List<TrebuchetWebApiDataContractsCoreAction> ChildActions = default(List<TrebuchetWebApiDataContractsCoreAction>), List<string> Dependencies = default(List<string>), string DisplayText = default(string), bool? Enabled = default(bool?), string GalleryImage = default(string), string HelpText = default(string), LoginEnabledModeEnum? LoginEnabledMode = default(LoginEnabledModeEnum?), LoginVisibilityModeEnum? LoginVisibilityMode = default(LoginVisibilityModeEnum?), string Name = default(string), Dictionary<string, string> Parameters = default(Dictionary<string, string>), bool? Visible = default(bool?))
+        public CoreAction(string ActionCommand = default(string), ActionTypeEnum? ActionType = default(ActionTypeEnum?), bool? AlwaysTextAndImage = default(bool?), bool? BeginGroup = default(bool?), List<CoreAction> ChildActions = default(List<CoreAction>), List<string> Dependencies = default(List<string>), string DisplayText = default(string), bool? Enabled = default(bool?), string GalleryImage = default(string), string HelpText = default(string), LoginEnabledModeEnum? LoginEnabledMode = default(LoginEnabledModeEnum?), LoginVisibilityModeEnum? LoginVisibilityMode = default(LoginVisibilityModeEnum?), string Name = default(string), Dictionary<string, string> Parameters = default(Dictionary<string, string>), bool? Visible = default(bool?))
         {
             this.ActionCommand = ActionCommand;
             this.ActionType = ActionType;
@@ -246,7 +246,7 @@ namespace Cherwell.Model
         /// Gets or Sets ChildActions
         /// </summary>
         [DataMember(Name="childActions", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCoreAction> ChildActions { get; set; }
+        public List<CoreAction> ChildActions { get; set; }
         /// <summary>
         /// Gets or Sets Dependencies
         /// </summary>
@@ -294,7 +294,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsCoreAction {\n");
+            sb.Append("class CoreAction {\n");
             sb.Append("  ActionCommand: ").Append(ActionCommand).Append("\n");
             sb.Append("  ActionType: ").Append(ActionType).Append("\n");
             sb.Append("  AlwaysTextAndImage: ").Append(AlwaysTextAndImage).Append("\n");
@@ -331,15 +331,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsCoreAction);
+            return this.Equals(obj as CoreAction);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsCoreAction instances are equal
+        /// Returns true if CoreAction instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsCoreAction to be compared</param>
+        /// <param name="other">Instance of CoreAction to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsCoreAction other)
+        public bool Equals(CoreAction other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

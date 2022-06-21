@@ -14,19 +14,19 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueRequest
+    /// QueuesRemoveItemFromQueueRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueRequest :  IEquatable<TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueRequest>, IValidatableObject
+    public partial class QueuesRemoveItemFromQueueRequest :  IEquatable<QueuesRemoveItemFromQueueRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueRequest" /> class.
+        /// Initializes a new instance of the <see cref="QueuesRemoveItemFromQueueRequest" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObRecId">BusObRecId.</param>
         /// <param name="HistoryNotes">HistoryNotes.</param>
         /// <param name="QueueStandInKey">QueueStandInKey.</param>
-        public TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueRequest(string BusObId = default(string), string BusObRecId = default(string), string HistoryNotes = default(string), string QueueStandInKey = default(string))
+        public QueuesRemoveItemFromQueueRequest(string BusObId = default(string), string BusObRecId = default(string), string HistoryNotes = default(string), string QueueStandInKey = default(string))
         {
             this.BusObId = BusObId;
             this.BusObRecId = BusObRecId;
@@ -61,7 +61,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueRequest {\n");
+            sb.Append("class QueuesRemoveItemFromQueueRequest {\n");
             sb.Append("  BusObId: ").Append(BusObId).Append("\n");
             sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
             sb.Append("  HistoryNotes: ").Append(HistoryNotes).Append("\n");
@@ -87,15 +87,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueRequest);
+            return this.Equals(obj as QueuesRemoveItemFromQueueRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueRequest instances are equal
+        /// Returns true if QueuesRemoveItemFromQueueRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueRequest to be compared</param>
+        /// <param name="other">Instance of QueuesRemoveItemFromQueueRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueRequest other)
+        public bool Equals(QueuesRemoveItemFromQueueRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

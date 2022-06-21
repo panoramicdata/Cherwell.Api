@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsUsersUser
+    /// UsersUser
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsUsersUser :  IEquatable<TrebuchetWebApiDataContractsUsersUser>, IValidatableObject
+    public partial class UsersUser :  IEquatable<UsersUser>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsUsersUser" /> class.
+        /// Initializes a new instance of the <see cref="UsersUser" /> class.
         /// </summary>
         /// <param name="AccountLocked">AccountLocked.</param>
         /// <param name="CreateDateTime">CreateDateTime.</param>
@@ -39,7 +39,7 @@ namespace Cherwell.Model
         /// <param name="ShortDisplayName">ShortDisplayName.</param>
         /// <param name="UserCannotChangePassword">UserCannotChangePassword.</param>
         /// <param name="UserMustResetPasswordAtNextLogin">UserMustResetPasswordAtNextLogin.</param>
-        public TrebuchetWebApiDataContractsUsersUser(bool? AccountLocked = default(bool?), DateTime? CreateDateTime = default(DateTime?), string DisplayName = default(string), string Error = default(string), string ErrorCode = default(string), List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem> Fields = default(List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem>), bool? HasError = default(bool?), DateTime? LastPasswordResetDate = default(DateTime?), DateTime? LastResetDateTime = default(DateTime?), bool? LdapRequired = default(bool?), bool? PasswordNeverExpires = default(bool?), string PublicId = default(string), string RecordId = default(string), string SecurityGroupId = default(string), string ShortDisplayName = default(string), bool? UserCannotChangePassword = default(bool?), bool? UserMustResetPasswordAtNextLogin = default(bool?))
+        public UsersUser(bool? AccountLocked = default(bool?), DateTime? CreateDateTime = default(DateTime?), string DisplayName = default(string), string Error = default(string), string ErrorCode = default(string), List<BusinessObjectFieldTemplateItem> Fields = default(List<BusinessObjectFieldTemplateItem>), bool? HasError = default(bool?), DateTime? LastPasswordResetDate = default(DateTime?), DateTime? LastResetDateTime = default(DateTime?), bool? LdapRequired = default(bool?), bool? PasswordNeverExpires = default(bool?), string PublicId = default(string), string RecordId = default(string), string SecurityGroupId = default(string), string ShortDisplayName = default(string), bool? UserCannotChangePassword = default(bool?), bool? UserMustResetPasswordAtNextLogin = default(bool?))
         {
             this.AccountLocked = AccountLocked;
             this.CreateDateTime = CreateDateTime;
@@ -89,7 +89,7 @@ namespace Cherwell.Model
         /// Gets or Sets Fields
         /// </summary>
         [DataMember(Name="fields", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem> Fields { get; set; }
+        public List<BusinessObjectFieldTemplateItem> Fields { get; set; }
         /// <summary>
         /// Gets or Sets HasError
         /// </summary>
@@ -152,7 +152,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsUsersUser {\n");
+            sb.Append("class UsersUser {\n");
             sb.Append("  AccountLocked: ").Append(AccountLocked).Append("\n");
             sb.Append("  CreateDateTime: ").Append(CreateDateTime).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
@@ -191,15 +191,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsUsersUser);
+            return this.Equals(obj as UsersUser);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsUsersUser instances are equal
+        /// Returns true if UsersUser instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsUsersUser to be compared</param>
+        /// <param name="other">Instance of UsersUser to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsUsersUser other)
+        public bool Equals(UsersUser other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

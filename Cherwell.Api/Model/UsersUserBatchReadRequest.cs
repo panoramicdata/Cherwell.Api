@@ -14,17 +14,17 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsUsersUserBatchReadRequest
+    /// UsersUserBatchReadRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsUsersUserBatchReadRequest :  IEquatable<TrebuchetWebApiDataContractsUsersUserBatchReadRequest>, IValidatableObject
+    public partial class UsersUserBatchReadRequest :  IEquatable<UsersUserBatchReadRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsUsersUserBatchReadRequest" /> class.
+        /// Initializes a new instance of the <see cref="UsersUserBatchReadRequest" /> class.
         /// </summary>
         /// <param name="ReadRequests">ReadRequests.</param>
         /// <param name="StopOnError">StopOnError.</param>
-        public TrebuchetWebApiDataContractsUsersUserBatchReadRequest(List<TrebuchetWebApiDataContractsUsersUserReadRequest> ReadRequests = default(List<TrebuchetWebApiDataContractsUsersUserReadRequest>), bool? StopOnError = default(bool?))
+        public UsersUserBatchReadRequest(List<UsersUserReadRequest> ReadRequests = default(List<UsersUserReadRequest>), bool? StopOnError = default(bool?))
         {
             this.ReadRequests = ReadRequests;
             this.StopOnError = StopOnError;
@@ -34,7 +34,7 @@ namespace Cherwell.Model
         /// Gets or Sets ReadRequests
         /// </summary>
         [DataMember(Name="readRequests", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsUsersUserReadRequest> ReadRequests { get; set; }
+        public List<UsersUserReadRequest> ReadRequests { get; set; }
         /// <summary>
         /// Gets or Sets StopOnError
         /// </summary>
@@ -47,7 +47,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsUsersUserBatchReadRequest {\n");
+            sb.Append("class UsersUserBatchReadRequest {\n");
             sb.Append("  ReadRequests: ").Append(ReadRequests).Append("\n");
             sb.Append("  StopOnError: ").Append(StopOnError).Append("\n");
             sb.Append("}\n");
@@ -71,15 +71,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsUsersUserBatchReadRequest);
+            return this.Equals(obj as UsersUserBatchReadRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsUsersUserBatchReadRequest instances are equal
+        /// Returns true if UsersUserBatchReadRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsUsersUserBatchReadRequest to be compared</param>
+        /// <param name="other">Instance of UsersUserBatchReadRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsUsersUserBatchReadRequest other)
+        public bool Equals(UsersUserBatchReadRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

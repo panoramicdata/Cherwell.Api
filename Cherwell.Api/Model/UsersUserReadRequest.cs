@@ -14,17 +14,17 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsUsersUserReadRequest
+    /// UsersUserReadRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsUsersUserReadRequest :  IEquatable<TrebuchetWebApiDataContractsUsersUserReadRequest>, IValidatableObject
+    public partial class UsersUserReadRequest :  IEquatable<UsersUserReadRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsUsersUserReadRequest" /> class.
+        /// Initializes a new instance of the <see cref="UsersUserReadRequest" /> class.
         /// </summary>
         /// <param name="LoginId">LoginId.</param>
         /// <param name="PublicId">PublicId.</param>
-        public TrebuchetWebApiDataContractsUsersUserReadRequest(string LoginId = default(string), string PublicId = default(string))
+        public UsersUserReadRequest(string LoginId = default(string), string PublicId = default(string))
         {
             this.LoginId = LoginId;
             this.PublicId = PublicId;
@@ -47,7 +47,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsUsersUserReadRequest {\n");
+            sb.Append("class UsersUserReadRequest {\n");
             sb.Append("  LoginId: ").Append(LoginId).Append("\n");
             sb.Append("  PublicId: ").Append(PublicId).Append("\n");
             sb.Append("}\n");
@@ -71,15 +71,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsUsersUserReadRequest);
+            return this.Equals(obj as UsersUserReadRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsUsersUserReadRequest instances are equal
+        /// Returns true if UsersUserReadRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsUsersUserReadRequest to be compared</param>
+        /// <param name="other">Instance of UsersUserReadRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsUsersUserReadRequest other)
+        public bool Equals(UsersUserReadRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

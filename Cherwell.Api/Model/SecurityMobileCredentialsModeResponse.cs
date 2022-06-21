@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSecurityMobileCredentialsModeResponse
+    /// SecurityMobileCredentialsModeResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSecurityMobileCredentialsModeResponse :  IEquatable<TrebuchetWebApiDataContractsSecurityMobileCredentialsModeResponse>, IValidatableObject
+    public partial class SecurityMobileCredentialsModeResponse :  IEquatable<SecurityMobileCredentialsModeResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSecurityMobileCredentialsModeResponse" /> class.
+        /// Initializes a new instance of the <see cref="SecurityMobileCredentialsModeResponse" /> class.
         /// </summary>
         /// <param name="CredentialsMode">CredentialsMode.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsSecurityMobileCredentialsModeResponse(int? CredentialsMode = default(int?), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public SecurityMobileCredentialsModeResponse(int? CredentialsMode = default(int?), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.CredentialsMode = CredentialsMode;
             this.ErrorCode = ErrorCode;
@@ -358,7 +358,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSecurityMobileCredentialsModeResponse {\n");
+            sb.Append("class SecurityMobileCredentialsModeResponse {\n");
             sb.Append("  CredentialsMode: ").Append(CredentialsMode).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
@@ -385,15 +385,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSecurityMobileCredentialsModeResponse);
+            return this.Equals(obj as SecurityMobileCredentialsModeResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSecurityMobileCredentialsModeResponse instances are equal
+        /// Returns true if SecurityMobileCredentialsModeResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSecurityMobileCredentialsModeResponse to be compared</param>
+        /// <param name="other">Instance of SecurityMobileCredentialsModeResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSecurityMobileCredentialsModeResponse other)
+        public bool Equals(SecurityMobileCredentialsModeResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

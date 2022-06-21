@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsCoreSaveGalleryImageRequest
+    /// CoreSaveGalleryImageRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsCoreSaveGalleryImageRequest :  IEquatable<TrebuchetWebApiDataContractsCoreSaveGalleryImageRequest>, IValidatableObject
+    public partial class CoreSaveGalleryImageRequest :  IEquatable<CoreSaveGalleryImageRequest>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets ImageType
@@ -51,7 +51,7 @@ namespace Cherwell.Model
         [DataMember(Name="imageType", EmitDefaultValue=false)]
         public ImageTypeEnum? ImageType { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsCoreSaveGalleryImageRequest" /> class.
+        /// Initializes a new instance of the <see cref="CoreSaveGalleryImageRequest" /> class.
         /// </summary>
         /// <param name="Base64EncodedImageData">Base64EncodedImageData.</param>
         /// <param name="Description">Description.</param>
@@ -61,7 +61,7 @@ namespace Cherwell.Model
         /// <param name="Scope">Scope.</param>
         /// <param name="ScopeOwner">ScopeOwner.</param>
         /// <param name="StandInKey">StandInKey.</param>
-        public TrebuchetWebApiDataContractsCoreSaveGalleryImageRequest(string Base64EncodedImageData = default(string), string Description = default(string), string Folder = default(string), ImageTypeEnum? ImageType = default(ImageTypeEnum?), string Name = default(string), string Scope = default(string), string ScopeOwner = default(string), string StandInKey = default(string))
+        public CoreSaveGalleryImageRequest(string Base64EncodedImageData = default(string), string Description = default(string), string Folder = default(string), ImageTypeEnum? ImageType = default(ImageTypeEnum?), string Name = default(string), string Scope = default(string), string ScopeOwner = default(string), string StandInKey = default(string))
         {
             this.Base64EncodedImageData = Base64EncodedImageData;
             this.Description = Description;
@@ -115,7 +115,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsCoreSaveGalleryImageRequest {\n");
+            sb.Append("class CoreSaveGalleryImageRequest {\n");
             sb.Append("  Base64EncodedImageData: ").Append(Base64EncodedImageData).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Folder: ").Append(Folder).Append("\n");
@@ -145,15 +145,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsCoreSaveGalleryImageRequest);
+            return this.Equals(obj as CoreSaveGalleryImageRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsCoreSaveGalleryImageRequest instances are equal
+        /// Returns true if CoreSaveGalleryImageRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsCoreSaveGalleryImageRequest to be compared</param>
+        /// <param name="other">Instance of CoreSaveGalleryImageRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsCoreSaveGalleryImageRequest other)
+        public bool Equals(CoreSaveGalleryImageRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -14,17 +14,17 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsCoreLink
+    /// CoreLink
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsCoreLink :  IEquatable<TrebuchetWebApiDataContractsCoreLink>, IValidatableObject
+    public partial class CoreLink :  IEquatable<CoreLink>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsCoreLink" /> class.
+        /// Initializes a new instance of the <see cref="CoreLink" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Url">Url.</param>
-        public TrebuchetWebApiDataContractsCoreLink(string Name = default(string), string Url = default(string))
+        public CoreLink(string Name = default(string), string Url = default(string))
         {
             this.Name = Name;
             this.Url = Url;
@@ -47,7 +47,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsCoreLink {\n");
+            sb.Append("class CoreLink {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("}\n");
@@ -71,15 +71,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsCoreLink);
+            return this.Equals(obj as CoreLink);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsCoreLink instances are equal
+        /// Returns true if CoreLink instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsCoreLink to be compared</param>
+        /// <param name="other">Instance of CoreLink to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsCoreLink other)
+        public bool Equals(CoreLink other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsCoreServiceInfoResponse
+    /// CoreServiceInfoResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsCoreServiceInfoResponse :  IEquatable<TrebuchetWebApiDataContractsCoreServiceInfoResponse>, IValidatableObject
+    public partial class CoreServiceInfoResponse :  IEquatable<CoreServiceInfoResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsCoreServiceInfoResponse" /> class.
+        /// Initializes a new instance of the <see cref="CoreServiceInfoResponse" /> class.
         /// </summary>
         /// <param name="ApiVersion">ApiVersion.</param>
         /// <param name="CsmCulture">CsmCulture.</param>
@@ -28,7 +28,7 @@ namespace Cherwell.Model
         /// <param name="SystemDateTime">SystemDateTime.</param>
         /// <param name="TimeZone">TimeZone.</param>
         /// <param name="SystemUtcOffset">SystemUtcOffset.</param>
-        public TrebuchetWebApiDataContractsCoreServiceInfoResponse(string ApiVersion = default(string), string CsmCulture = default(string), string CsmVersion = default(string), DateTime? SystemDateTime = default(DateTime?), Object TimeZone = default(Object), string SystemUtcOffset = default(string))
+        public CoreServiceInfoResponse(string ApiVersion = default(string), string CsmCulture = default(string), string CsmVersion = default(string), DateTime? SystemDateTime = default(DateTime?), Object TimeZone = default(Object), string SystemUtcOffset = default(string))
         {
             this.ApiVersion = ApiVersion;
             this.CsmCulture = CsmCulture;
@@ -75,7 +75,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsCoreServiceInfoResponse {\n");
+            sb.Append("class CoreServiceInfoResponse {\n");
             sb.Append("  ApiVersion: ").Append(ApiVersion).Append("\n");
             sb.Append("  CsmCulture: ").Append(CsmCulture).Append("\n");
             sb.Append("  CsmVersion: ").Append(CsmVersion).Append("\n");
@@ -103,15 +103,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsCoreServiceInfoResponse);
+            return this.Equals(obj as CoreServiceInfoResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsCoreServiceInfoResponse instances are equal
+        /// Returns true if CoreServiceInfoResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsCoreServiceInfoResponse to be compared</param>
+        /// <param name="other">Instance of CoreServiceInfoResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsCoreServiceInfoResponse other)
+        public bool Equals(CoreServiceInfoResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

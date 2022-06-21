@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsUsersUserBatchReadResponse
+    /// UsersUserBatchReadResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsUsersUserBatchReadResponse :  IEquatable<TrebuchetWebApiDataContractsUsersUserBatchReadResponse>, IValidatableObject
+    public partial class UsersUserBatchReadResponse :  IEquatable<UsersUserBatchReadResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsUsersUserBatchReadResponse" /> class.
+        /// Initializes a new instance of the <see cref="UsersUserBatchReadResponse" /> class.
         /// </summary>
         /// <param name="Responses">Responses.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsUsersUserBatchReadResponse(List<TrebuchetWebApiDataContractsUsersUserReadV2Response> Responses = default(List<TrebuchetWebApiDataContractsUsersUserReadV2Response>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public UsersUserBatchReadResponse(List<UsersUserReadV2Response> Responses = default(List<UsersUserReadV2Response>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.Responses = Responses;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Model
         /// Gets or Sets Responses
         /// </summary>
         [DataMember(Name="responses", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsUsersUserReadV2Response> Responses { get; set; }
+        public List<UsersUserReadV2Response> Responses { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -358,7 +358,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsUsersUserBatchReadResponse {\n");
+            sb.Append("class UsersUserBatchReadResponse {\n");
             sb.Append("  Responses: ").Append(Responses).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
@@ -385,15 +385,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsUsersUserBatchReadResponse);
+            return this.Equals(obj as UsersUserBatchReadResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsUsersUserBatchReadResponse instances are equal
+        /// Returns true if UsersUserBatchReadResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsUsersUserBatchReadResponse to be compared</param>
+        /// <param name="other">Instance of UsersUserBatchReadResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsUsersUserBatchReadResponse other)
+        public bool Equals(UsersUserBatchReadResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -14,18 +14,18 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesFilterInfo
+    /// SearchesFilterInfo
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesFilterInfo :  IEquatable<TrebuchetWebApiDataContractsSearchesFilterInfo>, IValidatableObject
+    public partial class SearchesFilterInfo :  IEquatable<SearchesFilterInfo>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesFilterInfo" /> class.
+        /// Initializes a new instance of the <see cref="SearchesFilterInfo" /> class.
         /// </summary>
         /// <param name="FieldId">FieldId.</param>
         /// <param name="_Operator">_Operator.</param>
         /// <param name="Value">Value.</param>
-        public TrebuchetWebApiDataContractsSearchesFilterInfo(string FieldId = default(string), string _Operator = default(string), string Value = default(string))
+        public SearchesFilterInfo(string FieldId = default(string), string _Operator = default(string), string Value = default(string))
         {
             this.FieldId = FieldId;
             this._Operator = _Operator;
@@ -54,7 +54,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesFilterInfo {\n");
+            sb.Append("class SearchesFilterInfo {\n");
             sb.Append("  FieldId: ").Append(FieldId).Append("\n");
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
@@ -79,15 +79,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesFilterInfo);
+            return this.Equals(obj as SearchesFilterInfo);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesFilterInfo instances are equal
+        /// Returns true if SearchesFilterInfo instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesFilterInfo to be compared</param>
+        /// <param name="other">Instance of SearchesFilterInfo to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesFilterInfo other)
+        public bool Equals(SearchesFilterInfo other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

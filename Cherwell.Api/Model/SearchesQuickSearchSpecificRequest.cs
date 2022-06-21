@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesQuickSearchSpecificRequest
+    /// SearchesQuickSearchSpecificRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesQuickSearchSpecificRequest :  IEquatable<TrebuchetWebApiDataContractsSearchesQuickSearchSpecificRequest>, IValidatableObject
+    public partial class SearchesQuickSearchSpecificRequest :  IEquatable<SearchesQuickSearchSpecificRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesQuickSearchSpecificRequest" /> class.
+        /// Initializes a new instance of the <see cref="SearchesQuickSearchSpecificRequest" /> class.
         /// </summary>
         /// <param name="Ascending">Ascending.</param>
         /// <param name="IsBusObTarget">IsBusObTarget.</param>
@@ -34,7 +34,7 @@ namespace Cherwell.Model
         /// <param name="SortByRelevance">SortByRelevance.</param>
         /// <param name="SpecificSearchTargetId">SpecificSearchTargetId.</param>
         /// <param name="UseSortBy">UseSortBy.</param>
-        public TrebuchetWebApiDataContractsSearchesQuickSearchSpecificRequest(bool? Ascending = default(bool?), bool? IsBusObTarget = default(bool?), bool? NonFinalState = default(bool?), bool? SearchAnyWords = default(bool?), bool? SearchAttachments = default(bool?), bool? SearchRelated = default(bool?), string SearchText = default(string), TrebuchetWebApiDataContractsSearchesChangedLimit SelectedChangedLimit = default(TrebuchetWebApiDataContractsSearchesChangedLimit), string SelectedSortByFieldId = default(string), bool? SortByRelevance = default(bool?), string SpecificSearchTargetId = default(string), bool? UseSortBy = default(bool?))
+        public SearchesQuickSearchSpecificRequest(bool? Ascending = default(bool?), bool? IsBusObTarget = default(bool?), bool? NonFinalState = default(bool?), bool? SearchAnyWords = default(bool?), bool? SearchAttachments = default(bool?), bool? SearchRelated = default(bool?), string SearchText = default(string), SearchesChangedLimit SelectedChangedLimit = default(SearchesChangedLimit), string SelectedSortByFieldId = default(string), bool? SortByRelevance = default(bool?), string SpecificSearchTargetId = default(string), bool? UseSortBy = default(bool?))
         {
             this.Ascending = Ascending;
             this.IsBusObTarget = IsBusObTarget;
@@ -89,7 +89,7 @@ namespace Cherwell.Model
         /// Gets or Sets SelectedChangedLimit
         /// </summary>
         [DataMember(Name="selectedChangedLimit", EmitDefaultValue=false)]
-        public TrebuchetWebApiDataContractsSearchesChangedLimit SelectedChangedLimit { get; set; }
+        public SearchesChangedLimit SelectedChangedLimit { get; set; }
         /// <summary>
         /// Gets or Sets SelectedSortByFieldId
         /// </summary>
@@ -117,7 +117,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesQuickSearchSpecificRequest {\n");
+            sb.Append("class SearchesQuickSearchSpecificRequest {\n");
             sb.Append("  Ascending: ").Append(Ascending).Append("\n");
             sb.Append("  IsBusObTarget: ").Append(IsBusObTarget).Append("\n");
             sb.Append("  NonFinalState: ").Append(NonFinalState).Append("\n");
@@ -151,15 +151,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesQuickSearchSpecificRequest);
+            return this.Equals(obj as SearchesQuickSearchSpecificRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesQuickSearchSpecificRequest instances are equal
+        /// Returns true if SearchesQuickSearchSpecificRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesQuickSearchSpecificRequest to be compared</param>
+        /// <param name="other">Instance of SearchesQuickSearchSpecificRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesQuickSearchSpecificRequest other)
+        public bool Equals(SearchesQuickSearchSpecificRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

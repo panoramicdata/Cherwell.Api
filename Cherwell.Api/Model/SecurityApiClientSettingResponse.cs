@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSecurityApiClientSettingResponse
+    /// SecurityApiClientSettingResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSecurityApiClientSettingResponse :  IEquatable<TrebuchetWebApiDataContractsSecurityApiClientSettingResponse>, IValidatableObject
+    public partial class SecurityApiClientSettingResponse :  IEquatable<SecurityApiClientSettingResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSecurityApiClientSettingResponse" /> class.
+        /// Initializes a new instance of the <see cref="SecurityApiClientSettingResponse" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Description">Description.</param>
@@ -330,7 +330,7 @@ namespace Cherwell.Model
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsSecurityApiClientSettingResponse(string Name = default(string), string Description = default(string), string Culture = default(string), string ClientKey = default(string), int? TokenLifespanMinutes = default(int?), int? RefreshTokenLifespanMinutes = default(int?), bool? ApiAccessIsEnabled = default(bool?), bool? AllowAnonymousAccess = default(bool?), string StandInKey = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public SecurityApiClientSettingResponse(string Name = default(string), string Description = default(string), string Culture = default(string), string ClientKey = default(string), int? TokenLifespanMinutes = default(int?), int? RefreshTokenLifespanMinutes = default(int?), bool? ApiAccessIsEnabled = default(bool?), bool? AllowAnonymousAccess = default(bool?), string StandInKey = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.Name = Name;
             this.Description = Description;
@@ -414,7 +414,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSecurityApiClientSettingResponse {\n");
+            sb.Append("class SecurityApiClientSettingResponse {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Culture: ").Append(Culture).Append("\n");
@@ -449,15 +449,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSecurityApiClientSettingResponse);
+            return this.Equals(obj as SecurityApiClientSettingResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSecurityApiClientSettingResponse instances are equal
+        /// Returns true if SecurityApiClientSettingResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSecurityApiClientSettingResponse to be compared</param>
+        /// <param name="other">Instance of SecurityApiClientSettingResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSecurityApiClientSettingResponse other)
+        public bool Equals(SecurityApiClientSettingResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSecurityRole
+    /// SecurityRole
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSecurityRole :  IEquatable<TrebuchetWebApiDataContractsSecurityRole>, IValidatableObject
+    public partial class SecurityRole :  IEquatable<SecurityRole>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSecurityRole" /> class.
+        /// Initializes a new instance of the <see cref="SecurityRole" /> class.
         /// </summary>
         /// <param name="BrowserClientCustomViewId">BrowserClientCustomViewId.</param>
         /// <param name="BusinessObjectExcludeList">BusinessObjectExcludeList.</param>
@@ -31,7 +31,7 @@ namespace Cherwell.Model
         /// <param name="RoleId">RoleId.</param>
         /// <param name="RoleName">RoleName.</param>
         /// <param name="SmartClientCustomViewId">SmartClientCustomViewId.</param>
-        public TrebuchetWebApiDataContractsSecurityRole(string BrowserClientCustomViewId = default(string), List<string> BusinessObjectExcludeList = default(List<string>), string Culture = default(string), string Description = default(string), string MobileClientCustomViewId = default(string), string PrimaryBusObId = default(string), string RoleId = default(string), string RoleName = default(string), string SmartClientCustomViewId = default(string))
+        public SecurityRole(string BrowserClientCustomViewId = default(string), List<string> BusinessObjectExcludeList = default(List<string>), string Culture = default(string), string Description = default(string), string MobileClientCustomViewId = default(string), string PrimaryBusObId = default(string), string RoleId = default(string), string RoleName = default(string), string SmartClientCustomViewId = default(string))
         {
             this.BrowserClientCustomViewId = BrowserClientCustomViewId;
             this.BusinessObjectExcludeList = BusinessObjectExcludeList;
@@ -96,7 +96,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSecurityRole {\n");
+            sb.Append("class SecurityRole {\n");
             sb.Append("  BrowserClientCustomViewId: ").Append(BrowserClientCustomViewId).Append("\n");
             sb.Append("  BusinessObjectExcludeList: ").Append(BusinessObjectExcludeList).Append("\n");
             sb.Append("  Culture: ").Append(Culture).Append("\n");
@@ -127,15 +127,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSecurityRole);
+            return this.Equals(obj as SecurityRole);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSecurityRole instances are equal
+        /// Returns true if SecurityRole instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSecurityRole to be compared</param>
+        /// <param name="other">Instance of SecurityRole to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSecurityRole other)
+        public bool Equals(SecurityRole other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

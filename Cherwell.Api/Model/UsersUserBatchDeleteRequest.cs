@@ -14,17 +14,17 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsUsersUserBatchDeleteRequest
+    /// UsersUserBatchDeleteRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsUsersUserBatchDeleteRequest :  IEquatable<TrebuchetWebApiDataContractsUsersUserBatchDeleteRequest>, IValidatableObject
+    public partial class UsersUserBatchDeleteRequest :  IEquatable<UsersUserBatchDeleteRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsUsersUserBatchDeleteRequest" /> class.
+        /// Initializes a new instance of the <see cref="UsersUserBatchDeleteRequest" /> class.
         /// </summary>
         /// <param name="StopOnError">StopOnError.</param>
         /// <param name="UserRecordIds">UserRecordIds.</param>
-        public TrebuchetWebApiDataContractsUsersUserBatchDeleteRequest(bool? StopOnError = default(bool?), List<string> UserRecordIds = default(List<string>))
+        public UsersUserBatchDeleteRequest(bool? StopOnError = default(bool?), List<string> UserRecordIds = default(List<string>))
         {
             this.StopOnError = StopOnError;
             this.UserRecordIds = UserRecordIds;
@@ -47,7 +47,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsUsersUserBatchDeleteRequest {\n");
+            sb.Append("class UsersUserBatchDeleteRequest {\n");
             sb.Append("  StopOnError: ").Append(StopOnError).Append("\n");
             sb.Append("  UserRecordIds: ").Append(UserRecordIds).Append("\n");
             sb.Append("}\n");
@@ -71,15 +71,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsUsersUserBatchDeleteRequest);
+            return this.Equals(obj as UsersUserBatchDeleteRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsUsersUserBatchDeleteRequest instances are equal
+        /// Returns true if UsersUserBatchDeleteRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsUsersUserBatchDeleteRequest to be compared</param>
+        /// <param name="other">Instance of UsersUserBatchDeleteRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsUsersUserBatchDeleteRequest other)
+        public bool Equals(UsersUserBatchDeleteRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

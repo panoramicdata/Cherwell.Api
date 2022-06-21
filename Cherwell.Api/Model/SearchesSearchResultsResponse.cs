@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesSearchResultsResponse
+    /// SearchesSearchResultsResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesSearchResultsResponse :  IEquatable<TrebuchetWebApiDataContractsSearchesSearchResultsResponse>, IValidatableObject
+    public partial class SearchesSearchResultsResponse :  IEquatable<SearchesSearchResultsResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesSearchResultsResponse" /> class.
+        /// Initializes a new instance of the <see cref="SearchesSearchResultsResponse" /> class.
         /// </summary>
         /// <param name="BusinessObjects">BusinessObjects.</param>
         /// <param name="HasPrompts">HasPrompts.</param>
@@ -329,7 +329,7 @@ namespace Cherwell.Model
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsSearchesSearchResultsResponse(List<TrebuchetWebApiDataContractsBusinessObjectReadResponse> BusinessObjects = default(List<TrebuchetWebApiDataContractsBusinessObjectReadResponse>), bool? HasPrompts = default(bool?), List<TrebuchetWebApiDataContractsCoreLink> Links = default(List<TrebuchetWebApiDataContractsCoreLink>), List<TrebuchetWebApiDataContractsCorePrompt> Prompts = default(List<TrebuchetWebApiDataContractsCorePrompt>), List<TrebuchetWebApiDataContractsSearchesField> SearchResultsFields = default(List<TrebuchetWebApiDataContractsSearchesField>), TrebuchetWebApiDataContractsSearchesSimpleResultsList SimpleResults = default(TrebuchetWebApiDataContractsSearchesSimpleResultsList), long? TotalRows = default(long?), bool? HasMoreRecords = default(bool?), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public SearchesSearchResultsResponse(List<BusinessObjectReadResponse> BusinessObjects = default(List<BusinessObjectReadResponse>), bool? HasPrompts = default(bool?), List<CoreLink> Links = default(List<CoreLink>), List<CorePrompt> Prompts = default(List<CorePrompt>), List<SearchesField> SearchResultsFields = default(List<SearchesField>), SearchesSimpleResultsList SimpleResults = default(SearchesSimpleResultsList), long? TotalRows = default(long?), bool? HasMoreRecords = default(bool?), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.BusinessObjects = BusinessObjects;
             this.HasPrompts = HasPrompts;
@@ -349,7 +349,7 @@ namespace Cherwell.Model
         /// Gets or Sets BusinessObjects
         /// </summary>
         [DataMember(Name="businessObjects", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsBusinessObjectReadResponse> BusinessObjects { get; set; }
+        public List<BusinessObjectReadResponse> BusinessObjects { get; set; }
         /// <summary>
         /// Gets or Sets HasPrompts
         /// </summary>
@@ -359,22 +359,22 @@ namespace Cherwell.Model
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name="links", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCoreLink> Links { get; set; }
+        public List<CoreLink> Links { get; set; }
         /// <summary>
         /// Gets or Sets Prompts
         /// </summary>
         [DataMember(Name="prompts", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCorePrompt> Prompts { get; set; }
+        public List<CorePrompt> Prompts { get; set; }
         /// <summary>
         /// Gets or Sets SearchResultsFields
         /// </summary>
         [DataMember(Name="searchResultsFields", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSearchesField> SearchResultsFields { get; set; }
+        public List<SearchesField> SearchResultsFields { get; set; }
         /// <summary>
         /// Gets or Sets SimpleResults
         /// </summary>
         [DataMember(Name="simpleResults", EmitDefaultValue=false)]
-        public TrebuchetWebApiDataContractsSearchesSimpleResultsList SimpleResults { get; set; }
+        public SearchesSimpleResultsList SimpleResults { get; set; }
         /// <summary>
         /// Gets or Sets TotalRows
         /// </summary>
@@ -407,7 +407,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesSearchResultsResponse {\n");
+            sb.Append("class SearchesSearchResultsResponse {\n");
             sb.Append("  BusinessObjects: ").Append(BusinessObjects).Append("\n");
             sb.Append("  HasPrompts: ").Append(HasPrompts).Append("\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
@@ -441,15 +441,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesSearchResultsResponse);
+            return this.Equals(obj as SearchesSearchResultsResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesSearchResultsResponse instances are equal
+        /// Returns true if SearchesSearchResultsResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesSearchResultsResponse to be compared</param>
+        /// <param name="other">Instance of SearchesSearchResultsResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesSearchResultsResponse other)
+        public bool Equals(SearchesSearchResultsResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

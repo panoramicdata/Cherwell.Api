@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesSearchResultsTableResponse
+    /// SearchesSearchResultsTableResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesSearchResultsTableResponse :  IEquatable<TrebuchetWebApiDataContractsSearchesSearchResultsTableResponse>, IValidatableObject
+    public partial class SearchesSearchResultsTableResponse :  IEquatable<SearchesSearchResultsTableResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesSearchResultsTableResponse" /> class.
+        /// Initializes a new instance of the <see cref="SearchesSearchResultsTableResponse" /> class.
         /// </summary>
         /// <param name="Columns">Columns.</param>
         /// <param name="Rows">Rows.</param>
@@ -325,7 +325,7 @@ namespace Cherwell.Model
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsSearchesSearchResultsTableResponse(List<TrebuchetWebApiDataContractsSearchesField> Columns = default(List<TrebuchetWebApiDataContractsSearchesField>), List<TrebuchetWebApiDataContractsSearchesSearchResultsRow> Rows = default(List<TrebuchetWebApiDataContractsSearchesSearchResultsRow>), List<TrebuchetWebApiDataContractsSearchesSortInfo> Sorting = default(List<TrebuchetWebApiDataContractsSearchesSortInfo>), long? TotalRows = default(long?), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public SearchesSearchResultsTableResponse(List<SearchesField> Columns = default(List<SearchesField>), List<SearchesSearchResultsRow> Rows = default(List<SearchesSearchResultsRow>), List<SearchesSortInfo> Sorting = default(List<SearchesSortInfo>), long? TotalRows = default(long?), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.Columns = Columns;
             this.Rows = Rows;
@@ -341,17 +341,17 @@ namespace Cherwell.Model
         /// Gets or Sets Columns
         /// </summary>
         [DataMember(Name="columns", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSearchesField> Columns { get; set; }
+        public List<SearchesField> Columns { get; set; }
         /// <summary>
         /// Gets or Sets Rows
         /// </summary>
         [DataMember(Name="rows", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSearchesSearchResultsRow> Rows { get; set; }
+        public List<SearchesSearchResultsRow> Rows { get; set; }
         /// <summary>
         /// Gets or Sets Sorting
         /// </summary>
         [DataMember(Name="sorting", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSearchesSortInfo> Sorting { get; set; }
+        public List<SearchesSortInfo> Sorting { get; set; }
         /// <summary>
         /// Gets or Sets TotalRows
         /// </summary>
@@ -379,7 +379,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesSearchResultsTableResponse {\n");
+            sb.Append("class SearchesSearchResultsTableResponse {\n");
             sb.Append("  Columns: ").Append(Columns).Append("\n");
             sb.Append("  Rows: ").Append(Rows).Append("\n");
             sb.Append("  Sorting: ").Append(Sorting).Append("\n");
@@ -409,15 +409,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesSearchResultsTableResponse);
+            return this.Equals(obj as SearchesSearchResultsTableResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesSearchResultsTableResponse instances are equal
+        /// Returns true if SearchesSearchResultsTableResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesSearchResultsTableResponse to be compared</param>
+        /// <param name="other">Instance of SearchesSearchResultsTableResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesSearchResultsTableResponse other)
+        public bool Equals(SearchesSearchResultsTableResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

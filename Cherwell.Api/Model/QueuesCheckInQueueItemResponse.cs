@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse
+    /// QueuesCheckInQueueItemResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse :  IEquatable<TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse>, IValidatableObject
+    public partial class QueuesCheckInQueueItemResponse :  IEquatable<QueuesCheckInQueueItemResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse" /> class.
+        /// Initializes a new instance of the <see cref="QueuesCheckInQueueItemResponse" /> class.
         /// </summary>
         /// <param name="HistoryRecId">HistoryRecId.</param>
         /// <param name="HistoryText">HistoryText.</param>
@@ -324,7 +324,7 @@ namespace Cherwell.Model
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse(string HistoryRecId = default(string), string HistoryText = default(string), string HistoryTypeId = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public QueuesCheckInQueueItemResponse(string HistoryRecId = default(string), string HistoryText = default(string), string HistoryTypeId = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.HistoryRecId = HistoryRecId;
             this.HistoryText = HistoryText;
@@ -372,7 +372,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse {\n");
+            sb.Append("class QueuesCheckInQueueItemResponse {\n");
             sb.Append("  HistoryRecId: ").Append(HistoryRecId).Append("\n");
             sb.Append("  HistoryText: ").Append(HistoryText).Append("\n");
             sb.Append("  HistoryTypeId: ").Append(HistoryTypeId).Append("\n");
@@ -401,15 +401,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse);
+            return this.Equals(obj as QueuesCheckInQueueItemResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse instances are equal
+        /// Returns true if QueuesCheckInQueueItemResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse to be compared</param>
+        /// <param name="other">Instance of QueuesCheckInQueueItemResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse other)
+        public bool Equals(QueuesCheckInQueueItemResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

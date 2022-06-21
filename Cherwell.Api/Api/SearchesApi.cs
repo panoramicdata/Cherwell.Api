@@ -25,9 +25,9 @@ namespace Cherwell.Api
         /// <param name="dataRequest">Request containing the Business Object IDs list.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationResponse</returns>
+        /// <returns>Task of SearchesQuickSearchConfigurationResponse</returns>
         [Post("/api/V1/getquicksearchconfigurationforbusobs")]
-        Task<TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationResponse> SearchesGetQuickSearchConfigurationForBusObsV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationRequest dataRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesQuickSearchConfigurationResponse> SearchesGetQuickSearchConfigurationForBusObsV1([Header("UserAgent")] string userAgent, [Body]SearchesQuickSearchConfigurationRequest dataRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get a Quick Search by Business Objects with view rights
@@ -38,9 +38,9 @@ namespace Cherwell.Api
         /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationResponse</returns>
+        /// <returns>Task of SearchesQuickSearchConfigurationResponse</returns>
         [Get("/api/V1/getquicksearchconfigurationforbusobswithviewrights")]
-        Task<TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationResponse> SearchesGetQuickSearchConfigurationForBusObsWithViewRightsV1([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesQuickSearchConfigurationResponse> SearchesGetQuickSearchConfigurationForBusObsWithViewRightsV1([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Execute a Quick Search from a list of Business Object IDs and search text
@@ -53,9 +53,9 @@ namespace Cherwell.Api
         /// <param name="includeLinks">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsSearchesSimpleResultsList</returns>
+        /// <returns>Task of SearchesSimpleResultsList</returns>
         [Post("/api/V1/getquicksearchresults")]
-        Task<TrebuchetWebApiDataContractsSearchesSimpleResultsList> SearchesGetQuickSearchResultsV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsSearchesQuickSearchRequest dataRequest, [AliasAs("includeLinks")]bool? includeLinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesSimpleResultsList> SearchesGetQuickSearchResultsV1([Header("UserAgent")] string userAgent, [Body]SearchesQuickSearchRequest dataRequest, [AliasAs("includeLinks")]bool? includeLinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Execute a Quick Search on a specific Business Object
@@ -70,9 +70,9 @@ namespace Cherwell.Api
         /// <param name="includeLinks">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsSearchesSearchResultsTableResponse</returns>
+        /// <returns>Task of SearchesSearchResultsTableResponse</returns>
         [Post("/api/V1/getquicksearchspecificresults")]
-        Task<TrebuchetWebApiDataContractsSearchesSearchResultsTableResponse> SearchesGetQuickSearchSpecificResultsV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsSearchesQuickSearchSpecificRequest dataRequest, [AliasAs("includeSchema")]bool? includeSchema = null, [AliasAs("includeLocationFields")]bool? includeLocationFields = null, [AliasAs("includeLinks")]bool? includeLinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesSearchResultsTableResponse> SearchesGetQuickSearchSpecificResultsV1([Header("UserAgent")] string userAgent, [Body]SearchesQuickSearchSpecificRequest dataRequest, [AliasAs("includeSchema")]bool? includeSchema = null, [AliasAs("includeLocationFields")]bool? includeLocationFields = null, [AliasAs("includeLinks")]bool? includeLinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Execute a Quick Search on a specific Business Object
@@ -87,9 +87,9 @@ namespace Cherwell.Api
         /// <param name="includeLinks">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsSearchesQuickSearchResponse</returns>
+        /// <returns>Task of SearchesQuickSearchResponse</returns>
         [Post("/api/V2/getquicksearchspecificresults")]
-        Task<TrebuchetWebApiDataContractsSearchesQuickSearchResponse> SearchesGetQuickSearchSpecificResultsV2([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsSearchesQuickSearchSpecificRequest dataRequest, [AliasAs("includeSchema")]bool? includeSchema = null, [AliasAs("includeLocationFields")]bool? includeLocationFields = null, [AliasAs("includeLinks")]bool? includeLinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesQuickSearchResponse> SearchesGetQuickSearchSpecificResultsV2([Header("UserAgent")] string userAgent, [Body]SearchesQuickSearchSpecificRequest dataRequest, [AliasAs("includeSchema")]bool? includeSchema = null, [AliasAs("includeLocationFields")]bool? includeLocationFields = null, [AliasAs("includeLinks")]bool? includeLinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by Folder ID
@@ -105,9 +105,9 @@ namespace Cherwell.Api
         /// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsSearchesSearchItemResponse</returns>
+        /// <returns>Task of SearchesSearchItemResponse</returns>
         [Get("/api/V1/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
-        Task<TrebuchetWebApiDataContractsSearchesSearchItemResponse> SearchesGetSearchItemsByAssociationScopeScopeOwnerFolderV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesSearchItemResponse> SearchesGetSearchItemsByAssociationScopeScopeOwnerFolderV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by Folder ID
@@ -123,9 +123,9 @@ namespace Cherwell.Api
         /// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
+        /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V2/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
-        Task<TrebuchetWebApiDataContractsCoreManagerData> SearchesGetSearchItemsByAssociationScopeScopeOwnerFolderV2([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreManagerData> SearchesGetSearchItemsByAssociationScopeScopeOwnerFolderV2([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by scope owner (sub scope)
@@ -140,9 +140,9 @@ namespace Cherwell.Api
         /// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsSearchesSearchItemResponse</returns>
+        /// <returns>Task of SearchesSearchItemResponse</returns>
         [Get("/api/V1/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}")]
-        Task<TrebuchetWebApiDataContractsSearchesSearchItemResponse> SearchesGetSearchItemsByAssociationScopeScopeOwnerV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesSearchItemResponse> SearchesGetSearchItemsByAssociationScopeScopeOwnerV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by scope owner (sub scope)
@@ -157,9 +157,9 @@ namespace Cherwell.Api
         /// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
+        /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V2/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}")]
-        Task<TrebuchetWebApiDataContractsCoreManagerData> SearchesGetSearchItemsByAssociationScopeScopeOwnerV2([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreManagerData> SearchesGetSearchItemsByAssociationScopeScopeOwnerV2([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by scope
@@ -173,9 +173,9 @@ namespace Cherwell.Api
         /// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsSearchesSearchItemResponse</returns>
+        /// <returns>Task of SearchesSearchItemResponse</returns>
         [Get("/api/V1/getsearchitems/association/{association}/scope/{scope}")]
-        Task<TrebuchetWebApiDataContractsSearchesSearchItemResponse> SearchesGetSearchItemsByAssociationScopeV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesSearchItemResponse> SearchesGetSearchItemsByAssociationScopeV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by scope
@@ -189,9 +189,9 @@ namespace Cherwell.Api
         /// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
+        /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V2/getsearchitems/association/{association}/scope/{scope}")]
-        Task<TrebuchetWebApiDataContractsCoreManagerData> SearchesGetSearchItemsByAssociationScopeV2([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreManagerData> SearchesGetSearchItemsByAssociationScopeV2([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by Business Object association
@@ -204,9 +204,9 @@ namespace Cherwell.Api
         /// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsSearchesSearchItemResponse</returns>
+        /// <returns>Task of SearchesSearchItemResponse</returns>
         [Get("/api/V1/getsearchitems/association/{association}")]
-        Task<TrebuchetWebApiDataContractsSearchesSearchItemResponse> SearchesGetSearchItemsByAssociationV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesSearchItemResponse> SearchesGetSearchItemsByAssociationV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by Business Object association
@@ -219,9 +219,9 @@ namespace Cherwell.Api
         /// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
+        /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V2/getsearchitems/association/{association}")]
-        Task<TrebuchetWebApiDataContractsCoreManagerData> SearchesGetSearchItemsByAssociationV2([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreManagerData> SearchesGetSearchItemsByAssociationV2([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by default Business Object association
@@ -233,9 +233,9 @@ namespace Cherwell.Api
         /// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsSearchesSearchItemResponse</returns>
+        /// <returns>Task of SearchesSearchItemResponse</returns>
         [Get("/api/V1/getsearchitems")]
-        Task<TrebuchetWebApiDataContractsSearchesSearchItemResponse> SearchesGetSearchItemsV1([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesSearchItemResponse> SearchesGetSearchItemsV1([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by default Business Object association
@@ -247,9 +247,9 @@ namespace Cherwell.Api
         /// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
+        /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V2/getsearchitems")]
-        Task<TrebuchetWebApiDataContractsCoreManagerData> SearchesGetSearchItemsV2([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreManagerData> SearchesGetSearchItemsV2([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Run an ad-hoc search
@@ -261,9 +261,9 @@ namespace Cherwell.Api
         /// <param name="dataRequest">Request object to specify search parameters.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsSearchesSearchResultsResponse</returns>
+        /// <returns>Task of SearchesSearchResultsResponse</returns>
         [Post("/api/V1/getsearchresults")]
-        Task<TrebuchetWebApiDataContractsSearchesSearchResultsResponse> SearchesGetSearchResultsAdHocV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsSearchesSearchResultsRequest dataRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesSearchResultsResponse> SearchesGetSearchResultsAdHocV1([Header("UserAgent")] string userAgent, [Body]SearchesSearchResultsRequest dataRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get results of a saved search
@@ -275,9 +275,9 @@ namespace Cherwell.Api
         /// <param name="searchRequest">Request object to specify search parameters.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsSearchesStoredSearchResults</returns>
+        /// <returns>Task of SearchesStoredSearchResults</returns>
         [Post("/api/V2/storedsearches")]
-        Task<TrebuchetWebApiDataContractsSearchesStoredSearchResults> SearchesGetSearchResultsAsStringByIdV2([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsSearchesStoredSearchRequest searchRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesStoredSearchResults> SearchesGetSearchResultsAsStringByIdV2([Header("UserAgent")] string userAgent, [Body]SearchesStoredSearchRequest searchRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get results of a saved search
@@ -331,9 +331,9 @@ namespace Cherwell.Api
         /// <param name="resultsAsSimpleResultsList">Indicates if the results should be returned in a simple results list format or a table format. Default is a table format. (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsSearchesSearchResultsResponse</returns>
+        /// <returns>Task of SearchesSearchResultsResponse</returns>
         [Get("/api/V1/getsearchresults/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchid/{searchid}")]
-        Task<TrebuchetWebApiDataContractsSearchesSearchResultsResponse> SearchesGetSearchResultsByIdV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("searchid")]string searchid, [AliasAs("searchTerm")]string searchTerm = null, [AliasAs("pagenumber")]int? pagenumber = null, [AliasAs("pagesize")]int? pagesize = null, [AliasAs("includeschema")]bool? includeschema = null, [AliasAs("resultsAsSimpleResultsList")]bool? resultsAsSimpleResultsList = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesSearchResultsResponse> SearchesGetSearchResultsByIdV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("searchid")]string searchid, [AliasAs("searchTerm")]string searchTerm = null, [AliasAs("pagenumber")]int? pagenumber = null, [AliasAs("pagesize")]int? pagesize = null, [AliasAs("includeschema")]bool? includeschema = null, [AliasAs("resultsAsSimpleResultsList")]bool? resultsAsSimpleResultsList = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Run a saved search by name
@@ -353,9 +353,9 @@ namespace Cherwell.Api
         /// <param name="resultsAsSimpleResultsList">Indicates if the results should be returned in a simple results list format or a table format. Default is a table format. (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsSearchesSearchResultsResponse</returns>
+        /// <returns>Task of SearchesSearchResultsResponse</returns>
         [Get("/api/V1/getsearchresults/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchname/{searchname}")]
-        Task<TrebuchetWebApiDataContractsSearchesSearchResultsResponse> SearchesGetSearchResultsByNameV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("searchname")]string searchname, [AliasAs("searchTerm")]string searchTerm = null, [AliasAs("pagenumber")]int? pagenumber = null, [AliasAs("pagesize")]int? pagesize = null, [AliasAs("includeschema")]bool? includeschema = null, [AliasAs("resultsAsSimpleResultsList")]bool? resultsAsSimpleResultsList = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesSearchResultsResponse> SearchesGetSearchResultsByNameV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("searchname")]string searchname, [AliasAs("searchTerm")]string searchTerm = null, [AliasAs("pagenumber")]int? pagenumber = null, [AliasAs("pagesize")]int? pagesize = null, [AliasAs("includeschema")]bool? includeschema = null, [AliasAs("resultsAsSimpleResultsList")]bool? resultsAsSimpleResultsList = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Export an ad-hoc search
@@ -369,7 +369,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of string</returns>
         [Post("/api/V1/getsearchresultsexport")]
-        Task<string> SearchesGetSearchResultsExportAdHocV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsSearchesExportSearchResultsRequest dataRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<string> SearchesGetSearchResultsExportAdHocV1([Header("UserAgent")] string userAgent, [Body]SearchesExportSearchResultsRequest dataRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Export a saved search by ID

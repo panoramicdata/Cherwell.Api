@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesSimpleResultsListItem
+    /// SearchesSimpleResultsListItem
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesSimpleResultsListItem :  IEquatable<TrebuchetWebApiDataContractsSearchesSimpleResultsListItem>, IValidatableObject
+    public partial class SearchesSimpleResultsListItem :  IEquatable<SearchesSimpleResultsListItem>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesSimpleResultsListItem" /> class.
+        /// Initializes a new instance of the <see cref="SearchesSimpleResultsListItem" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObRecId">BusObRecId.</param>
@@ -33,7 +33,7 @@ namespace Cherwell.Model
         /// <param name="SubTitle">SubTitle.</param>
         /// <param name="Text">Text.</param>
         /// <param name="Title">Title.</param>
-        public TrebuchetWebApiDataContractsSearchesSimpleResultsListItem(string BusObId = default(string), string BusObRecId = default(string), string DocRepositoryItemId = default(string), string GalleryImage = default(string), List<TrebuchetWebApiDataContractsCoreLink> Links = default(List<TrebuchetWebApiDataContractsCoreLink>), string PublicId = default(string), string Scope = default(string), string ScopeOwner = default(string), string SubTitle = default(string), string Text = default(string), string Title = default(string))
+        public SearchesSimpleResultsListItem(string BusObId = default(string), string BusObRecId = default(string), string DocRepositoryItemId = default(string), string GalleryImage = default(string), List<CoreLink> Links = default(List<CoreLink>), string PublicId = default(string), string Scope = default(string), string ScopeOwner = default(string), string SubTitle = default(string), string Text = default(string), string Title = default(string))
         {
             this.BusObId = BusObId;
             this.BusObRecId = BusObRecId;
@@ -72,7 +72,7 @@ namespace Cherwell.Model
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name="links", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCoreLink> Links { get; set; }
+        public List<CoreLink> Links { get; set; }
         /// <summary>
         /// Gets or Sets PublicId
         /// </summary>
@@ -110,7 +110,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesSimpleResultsListItem {\n");
+            sb.Append("class SearchesSimpleResultsListItem {\n");
             sb.Append("  BusObId: ").Append(BusObId).Append("\n");
             sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
             sb.Append("  DocRepositoryItemId: ").Append(DocRepositoryItemId).Append("\n");
@@ -143,15 +143,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesSimpleResultsListItem);
+            return this.Equals(obj as SearchesSimpleResultsListItem);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesSimpleResultsListItem instances are equal
+        /// Returns true if SearchesSimpleResultsListItem instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesSimpleResultsListItem to be compared</param>
+        /// <param name="other">Instance of SearchesSimpleResultsListItem to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesSimpleResultsListItem other)
+        public bool Equals(SearchesSimpleResultsListItem other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

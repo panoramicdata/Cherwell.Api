@@ -14,18 +14,18 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesQuickSearchConfigSavedRequest
+    /// SearchesQuickSearchConfigSavedRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesQuickSearchConfigSavedRequest :  IEquatable<TrebuchetWebApiDataContractsSearchesQuickSearchConfigSavedRequest>, IValidatableObject
+    public partial class SearchesQuickSearchConfigSavedRequest :  IEquatable<SearchesQuickSearchConfigSavedRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesQuickSearchConfigSavedRequest" /> class.
+        /// Initializes a new instance of the <see cref="SearchesQuickSearchConfigSavedRequest" /> class.
         /// </summary>
         /// <param name="StandIn">StandIn.</param>
         /// <param name="BusObIds">BusObIds.</param>
         /// <param name="IsGeneral">IsGeneral.</param>
-        public TrebuchetWebApiDataContractsSearchesQuickSearchConfigSavedRequest(string StandIn = default(string), List<string> BusObIds = default(List<string>), bool? IsGeneral = default(bool?))
+        public SearchesQuickSearchConfigSavedRequest(string StandIn = default(string), List<string> BusObIds = default(List<string>), bool? IsGeneral = default(bool?))
         {
             this.StandIn = StandIn;
             this.BusObIds = BusObIds;
@@ -54,7 +54,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesQuickSearchConfigSavedRequest {\n");
+            sb.Append("class SearchesQuickSearchConfigSavedRequest {\n");
             sb.Append("  StandIn: ").Append(StandIn).Append("\n");
             sb.Append("  BusObIds: ").Append(BusObIds).Append("\n");
             sb.Append("  IsGeneral: ").Append(IsGeneral).Append("\n");
@@ -79,15 +79,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesQuickSearchConfigSavedRequest);
+            return this.Equals(obj as SearchesQuickSearchConfigSavedRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesQuickSearchConfigSavedRequest instances are equal
+        /// Returns true if SearchesQuickSearchConfigSavedRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesQuickSearchConfigSavedRequest to be compared</param>
+        /// <param name="other">Instance of SearchesQuickSearchConfigSavedRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesQuickSearchConfigSavedRequest other)
+        public bool Equals(SearchesQuickSearchConfigSavedRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

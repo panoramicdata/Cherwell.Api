@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsCoreManagerFolder
+    /// CoreManagerFolder
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsCoreManagerFolder :  IEquatable<TrebuchetWebApiDataContractsCoreManagerFolder>, IValidatableObject
+    public partial class CoreManagerFolder :  IEquatable<CoreManagerFolder>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsCoreManagerFolder" /> class.
+        /// Initializes a new instance of the <see cref="CoreManagerFolder" /> class.
         /// </summary>
         /// <param name="Association">Association.</param>
         /// <param name="ChildFolders">ChildFolders.</param>
@@ -32,7 +32,7 @@ namespace Cherwell.Model
         /// <param name="ParentId">ParentId.</param>
         /// <param name="Scope">Scope.</param>
         /// <param name="ScopeOwner">ScopeOwner.</param>
-        public TrebuchetWebApiDataContractsCoreManagerFolder(string Association = default(string), List<TrebuchetWebApiDataContractsCoreManagerFolder> ChildFolders = default(List<TrebuchetWebApiDataContractsCoreManagerFolder>), List<TrebuchetWebApiDataContractsCoreManagerItem> ChildItems = default(List<TrebuchetWebApiDataContractsCoreManagerItem>), string Id = default(string), List<TrebuchetWebApiDataContractsCoreLink> Links = default(List<TrebuchetWebApiDataContractsCoreLink>), string LocalizedScopeName = default(string), string Name = default(string), string ParentId = default(string), string Scope = default(string), string ScopeOwner = default(string))
+        public CoreManagerFolder(string Association = default(string), List<CoreManagerFolder> ChildFolders = default(List<CoreManagerFolder>), List<CoreManagerItem> ChildItems = default(List<CoreManagerItem>), string Id = default(string), List<CoreLink> Links = default(List<CoreLink>), string LocalizedScopeName = default(string), string Name = default(string), string ParentId = default(string), string Scope = default(string), string ScopeOwner = default(string))
         {
             this.Association = Association;
             this.ChildFolders = ChildFolders;
@@ -55,12 +55,12 @@ namespace Cherwell.Model
         /// Gets or Sets ChildFolders
         /// </summary>
         [DataMember(Name="childFolders", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCoreManagerFolder> ChildFolders { get; set; }
+        public List<CoreManagerFolder> ChildFolders { get; set; }
         /// <summary>
         /// Gets or Sets ChildItems
         /// </summary>
         [DataMember(Name="childItems", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCoreManagerItem> ChildItems { get; set; }
+        public List<CoreManagerItem> ChildItems { get; set; }
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
@@ -70,7 +70,7 @@ namespace Cherwell.Model
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name="links", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCoreLink> Links { get; set; }
+        public List<CoreLink> Links { get; set; }
         /// <summary>
         /// Gets or Sets LocalizedScopeName
         /// </summary>
@@ -103,7 +103,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsCoreManagerFolder {\n");
+            sb.Append("class CoreManagerFolder {\n");
             sb.Append("  Association: ").Append(Association).Append("\n");
             sb.Append("  ChildFolders: ").Append(ChildFolders).Append("\n");
             sb.Append("  ChildItems: ").Append(ChildItems).Append("\n");
@@ -135,15 +135,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsCoreManagerFolder);
+            return this.Equals(obj as CoreManagerFolder);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsCoreManagerFolder instances are equal
+        /// Returns true if CoreManagerFolder instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsCoreManagerFolder to be compared</param>
+        /// <param name="other">Instance of CoreManagerFolder to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsCoreManagerFolder other)
+        public bool Equals(CoreManagerFolder other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

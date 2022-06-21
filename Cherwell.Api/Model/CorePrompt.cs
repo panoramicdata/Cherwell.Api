@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsCorePrompt
+    /// CorePrompt
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsCorePrompt :  IEquatable<TrebuchetWebApiDataContractsCorePrompt>, IValidatableObject
+    public partial class CorePrompt :  IEquatable<CorePrompt>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets ListDisplayOption
@@ -160,7 +160,7 @@ namespace Cherwell.Model
         [DataMember(Name="promptType", EmitDefaultValue=false)]
         public PromptTypeEnum? PromptType { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsCorePrompt" /> class.
+        /// Initializes a new instance of the <see cref="CorePrompt" /> class.
         /// </summary>
         /// <param name="AllowValuesOnly">AllowValuesOnly.</param>
         /// <param name="BusObId">BusObId.</param>
@@ -181,7 +181,7 @@ namespace Cherwell.Model
         /// <param name="Text">Text.</param>
         /// <param name="Value">Value.</param>
         /// <param name="Values">Values.</param>
-        public TrebuchetWebApiDataContractsCorePrompt(bool? AllowValuesOnly = default(bool?), string BusObId = default(string), string CollectionStoreEntireRow = default(string), string CollectionValueField = default(string), string ConstraintXml = default(string), string Contents = default(string), string _Default = default(string), string FieldId = default(string), bool? IsDateRange = default(bool?), ListDisplayOptionEnum? ListDisplayOption = default(ListDisplayOptionEnum?), string ListReturnFieldId = default(string), bool? MultiLine = default(bool?), string PromptId = default(string), PromptTypeEnum? PromptType = default(PromptTypeEnum?), string PromptTypeName = default(string), bool? Required = default(bool?), string Text = default(string), Object Value = default(Object), List<string> Values = default(List<string>))
+        public CorePrompt(bool? AllowValuesOnly = default(bool?), string BusObId = default(string), string CollectionStoreEntireRow = default(string), string CollectionValueField = default(string), string ConstraintXml = default(string), string Contents = default(string), string _Default = default(string), string FieldId = default(string), bool? IsDateRange = default(bool?), ListDisplayOptionEnum? ListDisplayOption = default(ListDisplayOptionEnum?), string ListReturnFieldId = default(string), bool? MultiLine = default(bool?), string PromptId = default(string), PromptTypeEnum? PromptType = default(PromptTypeEnum?), string PromptTypeName = default(string), bool? Required = default(bool?), string Text = default(string), Object Value = default(Object), List<string> Values = default(List<string>))
         {
             this.AllowValuesOnly = AllowValuesOnly;
             this.BusObId = BusObId;
@@ -296,7 +296,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsCorePrompt {\n");
+            sb.Append("class CorePrompt {\n");
             sb.Append("  AllowValuesOnly: ").Append(AllowValuesOnly).Append("\n");
             sb.Append("  BusObId: ").Append(BusObId).Append("\n");
             sb.Append("  CollectionStoreEntireRow: ").Append(CollectionStoreEntireRow).Append("\n");
@@ -337,15 +337,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsCorePrompt);
+            return this.Equals(obj as CorePrompt);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsCorePrompt instances are equal
+        /// Returns true if CorePrompt instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsCorePrompt to be compared</param>
+        /// <param name="other">Instance of CorePrompt to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsCorePrompt other)
+        public bool Equals(CorePrompt other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

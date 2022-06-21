@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSecurityRight
+    /// SecurityRight
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSecurityRight :  IEquatable<TrebuchetWebApiDataContractsSecurityRight>, IValidatableObject
+    public partial class SecurityRight :  IEquatable<SecurityRight>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSecurityRight" /> class.
+        /// Initializes a new instance of the <see cref="SecurityRight" /> class.
         /// </summary>
         /// <param name="Add">Add.</param>
         /// <param name="Allow">Allow.</param>
@@ -38,7 +38,7 @@ namespace Cherwell.Model
         /// <param name="RightName">RightName.</param>
         /// <param name="StandardRightName">StandardRightName.</param>
         /// <param name="ViewRunOpen">ViewRunOpen.</param>
-        public TrebuchetWebApiDataContractsSecurityRight(bool? Add = default(bool?), bool? Allow = default(bool?), string CategoryDescription = default(string), string CategoryId = default(string), string CategoryName = default(string), bool? Delete = default(bool?), bool? Edit = default(bool?), bool? IsYesNoRight = default(bool?), bool? NonScopeOwnerAdd = default(bool?), bool? NonScopeOwnerDelete = default(bool?), bool? NonScopeOwnerEdit = default(bool?), bool? NonScopeOwnerView = default(bool?), string RightId = default(string), string RightName = default(string), string StandardRightName = default(string), bool? ViewRunOpen = default(bool?))
+        public SecurityRight(bool? Add = default(bool?), bool? Allow = default(bool?), string CategoryDescription = default(string), string CategoryId = default(string), string CategoryName = default(string), bool? Delete = default(bool?), bool? Edit = default(bool?), bool? IsYesNoRight = default(bool?), bool? NonScopeOwnerAdd = default(bool?), bool? NonScopeOwnerDelete = default(bool?), bool? NonScopeOwnerEdit = default(bool?), bool? NonScopeOwnerView = default(bool?), string RightId = default(string), string RightName = default(string), string StandardRightName = default(string), bool? ViewRunOpen = default(bool?))
         {
             this.Add = Add;
             this.Allow = Allow;
@@ -145,7 +145,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSecurityRight {\n");
+            sb.Append("class SecurityRight {\n");
             sb.Append("  Add: ").Append(Add).Append("\n");
             sb.Append("  Allow: ").Append(Allow).Append("\n");
             sb.Append("  CategoryDescription: ").Append(CategoryDescription).Append("\n");
@@ -183,15 +183,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSecurityRight);
+            return this.Equals(obj as SecurityRight);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSecurityRight instances are equal
+        /// Returns true if SecurityRight instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSecurityRight to be compared</param>
+        /// <param name="other">Instance of SecurityRight to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSecurityRight other)
+        public bool Equals(SecurityRight other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

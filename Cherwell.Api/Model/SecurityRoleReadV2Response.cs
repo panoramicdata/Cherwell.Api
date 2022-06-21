@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSecurityRoleReadV2Response
+    /// SecurityRoleReadV2Response
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSecurityRoleReadV2Response :  IEquatable<TrebuchetWebApiDataContractsSecurityRoleReadV2Response>, IValidatableObject
+    public partial class SecurityRoleReadV2Response :  IEquatable<SecurityRoleReadV2Response>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSecurityRoleReadV2Response" /> class.
+        /// Initializes a new instance of the <see cref="SecurityRoleReadV2Response" /> class.
         /// </summary>
         /// <param name="Roles">Roles.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsSecurityRoleReadV2Response(List<TrebuchetWebApiDataContractsSecurityRole> Roles = default(List<TrebuchetWebApiDataContractsSecurityRole>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public SecurityRoleReadV2Response(List<SecurityRole> Roles = default(List<SecurityRole>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.Roles = Roles;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Model
         /// Gets or Sets Roles
         /// </summary>
         [DataMember(Name="roles", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSecurityRole> Roles { get; set; }
+        public List<SecurityRole> Roles { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -358,7 +358,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSecurityRoleReadV2Response {\n");
+            sb.Append("class SecurityRoleReadV2Response {\n");
             sb.Append("  Roles: ").Append(Roles).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
@@ -385,15 +385,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSecurityRoleReadV2Response);
+            return this.Equals(obj as SecurityRoleReadV2Response);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSecurityRoleReadV2Response instances are equal
+        /// Returns true if SecurityRoleReadV2Response instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSecurityRoleReadV2Response to be compared</param>
+        /// <param name="other">Instance of SecurityRoleReadV2Response to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSecurityRoleReadV2Response other)
+        public bool Equals(SecurityRoleReadV2Response other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse
+    /// TeamsRemoveUserFromTeamResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse :  IEquatable<TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse>, IValidatableObject
+    public partial class TeamsRemoveUserFromTeamResponse :  IEquatable<TeamsRemoveUserFromTeamResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse" /> class.
+        /// Initializes a new instance of the <see cref="TeamsRemoveUserFromTeamResponse" /> class.
         /// </summary>
         /// <param name="TeamId">TeamId.</param>
         /// <param name="UserRecordId">UserRecordId.</param>
@@ -323,7 +323,7 @@ namespace Cherwell.Model
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse(string TeamId = default(string), string UserRecordId = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public TeamsRemoveUserFromTeamResponse(string TeamId = default(string), string UserRecordId = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.TeamId = TeamId;
             this.UserRecordId = UserRecordId;
@@ -365,7 +365,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse {\n");
+            sb.Append("class TeamsRemoveUserFromTeamResponse {\n");
             sb.Append("  TeamId: ").Append(TeamId).Append("\n");
             sb.Append("  UserRecordId: ").Append(UserRecordId).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
@@ -393,15 +393,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse);
+            return this.Equals(obj as TeamsRemoveUserFromTeamResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse instances are equal
+        /// Returns true if TeamsRemoveUserFromTeamResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse to be compared</param>
+        /// <param name="other">Instance of TeamsRemoveUserFromTeamResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse other)
+        public bool Equals(TeamsRemoveUserFromTeamResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

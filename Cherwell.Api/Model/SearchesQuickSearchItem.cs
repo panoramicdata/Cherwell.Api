@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesQuickSearchItem
+    /// SearchesQuickSearchItem
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesQuickSearchItem :  IEquatable<TrebuchetWebApiDataContractsSearchesQuickSearchItem>, IValidatableObject
+    public partial class SearchesQuickSearchItem :  IEquatable<SearchesQuickSearchItem>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets ChangedOption
@@ -267,7 +267,7 @@ namespace Cherwell.Model
         [DataMember(Name="sortByOption", EmitDefaultValue=false)]
         public SortByOptionEnum? SortByOption { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesQuickSearchItem" /> class.
+        /// Initializes a new instance of the <see cref="SearchesQuickSearchItem" /> class.
         /// </summary>
         /// <param name="Ascending">Ascending.</param>
         /// <param name="ChangedLimits">ChangedLimits.</param>
@@ -286,7 +286,7 @@ namespace Cherwell.Model
         /// <param name="SortByFields">SortByFields.</param>
         /// <param name="SortByOption">SortByOption.</param>
         /// <param name="WatermarkText">WatermarkText.</param>
-        public TrebuchetWebApiDataContractsSearchesQuickSearchItem(bool? Ascending = default(bool?), List<TrebuchetWebApiDataContractsSearchesChangedLimit> ChangedLimits = default(List<TrebuchetWebApiDataContractsSearchesChangedLimit>), ChangedOptionEnum? ChangedOption = default(ChangedOptionEnum?), string DisplayName = default(string), string GalleryImage = default(string), bool? HasAnyOptions = default(bool?), NonFinalStateOptionEnum? NonFinalStateOption = default(NonFinalStateOptionEnum?), SearchAnyWordsOptionEnum? SearchAnyWordsOption = default(SearchAnyWordsOptionEnum?), SearchAttachmentsOptionEnum? SearchAttachmentsOption = default(SearchAttachmentsOptionEnum?), SearchRelatedOptionEnum? SearchRelatedOption = default(SearchRelatedOptionEnum?), string SearchTargetId = default(string), SearchTargetTypeEnum? SearchTargetType = default(SearchTargetTypeEnum?), TrebuchetWebApiDataContractsSearchesChangedLimit SelectedChangedLimit = default(TrebuchetWebApiDataContractsSearchesChangedLimit), string SelectedSortByFieldId = default(string), Dictionary<string, string> SortByFields = default(Dictionary<string, string>), SortByOptionEnum? SortByOption = default(SortByOptionEnum?), string WatermarkText = default(string))
+        public SearchesQuickSearchItem(bool? Ascending = default(bool?), List<SearchesChangedLimit> ChangedLimits = default(List<SearchesChangedLimit>), ChangedOptionEnum? ChangedOption = default(ChangedOptionEnum?), string DisplayName = default(string), string GalleryImage = default(string), bool? HasAnyOptions = default(bool?), NonFinalStateOptionEnum? NonFinalStateOption = default(NonFinalStateOptionEnum?), SearchAnyWordsOptionEnum? SearchAnyWordsOption = default(SearchAnyWordsOptionEnum?), SearchAttachmentsOptionEnum? SearchAttachmentsOption = default(SearchAttachmentsOptionEnum?), SearchRelatedOptionEnum? SearchRelatedOption = default(SearchRelatedOptionEnum?), string SearchTargetId = default(string), SearchTargetTypeEnum? SearchTargetType = default(SearchTargetTypeEnum?), SearchesChangedLimit SelectedChangedLimit = default(SearchesChangedLimit), string SelectedSortByFieldId = default(string), Dictionary<string, string> SortByFields = default(Dictionary<string, string>), SortByOptionEnum? SortByOption = default(SortByOptionEnum?), string WatermarkText = default(string))
         {
             this.Ascending = Ascending;
             this.ChangedLimits = ChangedLimits;
@@ -316,7 +316,7 @@ namespace Cherwell.Model
         /// Gets or Sets ChangedLimits
         /// </summary>
         [DataMember(Name="changedLimits", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSearchesChangedLimit> ChangedLimits { get; set; }
+        public List<SearchesChangedLimit> ChangedLimits { get; set; }
         /// <summary>
         /// Gets or Sets DisplayName
         /// </summary>
@@ -341,7 +341,7 @@ namespace Cherwell.Model
         /// Gets or Sets SelectedChangedLimit
         /// </summary>
         [DataMember(Name="selectedChangedLimit", EmitDefaultValue=false)]
-        public TrebuchetWebApiDataContractsSearchesChangedLimit SelectedChangedLimit { get; set; }
+        public SearchesChangedLimit SelectedChangedLimit { get; set; }
         /// <summary>
         /// Gets or Sets SelectedSortByFieldId
         /// </summary>
@@ -364,7 +364,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesQuickSearchItem {\n");
+            sb.Append("class SearchesQuickSearchItem {\n");
             sb.Append("  Ascending: ").Append(Ascending).Append("\n");
             sb.Append("  ChangedLimits: ").Append(ChangedLimits).Append("\n");
             sb.Append("  ChangedOption: ").Append(ChangedOption).Append("\n");
@@ -403,15 +403,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesQuickSearchItem);
+            return this.Equals(obj as SearchesQuickSearchItem);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesQuickSearchItem instances are equal
+        /// Returns true if SearchesQuickSearchItem instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesQuickSearchItem to be compared</param>
+        /// <param name="other">Instance of SearchesQuickSearchItem to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesQuickSearchItem other)
+        public bool Equals(SearchesQuickSearchItem other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

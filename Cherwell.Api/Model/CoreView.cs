@@ -14,18 +14,18 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsCoreView
+    /// CoreView
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsCoreView :  IEquatable<TrebuchetWebApiDataContractsCoreView>, IValidatableObject
+    public partial class CoreView :  IEquatable<CoreView>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsCoreView" /> class.
+        /// Initializes a new instance of the <see cref="CoreView" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="ViewId">ViewId.</param>
         /// <param name="Image">Image.</param>
-        public TrebuchetWebApiDataContractsCoreView(string Name = default(string), string ViewId = default(string), string Image = default(string))
+        public CoreView(string Name = default(string), string ViewId = default(string), string Image = default(string))
         {
             this.Name = Name;
             this.ViewId = ViewId;
@@ -54,7 +54,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsCoreView {\n");
+            sb.Append("class CoreView {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ViewId: ").Append(ViewId).Append("\n");
             sb.Append("  Image: ").Append(Image).Append("\n");
@@ -79,15 +79,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsCoreView);
+            return this.Equals(obj as CoreView);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsCoreView instances are equal
+        /// Returns true if CoreView instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsCoreView to be compared</param>
+        /// <param name="other">Instance of CoreView to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsCoreView other)
+        public bool Equals(CoreView other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

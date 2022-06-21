@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSecurityBusinessObjectPermission
+    /// SecurityBusinessObjectPermission
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSecurityBusinessObjectPermission :  IEquatable<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>, IValidatableObject
+    public partial class SecurityBusinessObjectPermission :  IEquatable<SecurityBusinessObjectPermission>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSecurityBusinessObjectPermission" /> class.
+        /// Initializes a new instance of the <see cref="SecurityBusinessObjectPermission" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObName">BusObName.</param>
@@ -37,7 +37,7 @@ namespace Cherwell.Model
         /// <param name="TeamManagerOfOwnerView">TeamManagerOfOwnerView.</param>
         /// <param name="TeamView">TeamView.</param>
         /// <param name="View">View.</param>
-        public TrebuchetWebApiDataContractsSecurityBusinessObjectPermission(string BusObId = default(string), string BusObName = default(string), bool? DepartmentMemberEdit = default(bool?), bool? DepartmentMemberView = default(bool?), bool? Edit = default(bool?), List<TrebuchetWebApiDataContractsSecurityFieldPermission> FieldPermissions = default(List<TrebuchetWebApiDataContractsSecurityFieldPermission>), bool? ManagerOfOwnerEdit = default(bool?), bool? ManagerOfOwnerView = default(bool?), bool? OwnerEdit = default(bool?), bool? OwnerView = default(bool?), bool? TeamEdit = default(bool?), bool? TeamManagerOfOwnerEdit = default(bool?), bool? TeamManagerOfOwnerView = default(bool?), bool? TeamView = default(bool?), bool? View = default(bool?))
+        public SecurityBusinessObjectPermission(string BusObId = default(string), string BusObName = default(string), bool? DepartmentMemberEdit = default(bool?), bool? DepartmentMemberView = default(bool?), bool? Edit = default(bool?), List<SecurityFieldPermission> FieldPermissions = default(List<SecurityFieldPermission>), bool? ManagerOfOwnerEdit = default(bool?), bool? ManagerOfOwnerView = default(bool?), bool? OwnerEdit = default(bool?), bool? OwnerView = default(bool?), bool? TeamEdit = default(bool?), bool? TeamManagerOfOwnerEdit = default(bool?), bool? TeamManagerOfOwnerView = default(bool?), bool? TeamView = default(bool?), bool? View = default(bool?))
         {
             this.BusObId = BusObId;
             this.BusObName = BusObName;
@@ -85,7 +85,7 @@ namespace Cherwell.Model
         /// Gets or Sets FieldPermissions
         /// </summary>
         [DataMember(Name="fieldPermissions", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSecurityFieldPermission> FieldPermissions { get; set; }
+        public List<SecurityFieldPermission> FieldPermissions { get; set; }
         /// <summary>
         /// Gets or Sets ManagerOfOwnerEdit
         /// </summary>
@@ -138,7 +138,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSecurityBusinessObjectPermission {\n");
+            sb.Append("class SecurityBusinessObjectPermission {\n");
             sb.Append("  BusObId: ").Append(BusObId).Append("\n");
             sb.Append("  BusObName: ").Append(BusObName).Append("\n");
             sb.Append("  DepartmentMemberEdit: ").Append(DepartmentMemberEdit).Append("\n");
@@ -175,15 +175,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSecurityBusinessObjectPermission);
+            return this.Equals(obj as SecurityBusinessObjectPermission);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSecurityBusinessObjectPermission instances are equal
+        /// Returns true if SecurityBusinessObjectPermission instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSecurityBusinessObjectPermission to be compared</param>
+        /// <param name="other">Instance of SecurityBusinessObjectPermission to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSecurityBusinessObjectPermission other)
+        public bool Equals(SecurityBusinessObjectPermission other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

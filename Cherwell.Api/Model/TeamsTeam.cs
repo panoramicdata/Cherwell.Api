@@ -14,17 +14,17 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsTeamsTeam
+    /// TeamsTeam
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsTeamsTeam :  IEquatable<TrebuchetWebApiDataContractsTeamsTeam>, IValidatableObject
+    public partial class TeamsTeam :  IEquatable<TeamsTeam>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsTeamsTeam" /> class.
+        /// Initializes a new instance of the <see cref="TeamsTeam" /> class.
         /// </summary>
         /// <param name="TeamId">TeamId.</param>
         /// <param name="TeamName">TeamName.</param>
-        public TrebuchetWebApiDataContractsTeamsTeam(string TeamId = default(string), string TeamName = default(string))
+        public TeamsTeam(string TeamId = default(string), string TeamName = default(string))
         {
             this.TeamId = TeamId;
             this.TeamName = TeamName;
@@ -47,7 +47,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsTeamsTeam {\n");
+            sb.Append("class TeamsTeam {\n");
             sb.Append("  TeamId: ").Append(TeamId).Append("\n");
             sb.Append("  TeamName: ").Append(TeamName).Append("\n");
             sb.Append("}\n");
@@ -71,15 +71,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsTeamsTeam);
+            return this.Equals(obj as TeamsTeam);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsTeamsTeam instances are equal
+        /// Returns true if TeamsTeam instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsTeamsTeam to be compared</param>
+        /// <param name="other">Instance of TeamsTeam to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsTeamsTeam other)
+        public bool Equals(TeamsTeam other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsCoreSaveStoredValueRequest
+    /// CoreSaveStoredValueRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsCoreSaveStoredValueRequest :  IEquatable<TrebuchetWebApiDataContractsCoreSaveStoredValueRequest>, IValidatableObject
+    public partial class CoreSaveStoredValueRequest :  IEquatable<CoreSaveStoredValueRequest>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets StoredValueType
@@ -87,7 +87,7 @@ namespace Cherwell.Model
         [DataMember(Name="storedValueType", EmitDefaultValue=false)]
         public StoredValueTypeEnum? StoredValueType { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsCoreSaveStoredValueRequest" /> class.
+        /// Initializes a new instance of the <see cref="CoreSaveStoredValueRequest" /> class.
         /// </summary>
         /// <param name="Description">Description.</param>
         /// <param name="Folder">Folder.</param>
@@ -97,7 +97,7 @@ namespace Cherwell.Model
         /// <param name="StandInKey">StandInKey.</param>
         /// <param name="StoredValueType">StoredValueType.</param>
         /// <param name="Value">Value.</param>
-        public TrebuchetWebApiDataContractsCoreSaveStoredValueRequest(string Description = default(string), string Folder = default(string), string Name = default(string), string Scope = default(string), string ScopeOwner = default(string), string StandInKey = default(string), StoredValueTypeEnum? StoredValueType = default(StoredValueTypeEnum?), string Value = default(string))
+        public CoreSaveStoredValueRequest(string Description = default(string), string Folder = default(string), string Name = default(string), string Scope = default(string), string ScopeOwner = default(string), string StandInKey = default(string), StoredValueTypeEnum? StoredValueType = default(StoredValueTypeEnum?), string Value = default(string))
         {
             this.Description = Description;
             this.Folder = Folder;
@@ -151,7 +151,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsCoreSaveStoredValueRequest {\n");
+            sb.Append("class CoreSaveStoredValueRequest {\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Folder: ").Append(Folder).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -181,15 +181,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsCoreSaveStoredValueRequest);
+            return this.Equals(obj as CoreSaveStoredValueRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsCoreSaveStoredValueRequest instances are equal
+        /// Returns true if CoreSaveStoredValueRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsCoreSaveStoredValueRequest to be compared</param>
+        /// <param name="other">Instance of CoreSaveStoredValueRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsCoreSaveStoredValueRequest other)
+        public bool Equals(CoreSaveStoredValueRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

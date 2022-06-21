@@ -14,18 +14,18 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsCoreSimplePromptValue
+    /// CoreSimplePromptValue
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsCoreSimplePromptValue :  IEquatable<TrebuchetWebApiDataContractsCoreSimplePromptValue>, IValidatableObject
+    public partial class CoreSimplePromptValue :  IEquatable<CoreSimplePromptValue>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsCoreSimplePromptValue" /> class.
+        /// Initializes a new instance of the <see cref="CoreSimplePromptValue" /> class.
         /// </summary>
         /// <param name="PromptDefId">PromptDefId.</param>
         /// <param name="PromptName">PromptName.</param>
         /// <param name="Value">Value.</param>
-        public TrebuchetWebApiDataContractsCoreSimplePromptValue(string PromptDefId = default(string), string PromptName = default(string), string Value = default(string))
+        public CoreSimplePromptValue(string PromptDefId = default(string), string PromptName = default(string), string Value = default(string))
         {
             this.PromptDefId = PromptDefId;
             this.PromptName = PromptName;
@@ -54,7 +54,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsCoreSimplePromptValue {\n");
+            sb.Append("class CoreSimplePromptValue {\n");
             sb.Append("  PromptDefId: ").Append(PromptDefId).Append("\n");
             sb.Append("  PromptName: ").Append(PromptName).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
@@ -79,15 +79,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsCoreSimplePromptValue);
+            return this.Equals(obj as CoreSimplePromptValue);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsCoreSimplePromptValue instances are equal
+        /// Returns true if CoreSimplePromptValue instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsCoreSimplePromptValue to be compared</param>
+        /// <param name="other">Instance of CoreSimplePromptValue to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsCoreSimplePromptValue other)
+        public bool Equals(CoreSimplePromptValue other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

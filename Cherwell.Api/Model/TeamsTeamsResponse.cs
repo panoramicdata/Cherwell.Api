@@ -14,19 +14,19 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsTeamsTeamsResponse
+    /// TeamsTeamsResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsTeamsTeamsResponse :  IEquatable<TrebuchetWebApiDataContractsTeamsTeamsResponse>, IValidatableObject
+    public partial class TeamsTeamsResponse :  IEquatable<TeamsTeamsResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsTeamsTeamsResponse" /> class.
+        /// Initializes a new instance of the <see cref="TeamsTeamsResponse" /> class.
         /// </summary>
         /// <param name="Error">Error.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="Teams">Teams.</param>
-        public TrebuchetWebApiDataContractsTeamsTeamsResponse(string Error = default(string), string ErrorCode = default(string), bool? HasError = default(bool?), List<TrebuchetWebApiDataContractsTeamsTeam> Teams = default(List<TrebuchetWebApiDataContractsTeamsTeam>))
+        public TeamsTeamsResponse(string Error = default(string), string ErrorCode = default(string), bool? HasError = default(bool?), List<TeamsTeam> Teams = default(List<TeamsTeam>))
         {
             this.Error = Error;
             this.ErrorCode = ErrorCode;
@@ -53,7 +53,7 @@ namespace Cherwell.Model
         /// Gets or Sets Teams
         /// </summary>
         [DataMember(Name="teams", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsTeamsTeam> Teams { get; set; }
+        public List<TeamsTeam> Teams { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -61,7 +61,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsTeamsTeamsResponse {\n");
+            sb.Append("class TeamsTeamsResponse {\n");
             sb.Append("  Error: ").Append(Error).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  HasError: ").Append(HasError).Append("\n");
@@ -87,15 +87,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsTeamsTeamsResponse);
+            return this.Equals(obj as TeamsTeamsResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsTeamsTeamsResponse instances are equal
+        /// Returns true if TeamsTeamsResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsTeamsTeamsResponse to be compared</param>
+        /// <param name="other">Instance of TeamsTeamsResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsTeamsTeamsResponse other)
+        public bool Equals(TeamsTeamsResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

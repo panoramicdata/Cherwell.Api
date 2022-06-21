@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesSearchFolder
+    /// SearchesSearchFolder
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesSearchFolder :  IEquatable<TrebuchetWebApiDataContractsSearchesSearchFolder>, IValidatableObject
+    public partial class SearchesSearchFolder :  IEquatable<SearchesSearchFolder>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesSearchFolder" /> class.
+        /// Initializes a new instance of the <see cref="SearchesSearchFolder" /> class.
         /// </summary>
         /// <param name="Association">Association.</param>
         /// <param name="ChildFolders">ChildFolders.</param>
@@ -32,7 +32,7 @@ namespace Cherwell.Model
         /// <param name="ParentFolderId">ParentFolderId.</param>
         /// <param name="Scope">Scope.</param>
         /// <param name="ScopeOwner">ScopeOwner.</param>
-        public TrebuchetWebApiDataContractsSearchesSearchFolder(string Association = default(string), List<TrebuchetWebApiDataContractsSearchesSearchFolder> ChildFolders = default(List<TrebuchetWebApiDataContractsSearchesSearchFolder>), List<TrebuchetWebApiDataContractsSearchesSearchItem> ChildItems = default(List<TrebuchetWebApiDataContractsSearchesSearchItem>), string FolderId = default(string), string FolderName = default(string), List<TrebuchetWebApiDataContractsCoreLink> Links = default(List<TrebuchetWebApiDataContractsCoreLink>), string LocalizedScopeName = default(string), string ParentFolderId = default(string), string Scope = default(string), string ScopeOwner = default(string))
+        public SearchesSearchFolder(string Association = default(string), List<SearchesSearchFolder> ChildFolders = default(List<SearchesSearchFolder>), List<SearchesSearchItem> ChildItems = default(List<SearchesSearchItem>), string FolderId = default(string), string FolderName = default(string), List<CoreLink> Links = default(List<CoreLink>), string LocalizedScopeName = default(string), string ParentFolderId = default(string), string Scope = default(string), string ScopeOwner = default(string))
         {
             this.Association = Association;
             this.ChildFolders = ChildFolders;
@@ -55,12 +55,12 @@ namespace Cherwell.Model
         /// Gets or Sets ChildFolders
         /// </summary>
         [DataMember(Name="childFolders", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSearchesSearchFolder> ChildFolders { get; set; }
+        public List<SearchesSearchFolder> ChildFolders { get; set; }
         /// <summary>
         /// Gets or Sets ChildItems
         /// </summary>
         [DataMember(Name="childItems", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSearchesSearchItem> ChildItems { get; set; }
+        public List<SearchesSearchItem> ChildItems { get; set; }
         /// <summary>
         /// Gets or Sets FolderId
         /// </summary>
@@ -75,7 +75,7 @@ namespace Cherwell.Model
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name="links", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCoreLink> Links { get; set; }
+        public List<CoreLink> Links { get; set; }
         /// <summary>
         /// Gets or Sets LocalizedScopeName
         /// </summary>
@@ -103,7 +103,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesSearchFolder {\n");
+            sb.Append("class SearchesSearchFolder {\n");
             sb.Append("  Association: ").Append(Association).Append("\n");
             sb.Append("  ChildFolders: ").Append(ChildFolders).Append("\n");
             sb.Append("  ChildItems: ").Append(ChildItems).Append("\n");
@@ -135,15 +135,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesSearchFolder);
+            return this.Equals(obj as SearchesSearchFolder);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesSearchFolder instances are equal
+        /// Returns true if SearchesSearchFolder instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesSearchFolder to be compared</param>
+        /// <param name="other">Instance of SearchesSearchFolder to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesSearchFolder other)
+        public bool Equals(SearchesSearchFolder other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

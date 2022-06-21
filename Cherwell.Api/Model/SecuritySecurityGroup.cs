@@ -14,18 +14,18 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSecuritySecurityGroup
+    /// SecuritySecurityGroup
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSecuritySecurityGroup :  IEquatable<TrebuchetWebApiDataContractsSecuritySecurityGroup>, IValidatableObject
+    public partial class SecuritySecurityGroup :  IEquatable<SecuritySecurityGroup>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSecuritySecurityGroup" /> class.
+        /// Initializes a new instance of the <see cref="SecuritySecurityGroup" /> class.
         /// </summary>
         /// <param name="Description">Description.</param>
         /// <param name="GroupId">GroupId.</param>
         /// <param name="GroupName">GroupName.</param>
-        public TrebuchetWebApiDataContractsSecuritySecurityGroup(string Description = default(string), string GroupId = default(string), string GroupName = default(string))
+        public SecuritySecurityGroup(string Description = default(string), string GroupId = default(string), string GroupName = default(string))
         {
             this.Description = Description;
             this.GroupId = GroupId;
@@ -54,7 +54,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSecuritySecurityGroup {\n");
+            sb.Append("class SecuritySecurityGroup {\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  GroupId: ").Append(GroupId).Append("\n");
             sb.Append("  GroupName: ").Append(GroupName).Append("\n");
@@ -79,15 +79,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSecuritySecurityGroup);
+            return this.Equals(obj as SecuritySecurityGroup);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSecuritySecurityGroup instances are equal
+        /// Returns true if SecuritySecurityGroup instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSecuritySecurityGroup to be compared</param>
+        /// <param name="other">Instance of SecuritySecurityGroup to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSecuritySecurityGroup other)
+        public bool Equals(SecuritySecurityGroup other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

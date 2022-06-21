@@ -14,16 +14,16 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSecuritySecurityGroupResponse
+    /// SecuritySecurityGroupResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSecuritySecurityGroupResponse :  IEquatable<TrebuchetWebApiDataContractsSecuritySecurityGroupResponse>, IValidatableObject
+    public partial class SecuritySecurityGroupResponse :  IEquatable<SecuritySecurityGroupResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSecuritySecurityGroupResponse" /> class.
+        /// Initializes a new instance of the <see cref="SecuritySecurityGroupResponse" /> class.
         /// </summary>
         /// <param name="SecurityGroups">SecurityGroups.</param>
-        public TrebuchetWebApiDataContractsSecuritySecurityGroupResponse(List<TrebuchetWebApiDataContractsSecuritySecurityGroup> SecurityGroups = default(List<TrebuchetWebApiDataContractsSecuritySecurityGroup>))
+        public SecuritySecurityGroupResponse(List<SecuritySecurityGroup> SecurityGroups = default(List<SecuritySecurityGroup>))
         {
             this.SecurityGroups = SecurityGroups;
         }
@@ -32,7 +32,7 @@ namespace Cherwell.Model
         /// Gets or Sets SecurityGroups
         /// </summary>
         [DataMember(Name="securityGroups", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSecuritySecurityGroup> SecurityGroups { get; set; }
+        public List<SecuritySecurityGroup> SecurityGroups { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -40,7 +40,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSecuritySecurityGroupResponse {\n");
+            sb.Append("class SecuritySecurityGroupResponse {\n");
             sb.Append("  SecurityGroups: ").Append(SecurityGroups).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -63,15 +63,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSecuritySecurityGroupResponse);
+            return this.Equals(obj as SecuritySecurityGroupResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSecuritySecurityGroupResponse instances are equal
+        /// Returns true if SecuritySecurityGroupResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSecuritySecurityGroupResponse to be compared</param>
+        /// <param name="other">Instance of SecuritySecurityGroupResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSecuritySecurityGroupResponse other)
+        public bool Equals(SecuritySecurityGroupResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

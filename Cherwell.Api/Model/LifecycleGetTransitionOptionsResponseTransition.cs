@@ -14,19 +14,19 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsLifecycleGetTransitionOptionsResponseTransition
+    /// LifecycleGetTransitionOptionsResponseTransition
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsLifecycleGetTransitionOptionsResponseTransition :  IEquatable<TrebuchetWebApiDataContractsLifecycleGetTransitionOptionsResponseTransition>, IValidatableObject
+    public partial class LifecycleGetTransitionOptionsResponseTransition :  IEquatable<LifecycleGetTransitionOptionsResponseTransition>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsLifecycleGetTransitionOptionsResponseTransition" /> class.
+        /// Initializes a new instance of the <see cref="LifecycleGetTransitionOptionsResponseTransition" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Id">Id.</param>
         /// <param name="IsAvailable">IsAvailable.</param>
         /// <param name="Criteria">Criteria.</param>
-        public TrebuchetWebApiDataContractsLifecycleGetTransitionOptionsResponseTransition(string Name = default(string), string Id = default(string), bool? IsAvailable = default(bool?), List<string> Criteria = default(List<string>))
+        public LifecycleGetTransitionOptionsResponseTransition(string Name = default(string), string Id = default(string), bool? IsAvailable = default(bool?), List<string> Criteria = default(List<string>))
         {
             this.Name = Name;
             this.Id = Id;
@@ -61,7 +61,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsLifecycleGetTransitionOptionsResponseTransition {\n");
+            sb.Append("class LifecycleGetTransitionOptionsResponseTransition {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IsAvailable: ").Append(IsAvailable).Append("\n");
@@ -87,15 +87,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsLifecycleGetTransitionOptionsResponseTransition);
+            return this.Equals(obj as LifecycleGetTransitionOptionsResponseTransition);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsLifecycleGetTransitionOptionsResponseTransition instances are equal
+        /// Returns true if LifecycleGetTransitionOptionsResponseTransition instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsLifecycleGetTransitionOptionsResponseTransition to be compared</param>
+        /// <param name="other">Instance of LifecycleGetTransitionOptionsResponseTransition to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsLifecycleGetTransitionOptionsResponseTransition other)
+        public bool Equals(LifecycleGetTransitionOptionsResponseTransition other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

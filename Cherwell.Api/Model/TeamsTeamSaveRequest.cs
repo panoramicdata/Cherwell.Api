@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsTeamsTeamSaveRequest
+    /// TeamsTeamSaveRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsTeamsTeamSaveRequest :  IEquatable<TrebuchetWebApiDataContractsTeamsTeamSaveRequest>, IValidatableObject
+    public partial class TeamsTeamSaveRequest :  IEquatable<TeamsTeamSaveRequest>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets TeamType
@@ -45,7 +45,7 @@ namespace Cherwell.Model
         [DataMember(Name="teamType", EmitDefaultValue=false)]
         public TeamTypeEnum? TeamType { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsTeamsTeamSaveRequest" /> class.
+        /// Initializes a new instance of the <see cref="TeamsTeamSaveRequest" /> class.
         /// </summary>
         /// <param name="Description">Description.</param>
         /// <param name="EmailAlias">EmailAlias.</param>
@@ -53,7 +53,7 @@ namespace Cherwell.Model
         /// <param name="TeamId">TeamId.</param>
         /// <param name="TeamName">TeamName.</param>
         /// <param name="TeamType">TeamType.</param>
-        public TrebuchetWebApiDataContractsTeamsTeamSaveRequest(string Description = default(string), string EmailAlias = default(string), string Image = default(string), string TeamId = default(string), string TeamName = default(string), TeamTypeEnum? TeamType = default(TeamTypeEnum?))
+        public TeamsTeamSaveRequest(string Description = default(string), string EmailAlias = default(string), string Image = default(string), string TeamId = default(string), string TeamName = default(string), TeamTypeEnum? TeamType = default(TeamTypeEnum?))
         {
             this.Description = Description;
             this.EmailAlias = EmailAlias;
@@ -95,7 +95,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsTeamsTeamSaveRequest {\n");
+            sb.Append("class TeamsTeamSaveRequest {\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  EmailAlias: ").Append(EmailAlias).Append("\n");
             sb.Append("  Image: ").Append(Image).Append("\n");
@@ -123,15 +123,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsTeamsTeamSaveRequest);
+            return this.Equals(obj as TeamsTeamSaveRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsTeamsTeamSaveRequest instances are equal
+        /// Returns true if TeamsTeamSaveRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsTeamsTeamSaveRequest to be compared</param>
+        /// <param name="other">Instance of TeamsTeamSaveRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsTeamsTeamSaveRequest other)
+        public bool Equals(TeamsTeamSaveRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

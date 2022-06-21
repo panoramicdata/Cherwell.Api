@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesExportSearchResultsRequest
+    /// SearchesExportSearchResultsRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesExportSearchResultsRequest :  IEquatable<TrebuchetWebApiDataContractsSearchesExportSearchResultsRequest>, IValidatableObject
+    public partial class SearchesExportSearchResultsRequest :  IEquatable<SearchesExportSearchResultsRequest>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets ExportFormat
@@ -69,7 +69,7 @@ namespace Cherwell.Model
         [DataMember(Name="exportFormat", EmitDefaultValue=false)]
         public ExportFormatEnum? ExportFormat { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesExportSearchResultsRequest" /> class.
+        /// Initializes a new instance of the <see cref="SearchesExportSearchResultsRequest" /> class.
         /// </summary>
         /// <param name="CustomSeparator">CustomSeparator.</param>
         /// <param name="ExportFormat">ExportFormat.</param>
@@ -93,7 +93,7 @@ namespace Cherwell.Model
         /// <param name="SearchText">SearchText.</param>
         /// <param name="Sorting">Sorting.</param>
         /// <param name="PromptValues">PromptValues.</param>
-        public TrebuchetWebApiDataContractsSearchesExportSearchResultsRequest(string CustomSeparator = default(string), ExportFormatEnum? ExportFormat = default(ExportFormatEnum?), string ExportTitle = default(string), string Association = default(string), string AssociationName = default(string), string BusObId = default(string), string CustomGridDefId = default(string), string DateTimeFormatting = default(string), string FieldId = default(string), List<string> Fields = default(List<string>), List<TrebuchetWebApiDataContractsSearchesFilterInfo> Filters = default(List<TrebuchetWebApiDataContractsSearchesFilterInfo>), bool? IncludeAllFields = default(bool?), bool? IncludeSchema = default(bool?), int? PageNumber = default(int?), int? PageSize = default(int?), string Scope = default(string), string ScopeOwner = default(string), string SearchId = default(string), string SearchName = default(string), string SearchText = default(string), List<TrebuchetWebApiDataContractsSearchesSortInfo> Sorting = default(List<TrebuchetWebApiDataContractsSearchesSortInfo>), List<TrebuchetWebApiDataContractsCorePromptValue> PromptValues = default(List<TrebuchetWebApiDataContractsCorePromptValue>))
+        public SearchesExportSearchResultsRequest(string CustomSeparator = default(string), ExportFormatEnum? ExportFormat = default(ExportFormatEnum?), string ExportTitle = default(string), string Association = default(string), string AssociationName = default(string), string BusObId = default(string), string CustomGridDefId = default(string), string DateTimeFormatting = default(string), string FieldId = default(string), List<string> Fields = default(List<string>), List<SearchesFilterInfo> Filters = default(List<SearchesFilterInfo>), bool? IncludeAllFields = default(bool?), bool? IncludeSchema = default(bool?), int? PageNumber = default(int?), int? PageSize = default(int?), string Scope = default(string), string ScopeOwner = default(string), string SearchId = default(string), string SearchName = default(string), string SearchText = default(string), List<SearchesSortInfo> Sorting = default(List<SearchesSortInfo>), List<CorePromptValue> PromptValues = default(List<CorePromptValue>))
         {
             this.CustomSeparator = CustomSeparator;
             this.ExportFormat = ExportFormat;
@@ -168,7 +168,7 @@ namespace Cherwell.Model
         /// Gets or Sets Filters
         /// </summary>
         [DataMember(Name="filters", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSearchesFilterInfo> Filters { get; set; }
+        public List<SearchesFilterInfo> Filters { get; set; }
         /// <summary>
         /// Gets or Sets IncludeAllFields
         /// </summary>
@@ -218,12 +218,12 @@ namespace Cherwell.Model
         /// Gets or Sets Sorting
         /// </summary>
         [DataMember(Name="sorting", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSearchesSortInfo> Sorting { get; set; }
+        public List<SearchesSortInfo> Sorting { get; set; }
         /// <summary>
         /// Gets or Sets PromptValues
         /// </summary>
         [DataMember(Name="promptValues", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCorePromptValue> PromptValues { get; set; }
+        public List<CorePromptValue> PromptValues { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -231,7 +231,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesExportSearchResultsRequest {\n");
+            sb.Append("class SearchesExportSearchResultsRequest {\n");
             sb.Append("  CustomSeparator: ").Append(CustomSeparator).Append("\n");
             sb.Append("  ExportFormat: ").Append(ExportFormat).Append("\n");
             sb.Append("  ExportTitle: ").Append(ExportTitle).Append("\n");
@@ -275,15 +275,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesExportSearchResultsRequest);
+            return this.Equals(obj as SearchesExportSearchResultsRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesExportSearchResultsRequest instances are equal
+        /// Returns true if SearchesExportSearchResultsRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesExportSearchResultsRequest to be compared</param>
+        /// <param name="other">Instance of SearchesExportSearchResultsRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesExportSearchResultsRequest other)
+        public bool Equals(SearchesExportSearchResultsRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

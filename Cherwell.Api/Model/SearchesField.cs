@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesField
+    /// SearchesField
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesField :  IEquatable<TrebuchetWebApiDataContractsSearchesField>, IValidatableObject
+    public partial class SearchesField :  IEquatable<SearchesField>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesField" /> class.
+        /// Initializes a new instance of the <see cref="SearchesField" /> class.
         /// </summary>
         /// <param name="Caption">Caption.</param>
         /// <param name="CurrencyCulture">CurrencyCulture.</param>
@@ -45,7 +45,7 @@ namespace Cherwell.Model
         /// <param name="SortOrder">SortOrder.</param>
         /// <param name="StorageName">StorageName.</param>
         /// <param name="WholeDigits">WholeDigits.</param>
-        public TrebuchetWebApiDataContractsSearchesField(string Caption = default(string), string CurrencyCulture = default(string), string CurrencySymbol = default(string), int? DecimalDigits = default(int?), bool? DefaultSortOrderAscending = default(bool?), string DisplayName = default(string), string FieldName = default(string), string FullFieldId = default(string), bool? HasDefaultSortField = default(bool?), string FieldId = default(string), bool? IsBinary = default(bool?), bool? IsCurrency = default(bool?), bool? IsDateTime = default(bool?), bool? IsFilterAllowed = default(bool?), bool? IsLogical = default(bool?), bool? IsNumber = default(bool?), bool? IsShortDate = default(bool?), bool? IsShortTime = default(bool?), bool? IsVisible = default(bool?), bool? Sortable = default(bool?), string SortOrder = default(string), string StorageName = default(string), int? WholeDigits = default(int?))
+        public SearchesField(string Caption = default(string), string CurrencyCulture = default(string), string CurrencySymbol = default(string), int? DecimalDigits = default(int?), bool? DefaultSortOrderAscending = default(bool?), string DisplayName = default(string), string FieldName = default(string), string FullFieldId = default(string), bool? HasDefaultSortField = default(bool?), string FieldId = default(string), bool? IsBinary = default(bool?), bool? IsCurrency = default(bool?), bool? IsDateTime = default(bool?), bool? IsFilterAllowed = default(bool?), bool? IsLogical = default(bool?), bool? IsNumber = default(bool?), bool? IsShortDate = default(bool?), bool? IsShortTime = default(bool?), bool? IsVisible = default(bool?), bool? Sortable = default(bool?), string SortOrder = default(string), string StorageName = default(string), int? WholeDigits = default(int?))
         {
             this.Caption = Caption;
             this.CurrencyCulture = CurrencyCulture;
@@ -194,7 +194,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesField {\n");
+            sb.Append("class SearchesField {\n");
             sb.Append("  Caption: ").Append(Caption).Append("\n");
             sb.Append("  CurrencyCulture: ").Append(CurrencyCulture).Append("\n");
             sb.Append("  CurrencySymbol: ").Append(CurrencySymbol).Append("\n");
@@ -239,15 +239,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesField);
+            return this.Equals(obj as SearchesField);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesField instances are equal
+        /// Returns true if SearchesField instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesField to be compared</param>
+        /// <param name="other">Instance of SearchesField to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesField other)
+        public bool Equals(SearchesField other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

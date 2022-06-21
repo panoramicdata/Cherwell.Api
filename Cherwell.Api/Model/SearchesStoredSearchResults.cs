@@ -14,17 +14,17 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesStoredSearchResults
+    /// SearchesStoredSearchResults
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesStoredSearchResults :  IEquatable<TrebuchetWebApiDataContractsSearchesStoredSearchResults>, IValidatableObject
+    public partial class SearchesStoredSearchResults :  IEquatable<SearchesStoredSearchResults>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesStoredSearchResults" /> class.
+        /// Initializes a new instance of the <see cref="SearchesStoredSearchResults" /> class.
         /// </summary>
         /// <param name="Columns">Columns.</param>
         /// <param name="Rows">Rows.</param>
-        public TrebuchetWebApiDataContractsSearchesStoredSearchResults(List<TrebuchetWebApiDataContractsSearchesColumnSchema> Columns = default(List<TrebuchetWebApiDataContractsSearchesColumnSchema>), List<List<Object>> Rows = default(List<List<Object>>))
+        public SearchesStoredSearchResults(List<SearchesColumnSchema> Columns = default(List<SearchesColumnSchema>), List<List<Object>> Rows = default(List<List<Object>>))
         {
             this.Columns = Columns;
             this.Rows = Rows;
@@ -34,7 +34,7 @@ namespace Cherwell.Model
         /// Gets or Sets Columns
         /// </summary>
         [DataMember(Name="columns", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSearchesColumnSchema> Columns { get; set; }
+        public List<SearchesColumnSchema> Columns { get; set; }
         /// <summary>
         /// Gets or Sets Rows
         /// </summary>
@@ -47,7 +47,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesStoredSearchResults {\n");
+            sb.Append("class SearchesStoredSearchResults {\n");
             sb.Append("  Columns: ").Append(Columns).Append("\n");
             sb.Append("  Rows: ").Append(Rows).Append("\n");
             sb.Append("}\n");
@@ -71,15 +71,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesStoredSearchResults);
+            return this.Equals(obj as SearchesStoredSearchResults);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesStoredSearchResults instances are equal
+        /// Returns true if SearchesStoredSearchResults instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesStoredSearchResults to be compared</param>
+        /// <param name="other">Instance of SearchesStoredSearchResults to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesStoredSearchResults other)
+        public bool Equals(SearchesStoredSearchResults other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

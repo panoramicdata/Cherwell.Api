@@ -14,16 +14,16 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsLifecycleTransitionRecordRequest
+    /// LifecycleTransitionRecordRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsLifecycleTransitionRecordRequest :  IEquatable<TrebuchetWebApiDataContractsLifecycleTransitionRecordRequest>, IValidatableObject
+    public partial class LifecycleTransitionRecordRequest :  IEquatable<LifecycleTransitionRecordRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsLifecycleTransitionRecordRequest" /> class.
+        /// Initializes a new instance of the <see cref="LifecycleTransitionRecordRequest" /> class.
         /// </summary>
         /// <param name="TransitionOptionId">TransitionOptionId.</param>
-        public TrebuchetWebApiDataContractsLifecycleTransitionRecordRequest(string TransitionOptionId = default(string))
+        public LifecycleTransitionRecordRequest(string TransitionOptionId = default(string))
         {
             this.TransitionOptionId = TransitionOptionId;
         }
@@ -40,7 +40,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsLifecycleTransitionRecordRequest {\n");
+            sb.Append("class LifecycleTransitionRecordRequest {\n");
             sb.Append("  TransitionOptionId: ").Append(TransitionOptionId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -63,15 +63,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsLifecycleTransitionRecordRequest);
+            return this.Equals(obj as LifecycleTransitionRecordRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsLifecycleTransitionRecordRequest instances are equal
+        /// Returns true if LifecycleTransitionRecordRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsLifecycleTransitionRecordRequest to be compared</param>
+        /// <param name="other">Instance of LifecycleTransitionRecordRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsLifecycleTransitionRecordRequest other)
+        public bool Equals(LifecycleTransitionRecordRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

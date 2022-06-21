@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse
+    /// LifecycleGetRecordStatusResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse :  IEquatable<TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse>, IValidatableObject
+    public partial class LifecycleGetRecordStatusResponse :  IEquatable<LifecycleGetRecordStatusResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse" /> class.
+        /// Initializes a new instance of the <see cref="LifecycleGetRecordStatusResponse" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="Name">Name.</param>
@@ -323,7 +323,7 @@ namespace Cherwell.Model
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse(string Id = default(string), string Name = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public LifecycleGetRecordStatusResponse(string Id = default(string), string Name = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.Id = Id;
             this.Name = Name;
@@ -365,7 +365,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse {\n");
+            sb.Append("class LifecycleGetRecordStatusResponse {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
@@ -393,15 +393,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse);
+            return this.Equals(obj as LifecycleGetRecordStatusResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse instances are equal
+        /// Returns true if LifecycleGetRecordStatusResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse to be compared</param>
+        /// <param name="other">Instance of LifecycleGetRecordStatusResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse other)
+        public bool Equals(LifecycleGetRecordStatusResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

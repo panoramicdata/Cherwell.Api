@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesQuickSearchSpecificByIdRequest
+    /// SearchesQuickSearchSpecificByIdRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesQuickSearchSpecificByIdRequest :  IEquatable<TrebuchetWebApiDataContractsSearchesQuickSearchSpecificByIdRequest>, IValidatableObject
+    public partial class SearchesQuickSearchSpecificByIdRequest :  IEquatable<SearchesQuickSearchSpecificByIdRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesQuickSearchSpecificByIdRequest" /> class.
+        /// Initializes a new instance of the <see cref="SearchesQuickSearchSpecificByIdRequest" /> class.
         /// </summary>
         /// <param name="BusObIds">BusObIds.</param>
         /// <param name="StandIn">StandIn.</param>
@@ -36,7 +36,7 @@ namespace Cherwell.Model
         /// <param name="SortByRelevance">SortByRelevance.</param>
         /// <param name="SpecificSearchTargetId">SpecificSearchTargetId.</param>
         /// <param name="UseSortBy">UseSortBy.</param>
-        public TrebuchetWebApiDataContractsSearchesQuickSearchSpecificByIdRequest(List<string> BusObIds = default(List<string>), string StandIn = default(string), bool? Ascending = default(bool?), bool? IsBusObTarget = default(bool?), bool? NonFinalState = default(bool?), bool? SearchAnyWords = default(bool?), bool? SearchAttachments = default(bool?), bool? SearchRelated = default(bool?), string SearchText = default(string), TrebuchetWebApiDataContractsSearchesChangedLimit SelectedChangedLimit = default(TrebuchetWebApiDataContractsSearchesChangedLimit), string SelectedSortByFieldId = default(string), bool? SortByRelevance = default(bool?), string SpecificSearchTargetId = default(string), bool? UseSortBy = default(bool?))
+        public SearchesQuickSearchSpecificByIdRequest(List<string> BusObIds = default(List<string>), string StandIn = default(string), bool? Ascending = default(bool?), bool? IsBusObTarget = default(bool?), bool? NonFinalState = default(bool?), bool? SearchAnyWords = default(bool?), bool? SearchAttachments = default(bool?), bool? SearchRelated = default(bool?), string SearchText = default(string), SearchesChangedLimit SelectedChangedLimit = default(SearchesChangedLimit), string SelectedSortByFieldId = default(string), bool? SortByRelevance = default(bool?), string SpecificSearchTargetId = default(string), bool? UseSortBy = default(bool?))
         {
             this.BusObIds = BusObIds;
             this.StandIn = StandIn;
@@ -103,7 +103,7 @@ namespace Cherwell.Model
         /// Gets or Sets SelectedChangedLimit
         /// </summary>
         [DataMember(Name="selectedChangedLimit", EmitDefaultValue=false)]
-        public TrebuchetWebApiDataContractsSearchesChangedLimit SelectedChangedLimit { get; set; }
+        public SearchesChangedLimit SelectedChangedLimit { get; set; }
         /// <summary>
         /// Gets or Sets SelectedSortByFieldId
         /// </summary>
@@ -131,7 +131,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesQuickSearchSpecificByIdRequest {\n");
+            sb.Append("class SearchesQuickSearchSpecificByIdRequest {\n");
             sb.Append("  BusObIds: ").Append(BusObIds).Append("\n");
             sb.Append("  StandIn: ").Append(StandIn).Append("\n");
             sb.Append("  Ascending: ").Append(Ascending).Append("\n");
@@ -167,15 +167,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesQuickSearchSpecificByIdRequest);
+            return this.Equals(obj as SearchesQuickSearchSpecificByIdRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesQuickSearchSpecificByIdRequest instances are equal
+        /// Returns true if SearchesQuickSearchSpecificByIdRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesQuickSearchSpecificByIdRequest to be compared</param>
+        /// <param name="other">Instance of SearchesQuickSearchSpecificByIdRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesQuickSearchSpecificByIdRequest other)
+        public bool Equals(SearchesQuickSearchSpecificByIdRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

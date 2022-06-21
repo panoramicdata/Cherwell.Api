@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSecurityFieldPermission
+    /// SecurityFieldPermission
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSecurityFieldPermission :  IEquatable<TrebuchetWebApiDataContractsSecurityFieldPermission>, IValidatableObject
+    public partial class SecurityFieldPermission :  IEquatable<SecurityFieldPermission>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSecurityFieldPermission" /> class.
+        /// Initializes a new instance of the <see cref="SecurityFieldPermission" /> class.
         /// </summary>
         /// <param name="DepartmentMemberEdit">DepartmentMemberEdit.</param>
         /// <param name="DepartmentMemberView">DepartmentMemberView.</param>
@@ -36,7 +36,7 @@ namespace Cherwell.Model
         /// <param name="TeamManagerOfOwnerView">TeamManagerOfOwnerView.</param>
         /// <param name="TeamView">TeamView.</param>
         /// <param name="View">View.</param>
-        public TrebuchetWebApiDataContractsSecurityFieldPermission(bool? DepartmentMemberEdit = default(bool?), bool? DepartmentMemberView = default(bool?), bool? Edit = default(bool?), string FieldId = default(string), string FieldName = default(string), bool? ManagerOfOwnerEdit = default(bool?), bool? ManagerOfOwnerView = default(bool?), bool? OwnerEdit = default(bool?), bool? OwnerView = default(bool?), bool? TeamEdit = default(bool?), bool? TeamManagerOfOwnerEdit = default(bool?), bool? TeamManagerOfOwnerView = default(bool?), bool? TeamView = default(bool?), bool? View = default(bool?))
+        public SecurityFieldPermission(bool? DepartmentMemberEdit = default(bool?), bool? DepartmentMemberView = default(bool?), bool? Edit = default(bool?), string FieldId = default(string), string FieldName = default(string), bool? ManagerOfOwnerEdit = default(bool?), bool? ManagerOfOwnerView = default(bool?), bool? OwnerEdit = default(bool?), bool? OwnerView = default(bool?), bool? TeamEdit = default(bool?), bool? TeamManagerOfOwnerEdit = default(bool?), bool? TeamManagerOfOwnerView = default(bool?), bool? TeamView = default(bool?), bool? View = default(bool?))
         {
             this.DepartmentMemberEdit = DepartmentMemberEdit;
             this.DepartmentMemberView = DepartmentMemberView;
@@ -131,7 +131,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSecurityFieldPermission {\n");
+            sb.Append("class SecurityFieldPermission {\n");
             sb.Append("  DepartmentMemberEdit: ").Append(DepartmentMemberEdit).Append("\n");
             sb.Append("  DepartmentMemberView: ").Append(DepartmentMemberView).Append("\n");
             sb.Append("  Edit: ").Append(Edit).Append("\n");
@@ -167,15 +167,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSecurityFieldPermission);
+            return this.Equals(obj as SecurityFieldPermission);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSecurityFieldPermission instances are equal
+        /// Returns true if SecurityFieldPermission instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSecurityFieldPermission to be compared</param>
+        /// <param name="other">Instance of SecurityFieldPermission to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSecurityFieldPermission other)
+        public bool Equals(SecurityFieldPermission other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

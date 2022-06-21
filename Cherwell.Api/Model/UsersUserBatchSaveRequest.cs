@@ -14,17 +14,17 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsUsersUserBatchSaveRequest
+    /// UsersUserBatchSaveRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsUsersUserBatchSaveRequest :  IEquatable<TrebuchetWebApiDataContractsUsersUserBatchSaveRequest>, IValidatableObject
+    public partial class UsersUserBatchSaveRequest :  IEquatable<UsersUserBatchSaveRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsUsersUserBatchSaveRequest" /> class.
+        /// Initializes a new instance of the <see cref="UsersUserBatchSaveRequest" /> class.
         /// </summary>
         /// <param name="SaveRequests">SaveRequests.</param>
         /// <param name="StopOnError">StopOnError.</param>
-        public TrebuchetWebApiDataContractsUsersUserBatchSaveRequest(List<TrebuchetWebApiDataContractsUsersUserSaveRequest> SaveRequests = default(List<TrebuchetWebApiDataContractsUsersUserSaveRequest>), bool? StopOnError = default(bool?))
+        public UsersUserBatchSaveRequest(List<UsersUserSaveRequest> SaveRequests = default(List<UsersUserSaveRequest>), bool? StopOnError = default(bool?))
         {
             this.SaveRequests = SaveRequests;
             this.StopOnError = StopOnError;
@@ -34,7 +34,7 @@ namespace Cherwell.Model
         /// Gets or Sets SaveRequests
         /// </summary>
         [DataMember(Name="saveRequests", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsUsersUserSaveRequest> SaveRequests { get; set; }
+        public List<UsersUserSaveRequest> SaveRequests { get; set; }
         /// <summary>
         /// Gets or Sets StopOnError
         /// </summary>
@@ -47,7 +47,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsUsersUserBatchSaveRequest {\n");
+            sb.Append("class UsersUserBatchSaveRequest {\n");
             sb.Append("  SaveRequests: ").Append(SaveRequests).Append("\n");
             sb.Append("  StopOnError: ").Append(StopOnError).Append("\n");
             sb.Append("}\n");
@@ -71,15 +71,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsUsersUserBatchSaveRequest);
+            return this.Equals(obj as UsersUserBatchSaveRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsUsersUserBatchSaveRequest instances are equal
+        /// Returns true if UsersUserBatchSaveRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsUsersUserBatchSaveRequest to be compared</param>
+        /// <param name="other">Instance of UsersUserBatchSaveRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsUsersUserBatchSaveRequest other)
+        public bool Equals(UsersUserBatchSaveRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

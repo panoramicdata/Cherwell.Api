@@ -14,18 +14,18 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsQueuesAddItemToQueueRequest
+    /// QueuesAddItemToQueueRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsQueuesAddItemToQueueRequest :  IEquatable<TrebuchetWebApiDataContractsQueuesAddItemToQueueRequest>, IValidatableObject
+    public partial class QueuesAddItemToQueueRequest :  IEquatable<QueuesAddItemToQueueRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsQueuesAddItemToQueueRequest" /> class.
+        /// Initializes a new instance of the <see cref="QueuesAddItemToQueueRequest" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObRecId">BusObRecId.</param>
         /// <param name="QueueStandInKey">QueueStandInKey.</param>
-        public TrebuchetWebApiDataContractsQueuesAddItemToQueueRequest(string BusObId = default(string), string BusObRecId = default(string), string QueueStandInKey = default(string))
+        public QueuesAddItemToQueueRequest(string BusObId = default(string), string BusObRecId = default(string), string QueueStandInKey = default(string))
         {
             this.BusObId = BusObId;
             this.BusObRecId = BusObRecId;
@@ -54,7 +54,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsQueuesAddItemToQueueRequest {\n");
+            sb.Append("class QueuesAddItemToQueueRequest {\n");
             sb.Append("  BusObId: ").Append(BusObId).Append("\n");
             sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
             sb.Append("  QueueStandInKey: ").Append(QueueStandInKey).Append("\n");
@@ -79,15 +79,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsQueuesAddItemToQueueRequest);
+            return this.Equals(obj as QueuesAddItemToQueueRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsQueuesAddItemToQueueRequest instances are equal
+        /// Returns true if QueuesAddItemToQueueRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsQueuesAddItemToQueueRequest to be compared</param>
+        /// <param name="other">Instance of QueuesAddItemToQueueRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsQueuesAddItemToQueueRequest other)
+        public bool Equals(QueuesAddItemToQueueRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

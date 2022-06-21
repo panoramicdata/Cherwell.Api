@@ -14,19 +14,19 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsQueuesCheckInQueueItemRequest
+    /// QueuesCheckInQueueItemRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsQueuesCheckInQueueItemRequest :  IEquatable<TrebuchetWebApiDataContractsQueuesCheckInQueueItemRequest>, IValidatableObject
+    public partial class QueuesCheckInQueueItemRequest :  IEquatable<QueuesCheckInQueueItemRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsQueuesCheckInQueueItemRequest" /> class.
+        /// Initializes a new instance of the <see cref="QueuesCheckInQueueItemRequest" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObRecId">BusObRecId.</param>
         /// <param name="HistoryNotes">HistoryNotes.</param>
         /// <param name="QueueStandInKey">QueueStandInKey.</param>
-        public TrebuchetWebApiDataContractsQueuesCheckInQueueItemRequest(string BusObId = default(string), string BusObRecId = default(string), string HistoryNotes = default(string), string QueueStandInKey = default(string))
+        public QueuesCheckInQueueItemRequest(string BusObId = default(string), string BusObRecId = default(string), string HistoryNotes = default(string), string QueueStandInKey = default(string))
         {
             this.BusObId = BusObId;
             this.BusObRecId = BusObRecId;
@@ -61,7 +61,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsQueuesCheckInQueueItemRequest {\n");
+            sb.Append("class QueuesCheckInQueueItemRequest {\n");
             sb.Append("  BusObId: ").Append(BusObId).Append("\n");
             sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
             sb.Append("  HistoryNotes: ").Append(HistoryNotes).Append("\n");
@@ -87,15 +87,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsQueuesCheckInQueueItemRequest);
+            return this.Equals(obj as QueuesCheckInQueueItemRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsQueuesCheckInQueueItemRequest instances are equal
+        /// Returns true if QueuesCheckInQueueItemRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsQueuesCheckInQueueItemRequest to be compared</param>
+        /// <param name="other">Instance of QueuesCheckInQueueItemRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsQueuesCheckInQueueItemRequest other)
+        public bool Equals(QueuesCheckInQueueItemRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

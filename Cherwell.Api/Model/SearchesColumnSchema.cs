@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesColumnSchema
+    /// SearchesColumnSchema
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesColumnSchema :  IEquatable<TrebuchetWebApiDataContractsSearchesColumnSchema>, IValidatableObject
+    public partial class SearchesColumnSchema :  IEquatable<SearchesColumnSchema>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets Type
@@ -81,12 +81,12 @@ namespace Cherwell.Model
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesColumnSchema" /> class.
+        /// Initializes a new instance of the <see cref="SearchesColumnSchema" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="FieldId">FieldId.</param>
         /// <param name="Type">Type.</param>
-        public TrebuchetWebApiDataContractsSearchesColumnSchema(string Name = default(string), string FieldId = default(string), TypeEnum? Type = default(TypeEnum?))
+        public SearchesColumnSchema(string Name = default(string), string FieldId = default(string), TypeEnum? Type = default(TypeEnum?))
         {
             this.Name = Name;
             this.FieldId = FieldId;
@@ -110,7 +110,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesColumnSchema {\n");
+            sb.Append("class SearchesColumnSchema {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  FieldId: ").Append(FieldId).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -135,15 +135,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesColumnSchema);
+            return this.Equals(obj as SearchesColumnSchema);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesColumnSchema instances are equal
+        /// Returns true if SearchesColumnSchema instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesColumnSchema to be compared</param>
+        /// <param name="other">Instance of SearchesColumnSchema to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesColumnSchema other)
+        public bool Equals(SearchesColumnSchema other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

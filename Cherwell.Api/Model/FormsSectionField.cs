@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsFormsSectionField
+    /// FormsSectionField
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsFormsSectionField :  IEquatable<TrebuchetWebApiDataContractsFormsSectionField>, IValidatableObject
+    public partial class FormsSectionField :  IEquatable<FormsSectionField>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsFormsSectionField" /> class.
+        /// Initializes a new instance of the <see cref="FormsSectionField" /> class.
         /// </summary>
         /// <param name="Attributes">Attributes.</param>
         /// <param name="FieldId">FieldId.</param>
@@ -28,7 +28,7 @@ namespace Cherwell.Model
         /// <param name="Label">Label.</param>
         /// <param name="Multiline">Multiline.</param>
         /// <param name="Value">Value.</param>
-        public TrebuchetWebApiDataContractsFormsSectionField(List<Object> Attributes = default(List<Object>), string FieldId = default(string), string FieldType = default(string), string Label = default(string), bool? Multiline = default(bool?), string Value = default(string))
+        public FormsSectionField(List<Object> Attributes = default(List<Object>), string FieldId = default(string), string FieldType = default(string), string Label = default(string), bool? Multiline = default(bool?), string Value = default(string))
         {
             this.Attributes = Attributes;
             this.FieldId = FieldId;
@@ -75,7 +75,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsFormsSectionField {\n");
+            sb.Append("class FormsSectionField {\n");
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("  FieldId: ").Append(FieldId).Append("\n");
             sb.Append("  FieldType: ").Append(FieldType).Append("\n");
@@ -103,15 +103,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsFormsSectionField);
+            return this.Equals(obj as FormsSectionField);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsFormsSectionField instances are equal
+        /// Returns true if FormsSectionField instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsFormsSectionField to be compared</param>
+        /// <param name="other">Instance of FormsSectionField to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsFormsSectionField other)
+        public bool Equals(FormsSectionField other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

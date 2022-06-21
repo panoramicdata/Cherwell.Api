@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsCorePromptValue
+    /// CorePromptValue
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsCorePromptValue :  IEquatable<TrebuchetWebApiDataContractsCorePromptValue>, IValidatableObject
+    public partial class CorePromptValue :  IEquatable<CorePromptValue>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsCorePromptValue" /> class.
+        /// Initializes a new instance of the <see cref="CorePromptValue" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="CollectionStoreEntireRow">CollectionStoreEntireRow.</param>
@@ -30,7 +30,7 @@ namespace Cherwell.Model
         /// <param name="PromptId">PromptId.</param>
         /// <param name="Value">Value.</param>
         /// <param name="ValueIsRecId">ValueIsRecId.</param>
-        public TrebuchetWebApiDataContractsCorePromptValue(string BusObId = default(string), string CollectionStoreEntireRow = default(string), string CollectionValueField = default(string), string FieldId = default(string), string ListReturnFieldId = default(string), string PromptId = default(string), Object Value = default(Object), bool? ValueIsRecId = default(bool?))
+        public CorePromptValue(string BusObId = default(string), string CollectionStoreEntireRow = default(string), string CollectionValueField = default(string), string FieldId = default(string), string ListReturnFieldId = default(string), string PromptId = default(string), Object Value = default(Object), bool? ValueIsRecId = default(bool?))
         {
             this.BusObId = BusObId;
             this.CollectionStoreEntireRow = CollectionStoreEntireRow;
@@ -89,7 +89,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsCorePromptValue {\n");
+            sb.Append("class CorePromptValue {\n");
             sb.Append("  BusObId: ").Append(BusObId).Append("\n");
             sb.Append("  CollectionStoreEntireRow: ").Append(CollectionStoreEntireRow).Append("\n");
             sb.Append("  CollectionValueField: ").Append(CollectionValueField).Append("\n");
@@ -119,15 +119,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsCorePromptValue);
+            return this.Equals(obj as CorePromptValue);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsCorePromptValue instances are equal
+        /// Returns true if CorePromptValue instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsCorePromptValue to be compared</param>
+        /// <param name="other">Instance of CorePromptValue to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsCorePromptValue other)
+        public bool Equals(CorePromptValue other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

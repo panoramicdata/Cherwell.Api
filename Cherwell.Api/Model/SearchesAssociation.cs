@@ -14,17 +14,17 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesAssociation
+    /// SearchesAssociation
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesAssociation :  IEquatable<TrebuchetWebApiDataContractsSearchesAssociation>, IValidatableObject
+    public partial class SearchesAssociation :  IEquatable<SearchesAssociation>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesAssociation" /> class.
+        /// Initializes a new instance of the <see cref="SearchesAssociation" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObName">BusObName.</param>
-        public TrebuchetWebApiDataContractsSearchesAssociation(string BusObId = default(string), string BusObName = default(string))
+        public SearchesAssociation(string BusObId = default(string), string BusObName = default(string))
         {
             this.BusObId = BusObId;
             this.BusObName = BusObName;
@@ -47,7 +47,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesAssociation {\n");
+            sb.Append("class SearchesAssociation {\n");
             sb.Append("  BusObId: ").Append(BusObId).Append("\n");
             sb.Append("  BusObName: ").Append(BusObName).Append("\n");
             sb.Append("}\n");
@@ -71,15 +71,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesAssociation);
+            return this.Equals(obj as SearchesAssociation);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesAssociation instances are equal
+        /// Returns true if SearchesAssociation instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesAssociation to be compared</param>
+        /// <param name="other">Instance of SearchesAssociation to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesAssociation other)
+        public bool Equals(SearchesAssociation other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

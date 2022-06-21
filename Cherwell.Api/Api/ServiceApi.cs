@@ -24,9 +24,9 @@ namespace Cherwell.Api
         /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreServiceInfoResponse</returns>
+        /// <returns>Task of CoreServiceInfoResponse</returns>
         [Get("/api/V1/serviceinfo")]
-        Task<TrebuchetWebApiDataContractsCoreServiceInfoResponse> ServiceGetServiceInfoV1([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreServiceInfoResponse> ServiceGetServiceInfoV1([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Log out user by token
@@ -56,9 +56,9 @@ namespace Cherwell.Api
         /// <param name="refresh_token">Specify the refresh token used to grant another access token. (optional)</param>
         /// <param name="auth_mode">Specify the Authentication Mode to use for requesting an access token. (optional)</param>
         /// <param name="site_name">If for portal specify the Site name to use for requesting an access token. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsSecurityTokenResponse</returns>
+        /// <returns>Task of SecurityTokenResponse</returns>
         [Post("/token")]
-        Task<TrebuchetWebApiDataContractsSecurityTokenResponse> ServiceToken([Header("UserAgent")] string userAgent, string grant_type, string client_id, string client_secret = null, string username = null, string password = null, string refresh_token = null, [AliasAs("auth_mode")]string auth_mode = null, [AliasAs("site_name")]string site_name = null);
+        Task<SecurityTokenResponse> ServiceToken([Header("UserAgent")] string userAgent, string grant_type, string client_id, string client_secret = null, string username = null, string password = null, string refresh_token = null, [AliasAs("auth_mode")]string auth_mode = null, [AliasAs("site_name")]string site_name = null);
         #endregion Asynchronous Operations
     }
 }

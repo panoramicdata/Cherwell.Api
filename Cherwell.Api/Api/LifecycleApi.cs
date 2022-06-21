@@ -26,9 +26,9 @@ namespace Cherwell.Api
         /// <param name="recordId"></param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse</returns>
+        /// <returns>Task of LifecycleGetRecordStatusResponse</returns>
         [Get("/api/V1/{businessObjectDefinitionId}/records/{recordId}/stage")]
-        Task<TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse> LifecycleGetRecordStage([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("recordId")]string recordId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<LifecycleGetRecordStatusResponse> LifecycleGetRecordStage([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("recordId")]string recordId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get current lifecycle status for record
@@ -41,9 +41,9 @@ namespace Cherwell.Api
         /// <param name="recordId"></param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse</returns>
+        /// <returns>Task of LifecycleGetRecordStatusResponse</returns>
         [Get("/api/V1/{businessObjectDefinitionId}/records/{recordId}/status")]
-        Task<TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse> LifecycleGetRecordStatus([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("recordId")]string recordId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<LifecycleGetRecordStatusResponse> LifecycleGetRecordStatus([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("recordId")]string recordId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get lifecycle stages
@@ -55,9 +55,9 @@ namespace Cherwell.Api
         /// <param name="businessObjectDefinitionId"></param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsLifecycleGetStagesResponse</returns>
+        /// <returns>Task of LifecycleGetStagesResponse</returns>
         [Get("/api/V1/{businessObjectDefinitionId}/lifecycle/stages")]
-        Task<TrebuchetWebApiDataContractsLifecycleGetStagesResponse> LifecycleGetStages([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<LifecycleGetStagesResponse> LifecycleGetStages([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get lifecycle statuses
@@ -69,9 +69,9 @@ namespace Cherwell.Api
         /// <param name="businessObjectDefinitionId"></param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsLifecycleGetStatusesResponse</returns>
+        /// <returns>Task of LifecycleGetStatusesResponse</returns>
         [Get("/api/V1/{businessObjectDefinitionId}/lifecycle/statuses")]
-        Task<TrebuchetWebApiDataContractsLifecycleGetStatusesResponse> LifecycleGetStatuses([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<LifecycleGetStatusesResponse> LifecycleGetStatuses([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get lifecycle transition options for record
@@ -84,9 +84,9 @@ namespace Cherwell.Api
         /// <param name="recordId"></param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsLifecycleGetTransitionOptionsResponse</returns>
+        /// <returns>Task of LifecycleGetTransitionOptionsResponse</returns>
         [Get("/api/V1/{businessObjectDefinitionId}/records/{recordId}/transitionOptions")]
-        Task<TrebuchetWebApiDataContractsLifecycleGetTransitionOptionsResponse> LifecycleGetTransitionOptions([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("recordId")]string recordId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<LifecycleGetTransitionOptionsResponse> LifecycleGetTransitionOptions([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("recordId")]string recordId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get lifecycle transitions
@@ -98,9 +98,9 @@ namespace Cherwell.Api
         /// <param name="businessObjectDefinitionId"></param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsLifecycleGetTransitionsResponse</returns>
+        /// <returns>Task of LifecycleGetTransitionsResponse</returns>
         [Get("/api/V1/{businessObjectDefinitionId}/lifecycle/transitions")]
-        Task<TrebuchetWebApiDataContractsLifecycleGetTransitionsResponse> LifecycleGetTransitions([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<LifecycleGetTransitionsResponse> LifecycleGetTransitions([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Transition a business object record
@@ -114,9 +114,9 @@ namespace Cherwell.Api
         /// <param name="transitionRecordRequest"></param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsResponseBase</returns>
+        /// <returns>Task of ResponseBase</returns>
         [Post("/api/V1/{businessObjectDefinitionId}/records/{recordId}/transitions")]
-        Task<TrebuchetWebApiDataContractsResponseBase> LifecycleTransitionRecord([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("recordId")]string recordId, [Body]TrebuchetWebApiDataContractsLifecycleTransitionRecordRequest transitionRecordRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ResponseBase> LifecycleTransitionRecord([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("recordId")]string recordId, [Body]LifecycleTransitionRecordRequest transitionRecordRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
         #endregion Asynchronous Operations
     }
 }

@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsFormsSection
+    /// FormsSection
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsFormsSection :  IEquatable<TrebuchetWebApiDataContractsFormsSection>, IValidatableObject
+    public partial class FormsSection :  IEquatable<FormsSection>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsFormsSection" /> class.
+        /// Initializes a new instance of the <see cref="FormsSection" /> class.
         /// </summary>
         /// <param name="SectionFields">SectionFields.</param>
         /// <param name="GalleryImage">GalleryImage.</param>
@@ -28,7 +28,7 @@ namespace Cherwell.Model
         /// <param name="RelationshipId">RelationshipId.</param>
         /// <param name="TargetBusObId">TargetBusObId.</param>
         /// <param name="TargetBusObRecId">TargetBusObRecId.</param>
-        public TrebuchetWebApiDataContractsFormsSection(List<TrebuchetWebApiDataContractsFormsSectionField> SectionFields = default(List<TrebuchetWebApiDataContractsFormsSectionField>), string GalleryImage = default(string), string Title = default(string), string RelationshipId = default(string), string TargetBusObId = default(string), string TargetBusObRecId = default(string))
+        public FormsSection(List<FormsSectionField> SectionFields = default(List<FormsSectionField>), string GalleryImage = default(string), string Title = default(string), string RelationshipId = default(string), string TargetBusObId = default(string), string TargetBusObRecId = default(string))
         {
             this.SectionFields = SectionFields;
             this.GalleryImage = GalleryImage;
@@ -42,7 +42,7 @@ namespace Cherwell.Model
         /// Gets or Sets SectionFields
         /// </summary>
         [DataMember(Name="sectionFields", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsFormsSectionField> SectionFields { get; set; }
+        public List<FormsSectionField> SectionFields { get; set; }
         /// <summary>
         /// Gets or Sets GalleryImage
         /// </summary>
@@ -75,7 +75,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsFormsSection {\n");
+            sb.Append("class FormsSection {\n");
             sb.Append("  SectionFields: ").Append(SectionFields).Append("\n");
             sb.Append("  GalleryImage: ").Append(GalleryImage).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
@@ -103,15 +103,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsFormsSection);
+            return this.Equals(obj as FormsSection);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsFormsSection instances are equal
+        /// Returns true if FormsSection instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsFormsSection to be compared</param>
+        /// <param name="other">Instance of FormsSection to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsFormsSection other)
+        public bool Equals(FormsSection other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

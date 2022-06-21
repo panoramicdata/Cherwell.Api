@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response
+    /// SecuritySecurityGroupV2Response
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response :  IEquatable<TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response>, IValidatableObject
+    public partial class SecuritySecurityGroupV2Response :  IEquatable<SecuritySecurityGroupV2Response>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response" /> class.
+        /// Initializes a new instance of the <see cref="SecuritySecurityGroupV2Response" /> class.
         /// </summary>
         /// <param name="SecurityGroups">SecurityGroups.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response(List<TrebuchetWebApiDataContractsSecuritySecurityGroup> SecurityGroups = default(List<TrebuchetWebApiDataContractsSecuritySecurityGroup>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public SecuritySecurityGroupV2Response(List<SecuritySecurityGroup> SecurityGroups = default(List<SecuritySecurityGroup>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.SecurityGroups = SecurityGroups;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Model
         /// Gets or Sets SecurityGroups
         /// </summary>
         [DataMember(Name="securityGroups", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSecuritySecurityGroup> SecurityGroups { get; set; }
+        public List<SecuritySecurityGroup> SecurityGroups { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -358,7 +358,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response {\n");
+            sb.Append("class SecuritySecurityGroupV2Response {\n");
             sb.Append("  SecurityGroups: ").Append(SecurityGroups).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
@@ -385,15 +385,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response);
+            return this.Equals(obj as SecuritySecurityGroupV2Response);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response instances are equal
+        /// Returns true if SecuritySecurityGroupV2Response instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response to be compared</param>
+        /// <param name="other">Instance of SecuritySecurityGroupV2Response to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response other)
+        public bool Equals(SecuritySecurityGroupV2Response other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

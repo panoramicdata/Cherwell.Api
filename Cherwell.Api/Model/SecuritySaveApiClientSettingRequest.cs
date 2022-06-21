@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSecuritySaveApiClientSettingRequest
+    /// SecuritySaveApiClientSettingRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSecuritySaveApiClientSettingRequest :  IEquatable<TrebuchetWebApiDataContractsSecuritySaveApiClientSettingRequest>, IValidatableObject
+    public partial class SecuritySaveApiClientSettingRequest :  IEquatable<SecuritySaveApiClientSettingRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSecuritySaveApiClientSettingRequest" /> class.
+        /// Initializes a new instance of the <see cref="SecuritySaveApiClientSettingRequest" /> class.
         /// </summary>
         /// <param name="AllowAnonymousAccess">AllowAnonymousAccess.</param>
         /// <param name="ApiAccessIsEnabled">ApiAccessIsEnabled.</param>
@@ -31,7 +31,7 @@ namespace Cherwell.Model
         /// <param name="RefreshTokenLifespanMinutes">RefreshTokenLifespanMinutes.</param>
         /// <param name="StandInKey">StandInKey.</param>
         /// <param name="TokenLifespanMinutes">TokenLifespanMinutes.</param>
-        public TrebuchetWebApiDataContractsSecuritySaveApiClientSettingRequest(bool? AllowAnonymousAccess = default(bool?), bool? ApiAccessIsEnabled = default(bool?), bool? CreateNewClientKey = default(bool?), string Culture = default(string), string Description = default(string), string Name = default(string), int? RefreshTokenLifespanMinutes = default(int?), string StandInKey = default(string), int? TokenLifespanMinutes = default(int?))
+        public SecuritySaveApiClientSettingRequest(bool? AllowAnonymousAccess = default(bool?), bool? ApiAccessIsEnabled = default(bool?), bool? CreateNewClientKey = default(bool?), string Culture = default(string), string Description = default(string), string Name = default(string), int? RefreshTokenLifespanMinutes = default(int?), string StandInKey = default(string), int? TokenLifespanMinutes = default(int?))
         {
             this.AllowAnonymousAccess = AllowAnonymousAccess;
             this.ApiAccessIsEnabled = ApiAccessIsEnabled;
@@ -96,7 +96,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSecuritySaveApiClientSettingRequest {\n");
+            sb.Append("class SecuritySaveApiClientSettingRequest {\n");
             sb.Append("  AllowAnonymousAccess: ").Append(AllowAnonymousAccess).Append("\n");
             sb.Append("  ApiAccessIsEnabled: ").Append(ApiAccessIsEnabled).Append("\n");
             sb.Append("  CreateNewClientKey: ").Append(CreateNewClientKey).Append("\n");
@@ -127,15 +127,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSecuritySaveApiClientSettingRequest);
+            return this.Equals(obj as SecuritySaveApiClientSettingRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSecuritySaveApiClientSettingRequest instances are equal
+        /// Returns true if SecuritySaveApiClientSettingRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSecuritySaveApiClientSettingRequest to be compared</param>
+        /// <param name="other">Instance of SecuritySaveApiClientSettingRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSecuritySaveApiClientSettingRequest other)
+        public bool Equals(SecuritySaveApiClientSettingRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSecuritySecurityRightsResponse
+    /// SecuritySecurityRightsResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSecuritySecurityRightsResponse :  IEquatable<TrebuchetWebApiDataContractsSecuritySecurityRightsResponse>, IValidatableObject
+    public partial class SecuritySecurityRightsResponse :  IEquatable<SecuritySecurityRightsResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSecuritySecurityRightsResponse" /> class.
+        /// Initializes a new instance of the <see cref="SecuritySecurityRightsResponse" /> class.
         /// </summary>
         /// <param name="Rights">Rights.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsSecuritySecurityRightsResponse(List<TrebuchetWebApiDataContractsSecurityRight> Rights = default(List<TrebuchetWebApiDataContractsSecurityRight>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public SecuritySecurityRightsResponse(List<SecurityRight> Rights = default(List<SecurityRight>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.Rights = Rights;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Model
         /// Gets or Sets Rights
         /// </summary>
         [DataMember(Name="rights", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSecurityRight> Rights { get; set; }
+        public List<SecurityRight> Rights { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -358,7 +358,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSecuritySecurityRightsResponse {\n");
+            sb.Append("class SecuritySecurityRightsResponse {\n");
             sb.Append("  Rights: ").Append(Rights).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
@@ -385,15 +385,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSecuritySecurityRightsResponse);
+            return this.Equals(obj as SecuritySecurityRightsResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSecuritySecurityRightsResponse instances are equal
+        /// Returns true if SecuritySecurityRightsResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSecuritySecurityRightsResponse to be compared</param>
+        /// <param name="other">Instance of SecuritySecurityRightsResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSecuritySecurityRightsResponse other)
+        public bool Equals(SecuritySecurityRightsResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

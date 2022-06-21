@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse
+    /// SecuritySecurityRightCategoriesResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse :  IEquatable<TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse>, IValidatableObject
+    public partial class SecuritySecurityRightCategoriesResponse :  IEquatable<SecuritySecurityRightCategoriesResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse" /> class.
+        /// Initializes a new instance of the <see cref="SecuritySecurityRightCategoriesResponse" /> class.
         /// </summary>
         /// <param name="RightCategories">RightCategories.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse(List<TrebuchetWebApiDataContractsSecurityRightCategory> RightCategories = default(List<TrebuchetWebApiDataContractsSecurityRightCategory>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public SecuritySecurityRightCategoriesResponse(List<SecurityRightCategory> RightCategories = default(List<SecurityRightCategory>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.RightCategories = RightCategories;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Model
         /// Gets or Sets RightCategories
         /// </summary>
         [DataMember(Name="rightCategories", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSecurityRightCategory> RightCategories { get; set; }
+        public List<SecurityRightCategory> RightCategories { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -358,7 +358,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse {\n");
+            sb.Append("class SecuritySecurityRightCategoriesResponse {\n");
             sb.Append("  RightCategories: ").Append(RightCategories).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
@@ -385,15 +385,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse);
+            return this.Equals(obj as SecuritySecurityRightCategoriesResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse instances are equal
+        /// Returns true if SecuritySecurityRightCategoriesResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse to be compared</param>
+        /// <param name="other">Instance of SecuritySecurityRightCategoriesResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse other)
+        public bool Equals(SecuritySecurityRightCategoriesResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -14,16 +14,16 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationRequest
+    /// SearchesQuickSearchConfigurationRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationRequest :  IEquatable<TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationRequest>, IValidatableObject
+    public partial class SearchesQuickSearchConfigurationRequest :  IEquatable<SearchesQuickSearchConfigurationRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationRequest" /> class.
+        /// Initializes a new instance of the <see cref="SearchesQuickSearchConfigurationRequest" /> class.
         /// </summary>
         /// <param name="BusObIds">BusObIds.</param>
-        public TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationRequest(List<string> BusObIds = default(List<string>))
+        public SearchesQuickSearchConfigurationRequest(List<string> BusObIds = default(List<string>))
         {
             this.BusObIds = BusObIds;
         }
@@ -40,7 +40,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationRequest {\n");
+            sb.Append("class SearchesQuickSearchConfigurationRequest {\n");
             sb.Append("  BusObIds: ").Append(BusObIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -63,15 +63,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationRequest);
+            return this.Equals(obj as SearchesQuickSearchConfigurationRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationRequest instances are equal
+        /// Returns true if SearchesQuickSearchConfigurationRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationRequest to be compared</param>
+        /// <param name="other">Instance of SearchesQuickSearchConfigurationRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationRequest other)
+        public bool Equals(SearchesQuickSearchConfigurationRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -25,9 +25,9 @@ namespace Cherwell.Api
         /// <param name="request">Request object containing all properties necessary to add an item to a queue. All properties are required. The standin key defines the queue to which we want to add the Business Object.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsQueuesAddItemToQueueResponse</returns>
+        /// <returns>Task of QueuesAddItemToQueueResponse</returns>
         [Post("/api/V1/additemtoqueue")]
-        Task<TrebuchetWebApiDataContractsQueuesAddItemToQueueResponse> QueuesAddItemToQueueV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsQueuesAddItemToQueueRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<QueuesAddItemToQueueResponse> QueuesAddItemToQueueV1([Header("UserAgent")] string userAgent, [Body]QueuesAddItemToQueueRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Check a Business Object in to a queue
@@ -39,9 +39,9 @@ namespace Cherwell.Api
         /// <param name="request">The request object for checking in an item to a queue. All properties are required except for historyNotes</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse</returns>
+        /// <returns>Task of QueuesCheckInQueueItemResponse</returns>
         [Post("/api/V1/checkinqueueitem")]
-        Task<TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse> QueuesCheckInQueueItemV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsQueuesCheckInQueueItemRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<QueuesCheckInQueueItemResponse> QueuesCheckInQueueItemV1([Header("UserAgent")] string userAgent, [Body]QueuesCheckInQueueItemRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Check a Business Object out of a queue
@@ -53,9 +53,9 @@ namespace Cherwell.Api
         /// <param name="request">The request object for checking out an item from a queue. All properties are required except for historyNotes</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsQueuesCheckOutQueueItemResponse</returns>
+        /// <returns>Task of QueuesCheckOutQueueItemResponse</returns>
         [Post("/api/V1/checkoutqueueitem")]
-        Task<TrebuchetWebApiDataContractsQueuesCheckOutQueueItemResponse> QueuesCheckOutQueueItemV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsQueuesCheckOutQueueItemRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<QueuesCheckOutQueueItemResponse> QueuesCheckOutQueueItemV1([Header("UserAgent")] string userAgent, [Body]QueuesCheckOutQueueItemRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get available queues.
@@ -70,9 +70,9 @@ namespace Cherwell.Api
         /// <param name="links">Whether or not to include links. (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
+        /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/getqueues/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
-        Task<TrebuchetWebApiDataContractsCoreManagerData> QueuesGetQueuesFolderV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreManagerData> QueuesGetQueuesFolderV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get available queues.
@@ -86,9 +86,9 @@ namespace Cherwell.Api
         /// <param name="links">Whether or not to include links. (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
+        /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/getqueues/scope/{scope}/scopeowner/{scopeowner}")]
-        Task<TrebuchetWebApiDataContractsCoreManagerData> QueuesGetQueuesScopeOwnerV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreManagerData> QueuesGetQueuesScopeOwnerV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get available queues.
@@ -101,9 +101,9 @@ namespace Cherwell.Api
         /// <param name="links">Whether or not to include links. (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
+        /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/getqueues/scope/{scope}")]
-        Task<TrebuchetWebApiDataContractsCoreManagerData> QueuesGetQueuesScopeV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreManagerData> QueuesGetQueuesScopeV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get available queues.
@@ -115,9 +115,9 @@ namespace Cherwell.Api
         /// <param name="links">Whether or not to include links. (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
+        /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/getqueues")]
-        Task<TrebuchetWebApiDataContractsCoreManagerData> QueuesGetQueuesV1([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreManagerData> QueuesGetQueuesV1([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Remove an item from a queue
@@ -129,9 +129,9 @@ namespace Cherwell.Api
         /// <param name="request">The request object to remove an item from a queue. All properties are required except for historyNotes</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse</returns>
+        /// <returns>Task of QueuesRemoveItemFromQueueResponse</returns>
         [Post("/api/V1/removeitemfromqueue")]
-        Task<TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse> QueuesRemoveItemFromQueueV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<QueuesRemoveItemFromQueueResponse> QueuesRemoveItemFromQueueV1([Header("UserAgent")] string userAgent, [Body]QueuesRemoveItemFromQueueRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
         #endregion Asynchronous Operations
     }
 }

@@ -14,20 +14,20 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsCoreLocation
+    /// CoreLocation
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsCoreLocation :  IEquatable<TrebuchetWebApiDataContractsCoreLocation>, IValidatableObject
+    public partial class CoreLocation :  IEquatable<CoreLocation>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsCoreLocation" /> class.
+        /// Initializes a new instance of the <see cref="CoreLocation" /> class.
         /// </summary>
         /// <param name="Altitude">Altitude.</param>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObRecId">BusObRecId.</param>
         /// <param name="Latitude">Latitude.</param>
         /// <param name="Longitude">Longitude.</param>
-        public TrebuchetWebApiDataContractsCoreLocation(double? Altitude = default(double?), string BusObId = default(string), string BusObRecId = default(string), double? Latitude = default(double?), double? Longitude = default(double?))
+        public CoreLocation(double? Altitude = default(double?), string BusObId = default(string), string BusObRecId = default(string), double? Latitude = default(double?), double? Longitude = default(double?))
         {
             this.Altitude = Altitude;
             this.BusObId = BusObId;
@@ -68,7 +68,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsCoreLocation {\n");
+            sb.Append("class CoreLocation {\n");
             sb.Append("  Altitude: ").Append(Altitude).Append("\n");
             sb.Append("  BusObId: ").Append(BusObId).Append("\n");
             sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
@@ -95,15 +95,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsCoreLocation);
+            return this.Equals(obj as CoreLocation);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsCoreLocation instances are equal
+        /// Returns true if CoreLocation instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsCoreLocation to be compared</param>
+        /// <param name="other">Instance of CoreLocation to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsCoreLocation other)
+        public bool Equals(CoreLocation other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

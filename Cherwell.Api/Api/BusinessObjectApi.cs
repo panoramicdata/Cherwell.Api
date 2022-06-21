@@ -25,9 +25,9 @@ namespace Cherwell.Api
         /// <param name="request">Specify an array of Business Object IDs and record IDs or public IDs. Use a flag to stop on error or continue on error.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsBusinessObjectBatchDeleteResponse</returns>
+        /// <returns>Task of BusinessObjectBatchDeleteResponse</returns>
         [Post("/api/V1/deletebusinessobjectbatch")]
-        Task<TrebuchetWebApiDataContractsBusinessObjectBatchDeleteResponse> BusinessObjectDeleteBusinessObjectBatchV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsBusinessObjectBatchDeleteRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<BusinessObjectBatchDeleteResponse> BusinessObjectDeleteBusinessObjectBatchV1([Header("UserAgent")] string userAgent, [Body]BusinessObjectBatchDeleteRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Delete a Business Object by public ID
@@ -40,9 +40,9 @@ namespace Cherwell.Api
         /// <param name="publicid">Specify the Business Object public ID.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsBusinessObjectDeleteResponse</returns>
+        /// <returns>Task of BusinessObjectDeleteResponse</returns>
         [Delete("/api/V1/deletebusinessobject/busobid/{busobid}/publicid/{publicid}")]
-        Task<TrebuchetWebApiDataContractsBusinessObjectDeleteResponse> BusinessObjectDeleteBusinessObjectByPublicIdV1([Header("UserAgent")] string userAgent, [AliasAs("busobid")]string busobid, [AliasAs("publicid")]string publicid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<BusinessObjectDeleteResponse> BusinessObjectDeleteBusinessObjectByPublicIdV1([Header("UserAgent")] string userAgent, [AliasAs("busobid")]string busobid, [AliasAs("publicid")]string publicid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Delete a Business Object by record ID
@@ -55,9 +55,9 @@ namespace Cherwell.Api
         /// <param name="busobrecid"> Specify the Business Object record ID.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsBusinessObjectDeleteResponse</returns>
+        /// <returns>Task of BusinessObjectDeleteResponse</returns>
         [Delete("/api/V1/deletebusinessobject/busobid/{busobid}/busobrecid/{busobrecid}")]
-        Task<TrebuchetWebApiDataContractsBusinessObjectDeleteResponse> BusinessObjectDeleteBusinessObjectByRecIdV1([Header("UserAgent")] string userAgent, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<BusinessObjectDeleteResponse> BusinessObjectDeleteBusinessObjectByRecIdV1([Header("UserAgent")] string userAgent, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Delete a related Business Object by public ID
@@ -72,9 +72,9 @@ namespace Cherwell.Api
         /// <param name="publicid">Specify the public ID for the related Business Object you want to delete. Use only for Business Objects with unique public IDs. Use \&quot;Delete a related Business Object by record ID\&quot; when public IDs are not unique.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse</returns>
+        /// <returns>Task of SearchesRelatedBusinessObjectResponse</returns>
         [Delete("/api/V1/deleterelatedbusinessobject/parentbusobid/{parentbusobid}/parentbusobrecid/{parentbusobrecid}/relationshipid/{relationshipid}/publicid/{publicid}")]
-        Task<TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse> BusinessObjectDeleteRelatedBusinessObjectByPublicIdV1([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("publicid")]string publicid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesRelatedBusinessObjectResponse> BusinessObjectDeleteRelatedBusinessObjectByPublicIdV1([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("publicid")]string publicid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Delete a related Business Object by record ID
@@ -89,9 +89,9 @@ namespace Cherwell.Api
         /// <param name="busobrecid">Specify the record ID for the related Business Object you want to delete.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse</returns>
+        /// <returns>Task of SearchesRelatedBusinessObjectResponse</returns>
         [Delete("/api/V1/deleterelatedbusinessobject/parentbusobid/{parentbusobid}/parentbusobrecid/{parentbusobrecid}/relationshipid/{relationshipid}/busobrecid/{busobrecid}")]
-        Task<TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse> BusinessObjectDeleteRelatedBusinessObjectByRecIdV1([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesRelatedBusinessObjectResponse> BusinessObjectDeleteRelatedBusinessObjectByRecIdV1([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get lookup values for fields
@@ -103,9 +103,9 @@ namespace Cherwell.Api
         /// <param name="request">Request object that specifies the Business Object and fields for which values are to be returned.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsBusinessObjectFieldValuesLookupResponse</returns>
+        /// <returns>Task of BusinessObjectFieldValuesLookupResponse</returns>
         [Post("/api/V1/fieldvalueslookup")]
-        Task<TrebuchetWebApiDataContractsBusinessObjectFieldValuesLookupResponse> BusinessObjectFieldValuesLookupV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsBusinessObjectFieldValuesLookupRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<BusinessObjectFieldValuesLookupResponse> BusinessObjectFieldValuesLookupV1([Header("UserAgent")] string userAgent, [Body]BusinessObjectFieldValuesLookupRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Retrieve all activities for a business object
@@ -121,9 +121,9 @@ namespace Cherwell.Api
         /// <param name="activityType">The category of activities to retrieve. Will default to All if not specified. (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of List&lt;TrebuchetWebApiDataContractsBusinessObjectBusObActivity&gt;</returns>
+        /// <returns>Task of List&lt;BusinessObjectBusObActivity&gt;</returns>
         [Get("/api/V1/getactivities/busobid/{busobid}/busobrecid/{busobrecid}/pagesize/{pageSize}")]
-        Task<List<TrebuchetWebApiDataContractsBusinessObjectBusObActivity>> BusinessObjectGetActivitiesV1([Header("UserAgent")] string userAgent, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("pageSize")]int? pageSize, [AliasAs("pageNumber")]int? pageNumber = null, [AliasAs("activityType")]string activityType = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<List<BusinessObjectBusObActivity>> BusinessObjectGetActivitiesV1([Header("UserAgent")] string userAgent, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("pageSize")]int? pageSize, [AliasAs("pageNumber")]int? pageNumber = null, [AliasAs("activityType")]string activityType = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get an imported Business Object attachment
@@ -155,9 +155,9 @@ namespace Cherwell.Api
         /// <param name="includelinks">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse</returns>
+        /// <returns>Task of BusinessObjectAttachmentsResponse</returns>
         [Get("/api/V1/getbusinessobjectattachments/busobid/{busobid}/publicid/{publicid}/type/{type}/attachmenttype/{attachmenttype}")]
-        Task<TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse> BusinessObjectGetBusinessObjectAttachmentsByIdAndPublicIdV1([Header("UserAgent")] string userAgent, [AliasAs("busobid")]string busobid, [AliasAs("publicid")]string publicid, [AliasAs("type")]string type, [AliasAs("attachmenttype")]string attachmenttype, [AliasAs("includelinks")]bool? includelinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<BusinessObjectAttachmentsResponse> BusinessObjectGetBusinessObjectAttachmentsByIdAndPublicIdV1([Header("UserAgent")] string userAgent, [AliasAs("busobid")]string busobid, [AliasAs("publicid")]string publicid, [AliasAs("type")]string type, [AliasAs("attachmenttype")]string attachmenttype, [AliasAs("includelinks")]bool? includelinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get attachments by Business Object record ID
@@ -173,9 +173,9 @@ namespace Cherwell.Api
         /// <param name="includelinks">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse</returns>
+        /// <returns>Task of BusinessObjectAttachmentsResponse</returns>
         [Get("/api/V1/getbusinessobjectattachments/busobid/{busobid}/busobrecid/{busobrecid}/type/{type}/attachmenttype/{attachmenttype}")]
-        Task<TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse> BusinessObjectGetBusinessObjectAttachmentsByIdAndRecIdV1([Header("UserAgent")] string userAgent, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("type")]string type, [AliasAs("attachmenttype")]string attachmenttype, [AliasAs("includelinks")]bool? includelinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<BusinessObjectAttachmentsResponse> BusinessObjectGetBusinessObjectAttachmentsByIdAndRecIdV1([Header("UserAgent")] string userAgent, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("type")]string type, [AliasAs("attachmenttype")]string attachmenttype, [AliasAs("includelinks")]bool? includelinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get attachments by Business Object name and public ID
@@ -191,9 +191,9 @@ namespace Cherwell.Api
         /// <param name="includelinks">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse</returns>
+        /// <returns>Task of BusinessObjectAttachmentsResponse</returns>
         [Get("/api/V1/getbusinessobjectattachments/busobname/{busobname}/publicid/{publicid}/type/{type}/attachmenttype/{attachmenttype}")]
-        Task<TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse> BusinessObjectGetBusinessObjectAttachmentsByNameAndPublicIdV1([Header("UserAgent")] string userAgent, [AliasAs("busobname")]string busobname, [AliasAs("publicid")]string publicid, [AliasAs("type")]string type, [AliasAs("attachmenttype")]string attachmenttype, [AliasAs("includelinks")]bool? includelinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<BusinessObjectAttachmentsResponse> BusinessObjectGetBusinessObjectAttachmentsByNameAndPublicIdV1([Header("UserAgent")] string userAgent, [AliasAs("busobname")]string busobname, [AliasAs("publicid")]string publicid, [AliasAs("type")]string type, [AliasAs("attachmenttype")]string attachmenttype, [AliasAs("includelinks")]bool? includelinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get attachments by Business Object name and record ID
@@ -209,9 +209,9 @@ namespace Cherwell.Api
         /// <param name="includelinks">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse</returns>
+        /// <returns>Task of BusinessObjectAttachmentsResponse</returns>
         [Get("/api/V1/getbusinessobjectattachments/busobname/{busobname}/busobrecid/{busobrecid}/type/{type}/attachmenttype/{attachmenttype}")]
-        Task<TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse> BusinessObjectGetBusinessObjectAttachmentsByNameAndRecIdV1([Header("UserAgent")] string userAgent, [AliasAs("busobname")]string busobname, [AliasAs("busobrecid")]string busobrecid, [AliasAs("type")]string type, [AliasAs("attachmenttype")]string attachmenttype, [AliasAs("includelinks")]bool? includelinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<BusinessObjectAttachmentsResponse> BusinessObjectGetBusinessObjectAttachmentsByNameAndRecIdV1([Header("UserAgent")] string userAgent, [AliasAs("busobname")]string busobname, [AliasAs("busobrecid")]string busobrecid, [AliasAs("type")]string type, [AliasAs("attachmenttype")]string attachmenttype, [AliasAs("includelinks")]bool? includelinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get Business Object attachments by request object
@@ -223,9 +223,9 @@ namespace Cherwell.Api
         /// <param name="attachmentsRequest">Object with all the parameters to request an attachments list. You can also request a list of types to get more than just one type at a time.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse</returns>
+        /// <returns>Task of BusinessObjectAttachmentsResponse</returns>
         [Post("/api/V1/getbusinessobjectattachments")]
-        Task<TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse> BusinessObjectGetBusinessObjectAttachmentsV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsBusinessObjectAttachmentsRequest attachmentsRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<BusinessObjectAttachmentsResponse> BusinessObjectGetBusinessObjectAttachmentsV1([Header("UserAgent")] string userAgent, [Body]BusinessObjectAttachmentsRequest attachmentsRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get a batch of Business Object records
@@ -237,9 +237,9 @@ namespace Cherwell.Api
         /// <param name="request">Specify an array of Business Object IDs, record IDs, or public IDs. Use a flag to stop on error or continue on error.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsBusinessObjectBatchReadResponse</returns>
+        /// <returns>Task of BusinessObjectBatchReadResponse</returns>
         [Post("/api/V1/getbusinessobjectbatch")]
-        Task<TrebuchetWebApiDataContractsBusinessObjectBatchReadResponse> BusinessObjectGetBusinessObjectBatchV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsBusinessObjectBatchReadRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<BusinessObjectBatchReadResponse> BusinessObjectGetBusinessObjectBatchV1([Header("UserAgent")] string userAgent, [Body]BusinessObjectBatchReadRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get a Business Object record
@@ -252,9 +252,9 @@ namespace Cherwell.Api
         /// <param name="publicid">Specify the Business Object public ID.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsBusinessObjectReadResponse</returns>
+        /// <returns>Task of BusinessObjectReadResponse</returns>
         [Get("/api/V1/getbusinessobject/busobid/{busobid}/publicid/{publicid}")]
-        Task<TrebuchetWebApiDataContractsBusinessObjectReadResponse> BusinessObjectGetBusinessObjectByPublicIdV1([Header("UserAgent")] string userAgent, [AliasAs("busobid")]string busobid, [AliasAs("publicid")]string publicid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<BusinessObjectReadResponse> BusinessObjectGetBusinessObjectByPublicIdV1([Header("UserAgent")] string userAgent, [AliasAs("busobid")]string busobid, [AliasAs("publicid")]string publicid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get a Business Object record
@@ -267,9 +267,9 @@ namespace Cherwell.Api
         /// <param name="busobrecid">Specify the Business Object record ID.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsBusinessObjectReadResponse</returns>
+        /// <returns>Task of BusinessObjectReadResponse</returns>
         [Get("/api/V1/getbusinessobject/busobid/{busobid}/busobrecid/{busobrecid}")]
-        Task<TrebuchetWebApiDataContractsBusinessObjectReadResponse> BusinessObjectGetBusinessObjectByRecIdV1([Header("UserAgent")] string userAgent, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<BusinessObjectReadResponse> BusinessObjectGetBusinessObjectByRecIdV1([Header("UserAgent")] string userAgent, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get a Business Object by its scan code and Business Object ID
@@ -282,9 +282,9 @@ namespace Cherwell.Api
         /// <param name="busobid">The Business Object ID.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsBusinessObjectBarcodeLookupResponse</returns>
+        /// <returns>Task of BusinessObjectBarcodeLookupResponse</returns>
         [Get("/api/V1/getbusinessobject/scancode/{scanCode}/busobid/{busobid}")]
-        Task<TrebuchetWebApiDataContractsBusinessObjectBarcodeLookupResponse> BusinessObjectGetBusinessObjectByScanCodeBusObIdV1([Header("UserAgent")] string userAgent, [AliasAs("scanCode")]string scanCode, [AliasAs("busobid")]string busobid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<BusinessObjectBarcodeLookupResponse> BusinessObjectGetBusinessObjectByScanCodeBusObIdV1([Header("UserAgent")] string userAgent, [AliasAs("scanCode")]string scanCode, [AliasAs("busobid")]string busobid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get a Business Object by its scan code and Business Object name
@@ -297,9 +297,9 @@ namespace Cherwell.Api
         /// <param name="busobname">The Business Bbject name.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsBusinessObjectBarcodeLookupResponse</returns>
+        /// <returns>Task of BusinessObjectBarcodeLookupResponse</returns>
         [Get("/api/V1/getbusinessobject/scancode/{scanCode}/busobname/{busobname}")]
-        Task<TrebuchetWebApiDataContractsBusinessObjectBarcodeLookupResponse> BusinessObjectGetBusinessObjectByScanCodeBusObNameV1([Header("UserAgent")] string userAgent, [AliasAs("scanCode")]string scanCode, [AliasAs("busobname")]string busobname, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<BusinessObjectBarcodeLookupResponse> BusinessObjectGetBusinessObjectByScanCodeBusObNameV1([Header("UserAgent")] string userAgent, [AliasAs("scanCode")]string scanCode, [AliasAs("busobname")]string busobname, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get a Business Object schema
@@ -312,9 +312,9 @@ namespace Cherwell.Api
         /// <param name="includerelationships">Flag to include schemas for related Business Object. Default is false. (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsBusinessObjectSchemaResponse</returns>
+        /// <returns>Task of BusinessObjectSchemaResponse</returns>
         [Get("/api/V1/getbusinessobjectschema/busobid/{busobId}")]
-        Task<TrebuchetWebApiDataContractsBusinessObjectSchemaResponse> BusinessObjectGetBusinessObjectSchemaV1([Header("UserAgent")] string userAgent, [AliasAs("busobId")]string busobId, [AliasAs("includerelationships")]bool? includerelationships = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<BusinessObjectSchemaResponse> BusinessObjectGetBusinessObjectSchemaV1([Header("UserAgent")] string userAgent, [AliasAs("busobId")]string busobId, [AliasAs("includerelationships")]bool? includerelationships = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get Business Object summaries by type
@@ -326,9 +326,9 @@ namespace Cherwell.Api
         /// <param name="type">Use to show:&lt;br /&gt;All - All objects&lt;br /&gt;Major - Major objects only&lt;br /&gt;Supporting - Supporting objects only&lt;br /&gt;Lookup - Lookup objects only&lt;br /&gt;Groups - Groups only</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of List&lt;TrebuchetWebApiDataContractsBusinessObjectSummary&gt;</returns>
+        /// <returns>Task of List&lt;BusinessObjectSummary&gt;</returns>
         [Get("/api/V1/getbusinessobjectsummaries/type/{type}")]
-        Task<List<TrebuchetWebApiDataContractsBusinessObjectSummary>> BusinessObjectGetBusinessObjectSummariesV1([Header("UserAgent")] string userAgent, [AliasAs("type")]string type, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<List<BusinessObjectSummary>> BusinessObjectGetBusinessObjectSummariesV1([Header("UserAgent")] string userAgent, [AliasAs("type")]string type, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get a Business Object summary by ID
@@ -340,9 +340,9 @@ namespace Cherwell.Api
         /// <param name="busobid">Specify a Business Object ID to get its summary.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of List&lt;TrebuchetWebApiDataContractsBusinessObjectSummary&gt;</returns>
+        /// <returns>Task of List&lt;BusinessObjectSummary&gt;</returns>
         [Get("/api/V1/getbusinessobjectsummary/busobid/{busobid}")]
-        Task<List<TrebuchetWebApiDataContractsBusinessObjectSummary>> BusinessObjectGetBusinessObjectSummaryByIdV1([Header("UserAgent")] string userAgent, [AliasAs("busobid")]string busobid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<List<BusinessObjectSummary>> BusinessObjectGetBusinessObjectSummaryByIdV1([Header("UserAgent")] string userAgent, [AliasAs("busobid")]string busobid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get a Business Object summary by name
@@ -354,9 +354,9 @@ namespace Cherwell.Api
         /// <param name="busobname">Specify a Business Object name to get its summary.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of List&lt;TrebuchetWebApiDataContractsBusinessObjectSummary&gt;</returns>
+        /// <returns>Task of List&lt;BusinessObjectSummary&gt;</returns>
         [Get("/api/V1/getbusinessobjectsummary/busobname/{busobname}")]
-        Task<List<TrebuchetWebApiDataContractsBusinessObjectSummary>> BusinessObjectGetBusinessObjectSummaryByNameV1([Header("UserAgent")] string userAgent, [AliasAs("busobname")]string busobname, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<List<BusinessObjectSummary>> BusinessObjectGetBusinessObjectSummaryByNameV1([Header("UserAgent")] string userAgent, [AliasAs("busobname")]string busobname, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get Business Object templates for create
@@ -368,9 +368,9 @@ namespace Cherwell.Api
         /// <param name="request">Specify the Business Object ID. Use true to include all required fields or all fields. Specify an optional fields list by adding field names in a comma-delimited list [\&quot;field1\&quot;, \&quot;field2\&quot;]. </param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsBusinessObjectTemplateResponse</returns>
+        /// <returns>Task of BusinessObjectTemplateResponse</returns>
         [Post("/api/V1/getbusinessobjecttemplate")]
-        Task<TrebuchetWebApiDataContractsBusinessObjectTemplateResponse> BusinessObjectGetBusinessObjectTemplateV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsBusinessObjectTemplateRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<BusinessObjectTemplateResponse> BusinessObjectGetBusinessObjectTemplateV1([Header("UserAgent")] string userAgent, [Body]BusinessObjectTemplateRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get related Business Objects using a request object
@@ -383,9 +383,9 @@ namespace Cherwell.Api
         /// <param name="includelinks">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse</returns>
+        /// <returns>Task of SearchesRelatedBusinessObjectResponse</returns>
         [Post("/api/V1/getrelatedbusinessobject")]
-        Task<TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse> BusinessObjectGetRelatedBusinessObjectByRequestV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectRequest relatedBusinessObjectRequest, [AliasAs("includelinks")]bool? includelinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesRelatedBusinessObjectResponse> BusinessObjectGetRelatedBusinessObjectByRequestV1([Header("UserAgent")] string userAgent, [Body]SearchesRelatedBusinessObjectRequest relatedBusinessObjectRequest, [AliasAs("includelinks")]bool? includelinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get related Business Objects by ID
@@ -404,9 +404,9 @@ namespace Cherwell.Api
         /// <param name="includelinks">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse</returns>
+        /// <returns>Task of SearchesRelatedBusinessObjectResponse</returns>
         [Get("/api/V1/getrelatedbusinessobject/parentbusobid/{parentbusobid}/parentbusobrecid/{parentbusobrecid}/relationshipid/{relationshipid}")]
-        Task<TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse> BusinessObjectGetRelatedBusinessObjectV1([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("pageNumber")]int? pageNumber = null, [AliasAs("pageSize")]int? pageSize = null, [AliasAs("allfields")]bool? allfields = null, [AliasAs("usedefaultgrid")]bool? usedefaultgrid = null, [AliasAs("includelinks")]bool? includelinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesRelatedBusinessObjectResponse> BusinessObjectGetRelatedBusinessObjectV1([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("pageNumber")]int? pageNumber = null, [AliasAs("pageSize")]int? pageSize = null, [AliasAs("allfields")]bool? allfields = null, [AliasAs("usedefaultgrid")]bool? usedefaultgrid = null, [AliasAs("includelinks")]bool? includelinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get related Business Objects custom grid
@@ -424,9 +424,9 @@ namespace Cherwell.Api
         /// <param name="includelinks">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse</returns>
+        /// <returns>Task of SearchesRelatedBusinessObjectResponse</returns>
         [Get("/api/V1/getrelatedbusinessobject/parentbusobid/{parentbusobid}/parentbusobrecid/{parentbusobrecid}/relationshipid/{relationshipid}/gridid/{gridid}")]
-        Task<TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse> BusinessObjectGetRelatedBusinessObjectWithCustomGridV1([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("gridid")]string gridid, [AliasAs("pageNumber")]int? pageNumber = null, [AliasAs("pageSize")]int? pageSize = null, [AliasAs("includelinks")]bool? includelinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesRelatedBusinessObjectResponse> BusinessObjectGetRelatedBusinessObjectWithCustomGridV1([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("gridid")]string gridid, [AliasAs("pageNumber")]int? pageNumber = null, [AliasAs("pageSize")]int? pageSize = null, [AliasAs("includelinks")]bool? includelinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Link related Business Objects
@@ -442,9 +442,9 @@ namespace Cherwell.Api
         /// <param name="busobrecid">Specify the Business Object record ID of the Business Object to be linked.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse</returns>
+        /// <returns>Task of SearchesRelatedBusinessObjectResponse</returns>
         [Get("/api/V1/linkrelatedbusinessobject/parentbusobid/{parentbusobid}/parentbusobrecid/{parentbusobrecid}/relationshipid/{relationshipid}/busobid/{busobid}/busobrecid/{busobrecid}")]
-        Task<TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse> BusinessObjectLinkRelatedBusinessObjectByRecIdV1([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesRelatedBusinessObjectResponse> BusinessObjectLinkRelatedBusinessObjectByRecIdV1([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Link related Business Objects
@@ -460,9 +460,9 @@ namespace Cherwell.Api
         /// <param name="busobrecid">Specify the Business Object record ID of the Business Object to be linked.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsResponseBase</returns>
+        /// <returns>Task of ResponseBase</returns>
         [Get("/api/V2/linkrelatedbusinessobject/parentbusobid/{parentbusobid}/parentbusobrecid/{parentbusobrecid}/relationshipid/{relationshipid}/busobid/{busobid}/busobrecid/{busobrecid}")]
-        Task<TrebuchetWebApiDataContractsResponseBase> BusinessObjectLinkRelatedBusinessObjectByRecIdV2([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ResponseBase> BusinessObjectLinkRelatedBusinessObjectByRecIdV2([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Remove an attachment by Business Object ID and public ID
@@ -538,9 +538,9 @@ namespace Cherwell.Api
         /// <param name="request">Request object used to specify the Business Objects to attach. You can use Business Object name or ID and Business Object record ID or public ID.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse</returns>
+        /// <returns>Task of BusinessObjectAttachmentsResponse</returns>
         [Put("/api/V1/savebusinessobjectattachmentbusob")]
-        Task<TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse> BusinessObjectSaveBusinessObjectAttachmentBusObV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsBusinessObjectSaveBusObAttachmentRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<BusinessObjectAttachmentsResponse> BusinessObjectSaveBusinessObjectAttachmentBusObV1([Header("UserAgent")] string userAgent, [Body]BusinessObjectSaveBusObAttachmentRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Attach a file via UNC
@@ -552,9 +552,9 @@ namespace Cherwell.Api
         /// <param name="request">Request object used to specify the file path (UNC recommended) and the Business Object. You can use Business Object name or ID and Business Object record ID or public ID.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse</returns>
+        /// <returns>Task of BusinessObjectAttachmentsResponse</returns>
         [Put("/api/V1/savebusinessobjectattachmentlink")]
-        Task<TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse> BusinessObjectSaveBusinessObjectAttachmentLinkV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsBusinessObjectSaveLinkAttachmentRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<BusinessObjectAttachmentsResponse> BusinessObjectSaveBusinessObjectAttachmentLinkV1([Header("UserAgent")] string userAgent, [Body]BusinessObjectSaveLinkAttachmentRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Attach a URL path
@@ -566,9 +566,9 @@ namespace Cherwell.Api
         /// <param name="request">Request object used to specify the URL path and Business Object. You can use Business Object name or ID and Business Object record ID or public ID.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse</returns>
+        /// <returns>Task of BusinessObjectAttachmentsResponse</returns>
         [Put("/api/V1/savebusinessobjectattachmenturl")]
-        Task<TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse> BusinessObjectSaveBusinessObjectAttachmentUrlV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsBusinessObjectSaveUrlAttachmentRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<BusinessObjectAttachmentsResponse> BusinessObjectSaveBusinessObjectAttachmentUrlV1([Header("UserAgent")] string userAgent, [Body]BusinessObjectSaveUrlAttachmentRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Create or update a batch of Business Objects
@@ -580,9 +580,9 @@ namespace Cherwell.Api
         /// <param name="request">Specify the array of Business Object templates. </param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsBusinessObjectBatchSaveResponse</returns>
+        /// <returns>Task of BusinessObjectBatchSaveResponse</returns>
         [Post("/api/V1/savebusinessobjectbatch")]
-        Task<TrebuchetWebApiDataContractsBusinessObjectBatchSaveResponse> BusinessObjectSaveBusinessObjectBatchV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsBusinessObjectBatchSaveRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<BusinessObjectBatchSaveResponse> BusinessObjectSaveBusinessObjectBatchV1([Header("UserAgent")] string userAgent, [Body]BusinessObjectBatchSaveRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Create or Update a Business Object
@@ -594,9 +594,9 @@ namespace Cherwell.Api
         /// <param name="request">Specify a list of fields from a Business Object template. </param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsBusinessObjectSaveResponse</returns>
+        /// <returns>Task of BusinessObjectSaveResponse</returns>
         [Post("/api/V1/savebusinessobject")]
-        Task<TrebuchetWebApiDataContractsBusinessObjectSaveResponse> BusinessObjectSaveBusinessObjectV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsBusinessObjectSaveRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<BusinessObjectSaveResponse> BusinessObjectSaveBusinessObjectV1([Header("UserAgent")] string userAgent, [Body]BusinessObjectSaveRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Create or update a related Business Object
@@ -608,9 +608,9 @@ namespace Cherwell.Api
         /// <param name="request">Request object specifying the parent the Business Object, the Relationship, and field values for the Business Object to create or update. </param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsBusinessObjectRelatedSaveResponse</returns>
+        /// <returns>Task of BusinessObjectRelatedSaveResponse</returns>
         [Post("/api/V1/saverelatedbusinessobject")]
-        Task<TrebuchetWebApiDataContractsBusinessObjectRelatedSaveResponse> BusinessObjectSaveRelatedBusinessObjectV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsBusinessObjectRelatedSaveRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<BusinessObjectRelatedSaveResponse> BusinessObjectSaveRelatedBusinessObjectV1([Header("UserAgent")] string userAgent, [Body]BusinessObjectRelatedSaveRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// UnLink related Business Objects
@@ -626,9 +626,9 @@ namespace Cherwell.Api
         /// <param name="busobrecid">Specify the Business Object record ID of the Business Object to be unlinked.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse</returns>
+        /// <returns>Task of SearchesRelatedBusinessObjectResponse</returns>
         [Delete("/api/V1/unlinkrelatedbusinessobject/parentbusobid/{parentbusobid}/parentbusobrecid/{parentbusobrecid}/relationshipid/{relationshipid}/busobid/{busobid}/busobrecid/{busobrecid}")]
-        Task<TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse> BusinessObjectUnLinkRelatedBusinessObjectByRecIdV1([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesRelatedBusinessObjectResponse> BusinessObjectUnLinkRelatedBusinessObjectByRecIdV1([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Upload an attachment by Business Object ID and public ID

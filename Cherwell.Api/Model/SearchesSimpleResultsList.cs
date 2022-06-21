@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesSimpleResultsList
+    /// SearchesSimpleResultsList
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesSimpleResultsList :  IEquatable<TrebuchetWebApiDataContractsSearchesSimpleResultsList>, IValidatableObject
+    public partial class SearchesSimpleResultsList :  IEquatable<SearchesSimpleResultsList>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesSimpleResultsList" /> class.
+        /// Initializes a new instance of the <see cref="SearchesSimpleResultsList" /> class.
         /// </summary>
         /// <param name="Groups">Groups.</param>
         /// <param name="Title">Title.</param>
@@ -323,7 +323,7 @@ namespace Cherwell.Model
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsSearchesSimpleResultsList(List<TrebuchetWebApiDataContractsSearchesSimpleResultsListGroup> Groups = default(List<TrebuchetWebApiDataContractsSearchesSimpleResultsListGroup>), string Title = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public SearchesSimpleResultsList(List<SearchesSimpleResultsListGroup> Groups = default(List<SearchesSimpleResultsListGroup>), string Title = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.Groups = Groups;
             this.Title = Title;
@@ -337,7 +337,7 @@ namespace Cherwell.Model
         /// Gets or Sets Groups
         /// </summary>
         [DataMember(Name="groups", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSearchesSimpleResultsListGroup> Groups { get; set; }
+        public List<SearchesSimpleResultsListGroup> Groups { get; set; }
         /// <summary>
         /// Gets or Sets Title
         /// </summary>
@@ -365,7 +365,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesSimpleResultsList {\n");
+            sb.Append("class SearchesSimpleResultsList {\n");
             sb.Append("  Groups: ").Append(Groups).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
@@ -393,15 +393,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesSimpleResultsList);
+            return this.Equals(obj as SearchesSimpleResultsList);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesSimpleResultsList instances are equal
+        /// Returns true if SearchesSimpleResultsList instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesSimpleResultsList to be compared</param>
+        /// <param name="other">Instance of SearchesSimpleResultsList to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesSimpleResultsList other)
+        public bool Equals(SearchesSimpleResultsList other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

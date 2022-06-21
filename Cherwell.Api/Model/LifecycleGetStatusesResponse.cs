@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsLifecycleGetStatusesResponse
+    /// LifecycleGetStatusesResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsLifecycleGetStatusesResponse :  IEquatable<TrebuchetWebApiDataContractsLifecycleGetStatusesResponse>, IValidatableObject
+    public partial class LifecycleGetStatusesResponse :  IEquatable<LifecycleGetStatusesResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsLifecycleGetStatusesResponse" /> class.
+        /// Initializes a new instance of the <see cref="LifecycleGetStatusesResponse" /> class.
         /// </summary>
         /// <param name="Statuses">Statuses.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsLifecycleGetStatusesResponse(List<TrebuchetWebApiDataContractsLifecycleGetStatusesResponseStatuses> Statuses = default(List<TrebuchetWebApiDataContractsLifecycleGetStatusesResponseStatuses>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public LifecycleGetStatusesResponse(List<LifecycleGetStatusesResponseStatuses> Statuses = default(List<LifecycleGetStatusesResponseStatuses>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.Statuses = Statuses;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Model
         /// Gets or Sets Statuses
         /// </summary>
         [DataMember(Name="statuses", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsLifecycleGetStatusesResponseStatuses> Statuses { get; set; }
+        public List<LifecycleGetStatusesResponseStatuses> Statuses { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -358,7 +358,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsLifecycleGetStatusesResponse {\n");
+            sb.Append("class LifecycleGetStatusesResponse {\n");
             sb.Append("  Statuses: ").Append(Statuses).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
@@ -385,15 +385,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsLifecycleGetStatusesResponse);
+            return this.Equals(obj as LifecycleGetStatusesResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsLifecycleGetStatusesResponse instances are equal
+        /// Returns true if LifecycleGetStatusesResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsLifecycleGetStatusesResponse to be compared</param>
+        /// <param name="other">Instance of LifecycleGetStatusesResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsLifecycleGetStatusesResponse other)
+        public bool Equals(LifecycleGetStatusesResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

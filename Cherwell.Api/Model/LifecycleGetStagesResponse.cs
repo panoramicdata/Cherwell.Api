@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsLifecycleGetStagesResponse
+    /// LifecycleGetStagesResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsLifecycleGetStagesResponse :  IEquatable<TrebuchetWebApiDataContractsLifecycleGetStagesResponse>, IValidatableObject
+    public partial class LifecycleGetStagesResponse :  IEquatable<LifecycleGetStagesResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsLifecycleGetStagesResponse" /> class.
+        /// Initializes a new instance of the <see cref="LifecycleGetStagesResponse" /> class.
         /// </summary>
         /// <param name="Stages">Stages.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsLifecycleGetStagesResponse(List<TrebuchetWebApiDataContractsLifecycleGetStagesResponseStages> Stages = default(List<TrebuchetWebApiDataContractsLifecycleGetStagesResponseStages>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public LifecycleGetStagesResponse(List<LifecycleGetStagesResponseStages> Stages = default(List<LifecycleGetStagesResponseStages>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.Stages = Stages;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Model
         /// Gets or Sets Stages
         /// </summary>
         [DataMember(Name="stages", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsLifecycleGetStagesResponseStages> Stages { get; set; }
+        public List<LifecycleGetStagesResponseStages> Stages { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -358,7 +358,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsLifecycleGetStagesResponse {\n");
+            sb.Append("class LifecycleGetStagesResponse {\n");
             sb.Append("  Stages: ").Append(Stages).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
@@ -385,15 +385,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsLifecycleGetStagesResponse);
+            return this.Equals(obj as LifecycleGetStagesResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsLifecycleGetStagesResponse instances are equal
+        /// Returns true if LifecycleGetStagesResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsLifecycleGetStagesResponse to be compared</param>
+        /// <param name="other">Instance of LifecycleGetStagesResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsLifecycleGetStagesResponse other)
+        public bool Equals(LifecycleGetStagesResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

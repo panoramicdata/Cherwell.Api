@@ -14,18 +14,18 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesChangedLimit
+    /// SearchesChangedLimit
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesChangedLimit :  IEquatable<TrebuchetWebApiDataContractsSearchesChangedLimit>, IValidatableObject
+    public partial class SearchesChangedLimit :  IEquatable<SearchesChangedLimit>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesChangedLimit" /> class.
+        /// Initializes a new instance of the <see cref="SearchesChangedLimit" /> class.
         /// </summary>
         /// <param name="DisplayName">DisplayName.</param>
         /// <param name="Units">Units.</param>
         /// <param name="Value">Value.</param>
-        public TrebuchetWebApiDataContractsSearchesChangedLimit(string DisplayName = default(string), string Units = default(string), int? Value = default(int?))
+        public SearchesChangedLimit(string DisplayName = default(string), string Units = default(string), int? Value = default(int?))
         {
             this.DisplayName = DisplayName;
             this.Units = Units;
@@ -54,7 +54,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesChangedLimit {\n");
+            sb.Append("class SearchesChangedLimit {\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  Units: ").Append(Units).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
@@ -79,15 +79,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesChangedLimit);
+            return this.Equals(obj as SearchesChangedLimit);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesChangedLimit instances are equal
+        /// Returns true if SearchesChangedLimit instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesChangedLimit to be compared</param>
+        /// <param name="other">Instance of SearchesChangedLimit to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesChangedLimit other)
+        public bool Equals(SearchesChangedLimit other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

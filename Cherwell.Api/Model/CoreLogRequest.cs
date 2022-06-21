@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsCoreLogRequest
+    /// CoreLogRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsCoreLogRequest :  IEquatable<TrebuchetWebApiDataContractsCoreLogRequest>, IValidatableObject
+    public partial class CoreLogRequest :  IEquatable<CoreLogRequest>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets Level
@@ -69,12 +69,12 @@ namespace Cherwell.Model
         [DataMember(Name="level", EmitDefaultValue=false)]
         public LevelEnum? Level { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsCoreLogRequest" /> class.
+        /// Initializes a new instance of the <see cref="CoreLogRequest" /> class.
         /// </summary>
         /// <param name="KeyValueProperties">KeyValueProperties.</param>
         /// <param name="Level">Level.</param>
         /// <param name="Message">Message.</param>
-        public TrebuchetWebApiDataContractsCoreLogRequest(List<Object> KeyValueProperties = default(List<Object>), LevelEnum? Level = default(LevelEnum?), string Message = default(string))
+        public CoreLogRequest(List<Object> KeyValueProperties = default(List<Object>), LevelEnum? Level = default(LevelEnum?), string Message = default(string))
         {
             this.KeyValueProperties = KeyValueProperties;
             this.Level = Level;
@@ -98,7 +98,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsCoreLogRequest {\n");
+            sb.Append("class CoreLogRequest {\n");
             sb.Append("  KeyValueProperties: ").Append(KeyValueProperties).Append("\n");
             sb.Append("  Level: ").Append(Level).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
@@ -123,15 +123,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsCoreLogRequest);
+            return this.Equals(obj as CoreLogRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsCoreLogRequest instances are equal
+        /// Returns true if CoreLogRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsCoreLogRequest to be compared</param>
+        /// <param name="other">Instance of CoreLogRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsCoreLogRequest other)
+        public bool Equals(CoreLogRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

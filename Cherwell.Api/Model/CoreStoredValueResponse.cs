@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsCoreStoredValueResponse
+    /// CoreStoredValueResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsCoreStoredValueResponse :  IEquatable<TrebuchetWebApiDataContractsCoreStoredValueResponse>, IValidatableObject
+    public partial class CoreStoredValueResponse :  IEquatable<CoreStoredValueResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets StoredValueType
@@ -382,7 +382,7 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsCoreStoredValueResponse" /> class.
+        /// Initializes a new instance of the <see cref="CoreStoredValueResponse" /> class.
         /// </summary>
         /// <param name="Description">Description.</param>
         /// <param name="Folder">Folder.</param>
@@ -397,7 +397,7 @@ namespace Cherwell.Model
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsCoreStoredValueResponse(string Description = default(string), string Folder = default(string), string Id = default(string), string Name = default(string), string Scope = default(string), string ScopeOwner = default(string), string StandInKey = default(string), StoredValueTypeEnum? StoredValueType = default(StoredValueTypeEnum?), string Value = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public CoreStoredValueResponse(string Description = default(string), string Folder = default(string), string Id = default(string), string Name = default(string), string Scope = default(string), string ScopeOwner = default(string), string StandInKey = default(string), StoredValueTypeEnum? StoredValueType = default(StoredValueTypeEnum?), string Value = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.Description = Description;
             this.Folder = Folder;
@@ -476,7 +476,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsCoreStoredValueResponse {\n");
+            sb.Append("class CoreStoredValueResponse {\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Folder: ").Append(Folder).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
@@ -511,15 +511,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsCoreStoredValueResponse);
+            return this.Equals(obj as CoreStoredValueResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsCoreStoredValueResponse instances are equal
+        /// Returns true if CoreStoredValueResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsCoreStoredValueResponse to be compared</param>
+        /// <param name="other">Instance of CoreStoredValueResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsCoreStoredValueResponse other)
+        public bool Equals(CoreStoredValueResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

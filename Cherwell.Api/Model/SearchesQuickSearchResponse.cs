@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesQuickSearchResponse
+    /// SearchesQuickSearchResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesQuickSearchResponse :  IEquatable<TrebuchetWebApiDataContractsSearchesQuickSearchResponse>, IValidatableObject
+    public partial class SearchesQuickSearchResponse :  IEquatable<SearchesQuickSearchResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesQuickSearchResponse" /> class.
+        /// Initializes a new instance of the <see cref="SearchesQuickSearchResponse" /> class.
         /// </summary>
         /// <param name="SearchResultsTable">SearchResultsTable.</param>
         /// <param name="SimpleResultsList">SimpleResultsList.</param>
@@ -323,7 +323,7 @@ namespace Cherwell.Model
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsSearchesQuickSearchResponse(TrebuchetWebApiDataContractsSearchesSearchResultsTableResponse SearchResultsTable = default(TrebuchetWebApiDataContractsSearchesSearchResultsTableResponse), TrebuchetWebApiDataContractsSearchesSimpleResultsList SimpleResultsList = default(TrebuchetWebApiDataContractsSearchesSimpleResultsList), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public SearchesQuickSearchResponse(SearchesSearchResultsTableResponse SearchResultsTable = default(SearchesSearchResultsTableResponse), SearchesSimpleResultsList SimpleResultsList = default(SearchesSimpleResultsList), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.SearchResultsTable = SearchResultsTable;
             this.SimpleResultsList = SimpleResultsList;
@@ -337,12 +337,12 @@ namespace Cherwell.Model
         /// Gets or Sets SearchResultsTable
         /// </summary>
         [DataMember(Name="searchResultsTable", EmitDefaultValue=false)]
-        public TrebuchetWebApiDataContractsSearchesSearchResultsTableResponse SearchResultsTable { get; set; }
+        public SearchesSearchResultsTableResponse SearchResultsTable { get; set; }
         /// <summary>
         /// Gets or Sets SimpleResultsList
         /// </summary>
         [DataMember(Name="simpleResultsList", EmitDefaultValue=false)]
-        public TrebuchetWebApiDataContractsSearchesSimpleResultsList SimpleResultsList { get; set; }
+        public SearchesSimpleResultsList SimpleResultsList { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -365,7 +365,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesQuickSearchResponse {\n");
+            sb.Append("class SearchesQuickSearchResponse {\n");
             sb.Append("  SearchResultsTable: ").Append(SearchResultsTable).Append("\n");
             sb.Append("  SimpleResultsList: ").Append(SimpleResultsList).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
@@ -393,15 +393,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesQuickSearchResponse);
+            return this.Equals(obj as SearchesQuickSearchResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesQuickSearchResponse instances are equal
+        /// Returns true if SearchesQuickSearchResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesQuickSearchResponse to be compared</param>
+        /// <param name="other">Instance of SearchesQuickSearchResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesQuickSearchResponse other)
+        public bool Equals(SearchesQuickSearchResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

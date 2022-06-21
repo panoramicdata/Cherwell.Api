@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsCoreViewsResponse
+    /// CoreViewsResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsCoreViewsResponse :  IEquatable<TrebuchetWebApiDataContractsCoreViewsResponse>, IValidatableObject
+    public partial class CoreViewsResponse :  IEquatable<CoreViewsResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsCoreViewsResponse" /> class.
+        /// Initializes a new instance of the <see cref="CoreViewsResponse" /> class.
         /// </summary>
         /// <param name="Views">Views.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsCoreViewsResponse(List<TrebuchetWebApiDataContractsCoreView> Views = default(List<TrebuchetWebApiDataContractsCoreView>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public CoreViewsResponse(List<CoreView> Views = default(List<CoreView>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.Views = Views;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Model
         /// Gets or Sets Views
         /// </summary>
         [DataMember(Name="views", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCoreView> Views { get; set; }
+        public List<CoreView> Views { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -358,7 +358,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsCoreViewsResponse {\n");
+            sb.Append("class CoreViewsResponse {\n");
             sb.Append("  Views: ").Append(Views).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
@@ -385,15 +385,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsCoreViewsResponse);
+            return this.Equals(obj as CoreViewsResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsCoreViewsResponse instances are equal
+        /// Returns true if CoreViewsResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsCoreViewsResponse to be compared</param>
+        /// <param name="other">Instance of CoreViewsResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsCoreViewsResponse other)
+        public bool Equals(CoreViewsResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

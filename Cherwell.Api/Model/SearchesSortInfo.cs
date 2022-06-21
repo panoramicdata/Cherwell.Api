@@ -14,17 +14,17 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesSortInfo
+    /// SearchesSortInfo
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesSortInfo :  IEquatable<TrebuchetWebApiDataContractsSearchesSortInfo>, IValidatableObject
+    public partial class SearchesSortInfo :  IEquatable<SearchesSortInfo>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesSortInfo" /> class.
+        /// Initializes a new instance of the <see cref="SearchesSortInfo" /> class.
         /// </summary>
         /// <param name="FieldId">FieldId.</param>
         /// <param name="SortDirection">SortDirection.</param>
-        public TrebuchetWebApiDataContractsSearchesSortInfo(string FieldId = default(string), int? SortDirection = default(int?))
+        public SearchesSortInfo(string FieldId = default(string), int? SortDirection = default(int?))
         {
             this.FieldId = FieldId;
             this.SortDirection = SortDirection;
@@ -47,7 +47,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesSortInfo {\n");
+            sb.Append("class SearchesSortInfo {\n");
             sb.Append("  FieldId: ").Append(FieldId).Append("\n");
             sb.Append("  SortDirection: ").Append(SortDirection).Append("\n");
             sb.Append("}\n");
@@ -71,15 +71,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesSortInfo);
+            return this.Equals(obj as SearchesSortInfo);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesSortInfo instances are equal
+        /// Returns true if SearchesSortInfo instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesSortInfo to be compared</param>
+        /// <param name="other">Instance of SearchesSortInfo to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesSortInfo other)
+        public bool Equals(SearchesSortInfo other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

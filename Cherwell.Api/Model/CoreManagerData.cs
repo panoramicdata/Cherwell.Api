@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsCoreManagerData
+    /// CoreManagerData
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsCoreManagerData :  IEquatable<TrebuchetWebApiDataContractsCoreManagerData>, IValidatableObject
+    public partial class CoreManagerData :  IEquatable<CoreManagerData>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsCoreManagerData" /> class.
+        /// Initializes a new instance of the <see cref="CoreManagerData" /> class.
         /// </summary>
         /// <param name="Root">Root.</param>
         /// <param name="SupportedAssociations">SupportedAssociations.</param>
@@ -323,7 +323,7 @@ namespace Cherwell.Model
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsCoreManagerData(TrebuchetWebApiDataContractsCoreManagerFolder Root = default(TrebuchetWebApiDataContractsCoreManagerFolder), List<TrebuchetNameValuePair> SupportedAssociations = default(List<TrebuchetNameValuePair>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public CoreManagerData(CoreManagerFolder Root = default(CoreManagerFolder), List<TrebuchetNameValuePair> SupportedAssociations = default(List<TrebuchetNameValuePair>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.Root = Root;
             this.SupportedAssociations = SupportedAssociations;
@@ -337,7 +337,7 @@ namespace Cherwell.Model
         /// Gets or Sets Root
         /// </summary>
         [DataMember(Name="root", EmitDefaultValue=false)]
-        public TrebuchetWebApiDataContractsCoreManagerFolder Root { get; set; }
+        public CoreManagerFolder Root { get; set; }
         /// <summary>
         /// Gets or Sets SupportedAssociations
         /// </summary>
@@ -365,7 +365,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsCoreManagerData {\n");
+            sb.Append("class CoreManagerData {\n");
             sb.Append("  Root: ").Append(Root).Append("\n");
             sb.Append("  SupportedAssociations: ").Append(SupportedAssociations).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
@@ -393,15 +393,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsCoreManagerData);
+            return this.Equals(obj as CoreManagerData);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsCoreManagerData instances are equal
+        /// Returns true if CoreManagerData instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsCoreManagerData to be compared</param>
+        /// <param name="other">Instance of CoreManagerData to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsCoreManagerData other)
+        public bool Equals(CoreManagerData other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

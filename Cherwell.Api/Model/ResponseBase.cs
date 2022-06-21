@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsResponseBase
+    /// ResponseBase
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsResponseBase :  IEquatable<TrebuchetWebApiDataContractsResponseBase>, IValidatableObject
+    public partial class ResponseBase :  IEquatable<ResponseBase>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,13 +315,13 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsResponseBase" /> class.
+        /// Initializes a new instance of the <see cref="ResponseBase" /> class.
         /// </summary>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsResponseBase(string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public ResponseBase(string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.ErrorCode = ErrorCode;
             this.ErrorMessage = ErrorMessage;
@@ -351,7 +351,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsResponseBase {\n");
+            sb.Append("class ResponseBase {\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
             sb.Append("  HasError: ").Append(HasError).Append("\n");
@@ -377,15 +377,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsResponseBase);
+            return this.Equals(obj as ResponseBase);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsResponseBase instances are equal
+        /// Returns true if ResponseBase instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsResponseBase to be compared</param>
+        /// <param name="other">Instance of ResponseBase to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsResponseBase other)
+        public bool Equals(ResponseBase other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

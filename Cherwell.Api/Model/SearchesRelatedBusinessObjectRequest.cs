@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectRequest
+    /// SearchesRelatedBusinessObjectRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectRequest :  IEquatable<TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectRequest>, IValidatableObject
+    public partial class SearchesRelatedBusinessObjectRequest :  IEquatable<SearchesRelatedBusinessObjectRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectRequest" /> class.
+        /// Initializes a new instance of the <see cref="SearchesRelatedBusinessObjectRequest" /> class.
         /// </summary>
         /// <param name="AllFields">AllFields.</param>
         /// <param name="CustomGridId">CustomGridId.</param>
@@ -33,7 +33,7 @@ namespace Cherwell.Model
         /// <param name="RelationshipId">RelationshipId.</param>
         /// <param name="Sorting">Sorting.</param>
         /// <param name="UseDefaultGrid">UseDefaultGrid.</param>
-        public TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectRequest(bool? AllFields = default(bool?), string CustomGridId = default(string), List<string> FieldsList = default(List<string>), List<TrebuchetWebApiDataContractsSearchesFilterInfo> Filters = default(List<TrebuchetWebApiDataContractsSearchesFilterInfo>), int? PageNumber = default(int?), int? PageSize = default(int?), string ParentBusObId = default(string), string ParentBusObRecId = default(string), string RelationshipId = default(string), List<TrebuchetWebApiDataContractsSearchesSortInfo> Sorting = default(List<TrebuchetWebApiDataContractsSearchesSortInfo>), bool? UseDefaultGrid = default(bool?))
+        public SearchesRelatedBusinessObjectRequest(bool? AllFields = default(bool?), string CustomGridId = default(string), List<string> FieldsList = default(List<string>), List<SearchesFilterInfo> Filters = default(List<SearchesFilterInfo>), int? PageNumber = default(int?), int? PageSize = default(int?), string ParentBusObId = default(string), string ParentBusObRecId = default(string), string RelationshipId = default(string), List<SearchesSortInfo> Sorting = default(List<SearchesSortInfo>), bool? UseDefaultGrid = default(bool?))
         {
             this.AllFields = AllFields;
             this.CustomGridId = CustomGridId;
@@ -67,7 +67,7 @@ namespace Cherwell.Model
         /// Gets or Sets Filters
         /// </summary>
         [DataMember(Name="filters", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSearchesFilterInfo> Filters { get; set; }
+        public List<SearchesFilterInfo> Filters { get; set; }
         /// <summary>
         /// Gets or Sets PageNumber
         /// </summary>
@@ -97,7 +97,7 @@ namespace Cherwell.Model
         /// Gets or Sets Sorting
         /// </summary>
         [DataMember(Name="sorting", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSearchesSortInfo> Sorting { get; set; }
+        public List<SearchesSortInfo> Sorting { get; set; }
         /// <summary>
         /// Gets or Sets UseDefaultGrid
         /// </summary>
@@ -110,7 +110,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectRequest {\n");
+            sb.Append("class SearchesRelatedBusinessObjectRequest {\n");
             sb.Append("  AllFields: ").Append(AllFields).Append("\n");
             sb.Append("  CustomGridId: ").Append(CustomGridId).Append("\n");
             sb.Append("  FieldsList: ").Append(FieldsList).Append("\n");
@@ -143,15 +143,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectRequest);
+            return this.Equals(obj as SearchesRelatedBusinessObjectRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectRequest instances are equal
+        /// Returns true if SearchesRelatedBusinessObjectRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectRequest to be compared</param>
+        /// <param name="other">Instance of SearchesRelatedBusinessObjectRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectRequest other)
+        public bool Equals(SearchesRelatedBusinessObjectRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

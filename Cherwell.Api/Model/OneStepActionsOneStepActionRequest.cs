@@ -14,20 +14,20 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsOneStepActionsOneStepActionRequest
+    /// OneStepActionsOneStepActionRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsOneStepActionsOneStepActionRequest :  IEquatable<TrebuchetWebApiDataContractsOneStepActionsOneStepActionRequest>, IValidatableObject
+    public partial class OneStepActionsOneStepActionRequest :  IEquatable<OneStepActionsOneStepActionRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsOneStepActionsOneStepActionRequest" /> class.
+        /// Initializes a new instance of the <see cref="OneStepActionsOneStepActionRequest" /> class.
         /// </summary>
         /// <param name="AcquireLicense">AcquireLicense.</param>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObRecId">BusObRecId.</param>
         /// <param name="OneStepActionStandInKey">OneStepActionStandInKey.</param>
         /// <param name="PromptValues">PromptValues.</param>
-        public TrebuchetWebApiDataContractsOneStepActionsOneStepActionRequest(bool? AcquireLicense = default(bool?), string BusObId = default(string), string BusObRecId = default(string), string OneStepActionStandInKey = default(string), List<TrebuchetWebApiDataContractsCoreSimplePromptValue> PromptValues = default(List<TrebuchetWebApiDataContractsCoreSimplePromptValue>))
+        public OneStepActionsOneStepActionRequest(bool? AcquireLicense = default(bool?), string BusObId = default(string), string BusObRecId = default(string), string OneStepActionStandInKey = default(string), List<CoreSimplePromptValue> PromptValues = default(List<CoreSimplePromptValue>))
         {
             this.AcquireLicense = AcquireLicense;
             this.BusObId = BusObId;
@@ -60,7 +60,7 @@ namespace Cherwell.Model
         /// Gets or Sets PromptValues
         /// </summary>
         [DataMember(Name="promptValues", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCoreSimplePromptValue> PromptValues { get; set; }
+        public List<CoreSimplePromptValue> PromptValues { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +68,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsOneStepActionsOneStepActionRequest {\n");
+            sb.Append("class OneStepActionsOneStepActionRequest {\n");
             sb.Append("  AcquireLicense: ").Append(AcquireLicense).Append("\n");
             sb.Append("  BusObId: ").Append(BusObId).Append("\n");
             sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
@@ -95,15 +95,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsOneStepActionsOneStepActionRequest);
+            return this.Equals(obj as OneStepActionsOneStepActionRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsOneStepActionsOneStepActionRequest instances are equal
+        /// Returns true if OneStepActionsOneStepActionRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsOneStepActionsOneStepActionRequest to be compared</param>
+        /// <param name="other">Instance of OneStepActionsOneStepActionRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsOneStepActionsOneStepActionRequest other)
+        public bool Equals(OneStepActionsOneStepActionRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

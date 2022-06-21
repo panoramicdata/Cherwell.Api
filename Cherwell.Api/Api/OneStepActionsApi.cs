@@ -29,9 +29,9 @@ namespace Cherwell.Api
         /// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
+        /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/getonestepactions/association/{association}/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
-        Task<TrebuchetWebApiDataContractsCoreManagerData> OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerFolderV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreManagerData> OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerFolderV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get One-Step Actions by Scope Owner
@@ -46,9 +46,9 @@ namespace Cherwell.Api
         /// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
+        /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/getonestepactions/association/{association}/scope/{scope}/scopeowner/{scopeowner}")]
-        Task<TrebuchetWebApiDataContractsCoreManagerData> OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreManagerData> OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get One-Step Actions by Scope
@@ -62,9 +62,9 @@ namespace Cherwell.Api
         /// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
+        /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/getonestepactions/association/{association}/scope/{scope}")]
-        Task<TrebuchetWebApiDataContractsCoreManagerData> OneStepActionsGetOneStepActionsByAssociationScopeV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreManagerData> OneStepActionsGetOneStepActionsByAssociationScopeV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get One-Step Actions by Association
@@ -77,9 +77,9 @@ namespace Cherwell.Api
         /// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
+        /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/getonestepactions/association/{association}")]
-        Task<TrebuchetWebApiDataContractsCoreManagerData> OneStepActionsGetOneStepActionsByAssociationV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreManagerData> OneStepActionsGetOneStepActionsByAssociationV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get One-Step Actions by default Association
@@ -91,9 +91,9 @@ namespace Cherwell.Api
         /// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
+        /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/getonestepactions")]
-        Task<TrebuchetWebApiDataContractsCoreManagerData> OneStepActionsGetOneStepActionsV1([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<CoreManagerData> OneStepActionsGetOneStepActionsV1([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Run a One-Step Action for a Business Object record
@@ -107,9 +107,9 @@ namespace Cherwell.Api
         /// <param name="busobrecid">Specify the Business Object record ID.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse</returns>
+        /// <returns>Task of OneStepActionsOneStepActionResponse</returns>
         [Get("/api/V1/runonestepaction/standinkey/{standinkey}/busobid/{busobid}/busobrecid/{busobrecid}")]
-        Task<TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse> OneStepActionsRunOneStepActionByKeyForRecordByRecIdV1([Header("UserAgent")] string userAgent, [AliasAs("standinkey")]string standinkey, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<OneStepActionsOneStepActionResponse> OneStepActionsRunOneStepActionByKeyForRecordByRecIdV1([Header("UserAgent")] string userAgent, [AliasAs("standinkey")]string standinkey, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Run a stand alone One-Step Action
@@ -121,9 +121,9 @@ namespace Cherwell.Api
         /// <param name="standinkey">The key to find the One-Step Action to run</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse</returns>
+        /// <returns>Task of OneStepActionsOneStepActionResponse</returns>
         [Get("/api/V1/runonestepaction/standinkey/{standinkey}")]
-        Task<TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse> OneStepActionsRunOneStepActionByStandInKeyV1([Header("UserAgent")] string userAgent, [AliasAs("standinkey")]string standinkey, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<OneStepActionsOneStepActionResponse> OneStepActionsRunOneStepActionByStandInKeyV1([Header("UserAgent")] string userAgent, [AliasAs("standinkey")]string standinkey, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Run a One-Step Action using a OneStepActionRequest
@@ -135,9 +135,9 @@ namespace Cherwell.Api
         /// <param name="request">Request object containing all the properties need to start a One-Step Action.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse</returns>
+        /// <returns>Task of OneStepActionsOneStepActionResponse</returns>
         [Post("/api/V1/runonestepaction")]
-        Task<TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse> OneStepActionsRunOneStepActionV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsOneStepActionsOneStepActionRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<OneStepActionsOneStepActionResponse> OneStepActionsRunOneStepActionV1([Header("UserAgent")] string userAgent, [Body]OneStepActionsOneStepActionRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
         #endregion Asynchronous Operations
     }
 }

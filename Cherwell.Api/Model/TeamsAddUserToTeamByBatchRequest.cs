@@ -14,17 +14,17 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchRequest
+    /// TeamsAddUserToTeamByBatchRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchRequest :  IEquatable<TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchRequest>, IValidatableObject
+    public partial class TeamsAddUserToTeamByBatchRequest :  IEquatable<TeamsAddUserToTeamByBatchRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchRequest" /> class.
+        /// Initializes a new instance of the <see cref="TeamsAddUserToTeamByBatchRequest" /> class.
         /// </summary>
         /// <param name="AddUserToTeamRequests">AddUserToTeamRequests.</param>
         /// <param name="StopOnError">StopOnError.</param>
-        public TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchRequest(List<TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest> AddUserToTeamRequests = default(List<TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest>), bool? StopOnError = default(bool?))
+        public TeamsAddUserToTeamByBatchRequest(List<TeamsAddUserToTeamRequest> AddUserToTeamRequests = default(List<TeamsAddUserToTeamRequest>), bool? StopOnError = default(bool?))
         {
             this.AddUserToTeamRequests = AddUserToTeamRequests;
             this.StopOnError = StopOnError;
@@ -34,7 +34,7 @@ namespace Cherwell.Model
         /// Gets or Sets AddUserToTeamRequests
         /// </summary>
         [DataMember(Name="addUserToTeamRequests", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest> AddUserToTeamRequests { get; set; }
+        public List<TeamsAddUserToTeamRequest> AddUserToTeamRequests { get; set; }
         /// <summary>
         /// Gets or Sets StopOnError
         /// </summary>
@@ -47,7 +47,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchRequest {\n");
+            sb.Append("class TeamsAddUserToTeamByBatchRequest {\n");
             sb.Append("  AddUserToTeamRequests: ").Append(AddUserToTeamRequests).Append("\n");
             sb.Append("  StopOnError: ").Append(StopOnError).Append("\n");
             sb.Append("}\n");
@@ -71,15 +71,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchRequest);
+            return this.Equals(obj as TeamsAddUserToTeamByBatchRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchRequest instances are equal
+        /// Returns true if TeamsAddUserToTeamByBatchRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchRequest to be compared</param>
+        /// <param name="other">Instance of TeamsAddUserToTeamByBatchRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchRequest other)
+        public bool Equals(TeamsAddUserToTeamByBatchRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

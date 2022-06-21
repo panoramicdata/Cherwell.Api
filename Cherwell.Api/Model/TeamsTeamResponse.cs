@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsTeamsTeamResponse
+    /// TeamsTeamResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsTeamsTeamResponse :  IEquatable<TrebuchetWebApiDataContractsTeamsTeamResponse>, IValidatableObject
+    public partial class TeamsTeamResponse :  IEquatable<TeamsTeamResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets TeamType
@@ -340,7 +340,7 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsTeamsTeamResponse" /> class.
+        /// Initializes a new instance of the <see cref="TeamsTeamResponse" /> class.
         /// </summary>
         /// <param name="Description">Description.</param>
         /// <param name="EmailAlias">EmailAlias.</param>
@@ -353,7 +353,7 @@ namespace Cherwell.Model
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsTeamsTeamResponse(string Description = default(string), string EmailAlias = default(string), List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem> Fields = default(List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem>), string Image = default(string), string Name = default(string), string TeamId = default(string), TeamTypeEnum? TeamType = default(TeamTypeEnum?), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public TeamsTeamResponse(string Description = default(string), string EmailAlias = default(string), List<BusinessObjectFieldTemplateItem> Fields = default(List<BusinessObjectFieldTemplateItem>), string Image = default(string), string Name = default(string), string TeamId = default(string), TeamTypeEnum? TeamType = default(TeamTypeEnum?), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.Description = Description;
             this.EmailAlias = EmailAlias;
@@ -382,7 +382,7 @@ namespace Cherwell.Model
         /// Gets or Sets Fields
         /// </summary>
         [DataMember(Name="fields", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem> Fields { get; set; }
+        public List<BusinessObjectFieldTemplateItem> Fields { get; set; }
         /// <summary>
         /// Gets or Sets Image
         /// </summary>
@@ -420,7 +420,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsTeamsTeamResponse {\n");
+            sb.Append("class TeamsTeamResponse {\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  EmailAlias: ").Append(EmailAlias).Append("\n");
             sb.Append("  Fields: ").Append(Fields).Append("\n");
@@ -453,15 +453,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsTeamsTeamResponse);
+            return this.Equals(obj as TeamsTeamResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsTeamsTeamResponse instances are equal
+        /// Returns true if TeamsTeamResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsTeamsTeamResponse to be compared</param>
+        /// <param name="other">Instance of TeamsTeamResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsTeamsTeamResponse other)
+        public bool Equals(TeamsTeamResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

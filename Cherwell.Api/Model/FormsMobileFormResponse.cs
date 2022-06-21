@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsFormsMobileFormResponse
+    /// FormsMobileFormResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsFormsMobileFormResponse :  IEquatable<TrebuchetWebApiDataContractsFormsMobileFormResponse>, IValidatableObject
+    public partial class FormsMobileFormResponse :  IEquatable<FormsMobileFormResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsFormsMobileFormResponse" /> class.
+        /// Initializes a new instance of the <see cref="FormsMobileFormResponse" /> class.
         /// </summary>
         /// <param name="Actions">Actions.</param>
         /// <param name="Attachments">Attachments.</param>
@@ -327,7 +327,7 @@ namespace Cherwell.Model
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsFormsMobileFormResponse(List<TrebuchetWebApiDataContractsCoreAction> Actions = default(List<TrebuchetWebApiDataContractsCoreAction>), List<TrebuchetWebApiDataContractsBusinessObjectAttachment> Attachments = default(List<TrebuchetWebApiDataContractsBusinessObjectAttachment>), string GalleryImage = default(string), TrebuchetWebApiDataContractsCoreLocation LocationInformation = default(TrebuchetWebApiDataContractsCoreLocation), List<TrebuchetWebApiDataContractsFormsSection> Sections = default(List<TrebuchetWebApiDataContractsFormsSection>), string Title = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public FormsMobileFormResponse(List<CoreAction> Actions = default(List<CoreAction>), List<BusinessObjectAttachment> Attachments = default(List<BusinessObjectAttachment>), string GalleryImage = default(string), CoreLocation LocationInformation = default(CoreLocation), List<FormsSection> Sections = default(List<FormsSection>), string Title = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.Actions = Actions;
             this.Attachments = Attachments;
@@ -345,12 +345,12 @@ namespace Cherwell.Model
         /// Gets or Sets Actions
         /// </summary>
         [DataMember(Name="actions", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCoreAction> Actions { get; set; }
+        public List<CoreAction> Actions { get; set; }
         /// <summary>
         /// Gets or Sets Attachments
         /// </summary>
         [DataMember(Name="attachments", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsBusinessObjectAttachment> Attachments { get; set; }
+        public List<BusinessObjectAttachment> Attachments { get; set; }
         /// <summary>
         /// Gets or Sets GalleryImage
         /// </summary>
@@ -360,12 +360,12 @@ namespace Cherwell.Model
         /// Gets or Sets LocationInformation
         /// </summary>
         [DataMember(Name="locationInformation", EmitDefaultValue=false)]
-        public TrebuchetWebApiDataContractsCoreLocation LocationInformation { get; set; }
+        public CoreLocation LocationInformation { get; set; }
         /// <summary>
         /// Gets or Sets Sections
         /// </summary>
         [DataMember(Name="sections", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsFormsSection> Sections { get; set; }
+        public List<FormsSection> Sections { get; set; }
         /// <summary>
         /// Gets or Sets Title
         /// </summary>
@@ -393,7 +393,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsFormsMobileFormResponse {\n");
+            sb.Append("class FormsMobileFormResponse {\n");
             sb.Append("  Actions: ").Append(Actions).Append("\n");
             sb.Append("  Attachments: ").Append(Attachments).Append("\n");
             sb.Append("  GalleryImage: ").Append(GalleryImage).Append("\n");
@@ -425,15 +425,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsFormsMobileFormResponse);
+            return this.Equals(obj as FormsMobileFormResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsFormsMobileFormResponse instances are equal
+        /// Returns true if FormsMobileFormResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsFormsMobileFormResponse to be compared</param>
+        /// <param name="other">Instance of FormsMobileFormResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsFormsMobileFormResponse other)
+        public bool Equals(FormsMobileFormResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

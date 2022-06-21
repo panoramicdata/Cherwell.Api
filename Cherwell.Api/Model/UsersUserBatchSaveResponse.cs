@@ -14,16 +14,16 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsUsersUserBatchSaveResponse
+    /// UsersUserBatchSaveResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsUsersUserBatchSaveResponse :  IEquatable<TrebuchetWebApiDataContractsUsersUserBatchSaveResponse>, IValidatableObject
+    public partial class UsersUserBatchSaveResponse :  IEquatable<UsersUserBatchSaveResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsUsersUserBatchSaveResponse" /> class.
+        /// Initializes a new instance of the <see cref="UsersUserBatchSaveResponse" /> class.
         /// </summary>
         /// <param name="Responses">Responses.</param>
-        public TrebuchetWebApiDataContractsUsersUserBatchSaveResponse(List<TrebuchetWebApiDataContractsUsersUserSaveResponse> Responses = default(List<TrebuchetWebApiDataContractsUsersUserSaveResponse>))
+        public UsersUserBatchSaveResponse(List<UsersUserSaveResponse> Responses = default(List<UsersUserSaveResponse>))
         {
             this.Responses = Responses;
         }
@@ -32,7 +32,7 @@ namespace Cherwell.Model
         /// Gets or Sets Responses
         /// </summary>
         [DataMember(Name="responses", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsUsersUserSaveResponse> Responses { get; set; }
+        public List<UsersUserSaveResponse> Responses { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -40,7 +40,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsUsersUserBatchSaveResponse {\n");
+            sb.Append("class UsersUserBatchSaveResponse {\n");
             sb.Append("  Responses: ").Append(Responses).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -63,15 +63,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsUsersUserBatchSaveResponse);
+            return this.Equals(obj as UsersUserBatchSaveResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsUsersUserBatchSaveResponse instances are equal
+        /// Returns true if UsersUserBatchSaveResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsUsersUserBatchSaveResponse to be compared</param>
+        /// <param name="other">Instance of UsersUserBatchSaveResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsUsersUserBatchSaveResponse other)
+        public bool Equals(UsersUserBatchSaveResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

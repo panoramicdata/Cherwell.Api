@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesStoredSearchRequest
+    /// SearchesStoredSearchRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesStoredSearchRequest :  IEquatable<TrebuchetWebApiDataContractsSearchesStoredSearchRequest>, IValidatableObject
+    public partial class SearchesStoredSearchRequest :  IEquatable<SearchesStoredSearchRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesStoredSearchRequest" /> class.
+        /// Initializes a new instance of the <see cref="SearchesStoredSearchRequest" /> class.
         /// </summary>
         /// <param name="AssociationId">AssociationId.</param>
         /// <param name="AssociationName">AssociationName.</param>
@@ -30,7 +30,7 @@ namespace Cherwell.Model
         /// <param name="ScopeOwnerId">ScopeOwnerId.</param>
         /// <param name="SearchId">SearchId.</param>
         /// <param name="SearchName">SearchName.</param>
-        public TrebuchetWebApiDataContractsSearchesStoredSearchRequest(string AssociationId = default(string), string AssociationName = default(string), string GridId = default(string), bool? IncludeSchema = default(bool?), string Scope = default(string), string ScopeOwnerId = default(string), string SearchId = default(string), string SearchName = default(string))
+        public SearchesStoredSearchRequest(string AssociationId = default(string), string AssociationName = default(string), string GridId = default(string), bool? IncludeSchema = default(bool?), string Scope = default(string), string ScopeOwnerId = default(string), string SearchId = default(string), string SearchName = default(string))
         {
             this.AssociationId = AssociationId;
             this.AssociationName = AssociationName;
@@ -89,7 +89,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesStoredSearchRequest {\n");
+            sb.Append("class SearchesStoredSearchRequest {\n");
             sb.Append("  AssociationId: ").Append(AssociationId).Append("\n");
             sb.Append("  AssociationName: ").Append(AssociationName).Append("\n");
             sb.Append("  GridId: ").Append(GridId).Append("\n");
@@ -119,15 +119,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesStoredSearchRequest);
+            return this.Equals(obj as SearchesStoredSearchRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesStoredSearchRequest instances are equal
+        /// Returns true if SearchesStoredSearchRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesStoredSearchRequest to be compared</param>
+        /// <param name="other">Instance of SearchesStoredSearchRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesStoredSearchRequest other)
+        public bool Equals(SearchesStoredSearchRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

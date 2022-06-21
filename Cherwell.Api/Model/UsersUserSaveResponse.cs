@@ -14,20 +14,20 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsUsersUserSaveResponse
+    /// UsersUserSaveResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsUsersUserSaveResponse :  IEquatable<TrebuchetWebApiDataContractsUsersUserSaveResponse>, IValidatableObject
+    public partial class UsersUserSaveResponse :  IEquatable<UsersUserSaveResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsUsersUserSaveResponse" /> class.
+        /// Initializes a new instance of the <see cref="UsersUserSaveResponse" /> class.
         /// </summary>
         /// <param name="BusObPublicId">BusObPublicId.</param>
         /// <param name="BusObRecId">BusObRecId.</param>
         /// <param name="Error">Error.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="HasError">HasError.</param>
-        public TrebuchetWebApiDataContractsUsersUserSaveResponse(string BusObPublicId = default(string), string BusObRecId = default(string), string Error = default(string), string ErrorCode = default(string), bool? HasError = default(bool?))
+        public UsersUserSaveResponse(string BusObPublicId = default(string), string BusObRecId = default(string), string Error = default(string), string ErrorCode = default(string), bool? HasError = default(bool?))
         {
             this.BusObPublicId = BusObPublicId;
             this.BusObRecId = BusObRecId;
@@ -68,7 +68,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsUsersUserSaveResponse {\n");
+            sb.Append("class UsersUserSaveResponse {\n");
             sb.Append("  BusObPublicId: ").Append(BusObPublicId).Append("\n");
             sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
             sb.Append("  Error: ").Append(Error).Append("\n");
@@ -95,15 +95,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsUsersUserSaveResponse);
+            return this.Equals(obj as UsersUserSaveResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsUsersUserSaveResponse instances are equal
+        /// Returns true if UsersUserSaveResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsUsersUserSaveResponse to be compared</param>
+        /// <param name="other">Instance of UsersUserSaveResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsUsersUserSaveResponse other)
+        public bool Equals(UsersUserSaveResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

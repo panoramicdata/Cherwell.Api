@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsUsersUserSaveRequest
+    /// UsersUserSaveRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsUsersUserSaveRequest :  IEquatable<TrebuchetWebApiDataContractsUsersUserSaveRequest>, IValidatableObject
+    public partial class UsersUserSaveRequest :  IEquatable<UsersUserSaveRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsUsersUserSaveRequest" /> class.
+        /// Initializes a new instance of the <see cref="UsersUserSaveRequest" /> class.
         /// </summary>
         /// <param name="AccountLocked">AccountLocked.</param>
         /// <param name="BusObId">BusObId.</param>
@@ -40,7 +40,7 @@ namespace Cherwell.Model
         /// <param name="UserInfoFields">UserInfoFields.</param>
         /// <param name="UserMustChangePasswordAtNextLogin">UserMustChangePasswordAtNextLogin.</param>
         /// <param name="WindowsUserId">WindowsUserId.</param>
-        public TrebuchetWebApiDataContractsUsersUserSaveRequest(bool? AccountLocked = default(bool?), string BusObId = default(string), string BusObPublicId = default(string), string BusObRecId = default(string), string DisplayName = default(string), string Error = default(string), string ErrorCode = default(string), bool? HasError = default(bool?), bool? LdapRequired = default(bool?), string LoginId = default(string), DateTime? NextPasswordResetDate = default(DateTime?), string Password = default(string), bool? PasswordNeverExpires = default(bool?), string SecurityGroupId = default(string), bool? UserCannotChangePassword = default(bool?), List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem> UserInfoFields = default(List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem>), bool? UserMustChangePasswordAtNextLogin = default(bool?), string WindowsUserId = default(string))
+        public UsersUserSaveRequest(bool? AccountLocked = default(bool?), string BusObId = default(string), string BusObPublicId = default(string), string BusObRecId = default(string), string DisplayName = default(string), string Error = default(string), string ErrorCode = default(string), bool? HasError = default(bool?), bool? LdapRequired = default(bool?), string LoginId = default(string), DateTime? NextPasswordResetDate = default(DateTime?), string Password = default(string), bool? PasswordNeverExpires = default(bool?), string SecurityGroupId = default(string), bool? UserCannotChangePassword = default(bool?), List<BusinessObjectFieldTemplateItem> UserInfoFields = default(List<BusinessObjectFieldTemplateItem>), bool? UserMustChangePasswordAtNextLogin = default(bool?), string WindowsUserId = default(string))
         {
             this.AccountLocked = AccountLocked;
             this.BusObId = BusObId;
@@ -141,7 +141,7 @@ namespace Cherwell.Model
         /// Gets or Sets UserInfoFields
         /// </summary>
         [DataMember(Name="userInfoFields", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem> UserInfoFields { get; set; }
+        public List<BusinessObjectFieldTemplateItem> UserInfoFields { get; set; }
         /// <summary>
         /// Gets or Sets UserMustChangePasswordAtNextLogin
         /// </summary>
@@ -159,7 +159,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsUsersUserSaveRequest {\n");
+            sb.Append("class UsersUserSaveRequest {\n");
             sb.Append("  AccountLocked: ").Append(AccountLocked).Append("\n");
             sb.Append("  BusObId: ").Append(BusObId).Append("\n");
             sb.Append("  BusObPublicId: ").Append(BusObPublicId).Append("\n");
@@ -199,15 +199,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsUsersUserSaveRequest);
+            return this.Equals(obj as UsersUserSaveRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsUsersUserSaveRequest instances are equal
+        /// Returns true if UsersUserSaveRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsUsersUserSaveRequest to be compared</param>
+        /// <param name="other">Instance of UsersUserSaveRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsUsersUserSaveRequest other)
+        public bool Equals(UsersUserSaveRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

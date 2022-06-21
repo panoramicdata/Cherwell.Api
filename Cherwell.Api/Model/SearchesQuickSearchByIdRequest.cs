@@ -14,19 +14,19 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesQuickSearchByIdRequest
+    /// SearchesQuickSearchByIdRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesQuickSearchByIdRequest :  IEquatable<TrebuchetWebApiDataContractsSearchesQuickSearchByIdRequest>, IValidatableObject
+    public partial class SearchesQuickSearchByIdRequest :  IEquatable<SearchesQuickSearchByIdRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesQuickSearchByIdRequest" /> class.
+        /// Initializes a new instance of the <see cref="SearchesQuickSearchByIdRequest" /> class.
         /// </summary>
         /// <param name="BusObIds">BusObIds.</param>
         /// <param name="IsGeneral">IsGeneral.</param>
         /// <param name="SearchText">SearchText.</param>
         /// <param name="StandIn">StandIn.</param>
-        public TrebuchetWebApiDataContractsSearchesQuickSearchByIdRequest(List<string> BusObIds = default(List<string>), bool? IsGeneral = default(bool?), string SearchText = default(string), string StandIn = default(string))
+        public SearchesQuickSearchByIdRequest(List<string> BusObIds = default(List<string>), bool? IsGeneral = default(bool?), string SearchText = default(string), string StandIn = default(string))
         {
             this.BusObIds = BusObIds;
             this.IsGeneral = IsGeneral;
@@ -61,7 +61,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesQuickSearchByIdRequest {\n");
+            sb.Append("class SearchesQuickSearchByIdRequest {\n");
             sb.Append("  BusObIds: ").Append(BusObIds).Append("\n");
             sb.Append("  IsGeneral: ").Append(IsGeneral).Append("\n");
             sb.Append("  SearchText: ").Append(SearchText).Append("\n");
@@ -87,15 +87,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesQuickSearchByIdRequest);
+            return this.Equals(obj as SearchesQuickSearchByIdRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesQuickSearchByIdRequest instances are equal
+        /// Returns true if SearchesQuickSearchByIdRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesQuickSearchByIdRequest to be compared</param>
+        /// <param name="other">Instance of SearchesQuickSearchByIdRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesQuickSearchByIdRequest other)
+        public bool Equals(SearchesQuickSearchByIdRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

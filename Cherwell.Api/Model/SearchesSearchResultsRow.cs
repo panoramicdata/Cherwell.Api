@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesSearchResultsRow
+    /// SearchesSearchResultsRow
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesSearchResultsRow :  IEquatable<TrebuchetWebApiDataContractsSearchesSearchResultsRow>, IValidatableObject
+    public partial class SearchesSearchResultsRow :  IEquatable<SearchesSearchResultsRow>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesSearchResultsRow" /> class.
+        /// Initializes a new instance of the <see cref="SearchesSearchResultsRow" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObRecId">BusObRecId.</param>
@@ -28,7 +28,7 @@ namespace Cherwell.Model
         /// <param name="PublicId">PublicId.</param>
         /// <param name="RowColor">RowColor.</param>
         /// <param name="SearchResultsFieldValues">SearchResultsFieldValues.</param>
-        public TrebuchetWebApiDataContractsSearchesSearchResultsRow(string BusObId = default(string), string BusObRecId = default(string), List<TrebuchetWebApiDataContractsCoreLink> Links = default(List<TrebuchetWebApiDataContractsCoreLink>), string PublicId = default(string), string RowColor = default(string), List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem> SearchResultsFieldValues = default(List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem>))
+        public SearchesSearchResultsRow(string BusObId = default(string), string BusObRecId = default(string), List<CoreLink> Links = default(List<CoreLink>), string PublicId = default(string), string RowColor = default(string), List<BusinessObjectFieldTemplateItem> SearchResultsFieldValues = default(List<BusinessObjectFieldTemplateItem>))
         {
             this.BusObId = BusObId;
             this.BusObRecId = BusObRecId;
@@ -52,7 +52,7 @@ namespace Cherwell.Model
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name="links", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCoreLink> Links { get; set; }
+        public List<CoreLink> Links { get; set; }
         /// <summary>
         /// Gets or Sets PublicId
         /// </summary>
@@ -67,7 +67,7 @@ namespace Cherwell.Model
         /// Gets or Sets SearchResultsFieldValues
         /// </summary>
         [DataMember(Name="searchResultsFieldValues", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem> SearchResultsFieldValues { get; set; }
+        public List<BusinessObjectFieldTemplateItem> SearchResultsFieldValues { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -75,7 +75,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesSearchResultsRow {\n");
+            sb.Append("class SearchesSearchResultsRow {\n");
             sb.Append("  BusObId: ").Append(BusObId).Append("\n");
             sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
@@ -103,15 +103,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesSearchResultsRow);
+            return this.Equals(obj as SearchesSearchResultsRow);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesSearchResultsRow instances are equal
+        /// Returns true if SearchesSearchResultsRow instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesSearchResultsRow to be compared</param>
+        /// <param name="other">Instance of SearchesSearchResultsRow to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesSearchResultsRow other)
+        public bool Equals(SearchesSearchResultsRow other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

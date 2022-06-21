@@ -14,19 +14,19 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsLifecycleGetTransitionsResponseTransition
+    /// LifecycleGetTransitionsResponseTransition
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsLifecycleGetTransitionsResponseTransition :  IEquatable<TrebuchetWebApiDataContractsLifecycleGetTransitionsResponseTransition>, IValidatableObject
+    public partial class LifecycleGetTransitionsResponseTransition :  IEquatable<LifecycleGetTransitionsResponseTransition>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsLifecycleGetTransitionsResponseTransition" /> class.
+        /// Initializes a new instance of the <see cref="LifecycleGetTransitionsResponseTransition" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="Name">Name.</param>
         /// <param name="FromStatusId">FromStatusId.</param>
         /// <param name="ToStatusId">ToStatusId.</param>
-        public TrebuchetWebApiDataContractsLifecycleGetTransitionsResponseTransition(string Id = default(string), string Name = default(string), string FromStatusId = default(string), string ToStatusId = default(string))
+        public LifecycleGetTransitionsResponseTransition(string Id = default(string), string Name = default(string), string FromStatusId = default(string), string ToStatusId = default(string))
         {
             this.Id = Id;
             this.Name = Name;
@@ -61,7 +61,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsLifecycleGetTransitionsResponseTransition {\n");
+            sb.Append("class LifecycleGetTransitionsResponseTransition {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  FromStatusId: ").Append(FromStatusId).Append("\n");
@@ -87,15 +87,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsLifecycleGetTransitionsResponseTransition);
+            return this.Equals(obj as LifecycleGetTransitionsResponseTransition);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsLifecycleGetTransitionsResponseTransition instances are equal
+        /// Returns true if LifecycleGetTransitionsResponseTransition instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsLifecycleGetTransitionsResponseTransition to be compared</param>
+        /// <param name="other">Instance of LifecycleGetTransitionsResponseTransition to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsLifecycleGetTransitionsResponseTransition other)
+        public bool Equals(LifecycleGetTransitionsResponseTransition other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

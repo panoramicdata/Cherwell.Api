@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationResponse
+    /// SearchesQuickSearchConfigurationResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationResponse :  IEquatable<TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationResponse>, IValidatableObject
+    public partial class SearchesQuickSearchConfigurationResponse :  IEquatable<SearchesQuickSearchConfigurationResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationResponse" /> class.
+        /// Initializes a new instance of the <see cref="SearchesQuickSearchConfigurationResponse" /> class.
         /// </summary>
         /// <param name="AllowQuickSearch">AllowQuickSearch.</param>
         /// <param name="AllowSpecificSearch">AllowSpecificSearch.</param>
@@ -337,7 +337,7 @@ namespace Cherwell.Model
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationResponse(bool? AllowQuickSearch = default(bool?), bool? AllowSpecificSearch = default(bool?), bool? DefaultToQuickSearch = default(bool?), string DisplayName = default(string), string GalleryImage = default(string), List<string> History = default(List<string>), bool? IncludeAvailableInSpecific = default(bool?), bool? IncludeQuickSearchInSpecific = default(bool?), string QuickSearchId = default(string), List<TrebuchetWebApiDataContractsSearchesQuickSearchItem> QuickSearchItems = default(List<TrebuchetWebApiDataContractsSearchesQuickSearchItem>), string QuickSearchWatermark = default(string), bool? SortByRelevance = default(bool?), string ResolvedQuickSearchWatermark = default(string), string Scope = default(string), string ScopeOwner = default(string), List<TrebuchetWebApiDataContractsSearchesQuickSearchItem> SpecificSearchItems = default(List<TrebuchetWebApiDataContractsSearchesQuickSearchItem>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public SearchesQuickSearchConfigurationResponse(bool? AllowQuickSearch = default(bool?), bool? AllowSpecificSearch = default(bool?), bool? DefaultToQuickSearch = default(bool?), string DisplayName = default(string), string GalleryImage = default(string), List<string> History = default(List<string>), bool? IncludeAvailableInSpecific = default(bool?), bool? IncludeQuickSearchInSpecific = default(bool?), string QuickSearchId = default(string), List<SearchesQuickSearchItem> QuickSearchItems = default(List<SearchesQuickSearchItem>), string QuickSearchWatermark = default(string), bool? SortByRelevance = default(bool?), string ResolvedQuickSearchWatermark = default(string), string Scope = default(string), string ScopeOwner = default(string), List<SearchesQuickSearchItem> SpecificSearchItems = default(List<SearchesQuickSearchItem>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.AllowQuickSearch = AllowQuickSearch;
             this.AllowSpecificSearch = AllowSpecificSearch;
@@ -410,7 +410,7 @@ namespace Cherwell.Model
         /// Gets or Sets QuickSearchItems
         /// </summary>
         [DataMember(Name="quickSearchItems", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSearchesQuickSearchItem> QuickSearchItems { get; set; }
+        public List<SearchesQuickSearchItem> QuickSearchItems { get; set; }
         /// <summary>
         /// Gets or Sets QuickSearchWatermark
         /// </summary>
@@ -440,7 +440,7 @@ namespace Cherwell.Model
         /// Gets or Sets SpecificSearchItems
         /// </summary>
         [DataMember(Name="specificSearchItems", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSearchesQuickSearchItem> SpecificSearchItems { get; set; }
+        public List<SearchesQuickSearchItem> SpecificSearchItems { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -463,7 +463,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationResponse {\n");
+            sb.Append("class SearchesQuickSearchConfigurationResponse {\n");
             sb.Append("  AllowQuickSearch: ").Append(AllowQuickSearch).Append("\n");
             sb.Append("  AllowSpecificSearch: ").Append(AllowSpecificSearch).Append("\n");
             sb.Append("  DefaultToQuickSearch: ").Append(DefaultToQuickSearch).Append("\n");
@@ -505,15 +505,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationResponse);
+            return this.Equals(obj as SearchesQuickSearchConfigurationResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationResponse instances are equal
+        /// Returns true if SearchesQuickSearchConfigurationResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationResponse to be compared</param>
+        /// <param name="other">Instance of SearchesQuickSearchConfigurationResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationResponse other)
+        public bool Equals(SearchesQuickSearchConfigurationResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -14,16 +14,16 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsCoreLogBatchRequest
+    /// CoreLogBatchRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsCoreLogBatchRequest :  IEquatable<TrebuchetWebApiDataContractsCoreLogBatchRequest>, IValidatableObject
+    public partial class CoreLogBatchRequest :  IEquatable<CoreLogBatchRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsCoreLogBatchRequest" /> class.
+        /// Initializes a new instance of the <see cref="CoreLogBatchRequest" /> class.
         /// </summary>
         /// <param name="LogRequests">LogRequests.</param>
-        public TrebuchetWebApiDataContractsCoreLogBatchRequest(List<TrebuchetWebApiDataContractsCoreLogRequest> LogRequests = default(List<TrebuchetWebApiDataContractsCoreLogRequest>))
+        public CoreLogBatchRequest(List<CoreLogRequest> LogRequests = default(List<CoreLogRequest>))
         {
             this.LogRequests = LogRequests;
         }
@@ -32,7 +32,7 @@ namespace Cherwell.Model
         /// Gets or Sets LogRequests
         /// </summary>
         [DataMember(Name="logRequests", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCoreLogRequest> LogRequests { get; set; }
+        public List<CoreLogRequest> LogRequests { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -40,7 +40,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsCoreLogBatchRequest {\n");
+            sb.Append("class CoreLogBatchRequest {\n");
             sb.Append("  LogRequests: ").Append(LogRequests).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -63,15 +63,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsCoreLogBatchRequest);
+            return this.Equals(obj as CoreLogBatchRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsCoreLogBatchRequest instances are equal
+        /// Returns true if CoreLogBatchRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsCoreLogBatchRequest to be compared</param>
+        /// <param name="other">Instance of CoreLogBatchRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsCoreLogBatchRequest other)
+        public bool Equals(CoreLogBatchRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

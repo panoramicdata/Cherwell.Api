@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse
+    /// QueuesRemoveItemFromQueueResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse :  IEquatable<TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse>, IValidatableObject
+    public partial class QueuesRemoveItemFromQueueResponse :  IEquatable<QueuesRemoveItemFromQueueResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse" /> class.
+        /// Initializes a new instance of the <see cref="QueuesRemoveItemFromQueueResponse" /> class.
         /// </summary>
         /// <param name="HistoryRecId">HistoryRecId.</param>
         /// <param name="HistoryText">HistoryText.</param>
@@ -324,7 +324,7 @@ namespace Cherwell.Model
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse(string HistoryRecId = default(string), string HistoryText = default(string), string HistoryTypeId = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public QueuesRemoveItemFromQueueResponse(string HistoryRecId = default(string), string HistoryText = default(string), string HistoryTypeId = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.HistoryRecId = HistoryRecId;
             this.HistoryText = HistoryText;
@@ -372,7 +372,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse {\n");
+            sb.Append("class QueuesRemoveItemFromQueueResponse {\n");
             sb.Append("  HistoryRecId: ").Append(HistoryRecId).Append("\n");
             sb.Append("  HistoryText: ").Append(HistoryText).Append("\n");
             sb.Append("  HistoryTypeId: ").Append(HistoryTypeId).Append("\n");
@@ -401,15 +401,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse);
+            return this.Equals(obj as QueuesRemoveItemFromQueueResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse instances are equal
+        /// Returns true if QueuesRemoveItemFromQueueResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse to be compared</param>
+        /// <param name="other">Instance of QueuesRemoveItemFromQueueResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse other)
+        public bool Equals(QueuesRemoveItemFromQueueResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

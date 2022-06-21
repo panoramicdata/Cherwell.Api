@@ -14,17 +14,17 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSecurityCloneSecurityGroupRequest
+    /// SecurityCloneSecurityGroupRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSecurityCloneSecurityGroupRequest :  IEquatable<TrebuchetWebApiDataContractsSecurityCloneSecurityGroupRequest>, IValidatableObject
+    public partial class SecurityCloneSecurityGroupRequest :  IEquatable<SecurityCloneSecurityGroupRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSecurityCloneSecurityGroupRequest" /> class.
+        /// Initializes a new instance of the <see cref="SecurityCloneSecurityGroupRequest" /> class.
         /// </summary>
         /// <param name="SecurityGroupName">SecurityGroupName.</param>
         /// <param name="SourceSecurityGroupNameOrId">SourceSecurityGroupNameOrId.</param>
-        public TrebuchetWebApiDataContractsSecurityCloneSecurityGroupRequest(string SecurityGroupName = default(string), string SourceSecurityGroupNameOrId = default(string))
+        public SecurityCloneSecurityGroupRequest(string SecurityGroupName = default(string), string SourceSecurityGroupNameOrId = default(string))
         {
             this.SecurityGroupName = SecurityGroupName;
             this.SourceSecurityGroupNameOrId = SourceSecurityGroupNameOrId;
@@ -47,7 +47,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSecurityCloneSecurityGroupRequest {\n");
+            sb.Append("class SecurityCloneSecurityGroupRequest {\n");
             sb.Append("  SecurityGroupName: ").Append(SecurityGroupName).Append("\n");
             sb.Append("  SourceSecurityGroupNameOrId: ").Append(SourceSecurityGroupNameOrId).Append("\n");
             sb.Append("}\n");
@@ -71,15 +71,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSecurityCloneSecurityGroupRequest);
+            return this.Equals(obj as SecurityCloneSecurityGroupRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSecurityCloneSecurityGroupRequest instances are equal
+        /// Returns true if SecurityCloneSecurityGroupRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSecurityCloneSecurityGroupRequest to be compared</param>
+        /// <param name="other">Instance of SecurityCloneSecurityGroupRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSecurityCloneSecurityGroupRequest other)
+        public bool Equals(SecurityCloneSecurityGroupRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

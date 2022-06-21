@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesSimpleResultsListGroup
+    /// SearchesSimpleResultsListGroup
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSearchesSimpleResultsListGroup :  IEquatable<TrebuchetWebApiDataContractsSearchesSimpleResultsListGroup>, IValidatableObject
+    public partial class SearchesSimpleResultsListGroup :  IEquatable<SearchesSimpleResultsListGroup>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesSimpleResultsListGroup" /> class.
+        /// Initializes a new instance of the <see cref="SearchesSimpleResultsListGroup" /> class.
         /// </summary>
         /// <param name="IsBusObTarget">IsBusObTarget.</param>
         /// <param name="SimpleResultsListItems">SimpleResultsListItems.</param>
@@ -326,7 +326,7 @@ namespace Cherwell.Model
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsSearchesSimpleResultsListGroup(bool? IsBusObTarget = default(bool?), List<TrebuchetWebApiDataContractsSearchesSimpleResultsListItem> SimpleResultsListItems = default(List<TrebuchetWebApiDataContractsSearchesSimpleResultsListItem>), string SubTitle = default(string), string TargetId = default(string), string Title = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public SearchesSimpleResultsListGroup(bool? IsBusObTarget = default(bool?), List<SearchesSimpleResultsListItem> SimpleResultsListItems = default(List<SearchesSimpleResultsListItem>), string SubTitle = default(string), string TargetId = default(string), string Title = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.IsBusObTarget = IsBusObTarget;
             this.SimpleResultsListItems = SimpleResultsListItems;
@@ -348,7 +348,7 @@ namespace Cherwell.Model
         /// Gets or Sets SimpleResultsListItems
         /// </summary>
         [DataMember(Name="simpleResultsListItems", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSearchesSimpleResultsListItem> SimpleResultsListItems { get; set; }
+        public List<SearchesSimpleResultsListItem> SimpleResultsListItems { get; set; }
         /// <summary>
         /// Gets or Sets SubTitle
         /// </summary>
@@ -386,7 +386,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesSimpleResultsListGroup {\n");
+            sb.Append("class SearchesSimpleResultsListGroup {\n");
             sb.Append("  IsBusObTarget: ").Append(IsBusObTarget).Append("\n");
             sb.Append("  SimpleResultsListItems: ").Append(SimpleResultsListItems).Append("\n");
             sb.Append("  SubTitle: ").Append(SubTitle).Append("\n");
@@ -417,15 +417,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSearchesSimpleResultsListGroup);
+            return this.Equals(obj as SearchesSimpleResultsListGroup);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesSimpleResultsListGroup instances are equal
+        /// Returns true if SearchesSimpleResultsListGroup instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSearchesSimpleResultsListGroup to be compared</param>
+        /// <param name="other">Instance of SearchesSimpleResultsListGroup to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesSimpleResultsListGroup other)
+        public bool Equals(SearchesSimpleResultsListGroup other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -14,18 +14,18 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsLifecycleGetStagesResponseStages
+    /// LifecycleGetStagesResponseStages
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsLifecycleGetStagesResponseStages :  IEquatable<TrebuchetWebApiDataContractsLifecycleGetStagesResponseStages>, IValidatableObject
+    public partial class LifecycleGetStagesResponseStages :  IEquatable<LifecycleGetStagesResponseStages>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsLifecycleGetStagesResponseStages" /> class.
+        /// Initializes a new instance of the <see cref="LifecycleGetStagesResponseStages" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="IsFinal">IsFinal.</param>
         /// <param name="Name">Name.</param>
-        public TrebuchetWebApiDataContractsLifecycleGetStagesResponseStages(string Id = default(string), bool? IsFinal = default(bool?), string Name = default(string))
+        public LifecycleGetStagesResponseStages(string Id = default(string), bool? IsFinal = default(bool?), string Name = default(string))
         {
             this.Id = Id;
             this.IsFinal = IsFinal;
@@ -54,7 +54,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsLifecycleGetStagesResponseStages {\n");
+            sb.Append("class LifecycleGetStagesResponseStages {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IsFinal: ").Append(IsFinal).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -79,15 +79,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsLifecycleGetStagesResponseStages);
+            return this.Equals(obj as LifecycleGetStagesResponseStages);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsLifecycleGetStagesResponseStages instances are equal
+        /// Returns true if LifecycleGetStagesResponseStages instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsLifecycleGetStagesResponseStages to be compared</param>
+        /// <param name="other">Instance of LifecycleGetStagesResponseStages to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsLifecycleGetStagesResponseStages other)
+        public bool Equals(LifecycleGetStagesResponseStages other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

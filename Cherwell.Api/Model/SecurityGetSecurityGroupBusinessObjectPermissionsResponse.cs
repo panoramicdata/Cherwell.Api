@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse
+    /// SecurityGetSecurityGroupBusinessObjectPermissionsResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse :  IEquatable<TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse>, IValidatableObject
+    public partial class SecurityGetSecurityGroupBusinessObjectPermissionsResponse :  IEquatable<SecurityGetSecurityGroupBusinessObjectPermissionsResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse" /> class.
+        /// Initializes a new instance of the <see cref="SecurityGetSecurityGroupBusinessObjectPermissionsResponse" /> class.
         /// </summary>
         /// <param name="BusinessObjectPermissions">BusinessObjectPermissions.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse(List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission> BusinessObjectPermissions = default(List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public SecurityGetSecurityGroupBusinessObjectPermissionsResponse(List<SecurityBusinessObjectPermission> BusinessObjectPermissions = default(List<SecurityBusinessObjectPermission>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.BusinessObjectPermissions = BusinessObjectPermissions;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Model
         /// Gets or Sets BusinessObjectPermissions
         /// </summary>
         [DataMember(Name="businessObjectPermissions", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission> BusinessObjectPermissions { get; set; }
+        public List<SecurityBusinessObjectPermission> BusinessObjectPermissions { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -358,7 +358,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse {\n");
+            sb.Append("class SecurityGetSecurityGroupBusinessObjectPermissionsResponse {\n");
             sb.Append("  BusinessObjectPermissions: ").Append(BusinessObjectPermissions).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
@@ -385,15 +385,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse);
+            return this.Equals(obj as SecurityGetSecurityGroupBusinessObjectPermissionsResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse instances are equal
+        /// Returns true if SecurityGetSecurityGroupBusinessObjectPermissionsResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse to be compared</param>
+        /// <param name="other">Instance of SecurityGetSecurityGroupBusinessObjectPermissionsResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse other)
+        public bool Equals(SecurityGetSecurityGroupBusinessObjectPermissionsResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

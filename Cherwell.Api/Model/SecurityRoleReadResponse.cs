@@ -14,19 +14,19 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSecurityRoleReadResponse
+    /// SecurityRoleReadResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSecurityRoleReadResponse :  IEquatable<TrebuchetWebApiDataContractsSecurityRoleReadResponse>, IValidatableObject
+    public partial class SecurityRoleReadResponse :  IEquatable<SecurityRoleReadResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSecurityRoleReadResponse" /> class.
+        /// Initializes a new instance of the <see cref="SecurityRoleReadResponse" /> class.
         /// </summary>
         /// <param name="Error">Error.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="Roles">Roles.</param>
-        public TrebuchetWebApiDataContractsSecurityRoleReadResponse(string Error = default(string), string ErrorCode = default(string), bool? HasError = default(bool?), List<TrebuchetWebApiDataContractsSecurityRole> Roles = default(List<TrebuchetWebApiDataContractsSecurityRole>))
+        public SecurityRoleReadResponse(string Error = default(string), string ErrorCode = default(string), bool? HasError = default(bool?), List<SecurityRole> Roles = default(List<SecurityRole>))
         {
             this.Error = Error;
             this.ErrorCode = ErrorCode;
@@ -53,7 +53,7 @@ namespace Cherwell.Model
         /// Gets or Sets Roles
         /// </summary>
         [DataMember(Name="roles", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSecurityRole> Roles { get; set; }
+        public List<SecurityRole> Roles { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -61,7 +61,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSecurityRoleReadResponse {\n");
+            sb.Append("class SecurityRoleReadResponse {\n");
             sb.Append("  Error: ").Append(Error).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  HasError: ").Append(HasError).Append("\n");
@@ -87,15 +87,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSecurityRoleReadResponse);
+            return this.Equals(obj as SecurityRoleReadResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSecurityRoleReadResponse instances are equal
+        /// Returns true if SecurityRoleReadResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSecurityRoleReadResponse to be compared</param>
+        /// <param name="other">Instance of SecurityRoleReadResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSecurityRoleReadResponse other)
+        public bool Equals(SecurityRoleReadResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

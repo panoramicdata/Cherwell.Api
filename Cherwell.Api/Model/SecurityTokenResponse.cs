@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsSecurityTokenResponse
+    /// SecurityTokenResponse
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsSecurityTokenResponse :  IEquatable<TrebuchetWebApiDataContractsSecurityTokenResponse>, IValidatableObject
+    public partial class SecurityTokenResponse :  IEquatable<SecurityTokenResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSecurityTokenResponse" /> class.
+        /// Initializes a new instance of the <see cref="SecurityTokenResponse" /> class.
         /// </summary>
         /// <param name="AccessToken">AccessToken.</param>
         /// <param name="AsclientId">AsclientId.</param>
@@ -30,7 +30,7 @@ namespace Cherwell.Model
         /// <param name="RefreshToken">RefreshToken.</param>
         /// <param name="TokenType">TokenType.</param>
         /// <param name="Username">Username.</param>
-        public TrebuchetWebApiDataContractsSecurityTokenResponse(string AccessToken = default(string), string AsclientId = default(string), string Expires = default(string), int? ExpiresIn = default(int?), string Issued = default(string), string RefreshToken = default(string), string TokenType = default(string), string Username = default(string))
+        public SecurityTokenResponse(string AccessToken = default(string), string AsclientId = default(string), string Expires = default(string), int? ExpiresIn = default(int?), string Issued = default(string), string RefreshToken = default(string), string TokenType = default(string), string Username = default(string))
         {
             this.AccessToken = AccessToken;
             this.AsclientId = AsclientId;
@@ -89,7 +89,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSecurityTokenResponse {\n");
+            sb.Append("class SecurityTokenResponse {\n");
             sb.Append("  AccessToken: ").Append(AccessToken).Append("\n");
             sb.Append("  AsclientId: ").Append(AsclientId).Append("\n");
             sb.Append("  Expires: ").Append(Expires).Append("\n");
@@ -119,15 +119,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsSecurityTokenResponse);
+            return this.Equals(obj as SecurityTokenResponse);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSecurityTokenResponse instances are equal
+        /// Returns true if SecurityTokenResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsSecurityTokenResponse to be compared</param>
+        /// <param name="other">Instance of SecurityTokenResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSecurityTokenResponse other)
+        public bool Equals(SecurityTokenResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

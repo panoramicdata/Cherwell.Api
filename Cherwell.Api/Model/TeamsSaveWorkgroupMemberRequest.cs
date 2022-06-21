@@ -14,18 +14,18 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberRequest
+    /// TeamsSaveWorkgroupMemberRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberRequest :  IEquatable<TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberRequest>, IValidatableObject
+    public partial class TeamsSaveWorkgroupMemberRequest :  IEquatable<TeamsSaveWorkgroupMemberRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberRequest" /> class.
+        /// Initializes a new instance of the <see cref="TeamsSaveWorkgroupMemberRequest" /> class.
         /// </summary>
         /// <param name="CustomerRecordId">CustomerRecordId.</param>
         /// <param name="WorkgroupId">WorkgroupId.</param>
         /// <param name="CustomerIsWorkgroupManager">CustomerIsWorkgroupManager.</param>
-        public TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberRequest(string CustomerRecordId = default(string), string WorkgroupId = default(string), bool? CustomerIsWorkgroupManager = default(bool?))
+        public TeamsSaveWorkgroupMemberRequest(string CustomerRecordId = default(string), string WorkgroupId = default(string), bool? CustomerIsWorkgroupManager = default(bool?))
         {
             this.CustomerRecordId = CustomerRecordId;
             this.WorkgroupId = WorkgroupId;
@@ -54,7 +54,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberRequest {\n");
+            sb.Append("class TeamsSaveWorkgroupMemberRequest {\n");
             sb.Append("  CustomerRecordId: ").Append(CustomerRecordId).Append("\n");
             sb.Append("  WorkgroupId: ").Append(WorkgroupId).Append("\n");
             sb.Append("  CustomerIsWorkgroupManager: ").Append(CustomerIsWorkgroupManager).Append("\n");
@@ -79,15 +79,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberRequest);
+            return this.Equals(obj as TeamsSaveWorkgroupMemberRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberRequest instances are equal
+        /// Returns true if TeamsSaveWorkgroupMemberRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberRequest to be compared</param>
+        /// <param name="other">Instance of TeamsSaveWorkgroupMemberRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberRequest other)
+        public bool Equals(TeamsSaveWorkgroupMemberRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

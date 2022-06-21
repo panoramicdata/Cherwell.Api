@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsUsersUserSaveV2Response
+    /// UsersUserSaveV2Response
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsUsersUserSaveV2Response :  IEquatable<TrebuchetWebApiDataContractsUsersUserSaveV2Response>, IValidatableObject
+    public partial class UsersUserSaveV2Response :  IEquatable<UsersUserSaveV2Response>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsUsersUserSaveV2Response" /> class.
+        /// Initializes a new instance of the <see cref="UsersUserSaveV2Response" /> class.
         /// </summary>
         /// <param name="BusObPublicId">BusObPublicId.</param>
         /// <param name="BusObRecId">BusObRecId.</param>
@@ -323,7 +323,7 @@ namespace Cherwell.Model
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsUsersUserSaveV2Response(string BusObPublicId = default(string), string BusObRecId = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public UsersUserSaveV2Response(string BusObPublicId = default(string), string BusObRecId = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.BusObPublicId = BusObPublicId;
             this.BusObRecId = BusObRecId;
@@ -365,7 +365,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsUsersUserSaveV2Response {\n");
+            sb.Append("class UsersUserSaveV2Response {\n");
             sb.Append("  BusObPublicId: ").Append(BusObPublicId).Append("\n");
             sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
@@ -393,15 +393,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsUsersUserSaveV2Response);
+            return this.Equals(obj as UsersUserSaveV2Response);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsUsersUserSaveV2Response instances are equal
+        /// Returns true if UsersUserSaveV2Response instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsUsersUserSaveV2Response to be compared</param>
+        /// <param name="other">Instance of UsersUserSaveV2Response to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsUsersUserSaveV2Response other)
+        public bool Equals(UsersUserSaveV2Response other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -14,19 +14,19 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsTeamsSaveTeamMemberRequest
+    /// TeamsSaveTeamMemberRequest
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsTeamsSaveTeamMemberRequest :  IEquatable<TrebuchetWebApiDataContractsTeamsSaveTeamMemberRequest>, IValidatableObject
+    public partial class TeamsSaveTeamMemberRequest :  IEquatable<TeamsSaveTeamMemberRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsTeamsSaveTeamMemberRequest" /> class.
+        /// Initializes a new instance of the <see cref="TeamsSaveTeamMemberRequest" /> class.
         /// </summary>
         /// <param name="IsTeamManager">IsTeamManager.</param>
         /// <param name="SetAsDefaultTeam">SetAsDefaultTeam.</param>
         /// <param name="TeamId">TeamId.</param>
         /// <param name="UserRecId">UserRecId.</param>
-        public TrebuchetWebApiDataContractsTeamsSaveTeamMemberRequest(bool? IsTeamManager = default(bool?), bool? SetAsDefaultTeam = default(bool?), string TeamId = default(string), string UserRecId = default(string))
+        public TeamsSaveTeamMemberRequest(bool? IsTeamManager = default(bool?), bool? SetAsDefaultTeam = default(bool?), string TeamId = default(string), string UserRecId = default(string))
         {
             this.IsTeamManager = IsTeamManager;
             this.SetAsDefaultTeam = SetAsDefaultTeam;
@@ -61,7 +61,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsTeamsSaveTeamMemberRequest {\n");
+            sb.Append("class TeamsSaveTeamMemberRequest {\n");
             sb.Append("  IsTeamManager: ").Append(IsTeamManager).Append("\n");
             sb.Append("  SetAsDefaultTeam: ").Append(SetAsDefaultTeam).Append("\n");
             sb.Append("  TeamId: ").Append(TeamId).Append("\n");
@@ -87,15 +87,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsTeamsSaveTeamMemberRequest);
+            return this.Equals(obj as TeamsSaveTeamMemberRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsTeamsSaveTeamMemberRequest instances are equal
+        /// Returns true if TeamsSaveTeamMemberRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsTeamsSaveTeamMemberRequest to be compared</param>
+        /// <param name="other">Instance of TeamsSaveTeamMemberRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsTeamsSaveTeamMemberRequest other)
+        public bool Equals(TeamsSaveTeamMemberRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

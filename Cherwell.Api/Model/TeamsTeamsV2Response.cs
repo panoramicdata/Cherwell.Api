@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Model
 {
     /// <summary>
-    /// TrebuchetWebApiDataContractsTeamsTeamsV2Response
+    /// TeamsTeamsV2Response
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsTeamsTeamsV2Response :  IEquatable<TrebuchetWebApiDataContractsTeamsTeamsV2Response>, IValidatableObject
+    public partial class TeamsTeamsV2Response :  IEquatable<TeamsTeamsV2Response>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsTeamsTeamsV2Response" /> class.
+        /// Initializes a new instance of the <see cref="TeamsTeamsV2Response" /> class.
         /// </summary>
         /// <param name="Teams">Teams.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsTeamsTeamsV2Response(List<TrebuchetWebApiDataContractsTeamsTeam> Teams = default(List<TrebuchetWebApiDataContractsTeamsTeam>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public TeamsTeamsV2Response(List<TeamsTeam> Teams = default(List<TeamsTeam>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.Teams = Teams;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Model
         /// Gets or Sets Teams
         /// </summary>
         [DataMember(Name="teams", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsTeamsTeam> Teams { get; set; }
+        public List<TeamsTeam> Teams { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -358,7 +358,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsTeamsTeamsV2Response {\n");
+            sb.Append("class TeamsTeamsV2Response {\n");
             sb.Append("  Teams: ").Append(Teams).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
@@ -385,15 +385,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrebuchetWebApiDataContractsTeamsTeamsV2Response);
+            return this.Equals(obj as TeamsTeamsV2Response);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsTeamsTeamsV2Response instances are equal
+        /// Returns true if TeamsTeamsV2Response instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrebuchetWebApiDataContractsTeamsTeamsV2Response to be compared</param>
+        /// <param name="other">Instance of TeamsTeamsV2Response to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsTeamsTeamsV2Response other)
+        public bool Equals(TeamsTeamsV2Response other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
