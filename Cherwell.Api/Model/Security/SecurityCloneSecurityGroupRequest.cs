@@ -11,35 +11,35 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Model
+namespace Cherwell.Model.Security
 {
     /// <summary>
-    /// SecurityGetApiClientSettingsResponseItem
+    /// SecurityCloneSecurityGroupRequest
     /// </summary>
     [DataContract]
-    public partial class SecurityGetApiClientSettingsResponseItem :  IEquatable<SecurityGetApiClientSettingsResponseItem>, IValidatableObject
+    public partial class SecurityCloneSecurityGroupRequest : IEquatable<SecurityCloneSecurityGroupRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecurityGetApiClientSettingsResponseItem" /> class.
+        /// Initializes a new instance of the <see cref="SecurityCloneSecurityGroupRequest" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="StandInKey">StandInKey.</param>
-        public SecurityGetApiClientSettingsResponseItem(string Name = default(string), string StandInKey = default(string))
+        /// <param name="SecurityGroupName">SecurityGroupName.</param>
+        /// <param name="SourceSecurityGroupNameOrId">SourceSecurityGroupNameOrId.</param>
+        public SecurityCloneSecurityGroupRequest(string SecurityGroupName = default(string), string SourceSecurityGroupNameOrId = default(string))
         {
-            this.Name = Name;
-            this.StandInKey = StandInKey;
+            this.SecurityGroupName = SecurityGroupName;
+            this.SourceSecurityGroupNameOrId = SourceSecurityGroupNameOrId;
         }
-        
+
         /// <summary>
-        /// Gets or Sets Name
+        /// Gets or Sets SecurityGroupName
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        [DataMember(Name = "securityGroupName", EmitDefaultValue = false)]
+        public string SecurityGroupName { get; set; }
         /// <summary>
-        /// Gets or Sets StandInKey
+        /// Gets or Sets SourceSecurityGroupNameOrId
         /// </summary>
-        [DataMember(Name="standInKey", EmitDefaultValue=false)]
-        public string StandInKey { get; set; }
+        [DataMember(Name = "sourceSecurityGroupNameOrId", EmitDefaultValue = false)]
+        public string SourceSecurityGroupNameOrId { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,13 +47,13 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class SecurityGetApiClientSettingsResponseItem {\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  StandInKey: ").Append(StandInKey).Append("\n");
+            sb.Append("class SecurityCloneSecurityGroupRequest {\n");
+            sb.Append("  SecurityGroupName: ").Append(SecurityGroupName).Append("\n");
+            sb.Append("  SourceSecurityGroupNameOrId: ").Append(SourceSecurityGroupNameOrId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -71,30 +71,30 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SecurityGetApiClientSettingsResponseItem);
+            return this.Equals(obj as SecurityCloneSecurityGroupRequest);
         }
 
         /// <summary>
-        /// Returns true if SecurityGetApiClientSettingsResponseItem instances are equal
+        /// Returns true if SecurityCloneSecurityGroupRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of SecurityGetApiClientSettingsResponseItem to be compared</param>
+        /// <param name="other">Instance of SecurityCloneSecurityGroupRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecurityGetApiClientSettingsResponseItem other)
+        public bool Equals(SecurityCloneSecurityGroupRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
                 return false;
 
-            return 
+            return
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
-                ) && 
+                    this.SecurityGroupName == other.SecurityGroupName ||
+                    this.SecurityGroupName != null &&
+                    this.SecurityGroupName.Equals(other.SecurityGroupName)
+                ) &&
                 (
-                    this.StandInKey == other.StandInKey ||
-                    this.StandInKey != null &&
-                    this.StandInKey.Equals(other.StandInKey)
+                    this.SourceSecurityGroupNameOrId == other.SourceSecurityGroupNameOrId ||
+                    this.SourceSecurityGroupNameOrId != null &&
+                    this.SourceSecurityGroupNameOrId.Equals(other.SourceSecurityGroupNameOrId)
                 );
         }
 
@@ -109,10 +109,10 @@ namespace Cherwell.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
-                if (this.StandInKey != null)
-                    hash = hash * 59 + this.StandInKey.GetHashCode();
+                if (this.SecurityGroupName != null)
+                    hash = hash * 59 + this.SecurityGroupName.GetHashCode();
+                if (this.SourceSecurityGroupNameOrId != null)
+                    hash = hash * 59 + this.SourceSecurityGroupNameOrId.GetHashCode();
                 return hash;
             }
         }
@@ -127,5 +127,4 @@ namespace Cherwell.Model
             yield break;
         }
     }
-
 }

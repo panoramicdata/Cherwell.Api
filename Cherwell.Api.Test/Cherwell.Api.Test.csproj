@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="xunit.extensibility.core" Version="2.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Cherwell.Api\Cherwell.Api.csproj" />
   </ItemGroup>
 

@@ -11,13 +11,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Model
+namespace Cherwell.Model.Security
 {
     /// <summary>
     /// SecurityBusinessObjectPermission
     /// </summary>
     [DataContract]
-    public partial class SecurityBusinessObjectPermission :  IEquatable<SecurityBusinessObjectPermission>, IValidatableObject
+    public partial class SecurityBusinessObjectPermission : IEquatable<SecurityBusinessObjectPermission>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SecurityBusinessObjectPermission" /> class.
@@ -55,81 +55,81 @@ namespace Cherwell.Model
             this.TeamView = TeamView;
             this.View = View;
         }
-        
+
         /// <summary>
         /// Gets or Sets BusObId
         /// </summary>
-        [DataMember(Name="busObId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObId", EmitDefaultValue = false)]
         public string BusObId { get; set; }
         /// <summary>
         /// Gets or Sets BusObName
         /// </summary>
-        [DataMember(Name="busObName", EmitDefaultValue=false)]
+        [DataMember(Name = "busObName", EmitDefaultValue = false)]
         public string BusObName { get; set; }
         /// <summary>
         /// Gets or Sets DepartmentMemberEdit
         /// </summary>
-        [DataMember(Name="departmentMemberEdit", EmitDefaultValue=false)]
+        [DataMember(Name = "departmentMemberEdit", EmitDefaultValue = false)]
         public bool? DepartmentMemberEdit { get; set; }
         /// <summary>
         /// Gets or Sets DepartmentMemberView
         /// </summary>
-        [DataMember(Name="departmentMemberView", EmitDefaultValue=false)]
+        [DataMember(Name = "departmentMemberView", EmitDefaultValue = false)]
         public bool? DepartmentMemberView { get; set; }
         /// <summary>
         /// Gets or Sets Edit
         /// </summary>
-        [DataMember(Name="edit", EmitDefaultValue=false)]
+        [DataMember(Name = "edit", EmitDefaultValue = false)]
         public bool? Edit { get; set; }
         /// <summary>
         /// Gets or Sets FieldPermissions
         /// </summary>
-        [DataMember(Name="fieldPermissions", EmitDefaultValue=false)]
+        [DataMember(Name = "fieldPermissions", EmitDefaultValue = false)]
         public List<SecurityFieldPermission> FieldPermissions { get; set; }
         /// <summary>
         /// Gets or Sets ManagerOfOwnerEdit
         /// </summary>
-        [DataMember(Name="managerOfOwnerEdit", EmitDefaultValue=false)]
+        [DataMember(Name = "managerOfOwnerEdit", EmitDefaultValue = false)]
         public bool? ManagerOfOwnerEdit { get; set; }
         /// <summary>
         /// Gets or Sets ManagerOfOwnerView
         /// </summary>
-        [DataMember(Name="managerOfOwnerView", EmitDefaultValue=false)]
+        [DataMember(Name = "managerOfOwnerView", EmitDefaultValue = false)]
         public bool? ManagerOfOwnerView { get; set; }
         /// <summary>
         /// Gets or Sets OwnerEdit
         /// </summary>
-        [DataMember(Name="ownerEdit", EmitDefaultValue=false)]
+        [DataMember(Name = "ownerEdit", EmitDefaultValue = false)]
         public bool? OwnerEdit { get; set; }
         /// <summary>
         /// Gets or Sets OwnerView
         /// </summary>
-        [DataMember(Name="ownerView", EmitDefaultValue=false)]
+        [DataMember(Name = "ownerView", EmitDefaultValue = false)]
         public bool? OwnerView { get; set; }
         /// <summary>
         /// Gets or Sets TeamEdit
         /// </summary>
-        [DataMember(Name="teamEdit", EmitDefaultValue=false)]
+        [DataMember(Name = "teamEdit", EmitDefaultValue = false)]
         public bool? TeamEdit { get; set; }
         /// <summary>
         /// Gets or Sets TeamManagerOfOwnerEdit
         /// </summary>
-        [DataMember(Name="teamManagerOfOwnerEdit", EmitDefaultValue=false)]
+        [DataMember(Name = "teamManagerOfOwnerEdit", EmitDefaultValue = false)]
         public bool? TeamManagerOfOwnerEdit { get; set; }
         /// <summary>
         /// Gets or Sets TeamManagerOfOwnerView
         /// </summary>
-        [DataMember(Name="teamManagerOfOwnerView", EmitDefaultValue=false)]
+        [DataMember(Name = "teamManagerOfOwnerView", EmitDefaultValue = false)]
         public bool? TeamManagerOfOwnerView { get; set; }
         /// <summary>
         /// Gets or Sets TeamView
         /// </summary>
-        [DataMember(Name="teamView", EmitDefaultValue=false)]
+        [DataMember(Name = "teamView", EmitDefaultValue = false)]
         public bool? TeamView { get; set; }
         /// <summary>
         /// Gets or Sets View
         /// </summary>
-        [DataMember(Name="view", EmitDefaultValue=false)]
+        [DataMember(Name = "view", EmitDefaultValue = false)]
         public bool? View { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
@@ -157,7 +157,7 @@ namespace Cherwell.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -189,77 +189,77 @@ namespace Cherwell.Model
             if (other == null)
                 return false;
 
-            return 
+            return
                 (
                     this.BusObId == other.BusObId ||
                     this.BusObId != null &&
                     this.BusObId.Equals(other.BusObId)
-                ) && 
+                ) &&
                 (
                     this.BusObName == other.BusObName ||
                     this.BusObName != null &&
                     this.BusObName.Equals(other.BusObName)
-                ) && 
+                ) &&
                 (
                     this.DepartmentMemberEdit == other.DepartmentMemberEdit ||
                     this.DepartmentMemberEdit != null &&
                     this.DepartmentMemberEdit.Equals(other.DepartmentMemberEdit)
-                ) && 
+                ) &&
                 (
                     this.DepartmentMemberView == other.DepartmentMemberView ||
                     this.DepartmentMemberView != null &&
                     this.DepartmentMemberView.Equals(other.DepartmentMemberView)
-                ) && 
+                ) &&
                 (
                     this.Edit == other.Edit ||
                     this.Edit != null &&
                     this.Edit.Equals(other.Edit)
-                ) && 
+                ) &&
                 (
                     this.FieldPermissions == other.FieldPermissions ||
                     this.FieldPermissions != null &&
                     this.FieldPermissions.SequenceEqual(other.FieldPermissions)
-                ) && 
+                ) &&
                 (
                     this.ManagerOfOwnerEdit == other.ManagerOfOwnerEdit ||
                     this.ManagerOfOwnerEdit != null &&
                     this.ManagerOfOwnerEdit.Equals(other.ManagerOfOwnerEdit)
-                ) && 
+                ) &&
                 (
                     this.ManagerOfOwnerView == other.ManagerOfOwnerView ||
                     this.ManagerOfOwnerView != null &&
                     this.ManagerOfOwnerView.Equals(other.ManagerOfOwnerView)
-                ) && 
+                ) &&
                 (
                     this.OwnerEdit == other.OwnerEdit ||
                     this.OwnerEdit != null &&
                     this.OwnerEdit.Equals(other.OwnerEdit)
-                ) && 
+                ) &&
                 (
                     this.OwnerView == other.OwnerView ||
                     this.OwnerView != null &&
                     this.OwnerView.Equals(other.OwnerView)
-                ) && 
+                ) &&
                 (
                     this.TeamEdit == other.TeamEdit ||
                     this.TeamEdit != null &&
                     this.TeamEdit.Equals(other.TeamEdit)
-                ) && 
+                ) &&
                 (
                     this.TeamManagerOfOwnerEdit == other.TeamManagerOfOwnerEdit ||
                     this.TeamManagerOfOwnerEdit != null &&
                     this.TeamManagerOfOwnerEdit.Equals(other.TeamManagerOfOwnerEdit)
-                ) && 
+                ) &&
                 (
                     this.TeamManagerOfOwnerView == other.TeamManagerOfOwnerView ||
                     this.TeamManagerOfOwnerView != null &&
                     this.TeamManagerOfOwnerView.Equals(other.TeamManagerOfOwnerView)
-                ) && 
+                ) &&
                 (
                     this.TeamView == other.TeamView ||
                     this.TeamView != null &&
                     this.TeamView.Equals(other.TeamView)
-                ) && 
+                ) &&
                 (
                     this.View == other.View ||
                     this.View != null &&
@@ -322,5 +322,4 @@ namespace Cherwell.Model
             yield break;
         }
     }
-
 }

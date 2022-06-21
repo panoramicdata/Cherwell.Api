@@ -11,13 +11,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Model
+namespace Cherwell.Model.Security
 {
     /// <summary>
     /// SecurityClientSecuritySettingsResponse
     /// </summary>
     [DataContract]
-    public partial class SecurityClientSecuritySettingsResponse :  IEquatable<SecurityClientSecuritySettingsResponse>, IValidatableObject
+    public partial class SecurityClientSecuritySettingsResponse : IEquatable<SecurityClientSecuritySettingsResponse>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SecurityClientSecuritySettingsResponse" /> class.
@@ -33,26 +33,26 @@ namespace Cherwell.Model
             this.SamlLoginAllowed = SamlLoginAllowed;
             this.WindowsLoginAllowed = WindowsLoginAllowed;
         }
-        
+
         /// <summary>
         /// Gets or Sets InternalLoginAllowed
         /// </summary>
-        [DataMember(Name="internalLoginAllowed", EmitDefaultValue=false)]
+        [DataMember(Name = "internalLoginAllowed", EmitDefaultValue = false)]
         public bool? InternalLoginAllowed { get; set; }
         /// <summary>
         /// Gets or Sets LdapLoginAllowed
         /// </summary>
-        [DataMember(Name="ldapLoginAllowed", EmitDefaultValue=false)]
+        [DataMember(Name = "ldapLoginAllowed", EmitDefaultValue = false)]
         public bool? LdapLoginAllowed { get; set; }
         /// <summary>
         /// Gets or Sets SamlLoginAllowed
         /// </summary>
-        [DataMember(Name="samlLoginAllowed", EmitDefaultValue=false)]
+        [DataMember(Name = "samlLoginAllowed", EmitDefaultValue = false)]
         public bool? SamlLoginAllowed { get; set; }
         /// <summary>
         /// Gets or Sets WindowsLoginAllowed
         /// </summary>
-        [DataMember(Name="windowsLoginAllowed", EmitDefaultValue=false)]
+        [DataMember(Name = "windowsLoginAllowed", EmitDefaultValue = false)]
         public bool? WindowsLoginAllowed { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
@@ -69,7 +69,7 @@ namespace Cherwell.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -101,22 +101,22 @@ namespace Cherwell.Model
             if (other == null)
                 return false;
 
-            return 
+            return
                 (
                     this.InternalLoginAllowed == other.InternalLoginAllowed ||
                     this.InternalLoginAllowed != null &&
                     this.InternalLoginAllowed.Equals(other.InternalLoginAllowed)
-                ) && 
+                ) &&
                 (
                     this.LdapLoginAllowed == other.LdapLoginAllowed ||
                     this.LdapLoginAllowed != null &&
                     this.LdapLoginAllowed.Equals(other.LdapLoginAllowed)
-                ) && 
+                ) &&
                 (
                     this.SamlLoginAllowed == other.SamlLoginAllowed ||
                     this.SamlLoginAllowed != null &&
                     this.SamlLoginAllowed.Equals(other.SamlLoginAllowed)
-                ) && 
+                ) &&
                 (
                     this.WindowsLoginAllowed == other.WindowsLoginAllowed ||
                     this.WindowsLoginAllowed != null &&
@@ -157,5 +157,4 @@ namespace Cherwell.Model
             yield break;
         }
     }
-
 }

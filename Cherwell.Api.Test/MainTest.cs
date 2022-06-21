@@ -1,12 +1,12 @@
 ﻿using Cherwell.Client;
+using Xunit;
 
 namespace Cherwell.Api.Test
 {
     public class MainTest
     {
-        
-
-        public static void Main(String[] args)
+        [Fact]
+        public void ApiShouldReturnSomething()
         {
             
         }
