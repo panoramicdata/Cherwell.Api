@@ -13,10 +13,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using Refit;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Cherwell.Client;
+using Cherwell.Model;
 
-namespace IO.Swagger.Api
+namespace Cherwell.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints

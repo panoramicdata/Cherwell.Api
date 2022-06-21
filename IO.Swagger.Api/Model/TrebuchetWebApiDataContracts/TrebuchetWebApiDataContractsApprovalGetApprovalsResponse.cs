@@ -21,7 +21,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace IO.Swagger.Model.TrebuchetWebApiDataContracts;
+namespace Cherwell.Model.TrebuchetWebApiDataContracts;
 {
     /// <summary>
     /// TrebuchetWebApiDataContractsApprovalGetApprovalsResponse

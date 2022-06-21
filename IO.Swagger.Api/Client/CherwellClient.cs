@@ -9,10 +9,10 @@
  */
 
 using System.Net.Http.Headers;
-using IO.Swagger.Api;
+using Cherwell.Api;
 using Refit;
 
-namespace IO.Swagger.Client
+namespace Cherwell.Client
 {
 	/// <summary>
 	/// API client is mainly responsible for making the HTTP call to the API backend.
