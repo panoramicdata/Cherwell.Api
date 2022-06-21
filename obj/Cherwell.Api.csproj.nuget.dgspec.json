@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lorna\\source\\repos\\Cherwell.Api\\Cherwell.Api.csproj": {}
+    "C:\\Users\\meshuser\\Source\\Repos\\Cherwell.Api\\Cherwell.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lorna\\source\\repos\\Cherwell.Api\\Cherwell.Api.csproj": {
+    "C:\\Users\\meshuser\\Source\\Repos\\Cherwell.Api\\Cherwell.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lorna\\source\\repos\\Cherwell.Api\\Cherwell.Api.csproj",
+        "projectUniqueName": "C:\\Users\\meshuser\\Source\\Repos\\Cherwell.Api\\Cherwell.Api.csproj",
         "projectName": "Cherwell.Api",
-        "projectPath": "C:\\Users\\lorna\\source\\repos\\Cherwell.Api\\Cherwell.Api.csproj",
-        "packagesPath": "C:\\Users\\lorna\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lorna\\source\\repos\\Cherwell.Api\\obj\\",
+        "projectPath": "C:\\Users\\meshuser\\Source\\Repos\\Cherwell.Api\\Cherwell.Api.csproj",
+        "packagesPath": "C:\\Users\\meshuser\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\meshuser\\Source\\Repos\\Cherwell.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lorna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\meshuser\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
