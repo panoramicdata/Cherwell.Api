@@ -392,7 +392,7 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as TrebuchetWebApiDataContractsBusinessObjectFieldValuesLookupResponse);
@@ -403,7 +403,7 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <param name="other">Instance of TrebuchetWebApiDataContractsBusinessObjectFieldValuesLookupResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsBusinessObjectFieldValuesLookupResponse other)
+        public bool Equals(TrebuchetWebApiDataContractsBusinessObjectFieldValuesLookupResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

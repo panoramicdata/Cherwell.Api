@@ -92,13 +92,13 @@ namespace IO.Swagger.Client
         public IUsersApi UsersApiClient { get; }
 
 
-        public string Scheme { get; }
+        public string? Scheme { get; }
 
-        public string Token { get; }
+        public string? Token { get; }
 
-        private async Task<Tuple<string, string>> GetSchemeAndToken()
+        private Task<Tuple<string, string>> GetSchemeAndToken()
         {
-            return new Tuple<string, string>(Scheme, Token);
+            return Task.FromResult(new Tuple<string, string>(Scheme, Token));
         }
     }
 

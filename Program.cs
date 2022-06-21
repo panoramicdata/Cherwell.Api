@@ -10,7 +10,7 @@ namespace Cherwell.Api
 {
 	public class Program
 	{
-		static async void Main(string[] args)
+		static void Main(string[] args)
 		{
 			HttpClient _client = new HttpClient();
 			var apiClient = new ApiClient(_client);

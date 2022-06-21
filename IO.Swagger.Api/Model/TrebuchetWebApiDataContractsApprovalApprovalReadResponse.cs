@@ -327,7 +327,11 @@ namespace IO.Swagger.Model
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TrebuchetWebApiDataContractsApprovalApprovalReadResponse(Dictionary<string, Object> Properties = default(Dictionary<string, Object>), List<TrebuchetWebApiDataContractsCoreLink> Links = default(List<TrebuchetWebApiDataContractsCoreLink>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public TrebuchetWebApiDataContractsApprovalApprovalReadResponse(Dictionary<string, Object> Properties = 
+            default, List<TrebuchetWebApiDataContractsCoreLink> Links = 
+            default, string ErrorCode = 
+            default, string ErrorMessage = 
+            default, bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.Properties = Properties;
             this.Links = Links;
@@ -394,7 +398,7 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as TrebuchetWebApiDataContractsApprovalApprovalReadResponse);
@@ -405,7 +409,7 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <param name="other">Instance of TrebuchetWebApiDataContractsApprovalApprovalReadResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsApprovalApprovalReadResponse other)
+        public bool Equals(TrebuchetWebApiDataContractsApprovalApprovalReadResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
