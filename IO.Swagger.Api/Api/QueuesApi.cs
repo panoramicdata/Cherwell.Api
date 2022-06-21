@@ -31,13 +31,13 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation to add a Business Object to a queue
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">Request object containing all properties necessary to add an item to a queue. All properties are required. The standin key defines the queue to which we want to add the Business Object.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsQueuesAddItemToQueueResponse</returns>
         [Post("/api/V1/additemtoqueue")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsQueuesAddItemToQueueResponse> QueuesAddItemToQueueV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsQueuesAddItemToQueueRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsQueuesAddItemToQueueResponse> QueuesAddItemToQueueV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsQueuesAddItemToQueueRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Check a Business Object in to a queue
@@ -45,13 +45,13 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation to check in a queue item
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The request object for checking in an item to a queue. All properties are required except for historyNotes</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse</returns>
         [Post("/api/V1/checkinqueueitem")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse> QueuesCheckInQueueItemV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsQueuesCheckInQueueItemRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse> QueuesCheckInQueueItemV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsQueuesCheckInQueueItemRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Check a Business Object out of a queue
@@ -59,13 +59,13 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation to check out a queue item
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The request object for checking out an item from a queue. All properties are required except for historyNotes</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsQueuesCheckOutQueueItemResponse</returns>
         [Post("/api/V1/checkoutqueueitem")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsQueuesCheckOutQueueItemResponse> QueuesCheckOutQueueItemV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsQueuesCheckOutQueueItemRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsQueuesCheckOutQueueItemResponse> QueuesCheckOutQueueItemV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsQueuesCheckOutQueueItemRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get available queues.
@@ -73,7 +73,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Get available queues for a specific Business Object type based on scope, scope owner, and folder.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope to get available queues for.</param>
         /// <param name="scopeowner">The scope owner to get available queues for.</param>
         /// <param name="folder">The folder to get available queues for.  This has to be the folder ID which can be retrieved by doing a getqueues operation without the folder including links option then the links will have the folder IDs.</param>
@@ -82,7 +82,7 @@ namespace IO.Swagger.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
         [Get("/api/V1/getqueues/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> QueuesGetQueuesFolderV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsCoreManagerData> QueuesGetQueuesFolderV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get available queues.
@@ -90,7 +90,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Get available queues for a specific Business Object type based on scope, and scope owner.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope to get available queues for.</param>
         /// <param name="scopeowner">The scope owner to get available queues for.</param>
         /// <param name="links">Whether or not to include links. (optional)</param>
@@ -98,7 +98,7 @@ namespace IO.Swagger.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
         [Get("/api/V1/getqueues/scope/{scope}/scopeowner/{scopeowner}")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> QueuesGetQueuesScopeOwnerV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsCoreManagerData> QueuesGetQueuesScopeOwnerV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get available queues.
@@ -106,14 +106,14 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Get available queues for a specific Business Object type based on scope.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope to get available queues for.</param>
         /// <param name="links">Whether or not to include links. (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
         [Get("/api/V1/getqueues/scope/{scope}")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> QueuesGetQueuesScopeV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsCoreManagerData> QueuesGetQueuesScopeV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get available queues.
@@ -121,13 +121,13 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Get available queues for a specific Business Object.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="links">Whether or not to include links. (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
         [Get("/api/V1/getqueues")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> QueuesGetQueuesV1([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsCoreManagerData> QueuesGetQueuesV1([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Remove an item from a queue
@@ -135,13 +135,13 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation to remove an item from a queue
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The request object to remove an item from a queue. All properties are required except for historyNotes</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse</returns>
         [Post("/api/V1/removeitemfromqueue")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse> QueuesRemoveItemFromQueueV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse> QueuesRemoveItemFromQueueV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
         #endregion Asynchronous Operations
     }
 }

@@ -31,13 +31,13 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation to build a Quick Search configuration that you can use to execute a Quick Search for multiple Business Objects. The configuration  includes supplied Business Object IDs and specific search items with the following options. Use the Option Key to determine if you can change the options.  &lt;/br&gt;&lt;/br&gt;ChangedOption&lt;/br&gt; NonFinalStateOption&lt;/br&gt; SearchAnyWordsOption&lt;/br&gt; SearchAttachmentsOption&lt;/br&gt; SearchRelatedOption&lt;/br&gt; SortByOption&lt;/br&gt; &lt;/br&gt;Option Key:&lt;/br&gt; 0 &#x3D; None (Not selected and cannot select.)&lt;/br&gt; 1 &#x3D; Use (Selected and cannot clear.)&lt;/br&gt; 2 &#x3D; Display (Not selected and can select.)&lt;/br&gt; 3 &#x3D; UseAndDisplay (Selected and can clear.)&lt;/br&gt;&lt;/br&gt; SearchTargetType:&lt;/br&gt; 0 &#x3D; BusOb (Business Object)&lt;/br&gt; 1 &#x3D; DocRepository (Document Repository)
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dataRequest">Request containing the Business Object IDs list.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationResponse</returns>
         [Post("/api/V1/getquicksearchconfigurationforbusobs")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationResponse> SearchesGetQuickSearchConfigurationForBusObsV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationRequest dataRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationResponse> SearchesGetQuickSearchConfigurationForBusObsV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationRequest dataRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get a Quick Search by Business Objects with view rights
@@ -45,12 +45,12 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation to get a Quick Search configuration that you can use to execute a Quick Search based the current user&#39;s Business Object view rights. The configuration  includes supplied Business Object IDs and specific search items with the following options. Use the Option Key to determine if you can change the options.&lt;/br&gt;&lt;/br&gt;ChangedOption&lt;/br&gt; NonFinalStateOption&lt;/br&gt; SearchAnyWordsOption&lt;/br&gt; SearchAttachmentsOption&lt;/br&gt; SearchRelatedOption&lt;/br&gt; SortByOption&lt;/br&gt; &lt;/br&gt;Option Key:&lt;/br&gt; 0 &#x3D; None (Not selected and cannot select.)&lt;/br&gt; 1 &#x3D; Use (Selected and cannot clear.)&lt;/br&gt; 2 &#x3D; Display (Not selected and can select.)&lt;/br&gt; 3 &#x3D; UseAndDisplay (Selected and can clear.)&lt;/br&gt;&lt;/br&gt; SearchTargetType:&lt;/br&gt; 0 &#x3D; BusOb (Business Object)&lt;/br&gt; 1 &#x3D; DocRepository (Document Repository)
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationResponse</returns>
         [Get("/api/V1/getquicksearchconfigurationforbusobswithviewrights")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationResponse> SearchesGetQuickSearchConfigurationForBusObsWithViewRightsV1([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationResponse> SearchesGetQuickSearchConfigurationForBusObsWithViewRightsV1([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Execute a Quick Search from a list of Business Object IDs and search text
@@ -58,14 +58,14 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation to execute a Quick Search using a list of Business Object IDs and search text.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dataRequest">Request object listing Business Object IDs and search text. Leave out the entire Business Object IDs parameter and all configured quick search Business Objects will be searched.</param>
         /// <param name="includeLinks">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSearchesSimpleResultsList</returns>
         [Post("/api/V1/getquicksearchresults")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSearchesSimpleResultsList> SearchesGetQuickSearchResultsV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsSearchesQuickSearchRequest dataRequest, [AliasAs("includeLinks")]bool? includeLinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsSearchesSimpleResultsList> SearchesGetQuickSearchResultsV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsSearchesQuickSearchRequest dataRequest, [AliasAs("includeLinks")]bool? includeLinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Execute a Quick Search on a specific Business Object
@@ -73,7 +73,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation to execute a Quick Search for a specific Business Object ID. Use \&quot;Get a Quick Search from a list of Business Object IDs\&quot; to find values for specific search item options, such as NonFinalStateOption.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dataRequest">Request object containing the parameters for specific Business Object Quick Search execution.</param>
         /// <param name="includeSchema">Flag to include the schema for the results. (optional)</param>
         /// <param name="includeLocationFields">Flag to include location fields in the results. (optional)</param>
@@ -82,7 +82,7 @@ namespace IO.Swagger.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSearchesSearchResultsTableResponse</returns>
         [Post("/api/V1/getquicksearchspecificresults")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSearchesSearchResultsTableResponse> SearchesGetQuickSearchSpecificResultsV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsSearchesQuickSearchSpecificRequest dataRequest, [AliasAs("includeSchema")]bool? includeSchema = null, [AliasAs("includeLocationFields")]bool? includeLocationFields = null, [AliasAs("includeLinks")]bool? includeLinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsSearchesSearchResultsTableResponse> SearchesGetQuickSearchSpecificResultsV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsSearchesQuickSearchSpecificRequest dataRequest, [AliasAs("includeSchema")]bool? includeSchema = null, [AliasAs("includeLocationFields")]bool? includeLocationFields = null, [AliasAs("includeLinks")]bool? includeLinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Execute a Quick Search on a specific Business Object
@@ -90,7 +90,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation to execute a Quick Search for a specific Business Object ID. Use \&quot;Get a Quick Search from a list of Business Object IDs\&quot; to find values for specific search item options, such as NonFinalStateOption.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dataRequest">Request object containing the parameters for specific Business Object Quick Search execution.</param>
         /// <param name="includeSchema">Flag to include the schema for the results. (optional)</param>
         /// <param name="includeLocationFields">Flag to include location fields in the results. (optional)</param>
@@ -99,7 +99,7 @@ namespace IO.Swagger.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSearchesQuickSearchResponse</returns>
         [Post("/api/V2/getquicksearchspecificresults")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSearchesQuickSearchResponse> SearchesGetQuickSearchSpecificResultsV2([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsSearchesQuickSearchSpecificRequest dataRequest, [AliasAs("includeSchema")]bool? includeSchema = null, [AliasAs("includeLocationFields")]bool? includeLocationFields = null, [AliasAs("includeLinks")]bool? includeLinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsSearchesQuickSearchResponse> SearchesGetQuickSearchSpecificResultsV2([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsSearchesQuickSearchSpecificRequest dataRequest, [AliasAs("includeSchema")]bool? includeSchema = null, [AliasAs("includeLocationFields")]bool? includeLocationFields = null, [AliasAs("includeLinks")]bool? includeLinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by Folder ID
@@ -107,7 +107,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation that returns a tree of saved queries, including scope, search name, IDs, and location within the tree.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="association">Use to filter results by Business Object association ID.</param>
         /// <param name="scope">Use to filter results by scope name or ID.</param>
         /// <param name="scopeowner">Use to filter results by scope owner ID.</param>
@@ -117,7 +117,7 @@ namespace IO.Swagger.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSearchesSearchItemResponse</returns>
         [Get("/api/V1/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSearchesSearchItemResponse> SearchesGetSearchItemsByAssociationScopeScopeOwnerFolderV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsSearchesSearchItemResponse> SearchesGetSearchItemsByAssociationScopeScopeOwnerFolderV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by Folder ID
@@ -125,7 +125,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation that returns a tree of saved queries, including scope, search name, IDs, and location within the tree.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="association">Use to filter results by Business Object association ID.</param>
         /// <param name="scope">Use to filter results by scope name or ID.</param>
         /// <param name="scopeowner">Use to filter results by scope owner ID.</param>
@@ -135,7 +135,7 @@ namespace IO.Swagger.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
         [Get("/api/V2/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> SearchesGetSearchItemsByAssociationScopeScopeOwnerFolderV2([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsCoreManagerData> SearchesGetSearchItemsByAssociationScopeScopeOwnerFolderV2([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by scope owner (sub scope)
@@ -143,7 +143,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation that returns a tree of saved queries, including scope, search name, IDs, and location within the tree.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="association">Use to filter results by Business Object association ID.</param>
         /// <param name="scope">Use to filter results by scope name or ID.</param>
         /// <param name="scopeowner">Use to filter results by scope owner ID.</param>
@@ -152,7 +152,7 @@ namespace IO.Swagger.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSearchesSearchItemResponse</returns>
         [Get("/api/V1/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSearchesSearchItemResponse> SearchesGetSearchItemsByAssociationScopeScopeOwnerV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsSearchesSearchItemResponse> SearchesGetSearchItemsByAssociationScopeScopeOwnerV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by scope owner (sub scope)
@@ -160,7 +160,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation that returns a tree of saved queries, including scope, search name, IDs, and location within the tree.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="association">Use to filter results by Business Object association ID.</param>
         /// <param name="scope">Use to filter results by scope name or ID.</param>
         /// <param name="scopeowner">Use to filter results by scope owner ID.</param>
@@ -169,7 +169,7 @@ namespace IO.Swagger.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
         [Get("/api/V2/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> SearchesGetSearchItemsByAssociationScopeScopeOwnerV2([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsCoreManagerData> SearchesGetSearchItemsByAssociationScopeScopeOwnerV2([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by scope
@@ -177,7 +177,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation that returns a tree of saved queries, including scope, search name, IDs, and location within the tree.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="association">Use to filter results by Business Object association ID.</param>
         /// <param name="scope">Use to filter results by scope name or ID.</param>
         /// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
@@ -185,7 +185,7 @@ namespace IO.Swagger.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSearchesSearchItemResponse</returns>
         [Get("/api/V1/getsearchitems/association/{association}/scope/{scope}")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSearchesSearchItemResponse> SearchesGetSearchItemsByAssociationScopeV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsSearchesSearchItemResponse> SearchesGetSearchItemsByAssociationScopeV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by scope
@@ -193,7 +193,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation that returns a tree of saved queries, including scope, search name, IDs, and location within the tree.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="association">Use to filter results by Business Object association ID.</param>
         /// <param name="scope">Use to filter results by scope name or ID.</param>
         /// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
@@ -201,7 +201,7 @@ namespace IO.Swagger.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
         [Get("/api/V2/getsearchitems/association/{association}/scope/{scope}")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> SearchesGetSearchItemsByAssociationScopeV2([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsCoreManagerData> SearchesGetSearchItemsByAssociationScopeV2([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by Business Object association
@@ -209,14 +209,14 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation that returns a tree of saved queries, including scope, search name, IDs, and location within the tree.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="association">Use to filter results by Business Object association ID.</param>
         /// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSearchesSearchItemResponse</returns>
         [Get("/api/V1/getsearchitems/association/{association}")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSearchesSearchItemResponse> SearchesGetSearchItemsByAssociationV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsSearchesSearchItemResponse> SearchesGetSearchItemsByAssociationV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by Business Object association
@@ -224,14 +224,14 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation that returns a tree of saved queries, including scope, search name, IDs, and location within the tree.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="association">Use to filter results by Business Object association ID.</param>
         /// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
         [Get("/api/V2/getsearchitems/association/{association}")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> SearchesGetSearchItemsByAssociationV2([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsCoreManagerData> SearchesGetSearchItemsByAssociationV2([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by default Business Object association
@@ -239,13 +239,13 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation that returns a tree of saved queries, including scope, search name, IDs, and location within the tree.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSearchesSearchItemResponse</returns>
         [Get("/api/V1/getsearchitems")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSearchesSearchItemResponse> SearchesGetSearchItemsV1([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsSearchesSearchItemResponse> SearchesGetSearchItemsV1([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by default Business Object association
@@ -253,13 +253,13 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation that returns a tree of saved queries, including scope, search name, IDs, and location within the tree.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
         [Get("/api/V2/getsearchitems")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> SearchesGetSearchItemsV2([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsCoreManagerData> SearchesGetSearchItemsV2([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Run an ad-hoc search
@@ -267,13 +267,13 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation that runs an ad-hoc Business Object search. To execute a search with Prompts, the PromptId and Value are required in the Prompt request object.&lt;/br&gt;&lt;/br&gt;PromptType is a FieldSubType enum as described below:&lt;/br&gt;FieldSubType&lt;/br&gt;None &#x3D; 0&lt;/br&gt;Text &#x3D; 1&lt;/br&gt;Number &#x3D; 2&lt;/br&gt;DateTime &#x3D; 3&lt;/br&gt;Logical &#x3D; 4&lt;/br&gt;Binary &#x3D; 5&lt;/br&gt;DateOnly &#x3D; 6&lt;/br&gt;TimeOnly &#x3D; 7&lt;/br&gt;Json &#x3D; 8&lt;/br&gt;JsonArray &#x3D; 9&lt;/br&gt;Xml &#x3D; 10&lt;/br&gt;XmlCollection &#x3D; 11&lt;/br&gt;TimeValue &#x3D; 12&lt;/br&gt;
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dataRequest">Request object to specify search parameters.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSearchesSearchResultsResponse</returns>
         [Post("/api/V1/getsearchresults")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSearchesSearchResultsResponse> SearchesGetSearchResultsAdHocV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsSearchesSearchResultsRequest dataRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsSearchesSearchResultsResponse> SearchesGetSearchResultsAdHocV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsSearchesSearchResultsRequest dataRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get results of a saved search
@@ -281,13 +281,13 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation that returns the results of a saved search in JSON format.&lt;/br&gt; This API is protected by a rate limiter and will reject any requests sent from an IP Address when a certain threshold of active concurrent requests has been hit.&lt;/br&gt; This value can be configured by the Max Concurrent Requests configuration value in the Web API config.&lt;/br&gt; Once this limit has been reached, all subsequent requests will receive a status code of 429 (Too Many Requests).&lt;/br&gt; This version is not subject to row limits and will return the entire result set of the stored search. 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchRequest">Request object to specify search parameters.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSearchesStoredSearchResults</returns>
         [Post("/api/V2/storedsearches")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSearchesStoredSearchResults> SearchesGetSearchResultsAsStringByIdV2([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsSearchesStoredSearchRequest searchRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsSearchesStoredSearchResults> SearchesGetSearchResultsAsStringByIdV2([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsSearchesStoredSearchRequest searchRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get results of a saved search
@@ -295,7 +295,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation that returns the results of a saved search in JSON format.&lt;/br&gt;    This API is protected by a rate limiter and will reject any requests sent from an IP Address when a certain threshold of active concurrent requests has been hit.&lt;/br&gt;    This value can be configured by the Max Concurrent Requests configuration value in the Web API config.&lt;/br&gt;    Once this limit has been reached, all subsequent requests will receive a status code of 429 (Too Many Requests).  
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Specify the scope name for the saved search.</param>
         /// <param name="associationName">Specify the Business Object association Name for the saved search.</param>
         /// <param name="searchName">Specify the name of the saved search.</param>
@@ -304,7 +304,7 @@ namespace IO.Swagger.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of List&lt;Dictionary&lt;string, string&gt;&gt;</returns>
         [Get("/api/V1/storedsearches/{scope}/{associationName}/{searchName}")]
-        System.Threading.Tasks.Task<List<Dictionary<string, string>>> SearchesGetSearchResultsAsStringByNameV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("associationName")]string associationName, [AliasAs("searchName")]string searchName, [AliasAs("scopeOwner")]string scopeOwner = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<List<Dictionary<string, string>>> SearchesGetSearchResultsAsStringByNameV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("associationName")]string associationName, [AliasAs("searchName")]string searchName, [AliasAs("scopeOwner")]string scopeOwner = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get results of a saved search
@@ -312,7 +312,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation that returns the results of a saved search in JSON format.&lt;/br&gt; This API is protected by a rate limiter and will reject any requests sent from an IP Address when a certain threshold of active concurrent requests has been hit.&lt;/br&gt; This value can be configured by the Max Concurrent Requests configuration value in the Web API config.&lt;/br&gt; Once this limit has been reached, all subsequent requests will receive a status code of 429 (Too Many Requests).&lt;/br&gt; This version is not subject to row limits and will return the entire result set of the stored search. 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Specify the scope name for the saved search.</param>
         /// <param name="associationName">Specify the Business Object association Name for the saved search.</param>
         /// <param name="searchName">Specify the name of the saved search.</param>
@@ -321,7 +321,7 @@ namespace IO.Swagger.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of List&lt;Dictionary&lt;string, string&gt;&gt;</returns>
         [Get("/api/V2/storedsearches/{scope}/{associationName}/{searchName}")]
-        System.Threading.Tasks.Task<List<Dictionary<string, string>>> SearchesGetSearchResultsAsStringByNameV2([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("associationName")]string associationName, [AliasAs("searchName")]string searchName, [AliasAs("scopeOwner")]string scopeOwner = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<List<Dictionary<string, string>>> SearchesGetSearchResultsAsStringByNameV2([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("associationName")]string associationName, [AliasAs("searchName")]string searchName, [AliasAs("scopeOwner")]string scopeOwner = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Run a saved search by internal ID
@@ -329,7 +329,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation that returns the paged results of a saved search. When the search contains Prompts, the response contains the Prompt. Send the Prompt and the original operation parameters to  SearchResultsRequest to the getsearchresults ad-hoc http post operation.&lt;/br&gt;&lt;/br&gt;PromptType is a FieldSubType enum as described below:&lt;/br&gt;FieldSubType&lt;/br&gt;None &#x3D; 0&lt;/br&gt;Text &#x3D; 1&lt;/br&gt;Number &#x3D; 2&lt;/br&gt;DateTime &#x3D; 3&lt;/br&gt;Logical &#x3D; 4&lt;/br&gt;Binary &#x3D; 5&lt;/br&gt;DateOnly &#x3D; 6&lt;/br&gt;TimeOnly &#x3D; 7&lt;/br&gt;Json &#x3D; 8&lt;/br&gt;JsonArray &#x3D; 9&lt;/br&gt;Xml &#x3D; 10&lt;/br&gt;XmlCollection &#x3D; 11&lt;/br&gt;TimeValue &#x3D; 12&lt;/br&gt;
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="association">Specify the Business Object association ID for the saved search.</param>
         /// <param name="scope">Specify the scope name or ID for the saved search.</param>
         /// <param name="scopeowner">Specify the scope owner ID for the saved search. Use (None) when no scope owner exists.</param>
@@ -343,7 +343,7 @@ namespace IO.Swagger.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSearchesSearchResultsResponse</returns>
         [Get("/api/V1/getsearchresults/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchid/{searchid}")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSearchesSearchResultsResponse> SearchesGetSearchResultsByIdV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("searchid")]string searchid, [AliasAs("searchTerm")]string searchTerm = null, [AliasAs("pagenumber")]int? pagenumber = null, [AliasAs("pagesize")]int? pagesize = null, [AliasAs("includeschema")]bool? includeschema = null, [AliasAs("resultsAsSimpleResultsList")]bool? resultsAsSimpleResultsList = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsSearchesSearchResultsResponse> SearchesGetSearchResultsByIdV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("searchid")]string searchid, [AliasAs("searchTerm")]string searchTerm = null, [AliasAs("pagenumber")]int? pagenumber = null, [AliasAs("pagesize")]int? pagesize = null, [AliasAs("includeschema")]bool? includeschema = null, [AliasAs("resultsAsSimpleResultsList")]bool? resultsAsSimpleResultsList = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Run a saved search by name
@@ -351,7 +351,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation that returns the paged results of a saved search. When the search contains Prompts, the response contains the Prompt. Send the Prompt and the original operation parameters to  SearchResultsRequest to the getsearchresults ad-hoc http post operation.&lt;/br&gt;&lt;/br&gt;PromptType is a FieldSubType enum as described below:&lt;/br&gt;FieldSubType&lt;/br&gt;None &#x3D; 0&lt;/br&gt;Text &#x3D; 1&lt;/br&gt;Number &#x3D; 2&lt;/br&gt;DateTime &#x3D; 3&lt;/br&gt;Logical &#x3D; 4&lt;/br&gt;Binary &#x3D; 5&lt;/br&gt;DateOnly &#x3D; 6&lt;/br&gt;TimeOnly &#x3D; 7&lt;/br&gt;Json &#x3D; 8&lt;/br&gt;JsonArray &#x3D; 9&lt;/br&gt;Xml &#x3D; 10&lt;/br&gt;XmlCollection &#x3D; 11&lt;/br&gt;TimeValue &#x3D; 12&lt;/br&gt;
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="association">Specify the Business Object association ID for the saved search.</param>
         /// <param name="scope">Specify the scope name or ID for the saved search.</param>
         /// <param name="scopeowner">Specify the scope owner ID for the saved search. Use (None) when no scope owner exists.</param>
@@ -365,7 +365,7 @@ namespace IO.Swagger.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSearchesSearchResultsResponse</returns>
         [Get("/api/V1/getsearchresults/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchname/{searchname}")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSearchesSearchResultsResponse> SearchesGetSearchResultsByNameV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("searchname")]string searchname, [AliasAs("searchTerm")]string searchTerm = null, [AliasAs("pagenumber")]int? pagenumber = null, [AliasAs("pagesize")]int? pagesize = null, [AliasAs("includeschema")]bool? includeschema = null, [AliasAs("resultsAsSimpleResultsList")]bool? resultsAsSimpleResultsList = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsSearchesSearchResultsResponse> SearchesGetSearchResultsByNameV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("searchname")]string searchname, [AliasAs("searchTerm")]string searchTerm = null, [AliasAs("pagenumber")]int? pagenumber = null, [AliasAs("pagesize")]int? pagesize = null, [AliasAs("includeschema")]bool? includeschema = null, [AliasAs("resultsAsSimpleResultsList")]bool? resultsAsSimpleResultsList = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Export an ad-hoc search
@@ -373,13 +373,13 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation that returns an ad-hoc search in a specified export format: 0&#x3D;CSV, 1&#x3D;Excel, 2&#x3D;Tab, 3&#x3D;Word, 4&#x3D;Custom Separator, 5&#x3D;Simple JSON. To execute a search with Prompts, the PromptId and Value are required in the Prompt request object.&lt;/br&gt;&lt;/br&gt;PromptType is a FieldSubType enum as described below:&lt;/br&gt;FieldSubType&lt;/br&gt;None &#x3D; 0&lt;/br&gt;Text &#x3D; 1&lt;/br&gt;Number &#x3D; 2&lt;/br&gt;DateTime &#x3D; 3&lt;/br&gt;Logical &#x3D; 4&lt;/br&gt;Binary &#x3D; 5&lt;/br&gt;DateOnly &#x3D; 6&lt;/br&gt;TimeOnly &#x3D; 7&lt;/br&gt;Json &#x3D; 8&lt;/br&gt;JsonArray &#x3D; 9&lt;/br&gt;Xml &#x3D; 10&lt;/br&gt;XmlCollection &#x3D; 11&lt;/br&gt;TimeValue &#x3D; 12&lt;/br&gt;
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dataRequest">Request object to specify search parameters and export format.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of string</returns>
         [Post("/api/V1/getsearchresultsexport")]
-        System.Threading.Tasks.Task<string> SearchesGetSearchResultsExportAdHocV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsSearchesExportSearchResultsRequest dataRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<string> SearchesGetSearchResultsExportAdHocV1([Header("UserAgent")] string userAgent, [Body]TrebuchetWebApiDataContractsSearchesExportSearchResultsRequest dataRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Export a saved search by ID
@@ -387,7 +387,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation that returns the paged results of a saved search in a specified format. When the search contains Prompts, the response contains the Prompt. Send the Prompt and the original operation parameters to  SearchResultsRequest to the getsearchresultsexport ad-hoc http post operation.&lt;/br&gt;&lt;/br&gt;PromptType is a FieldSubType enum as described below:&lt;/br&gt;FieldSubType&lt;/br&gt;None &#x3D; 0&lt;/br&gt;Text &#x3D; 1&lt;/br&gt;Number &#x3D; 2&lt;/br&gt;DateTime &#x3D; 3&lt;/br&gt;Logical &#x3D; 4&lt;/br&gt;Binary &#x3D; 5&lt;/br&gt;DateOnly &#x3D; 6&lt;/br&gt;TimeOnly &#x3D; 7&lt;/br&gt;Json &#x3D; 8&lt;/br&gt;JsonArray &#x3D; 9&lt;/br&gt;Xml &#x3D; 10&lt;/br&gt;XmlCollection &#x3D; 11&lt;/br&gt;TimeValue &#x3D; 12&lt;/br&gt;
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="association">Specify the Business Object association ID for the saved search.</param>
         /// <param name="scope">Specify the scope name or ID for the saved search.</param>
         /// <param name="scopeowner">Specify the scope owner ID for the saved search. Use (None) when no scope owner exists.</param>
@@ -400,7 +400,7 @@ namespace IO.Swagger.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of string</returns>
         [Get("/api/V1/getsearchresultsexport/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchid/{searchid}/exportformat/{exportformat}")]
-        System.Threading.Tasks.Task<string> SearchesGetSearchResultsExportByIdV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("searchid")]string searchid, [AliasAs("exportformat")]string exportformat, [AliasAs("searchTerm")]string searchTerm = null, [AliasAs("pagenumber")]int? pagenumber = null, [AliasAs("pagesize")]int? pagesize = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<string> SearchesGetSearchResultsExportByIdV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("searchid")]string searchid, [AliasAs("exportformat")]string exportformat, [AliasAs("searchTerm")]string searchTerm = null, [AliasAs("pagenumber")]int? pagenumber = null, [AliasAs("pagesize")]int? pagesize = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Export a saved search by name
@@ -408,7 +408,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Operation that returns the paged results of a saved search in a specified format. When the search contains Prompts, the response contains the Prompt. Send the Prompt and the original operation parameters to  SearchResultsRequest to the getsearchresultsexport ad-hoc http post operation.&lt;/br&gt;&lt;/br&gt;PromptType is a FieldSubType enum as described below:&lt;/br&gt;FieldSubType&lt;/br&gt;None &#x3D; 0&lt;/br&gt;Text &#x3D; 1&lt;/br&gt;Number &#x3D; 2&lt;/br&gt;DateTime &#x3D; 3&lt;/br&gt;Logical &#x3D; 4&lt;/br&gt;Binary &#x3D; 5&lt;/br&gt;DateOnly &#x3D; 6&lt;/br&gt;TimeOnly &#x3D; 7&lt;/br&gt;Json &#x3D; 8&lt;/br&gt;JsonArray &#x3D; 9&lt;/br&gt;Xml &#x3D; 10&lt;/br&gt;XmlCollection &#x3D; 11&lt;/br&gt;TimeValue &#x3D; 12&lt;/br&gt;
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="association">Specify the Business Object association ID for the saved search.</param>
         /// <param name="scope">Specify the scope name or ID for the saved search.</param>
         /// <param name="scopeowner">Specify the scope owner ID for the saved search. Use (None) when no scope owner exists.</param>
@@ -421,7 +421,7 @@ namespace IO.Swagger.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of string</returns>
         [Get("/api/V1/getsearchresultsexport/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchname/{searchname}/exportformat/{exportformat}")]
-        System.Threading.Tasks.Task<string> SearchesGetSearchResultsExportByNameV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("searchname")]string searchname, [AliasAs("exportformat")]string exportformat, [AliasAs("searchTerm")]string searchTerm = null, [AliasAs("pagenumber")]int? pagenumber = null, [AliasAs("pagesize")]int? pagesize = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<string> SearchesGetSearchResultsExportByNameV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("searchname")]string searchname, [AliasAs("exportformat")]string exportformat, [AliasAs("searchTerm")]string searchTerm = null, [AliasAs("pagenumber")]int? pagenumber = null, [AliasAs("pagesize")]int? pagesize = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
         #endregion Asynchronous Operations
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\meshuser\\Source\\Repos\\Cherwell.Api\\Cherwell.Api.csproj": {}
+    "C:\\Users\\meshuser\\source\\repos\\Cherwell.Api\\Cherwell.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\meshuser\\Source\\Repos\\Cherwell.Api\\Cherwell.Api.csproj": {
+    "C:\\Users\\meshuser\\source\\repos\\Cherwell.Api\\Cherwell.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\meshuser\\Source\\Repos\\Cherwell.Api\\Cherwell.Api.csproj",
+        "projectUniqueName": "C:\\Users\\meshuser\\source\\repos\\Cherwell.Api\\Cherwell.Api.csproj",
         "projectName": "Cherwell.Api",
-        "projectPath": "C:\\Users\\meshuser\\Source\\Repos\\Cherwell.Api\\Cherwell.Api.csproj",
+        "projectPath": "C:\\Users\\meshuser\\source\\repos\\Cherwell.Api\\Cherwell.Api.csproj",
         "packagesPath": "C:\\Users\\meshuser\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\meshuser\\Source\\Repos\\Cherwell.Api\\obj\\",
+        "outputPath": "C:\\Users\\meshuser\\source\\repos\\Cherwell.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\meshuser\\AppData\\Roaming\\NuGet\\NuGet.Config",

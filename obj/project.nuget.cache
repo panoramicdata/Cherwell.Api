@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XQoHY8x9hXjcrW9QzJGNKbYoUnZm9BIb1vS7HLh4+8unOG0K6DwC+WYQSULZaB+ZU/EGtBUhAY2Eugl/vCwyvw==",
+  "dgSpecHash": "ZrbgiaZyaJ5TZ47ncCcIdxb2bW+rVS8sP72sWQIg5Aa4vM9OxesGV/nsycTa3hRMRBLQKKpH4ajTlJgSDeLVdg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\meshuser\\Source\\Repos\\Cherwell.Api\\Cherwell.Api.csproj",
+  "projectFilePath": "C:\\Users\\meshuser\\source\\repos\\Cherwell.Api\\Cherwell.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\meshuser\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\meshuser\\.nuget\\packages\\refit\\6.3.2\\refit.6.3.2.nupkg.sha512",

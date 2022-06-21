@@ -3,3 +3,8 @@ C:\Users\lorna\source\repos\Cherwell.Api\obj\Debug\net6.0\Cherwell.Api.Generated
 C:\Users\lorna\source\repos\Cherwell.Api\obj\Debug\net6.0\Cherwell.Api.AssemblyInfoInputs.cache
 C:\Users\lorna\source\repos\Cherwell.Api\obj\Debug\net6.0\Cherwell.Api.AssemblyInfo.cs
 C:\Users\lorna\source\repos\Cherwell.Api\obj\Debug\net6.0\Cherwell.Api.csproj.CoreCompileInputs.cache
+C:\Users\meshuser\Source\Repos\Cherwell.Api\obj\Debug\net6.0\Cherwell.Api.csproj.AssemblyReference.cache
+C:\Users\meshuser\Source\Repos\Cherwell.Api\obj\Debug\net6.0\Cherwell.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\meshuser\Source\Repos\Cherwell.Api\obj\Debug\net6.0\Cherwell.Api.AssemblyInfoInputs.cache
+C:\Users\meshuser\Source\Repos\Cherwell.Api\obj\Debug\net6.0\Cherwell.Api.AssemblyInfo.cs
+C:\Users\meshuser\Source\Repos\Cherwell.Api\obj\Debug\net6.0\Cherwell.Api.csproj.CoreCompileInputs.cache

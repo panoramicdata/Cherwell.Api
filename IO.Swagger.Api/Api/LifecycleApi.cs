@@ -31,14 +31,14 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Gets the current lifecycle stage of a business object record
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessObjectDefinitionId"></param>
         /// <param name="recordId"></param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse</returns>
         [Get("/api/V1/{businessObjectDefinitionId}/records/{recordId}/stage")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse> LifecycleGetRecordStage([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("recordId")]string recordId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse> LifecycleGetRecordStage([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("recordId")]string recordId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get current lifecycle status for record
@@ -46,14 +46,14 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Gets the current lifecycle status of a business object record
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessObjectDefinitionId"></param>
         /// <param name="recordId"></param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse</returns>
         [Get("/api/V1/{businessObjectDefinitionId}/records/{recordId}/status")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse> LifecycleGetRecordStatus([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("recordId")]string recordId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse> LifecycleGetRecordStatus([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("recordId")]string recordId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get lifecycle stages
@@ -61,13 +61,13 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Gets all of the stages on the lifecycle for a Business Object
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessObjectDefinitionId"></param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsLifecycleGetStagesResponse</returns>
         [Get("/api/V1/{businessObjectDefinitionId}/lifecycle/stages")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsLifecycleGetStagesResponse> LifecycleGetStages([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsLifecycleGetStagesResponse> LifecycleGetStages([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get lifecycle statuses
@@ -75,13 +75,13 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Gets all of the statuses on the lifecycle for a Business Object
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessObjectDefinitionId"></param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsLifecycleGetStatusesResponse</returns>
         [Get("/api/V1/{businessObjectDefinitionId}/lifecycle/statuses")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsLifecycleGetStatusesResponse> LifecycleGetStatuses([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsLifecycleGetStatusesResponse> LifecycleGetStatuses([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get lifecycle transition options for record
@@ -89,14 +89,14 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Gets the lifecycle transition options currently available to a business object record
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessObjectDefinitionId"></param>
         /// <param name="recordId"></param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsLifecycleGetTransitionOptionsResponse</returns>
         [Get("/api/V1/{businessObjectDefinitionId}/records/{recordId}/transitionOptions")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsLifecycleGetTransitionOptionsResponse> LifecycleGetTransitionOptions([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("recordId")]string recordId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsLifecycleGetTransitionOptionsResponse> LifecycleGetTransitionOptions([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("recordId")]string recordId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get lifecycle transitions
@@ -104,13 +104,13 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Gets all of the transitions on the lifecycle for a Business Object
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessObjectDefinitionId"></param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsLifecycleGetTransitionsResponse</returns>
         [Get("/api/V1/{businessObjectDefinitionId}/lifecycle/transitions")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsLifecycleGetTransitionsResponse> LifecycleGetTransitions([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsLifecycleGetTransitionsResponse> LifecycleGetTransitions([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Transition a business object record
@@ -118,7 +118,7 @@ namespace IO.Swagger.Api
         /// <remarks>
         /// Transitions a business object record in to the specified lifecycle status
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessObjectDefinitionId"></param>
         /// <param name="recordId"></param>
         /// <param name="transitionRecordRequest"></param>
@@ -126,7 +126,7 @@ namespace IO.Swagger.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsResponseBase</returns>
         [Post("/api/V1/{businessObjectDefinitionId}/records/{recordId}/transitions")]
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsResponseBase> LifecycleTransitionRecord([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("recordId")]string recordId, [Body]TrebuchetWebApiDataContractsLifecycleTransitionRecordRequest transitionRecordRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TrebuchetWebApiDataContractsResponseBase> LifecycleTransitionRecord([Header("UserAgent")] string userAgent, [AliasAs("businessObjectDefinitionId")]string businessObjectDefinitionId, [AliasAs("recordId")]string recordId, [Body]TrebuchetWebApiDataContractsLifecycleTransitionRecordRequest transitionRecordRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
         #endregion Asynchronous Operations
     }
 }
