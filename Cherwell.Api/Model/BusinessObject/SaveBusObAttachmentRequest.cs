@@ -17,10 +17,10 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectSaveBusObAttachmentRequest
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectSaveBusObAttachmentRequest : IEquatable<BusinessObjectSaveBusObAttachmentRequest>, IValidatableObject
+    public partial class SaveBusObAttachmentRequest : IEquatable<SaveBusObAttachmentRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectSaveBusObAttachmentRequest" /> class.
+        /// Initializes a new instance of the <see cref="SaveBusObAttachmentRequest" /> class.
         /// </summary>
         /// <param name="AttachBusObId">AttachBusObId.</param>
         /// <param name="AttachBusObName">AttachBusObName.</param>
@@ -32,7 +32,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="BusObRecId">BusObRecId.</param>
         /// <param name="Comment">Comment.</param>
         /// <param name="IncludeLinks">IncludeLinks.</param>
-        public BusinessObjectSaveBusObAttachmentRequest(string AttachBusObId = default, string AttachBusObName = default, string AttachBusObPublicId = default, string AttachBusObRecId = default, string BusObId = default, string BusObName = default, string BusObPublicId = default, string BusObRecId = default, string Comment = default, bool? IncludeLinks = default(bool?))
+        public SaveBusObAttachmentRequest(string AttachBusObId = default, string AttachBusObName = default, string AttachBusObPublicId = default, string AttachBusObRecId = default, string BusObId = default, string BusObName = default, string BusObPublicId = default, string BusObRecId = default, string Comment = default, bool? IncludeLinks = default(bool?))
         {
             this.AttachBusObId = AttachBusObId;
             this.AttachBusObName = AttachBusObName;
@@ -135,7 +135,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectSaveBusObAttachmentRequest);
+            return this.Equals(obj as SaveBusObAttachmentRequest);
         }
 
         /// <summary>
@@ -143,7 +143,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectSaveBusObAttachmentRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectSaveBusObAttachmentRequest? other)
+        public bool Equals(SaveBusObAttachmentRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

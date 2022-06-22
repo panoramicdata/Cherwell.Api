@@ -17,15 +17,15 @@ namespace Cherwell.Api.Model.Core
     /// CoreSimplePromptValue
     /// </summary>
     [DataContract]
-    public partial class CoreSimplePromptValue : IEquatable<CoreSimplePromptValue>, IValidatableObject
+    public partial class SimplePromptValue : IEquatable<SimplePromptValue>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CoreSimplePromptValue" /> class.
+        /// Initializes a new instance of the <see cref="SimplePromptValue" /> class.
         /// </summary>
         /// <param name="PromptDefId">PromptDefId.</param>
         /// <param name="PromptName">PromptName.</param>
         /// <param name="Value">Value.</param>
-        public CoreSimplePromptValue(string PromptDefId = default, string PromptName = default, string Value = default)
+        public SimplePromptValue(string PromptDefId = default, string PromptName = default, string Value = default)
         {
             this.PromptDefId = PromptDefId;
             this.PromptName = PromptName;
@@ -79,7 +79,7 @@ namespace Cherwell.Api.Model.Core
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CoreSimplePromptValue);
+            return this.Equals(obj as SimplePromptValue);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreSimplePromptValue to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreSimplePromptValue? other)
+        public bool Equals(SimplePromptValue? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

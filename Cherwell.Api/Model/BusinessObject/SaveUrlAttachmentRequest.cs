@@ -17,10 +17,10 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectSaveUrlAttachmentRequest
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectSaveUrlAttachmentRequest : IEquatable<BusinessObjectSaveUrlAttachmentRequest>, IValidatableObject
+    public partial class SaveUrlAttachmentRequest : IEquatable<SaveUrlAttachmentRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectSaveUrlAttachmentRequest" /> class.
+        /// Initializes a new instance of the <see cref="SaveUrlAttachmentRequest" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObName">BusObName.</param>
@@ -30,7 +30,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="DisplayText">DisplayText.</param>
         /// <param name="IncludeLinks">IncludeLinks.</param>
         /// <param name="Url">Url.</param>
-        public BusinessObjectSaveUrlAttachmentRequest(string BusObId = default, string BusObName = default, string BusObPublicId = default, string BusObRecId = default, string Comment = default, string DisplayText = default, bool? IncludeLinks = default(bool?), string Url = default)
+        public SaveUrlAttachmentRequest(string BusObId = default, string BusObName = default, string BusObPublicId = default, string BusObRecId = default, string Comment = default, string DisplayText = default, bool? IncludeLinks = default(bool?), string Url = default)
         {
             this.BusObId = BusObId;
             this.BusObName = BusObName;
@@ -119,7 +119,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectSaveUrlAttachmentRequest);
+            return this.Equals(obj as SaveUrlAttachmentRequest);
         }
 
         /// <summary>
@@ -127,7 +127,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectSaveUrlAttachmentRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectSaveUrlAttachmentRequest? other)
+        public bool Equals(SaveUrlAttachmentRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

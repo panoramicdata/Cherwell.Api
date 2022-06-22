@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectRelatedSaveResponse
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectRelatedSaveResponse : IEquatable<BusinessObjectRelatedSaveResponse>, IValidatableObject
+    public partial class RelatedSaveResponse : IEquatable<RelatedSaveResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Api.Model.BusinessObject
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectRelatedSaveResponse" /> class.
+        /// Initializes a new instance of the <see cref="RelatedSaveResponse" /> class.
         /// </summary>
         /// <param name="ParentBusObId">ParentBusObId.</param>
         /// <param name="ParentBusObPublicId">ParentBusObPublicId.</param>
@@ -330,7 +330,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public BusinessObjectRelatedSaveResponse(string ParentBusObId = default, string ParentBusObPublicId = default, string ParentBusObRecId = default, string RelationshipId = default, string BusObPublicId = default, string BusObRecId = default, string CacheKey = default, List<BusinessObjectFieldValidationError> FieldValidationErrors = default(List<BusinessObjectFieldValidationError>), List<BusinessObjectNotificationTrigger> NotificationTriggers = default(List<BusinessObjectNotificationTrigger>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public RelatedSaveResponse(string ParentBusObId = default, string ParentBusObPublicId = default, string ParentBusObRecId = default, string RelationshipId = default, string BusObPublicId = default, string BusObRecId = default, string CacheKey = default, List<FieldValidationError> FieldValidationErrors = default(List<FieldValidationError>), List<NotificationTrigger> NotificationTriggers = default(List<NotificationTrigger>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.ParentBusObId = ParentBusObId;
             this.ParentBusObPublicId = ParentBusObPublicId;
@@ -386,12 +386,12 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets FieldValidationErrors
         /// </summary>
         [DataMember(Name = "fieldValidationErrors", EmitDefaultValue = false)]
-        public List<BusinessObjectFieldValidationError> FieldValidationErrors { get; set; }
+        public List<FieldValidationError> FieldValidationErrors { get; set; }
         /// <summary>
         /// Gets or Sets NotificationTriggers
         /// </summary>
         [DataMember(Name = "notificationTriggers", EmitDefaultValue = false)]
-        public List<BusinessObjectNotificationTrigger> NotificationTriggers { get; set; }
+        public List<NotificationTrigger> NotificationTriggers { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -449,7 +449,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectRelatedSaveResponse);
+            return this.Equals(obj as RelatedSaveResponse);
         }
 
         /// <summary>
@@ -457,7 +457,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectRelatedSaveResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectRelatedSaveResponse? other)
+        public bool Equals(RelatedSaveResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

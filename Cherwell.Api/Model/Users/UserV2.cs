@@ -335,7 +335,7 @@ public partial class UsersUserV2 : IEquatable<UsersUserV2>, IValidatableObject
     /// <param name="ErrorMessage">ErrorMessage.</param>
     /// <param name="HasError">HasError.</param>
     /// <param name="HttpStatusCode">HttpStatusCode.</param>
-    public UsersUserV2(bool? AccountLocked = default, DateTime? CreateDateTime = default, string DisplayName = default, List<BusinessObjectFieldTemplateItem> Fields = default, DateTime? LastPasswordResetDate = default, DateTime? LastResetDateTime = default, bool? LdapRequired = default, bool? PasswordNeverExpires = default, string PublicId = default, string RecordId = default, string SecurityGroupId = default, string ShortDisplayName = default, bool? UserCannotChangePassword = default, bool? UserMustResetPasswordAtNextLogin = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
+    public UsersUserV2(bool? AccountLocked = default, DateTime? CreateDateTime = default, string DisplayName = default, List<FieldTemplateItem> Fields = default, DateTime? LastPasswordResetDate = default, DateTime? LastResetDateTime = default, bool? LdapRequired = default, bool? PasswordNeverExpires = default, string PublicId = default, string RecordId = default, string SecurityGroupId = default, string ShortDisplayName = default, bool? UserCannotChangePassword = default, bool? UserMustResetPasswordAtNextLogin = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
     {
         this.AccountLocked = AccountLocked;
         this.CreateDateTime = CreateDateTime;
@@ -376,7 +376,7 @@ public partial class UsersUserV2 : IEquatable<UsersUserV2>, IValidatableObject
     /// Gets or Sets Fields
     /// </summary>
     [DataMember(Name = "fields", EmitDefaultValue = false)]
-    public List<BusinessObjectFieldTemplateItem> Fields { get; set; }
+    public List<FieldTemplateItem> Fields { get; set; }
     /// <summary>
     /// Gets or Sets LastPasswordResetDate
     /// </summary>

@@ -17,10 +17,10 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectFieldDefinition
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectFieldDefinition : IEquatable<BusinessObjectFieldDefinition>, IValidatableObject
+    public partial class FieldDefinition : IEquatable<FieldDefinition>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectFieldDefinition" /> class.
+        /// Initializes a new instance of the <see cref="FieldDefinition" /> class.
         /// </summary>
         /// <param name="AutoFill">AutoFill.</param>
         /// <param name="Calculated">Calculated.</param>
@@ -42,7 +42,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="TypeLocalized">TypeLocalized.</param>
         /// <param name="Validated">Validated.</param>
         /// <param name="WholeDigits">WholeDigits.</param>
-        public BusinessObjectFieldDefinition(bool? AutoFill = default, bool? Calculated = default, string Category = default, int? DecimalDigits = default, string Description = default, string Details = default, string DisplayName = default, bool? Enabled = default, string FieldId = default, bool? HasDate = default, bool? HasTime = default, bool? IsFullTextSearchable = default, string MaximumSize = default, string Name = default, bool? ReadOnly = default, bool? Required = default, string Type = default, string TypeLocalized = default, bool? Validated = default, int? WholeDigits = default)
+        public FieldDefinition(bool? AutoFill = default, bool? Calculated = default, string Category = default, int? DecimalDigits = default, string Description = default, string Details = default, string DisplayName = default, bool? Enabled = default, string FieldId = default, bool? HasDate = default, bool? HasTime = default, bool? IsFullTextSearchable = default, string MaximumSize = default, string Name = default, bool? ReadOnly = default, bool? Required = default, string Type = default, string TypeLocalized = default, bool? Validated = default, int? WholeDigits = default)
         {
             this.AutoFill = AutoFill;
             this.Calculated = Calculated;
@@ -215,7 +215,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectFieldDefinition);
+            return this.Equals(obj as FieldDefinition);
         }
 
         /// <summary>
@@ -223,7 +223,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectFieldDefinition to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectFieldDefinition? other)
+        public bool Equals(FieldDefinition? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

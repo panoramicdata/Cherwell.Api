@@ -25,7 +25,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of void</returns>
         [Delete("/api/V1/deletegalleryimage/standinkey/{standinkey}")]
-        Task CoreDeleteGalleryImageByStandInKeyV1([Header("UserAgent")] string userAgent, [AliasAs("standinkey")]string standinkey, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task CoreDeleteGalleryImageByStandInKey([Header("UserAgent")] string userAgent, [AliasAs("standinkey")]string standinkey, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get built-in images
@@ -41,7 +41,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of string</returns>
         [Get("/api/V1/getgalleryimage/name/{name}")]
-        Task<string> CoreGetGalleryImageV1([Header("UserAgent")] string userAgent, [AliasAs("name")]string name, [AliasAs("width")]int? width = null, [AliasAs("height")]int? height = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<string> CoreGetGalleryImage([Header("UserAgent")] string userAgent, [AliasAs("name")]string name, [AliasAs("width")]int? width = null, [AliasAs("height")]int? height = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get gallery images by scope, scopeowner, and folder
@@ -58,7 +58,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/getgalleryimages/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
-        Task<CoreManagerData> CoreGetGalleryImagesFolderV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ManagerData> CoreGetGalleryImagesFolder([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get gallery images by scope and scopeowner
@@ -74,7 +74,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/getgalleryimages/scope/{scope}/scopeowner/{scopeowner}")]
-        Task<CoreManagerData> CoreGetGalleryImagesScopeOwnerV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ManagerData> CoreGetGalleryImagesScopeOwner([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get gallery images by scope
@@ -89,7 +89,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/getgalleryimages/scope/{scope}")]
-        Task<CoreManagerData> CoreGetGalleryImagesScopeV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ManagerData> CoreGetGalleryImagesScope([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all gallery images
@@ -103,7 +103,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/getgalleryimages")]
-        Task<CoreManagerData> CoreGetGalleryImagesV1([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ManagerData> CoreGetGalleryImages([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get a  stored value
@@ -117,7 +117,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of CoreStoredValueResponse</returns>
         [Get("/api/V1/getstoredvalue/standinkey/{standInKey}")]
-        Task<CoreStoredValueResponse> CoreGetStoredValueV1([Header("UserAgent")] string userAgent, [AliasAs("standInKey")]string standInKey, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<StoredValueResponse> CoreGetStoredValue([Header("UserAgent")] string userAgent, [AliasAs("standInKey")]string standInKey, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get stored values by folder
@@ -134,7 +134,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/storedvalues/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
-        Task<CoreManagerData> CoreGetStoredValuesFolderV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ManagerData> CoreGetStoredValuesFolder([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get stored values by scope owner
@@ -150,7 +150,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/storedvalues/scope/{scope}/scopeowner/{scopeowner}")]
-        Task<CoreManagerData> CoreGetStoredValuesScopeOwnerV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ManagerData> CoreGetStoredValuesScopeOwner([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get stored values by scope
@@ -165,7 +165,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/storedvalues/scope/{scope}")]
-        Task<CoreManagerData> CoreGetStoredValuesScopeV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ManagerData> CoreGetStoredValuesScope([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Gets all the stored values in the system
@@ -179,7 +179,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/storedvalues")]
-        Task<CoreManagerData> CoreGetStoredValuesV1([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ManagerData> CoreGetStoredValues([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get a list of the views
@@ -192,7 +192,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of CoreViewsResponse</returns>
         [Get("/api/V1/getviews")]
-        Task<CoreViewsResponse> CoreGetViewsV1([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ViewsResponse> CoreGetViews([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Create or update a gallery image
@@ -206,7 +206,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of CoreSaveGalleryImageResponse</returns>
         [Post("/api/V1/savegalleryimage")]
-        Task<CoreSaveGalleryImageResponse> CoreSaveGalleryImageV1([Header("UserAgent")] string userAgent, [Body]CoreSaveGalleryImageRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SaveGalleryImageResponse> CoreSaveGalleryImage([Header("UserAgent")] string userAgent, [Body]SaveGalleryImageRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Create or update a stored value
@@ -220,7 +220,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of CoreStoredValueResponse</returns>
         [Post("/api/V1/savestoredvalue")]
-        Task<CoreStoredValueResponse> CoreSaveStoredValueV1([Header("UserAgent")] string userAgent, [Body]CoreSaveStoredValueRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<StoredValueResponse> CoreSaveStoredValue([Header("UserAgent")] string userAgent, [Body]SaveStoredValueRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Set the culture for the current user
@@ -234,7 +234,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of string</returns>
         [Put("/api/V1/setculture/culturecode/{culturecode}")]
-        Task<string> CoreSetCultureV1([Header("UserAgent")] string userAgent, [AliasAs("culturecode")]string culturecode, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<string> CoreSetCulture([Header("UserAgent")] string userAgent, [AliasAs("culturecode")]string culturecode, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
         #endregion Asynchronous Operations
     }
 }

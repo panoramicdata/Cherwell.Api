@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectRelatedSaveRequest
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectRelatedSaveRequest : IEquatable<BusinessObjectRelatedSaveRequest>, IValidatableObject
+    public partial class RelatedSaveRequest : IEquatable<RelatedSaveRequest>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets CacheScope
@@ -51,7 +51,7 @@ namespace Cherwell.Api.Model.BusinessObject
         [DataMember(Name = "cacheScope", EmitDefaultValue = false)]
         public EnumCacheScope? CacheScope { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectRelatedSaveRequest" /> class.
+        /// Initializes a new instance of the <see cref="RelatedSaveRequest" /> class.
         /// </summary>
         /// <param name="ParentBusObId">ParentBusObId.</param>
         /// <param name="ParentBusObPublicId">ParentBusObPublicId.</param>
@@ -64,7 +64,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="CacheScope">CacheScope.</param>
         /// <param name="Fields">Fields.</param>
         /// <param name="Persist">Persist.</param>
-        public BusinessObjectRelatedSaveRequest(string ParentBusObId = default, string ParentBusObPublicId = default, string ParentBusObRecId = default, string RelationshipId = default, string BusObId = default, string BusObPublicId = default, string BusObRecId = default, string CacheKey = default, EnumCacheScope? CacheScope = default(EnumCacheScope?), List<BusinessObjectFieldTemplateItem> Fields = default(List<BusinessObjectFieldTemplateItem>), bool? Persist = default(bool?))
+        public RelatedSaveRequest(string ParentBusObId = default, string ParentBusObPublicId = default, string ParentBusObRecId = default, string RelationshipId = default, string BusObId = default, string BusObPublicId = default, string BusObRecId = default, string CacheKey = default, EnumCacheScope? CacheScope = default(EnumCacheScope?), List<FieldTemplateItem> Fields = default(List<FieldTemplateItem>), bool? Persist = default(bool?))
         {
             this.ParentBusObId = ParentBusObId;
             this.ParentBusObPublicId = ParentBusObPublicId;
@@ -123,7 +123,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets Fields
         /// </summary>
         [DataMember(Name = "fields", EmitDefaultValue = false)]
-        public List<BusinessObjectFieldTemplateItem> Fields { get; set; }
+        public List<FieldTemplateItem> Fields { get; set; }
         /// <summary>
         /// Gets or Sets Persist
         /// </summary>
@@ -169,7 +169,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectRelatedSaveRequest);
+            return this.Equals(obj as RelatedSaveRequest);
         }
 
         /// <summary>
@@ -177,7 +177,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectRelatedSaveRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectRelatedSaveRequest? other)
+        public bool Equals(RelatedSaveRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

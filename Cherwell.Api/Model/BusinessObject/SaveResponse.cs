@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectSaveResponse
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectSaveResponse : IEquatable<BusinessObjectSaveResponse>, IValidatableObject
+    public partial class SaveResponse : IEquatable<SaveResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Api.Model.BusinessObject
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectSaveResponse" /> class.
+        /// Initializes a new instance of the <see cref="SaveResponse" /> class.
         /// </summary>
         /// <param name="BusObPublicId">BusObPublicId.</param>
         /// <param name="BusObRecId">BusObRecId.</param>
@@ -326,7 +326,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public BusinessObjectSaveResponse(string BusObPublicId = default, string BusObRecId = default, string CacheKey = default, List<BusinessObjectFieldValidationError> FieldValidationErrors = default(List<BusinessObjectFieldValidationError>), List<BusinessObjectNotificationTrigger> NotificationTriggers = default(List<BusinessObjectNotificationTrigger>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public SaveResponse(string BusObPublicId = default, string BusObRecId = default, string CacheKey = default, List<FieldValidationError> FieldValidationErrors = default(List<FieldValidationError>), List<NotificationTrigger> NotificationTriggers = default(List<NotificationTrigger>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.BusObPublicId = BusObPublicId;
             this.BusObRecId = BusObRecId;
@@ -358,12 +358,12 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets FieldValidationErrors
         /// </summary>
         [DataMember(Name = "fieldValidationErrors", EmitDefaultValue = false)]
-        public List<BusinessObjectFieldValidationError> FieldValidationErrors { get; set; }
+        public List<FieldValidationError> FieldValidationErrors { get; set; }
         /// <summary>
         /// Gets or Sets NotificationTriggers
         /// </summary>
         [DataMember(Name = "notificationTriggers", EmitDefaultValue = false)]
-        public List<BusinessObjectNotificationTrigger> NotificationTriggers { get; set; }
+        public List<NotificationTrigger> NotificationTriggers { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -417,7 +417,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectSaveResponse);
+            return this.Equals(obj as SaveResponse);
         }
 
         /// <summary>
@@ -425,7 +425,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectSaveResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectSaveResponse? other)
+        public bool Equals(SaveResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

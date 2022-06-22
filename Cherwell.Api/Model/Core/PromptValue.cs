@@ -17,10 +17,10 @@ namespace Cherwell.Api.Model.Core
     /// CorePromptValue
     /// </summary>
     [DataContract]
-    public partial class CorePromptValue : IEquatable<CorePromptValue>, IValidatableObject
+    public partial class PromptValue : IEquatable<PromptValue>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CorePromptValue" /> class.
+        /// Initializes a new instance of the <see cref="PromptValue" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="CollectionStoreEntireRow">CollectionStoreEntireRow.</param>
@@ -30,7 +30,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="PromptId">PromptId.</param>
         /// <param name="Value">Value.</param>
         /// <param name="ValueIsRecId">ValueIsRecId.</param>
-        public CorePromptValue(string BusObId = default, string CollectionStoreEntireRow = default, string CollectionValueField = default, string FieldId = default, string ListReturnFieldId = default, string PromptId = default, Object Value = default(Object), bool? ValueIsRecId = default(bool?))
+        public PromptValue(string BusObId = default, string CollectionStoreEntireRow = default, string CollectionValueField = default, string FieldId = default, string ListReturnFieldId = default, string PromptId = default, Object Value = default(Object), bool? ValueIsRecId = default(bool?))
         {
             this.BusObId = BusObId;
             this.CollectionStoreEntireRow = CollectionStoreEntireRow;
@@ -119,7 +119,7 @@ namespace Cherwell.Api.Model.Core
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CorePromptValue);
+            return this.Equals(obj as PromptValue);
         }
 
         /// <summary>
@@ -127,7 +127,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CorePromptValue to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CorePromptValue? other)
+        public bool Equals(PromptValue? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

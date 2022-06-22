@@ -17,13 +17,13 @@ namespace Cherwell.Api.Model.Core
     /// CoreLogBatchRequest
     /// </summary>
     [DataContract]
-    public partial class CoreLogBatchRequest : IEquatable<CoreLogBatchRequest>, IValidatableObject
+    public partial class LogBatchRequest : IEquatable<LogBatchRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CoreLogBatchRequest" /> class.
+        /// Initializes a new instance of the <see cref="LogBatchRequest" /> class.
         /// </summary>
         /// <param name="LogRequests">LogRequests.</param>
-        public CoreLogBatchRequest(List<CoreLogRequest> LogRequests = default)
+        public LogBatchRequest(List<LogRequest> LogRequests = default)
         {
             this.LogRequests = LogRequests;
         }
@@ -32,7 +32,7 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets LogRequests
         /// </summary>
         [DataMember(Name = "logRequests", EmitDefaultValue = false)]
-        public List<CoreLogRequest> LogRequests { get; set; }
+        public List<LogRequest> LogRequests { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -63,7 +63,7 @@ namespace Cherwell.Api.Model.Core
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CoreLogBatchRequest);
+            return this.Equals(obj as LogBatchRequest);
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreLogBatchRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreLogBatchRequest? other)
+        public bool Equals(LogBatchRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

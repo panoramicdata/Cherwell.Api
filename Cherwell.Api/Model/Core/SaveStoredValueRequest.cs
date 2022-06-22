@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.Core
     /// CoreSaveStoredValueRequest
     /// </summary>
     [DataContract]
-    public partial class CoreSaveStoredValueRequest : IEquatable<CoreSaveStoredValueRequest>, IValidatableObject
+    public partial class SaveStoredValueRequest : IEquatable<SaveStoredValueRequest>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets StoredValueType
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.Core
         [DataMember(Name = "storedValueType", EmitDefaultValue = false)]
         public EnumStoredValueType? StoredValueType { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CoreSaveStoredValueRequest" /> class.
+        /// Initializes a new instance of the <see cref="SaveStoredValueRequest" /> class.
         /// </summary>
         /// <param name="Description">Description.</param>
         /// <param name="Folder">Folder.</param>
@@ -97,7 +97,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="StandInKey">StandInKey.</param>
         /// <param name="StoredValueType">StoredValueType.</param>
         /// <param name="Value">Value.</param>
-        public CoreSaveStoredValueRequest(string Description = default, string Folder = default, string Name = default, string Scope = default, string ScopeOwner = default, string StandInKey = default, EnumStoredValueType? StoredValueType = default(EnumStoredValueType?), string Value = default)
+        public SaveStoredValueRequest(string Description = default, string Folder = default, string Name = default, string Scope = default, string ScopeOwner = default, string StandInKey = default, EnumStoredValueType? StoredValueType = default(EnumStoredValueType?), string Value = default)
         {
             this.Description = Description;
             this.Folder = Folder;
@@ -181,7 +181,7 @@ namespace Cherwell.Api.Model.Core
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CoreSaveStoredValueRequest);
+            return this.Equals(obj as SaveStoredValueRequest);
         }
 
         /// <summary>
@@ -189,7 +189,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreSaveStoredValueRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreSaveStoredValueRequest? other)
+        public bool Equals(SaveStoredValueRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

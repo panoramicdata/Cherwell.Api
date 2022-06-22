@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.Core
     /// CoreAction
     /// </summary>
     [DataContract]
-    public partial class CoreAction : IEquatable<CoreAction>, IValidatableObject
+    public partial class Action : IEquatable<Action>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets ActionType
@@ -191,7 +191,7 @@ namespace Cherwell.Api.Model.Core
         [DataMember(Name = "loginVisibilityMode", EmitDefaultValue = false)]
         public EnumLoginVisibilityMode? LoginVisibilityMode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CoreAction" /> class.
+        /// Initializes a new instance of the <see cref="Action" /> class.
         /// </summary>
         /// <param name="ActionCommand">ActionCommand.</param>
         /// <param name="ActionType">ActionType.</param>
@@ -208,7 +208,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="Name">Name.</param>
         /// <param name="Parameters">Parameters.</param>
         /// <param name="Visible">Visible.</param>
-        public CoreAction(string ActionCommand = default, EnumActionType? ActionType = default(EnumActionType?), bool? AlwaysTextAndImage = default(bool?), bool? BeginGroup = default(bool?), List<CoreAction> ChildActions = default(List<CoreAction>), List<string> Dependencies = default(List<string>), string DisplayText = default, bool? Enabled = default(bool?), string GalleryImage = default, string HelpText = default, EnumLoginEnabledMode? LoginEnabledMode = default(EnumLoginEnabledMode?), EnumLoginVisibilityMode? LoginVisibilityMode = default(EnumLoginVisibilityMode?), string Name = default, Dictionary<string, string> Parameters = default(Dictionary<string, string>), bool? Visible = default(bool?))
+        public Action(string ActionCommand = default, EnumActionType? ActionType = default(EnumActionType?), bool? AlwaysTextAndImage = default(bool?), bool? BeginGroup = default(bool?), List<Action> ChildActions = default(List<Action>), List<string> Dependencies = default(List<string>), string DisplayText = default, bool? Enabled = default(bool?), string GalleryImage = default, string HelpText = default, EnumLoginEnabledMode? LoginEnabledMode = default(EnumLoginEnabledMode?), EnumLoginVisibilityMode? LoginVisibilityMode = default(EnumLoginVisibilityMode?), string Name = default, Dictionary<string, string> Parameters = default(Dictionary<string, string>), bool? Visible = default(bool?))
         {
             this.ActionCommand = ActionCommand;
             this.ActionType = ActionType;
@@ -246,7 +246,7 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets ChildActions
         /// </summary>
         [DataMember(Name = "childActions", EmitDefaultValue = false)]
-        public List<CoreAction> ChildActions { get; set; }
+        public List<Action> ChildActions { get; set; }
         /// <summary>
         /// Gets or Sets Dependencies
         /// </summary>
@@ -331,7 +331,7 @@ namespace Cherwell.Api.Model.Core
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CoreAction);
+            return this.Equals(obj as Action);
         }
 
         /// <summary>
@@ -339,7 +339,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreAction to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreAction? other)
+        public bool Equals(Action? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

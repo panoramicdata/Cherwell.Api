@@ -17,10 +17,10 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectBusObActivity
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectBusObActivity : IEquatable<BusinessObjectBusObActivity>, IValidatableObject
+    public partial class BusObActivity : IEquatable<BusObActivity>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectBusObActivity" /> class.
+        /// Initializes a new instance of the <see cref="BusObActivity" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="ParentBusObDefId">ParentBusObDefId.</param>
@@ -34,7 +34,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="Created">Created.</param>
         /// <param name="Modified">Modified.</param>
         /// <param name="ModifiedBy">ModifiedBy.</param>
-        public BusinessObjectBusObActivity(string Id = default, string ParentBusObDefId = default, string ParentBusObRecId = default, string HistoryBusObDefId = default, string HistoryBusObRecId = default, string Type = default, string Title = default, string Body = default, string CreatedBy = default, DateTime? Created = default(DateTime?), DateTime? Modified = default(DateTime?), string ModifiedBy = default)
+        public BusObActivity(string Id = default, string ParentBusObDefId = default, string ParentBusObRecId = default, string HistoryBusObDefId = default, string HistoryBusObRecId = default, string Type = default, string Title = default, string Body = default, string CreatedBy = default, DateTime? Created = default(DateTime?), DateTime? Modified = default(DateTime?), string ModifiedBy = default)
         {
             this.Id = Id;
             this.ParentBusObDefId = ParentBusObDefId;
@@ -151,7 +151,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectBusObActivity);
+            return this.Equals(obj as BusObActivity);
         }
 
         /// <summary>
@@ -159,7 +159,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectBusObActivity to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectBusObActivity? other)
+        public bool Equals(BusObActivity? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

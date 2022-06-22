@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.Core
     /// CoreSaveGalleryImageRequest
     /// </summary>
     [DataContract]
-    public partial class CoreSaveGalleryImageRequest : IEquatable<CoreSaveGalleryImageRequest>, IValidatableObject
+    public partial class SaveGalleryImageRequest : IEquatable<SaveGalleryImageRequest>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets ImageType
@@ -51,7 +51,7 @@ namespace Cherwell.Api.Model.Core
         [DataMember(Name = "imageType", EmitDefaultValue = false)]
         public EnumImageType? ImageType { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CoreSaveGalleryImageRequest" /> class.
+        /// Initializes a new instance of the <see cref="SaveGalleryImageRequest" /> class.
         /// </summary>
         /// <param name="Base64EncodedImageData">Base64EncodedImageData.</param>
         /// <param name="Description">Description.</param>
@@ -61,7 +61,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="Scope">Scope.</param>
         /// <param name="ScopeOwner">ScopeOwner.</param>
         /// <param name="StandInKey">StandInKey.</param>
-        public CoreSaveGalleryImageRequest(string Base64EncodedImageData = default, string Description = default, string Folder = default, EnumImageType? ImageType = default(EnumImageType?), string Name = default, string Scope = default, string ScopeOwner = default, string StandInKey = default)
+        public SaveGalleryImageRequest(string Base64EncodedImageData = default, string Description = default, string Folder = default, EnumImageType? ImageType = default(EnumImageType?), string Name = default, string Scope = default, string ScopeOwner = default, string StandInKey = default)
         {
             this.Base64EncodedImageData = Base64EncodedImageData;
             this.Description = Description;
@@ -145,7 +145,7 @@ namespace Cherwell.Api.Model.Core
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CoreSaveGalleryImageRequest);
+            return this.Equals(obj as SaveGalleryImageRequest);
         }
 
         /// <summary>
@@ -153,7 +153,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreSaveGalleryImageRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreSaveGalleryImageRequest? other)
+        public bool Equals(SaveGalleryImageRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

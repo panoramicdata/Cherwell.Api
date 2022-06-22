@@ -28,7 +28,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="FieldDefinitions">FieldDefinitions.</param>
         /// <param name="RelationshipId">RelationshipId.</param>
         /// <param name="Target">Target.</param>
-        public BusinessObjectRelationship(string Cardinality = default, string Description = default, string DisplayName = default, List<BusinessObjectFieldDefinition> FieldDefinitions = default(List<BusinessObjectFieldDefinition>), string RelationshipId = default, string Target = default)
+        public BusinessObjectRelationship(string Cardinality = default, string Description = default, string DisplayName = default, List<FieldDefinition> FieldDefinitions = default(List<FieldDefinition>), string RelationshipId = default, string Target = default)
         {
             this.Cardinality = Cardinality;
             this.Description = Description;
@@ -57,7 +57,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets FieldDefinitions
         /// </summary>
         [DataMember(Name = "fieldDefinitions", EmitDefaultValue = false)]
-        public List<BusinessObjectFieldDefinition> FieldDefinitions { get; set; }
+        public List<FieldDefinition> FieldDefinitions { get; set; }
         /// <summary>
         /// Gets or Sets RelationshipId
         /// </summary>

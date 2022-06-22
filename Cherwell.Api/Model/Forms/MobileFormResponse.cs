@@ -327,7 +327,7 @@ namespace Cherwell.Api.Model.Forms
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public FormsMobileFormResponse(List<CoreAction> Actions = default(List<CoreAction>), List<BusinessObjectAttachment> Attachments = default(List<BusinessObjectAttachment>), string GalleryImage = default, CoreLocation LocationInformation = default(CoreLocation), List<FormsSection> Sections = default(List<FormsSection>), string Title = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public FormsMobileFormResponse(List<Core.Action> Actions = default(List<global::Cherwell.Api.Model.Core.Action>), List<ObjectAttachment> Attachments = default(List<ObjectAttachment>), string GalleryImage = default, Location LocationInformation = default(Location), List<FormsSection> Sections = default(List<FormsSection>), string Title = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Actions = Actions;
             this.Attachments = Attachments;
@@ -345,12 +345,12 @@ namespace Cherwell.Api.Model.Forms
         /// Gets or Sets Actions
         /// </summary>
         [DataMember(Name = "actions", EmitDefaultValue = false)]
-        public List<CoreAction> Actions { get; set; }
+        public List<Core.Action> Actions { get; set; }
         /// <summary>
         /// Gets or Sets Attachments
         /// </summary>
         [DataMember(Name = "attachments", EmitDefaultValue = false)]
-        public List<BusinessObjectAttachment> Attachments { get; set; }
+        public List<ObjectAttachment> Attachments { get; set; }
         /// <summary>
         /// Gets or Sets GalleryImage
         /// </summary>
@@ -360,7 +360,7 @@ namespace Cherwell.Api.Model.Forms
         /// Gets or Sets LocationInformation
         /// </summary>
         [DataMember(Name = "locationInformation", EmitDefaultValue = false)]
-        public CoreLocation LocationInformation { get; set; }
+        public Location LocationInformation { get; set; }
         /// <summary>
         /// Gets or Sets Sections
         /// </summary>

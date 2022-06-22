@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectAttachmentsRequest
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectAttachmentsRequest : IEquatable<BusinessObjectAttachmentsRequest>, IValidatableObject
+    public partial class AttachmentsRequest : IEquatable<AttachmentsRequest>, IValidatableObject
     {
 
         /// <summary>
@@ -120,7 +120,7 @@ namespace Cherwell.Api.Model.BusinessObject
         [DataMember(Name = "types", EmitDefaultValue = false)]
         public List<EnumTypes> Types { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectAttachmentsRequest" /> class.
+        /// Initializes a new instance of the <see cref="AttachmentsRequest" /> class.
         /// </summary>
         /// <param name="AttachmentId">AttachmentId.</param>
         /// <param name="AttachmentTypes">AttachmentTypes.</param>
@@ -130,7 +130,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="BusObRecId">BusObRecId.</param>
         /// <param name="IncludeLinks">IncludeLinks.</param>
         /// <param name="Types">Types.</param>
-        public BusinessObjectAttachmentsRequest(string AttachmentId = default, List<EnumAttachmentTypes> AttachmentTypes = default(List<EnumAttachmentTypes>), string BusObId = default, string BusObName = default, string BusObPublicId = default, string BusObRecId = default, bool? IncludeLinks = default(bool?), List<EnumTypes> Types = default(List<EnumTypes>))
+        public AttachmentsRequest(string AttachmentId = default, List<EnumAttachmentTypes> AttachmentTypes = default(List<EnumAttachmentTypes>), string BusObId = default, string BusObName = default, string BusObPublicId = default, string BusObRecId = default, bool? IncludeLinks = default(bool?), List<EnumTypes> Types = default(List<EnumTypes>))
         {
             this.AttachmentId = AttachmentId;
             this.AttachmentTypes = AttachmentTypes;
@@ -209,7 +209,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectAttachmentsRequest);
+            return this.Equals(obj as AttachmentsRequest);
         }
 
         /// <summary>
@@ -217,7 +217,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectAttachmentsRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectAttachmentsRequest? other)
+        public bool Equals(AttachmentsRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

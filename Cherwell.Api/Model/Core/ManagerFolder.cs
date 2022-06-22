@@ -17,10 +17,10 @@ namespace Cherwell.Api.Model.Core
     /// CoreManagerFolder
     /// </summary>
     [DataContract]
-    public partial class CoreManagerFolder : IEquatable<CoreManagerFolder>, IValidatableObject
+    public partial class ManagerFolder : IEquatable<ManagerFolder>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CoreManagerFolder" /> class.
+        /// Initializes a new instance of the <see cref="ManagerFolder" /> class.
         /// </summary>
         /// <param name="Association">Association.</param>
         /// <param name="ChildFolders">ChildFolders.</param>
@@ -32,7 +32,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="ParentId">ParentId.</param>
         /// <param name="Scope">Scope.</param>
         /// <param name="ScopeOwner">ScopeOwner.</param>
-        public CoreManagerFolder(string Association = default, List<CoreManagerFolder> ChildFolders = default(List<CoreManagerFolder>), List<CoreManagerItem> ChildItems = default(List<CoreManagerItem>), string Id = default, List<CoreLink> Links = default(List<CoreLink>), string LocalizedScopeName = default, string Name = default, string ParentId = default, string Scope = default, string ScopeOwner = default)
+        public ManagerFolder(string Association = default, List<ManagerFolder> ChildFolders = default(List<ManagerFolder>), List<ManagerItem> ChildItems = default(List<ManagerItem>), string Id = default, List<Link> Links = default(List<Link>), string LocalizedScopeName = default, string Name = default, string ParentId = default, string Scope = default, string ScopeOwner = default)
         {
             this.Association = Association;
             this.ChildFolders = ChildFolders;
@@ -55,12 +55,12 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets ChildFolders
         /// </summary>
         [DataMember(Name = "childFolders", EmitDefaultValue = false)]
-        public List<CoreManagerFolder> ChildFolders { get; set; }
+        public List<ManagerFolder> ChildFolders { get; set; }
         /// <summary>
         /// Gets or Sets ChildItems
         /// </summary>
         [DataMember(Name = "childItems", EmitDefaultValue = false)]
-        public List<CoreManagerItem> ChildItems { get; set; }
+        public List<ManagerItem> ChildItems { get; set; }
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
@@ -70,7 +70,7 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name = "links", EmitDefaultValue = false)]
-        public List<CoreLink> Links { get; set; }
+        public List<Link> Links { get; set; }
         /// <summary>
         /// Gets or Sets LocalizedScopeName
         /// </summary>
@@ -135,7 +135,7 @@ namespace Cherwell.Api.Model.Core
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CoreManagerFolder);
+            return this.Equals(obj as ManagerFolder);
         }
 
         /// <summary>
@@ -143,7 +143,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreManagerFolder to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreManagerFolder? other)
+        public bool Equals(ManagerFolder? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

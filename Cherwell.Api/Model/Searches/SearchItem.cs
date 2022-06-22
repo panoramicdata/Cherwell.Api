@@ -30,7 +30,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="ScopeOwner">ScopeOwner.</param>
         /// <param name="SearchId">SearchId.</param>
         /// <param name="SearchName">SearchName.</param>
-        public SearchesSearchItem(string Association = default, List<CoreLink> Links = default(List<CoreLink>), string LocalizedScopeName = default, string ParentFolderId = default, string Scope = default, string ScopeOwner = default, string SearchId = default, string SearchName = default)
+        public SearchesSearchItem(string Association = default, List<Link> Links = default(List<Link>), string LocalizedScopeName = default, string ParentFolderId = default, string Scope = default, string ScopeOwner = default, string SearchId = default, string SearchName = default)
         {
             this.Association = Association;
             this.Links = Links;
@@ -51,7 +51,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name = "links", EmitDefaultValue = false)]
-        public List<CoreLink> Links { get; set; }
+        public List<Link> Links { get; set; }
         /// <summary>
         /// Gets or Sets LocalizedScopeName
         /// </summary>

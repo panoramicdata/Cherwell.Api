@@ -93,7 +93,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="SearchText">SearchText.</param>
         /// <param name="Sorting">Sorting.</param>
         /// <param name="PromptValues">PromptValues.</param>
-        public SearchesExportSearchResultsRequest(string CustomSeparator = default, EnumExportFormat? ExportFormat = default(EnumExportFormat?), string ExportTitle = default, string Association = default, string AssociationName = default, string BusObId = default, string CustomGridDefId = default, string DateTimeFormatting = default, string FieldId = default, List<string> Fields = default(List<string>), List<SearchesFilterInfo> Filters = default(List<SearchesFilterInfo>), bool? IncludeAllFields = default(bool?), bool? IncludeSchema = default(bool?), int? PageNumber = default(int?), int? PageSize = default(int?), string Scope = default, string ScopeOwner = default, string SearchId = default, string SearchName = default, string SearchText = default, List<SearchesSortInfo> Sorting = default(List<SearchesSortInfo>), List<CorePromptValue> PromptValues = default(List<CorePromptValue>))
+        public SearchesExportSearchResultsRequest(string CustomSeparator = default, EnumExportFormat? ExportFormat = default(EnumExportFormat?), string ExportTitle = default, string Association = default, string AssociationName = default, string BusObId = default, string CustomGridDefId = default, string DateTimeFormatting = default, string FieldId = default, List<string> Fields = default(List<string>), List<SearchesFilterInfo> Filters = default(List<SearchesFilterInfo>), bool? IncludeAllFields = default(bool?), bool? IncludeSchema = default(bool?), int? PageNumber = default(int?), int? PageSize = default(int?), string Scope = default, string ScopeOwner = default, string SearchId = default, string SearchName = default, string SearchText = default, List<SearchesSortInfo> Sorting = default(List<SearchesSortInfo>), List<PromptValue> PromptValues = default(List<PromptValue>))
         {
             this.CustomSeparator = CustomSeparator;
             this.ExportFormat = ExportFormat;
@@ -223,7 +223,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets PromptValues
         /// </summary>
         [DataMember(Name = "promptValues", EmitDefaultValue = false)]
-        public List<CorePromptValue> PromptValues { get; set; }
+        public List<PromptValue> PromptValues { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectBarcodeLookupResponse
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectBarcodeLookupResponse : IEquatable<BusinessObjectBarcodeLookupResponse>, IValidatableObject
+    public partial class BarcodeLookupResponse : IEquatable<BarcodeLookupResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Api.Model.BusinessObject
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectBarcodeLookupResponse" /> class.
+        /// Initializes a new instance of the <see cref="BarcodeLookupResponse" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObRecId">BusObRecId.</param>
@@ -323,7 +323,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public BusinessObjectBarcodeLookupResponse(string BusObId = default, string BusObRecId = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
+        public BarcodeLookupResponse(string BusObId = default, string BusObRecId = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
         {
             this.BusObId = BusObId;
             this.BusObRecId = BusObRecId;
@@ -393,7 +393,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectBarcodeLookupResponse);
+            return this.Equals(obj as BarcodeLookupResponse);
         }
 
         /// <summary>
@@ -401,7 +401,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectBarcodeLookupResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectBarcodeLookupResponse? other)
+        public bool Equals(BarcodeLookupResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

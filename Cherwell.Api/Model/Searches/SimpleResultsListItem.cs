@@ -33,7 +33,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="SubTitle">SubTitle.</param>
         /// <param name="Text">Text.</param>
         /// <param name="Title">Title.</param>
-        public SearchesSimpleResultsListItem(string BusObId = default, string BusObRecId = default, string DocRepositoryItemId = default, string GalleryImage = default, List<CoreLink> Links = default(List<CoreLink>), string PublicId = default, string Scope = default, string ScopeOwner = default, string SubTitle = default, string Text = default, string Title = default)
+        public SearchesSimpleResultsListItem(string BusObId = default, string BusObRecId = default, string DocRepositoryItemId = default, string GalleryImage = default, List<Link> Links = default(List<Link>), string PublicId = default, string Scope = default, string ScopeOwner = default, string SubTitle = default, string Text = default, string Title = default)
         {
             this.BusObId = BusObId;
             this.BusObRecId = BusObRecId;
@@ -72,7 +72,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name = "links", EmitDefaultValue = false)]
-        public List<CoreLink> Links { get; set; }
+        public List<Link> Links { get; set; }
         /// <summary>
         /// Gets or Sets PublicId
         /// </summary>

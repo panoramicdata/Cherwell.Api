@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectFieldValuesLookupResponse
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectFieldValuesLookupResponse : IEquatable<BusinessObjectFieldValuesLookupResponse>, IValidatableObject
+    public partial class FieldValuesLookupResponse : IEquatable<FieldValuesLookupResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Api.Model.BusinessObject
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectFieldValuesLookupResponse" /> class.
+        /// Initializes a new instance of the <see cref="FieldValuesLookupResponse" /> class.
         /// </summary>
         /// <param name="Values">Values.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public BusinessObjectFieldValuesLookupResponse(List<string> Values = default(List<string>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public FieldValuesLookupResponse(List<string> Values = default(List<string>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Values = Values;
             this.ErrorCode = ErrorCode;
@@ -385,7 +385,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectFieldValuesLookupResponse);
+            return this.Equals(obj as FieldValuesLookupResponse);
         }
 
         /// <summary>
@@ -393,7 +393,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectFieldValuesLookupResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectFieldValuesLookupResponse? other)
+        public bool Equals(FieldValuesLookupResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

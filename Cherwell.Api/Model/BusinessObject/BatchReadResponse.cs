@@ -17,13 +17,13 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectBatchReadResponse
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectBatchReadResponse : IEquatable<BusinessObjectBatchReadResponse>, IValidatableObject
+    public partial class BatchReadResponse : IEquatable<BatchReadResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectBatchReadResponse" /> class.
+        /// Initializes a new instance of the <see cref="BatchReadResponse" /> class.
         /// </summary>
         /// <param name="Responses">Responses.</param>
-        public BusinessObjectBatchReadResponse(List<BusinessObjectReadResponse> Responses = default(List<BusinessObjectReadResponse>))
+        public BatchReadResponse(List<ReadResponse> Responses = default(List<ReadResponse>))
         {
             this.Responses = Responses;
         }
@@ -32,7 +32,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets Responses
         /// </summary>
         [DataMember(Name = "responses", EmitDefaultValue = false)]
-        public List<BusinessObjectReadResponse> Responses { get; set; }
+        public List<ReadResponse> Responses { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -63,7 +63,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectBatchReadResponse);
+            return this.Equals(obj as BatchReadResponse);
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectBatchReadResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectBatchReadResponse? other)
+        public bool Equals(BatchReadResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

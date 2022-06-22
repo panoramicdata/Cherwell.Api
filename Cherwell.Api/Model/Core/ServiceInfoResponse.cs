@@ -17,10 +17,10 @@ namespace Cherwell.Api.Model.Core
     /// CoreServiceInfoResponse
     /// </summary>
     [DataContract]
-    public partial class CoreServiceInfoResponse : IEquatable<CoreServiceInfoResponse>, IValidatableObject
+    public partial class ServiceInfoResponse : IEquatable<ServiceInfoResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CoreServiceInfoResponse" /> class.
+        /// Initializes a new instance of the <see cref="ServiceInfoResponse" /> class.
         /// </summary>
         /// <param name="ApiVersion">ApiVersion.</param>
         /// <param name="CsmCulture">CsmCulture.</param>
@@ -28,7 +28,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="SystemDateTime">SystemDateTime.</param>
         /// <param name="TimeZone">TimeZone.</param>
         /// <param name="SystemUtcOffset">SystemUtcOffset.</param>
-        public CoreServiceInfoResponse(string ApiVersion = default, string CsmCulture = default, string CsmVersion = default, DateTime? SystemDateTime = default(DateTime?), Object TimeZone = default(Object), string SystemUtcOffset = default)
+        public ServiceInfoResponse(string ApiVersion = default, string CsmCulture = default, string CsmVersion = default, DateTime? SystemDateTime = default(DateTime?), Object TimeZone = default(Object), string SystemUtcOffset = default)
         {
             this.ApiVersion = ApiVersion;
             this.CsmCulture = CsmCulture;
@@ -103,7 +103,7 @@ namespace Cherwell.Api.Model.Core
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CoreServiceInfoResponse);
+            return this.Equals(obj as ServiceInfoResponse);
         }
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreServiceInfoResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreServiceInfoResponse? other)
+        public bool Equals(ServiceInfoResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

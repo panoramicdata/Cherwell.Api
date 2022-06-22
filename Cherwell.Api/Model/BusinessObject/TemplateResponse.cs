@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectTemplateResponse
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectTemplateResponse : IEquatable<BusinessObjectTemplateResponse>, IValidatableObject
+    public partial class TemplateResponse : IEquatable<TemplateResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Api.Model.BusinessObject
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectTemplateResponse" /> class.
+        /// Initializes a new instance of the <see cref="TemplateResponse" /> class.
         /// </summary>
         /// <param name="Fields">Fields.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public BusinessObjectTemplateResponse(List<BusinessObjectFieldTemplateItem> Fields = default(List<BusinessObjectFieldTemplateItem>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public TemplateResponse(List<FieldTemplateItem> Fields = default(List<FieldTemplateItem>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Fields = Fields;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets Fields
         /// </summary>
         [DataMember(Name = "fields", EmitDefaultValue = false)]
-        public List<BusinessObjectFieldTemplateItem> Fields { get; set; }
+        public List<FieldTemplateItem> Fields { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -385,7 +385,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectTemplateResponse);
+            return this.Equals(obj as TemplateResponse);
         }
 
         /// <summary>
@@ -393,7 +393,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectTemplateResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectTemplateResponse? other)
+        public bool Equals(TemplateResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

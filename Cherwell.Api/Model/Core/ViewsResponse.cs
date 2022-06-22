@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.Core
     /// CoreViewsResponse
     /// </summary>
     [DataContract]
-    public partial class CoreViewsResponse : IEquatable<CoreViewsResponse>, IValidatableObject
+    public partial class ViewsResponse : IEquatable<ViewsResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Api.Model.Core
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CoreViewsResponse" /> class.
+        /// Initializes a new instance of the <see cref="ViewsResponse" /> class.
         /// </summary>
         /// <param name="Views">Views.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public CoreViewsResponse(List<CoreView> Views = default(List<CoreView>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public ViewsResponse(List<View> Views = default(List<View>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Views = Views;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets Views
         /// </summary>
         [DataMember(Name = "views", EmitDefaultValue = false)]
-        public List<CoreView> Views { get; set; }
+        public List<View> Views { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -385,7 +385,7 @@ namespace Cherwell.Api.Model.Core
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CoreViewsResponse);
+            return this.Equals(obj as ViewsResponse);
         }
 
         /// <summary>
@@ -393,7 +393,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreViewsResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreViewsResponse? other)
+        public bool Equals(ViewsResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

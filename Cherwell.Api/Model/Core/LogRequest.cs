@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.Core
     /// CoreLogRequest
     /// </summary>
     [DataContract]
-    public partial class CoreLogRequest : IEquatable<CoreLogRequest>, IValidatableObject
+    public partial class LogRequest : IEquatable<LogRequest>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets Level
@@ -69,12 +69,12 @@ namespace Cherwell.Api.Model.Core
         [DataMember(Name = "level", EmitDefaultValue = false)]
         public EnumLevel? Level { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CoreLogRequest" /> class.
+        /// Initializes a new instance of the <see cref="LogRequest" /> class.
         /// </summary>
         /// <param name="KeyValueProperties">KeyValueProperties.</param>
         /// <param name="Level">Level.</param>
         /// <param name="Message">Message.</param>
-        public CoreLogRequest(List<Object> KeyValueProperties = default(List<Object>), EnumLevel? Level = default(EnumLevel?), string Message = default)
+        public LogRequest(List<Object> KeyValueProperties = default(List<Object>), EnumLevel? Level = default(EnumLevel?), string Message = default)
         {
             this.KeyValueProperties = KeyValueProperties;
             this.Level = Level;
@@ -123,7 +123,7 @@ namespace Cherwell.Api.Model.Core
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CoreLogRequest);
+            return this.Equals(obj as LogRequest);
         }
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreLogRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreLogRequest? other)
+        public bool Equals(LogRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

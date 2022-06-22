@@ -82,5 +82,20 @@ namespace Cherwell.Api
 		{
 			return Task.FromResult(new Tuple<string, string>(Scheme, Token));
 		}
+
+		private bool _disposedValue;
+
+		//protected virtual void Dispose(bool disposing, HttpClient client)
+		//{
+		//	if (!_disposedValue)
+		//	{
+		//		if (disposing)
+		//		{
+		//			/// _logger.LogTrace("{Message}", Resources.Disposing);
+		//			client.Dispose();
+
+		//		}
+		//	}
+		//}
 	}
 }

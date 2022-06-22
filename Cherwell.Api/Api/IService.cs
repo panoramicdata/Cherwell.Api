@@ -24,7 +24,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of CoreServiceInfoResponse</returns>
         [Get("/api/V1/serviceinfo")]
-        Task<CoreServiceInfoResponse> ServiceGetServiceInfoV1([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ServiceInfoResponse> ServiceGetServiceInfo([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Log out user by token
@@ -37,7 +37,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of void</returns>
         [Delete("/api/V1/logout")]
-        Task ServiceLogoutUserV1([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task ServiceLogoutUser([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get an access token

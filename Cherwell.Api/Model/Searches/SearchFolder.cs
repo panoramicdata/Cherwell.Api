@@ -37,7 +37,7 @@ namespace Cherwell.Api.Model.Searches
             List<SearchesSearchItem> ChildItems = default, 
             string FolderId = default, 
             string FolderName = default, 
-            List<CoreLink> Links = default, 
+            List<Link> Links = default, 
             string LocalizedScopeName = default, 
             string ParentFolderId = default, 
             string Scope = default, 
@@ -84,7 +84,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name = "links", EmitDefaultValue = false)]
-        public List<CoreLink> Links { get; set; }
+        public List<Link> Links { get; set; }
         /// <summary>
         /// Gets or Sets LocalizedScopeName
         /// </summary>

@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.Core
     /// CoreStoredValueResponse
     /// </summary>
     [DataContract]
-    public partial class CoreStoredValueResponse : IEquatable<CoreStoredValueResponse>, IValidatableObject
+    public partial class StoredValueResponse : IEquatable<StoredValueResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets StoredValueType
@@ -382,7 +382,7 @@ namespace Cherwell.Api.Model.Core
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CoreStoredValueResponse" /> class.
+        /// Initializes a new instance of the <see cref="StoredValueResponse" /> class.
         /// </summary>
         /// <param name="Description">Description.</param>
         /// <param name="Folder">Folder.</param>
@@ -397,7 +397,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public CoreStoredValueResponse(string Description = default, string Folder = default, string Id = default, string Name = default, string Scope = default, string ScopeOwner = default, string StandInKey = default, EnumStoredValueType? StoredValueType = default(EnumStoredValueType?), string Value = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public StoredValueResponse(string Description = default, string Folder = default, string Id = default, string Name = default, string Scope = default, string ScopeOwner = default, string StandInKey = default, EnumStoredValueType? StoredValueType = default(EnumStoredValueType?), string Value = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Description = Description;
             this.Folder = Folder;
@@ -511,7 +511,7 @@ namespace Cherwell.Api.Model.Core
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CoreStoredValueResponse);
+            return this.Equals(obj as StoredValueResponse);
         }
 
         /// <summary>
@@ -519,7 +519,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreStoredValueResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreStoredValueResponse? other)
+        public bool Equals(StoredValueResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

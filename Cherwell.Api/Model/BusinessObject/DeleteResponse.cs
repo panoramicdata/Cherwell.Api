@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectDeleteResponse
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectDeleteResponse : IEquatable<BusinessObjectDeleteResponse>, IValidatableObject
+    public partial class DeleteResponse : IEquatable<DeleteResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Api.Model.BusinessObject
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectDeleteResponse" /> class.
+        /// Initializes a new instance of the <see cref="DeleteResponse" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObPublicId">BusObPublicId.</param>
@@ -324,7 +324,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public BusinessObjectDeleteResponse(string BusObId = default, string BusObPublicId = default, string BusObRecId = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public DeleteResponse(string BusObId = default, string BusObPublicId = default, string BusObRecId = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.BusObId = BusObId;
             this.BusObPublicId = BusObPublicId;
@@ -401,7 +401,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectDeleteResponse);
+            return this.Equals(obj as DeleteResponse);
         }
 
         /// <summary>
@@ -409,7 +409,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectDeleteResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectDeleteResponse? other)
+        public bool Equals(DeleteResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

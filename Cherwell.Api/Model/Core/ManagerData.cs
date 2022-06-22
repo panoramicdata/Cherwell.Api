@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.Core
     /// CoreManagerData
     /// </summary>
     [DataContract]
-    public partial class CoreManagerData : IEquatable<CoreManagerData>, IValidatableObject
+    public partial class ManagerData : IEquatable<ManagerData>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Api.Model.Core
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CoreManagerData" /> class.
+        /// Initializes a new instance of the <see cref="ManagerData" /> class.
         /// </summary>
         /// <param name="Root">Root.</param>
         /// <param name="SupportedAssociations">SupportedAssociations.</param>
@@ -323,7 +323,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public CoreManagerData(CoreManagerFolder Root = default(CoreManagerFolder), List<TrebuchetNameValuePair> SupportedAssociations = default(List<TrebuchetNameValuePair>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public ManagerData(ManagerFolder Root = default(ManagerFolder), List<TrebuchetNameValuePair> SupportedAssociations = default(List<TrebuchetNameValuePair>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Root = Root;
             this.SupportedAssociations = SupportedAssociations;
@@ -337,7 +337,7 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets Root
         /// </summary>
         [DataMember(Name = "root", EmitDefaultValue = false)]
-        public CoreManagerFolder Root { get; set; }
+        public ManagerFolder Root { get; set; }
         /// <summary>
         /// Gets or Sets SupportedAssociations
         /// </summary>
@@ -393,7 +393,7 @@ namespace Cherwell.Api.Model.Core
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CoreManagerData);
+            return this.Equals(obj as ManagerData);
         }
 
         /// <summary>
@@ -401,7 +401,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreManagerData to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreManagerData? other)
+        public bool Equals(ManagerData? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

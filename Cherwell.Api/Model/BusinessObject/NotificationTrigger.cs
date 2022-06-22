@@ -17,16 +17,16 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectNotificationTrigger
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectNotificationTrigger : IEquatable<BusinessObjectNotificationTrigger>, IValidatableObject
+    public partial class NotificationTrigger : IEquatable<NotificationTrigger>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectNotificationTrigger" /> class.
+        /// Initializes a new instance of the <see cref="NotificationTrigger" /> class.
         /// </summary>
         /// <param name="SourceType">SourceType.</param>
         /// <param name="SourceId">SourceId.</param>
         /// <param name="SourceChange">SourceChange.</param>
         /// <param name="Key">Key.</param>
-        public BusinessObjectNotificationTrigger(string SourceType = default, string SourceId = default, string SourceChange = default, string Key = default)
+        public NotificationTrigger(string SourceType = default, string SourceId = default, string SourceChange = default, string Key = default)
         {
             this.SourceType = SourceType;
             this.SourceId = SourceId;
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectNotificationTrigger);
+            return this.Equals(obj as NotificationTrigger);
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectNotificationTrigger to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectNotificationTrigger? other)
+        public bool Equals(NotificationTrigger? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -9,7 +9,7 @@ namespace Cherwell.Api.Test
 		{
 			var options = new CherwellClientOptions();
 			var client = new CherwellClient(options);
-			var response = client.Core.CoreGetViewsV1("Tests");
+			var response = client.Core.CoreGetViews("Tests");
 
 		}
 	}

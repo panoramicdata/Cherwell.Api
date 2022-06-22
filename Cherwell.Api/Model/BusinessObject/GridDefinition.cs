@@ -17,15 +17,15 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectGridDefinition
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectGridDefinition : IEquatable<BusinessObjectGridDefinition>, IValidatableObject
+    public partial class GridDefinition : IEquatable<GridDefinition>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectGridDefinition" /> class.
+        /// Initializes a new instance of the <see cref="GridDefinition" /> class.
         /// </summary>
         /// <param name="GridId">GridId.</param>
         /// <param name="Name">Name.</param>
         /// <param name="DisplayName">DisplayName.</param>
-        public BusinessObjectGridDefinition(string GridId = default, string Name = default, string DisplayName = default)
+        public GridDefinition(string GridId = default, string Name = default, string DisplayName = default)
         {
             this.GridId = GridId;
             this.Name = Name;
@@ -79,7 +79,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectGridDefinition);
+            return this.Equals(obj as GridDefinition);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectGridDefinition to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectGridDefinition? other)
+        public bool Equals(GridDefinition? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

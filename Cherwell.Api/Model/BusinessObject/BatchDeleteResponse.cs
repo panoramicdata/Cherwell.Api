@@ -17,13 +17,13 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectBatchDeleteResponse
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectBatchDeleteResponse : IEquatable<BusinessObjectBatchDeleteResponse>, IValidatableObject
+    public partial class BatchDeleteResponse : IEquatable<BatchDeleteResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectBatchDeleteResponse" /> class.
+        /// Initializes a new instance of the <see cref="BatchDeleteResponse" /> class.
         /// </summary>
         /// <param name="Responses">Responses.</param>
-        public BusinessObjectBatchDeleteResponse(List<BusinessObjectDeleteResponse> Responses = default)
+        public BatchDeleteResponse(List<DeleteResponse> Responses = default)
         {
             this.Responses = Responses;
         }
@@ -32,7 +32,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets Responses
         /// </summary>
         [DataMember(Name = "responses", EmitDefaultValue = false)]
-        public List<BusinessObjectDeleteResponse> Responses { get; set; }
+        public List<DeleteResponse> Responses { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -63,7 +63,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectBatchDeleteResponse);
+            return this.Equals(obj as BatchDeleteResponse);
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectBatchDeleteResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectBatchDeleteResponse? other)
+        public bool Equals(BatchDeleteResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

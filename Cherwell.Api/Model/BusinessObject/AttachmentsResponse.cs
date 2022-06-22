@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectAttachmentsResponse
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectAttachmentsResponse : IEquatable<BusinessObjectAttachmentsResponse>, IValidatableObject
+    public partial class AttachmentsResponse : IEquatable<AttachmentsResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Api.Model.BusinessObject
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectAttachmentsResponse" /> class.
+        /// Initializes a new instance of the <see cref="AttachmentsResponse" /> class.
         /// </summary>
         /// <param name="Attachments">Attachments.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public BusinessObjectAttachmentsResponse(List<BusinessObjectAttachment> Attachments = default(List<BusinessObjectAttachment>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public AttachmentsResponse(List<ObjectAttachment> Attachments = default(List<ObjectAttachment>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Attachments = Attachments;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets Attachments
         /// </summary>
         [DataMember(Name = "attachments", EmitDefaultValue = false)]
-        public List<BusinessObjectAttachment> Attachments { get; set; }
+        public List<ObjectAttachment> Attachments { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -385,7 +385,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectAttachmentsResponse);
+            return this.Equals(obj as AttachmentsResponse);
         }
 
         /// <summary>
@@ -393,7 +393,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectAttachmentsResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectAttachmentsResponse? other)
+        public bool Equals(AttachmentsResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectBatchSaveResponse
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectBatchSaveResponse : IEquatable<BusinessObjectBatchSaveResponse>, IValidatableObject
+    public partial class BatchSaveResponse : IEquatable<BatchSaveResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Api.Model.BusinessObject
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectBatchSaveResponse" /> class.
+        /// Initializes a new instance of the <see cref="BatchSaveResponse" /> class.
         /// </summary>
         /// <param name="Responses">Responses.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public BusinessObjectBatchSaveResponse(List<BusinessObjectSaveResponse> Responses = default(List<BusinessObjectSaveResponse>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public BatchSaveResponse(List<SaveResponse> Responses = default(List<SaveResponse>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Responses = Responses;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets Responses
         /// </summary>
         [DataMember(Name = "responses", EmitDefaultValue = false)]
-        public List<BusinessObjectSaveResponse> Responses { get; set; }
+        public List<SaveResponse> Responses { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -385,7 +385,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectBatchSaveResponse);
+            return this.Equals(obj as BatchSaveResponse);
         }
 
         /// <summary>
@@ -393,7 +393,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectBatchSaveResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectBatchSaveResponse? other)
+        public bool Equals(BatchSaveResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -329,7 +329,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SearchesSearchResultsResponse(List<BusinessObjectReadResponse> BusinessObjects = default(List<BusinessObjectReadResponse>), bool? HasPrompts = default(bool?), List<CoreLink> Links = default(List<CoreLink>), List<CorePrompt> Prompts = default(List<CorePrompt>), List<SearchesField> SearchResultsFields = default(List<SearchesField>), SearchesSimpleResultsList SimpleResults = default(SearchesSimpleResultsList), long? TotalRows = default(long?), bool? HasMoreRecords = default(bool?), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public SearchesSearchResultsResponse(List<ReadResponse> BusinessObjects = default(List<ReadResponse>), bool? HasPrompts = default(bool?), List<Link> Links = default(List<Link>), List<Prompt> Prompts = default(List<Prompt>), List<SearchesField> SearchResultsFields = default(List<SearchesField>), SearchesSimpleResultsList SimpleResults = default(SearchesSimpleResultsList), long? TotalRows = default(long?), bool? HasMoreRecords = default(bool?), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.BusinessObjects = BusinessObjects;
             this.HasPrompts = HasPrompts;
@@ -349,7 +349,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets BusinessObjects
         /// </summary>
         [DataMember(Name = "businessObjects", EmitDefaultValue = false)]
-        public List<BusinessObjectReadResponse> BusinessObjects { get; set; }
+        public List<ReadResponse> BusinessObjects { get; set; }
         /// <summary>
         /// Gets or Sets HasPrompts
         /// </summary>
@@ -359,12 +359,12 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name = "links", EmitDefaultValue = false)]
-        public List<CoreLink> Links { get; set; }
+        public List<Link> Links { get; set; }
         /// <summary>
         /// Gets or Sets Prompts
         /// </summary>
         [DataMember(Name = "prompts", EmitDefaultValue = false)]
-        public List<CorePrompt> Prompts { get; set; }
+        public List<Prompt> Prompts { get; set; }
         /// <summary>
         /// Gets or Sets SearchResultsFields
         /// </summary>

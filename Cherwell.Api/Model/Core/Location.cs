@@ -17,17 +17,17 @@ namespace Cherwell.Api.Model.Core
     /// CoreLocation
     /// </summary>
     [DataContract]
-    public partial class CoreLocation : IEquatable<CoreLocation>, IValidatableObject
+    public partial class Location : IEquatable<Location>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CoreLocation" /> class.
+        /// Initializes a new instance of the <see cref="Location" /> class.
         /// </summary>
         /// <param name="Altitude">Altitude.</param>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObRecId">BusObRecId.</param>
         /// <param name="Latitude">Latitude.</param>
         /// <param name="Longitude">Longitude.</param>
-        public CoreLocation(double? Altitude = default(double?), string BusObId = default, string BusObRecId = default, double? Latitude = default(double?), double? Longitude = default(double?))
+        public Location(double? Altitude = default(double?), string BusObId = default, string BusObRecId = default, double? Latitude = default(double?), double? Longitude = default(double?))
         {
             this.Altitude = Altitude;
             this.BusObId = BusObId;
@@ -95,7 +95,7 @@ namespace Cherwell.Api.Model.Core
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CoreLocation);
+            return this.Equals(obj as Location);
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreLocation to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreLocation? other)
+        public bool Equals(Location? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

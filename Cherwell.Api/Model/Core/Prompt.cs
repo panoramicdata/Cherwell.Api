@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.Core
     /// CorePrompt
     /// </summary>
     [DataContract]
-    public partial class CorePrompt : IEquatable<CorePrompt>, IValidatableObject
+    public partial class Prompt : IEquatable<Prompt>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets ListDisplayOption
@@ -160,7 +160,7 @@ namespace Cherwell.Api.Model.Core
         [DataMember(Name = "promptType", EmitDefaultValue = false)]
         public EnumPromptType? PromptType { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CorePrompt" /> class.
+        /// Initializes a new instance of the <see cref="Prompt" /> class.
         /// </summary>
         /// <param name="AllowValuesOnly">AllowValuesOnly.</param>
         /// <param name="BusObId">BusObId.</param>
@@ -181,7 +181,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="Text">Text.</param>
         /// <param name="Value">Value.</param>
         /// <param name="Values">Values.</param>
-        public CorePrompt(bool? AllowValuesOnly = default(bool?), string BusObId = default, string CollectionStoreEntireRow = default, string CollectionValueField = default, string ConstraintXml = default, string Contents = default, string Default = default, string FieldId = default, bool? IsDateRange = default(bool?), EnumListDisplayOption? ListDisplayOption = default(EnumListDisplayOption?), string ListReturnFieldId = default, bool? MultiLine = default(bool?), string PromptId = default, EnumPromptType? PromptType = default(EnumPromptType?), string PromptTypeName = default, bool? Required = default(bool?), string Text = default, Object Value = default(Object), List<string> Values = default(List<string>))
+        public Prompt(bool? AllowValuesOnly = default(bool?), string BusObId = default, string CollectionStoreEntireRow = default, string CollectionValueField = default, string ConstraintXml = default, string Contents = default, string Default = default, string FieldId = default, bool? IsDateRange = default(bool?), EnumListDisplayOption? ListDisplayOption = default(EnumListDisplayOption?), string ListReturnFieldId = default, bool? MultiLine = default(bool?), string PromptId = default, EnumPromptType? PromptType = default(EnumPromptType?), string PromptTypeName = default, bool? Required = default(bool?), string Text = default, Object Value = default(Object), List<string> Values = default(List<string>))
         {
             this.AllowValuesOnly = AllowValuesOnly;
             this.BusObId = BusObId;
@@ -337,7 +337,7 @@ namespace Cherwell.Api.Model.Core
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CorePrompt);
+            return this.Equals(obj as Prompt);
         }
 
         /// <summary>
@@ -345,7 +345,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CorePrompt to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CorePrompt? other)
+        public bool Equals(Prompt? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

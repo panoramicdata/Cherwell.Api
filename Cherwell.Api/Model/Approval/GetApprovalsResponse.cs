@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.Approval
     /// ApprovalGetApprovalsResponse
     /// </summary>
     [DataContract]
-    public partial class ApprovalGetApprovalsResponse : IEquatable<ApprovalGetApprovalsResponse>, IValidatableObject
+    public partial class GetApprovalsResponse : IEquatable<GetApprovalsResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Api.Model.Approval
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApprovalGetApprovalsResponse" /> class.
+        /// Initializes a new instance of the <see cref="GetApprovalsResponse" /> class.
         /// </summary>
         /// <param name="TotalRecords">TotalRecords.</param>
         /// <param name="Approvals">Approvals.</param>
@@ -323,7 +323,7 @@ namespace Cherwell.Api.Model.Approval
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public ApprovalGetApprovalsResponse(int? TotalRecords = default, List<ApprovalApprovalReadResponse> Approvals = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
+        public GetApprovalsResponse(int? TotalRecords = default, List<ApprovalReadResponse> Approvals = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
         {
             this.TotalRecords = TotalRecords;
             this.Approvals = Approvals;
@@ -342,7 +342,7 @@ namespace Cherwell.Api.Model.Approval
         /// Gets or Sets Approvals
         /// </summary>
         [DataMember(Name = "approvals", EmitDefaultValue = false)]
-        public List<ApprovalApprovalReadResponse> Approvals { get; set; }
+        public List<ApprovalReadResponse> Approvals { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -393,7 +393,7 @@ namespace Cherwell.Api.Model.Approval
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return Equals(obj as ApprovalGetApprovalsResponse);
+            return Equals(obj as GetApprovalsResponse);
         }
 
         /// <summary>
@@ -401,7 +401,7 @@ namespace Cherwell.Api.Model.Approval
         /// </summary>
         /// <param name="other">Instance of ApprovalGetApprovalsResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ApprovalGetApprovalsResponse? other)
+        public bool Equals(GetApprovalsResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -17,17 +17,17 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectTemplateRequest
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectTemplateRequest : IEquatable<BusinessObjectTemplateRequest>, IValidatableObject
+    public partial class TemplateRequest : IEquatable<TemplateRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectTemplateRequest" /> class.
+        /// Initializes a new instance of the <see cref="TemplateRequest" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="FieldNames">FieldNames.</param>
         /// <param name="FieldIds">FieldIds.</param>
         /// <param name="IncludeAll">IncludeAll.</param>
         /// <param name="IncludeRequired">IncludeRequired.</param>
-        public BusinessObjectTemplateRequest(string BusObId = default, List<string> FieldNames = default(List<string>), List<string> FieldIds = default(List<string>), bool? IncludeAll = default(bool?), bool? IncludeRequired = default(bool?))
+        public TemplateRequest(string BusObId = default, List<string> FieldNames = default(List<string>), List<string> FieldIds = default(List<string>), bool? IncludeAll = default(bool?), bool? IncludeRequired = default(bool?))
         {
             this.BusObId = BusObId;
             this.FieldNames = FieldNames;
@@ -95,7 +95,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectTemplateRequest);
+            return this.Equals(obj as TemplateRequest);
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectTemplateRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectTemplateRequest? other)
+        public bool Equals(TemplateRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

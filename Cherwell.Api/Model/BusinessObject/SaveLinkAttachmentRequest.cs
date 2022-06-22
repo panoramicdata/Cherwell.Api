@@ -17,10 +17,10 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectSaveLinkAttachmentRequest
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectSaveLinkAttachmentRequest : IEquatable<BusinessObjectSaveLinkAttachmentRequest>, IValidatableObject
+    public partial class SaveLinkAttachmentRequest : IEquatable<SaveLinkAttachmentRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectSaveLinkAttachmentRequest" /> class.
+        /// Initializes a new instance of the <see cref="SaveLinkAttachmentRequest" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObName">BusObName.</param>
@@ -30,7 +30,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="DisplayText">DisplayText.</param>
         /// <param name="IncludeLinks">IncludeLinks.</param>
         /// <param name="UncFilePath">UncFilePath.</param>
-        public BusinessObjectSaveLinkAttachmentRequest(string BusObId = default, string BusObName = default, string BusObPublicId = default, string BusObRecId = default, string Comment = default, string DisplayText = default, bool? IncludeLinks = default(bool?), string UncFilePath = default)
+        public SaveLinkAttachmentRequest(string BusObId = default, string BusObName = default, string BusObPublicId = default, string BusObRecId = default, string Comment = default, string DisplayText = default, bool? IncludeLinks = default(bool?), string UncFilePath = default)
         {
             this.BusObId = BusObId;
             this.BusObName = BusObName;
@@ -119,7 +119,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectSaveLinkAttachmentRequest);
+            return this.Equals(obj as SaveLinkAttachmentRequest);
         }
 
         /// <summary>
@@ -127,7 +127,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectSaveLinkAttachmentRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectSaveLinkAttachmentRequest? other)
+        public bool Equals(SaveLinkAttachmentRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

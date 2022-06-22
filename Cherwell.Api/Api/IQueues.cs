@@ -25,7 +25,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of QueuesAddItemToQueueResponse</returns>
         [Post("/api/V1/additemtoqueue")]
-        Task<QueuesAddItemToQueueResponse> QueuesAddItemToQueueV1([Header("UserAgent")] string userAgent, [Body]QueuesAddItemToQueueRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<QueuesAddItemToQueueResponse> QueuesAddItemToQueue([Header("UserAgent")] string userAgent, [Body]QueuesAddItemToQueueRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Check a Business Object in to a queue
@@ -39,7 +39,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of QueuesCheckInQueueItemResponse</returns>
         [Post("/api/V1/checkinqueueitem")]
-        Task<QueuesCheckInQueueItemResponse> QueuesCheckInQueueItemV1([Header("UserAgent")] string userAgent, [Body]QueuesCheckInQueueItemRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<QueuesCheckInQueueItemResponse> QueuesCheckInQueueItem([Header("UserAgent")] string userAgent, [Body]QueuesCheckInQueueItemRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Check a Business Object out of a queue
@@ -53,7 +53,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of QueuesCheckOutQueueItemResponse</returns>
         [Post("/api/V1/checkoutqueueitem")]
-        Task<QueuesCheckOutQueueItemResponse> QueuesCheckOutQueueItemV1([Header("UserAgent")] string userAgent, [Body]QueuesCheckOutQueueItemRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<QueuesCheckOutQueueItemResponse> QueuesCheckOutQueueItem([Header("UserAgent")] string userAgent, [Body]QueuesCheckOutQueueItemRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get available queues.
@@ -70,7 +70,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/getqueues/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
-        Task<CoreManagerData> QueuesGetQueuesFolderV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ManagerData> QueuesGetQueuesFolder([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get available queues.
@@ -86,7 +86,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/getqueues/scope/{scope}/scopeowner/{scopeowner}")]
-        Task<CoreManagerData> QueuesGetQueuesScopeOwnerV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ManagerData> QueuesGetQueuesScopeOwner([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get available queues.
@@ -101,7 +101,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/getqueues/scope/{scope}")]
-        Task<CoreManagerData> QueuesGetQueuesScopeV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ManagerData> QueuesGetQueuesScope([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get available queues.
@@ -115,7 +115,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V1/getqueues")]
-        Task<CoreManagerData> QueuesGetQueuesV1([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ManagerData> QueuesGetQueues([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Remove an item from a queue
@@ -129,7 +129,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of QueuesRemoveItemFromQueueResponse</returns>
         [Post("/api/V1/removeitemfromqueue")]
-        Task<QueuesRemoveItemFromQueueResponse> QueuesRemoveItemFromQueueV1([Header("UserAgent")] string userAgent, [Body]QueuesRemoveItemFromQueueRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<QueuesRemoveItemFromQueueResponse> QueuesRemoveItemFromQueue([Header("UserAgent")] string userAgent, [Body]QueuesRemoveItemFromQueueRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
         #endregion Asynchronous Operations
     }
 }

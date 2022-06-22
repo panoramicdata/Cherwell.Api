@@ -25,7 +25,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SearchesQuickSearchConfigurationResponse</returns>
         [Post("/api/V1/getquicksearchconfigurationforbusobs")]
-        Task<SearchesQuickSearchConfigurationResponse> SearchesGetQuickSearchConfigurationForBusObsV1([Header("UserAgent")] string userAgent, [Body]SearchesQuickSearchConfigurationRequest dataRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesQuickSearchConfigurationResponse> SearchesGetQuickSearchConfigurationForBusObs([Header("UserAgent")] string userAgent, [Body]SearchesQuickSearchConfigurationRequest dataRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get a Quick Search by Business Objects with view rights
@@ -38,7 +38,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SearchesQuickSearchConfigurationResponse</returns>
         [Get("/api/V1/getquicksearchconfigurationforbusobswithviewrights")]
-        Task<SearchesQuickSearchConfigurationResponse> SearchesGetQuickSearchConfigurationForBusObsWithViewRightsV1([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesQuickSearchConfigurationResponse> SearchesGetQuickSearchConfigurationForBusObsWithViewRights([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Execute a Quick Search from a list of Business Object IDs and search text
@@ -53,7 +53,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SearchesSimpleResultsList</returns>
         [Post("/api/V1/getquicksearchresults")]
-        Task<SearchesSimpleResultsList> SearchesGetQuickSearchResultsV1([Header("UserAgent")] string userAgent, [Body]SearchesQuickSearchRequest dataRequest, [AliasAs("includeLinks")]bool? includeLinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesSimpleResultsList> SearchesGetQuickSearchResults([Header("UserAgent")] string userAgent, [Body]SearchesQuickSearchRequest dataRequest, [AliasAs("includeLinks")]bool? includeLinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Execute a Quick Search on a specific Business Object
@@ -70,7 +70,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SearchesSearchResultsTableResponse</returns>
         [Post("/api/V1/getquicksearchspecificresults")]
-        Task<SearchesSearchResultsTableResponse> SearchesGetQuickSearchSpecificResultsV1([Header("UserAgent")] string userAgent, [Body]SearchesQuickSearchSpecificRequest dataRequest, [AliasAs("includeSchema")]bool? includeSchema = null, [AliasAs("includeLocationFields")]bool? includeLocationFields = null, [AliasAs("includeLinks")]bool? includeLinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesSearchResultsTableResponse> SearchesGetQuickSearchSpecificResults([Header("UserAgent")] string userAgent, [Body]SearchesQuickSearchSpecificRequest dataRequest, [AliasAs("includeSchema")]bool? includeSchema = null, [AliasAs("includeLocationFields")]bool? includeLocationFields = null, [AliasAs("includeLinks")]bool? includeLinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Execute a Quick Search on a specific Business Object
@@ -105,7 +105,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SearchesSearchItemResponse</returns>
         [Get("/api/V1/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
-        Task<SearchesSearchItemResponse> SearchesGetSearchItemsByAssociationScopeScopeOwnerFolderV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesSearchItemResponse> SearchesGetSearchItemsByAssociationScopeScopeOwnerFolder([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by Folder ID
@@ -123,7 +123,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V2/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
-        Task<CoreManagerData> SearchesGetSearchItemsByAssociationScopeScopeOwnerFolderV2([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ManagerData> SearchesGetSearchItemsByAssociationScopeScopeOwnerFolderV2([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("folder")]string folder, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by scope owner (sub scope)
@@ -140,7 +140,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SearchesSearchItemResponse</returns>
         [Get("/api/V1/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}")]
-        Task<SearchesSearchItemResponse> SearchesGetSearchItemsByAssociationScopeScopeOwnerV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesSearchItemResponse> SearchesGetSearchItemsByAssociationScopeScopeOwner([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by scope owner (sub scope)
@@ -157,7 +157,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V2/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}")]
-        Task<CoreManagerData> SearchesGetSearchItemsByAssociationScopeScopeOwnerV2([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ManagerData> SearchesGetSearchItemsByAssociationScopeScopeOwnerV2([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by scope
@@ -173,7 +173,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SearchesSearchItemResponse</returns>
         [Get("/api/V1/getsearchitems/association/{association}/scope/{scope}")]
-        Task<SearchesSearchItemResponse> SearchesGetSearchItemsByAssociationScopeV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesSearchItemResponse> SearchesGetSearchItemsByAssociationScope([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by scope
@@ -189,7 +189,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V2/getsearchitems/association/{association}/scope/{scope}")]
-        Task<CoreManagerData> SearchesGetSearchItemsByAssociationScopeV2([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ManagerData> SearchesGetSearchItemsByAssociationScopeV2([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by Business Object association
@@ -204,7 +204,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SearchesSearchItemResponse</returns>
         [Get("/api/V1/getsearchitems/association/{association}")]
-        Task<SearchesSearchItemResponse> SearchesGetSearchItemsByAssociationV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesSearchItemResponse> SearchesGetSearchItemsByAssociation([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by Business Object association
@@ -219,7 +219,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V2/getsearchitems/association/{association}")]
-        Task<CoreManagerData> SearchesGetSearchItemsByAssociationV2([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ManagerData> SearchesGetSearchItemsByAssociationV2([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by default Business Object association
@@ -233,7 +233,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SearchesSearchItemResponse</returns>
         [Get("/api/V1/getsearchitems")]
-        Task<SearchesSearchItemResponse> SearchesGetSearchItemsV1([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesSearchItemResponse> SearchesGetSearchItems([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all saved searches by default Business Object association
@@ -247,7 +247,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of CoreManagerData</returns>
         [Get("/api/V2/getsearchitems")]
-        Task<CoreManagerData> SearchesGetSearchItemsV2([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ManagerData> SearchesGetSearchItemsV2([Header("UserAgent")] string userAgent, [AliasAs("links")]bool? links = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Run an ad-hoc search
@@ -261,7 +261,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SearchesSearchResultsResponse</returns>
         [Post("/api/V1/getsearchresults")]
-        Task<SearchesSearchResultsResponse> SearchesGetSearchResultsAdHocV1([Header("UserAgent")] string userAgent, [Body]SearchesSearchResultsRequest dataRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesSearchResultsResponse> SearchesGetSearchResultsAdHoc([Header("UserAgent")] string userAgent, [Body]SearchesSearchResultsRequest dataRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get results of a saved search
@@ -292,7 +292,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of List&lt;Dictionary&lt;string, string&gt;&gt;</returns>
         [Get("/api/V1/storedsearches/{scope}/{associationName}/{searchName}")]
-        Task<List<Dictionary<string, string>>> SearchesGetSearchResultsAsStringByNameV1([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("associationName")]string associationName, [AliasAs("searchName")]string searchName, [AliasAs("scopeOwner")]string scopeOwner = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<List<Dictionary<string, string>>> SearchesGetSearchResultsAsStringByName([Header("UserAgent")] string userAgent, [AliasAs("scope")]string scope, [AliasAs("associationName")]string associationName, [AliasAs("searchName")]string searchName, [AliasAs("scopeOwner")]string scopeOwner = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get results of a saved search
@@ -331,7 +331,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SearchesSearchResultsResponse</returns>
         [Get("/api/V1/getsearchresults/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchid/{searchid}")]
-        Task<SearchesSearchResultsResponse> SearchesGetSearchResultsByIdV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("searchid")]string searchid, [AliasAs("searchTerm")]string searchTerm = null, [AliasAs("pagenumber")]int? pagenumber = null, [AliasAs("pagesize")]int? pagesize = null, [AliasAs("includeschema")]bool? includeschema = null, [AliasAs("resultsAsSimpleResultsList")]bool? resultsAsSimpleResultsList = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesSearchResultsResponse> SearchesGetSearchResultsById([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("searchid")]string searchid, [AliasAs("searchTerm")]string searchTerm = null, [AliasAs("pagenumber")]int? pagenumber = null, [AliasAs("pagesize")]int? pagesize = null, [AliasAs("includeschema")]bool? includeschema = null, [AliasAs("resultsAsSimpleResultsList")]bool? resultsAsSimpleResultsList = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Run a saved search by name
@@ -353,7 +353,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SearchesSearchResultsResponse</returns>
         [Get("/api/V1/getsearchresults/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchname/{searchname}")]
-        Task<SearchesSearchResultsResponse> SearchesGetSearchResultsByNameV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("searchname")]string searchname, [AliasAs("searchTerm")]string searchTerm = null, [AliasAs("pagenumber")]int? pagenumber = null, [AliasAs("pagesize")]int? pagesize = null, [AliasAs("includeschema")]bool? includeschema = null, [AliasAs("resultsAsSimpleResultsList")]bool? resultsAsSimpleResultsList = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SearchesSearchResultsResponse> SearchesGetSearchResultsByName([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("searchname")]string searchname, [AliasAs("searchTerm")]string searchTerm = null, [AliasAs("pagenumber")]int? pagenumber = null, [AliasAs("pagesize")]int? pagesize = null, [AliasAs("includeschema")]bool? includeschema = null, [AliasAs("resultsAsSimpleResultsList")]bool? resultsAsSimpleResultsList = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Export an ad-hoc search
@@ -367,7 +367,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of string</returns>
         [Post("/api/V1/getsearchresultsexport")]
-        Task<string> SearchesGetSearchResultsExportAdHocV1([Header("UserAgent")] string userAgent, [Body]SearchesExportSearchResultsRequest dataRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<string> SearchesGetSearchResultsExportAdHoc([Header("UserAgent")] string userAgent, [Body]SearchesExportSearchResultsRequest dataRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Export a saved search by ID
@@ -388,7 +388,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of string</returns>
         [Get("/api/V1/getsearchresultsexport/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchid/{searchid}/exportformat/{exportformat}")]
-        Task<string> SearchesGetSearchResultsExportByIdV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("searchid")]string searchid, [AliasAs("exportformat")]string exportformat, [AliasAs("searchTerm")]string searchTerm = null, [AliasAs("pagenumber")]int? pagenumber = null, [AliasAs("pagesize")]int? pagesize = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<string> SearchesGetSearchResultsExportById([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("searchid")]string searchid, [AliasAs("exportformat")]string exportformat, [AliasAs("searchTerm")]string searchTerm = null, [AliasAs("pagenumber")]int? pagenumber = null, [AliasAs("pagesize")]int? pagesize = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Export a saved search by name
@@ -409,7 +409,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of string</returns>
         [Get("/api/V1/getsearchresultsexport/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchname/{searchname}/exportformat/{exportformat}")]
-        Task<string> SearchesGetSearchResultsExportByNameV1([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("searchname")]string searchname, [AliasAs("exportformat")]string exportformat, [AliasAs("searchTerm")]string searchTerm = null, [AliasAs("pagenumber")]int? pagenumber = null, [AliasAs("pagesize")]int? pagesize = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<string> SearchesGetSearchResultsExportByName([Header("UserAgent")] string userAgent, [AliasAs("association")]string association, [AliasAs("scope")]string scope, [AliasAs("scopeowner")]string scopeowner, [AliasAs("searchname")]string searchname, [AliasAs("exportformat")]string exportformat, [AliasAs("searchTerm")]string searchTerm = null, [AliasAs("pagenumber")]int? pagenumber = null, [AliasAs("pagesize")]int? pagesize = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
         #endregion Asynchronous Operations
     }
 }

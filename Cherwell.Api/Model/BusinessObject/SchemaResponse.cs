@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectSchemaResponse
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectSchemaResponse : IEquatable<BusinessObjectSchemaResponse>, IValidatableObject
+    public partial class SchemaResponse : IEquatable<SchemaResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Api.Model.BusinessObject
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectSchemaResponse" /> class.
+        /// Initializes a new instance of the <see cref="SchemaResponse" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="FieldDefinitions">FieldDefinitions.</param>
@@ -330,7 +330,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public BusinessObjectSchemaResponse(string BusObId = default, List<BusinessObjectFieldDefinition> FieldDefinitions = default(List<BusinessObjectFieldDefinition>), string FirstRecIdField = default, List<BusinessObjectGridDefinition> GridDefinitions = default(List<BusinessObjectGridDefinition>), string Name = default, string RecIdFields = default, List<BusinessObjectRelationship> Relationships = default(List<BusinessObjectRelationship>), string StateFieldId = default, string States = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public SchemaResponse(string BusObId = default, List<FieldDefinition> FieldDefinitions = default(List<FieldDefinition>), string FirstRecIdField = default, List<GridDefinition> GridDefinitions = default(List<GridDefinition>), string Name = default, string RecIdFields = default, List<BusinessObjectRelationship> Relationships = default(List<BusinessObjectRelationship>), string StateFieldId = default, string States = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.BusObId = BusObId;
             this.FieldDefinitions = FieldDefinitions;
@@ -356,7 +356,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets FieldDefinitions
         /// </summary>
         [DataMember(Name = "fieldDefinitions", EmitDefaultValue = false)]
-        public List<BusinessObjectFieldDefinition> FieldDefinitions { get; set; }
+        public List<FieldDefinition> FieldDefinitions { get; set; }
         /// <summary>
         /// Gets or Sets FirstRecIdField
         /// </summary>
@@ -366,7 +366,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets GridDefinitions
         /// </summary>
         [DataMember(Name = "gridDefinitions", EmitDefaultValue = false)]
-        public List<BusinessObjectGridDefinition> GridDefinitions { get; set; }
+        public List<GridDefinition> GridDefinitions { get; set; }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
@@ -449,7 +449,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectSchemaResponse);
+            return this.Equals(obj as SchemaResponse);
         }
 
         /// <summary>
@@ -457,7 +457,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectSchemaResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectSchemaResponse? other)
+        public bool Equals(SchemaResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -17,14 +17,14 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectBatchReadRequest
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectBatchReadRequest : IEquatable<BusinessObjectBatchReadRequest>, IValidatableObject
+    public partial class BatchReadRequest : IEquatable<BatchReadRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectBatchReadRequest" /> class.
+        /// Initializes a new instance of the <see cref="BatchReadRequest" /> class.
         /// </summary>
         /// <param name="ReadRequests">ReadRequests.</param>
         /// <param name="StopOnError">StopOnError.</param>
-        public BusinessObjectBatchReadRequest(List<BusinessObjectReadRequest> ReadRequests = default(List<BusinessObjectReadRequest>), bool? StopOnError = default(bool?))
+        public BatchReadRequest(List<ReadRequest> ReadRequests = default(List<ReadRequest>), bool? StopOnError = default(bool?))
         {
             this.ReadRequests = ReadRequests;
             this.StopOnError = StopOnError;
@@ -34,7 +34,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets ReadRequests
         /// </summary>
         [DataMember(Name = "readRequests", EmitDefaultValue = false)]
-        public List<BusinessObjectReadRequest> ReadRequests { get; set; }
+        public List<ReadRequest> ReadRequests { get; set; }
         /// <summary>
         /// Gets or Sets StopOnError
         /// </summary>
@@ -71,7 +71,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectBatchReadRequest);
+            return this.Equals(obj as BatchReadRequest);
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectBatchReadRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectBatchReadRequest? other)
+        public bool Equals(BatchReadRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

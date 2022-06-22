@@ -37,13 +37,13 @@ namespace Cherwell.Api.Model.Searches
         public SearchesRelatedBusinessObjectResponse(string ErrorCode = default,
             string ErrorMessage = default,
             bool? HasError = default,
-            List<CoreLink> Links = default,
+            List<Link> Links = default,
             int? PageNumber = default,
             int? PageSize = default,
             string ParentBusObId = default,
             string ParentBusObPublicId = default,
             string ParentBusObRecId = default,
-            List<BusinessObjectReadResponse> RelatedBusinessObjects = default,
+            List<ReadResponse> RelatedBusinessObjects = default,
             string RelationshipId = default,
             int? TotalRecords = default)
         {
@@ -80,7 +80,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name = "links", EmitDefaultValue = false)]
-        public List<CoreLink> Links { get; set; }
+        public List<Link> Links { get; set; }
         /// <summary>
         /// Gets or Sets PageNumber
         /// </summary>
@@ -110,7 +110,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets RelatedBusinessObjects
         /// </summary>
         [DataMember(Name = "relatedBusinessObjects", EmitDefaultValue = false)]
-        public List<BusinessObjectReadResponse> RelatedBusinessObjects { get; set; }
+        public List<ReadResponse> RelatedBusinessObjects { get; set; }
         /// <summary>
         /// Gets or Sets RelationshipId
         /// </summary>

@@ -17,15 +17,15 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectFieldValidationError
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectFieldValidationError : IEquatable<BusinessObjectFieldValidationError>, IValidatableObject
+    public partial class FieldValidationError : IEquatable<FieldValidationError>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectFieldValidationError" /> class.
+        /// Initializes a new instance of the <see cref="FieldValidationError" /> class.
         /// </summary>
         /// <param name="Error">Error.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="FieldId">FieldId.</param>
-        public BusinessObjectFieldValidationError(string Error = default, string ErrorCode = default, string FieldId = default)
+        public FieldValidationError(string Error = default, string ErrorCode = default, string FieldId = default)
         {
             this.Error = Error;
             this.ErrorCode = ErrorCode;
@@ -79,7 +79,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectFieldValidationError);
+            return this.Equals(obj as FieldValidationError);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectFieldValidationError to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectFieldValidationError? other)
+        public bool Equals(FieldValidationError? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

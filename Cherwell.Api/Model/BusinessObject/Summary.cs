@@ -17,10 +17,10 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectSummary
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectSummary : IEquatable<BusinessObjectSummary>, IValidatableObject
+    public partial class Summary : IEquatable<Summary>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectSummary" /> class.
+        /// Initializes a new instance of the <see cref="Summary" /> class.
         /// </summary>
         /// <param name="FirstRecIdField">FirstRecIdField.</param>
         /// <param name="GroupSummaries">GroupSummaries.</param>
@@ -34,7 +34,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="Major">Major.</param>
         /// <param name="Name">Name.</param>
         /// <param name="Supporting">Supporting.</param>
-        public BusinessObjectSummary(string FirstRecIdField = default, List<BusinessObjectSummary> GroupSummaries = default(List<BusinessObjectSummary>), string RecIdFields = default, string StateFieldId = default, string States = default, string BusObId = default, string DisplayName = default, bool? Group = default(bool?), bool? Lookup = default(bool?), bool? Major = default(bool?), string Name = default, bool? Supporting = default(bool?))
+        public Summary(string FirstRecIdField = default, List<Summary> GroupSummaries = default(List<Summary>), string RecIdFields = default, string StateFieldId = default, string States = default, string BusObId = default, string DisplayName = default, bool? Group = default(bool?), bool? Lookup = default(bool?), bool? Major = default(bool?), string Name = default, bool? Supporting = default(bool?))
         {
             this.FirstRecIdField = FirstRecIdField;
             this.GroupSummaries = GroupSummaries;
@@ -59,7 +59,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets GroupSummaries
         /// </summary>
         [DataMember(Name = "groupSummaries", EmitDefaultValue = false)]
-        public List<BusinessObjectSummary> GroupSummaries { get; set; }
+        public List<Summary> GroupSummaries { get; set; }
         /// <summary>
         /// Gets or Sets RecIdFields
         /// </summary>
@@ -151,7 +151,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectSummary);
+            return this.Equals(obj as Summary);
         }
 
         /// <summary>
@@ -159,7 +159,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectSummary to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectSummary? other)
+        public bool Equals(Summary? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

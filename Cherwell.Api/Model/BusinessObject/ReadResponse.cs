@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectReadResponse
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectReadResponse : IEquatable<BusinessObjectReadResponse>, IValidatableObject
+    public partial class ReadResponse : IEquatable<ReadResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Api.Model.BusinessObject
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectReadResponse" /> class.
+        /// Initializes a new instance of the <see cref="ReadResponse" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObPublicId">BusObPublicId.</param>
@@ -326,7 +326,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public BusinessObjectReadResponse(string BusObId = default, string BusObPublicId = default, string BusObRecId = default, List<BusinessObjectFieldTemplateItem> Fields = default, List<CoreLink> Links = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
+        public ReadResponse(string BusObId = default, string BusObPublicId = default, string BusObRecId = default, List<FieldTemplateItem> Fields = default, List<Link> Links = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
         {
             this.BusObId = BusObId;
             this.BusObPublicId = BusObPublicId;
@@ -358,12 +358,12 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets Fields
         /// </summary>
         [DataMember(Name = "fields", EmitDefaultValue = false)]
-        public List<BusinessObjectFieldTemplateItem> Fields { get; set; }
+        public List<FieldTemplateItem> Fields { get; set; }
         /// <summary>
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name = "links", EmitDefaultValue = false)]
-        public List<CoreLink> Links { get; set; }
+        public List<Link> Links { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -417,7 +417,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectReadResponse);
+            return this.Equals(obj as ReadResponse);
         }
 
         /// <summary>
@@ -425,7 +425,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectReadResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectReadResponse? other)
+        public bool Equals(ReadResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

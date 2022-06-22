@@ -17,10 +17,10 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectFieldTemplateItem
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectFieldTemplateItem : IEquatable<BusinessObjectFieldTemplateItem>, IValidatableObject
+    public partial class FieldTemplateItem : IEquatable<FieldTemplateItem>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectFieldTemplateItem" /> class.
+        /// Initializes a new instance of the <see cref="FieldTemplateItem" /> class.
         /// </summary>
         /// <param name="Dirty">Dirty.</param>
         /// <param name="DisplayName">DisplayName.</param>
@@ -29,7 +29,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="Html">Html.</param>
         /// <param name="Name">Name.</param>
         /// <param name="Value">Value.</param>
-        public BusinessObjectFieldTemplateItem(bool? Dirty = default(bool?), string DisplayName = default, string FieldId = default, string FullFieldId = default, string Html = default, string Name = default, string Value = default)
+        public FieldTemplateItem(bool? Dirty = default(bool?), string DisplayName = default, string FieldId = default, string FullFieldId = default, string Html = default, string Name = default, string Value = default)
         {
             this.Dirty = Dirty;
             this.DisplayName = DisplayName;
@@ -111,7 +111,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectFieldTemplateItem);
+            return this.Equals(obj as FieldTemplateItem);
         }
 
         /// <summary>
@@ -119,7 +119,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectFieldTemplateItem to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectFieldTemplateItem? other)
+        public bool Equals(FieldTemplateItem? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

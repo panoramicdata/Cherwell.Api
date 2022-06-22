@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectSaveRequest
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectSaveRequest : IEquatable<BusinessObjectSaveRequest>, IValidatableObject
+    public partial class SaveRequest : IEquatable<SaveRequest>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets CacheScope
@@ -51,7 +51,7 @@ namespace Cherwell.Api.Model.BusinessObject
         [DataMember(Name = "cacheScope", EmitDefaultValue = false)]
         public EnumCacheScope? CacheScope { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectSaveRequest" /> class.
+        /// Initializes a new instance of the <see cref="SaveRequest" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObPublicId">BusObPublicId.</param>
@@ -60,7 +60,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="CacheScope">CacheScope.</param>
         /// <param name="Fields">Fields.</param>
         /// <param name="Persist">Persist.</param>
-        public BusinessObjectSaveRequest(string BusObId = default, string BusObPublicId = default, string BusObRecId = default, string CacheKey = default, EnumCacheScope? CacheScope = default(EnumCacheScope?), List<BusinessObjectFieldTemplateItem> Fields = default(List<BusinessObjectFieldTemplateItem>), bool? Persist = default(bool?))
+        public SaveRequest(string BusObId = default, string BusObPublicId = default, string BusObRecId = default, string CacheKey = default, EnumCacheScope? CacheScope = default(EnumCacheScope?), List<FieldTemplateItem> Fields = default(List<FieldTemplateItem>), bool? Persist = default(bool?))
         {
             this.BusObId = BusObId;
             this.BusObPublicId = BusObPublicId;
@@ -95,7 +95,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets Fields
         /// </summary>
         [DataMember(Name = "fields", EmitDefaultValue = false)]
-        public List<BusinessObjectFieldTemplateItem> Fields { get; set; }
+        public List<FieldTemplateItem> Fields { get; set; }
         /// <summary>
         /// Gets or Sets Persist
         /// </summary>
@@ -137,7 +137,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectSaveRequest);
+            return this.Equals(obj as SaveRequest);
         }
 
         /// <summary>
@@ -145,7 +145,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectSaveRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectSaveRequest? other)
+        public bool Equals(SaveRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

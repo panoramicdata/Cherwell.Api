@@ -17,15 +17,15 @@ namespace Cherwell.Api.Model.Core
     /// CoreView
     /// </summary>
     [DataContract]
-    public partial class CoreView : IEquatable<CoreView>, IValidatableObject
+    public partial class View : IEquatable<View>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CoreView" /> class.
+        /// Initializes a new instance of the <see cref="View" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="ViewId">ViewId.</param>
         /// <param name="Image">Image.</param>
-        public CoreView(string Name = default, string ViewId = default, string Image = default)
+        public View(string Name = default, string ViewId = default, string Image = default)
         {
             this.Name = Name;
             this.ViewId = ViewId;
@@ -79,7 +79,7 @@ namespace Cherwell.Api.Model.Core
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CoreView);
+            return this.Equals(obj as View);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreView to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreView? other)
+        public bool Equals(View? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

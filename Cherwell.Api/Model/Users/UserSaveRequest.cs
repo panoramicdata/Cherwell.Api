@@ -40,7 +40,7 @@ namespace Cherwell.Api.Model.Users
         /// <param name="UserInfoFields">UserInfoFields.</param>
         /// <param name="UserMustChangePasswordAtNextLogin">UserMustChangePasswordAtNextLogin.</param>
         /// <param name="WindowsUserId">WindowsUserId.</param>
-        public UsersUserSaveRequest(bool? AccountLocked = default, string BusObId = default, string BusObPublicId = default, string BusObRecId = default, string DisplayName = default, string Error = default, string ErrorCode = default, bool? HasError = default, bool? LdapRequired = default, string LoginId = default, DateTime? NextPasswordResetDate = default, string Password = default, bool? PasswordNeverExpires = default, string SecurityGroupId = default, bool? UserCannotChangePassword = default, List<BusinessObjectFieldTemplateItem> UserInfoFields = default, bool? UserMustChangePasswordAtNextLogin = default, string WindowsUserId = default)
+        public UsersUserSaveRequest(bool? AccountLocked = default, string BusObId = default, string BusObPublicId = default, string BusObRecId = default, string DisplayName = default, string Error = default, string ErrorCode = default, bool? HasError = default, bool? LdapRequired = default, string LoginId = default, DateTime? NextPasswordResetDate = default, string Password = default, bool? PasswordNeverExpires = default, string SecurityGroupId = default, bool? UserCannotChangePassword = default, List<FieldTemplateItem> UserInfoFields = default, bool? UserMustChangePasswordAtNextLogin = default, string WindowsUserId = default)
         {
             this.AccountLocked = AccountLocked;
             this.BusObId = BusObId;
@@ -141,7 +141,7 @@ namespace Cherwell.Api.Model.Users
         /// Gets or Sets UserInfoFields
         /// </summary>
         [DataMember(Name = "userInfoFields", EmitDefaultValue = false)]
-        public List<BusinessObjectFieldTemplateItem> UserInfoFields { get; set; }
+        public List<FieldTemplateItem> UserInfoFields { get; set; }
         /// <summary>
         /// Gets or Sets UserMustChangePasswordAtNextLogin
         /// </summary>

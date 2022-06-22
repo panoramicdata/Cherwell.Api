@@ -17,14 +17,14 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectBatchDeleteRequest
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectBatchDeleteRequest : IEquatable<BusinessObjectBatchDeleteRequest>, IValidatableObject
+    public partial class BatchDeleteRequest : IEquatable<BatchDeleteRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectBatchDeleteRequest" /> class.
+        /// Initializes a new instance of the <see cref="BatchDeleteRequest" /> class.
         /// </summary>
         /// <param name="DeleteRequests">DeleteRequests.</param>
         /// <param name="StopOnError">StopOnError.</param>
-        public BusinessObjectBatchDeleteRequest(List<BusinessObjectDeleteRequest> DeleteRequests = default, bool? StopOnError = default)
+        public BatchDeleteRequest(List<DeleteRequest> DeleteRequests = default, bool? StopOnError = default)
         {
             this.DeleteRequests = DeleteRequests;
             this.StopOnError = StopOnError;
@@ -34,7 +34,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets DeleteRequests
         /// </summary>
         [DataMember(Name = "deleteRequests", EmitDefaultValue = false)]
-        public List<BusinessObjectDeleteRequest> DeleteRequests { get; set; }
+        public List<DeleteRequest> DeleteRequests { get; set; }
         /// <summary>
         /// Gets or Sets StopOnError
         /// </summary>
@@ -71,7 +71,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectBatchDeleteRequest);
+            return this.Equals(obj as BatchDeleteRequest);
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectBatchDeleteRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectBatchDeleteRequest? other)
+        public bool Equals(BatchDeleteRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

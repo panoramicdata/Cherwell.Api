@@ -17,15 +17,15 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectDeleteRequest
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectDeleteRequest : IEquatable<BusinessObjectDeleteRequest>, IValidatableObject
+    public partial class DeleteRequest : IEquatable<DeleteRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectDeleteRequest" /> class.
+        /// Initializes a new instance of the <see cref="DeleteRequest" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObPublicId">BusObPublicId.</param>
         /// <param name="BusObRecId">BusObRecId.</param>
-        public BusinessObjectDeleteRequest(string BusObId = default, string BusObPublicId = default, string BusObRecId = default)
+        public DeleteRequest(string BusObId = default, string BusObPublicId = default, string BusObRecId = default)
         {
             this.BusObId = BusObId;
             this.BusObPublicId = BusObPublicId;
@@ -79,7 +79,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectDeleteRequest);
+            return this.Equals(obj as DeleteRequest);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectDeleteRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectDeleteRequest? other)
+        public bool Equals(DeleteRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

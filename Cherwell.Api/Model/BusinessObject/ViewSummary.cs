@@ -17,10 +17,10 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectViewSummary
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectViewSummary : IEquatable<BusinessObjectViewSummary>, IValidatableObject
+    public partial class ViewSummary : IEquatable<ViewSummary>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectViewSummary" /> class.
+        /// Initializes a new instance of the <see cref="ViewSummary" /> class.
         /// </summary>
         /// <param name="GroupSummaries">GroupSummaries.</param>
         /// <param name="Image">Image.</param>
@@ -32,7 +32,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="Major">Major.</param>
         /// <param name="Name">Name.</param>
         /// <param name="Supporting">Supporting.</param>
-        public BusinessObjectViewSummary(List<BusinessObjectViewSummary> GroupSummaries = default(List<BusinessObjectViewSummary>), string Image = default, bool? IsPartOfView = default(bool?), string BusObId = default, string DisplayName = default, bool? Group = default(bool?), bool? Lookup = default(bool?), bool? Major = default(bool?), string Name = default, bool? Supporting = default(bool?))
+        public ViewSummary(List<ViewSummary> GroupSummaries = default(List<ViewSummary>), string Image = default, bool? IsPartOfView = default(bool?), string BusObId = default, string DisplayName = default, bool? Group = default(bool?), bool? Lookup = default(bool?), bool? Major = default(bool?), string Name = default, bool? Supporting = default(bool?))
         {
             this.GroupSummaries = GroupSummaries;
             this.Image = Image;
@@ -50,7 +50,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets GroupSummaries
         /// </summary>
         [DataMember(Name = "groupSummaries", EmitDefaultValue = false)]
-        public List<BusinessObjectViewSummary> GroupSummaries { get; set; }
+        public List<ViewSummary> GroupSummaries { get; set; }
         /// <summary>
         /// Gets or Sets Image
         /// </summary>
@@ -135,7 +135,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectViewSummary);
+            return this.Equals(obj as ViewSummary);
         }
 
         /// <summary>
@@ -143,7 +143,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectViewSummary to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectViewSummary? other)
+        public bool Equals(ViewSummary? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -17,14 +17,14 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectBatchSaveRequest
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectBatchSaveRequest : IEquatable<BusinessObjectBatchSaveRequest>, IValidatableObject
+    public partial class BatchSaveRequest : IEquatable<BatchSaveRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectBatchSaveRequest" /> class.
+        /// Initializes a new instance of the <see cref="BatchSaveRequest" /> class.
         /// </summary>
         /// <param name="SaveRequests">SaveRequests.</param>
         /// <param name="StopOnError">StopOnError.</param>
-        public BusinessObjectBatchSaveRequest(List<BusinessObjectSaveRequest> SaveRequests = default(List<BusinessObjectSaveRequest>), bool? StopOnError = default(bool?))
+        public BatchSaveRequest(List<SaveRequest> SaveRequests = default(List<SaveRequest>), bool? StopOnError = default(bool?))
         {
             this.SaveRequests = SaveRequests;
             this.StopOnError = StopOnError;
@@ -34,7 +34,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets SaveRequests
         /// </summary>
         [DataMember(Name = "saveRequests", EmitDefaultValue = false)]
-        public List<BusinessObjectSaveRequest> SaveRequests { get; set; }
+        public List<SaveRequest> SaveRequests { get; set; }
         /// <summary>
         /// Gets or Sets StopOnError
         /// </summary>
@@ -71,7 +71,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectBatchSaveRequest);
+            return this.Equals(obj as BatchSaveRequest);
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectBatchSaveRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectBatchSaveRequest? other)
+        public bool Equals(BatchSaveRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

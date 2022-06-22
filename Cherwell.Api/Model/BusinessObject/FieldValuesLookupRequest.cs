@@ -17,10 +17,10 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectFieldValuesLookupRequest
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectFieldValuesLookupRequest : IEquatable<BusinessObjectFieldValuesLookupRequest>, IValidatableObject
+    public partial class FieldValuesLookupRequest : IEquatable<FieldValuesLookupRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectFieldValuesLookupRequest" /> class.
+        /// Initializes a new instance of the <see cref="FieldValuesLookupRequest" /> class.
         /// </summary>
         /// <param name="BusbPublicId">BusbPublicId.</param>
         /// <param name="BusObId">BusObId.</param>
@@ -28,7 +28,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="FieldId">FieldId.</param>
         /// <param name="FieldName">FieldName.</param>
         /// <param name="Fields">Fields.</param>
-        public BusinessObjectFieldValuesLookupRequest(string BusbPublicId = default, string BusObId = default, string BusObRecId = default, string FieldId = default, string FieldName = default, List<BusinessObjectFieldTemplateItem> Fields = default(List<BusinessObjectFieldTemplateItem>))
+        public FieldValuesLookupRequest(string BusbPublicId = default, string BusObId = default, string BusObRecId = default, string FieldId = default, string FieldName = default, List<FieldTemplateItem> Fields = default(List<FieldTemplateItem>))
         {
             this.BusbPublicId = BusbPublicId;
             this.BusObId = BusObId;
@@ -67,7 +67,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets Fields
         /// </summary>
         [DataMember(Name = "fields", EmitDefaultValue = false)]
-        public List<BusinessObjectFieldTemplateItem> Fields { get; set; }
+        public List<FieldTemplateItem> Fields { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -103,7 +103,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectFieldValuesLookupRequest);
+            return this.Equals(obj as FieldValuesLookupRequest);
         }
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectFieldValuesLookupRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectFieldValuesLookupRequest? other)
+        public bool Equals(FieldValuesLookupRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

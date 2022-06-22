@@ -28,7 +28,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of FormsMobileFormResponse</returns>
         [Get("/api/V1/getmobileformforbusob/busobid/{busobid}/publicid/{publicid}")]
-        Task<FormsMobileFormResponse> FormsGetMobileFormForBusObByIdAndPublicIdV1([Header("UserAgent")] string userAgent, [AliasAs("busobid")]string busobid, [AliasAs("publicid")]string publicid, [AliasAs("foredit")]bool? foredit = null, [AliasAs("formid")]string formid = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<FormsMobileFormResponse> FormsGetMobileFormForBusObByIdAndPublicId([Header("UserAgent")] string userAgent, [AliasAs("busobid")]string busobid, [AliasAs("publicid")]string publicid, [AliasAs("foredit")]bool? foredit = null, [AliasAs("formid")]string formid = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get mobile form by Business Object ID and Business Object Record ID.
@@ -45,7 +45,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of FormsMobileFormResponse</returns>
         [Get("/api/V1/getmobileformforbusob/busobid/{busobid}/busobrecid/{busobrecid}")]
-        Task<FormsMobileFormResponse> FormsGetMobileFormForBusObByIdAndRecIdV1([Header("UserAgent")] string userAgent, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("foredit")]bool? foredit = null, [AliasAs("formid")]string formid = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<FormsMobileFormResponse> FormsGetMobileFormForBusObByIdAndRecId([Header("UserAgent")] string userAgent, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("foredit")]bool? foredit = null, [AliasAs("formid")]string formid = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get mobile form by Business Object name and Public ID
@@ -62,7 +62,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of FormsMobileFormResponse</returns>
         [Get("/api/V1/getmobileformforbusob/busobname/{busobname}/publicid/{publicid}")]
-        Task<FormsMobileFormResponse> FormsGetMobileFormForBusObByNameAndPublicIdV1([Header("UserAgent")] string userAgent, [AliasAs("busobname")]string busobname, [AliasAs("publicid")]string publicid, [AliasAs("foredit")]bool? foredit = null, [AliasAs("formid")]string formid = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<FormsMobileFormResponse> FormsGetMobileFormForBusObByNameAndPublicId([Header("UserAgent")] string userAgent, [AliasAs("busobname")]string busobname, [AliasAs("publicid")]string publicid, [AliasAs("foredit")]bool? foredit = null, [AliasAs("formid")]string formid = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get mobile form by Business Object name and record ID.
@@ -79,7 +79,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of FormsMobileFormResponse</returns>
         [Get("/api/V1/getmobileformforbusob/busobname/{busobname}/busobrecid/{busobrecid}")]
-        Task<FormsMobileFormResponse> FormsGetMobileFormForBusObByNameAndRecIdV1([Header("UserAgent")] string userAgent, [AliasAs("busobname")]string busobname, [AliasAs("busobrecid")]string busobrecid, [AliasAs("foredit")]bool? foredit = null, [AliasAs("formid")]string formid = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<FormsMobileFormResponse> FormsGetMobileFormForBusObByNameAndRecId([Header("UserAgent")] string userAgent, [AliasAs("busobname")]string busobname, [AliasAs("busobrecid")]string busobrecid, [AliasAs("foredit")]bool? foredit = null, [AliasAs("formid")]string formid = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
         #endregion Asynchronous Operations
     }
 }

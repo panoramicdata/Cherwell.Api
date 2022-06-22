@@ -17,10 +17,10 @@ namespace Cherwell.Api.Model.Core
     /// CoreManagerItem
     /// </summary>
     [DataContract]
-    public partial class CoreManagerItem : IEquatable<CoreManagerItem>, IValidatableObject
+    public partial class ManagerItem : IEquatable<ManagerItem>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CoreManagerItem" /> class.
+        /// Initializes a new instance of the <see cref="ManagerItem" /> class.
         /// </summary>
         /// <param name="Association">Association.</param>
         /// <param name="Description">Description.</param>
@@ -35,7 +35,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="Scope">Scope.</param>
         /// <param name="ScopeOwner">ScopeOwner.</param>
         /// <param name="StandInKey">StandInKey.</param>
-        public CoreManagerItem(string Association = default, string Description = default, string DisplayName = default, string GalleryImage = default, string Id = default, List<CoreLink> Links = default(List<CoreLink>), string LocalizedScopeName = default, string Name = default, string ParentFolder = default, bool? ParentIsScopeFolder = default(bool?), string Scope = default, string ScopeOwner = default, string StandInKey = default)
+        public ManagerItem(string Association = default, string Description = default, string DisplayName = default, string GalleryImage = default, string Id = default, List<Link> Links = default(List<Link>), string LocalizedScopeName = default, string Name = default, string ParentFolder = default, bool? ParentIsScopeFolder = default(bool?), string Scope = default, string ScopeOwner = default, string StandInKey = default)
         {
             this.Association = Association;
             this.Description = Description;
@@ -81,7 +81,7 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name = "links", EmitDefaultValue = false)]
-        public List<CoreLink> Links { get; set; }
+        public List<Link> Links { get; set; }
         /// <summary>
         /// Gets or Sets LocalizedScopeName
         /// </summary>
@@ -159,7 +159,7 @@ namespace Cherwell.Api.Model.Core
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CoreManagerItem);
+            return this.Equals(obj as ManagerItem);
         }
 
         /// <summary>
@@ -167,7 +167,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreManagerItem to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreManagerItem? other)
+        public bool Equals(ManagerItem? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

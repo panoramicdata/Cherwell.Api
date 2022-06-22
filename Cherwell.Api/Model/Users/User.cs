@@ -39,7 +39,7 @@ namespace Cherwell.Api.Model.Users
         /// <param name="ShortDisplayName">ShortDisplayName.</param>
         /// <param name="UserCannotChangePassword">UserCannotChangePassword.</param>
         /// <param name="UserMustResetPasswordAtNextLogin">UserMustResetPasswordAtNextLogin.</param>
-        public UsersUser(bool? AccountLocked = default, DateTime? CreateDateTime = default, string DisplayName = default, string Error = default, string ErrorCode = default, List<BusinessObjectFieldTemplateItem> Fields = default, bool? HasError = default, DateTime? LastPasswordResetDate = default, DateTime? LastResetDateTime = default, bool? LdapRequired = default, bool? PasswordNeverExpires = default, string PublicId = default, string RecordId = default, string SecurityGroupId = default, string ShortDisplayName = default, bool? UserCannotChangePassword = default, bool? UserMustResetPasswordAtNextLogin = default)
+        public UsersUser(bool? AccountLocked = default, DateTime? CreateDateTime = default, string DisplayName = default, string Error = default, string ErrorCode = default, List<FieldTemplateItem> Fields = default, bool? HasError = default, DateTime? LastPasswordResetDate = default, DateTime? LastResetDateTime = default, bool? LdapRequired = default, bool? PasswordNeverExpires = default, string PublicId = default, string RecordId = default, string SecurityGroupId = default, string ShortDisplayName = default, bool? UserCannotChangePassword = default, bool? UserMustResetPasswordAtNextLogin = default)
         {
             this.AccountLocked = AccountLocked;
             this.CreateDateTime = CreateDateTime;
@@ -89,7 +89,7 @@ namespace Cherwell.Api.Model.Users
         /// Gets or Sets Fields
         /// </summary>
         [DataMember(Name = "fields", EmitDefaultValue = false)]
-        public List<BusinessObjectFieldTemplateItem> Fields { get; set; }
+        public List<FieldTemplateItem> Fields { get; set; }
         /// <summary>
         /// Gets or Sets HasError
         /// </summary>

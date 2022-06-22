@@ -17,13 +17,13 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectBusObsForViewResponse
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectBusObsForViewResponse : IEquatable<BusinessObjectBusObsForViewResponse>, IValidatableObject
+    public partial class BusObsForViewResponse : IEquatable<BusObsForViewResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectBusObsForViewResponse" /> class.
+        /// Initializes a new instance of the <see cref="BusObsForViewResponse" /> class.
         /// </summary>
         /// <param name="Summaries">Summaries.</param>
-        public BusinessObjectBusObsForViewResponse(List<BusinessObjectViewSummary> Summaries = default(List<BusinessObjectViewSummary>))
+        public BusObsForViewResponse(List<ViewSummary> Summaries = default(List<ViewSummary>))
         {
             this.Summaries = Summaries;
         }
@@ -32,7 +32,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets Summaries
         /// </summary>
         [DataMember(Name = "summaries", EmitDefaultValue = false)]
-        public List<BusinessObjectViewSummary> Summaries { get; set; }
+        public List<ViewSummary> Summaries { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -63,7 +63,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectBusObsForViewResponse);
+            return this.Equals(obj as BusObsForViewResponse);
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectBusObsForViewResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectBusObsForViewResponse? other)
+        public bool Equals(BusObsForViewResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

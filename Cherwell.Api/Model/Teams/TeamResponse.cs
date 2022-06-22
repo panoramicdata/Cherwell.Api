@@ -353,7 +353,7 @@ namespace Cherwell.Api.Model.Teams
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TeamsTeamResponse(string Description = default, string EmailAlias = default, List<BusinessObjectFieldTemplateItem> Fields = default(List<BusinessObjectFieldTemplateItem>), string Image = default, string Name = default, string TeamId = default, EnumTeamType? TeamType = default(EnumTeamType?), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public TeamsTeamResponse(string Description = default, string EmailAlias = default, List<FieldTemplateItem> Fields = default(List<FieldTemplateItem>), string Image = default, string Name = default, string TeamId = default, EnumTeamType? TeamType = default(EnumTeamType?), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Description = Description;
             this.EmailAlias = EmailAlias;
@@ -382,7 +382,7 @@ namespace Cherwell.Api.Model.Teams
         /// Gets or Sets Fields
         /// </summary>
         [DataMember(Name="fields", EmitDefaultValue=false)]
-        public List<BusinessObjectFieldTemplateItem> Fields { get; set; }
+        public List<FieldTemplateItem> Fields { get; set; }
         /// <summary>
         /// Gets or Sets Image
         /// </summary>

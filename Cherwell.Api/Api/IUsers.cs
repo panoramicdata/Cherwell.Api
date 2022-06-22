@@ -25,7 +25,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of UsersUserBatchDeleteResponse</returns>
         [Post("/api/V1/deleteuserbatch")]
-        Task<UsersUserBatchDeleteResponse> UsersDeleteUserBatchV1([Header("UserAgent")] string userAgent, [Body]UsersUserBatchDeleteRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<UsersUserBatchDeleteResponse> UsersDeleteUserBatch([Header("UserAgent")] string userAgent, [Body]UsersUserBatchDeleteRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Delete a batch of users
@@ -53,7 +53,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of UsersUserDeleteResponse</returns>
         [Delete("/api/V1/deleteuser/userrecordid/{userrecordid}")]
-        Task<UsersUserDeleteResponse> UsersDeleteUserV1([Header("UserAgent")] string userAgent, [AliasAs("userrecordid")]string userrecordid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<UsersUserDeleteResponse> UsersDeleteUser([Header("UserAgent")] string userAgent, [AliasAs("userrecordid")]string userrecordid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Delete a user by record ID
@@ -96,7 +96,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of UsersUserBatchReadResponse</returns>
         [Post("/api/V1/getuserbatch")]
-        Task<UsersUserBatchReadResponse> UsersGetUserBatchV1([Header("UserAgent")] string userAgent, [Body]UsersUserBatchReadRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<UsersUserBatchReadResponse> UsersGetUserBatch([Header("UserAgent")] string userAgent, [Body]UsersUserBatchReadRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get a user by login ID
@@ -110,7 +110,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of UsersUser</returns>
         [Get("/api/V1/getuserbyloginid/loginid/{loginid}")]
-        Task<UsersUser> UsersGetUserByLoginIdV1([Header("UserAgent")] string userAgent, [AliasAs("loginid")]string loginid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<UsersUser> UsersGetUserByLoginId([Header("UserAgent")] string userAgent, [AliasAs("loginid")]string loginid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get a user by login ID and login ID type
@@ -154,7 +154,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of UsersUserReadResponse</returns>
         [Get("/api/V1/getuserbypublicid/publicid/{publicid}")]
-        Task<UsersUserReadResponse> UsersGetUserByPublicIdV1([Header("UserAgent")] string userAgent, [AliasAs("publicid")]string publicid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<UsersUserReadResponse> UsersGetUserByPublicId([Header("UserAgent")] string userAgent, [AliasAs("publicid")]string publicid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get a user by public ID
@@ -196,7 +196,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of UsersUserBatchSaveResponse</returns>
         [Post("/api/V1/saveuserbatch")]
-        Task<UsersUserBatchSaveResponse> UsersSaveUserBatchV1([Header("UserAgent")] string userAgent, [Body]UsersUserBatchSaveRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<UsersUserBatchSaveResponse> UsersSaveUserBatch([Header("UserAgent")] string userAgent, [Body]UsersUserBatchSaveRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Create or update users in a batch
@@ -224,7 +224,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of UsersUserSaveResponse</returns>
         [Post("/api/V1/saveuser")]
-        Task<UsersUserSaveResponse> UsersSaveUserV1([Header("UserAgent")] string userAgent, [Body]UsersUserSaveRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<UsersUserSaveResponse> UsersSaveUser([Header("UserAgent")] string userAgent, [Body]UsersUserSaveRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Create or update a user

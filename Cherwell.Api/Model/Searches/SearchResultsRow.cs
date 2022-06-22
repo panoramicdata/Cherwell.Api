@@ -28,7 +28,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="PublicId">PublicId.</param>
         /// <param name="RowColor">RowColor.</param>
         /// <param name="SearchResultsFieldValues">SearchResultsFieldValues.</param>
-        public SearchesSearchResultsRow(string BusObId = default, string BusObRecId = default, List<CoreLink> Links = default(List<CoreLink>), string PublicId = default, string RowColor = default, List<BusinessObjectFieldTemplateItem> SearchResultsFieldValues = default(List<BusinessObjectFieldTemplateItem>))
+        public SearchesSearchResultsRow(string BusObId = default, string BusObRecId = default, List<Link> Links = default(List<Link>), string PublicId = default, string RowColor = default, List<FieldTemplateItem> SearchResultsFieldValues = default(List<FieldTemplateItem>))
         {
             this.BusObId = BusObId;
             this.BusObRecId = BusObRecId;
@@ -52,7 +52,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name = "links", EmitDefaultValue = false)]
-        public List<CoreLink> Links { get; set; }
+        public List<Link> Links { get; set; }
         /// <summary>
         /// Gets or Sets PublicId
         /// </summary>
@@ -67,7 +67,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets SearchResultsFieldValues
         /// </summary>
         [DataMember(Name = "searchResultsFieldValues", EmitDefaultValue = false)]
-        public List<BusinessObjectFieldTemplateItem> SearchResultsFieldValues { get; set; }
+        public List<FieldTemplateItem> SearchResultsFieldValues { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

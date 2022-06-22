@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.BusinessObject
     /// BusinessObjectAttachment
     /// </summary>
     [DataContract]
-    public partial class BusinessObjectAttachment : IEquatable<BusinessObjectAttachment>, IValidatableObject
+    public partial class ObjectAttachment : IEquatable<ObjectAttachment>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets AttachmentType
@@ -215,7 +215,7 @@ namespace Cherwell.Api.Model.BusinessObject
         [DataMember(Name = "type", EmitDefaultValue = false)]
         public EnumType? Type { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectAttachment" /> class.
+        /// Initializes a new instance of the <see cref="ObjectAttachment" /> class.
         /// </summary>
         /// <param name="AttachedBusObId">AttachedBusObId.</param>
         /// <param name="AttachedBusObRecId">AttachedBusObRecId.</param>
@@ -234,7 +234,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="Scope">Scope.</param>
         /// <param name="ScopeOwner">ScopeOwner.</param>
         /// <param name="Type">Type.</param>
-        public BusinessObjectAttachment(string AttachedBusObId = default, string AttachedBusObRecId = default, string AttachmentFileId = default, string AttachmentFileName = default, string AttachmentFileType = default, string AttachmentId = default, EnumAttachmentType? AttachmentType = default(EnumAttachmentType?), string BusObId = default, string BusObRecId = default, string Comment = default, DateTime? Created = default(DateTime?), string DisplayText = default, List<CoreLink> Links = default(List<CoreLink>), string Owner = default, EnumScope? Scope = default(EnumScope?), string ScopeOwner = default, EnumType? Type = default(EnumType?))
+        public ObjectAttachment(string AttachedBusObId = default, string AttachedBusObRecId = default, string AttachmentFileId = default, string AttachmentFileName = default, string AttachmentFileType = default, string AttachmentId = default, EnumAttachmentType? AttachmentType = default(EnumAttachmentType?), string BusObId = default, string BusObRecId = default, string Comment = default, DateTime? Created = default(DateTime?), string DisplayText = default, List<Link> Links = default(List<Link>), string Owner = default, EnumScope? Scope = default(EnumScope?), string ScopeOwner = default, EnumType? Type = default(EnumType?))
         {
             this.AttachedBusObId = AttachedBusObId;
             this.AttachedBusObRecId = AttachedBusObRecId;
@@ -314,7 +314,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name = "links", EmitDefaultValue = false)]
-        public List<CoreLink> Links { get; set; }
+        public List<Link> Links { get; set; }
         /// <summary>
         /// Gets or Sets Owner
         /// </summary>
@@ -371,7 +371,7 @@ namespace Cherwell.Api.Model.BusinessObject
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BusinessObjectAttachment);
+            return this.Equals(obj as ObjectAttachment);
         }
 
         /// <summary>
@@ -379,7 +379,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectAttachment to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectAttachment? other)
+        public bool Equals(ObjectAttachment? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

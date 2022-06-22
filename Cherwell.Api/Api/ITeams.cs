@@ -25,7 +25,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TeamsAddUserToTeamByBatchResponse</returns>
         [Post("/api/V1/addusertoteambybatch")]
-        Task<TeamsAddUserToTeamByBatchResponse> TeamsAddUserToTeamByBatchV1([Header("UserAgent")] string userAgent, [Body]TeamsAddUserToTeamByBatchRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TeamsAddUserToTeamByBatchResponse> TeamsAddUserToTeamByBatch([Header("UserAgent")] string userAgent, [Body]TeamsAddUserToTeamByBatchRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Add a user to a team
@@ -39,7 +39,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of void</returns>
         [Post("/api/V1/addusertoteam")]
-        Task TeamsAddUserToTeamV1([Header("UserAgent")] string userAgent, [Body]TeamsAddUserToTeamRequest dataRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task TeamsAddUserToTeam([Header("UserAgent")] string userAgent, [Body]TeamsAddUserToTeamRequest dataRequest, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Add a user to a team
@@ -67,7 +67,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of void</returns>
         [Delete("/api/V1/deleteteam/{teamid}")]
-        Task TeamsDeleteTeamV1([Header("UserAgent")] string userAgent, [AliasAs("teamid")]string teamid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task TeamsDeleteTeam([Header("UserAgent")] string userAgent, [AliasAs("teamid")]string teamid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get a team by its TeamId
@@ -81,7 +81,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TeamsTeamResponse</returns>
         [Get("/api/V1/getteam/{teamid}")]
-        Task<TeamsTeamResponse> TeamsGetTeamV1([Header("UserAgent")] string userAgent, [AliasAs("teamid")]string teamid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TeamsTeamResponse> TeamsGetTeam([Header("UserAgent")] string userAgent, [AliasAs("teamid")]string teamid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all available Teams
@@ -94,7 +94,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TeamsTeamsResponse</returns>
         [Get("/api/V1/getteams")]
-        Task<TeamsTeamsResponse> TeamsGetTeamsV1([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TeamsTeamsResponse> TeamsGetTeams([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all available Teams
@@ -121,7 +121,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TeamsTeamsResponse</returns>
         [Get("/api/V1/getusersteams/userrecordid/{userRecordId}")]
-        Task<TeamsTeamsResponse> TeamsGetUsersTeamsV1([Header("UserAgent")] string userAgent, [AliasAs("userRecordId")]string userRecordId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TeamsTeamsResponse> TeamsGetUsersTeams([Header("UserAgent")] string userAgent, [AliasAs("userRecordId")]string userRecordId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get Team assignments for a user
@@ -148,7 +148,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TeamsTeamsResponse</returns>
         [Get("/api/V1/getworkgroups")]
-        Task<TeamsTeamsResponse> TeamsGetWorkgroupsV1([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TeamsTeamsResponse> TeamsGetWorkgroups([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all available Workgroups
@@ -176,7 +176,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TeamsRemoveCustomerFromWorkgroupResponse</returns>
         [Delete("/api/V1/removecustomerfromworkgroup/workgroupid/{workgroupid}/customerrecordid/{customerrecordid}")]
-        Task<TeamsRemoveCustomerFromWorkgroupResponse> TeamsRemoveCustomerFromWorkgroupV1([Header("UserAgent")] string userAgent, [AliasAs("workgroupid")]string workgroupid, [AliasAs("customerrecordid")]string customerrecordid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TeamsRemoveCustomerFromWorkgroupResponse> TeamsRemoveCustomerFromWorkgroup([Header("UserAgent")] string userAgent, [AliasAs("workgroupid")]string workgroupid, [AliasAs("customerrecordid")]string customerrecordid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Operation to remove a User from a Team.
@@ -191,7 +191,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of void</returns>
         [Delete("/api/V1/removeuserfromteam/teamid/{teamId}/userrecordid/{userrecordid}")]
-        Task TeamsRemoveUserFromTeamV1([Header("UserAgent")] string userAgent, [AliasAs("teamId")]string teamId, [AliasAs("userrecordid")]string userrecordid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task TeamsRemoveUserFromTeam([Header("UserAgent")] string userAgent, [AliasAs("teamId")]string teamId, [AliasAs("userrecordid")]string userrecordid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Operation to remove a User from a Team.
@@ -220,7 +220,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TeamsSaveTeamMemberResponse</returns>
         [Post("/api/V1/saveteammember")]
-        Task<TeamsSaveTeamMemberResponse> TeamsSaveTeamMemberV1([Header("UserAgent")] string userAgent, [Body]TeamsSaveTeamMemberRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TeamsSaveTeamMemberResponse> TeamsSaveTeamMember([Header("UserAgent")] string userAgent, [Body]TeamsSaveTeamMemberRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Create or update a team
@@ -234,7 +234,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TeamsTeamSaveResponse</returns>
         [Post("/api/V1/saveteam")]
-        Task<TeamsTeamSaveResponse> TeamsSaveTeamV1([Header("UserAgent")] string userAgent, [Body]TeamsTeamSaveRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TeamsTeamSaveResponse> TeamsSaveTeam([Header("UserAgent")] string userAgent, [Body]TeamsTeamSaveRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Save the membership status of a Workgroup member.
@@ -248,7 +248,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TeamsSaveWorkgroupMemberResponse</returns>
         [Post("/api/V1/saveworkgroupmember")]
-        Task<TeamsSaveWorkgroupMemberResponse> TeamsSaveWorkgroupMemberV1([Header("UserAgent")] string userAgent, [Body]TeamsSaveWorkgroupMemberRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<TeamsSaveWorkgroupMemberResponse> TeamsSaveWorkgroupMember([Header("UserAgent")] string userAgent, [Body]TeamsSaveWorkgroupMemberRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
         #endregion Asynchronous Operations
     }
 }

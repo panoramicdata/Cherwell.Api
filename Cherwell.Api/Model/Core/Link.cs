@@ -17,14 +17,14 @@ namespace Cherwell.Api.Model.Core
     /// CoreLink
     /// </summary>
     [DataContract]
-    public partial class CoreLink : IEquatable<CoreLink>, IValidatableObject
+    public partial class Link : IEquatable<Link>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CoreLink" /> class.
+        /// Initializes a new instance of the <see cref="Link" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Url">Url.</param>
-        public CoreLink(string Name = default, string Url = default)
+        public Link(string Name = default, string Url = default)
         {
             this.Name = Name;
             this.Url = Url;
@@ -71,7 +71,7 @@ namespace Cherwell.Api.Model.Core
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CoreLink);
+            return this.Equals(obj as Link);
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreLink to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreLink? other)
+        public bool Equals(Link? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
