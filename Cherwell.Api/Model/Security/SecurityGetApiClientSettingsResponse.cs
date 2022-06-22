@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Model.Security
+namespace Cherwell.Api.Model.Security
 {
     /// <summary>
     /// SecurityGetApiClientSettingsResponse

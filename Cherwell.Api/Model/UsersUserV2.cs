@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 using Cherwell.Model.BusinessObject;
 
-namespace Cherwell.Model;
+namespace Cherwell.Api.Model;
 
 /// <summary>
 /// UsersUserV2

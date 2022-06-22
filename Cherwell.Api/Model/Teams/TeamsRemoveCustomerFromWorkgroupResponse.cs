@@ -11,13 +11,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Model
+namespace Cherwell.Api.Model
 {
     /// <summary>
-    /// TeamsAddUserToTeamResponse
+    /// TeamsRemoveCustomerFromWorkgroupResponse
     /// </summary>
     [DataContract]
-    public partial class TeamsAddUserToTeamResponse :  IEquatable<TeamsAddUserToTeamResponse>, IValidatableObject
+    public partial class TeamsRemoveCustomerFromWorkgroupResponse :  IEquatable<TeamsRemoveCustomerFromWorkgroupResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,20 +315,34 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TeamsAddUserToTeamResponse" /> class.
+        /// Initializes a new instance of the <see cref="TeamsRemoveCustomerFromWorkgroupResponse" /> class.
         /// </summary>
+        /// <param name="WorkgroupId">WorkgroupId.</param>
+        /// <param name="CustomerRecordId">CustomerRecordId.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TeamsAddUserToTeamResponse(string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public TeamsRemoveCustomerFromWorkgroupResponse(string WorkgroupId = default(string), string CustomerRecordId = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
+            this.WorkgroupId = WorkgroupId;
+            this.CustomerRecordId = CustomerRecordId;
             this.ErrorCode = ErrorCode;
             this.ErrorMessage = ErrorMessage;
             this.HasError = HasError;
             this.HttpStatusCode = HttpStatusCode;
         }
         
+        /// <summary>
+        /// Gets or Sets WorkgroupId
+        /// </summary>
+        [DataMember(Name="workgroupId", EmitDefaultValue=false)]
+        public string WorkgroupId { get; set; }
+        /// <summary>
+        /// Gets or Sets CustomerRecordId
+        /// </summary>
+        [DataMember(Name="customerRecordId", EmitDefaultValue=false)]
+        public string CustomerRecordId { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -351,7 +365,9 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TeamsAddUserToTeamResponse {\n");
+            sb.Append("class TeamsRemoveCustomerFromWorkgroupResponse {\n");
+            sb.Append("  WorkgroupId: ").Append(WorkgroupId).Append("\n");
+            sb.Append("  CustomerRecordId: ").Append(CustomerRecordId).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
             sb.Append("  HasError: ").Append(HasError).Append("\n");
@@ -377,21 +393,31 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TeamsAddUserToTeamResponse);
+            return this.Equals(obj as TeamsRemoveCustomerFromWorkgroupResponse);
         }
 
         /// <summary>
-        /// Returns true if TeamsAddUserToTeamResponse instances are equal
+        /// Returns true if TeamsRemoveCustomerFromWorkgroupResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TeamsAddUserToTeamResponse to be compared</param>
+        /// <param name="other">Instance of TeamsRemoveCustomerFromWorkgroupResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsAddUserToTeamResponse other)
+        public bool Equals(TeamsRemoveCustomerFromWorkgroupResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
                 return false;
 
             return 
+                (
+                    this.WorkgroupId == other.WorkgroupId ||
+                    this.WorkgroupId != null &&
+                    this.WorkgroupId.Equals(other.WorkgroupId)
+                ) && 
+                (
+                    this.CustomerRecordId == other.CustomerRecordId ||
+                    this.CustomerRecordId != null &&
+                    this.CustomerRecordId.Equals(other.CustomerRecordId)
+                ) && 
                 (
                     this.ErrorCode == other.ErrorCode ||
                     this.ErrorCode != null &&
@@ -425,6 +451,10 @@ namespace Cherwell.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.WorkgroupId != null)
+                    hash = hash * 59 + this.WorkgroupId.GetHashCode();
+                if (this.CustomerRecordId != null)
+                    hash = hash * 59 + this.CustomerRecordId.GetHashCode();
                 if (this.ErrorCode != null)
                     hash = hash * 59 + this.ErrorCode.GetHashCode();
                 if (this.ErrorMessage != null)

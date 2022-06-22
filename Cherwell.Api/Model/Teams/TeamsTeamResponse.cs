@@ -11,14 +11,34 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Model
+namespace Cherwell.Api.Model
 {
     /// <summary>
-    /// TeamsSaveTeamMemberResponse
+    /// TeamsTeamResponse
     /// </summary>
     [DataContract]
-    public partial class TeamsSaveTeamMemberResponse :  IEquatable<TeamsSaveTeamMemberResponse>, IValidatableObject
+    public partial class TeamsTeamResponse :  IEquatable<TeamsTeamResponse>, IValidatableObject
     {
+        /// <summary>
+        /// Gets or Sets TeamType
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TeamTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum User for "User"
+            /// </summary>
+            [EnumMember(Value = "User")]
+            User,
+            
+            /// <summary>
+            /// Enum CustomerWorkgroup for "CustomerWorkgroup"
+            /// </summary>
+            [EnumMember(Value = "CustomerWorkgroup")]
+            CustomerWorkgroup
+        }
+
         /// <summary>
         /// Gets or Sets HttpStatusCode
         /// </summary>
@@ -310,25 +330,74 @@ namespace Cherwell.Model
         }
 
         /// <summary>
+        /// Gets or Sets TeamType
+        /// </summary>
+        [DataMember(Name="teamType", EmitDefaultValue=false)]
+        public TeamTypeEnum? TeamType { get; set; }
+        /// <summary>
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TeamsSaveTeamMemberResponse" /> class.
+        /// Initializes a new instance of the <see cref="TeamsTeamResponse" /> class.
         /// </summary>
+        /// <param name="Description">Description.</param>
+        /// <param name="EmailAlias">EmailAlias.</param>
+        /// <param name="Fields">Fields.</param>
+        /// <param name="Image">Image.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="TeamId">TeamId.</param>
+        /// <param name="TeamType">TeamType.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TeamsSaveTeamMemberResponse(string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public TeamsTeamResponse(string Description = default(string), string EmailAlias = default(string), List<BusinessObjectFieldTemplateItem> Fields = default(List<BusinessObjectFieldTemplateItem>), string Image = default(string), string Name = default(string), string TeamId = default(string), TeamTypeEnum? TeamType = default(TeamTypeEnum?), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
+            this.Description = Description;
+            this.EmailAlias = EmailAlias;
+            this.Fields = Fields;
+            this.Image = Image;
+            this.Name = Name;
+            this.TeamId = TeamId;
+            this.TeamType = TeamType;
             this.ErrorCode = ErrorCode;
             this.ErrorMessage = ErrorMessage;
             this.HasError = HasError;
             this.HttpStatusCode = HttpStatusCode;
         }
         
+        /// <summary>
+        /// Gets or Sets Description
+        /// </summary>
+        [DataMember(Name="description", EmitDefaultValue=false)]
+        public string Description { get; set; }
+        /// <summary>
+        /// Gets or Sets EmailAlias
+        /// </summary>
+        [DataMember(Name="emailAlias", EmitDefaultValue=false)]
+        public string EmailAlias { get; set; }
+        /// <summary>
+        /// Gets or Sets Fields
+        /// </summary>
+        [DataMember(Name="fields", EmitDefaultValue=false)]
+        public List<BusinessObjectFieldTemplateItem> Fields { get; set; }
+        /// <summary>
+        /// Gets or Sets Image
+        /// </summary>
+        [DataMember(Name="image", EmitDefaultValue=false)]
+        public string Image { get; set; }
+        /// <summary>
+        /// Gets or Sets Name
+        /// </summary>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+        /// <summary>
+        /// Gets or Sets TeamId
+        /// </summary>
+        [DataMember(Name="teamId", EmitDefaultValue=false)]
+        public string TeamId { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -351,7 +420,14 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TeamsSaveTeamMemberResponse {\n");
+            sb.Append("class TeamsTeamResponse {\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  EmailAlias: ").Append(EmailAlias).Append("\n");
+            sb.Append("  Fields: ").Append(Fields).Append("\n");
+            sb.Append("  Image: ").Append(Image).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  TeamId: ").Append(TeamId).Append("\n");
+            sb.Append("  TeamType: ").Append(TeamType).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
             sb.Append("  HasError: ").Append(HasError).Append("\n");
@@ -377,21 +453,56 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TeamsSaveTeamMemberResponse);
+            return this.Equals(obj as TeamsTeamResponse);
         }
 
         /// <summary>
-        /// Returns true if TeamsSaveTeamMemberResponse instances are equal
+        /// Returns true if TeamsTeamResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TeamsSaveTeamMemberResponse to be compared</param>
+        /// <param name="other">Instance of TeamsTeamResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsSaveTeamMemberResponse other)
+        public bool Equals(TeamsTeamResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
                 return false;
 
             return 
+                (
+                    this.Description == other.Description ||
+                    this.Description != null &&
+                    this.Description.Equals(other.Description)
+                ) && 
+                (
+                    this.EmailAlias == other.EmailAlias ||
+                    this.EmailAlias != null &&
+                    this.EmailAlias.Equals(other.EmailAlias)
+                ) && 
+                (
+                    this.Fields == other.Fields ||
+                    this.Fields != null &&
+                    this.Fields.SequenceEqual(other.Fields)
+                ) && 
+                (
+                    this.Image == other.Image ||
+                    this.Image != null &&
+                    this.Image.Equals(other.Image)
+                ) && 
+                (
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
+                ) && 
+                (
+                    this.TeamId == other.TeamId ||
+                    this.TeamId != null &&
+                    this.TeamId.Equals(other.TeamId)
+                ) && 
+                (
+                    this.TeamType == other.TeamType ||
+                    this.TeamType != null &&
+                    this.TeamType.Equals(other.TeamType)
+                ) && 
                 (
                     this.ErrorCode == other.ErrorCode ||
                     this.ErrorCode != null &&
@@ -425,6 +536,20 @@ namespace Cherwell.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Description != null)
+                    hash = hash * 59 + this.Description.GetHashCode();
+                if (this.EmailAlias != null)
+                    hash = hash * 59 + this.EmailAlias.GetHashCode();
+                if (this.Fields != null)
+                    hash = hash * 59 + this.Fields.GetHashCode();
+                if (this.Image != null)
+                    hash = hash * 59 + this.Image.GetHashCode();
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
+                if (this.TeamId != null)
+                    hash = hash * 59 + this.TeamId.GetHashCode();
+                if (this.TeamType != null)
+                    hash = hash * 59 + this.TeamType.GetHashCode();
                 if (this.ErrorCode != null)
                     hash = hash * 59 + this.ErrorCode.GetHashCode();
                 if (this.ErrorMessage != null)

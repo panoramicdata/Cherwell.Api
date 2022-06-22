@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Model.OneStepActions
+namespace Cherwell.Api.Model.OneStepActions
 {
     /// <summary>
     /// OneStepActionsOneStepActionResponse

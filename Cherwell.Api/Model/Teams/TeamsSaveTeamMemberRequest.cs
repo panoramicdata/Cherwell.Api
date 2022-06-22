@@ -11,35 +11,49 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Model
+namespace Cherwell.Api.Model
 {
     /// <summary>
-    /// TeamsTeam
+    /// TeamsSaveTeamMemberRequest
     /// </summary>
     [DataContract]
-    public partial class TeamsTeam :  IEquatable<TeamsTeam>, IValidatableObject
+    public partial class TeamsSaveTeamMemberRequest :  IEquatable<TeamsSaveTeamMemberRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TeamsTeam" /> class.
+        /// Initializes a new instance of the <see cref="TeamsSaveTeamMemberRequest" /> class.
         /// </summary>
+        /// <param name="IsTeamManager">IsTeamManager.</param>
+        /// <param name="SetAsDefaultTeam">SetAsDefaultTeam.</param>
         /// <param name="TeamId">TeamId.</param>
-        /// <param name="TeamName">TeamName.</param>
-        public TeamsTeam(string TeamId = default(string), string TeamName = default(string))
+        /// <param name="UserRecId">UserRecId.</param>
+        public TeamsSaveTeamMemberRequest(bool? IsTeamManager = default(bool?), bool? SetAsDefaultTeam = default(bool?), string TeamId = default(string), string UserRecId = default(string))
         {
+            this.IsTeamManager = IsTeamManager;
+            this.SetAsDefaultTeam = SetAsDefaultTeam;
             this.TeamId = TeamId;
-            this.TeamName = TeamName;
+            this.UserRecId = UserRecId;
         }
         
+        /// <summary>
+        /// Gets or Sets IsTeamManager
+        /// </summary>
+        [DataMember(Name="isTeamManager", EmitDefaultValue=false)]
+        public bool? IsTeamManager { get; set; }
+        /// <summary>
+        /// Gets or Sets SetAsDefaultTeam
+        /// </summary>
+        [DataMember(Name="setAsDefaultTeam", EmitDefaultValue=false)]
+        public bool? SetAsDefaultTeam { get; set; }
         /// <summary>
         /// Gets or Sets TeamId
         /// </summary>
         [DataMember(Name="teamId", EmitDefaultValue=false)]
         public string TeamId { get; set; }
         /// <summary>
-        /// Gets or Sets TeamName
+        /// Gets or Sets UserRecId
         /// </summary>
-        [DataMember(Name="teamName", EmitDefaultValue=false)]
-        public string TeamName { get; set; }
+        [DataMember(Name="userRecId", EmitDefaultValue=false)]
+        public string UserRecId { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,9 +61,11 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TeamsTeam {\n");
+            sb.Append("class TeamsSaveTeamMemberRequest {\n");
+            sb.Append("  IsTeamManager: ").Append(IsTeamManager).Append("\n");
+            sb.Append("  SetAsDefaultTeam: ").Append(SetAsDefaultTeam).Append("\n");
             sb.Append("  TeamId: ").Append(TeamId).Append("\n");
-            sb.Append("  TeamName: ").Append(TeamName).Append("\n");
+            sb.Append("  UserRecId: ").Append(UserRecId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -71,15 +87,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TeamsTeam);
+            return this.Equals(obj as TeamsSaveTeamMemberRequest);
         }
 
         /// <summary>
-        /// Returns true if TeamsTeam instances are equal
+        /// Returns true if TeamsSaveTeamMemberRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TeamsTeam to be compared</param>
+        /// <param name="other">Instance of TeamsSaveTeamMemberRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsTeam other)
+        public bool Equals(TeamsSaveTeamMemberRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -87,14 +103,24 @@ namespace Cherwell.Model
 
             return 
                 (
+                    this.IsTeamManager == other.IsTeamManager ||
+                    this.IsTeamManager != null &&
+                    this.IsTeamManager.Equals(other.IsTeamManager)
+                ) && 
+                (
+                    this.SetAsDefaultTeam == other.SetAsDefaultTeam ||
+                    this.SetAsDefaultTeam != null &&
+                    this.SetAsDefaultTeam.Equals(other.SetAsDefaultTeam)
+                ) && 
+                (
                     this.TeamId == other.TeamId ||
                     this.TeamId != null &&
                     this.TeamId.Equals(other.TeamId)
                 ) && 
                 (
-                    this.TeamName == other.TeamName ||
-                    this.TeamName != null &&
-                    this.TeamName.Equals(other.TeamName)
+                    this.UserRecId == other.UserRecId ||
+                    this.UserRecId != null &&
+                    this.UserRecId.Equals(other.UserRecId)
                 );
         }
 
@@ -109,10 +135,14 @@ namespace Cherwell.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.IsTeamManager != null)
+                    hash = hash * 59 + this.IsTeamManager.GetHashCode();
+                if (this.SetAsDefaultTeam != null)
+                    hash = hash * 59 + this.SetAsDefaultTeam.GetHashCode();
                 if (this.TeamId != null)
                     hash = hash * 59 + this.TeamId.GetHashCode();
-                if (this.TeamName != null)
-                    hash = hash * 59 + this.TeamName.GetHashCode();
+                if (this.UserRecId != null)
+                    hash = hash * 59 + this.UserRecId.GetHashCode();
                 return hash;
             }
         }

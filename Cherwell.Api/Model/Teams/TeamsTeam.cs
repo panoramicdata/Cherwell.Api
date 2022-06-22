@@ -11,35 +11,35 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Model
+namespace Cherwell.Api.Model
 {
     /// <summary>
-    /// TeamsAddUserToTeamByBatchRequest
+    /// TeamsTeam
     /// </summary>
     [DataContract]
-    public partial class TeamsAddUserToTeamByBatchRequest :  IEquatable<TeamsAddUserToTeamByBatchRequest>, IValidatableObject
+    public partial class TeamsTeam :  IEquatable<TeamsTeam>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TeamsAddUserToTeamByBatchRequest" /> class.
+        /// Initializes a new instance of the <see cref="TeamsTeam" /> class.
         /// </summary>
-        /// <param name="AddUserToTeamRequests">AddUserToTeamRequests.</param>
-        /// <param name="StopOnError">StopOnError.</param>
-        public TeamsAddUserToTeamByBatchRequest(List<TeamsAddUserToTeamRequest> AddUserToTeamRequests = default(List<TeamsAddUserToTeamRequest>), bool? StopOnError = default(bool?))
+        /// <param name="TeamId">TeamId.</param>
+        /// <param name="TeamName">TeamName.</param>
+        public TeamsTeam(string TeamId = default(string), string TeamName = default(string))
         {
-            this.AddUserToTeamRequests = AddUserToTeamRequests;
-            this.StopOnError = StopOnError;
+            this.TeamId = TeamId;
+            this.TeamName = TeamName;
         }
         
         /// <summary>
-        /// Gets or Sets AddUserToTeamRequests
+        /// Gets or Sets TeamId
         /// </summary>
-        [DataMember(Name="addUserToTeamRequests", EmitDefaultValue=false)]
-        public List<TeamsAddUserToTeamRequest> AddUserToTeamRequests { get; set; }
+        [DataMember(Name="teamId", EmitDefaultValue=false)]
+        public string TeamId { get; set; }
         /// <summary>
-        /// Gets or Sets StopOnError
+        /// Gets or Sets TeamName
         /// </summary>
-        [DataMember(Name="stopOnError", EmitDefaultValue=false)]
-        public bool? StopOnError { get; set; }
+        [DataMember(Name="teamName", EmitDefaultValue=false)]
+        public string TeamName { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,9 +47,9 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TeamsAddUserToTeamByBatchRequest {\n");
-            sb.Append("  AddUserToTeamRequests: ").Append(AddUserToTeamRequests).Append("\n");
-            sb.Append("  StopOnError: ").Append(StopOnError).Append("\n");
+            sb.Append("class TeamsTeam {\n");
+            sb.Append("  TeamId: ").Append(TeamId).Append("\n");
+            sb.Append("  TeamName: ").Append(TeamName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -71,15 +71,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TeamsAddUserToTeamByBatchRequest);
+            return this.Equals(obj as TeamsTeam);
         }
 
         /// <summary>
-        /// Returns true if TeamsAddUserToTeamByBatchRequest instances are equal
+        /// Returns true if TeamsTeam instances are equal
         /// </summary>
-        /// <param name="other">Instance of TeamsAddUserToTeamByBatchRequest to be compared</param>
+        /// <param name="other">Instance of TeamsTeam to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsAddUserToTeamByBatchRequest other)
+        public bool Equals(TeamsTeam other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -87,14 +87,14 @@ namespace Cherwell.Model
 
             return 
                 (
-                    this.AddUserToTeamRequests == other.AddUserToTeamRequests ||
-                    this.AddUserToTeamRequests != null &&
-                    this.AddUserToTeamRequests.SequenceEqual(other.AddUserToTeamRequests)
+                    this.TeamId == other.TeamId ||
+                    this.TeamId != null &&
+                    this.TeamId.Equals(other.TeamId)
                 ) && 
                 (
-                    this.StopOnError == other.StopOnError ||
-                    this.StopOnError != null &&
-                    this.StopOnError.Equals(other.StopOnError)
+                    this.TeamName == other.TeamName ||
+                    this.TeamName != null &&
+                    this.TeamName.Equals(other.TeamName)
                 );
         }
 
@@ -109,10 +109,10 @@ namespace Cherwell.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.AddUserToTeamRequests != null)
-                    hash = hash * 59 + this.AddUserToTeamRequests.GetHashCode();
-                if (this.StopOnError != null)
-                    hash = hash * 59 + this.StopOnError.GetHashCode();
+                if (this.TeamId != null)
+                    hash = hash * 59 + this.TeamId.GetHashCode();
+                if (this.TeamName != null)
+                    hash = hash * 59 + this.TeamName.GetHashCode();
                 return hash;
             }
         }

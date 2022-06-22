@@ -11,13 +11,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Model
+namespace Cherwell.Api.Model
 {
     /// <summary>
-    /// TeamsTeamsV2Response
+    /// TeamsRemoveUserFromTeamResponse
     /// </summary>
     [DataContract]
-    public partial class TeamsTeamsV2Response :  IEquatable<TeamsTeamsV2Response>, IValidatableObject
+    public partial class TeamsRemoveUserFromTeamResponse :  IEquatable<TeamsRemoveUserFromTeamResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,16 +315,18 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TeamsTeamsV2Response" /> class.
+        /// Initializes a new instance of the <see cref="TeamsRemoveUserFromTeamResponse" /> class.
         /// </summary>
-        /// <param name="Teams">Teams.</param>
+        /// <param name="TeamId">TeamId.</param>
+        /// <param name="UserRecordId">UserRecordId.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TeamsTeamsV2Response(List<TeamsTeam> Teams = default(List<TeamsTeam>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public TeamsRemoveUserFromTeamResponse(string TeamId = default(string), string UserRecordId = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
-            this.Teams = Teams;
+            this.TeamId = TeamId;
+            this.UserRecordId = UserRecordId;
             this.ErrorCode = ErrorCode;
             this.ErrorMessage = ErrorMessage;
             this.HasError = HasError;
@@ -332,10 +334,15 @@ namespace Cherwell.Model
         }
         
         /// <summary>
-        /// Gets or Sets Teams
+        /// Gets or Sets TeamId
         /// </summary>
-        [DataMember(Name="teams", EmitDefaultValue=false)]
-        public List<TeamsTeam> Teams { get; set; }
+        [DataMember(Name="teamId", EmitDefaultValue=false)]
+        public string TeamId { get; set; }
+        /// <summary>
+        /// Gets or Sets UserRecordId
+        /// </summary>
+        [DataMember(Name="userRecordId", EmitDefaultValue=false)]
+        public string UserRecordId { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -358,8 +365,9 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TeamsTeamsV2Response {\n");
-            sb.Append("  Teams: ").Append(Teams).Append("\n");
+            sb.Append("class TeamsRemoveUserFromTeamResponse {\n");
+            sb.Append("  TeamId: ").Append(TeamId).Append("\n");
+            sb.Append("  UserRecordId: ").Append(UserRecordId).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
             sb.Append("  HasError: ").Append(HasError).Append("\n");
@@ -385,15 +393,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TeamsTeamsV2Response);
+            return this.Equals(obj as TeamsRemoveUserFromTeamResponse);
         }
 
         /// <summary>
-        /// Returns true if TeamsTeamsV2Response instances are equal
+        /// Returns true if TeamsRemoveUserFromTeamResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TeamsTeamsV2Response to be compared</param>
+        /// <param name="other">Instance of TeamsRemoveUserFromTeamResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsTeamsV2Response other)
+        public bool Equals(TeamsRemoveUserFromTeamResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -401,9 +409,14 @@ namespace Cherwell.Model
 
             return 
                 (
-                    this.Teams == other.Teams ||
-                    this.Teams != null &&
-                    this.Teams.SequenceEqual(other.Teams)
+                    this.TeamId == other.TeamId ||
+                    this.TeamId != null &&
+                    this.TeamId.Equals(other.TeamId)
+                ) && 
+                (
+                    this.UserRecordId == other.UserRecordId ||
+                    this.UserRecordId != null &&
+                    this.UserRecordId.Equals(other.UserRecordId)
                 ) && 
                 (
                     this.ErrorCode == other.ErrorCode ||
@@ -438,8 +451,10 @@ namespace Cherwell.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Teams != null)
-                    hash = hash * 59 + this.Teams.GetHashCode();
+                if (this.TeamId != null)
+                    hash = hash * 59 + this.TeamId.GetHashCode();
+                if (this.UserRecordId != null)
+                    hash = hash * 59 + this.UserRecordId.GetHashCode();
                 if (this.ErrorCode != null)
                     hash = hash * 59 + this.ErrorCode.GetHashCode();
                 if (this.ErrorMessage != null)

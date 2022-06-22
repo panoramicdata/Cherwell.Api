@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Model.BusinessObject
+namespace Cherwell.Api.Model.BusinessObject
 {
     /// <summary>
     /// BusinessObjectSummary

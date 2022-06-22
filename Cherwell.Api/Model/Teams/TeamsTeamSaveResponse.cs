@@ -11,13 +11,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Model
+namespace Cherwell.Api.Model
 {
     /// <summary>
-    /// TeamsRemoveUserFromTeamResponse
+    /// TeamsTeamSaveResponse
     /// </summary>
     [DataContract]
-    public partial class TeamsRemoveUserFromTeamResponse :  IEquatable<TeamsRemoveUserFromTeamResponse>, IValidatableObject
+    public partial class TeamsTeamSaveResponse :  IEquatable<TeamsTeamSaveResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,18 +315,16 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TeamsRemoveUserFromTeamResponse" /> class.
+        /// Initializes a new instance of the <see cref="TeamsTeamSaveResponse" /> class.
         /// </summary>
         /// <param name="TeamId">TeamId.</param>
-        /// <param name="UserRecordId">UserRecordId.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TeamsRemoveUserFromTeamResponse(string TeamId = default(string), string UserRecordId = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public TeamsTeamSaveResponse(string TeamId = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
             this.TeamId = TeamId;
-            this.UserRecordId = UserRecordId;
             this.ErrorCode = ErrorCode;
             this.ErrorMessage = ErrorMessage;
             this.HasError = HasError;
@@ -338,11 +336,6 @@ namespace Cherwell.Model
         /// </summary>
         [DataMember(Name="teamId", EmitDefaultValue=false)]
         public string TeamId { get; set; }
-        /// <summary>
-        /// Gets or Sets UserRecordId
-        /// </summary>
-        [DataMember(Name="userRecordId", EmitDefaultValue=false)]
-        public string UserRecordId { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -365,9 +358,8 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TeamsRemoveUserFromTeamResponse {\n");
+            sb.Append("class TeamsTeamSaveResponse {\n");
             sb.Append("  TeamId: ").Append(TeamId).Append("\n");
-            sb.Append("  UserRecordId: ").Append(UserRecordId).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
             sb.Append("  HasError: ").Append(HasError).Append("\n");
@@ -393,15 +385,15 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TeamsRemoveUserFromTeamResponse);
+            return this.Equals(obj as TeamsTeamSaveResponse);
         }
 
         /// <summary>
-        /// Returns true if TeamsRemoveUserFromTeamResponse instances are equal
+        /// Returns true if TeamsTeamSaveResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TeamsRemoveUserFromTeamResponse to be compared</param>
+        /// <param name="other">Instance of TeamsTeamSaveResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsRemoveUserFromTeamResponse other)
+        public bool Equals(TeamsTeamSaveResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -412,11 +404,6 @@ namespace Cherwell.Model
                     this.TeamId == other.TeamId ||
                     this.TeamId != null &&
                     this.TeamId.Equals(other.TeamId)
-                ) && 
-                (
-                    this.UserRecordId == other.UserRecordId ||
-                    this.UserRecordId != null &&
-                    this.UserRecordId.Equals(other.UserRecordId)
                 ) && 
                 (
                     this.ErrorCode == other.ErrorCode ||
@@ -453,8 +440,6 @@ namespace Cherwell.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.TeamId != null)
                     hash = hash * 59 + this.TeamId.GetHashCode();
-                if (this.UserRecordId != null)
-                    hash = hash * 59 + this.UserRecordId.GetHashCode();
                 if (this.ErrorCode != null)
                     hash = hash * 59 + this.ErrorCode.GetHashCode();
                 if (this.ErrorMessage != null)

@@ -11,28 +11,35 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Api.Model.Searches
+namespace Cherwell.Api.Model
 {
     /// <summary>
-    /// SearchesQuickSearchConfigurationRequest
+    /// TeamsAddUserToTeamByBatchRequest
     /// </summary>
     [DataContract]
-    public partial class SearchesQuickSearchConfigurationRequest : IEquatable<SearchesQuickSearchConfigurationRequest>, IValidatableObject
+    public partial class TeamsAddUserToTeamByBatchRequest :  IEquatable<TeamsAddUserToTeamByBatchRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesQuickSearchConfigurationRequest" /> class.
+        /// Initializes a new instance of the <see cref="TeamsAddUserToTeamByBatchRequest" /> class.
         /// </summary>
-        /// <param name="BusObIds">BusObIds.</param>
-        public SearchesQuickSearchConfigurationRequest(List<string> BusObIds = default(List<string>))
+        /// <param name="AddUserToTeamRequests">AddUserToTeamRequests.</param>
+        /// <param name="StopOnError">StopOnError.</param>
+        public TeamsAddUserToTeamByBatchRequest(List<TeamsAddUserToTeamRequest> AddUserToTeamRequests = default(List<TeamsAddUserToTeamRequest>), bool? StopOnError = default(bool?))
         {
-            this.BusObIds = BusObIds;
+            this.AddUserToTeamRequests = AddUserToTeamRequests;
+            this.StopOnError = StopOnError;
         }
-
+        
         /// <summary>
-        /// Gets or Sets BusObIds
+        /// Gets or Sets AddUserToTeamRequests
         /// </summary>
-        [DataMember(Name = "busObIds", EmitDefaultValue = false)]
-        public List<string> BusObIds { get; set; }
+        [DataMember(Name="addUserToTeamRequests", EmitDefaultValue=false)]
+        public List<TeamsAddUserToTeamRequest> AddUserToTeamRequests { get; set; }
+        /// <summary>
+        /// Gets or Sets StopOnError
+        /// </summary>
+        [DataMember(Name="stopOnError", EmitDefaultValue=false)]
+        public bool? StopOnError { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -40,12 +47,13 @@ namespace Cherwell.Api.Model.Searches
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class SearchesQuickSearchConfigurationRequest {\n");
-            sb.Append("  BusObIds: ").Append(BusObIds).Append("\n");
+            sb.Append("class TeamsAddUserToTeamByBatchRequest {\n");
+            sb.Append("  AddUserToTeamRequests: ").Append(AddUserToTeamRequests).Append("\n");
+            sb.Append("  StopOnError: ").Append(StopOnError).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
-
+  
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -63,25 +71,30 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesQuickSearchConfigurationRequest);
+            return this.Equals(obj as TeamsAddUserToTeamByBatchRequest);
         }
 
         /// <summary>
-        /// Returns true if SearchesQuickSearchConfigurationRequest instances are equal
+        /// Returns true if TeamsAddUserToTeamByBatchRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of SearchesQuickSearchConfigurationRequest to be compared</param>
+        /// <param name="other">Instance of TeamsAddUserToTeamByBatchRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesQuickSearchConfigurationRequest other)
+        public bool Equals(TeamsAddUserToTeamByBatchRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
                 return false;
 
-            return
+            return 
                 (
-                    this.BusObIds == other.BusObIds ||
-                    this.BusObIds != null &&
-                    this.BusObIds.SequenceEqual(other.BusObIds)
+                    this.AddUserToTeamRequests == other.AddUserToTeamRequests ||
+                    this.AddUserToTeamRequests != null &&
+                    this.AddUserToTeamRequests.SequenceEqual(other.AddUserToTeamRequests)
+                ) && 
+                (
+                    this.StopOnError == other.StopOnError ||
+                    this.StopOnError != null &&
+                    this.StopOnError.Equals(other.StopOnError)
                 );
         }
 
@@ -96,8 +109,10 @@ namespace Cherwell.Api.Model.Searches
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.BusObIds != null)
-                    hash = hash * 59 + this.BusObIds.GetHashCode();
+                if (this.AddUserToTeamRequests != null)
+                    hash = hash * 59 + this.AddUserToTeamRequests.GetHashCode();
+                if (this.StopOnError != null)
+                    hash = hash * 59 + this.StopOnError.GetHashCode();
                 return hash;
             }
         }
@@ -112,4 +127,5 @@ namespace Cherwell.Api.Model.Searches
             yield break;
         }
     }
+
 }

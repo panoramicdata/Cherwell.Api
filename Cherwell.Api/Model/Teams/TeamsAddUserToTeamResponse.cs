@@ -11,13 +11,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Model
+namespace Cherwell.Api.Model
 {
     /// <summary>
-    /// TeamsAddUserToTeamByBatchResponse
+    /// TeamsAddUserToTeamResponse
     /// </summary>
     [DataContract]
-    public partial class TeamsAddUserToTeamByBatchResponse :  IEquatable<TeamsAddUserToTeamByBatchResponse>, IValidatableObject
+    public partial class TeamsAddUserToTeamResponse :  IEquatable<TeamsAddUserToTeamResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,27 +315,20 @@ namespace Cherwell.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TeamsAddUserToTeamByBatchResponse" /> class.
+        /// Initializes a new instance of the <see cref="TeamsAddUserToTeamResponse" /> class.
         /// </summary>
-        /// <param name="Responses">Responses.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TeamsAddUserToTeamByBatchResponse(List<TeamsAddUserToTeamResponse> Responses = default(List<TeamsAddUserToTeamResponse>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public TeamsAddUserToTeamResponse(string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
         {
-            this.Responses = Responses;
             this.ErrorCode = ErrorCode;
             this.ErrorMessage = ErrorMessage;
             this.HasError = HasError;
             this.HttpStatusCode = HttpStatusCode;
         }
         
-        /// <summary>
-        /// Gets or Sets Responses
-        /// </summary>
-        [DataMember(Name="responses", EmitDefaultValue=false)]
-        public List<TeamsAddUserToTeamResponse> Responses { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -358,8 +351,7 @@ namespace Cherwell.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TeamsAddUserToTeamByBatchResponse {\n");
-            sb.Append("  Responses: ").Append(Responses).Append("\n");
+            sb.Append("class TeamsAddUserToTeamResponse {\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
             sb.Append("  HasError: ").Append(HasError).Append("\n");
@@ -385,26 +377,21 @@ namespace Cherwell.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TeamsAddUserToTeamByBatchResponse);
+            return this.Equals(obj as TeamsAddUserToTeamResponse);
         }
 
         /// <summary>
-        /// Returns true if TeamsAddUserToTeamByBatchResponse instances are equal
+        /// Returns true if TeamsAddUserToTeamResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TeamsAddUserToTeamByBatchResponse to be compared</param>
+        /// <param name="other">Instance of TeamsAddUserToTeamResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsAddUserToTeamByBatchResponse other)
+        public bool Equals(TeamsAddUserToTeamResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
                 return false;
 
             return 
-                (
-                    this.Responses == other.Responses ||
-                    this.Responses != null &&
-                    this.Responses.SequenceEqual(other.Responses)
-                ) && 
                 (
                     this.ErrorCode == other.ErrorCode ||
                     this.ErrorCode != null &&
@@ -438,8 +425,6 @@ namespace Cherwell.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Responses != null)
-                    hash = hash * 59 + this.Responses.GetHashCode();
                 if (this.ErrorCode != null)
                     hash = hash * 59 + this.ErrorCode.GetHashCode();
                 if (this.ErrorMessage != null)

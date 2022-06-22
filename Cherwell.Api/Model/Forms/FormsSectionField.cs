@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Model.Forms
+namespace Cherwell.Api.Model.Forms
 {
     /// <summary>
     /// FormsSectionField

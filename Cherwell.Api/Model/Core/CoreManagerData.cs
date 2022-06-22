@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Model.Core
+namespace Cherwell.Api.Model.Core
 {
     /// <summary>
     /// CoreManagerData

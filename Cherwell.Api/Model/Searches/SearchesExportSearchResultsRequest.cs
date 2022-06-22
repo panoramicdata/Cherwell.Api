@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Model.Searches
+namespace Cherwell.Api.Model.Searches
 {
     /// <summary>
     /// SearchesExportSearchResultsRequest
