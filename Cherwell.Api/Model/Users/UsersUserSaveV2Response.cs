@@ -366,12 +366,12 @@ namespace Cherwell.Api.Model.Users
         {
             var sb = new StringBuilder();
             sb.Append("class UsersUserSaveV2Response {\n");
-            sb.Append("  BusObPublicId: ").Append(BusObPublicId).Append("\n");
-            sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
-            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
+            sb.Append("  BusObPublicId: ").Append(BusObPublicId).Append('\n');
+            sb.Append("  BusObRecId: ").Append(BusObRecId).Append('\n');
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append('\n');
+            sb.Append("  HasError: ").Append(HasError).Append('\n');
+            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

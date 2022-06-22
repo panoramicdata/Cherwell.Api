@@ -48,8 +48,8 @@ namespace Cherwell.Api.Model.Users
         {
             var sb = new StringBuilder();
             sb.Append("class UsersUserBatchDeleteRequest {\n");
-            sb.Append("  StopOnError: ").Append(StopOnError).Append("\n");
-            sb.Append("  UserRecordIds: ").Append(UserRecordIds).Append("\n");
+            sb.Append("  StopOnError: ").Append(StopOnError).Append('\n');
+            sb.Append("  UserRecordIds: ").Append(UserRecordIds).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

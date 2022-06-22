@@ -415,19 +415,19 @@ namespace Cherwell.Api.Model.Security
         {
             var sb = new StringBuilder();
             sb.Append("class SecurityApiClientSettingResponse {\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  Culture: ").Append(Culture).Append("\n");
-            sb.Append("  ClientKey: ").Append(ClientKey).Append("\n");
-            sb.Append("  TokenLifespanMinutes: ").Append(TokenLifespanMinutes).Append("\n");
-            sb.Append("  RefreshTokenLifespanMinutes: ").Append(RefreshTokenLifespanMinutes).Append("\n");
-            sb.Append("  ApiAccessIsEnabled: ").Append(ApiAccessIsEnabled).Append("\n");
-            sb.Append("  AllowAnonymousAccess: ").Append(AllowAnonymousAccess).Append("\n");
-            sb.Append("  StandInKey: ").Append(StandInKey).Append("\n");
-            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append('\n');
+            sb.Append("  Description: ").Append(Description).Append('\n');
+            sb.Append("  Culture: ").Append(Culture).Append('\n');
+            sb.Append("  ClientKey: ").Append(ClientKey).Append('\n');
+            sb.Append("  TokenLifespanMinutes: ").Append(TokenLifespanMinutes).Append('\n');
+            sb.Append("  RefreshTokenLifespanMinutes: ").Append(RefreshTokenLifespanMinutes).Append('\n');
+            sb.Append("  ApiAccessIsEnabled: ").Append(ApiAccessIsEnabled).Append('\n');
+            sb.Append("  AllowAnonymousAccess: ").Append(AllowAnonymousAccess).Append('\n');
+            sb.Append("  StandInKey: ").Append(StandInKey).Append('\n');
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append('\n');
+            sb.Append("  HasError: ").Append(HasError).Append('\n');
+            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

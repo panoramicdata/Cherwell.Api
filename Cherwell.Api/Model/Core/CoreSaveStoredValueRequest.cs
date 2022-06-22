@@ -152,14 +152,14 @@ namespace Cherwell.Api.Model.Core
         {
             var sb = new StringBuilder();
             sb.Append("class CoreSaveStoredValueRequest {\n");
-            sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  Folder: ").Append(Folder).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Scope: ").Append(Scope).Append("\n");
-            sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append("\n");
-            sb.Append("  StandInKey: ").Append(StandInKey).Append("\n");
-            sb.Append("  StoredValueType: ").Append(StoredValueType).Append("\n");
-            sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append('\n');
+            sb.Append("  Folder: ").Append(Folder).Append('\n');
+            sb.Append("  Name: ").Append(Name).Append('\n');
+            sb.Append("  Scope: ").Append(Scope).Append('\n');
+            sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append('\n');
+            sb.Append("  StandInKey: ").Append(StandInKey).Append('\n');
+            sb.Append("  StoredValueType: ").Append(StoredValueType).Append('\n');
+            sb.Append("  Value: ").Append(Value).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -111,9 +111,9 @@ namespace Cherwell.Api.Model.Searches
         {
             var sb = new StringBuilder();
             sb.Append("class SearchesColumnSchema {\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  FieldId: ").Append(FieldId).Append("\n");
-            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append('\n');
+            sb.Append("  FieldId: ").Append(FieldId).Append('\n');
+            sb.Append("  Type: ").Append(Type).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

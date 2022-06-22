@@ -69,11 +69,11 @@ namespace Cherwell.Api.Model.OneStepActions
         {
             var sb = new StringBuilder();
             sb.Append("class OneStepActionsOneStepActionRequest {\n");
-            sb.Append("  AcquireLicense: ").Append(AcquireLicense).Append("\n");
-            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
-            sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
-            sb.Append("  OneStepActionStandInKey: ").Append(OneStepActionStandInKey).Append("\n");
-            sb.Append("  PromptValues: ").Append(PromptValues).Append("\n");
+            sb.Append("  AcquireLicense: ").Append(AcquireLicense).Append('\n');
+            sb.Append("  BusObId: ").Append(BusObId).Append('\n');
+            sb.Append("  BusObRecId: ").Append(BusObRecId).Append('\n');
+            sb.Append("  OneStepActionStandInKey: ").Append(OneStepActionStandInKey).Append('\n');
+            sb.Append("  PromptValues: ").Append(PromptValues).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

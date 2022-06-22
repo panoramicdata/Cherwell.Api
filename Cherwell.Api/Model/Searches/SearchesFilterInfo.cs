@@ -55,9 +55,9 @@ namespace Cherwell.Api.Model.Searches
         {
             var sb = new StringBuilder();
             sb.Append("class SearchesFilterInfo {\n");
-            sb.Append("  FieldId: ").Append(FieldId).Append("\n");
-            sb.Append("  _Operator: ").Append(_Operator).Append("\n");
-            sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  FieldId: ").Append(FieldId).Append('\n');
+            sb.Append("  _Operator: ").Append(_Operator).Append('\n');
+            sb.Append("  Value: ").Append(Value).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -41,7 +41,7 @@ namespace Cherwell.Api.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SecuritySecurityGroupResponse {\n");
-            sb.Append("  SecurityGroups: ").Append(SecurityGroups).Append("\n");
+            sb.Append("  SecurityGroups: ").Append(SecurityGroups).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

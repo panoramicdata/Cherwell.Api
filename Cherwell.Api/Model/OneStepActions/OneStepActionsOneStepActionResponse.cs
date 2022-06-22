@@ -387,15 +387,15 @@ namespace Cherwell.Api.Model.OneStepActions
         {
             var sb = new StringBuilder();
             sb.Append("class OneStepActionsOneStepActionResponse {\n");
-            sb.Append("  Completed: ").Append(Completed).Append("\n");
-            sb.Append("  CurrentPrimaryBusObId: ").Append(CurrentPrimaryBusObId).Append("\n");
-            sb.Append("  CurrentPrimaryBusObRecId: ").Append(CurrentPrimaryBusObRecId).Append("\n");
-            sb.Append("  HasNewAccessToken: ").Append(HasNewAccessToken).Append("\n");
-            sb.Append("  NewAccessToken: ").Append(NewAccessToken).Append("\n");
-            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
+            sb.Append("  Completed: ").Append(Completed).Append('\n');
+            sb.Append("  CurrentPrimaryBusObId: ").Append(CurrentPrimaryBusObId).Append('\n');
+            sb.Append("  CurrentPrimaryBusObRecId: ").Append(CurrentPrimaryBusObRecId).Append('\n');
+            sb.Append("  HasNewAccessToken: ").Append(HasNewAccessToken).Append('\n');
+            sb.Append("  NewAccessToken: ").Append(NewAccessToken).Append('\n');
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append('\n');
+            sb.Append("  HasError: ").Append(HasError).Append('\n');
+            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

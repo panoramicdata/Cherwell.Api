@@ -295,21 +295,21 @@ namespace Cherwell.Api.Model.Core
         {
             var sb = new StringBuilder();
             sb.Append("class CoreAction {\n");
-            sb.Append("  ActionCommand: ").Append(ActionCommand).Append("\n");
-            sb.Append("  ActionType: ").Append(ActionType).Append("\n");
-            sb.Append("  AlwaysTextAndImage: ").Append(AlwaysTextAndImage).Append("\n");
-            sb.Append("  BeginGroup: ").Append(BeginGroup).Append("\n");
-            sb.Append("  ChildActions: ").Append(ChildActions).Append("\n");
-            sb.Append("  Dependencies: ").Append(Dependencies).Append("\n");
-            sb.Append("  DisplayText: ").Append(DisplayText).Append("\n");
-            sb.Append("  Enabled: ").Append(Enabled).Append("\n");
-            sb.Append("  GalleryImage: ").Append(GalleryImage).Append("\n");
-            sb.Append("  HelpText: ").Append(HelpText).Append("\n");
-            sb.Append("  LoginEnabledMode: ").Append(LoginEnabledMode).Append("\n");
-            sb.Append("  LoginVisibilityMode: ").Append(LoginVisibilityMode).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Parameters: ").Append(Parameters).Append("\n");
-            sb.Append("  Visible: ").Append(Visible).Append("\n");
+            sb.Append("  ActionCommand: ").Append(ActionCommand).Append('\n');
+            sb.Append("  ActionType: ").Append(ActionType).Append('\n');
+            sb.Append("  AlwaysTextAndImage: ").Append(AlwaysTextAndImage).Append('\n');
+            sb.Append("  BeginGroup: ").Append(BeginGroup).Append('\n');
+            sb.Append("  ChildActions: ").Append(ChildActions).Append('\n');
+            sb.Append("  Dependencies: ").Append(Dependencies).Append('\n');
+            sb.Append("  DisplayText: ").Append(DisplayText).Append('\n');
+            sb.Append("  Enabled: ").Append(Enabled).Append('\n');
+            sb.Append("  GalleryImage: ").Append(GalleryImage).Append('\n');
+            sb.Append("  HelpText: ").Append(HelpText).Append('\n');
+            sb.Append("  LoginEnabledMode: ").Append(LoginEnabledMode).Append('\n');
+            sb.Append("  LoginVisibilityMode: ").Append(LoginVisibilityMode).Append('\n');
+            sb.Append("  Name: ").Append(Name).Append('\n');
+            sb.Append("  Parameters: ").Append(Parameters).Append('\n');
+            sb.Append("  Visible: ").Append(Visible).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

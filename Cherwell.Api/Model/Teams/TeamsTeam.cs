@@ -48,8 +48,8 @@ namespace Cherwell.Api.Model.Teams
         {
             var sb = new StringBuilder();
             sb.Append("class TeamsTeam {\n");
-            sb.Append("  TeamId: ").Append(TeamId).Append("\n");
-            sb.Append("  TeamName: ").Append(TeamName).Append("\n");
+            sb.Append("  TeamId: ").Append(TeamId).Append('\n');
+            sb.Append("  TeamName: ").Append(TeamName).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

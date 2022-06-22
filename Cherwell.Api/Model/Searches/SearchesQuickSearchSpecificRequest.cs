@@ -118,18 +118,18 @@ namespace Cherwell.Api.Model.Searches
         {
             var sb = new StringBuilder();
             sb.Append("class SearchesQuickSearchSpecificRequest {\n");
-            sb.Append("  Ascending: ").Append(Ascending).Append("\n");
-            sb.Append("  IsBusObTarget: ").Append(IsBusObTarget).Append("\n");
-            sb.Append("  NonFinalState: ").Append(NonFinalState).Append("\n");
-            sb.Append("  SearchAnyWords: ").Append(SearchAnyWords).Append("\n");
-            sb.Append("  SearchAttachments: ").Append(SearchAttachments).Append("\n");
-            sb.Append("  SearchRelated: ").Append(SearchRelated).Append("\n");
-            sb.Append("  SearchText: ").Append(SearchText).Append("\n");
-            sb.Append("  SelectedChangedLimit: ").Append(SelectedChangedLimit).Append("\n");
-            sb.Append("  SelectedSortByFieldId: ").Append(SelectedSortByFieldId).Append("\n");
-            sb.Append("  SortByRelevance: ").Append(SortByRelevance).Append("\n");
-            sb.Append("  SpecificSearchTargetId: ").Append(SpecificSearchTargetId).Append("\n");
-            sb.Append("  UseSortBy: ").Append(UseSortBy).Append("\n");
+            sb.Append("  Ascending: ").Append(Ascending).Append('\n');
+            sb.Append("  IsBusObTarget: ").Append(IsBusObTarget).Append('\n');
+            sb.Append("  NonFinalState: ").Append(NonFinalState).Append('\n');
+            sb.Append("  SearchAnyWords: ").Append(SearchAnyWords).Append('\n');
+            sb.Append("  SearchAttachments: ").Append(SearchAttachments).Append('\n');
+            sb.Append("  SearchRelated: ").Append(SearchRelated).Append('\n');
+            sb.Append("  SearchText: ").Append(SearchText).Append('\n');
+            sb.Append("  SelectedChangedLimit: ").Append(SelectedChangedLimit).Append('\n');
+            sb.Append("  SelectedSortByFieldId: ").Append(SelectedSortByFieldId).Append('\n');
+            sb.Append("  SortByRelevance: ").Append(SortByRelevance).Append('\n');
+            sb.Append("  SpecificSearchTargetId: ").Append(SpecificSearchTargetId).Append('\n');
+            sb.Append("  UseSortBy: ").Append(UseSortBy).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

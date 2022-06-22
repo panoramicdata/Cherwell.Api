@@ -83,13 +83,13 @@ namespace Cherwell.Api.Model.BusinessObject
         {
             var sb = new StringBuilder();
             sb.Append("class BusinessObjectFieldTemplateItem {\n");
-            sb.Append("  Dirty: ").Append(Dirty).Append("\n");
-            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
-            sb.Append("  FieldId: ").Append(FieldId).Append("\n");
-            sb.Append("  FullFieldId: ").Append(FullFieldId).Append("\n");
-            sb.Append("  Html: ").Append(Html).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  Dirty: ").Append(Dirty).Append('\n');
+            sb.Append("  DisplayName: ").Append(DisplayName).Append('\n');
+            sb.Append("  FieldId: ").Append(FieldId).Append('\n');
+            sb.Append("  FullFieldId: ").Append(FullFieldId).Append('\n');
+            sb.Append("  Html: ").Append(Html).Append('\n');
+            sb.Append("  Name: ").Append(Name).Append('\n');
+            sb.Append("  Value: ").Append(Value).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

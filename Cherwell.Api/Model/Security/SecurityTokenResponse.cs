@@ -90,14 +90,14 @@ namespace Cherwell.Api.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SecurityTokenResponse {\n");
-            sb.Append("  AccessToken: ").Append(AccessToken).Append("\n");
-            sb.Append("  AsclientId: ").Append(AsclientId).Append("\n");
-            sb.Append("  Expires: ").Append(Expires).Append("\n");
-            sb.Append("  ExpiresIn: ").Append(ExpiresIn).Append("\n");
-            sb.Append("  Issued: ").Append(Issued).Append("\n");
-            sb.Append("  RefreshToken: ").Append(RefreshToken).Append("\n");
-            sb.Append("  TokenType: ").Append(TokenType).Append("\n");
-            sb.Append("  Username: ").Append(Username).Append("\n");
+            sb.Append("  AccessToken: ").Append(AccessToken).Append('\n');
+            sb.Append("  AsclientId: ").Append(AsclientId).Append('\n');
+            sb.Append("  Expires: ").Append(Expires).Append('\n');
+            sb.Append("  ExpiresIn: ").Append(ExpiresIn).Append('\n');
+            sb.Append("  Issued: ").Append(Issued).Append('\n');
+            sb.Append("  RefreshToken: ").Append(RefreshToken).Append('\n');
+            sb.Append("  TokenType: ").Append(TokenType).Append('\n');
+            sb.Append("  Username: ").Append(Username).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -380,14 +380,14 @@ namespace Cherwell.Api.Model.Searches
         {
             var sb = new StringBuilder();
             sb.Append("class SearchesSearchResultsTableResponse {\n");
-            sb.Append("  Columns: ").Append(Columns).Append("\n");
-            sb.Append("  Rows: ").Append(Rows).Append("\n");
-            sb.Append("  Sorting: ").Append(Sorting).Append("\n");
-            sb.Append("  TotalRows: ").Append(TotalRows).Append("\n");
-            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
+            sb.Append("  Columns: ").Append(Columns).Append('\n');
+            sb.Append("  Rows: ").Append(Rows).Append('\n');
+            sb.Append("  Sorting: ").Append(Sorting).Append('\n');
+            sb.Append("  TotalRows: ").Append(TotalRows).Append('\n');
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append('\n');
+            sb.Append("  HasError: ").Append(HasError).Append('\n');
+            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -55,9 +55,9 @@ namespace Cherwell.Api.Model.Core
         {
             var sb = new StringBuilder();
             sb.Append("class CoreView {\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  ViewId: ").Append(ViewId).Append("\n");
-            sb.Append("  Image: ").Append(Image).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append('\n');
+            sb.Append("  ViewId: ").Append(ViewId).Append('\n');
+            sb.Append("  Image: ").Append(Image).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

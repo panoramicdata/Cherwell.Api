@@ -55,9 +55,9 @@ namespace Cherwell.Api.Model.Core
         {
             var sb = new StringBuilder();
             sb.Append("class CoreSimplePromptValue {\n");
-            sb.Append("  PromptDefId: ").Append(PromptDefId).Append("\n");
-            sb.Append("  PromptName: ").Append(PromptName).Append("\n");
-            sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  PromptDefId: ").Append(PromptDefId).Append('\n');
+            sb.Append("  PromptName: ").Append(PromptName).Append('\n');
+            sb.Append("  Value: ").Append(Value).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

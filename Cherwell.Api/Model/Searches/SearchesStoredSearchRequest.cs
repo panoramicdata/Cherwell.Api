@@ -90,14 +90,14 @@ namespace Cherwell.Api.Model.Searches
         {
             var sb = new StringBuilder();
             sb.Append("class SearchesStoredSearchRequest {\n");
-            sb.Append("  AssociationId: ").Append(AssociationId).Append("\n");
-            sb.Append("  AssociationName: ").Append(AssociationName).Append("\n");
-            sb.Append("  GridId: ").Append(GridId).Append("\n");
-            sb.Append("  IncludeSchema: ").Append(IncludeSchema).Append("\n");
-            sb.Append("  Scope: ").Append(Scope).Append("\n");
-            sb.Append("  ScopeOwnerId: ").Append(ScopeOwnerId).Append("\n");
-            sb.Append("  SearchId: ").Append(SearchId).Append("\n");
-            sb.Append("  SearchName: ").Append(SearchName).Append("\n");
+            sb.Append("  AssociationId: ").Append(AssociationId).Append('\n');
+            sb.Append("  AssociationName: ").Append(AssociationName).Append('\n');
+            sb.Append("  GridId: ").Append(GridId).Append('\n');
+            sb.Append("  IncludeSchema: ").Append(IncludeSchema).Append('\n');
+            sb.Append("  Scope: ").Append(Scope).Append('\n');
+            sb.Append("  ScopeOwnerId: ").Append(ScopeOwnerId).Append('\n');
+            sb.Append("  SearchId: ").Append(SearchId).Append('\n');
+            sb.Append("  SearchName: ").Append(SearchName).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

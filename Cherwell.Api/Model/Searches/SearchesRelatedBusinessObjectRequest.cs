@@ -111,17 +111,17 @@ namespace Cherwell.Api.Model.Searches
         {
             var sb = new StringBuilder();
             sb.Append("class SearchesRelatedBusinessObjectRequest {\n");
-            sb.Append("  AllFields: ").Append(AllFields).Append("\n");
-            sb.Append("  CustomGridId: ").Append(CustomGridId).Append("\n");
-            sb.Append("  FieldsList: ").Append(FieldsList).Append("\n");
-            sb.Append("  Filters: ").Append(Filters).Append("\n");
-            sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
-            sb.Append("  PageSize: ").Append(PageSize).Append("\n");
-            sb.Append("  ParentBusObId: ").Append(ParentBusObId).Append("\n");
-            sb.Append("  ParentBusObRecId: ").Append(ParentBusObRecId).Append("\n");
-            sb.Append("  RelationshipId: ").Append(RelationshipId).Append("\n");
-            sb.Append("  Sorting: ").Append(Sorting).Append("\n");
-            sb.Append("  UseDefaultGrid: ").Append(UseDefaultGrid).Append("\n");
+            sb.Append("  AllFields: ").Append(AllFields).Append('\n');
+            sb.Append("  CustomGridId: ").Append(CustomGridId).Append('\n');
+            sb.Append("  FieldsList: ").Append(FieldsList).Append('\n');
+            sb.Append("  Filters: ").Append(Filters).Append('\n');
+            sb.Append("  PageNumber: ").Append(PageNumber).Append('\n');
+            sb.Append("  PageSize: ").Append(PageSize).Append('\n');
+            sb.Append("  ParentBusObId: ").Append(ParentBusObId).Append('\n');
+            sb.Append("  ParentBusObRecId: ").Append(ParentBusObRecId).Append('\n');
+            sb.Append("  RelationshipId: ").Append(RelationshipId).Append('\n');
+            sb.Append("  Sorting: ").Append(Sorting).Append('\n');
+            sb.Append("  UseDefaultGrid: ").Append(UseDefaultGrid).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

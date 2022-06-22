@@ -76,12 +76,12 @@ namespace Cherwell.Api.Model.BusinessObject
         {
             var sb = new StringBuilder();
             sb.Append("class BusinessObjectFieldValuesLookupRequest {\n");
-            sb.Append("  BusbPublicId: ").Append(BusbPublicId).Append("\n");
-            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
-            sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
-            sb.Append("  FieldId: ").Append(FieldId).Append("\n");
-            sb.Append("  FieldName: ").Append(FieldName).Append("\n");
-            sb.Append("  Fields: ").Append(Fields).Append("\n");
+            sb.Append("  BusbPublicId: ").Append(BusbPublicId).Append('\n');
+            sb.Append("  BusObId: ").Append(BusObId).Append('\n');
+            sb.Append("  BusObRecId: ").Append(BusObRecId).Append('\n');
+            sb.Append("  FieldId: ").Append(FieldId).Append('\n');
+            sb.Append("  FieldName: ").Append(FieldName).Append('\n');
+            sb.Append("  Fields: ").Append(Fields).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

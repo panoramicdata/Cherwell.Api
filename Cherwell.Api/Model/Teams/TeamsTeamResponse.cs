@@ -421,17 +421,17 @@ namespace Cherwell.Api.Model.Teams
         {
             var sb = new StringBuilder();
             sb.Append("class TeamsTeamResponse {\n");
-            sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  EmailAlias: ").Append(EmailAlias).Append("\n");
-            sb.Append("  Fields: ").Append(Fields).Append("\n");
-            sb.Append("  Image: ").Append(Image).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  TeamId: ").Append(TeamId).Append("\n");
-            sb.Append("  TeamType: ").Append(TeamType).Append("\n");
-            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append('\n');
+            sb.Append("  EmailAlias: ").Append(EmailAlias).Append('\n');
+            sb.Append("  Fields: ").Append(Fields).Append('\n');
+            sb.Append("  Image: ").Append(Image).Append('\n');
+            sb.Append("  Name: ").Append(Name).Append('\n');
+            sb.Append("  TeamId: ").Append(TeamId).Append('\n');
+            sb.Append("  TeamType: ").Append(TeamType).Append('\n');
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append('\n');
+            sb.Append("  HasError: ").Append(HasError).Append('\n');
+            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

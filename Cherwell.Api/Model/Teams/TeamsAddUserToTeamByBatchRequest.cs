@@ -48,8 +48,8 @@ namespace Cherwell.Api.Model.Teams
         {
             var sb = new StringBuilder();
             sb.Append("class TeamsAddUserToTeamByBatchRequest {\n");
-            sb.Append("  AddUserToTeamRequests: ").Append(AddUserToTeamRequests).Append("\n");
-            sb.Append("  StopOnError: ").Append(StopOnError).Append("\n");
+            sb.Append("  AddUserToTeamRequests: ").Append(AddUserToTeamRequests).Append('\n');
+            sb.Append("  StopOnError: ").Append(StopOnError).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

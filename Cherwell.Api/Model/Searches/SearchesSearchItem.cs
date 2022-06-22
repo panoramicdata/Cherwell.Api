@@ -90,14 +90,14 @@ namespace Cherwell.Api.Model.Searches
         {
             var sb = new StringBuilder();
             sb.Append("class SearchesSearchItem {\n");
-            sb.Append("  Association: ").Append(Association).Append("\n");
-            sb.Append("  Links: ").Append(Links).Append("\n");
-            sb.Append("  LocalizedScopeName: ").Append(LocalizedScopeName).Append("\n");
-            sb.Append("  ParentFolderId: ").Append(ParentFolderId).Append("\n");
-            sb.Append("  Scope: ").Append(Scope).Append("\n");
-            sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append("\n");
-            sb.Append("  SearchId: ").Append(SearchId).Append("\n");
-            sb.Append("  SearchName: ").Append(SearchName).Append("\n");
+            sb.Append("  Association: ").Append(Association).Append('\n');
+            sb.Append("  Links: ").Append(Links).Append('\n');
+            sb.Append("  LocalizedScopeName: ").Append(LocalizedScopeName).Append('\n');
+            sb.Append("  ParentFolderId: ").Append(ParentFolderId).Append('\n');
+            sb.Append("  Scope: ").Append(Scope).Append('\n');
+            sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append('\n');
+            sb.Append("  SearchId: ").Append(SearchId).Append('\n');
+            sb.Append("  SearchName: ").Append(SearchName).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

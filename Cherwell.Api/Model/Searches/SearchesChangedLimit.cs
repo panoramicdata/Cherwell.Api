@@ -55,9 +55,9 @@ namespace Cherwell.Api.Model.Searches
         {
             var sb = new StringBuilder();
             sb.Append("class SearchesChangedLimit {\n");
-            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
-            sb.Append("  Units: ").Append(Units).Append("\n");
-            sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  DisplayName: ").Append(DisplayName).Append('\n');
+            sb.Append("  Units: ").Append(Units).Append('\n');
+            sb.Append("  Value: ").Append(Value).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

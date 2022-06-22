@@ -90,14 +90,14 @@ namespace Cherwell.Api.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetNameValuePair {\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  ValueObject: ").Append(ValueObject).Append("\n");
-            sb.Append("  ValueString: ").Append(ValueString).Append("\n");
-            sb.Append("  Category: ").Append(Category).Append("\n");
-            sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  DisplayShowsValue: ").Append(DisplayShowsValue).Append("\n");
-            sb.Append("  SpecialUseFlag: ").Append(SpecialUseFlag).Append("\n");
-            sb.Append("  DisplayString: ").Append(DisplayString).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append('\n');
+            sb.Append("  ValueObject: ").Append(ValueObject).Append('\n');
+            sb.Append("  ValueString: ").Append(ValueString).Append('\n');
+            sb.Append("  Category: ").Append(Category).Append('\n');
+            sb.Append("  Description: ").Append(Description).Append('\n');
+            sb.Append("  DisplayShowsValue: ").Append(DisplayShowsValue).Append('\n');
+            sb.Append("  SpecialUseFlag: ").Append(SpecialUseFlag).Append('\n');
+            sb.Append("  DisplayString: ").Append(DisplayString).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

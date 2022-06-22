@@ -146,22 +146,22 @@ namespace Cherwell.Api.Model.Security
         {
             var sb = new StringBuilder();
             sb.Append("class SecurityRight {\n");
-            sb.Append("  Add: ").Append(Add).Append("\n");
-            sb.Append("  Allow: ").Append(Allow).Append("\n");
-            sb.Append("  CategoryDescription: ").Append(CategoryDescription).Append("\n");
-            sb.Append("  CategoryId: ").Append(CategoryId).Append("\n");
-            sb.Append("  CategoryName: ").Append(CategoryName).Append("\n");
-            sb.Append("  Delete: ").Append(Delete).Append("\n");
-            sb.Append("  Edit: ").Append(Edit).Append("\n");
-            sb.Append("  IsYesNoRight: ").Append(IsYesNoRight).Append("\n");
-            sb.Append("  NonScopeOwnerAdd: ").Append(NonScopeOwnerAdd).Append("\n");
-            sb.Append("  NonScopeOwnerDelete: ").Append(NonScopeOwnerDelete).Append("\n");
-            sb.Append("  NonScopeOwnerEdit: ").Append(NonScopeOwnerEdit).Append("\n");
-            sb.Append("  NonScopeOwnerView: ").Append(NonScopeOwnerView).Append("\n");
-            sb.Append("  RightId: ").Append(RightId).Append("\n");
-            sb.Append("  RightName: ").Append(RightName).Append("\n");
-            sb.Append("  StandardRightName: ").Append(StandardRightName).Append("\n");
-            sb.Append("  ViewRunOpen: ").Append(ViewRunOpen).Append("\n");
+            sb.Append("  Add: ").Append(Add).Append('\n');
+            sb.Append("  Allow: ").Append(Allow).Append('\n');
+            sb.Append("  CategoryDescription: ").Append(CategoryDescription).Append('\n');
+            sb.Append("  CategoryId: ").Append(CategoryId).Append('\n');
+            sb.Append("  CategoryName: ").Append(CategoryName).Append('\n');
+            sb.Append("  Delete: ").Append(Delete).Append('\n');
+            sb.Append("  Edit: ").Append(Edit).Append('\n');
+            sb.Append("  IsYesNoRight: ").Append(IsYesNoRight).Append('\n');
+            sb.Append("  NonScopeOwnerAdd: ").Append(NonScopeOwnerAdd).Append('\n');
+            sb.Append("  NonScopeOwnerDelete: ").Append(NonScopeOwnerDelete).Append('\n');
+            sb.Append("  NonScopeOwnerEdit: ").Append(NonScopeOwnerEdit).Append('\n');
+            sb.Append("  NonScopeOwnerView: ").Append(NonScopeOwnerView).Append('\n');
+            sb.Append("  RightId: ").Append(RightId).Append('\n');
+            sb.Append("  RightName: ").Append(RightName).Append('\n');
+            sb.Append("  StandardRightName: ").Append(StandardRightName).Append('\n');
+            sb.Append("  ViewRunOpen: ").Append(ViewRunOpen).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

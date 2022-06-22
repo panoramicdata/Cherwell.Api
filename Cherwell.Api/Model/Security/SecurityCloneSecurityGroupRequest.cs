@@ -48,8 +48,8 @@ namespace Cherwell.Api.Model.Security
         {
             var sb = new StringBuilder();
             sb.Append("class SecurityCloneSecurityGroupRequest {\n");
-            sb.Append("  SecurityGroupName: ").Append(SecurityGroupName).Append("\n");
-            sb.Append("  SourceSecurityGroupNameOrId: ").Append(SourceSecurityGroupNameOrId).Append("\n");
+            sb.Append("  SecurityGroupName: ").Append(SecurityGroupName).Append('\n');
+            sb.Append("  SourceSecurityGroupNameOrId: ").Append(SourceSecurityGroupNameOrId).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

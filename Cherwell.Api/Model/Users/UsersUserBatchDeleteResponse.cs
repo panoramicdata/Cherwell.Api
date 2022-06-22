@@ -41,7 +41,7 @@ namespace Cherwell.Api.Model.Users
         {
             var sb = new StringBuilder();
             sb.Append("class UsersUserBatchDeleteResponse {\n");
-            sb.Append("  Responses: ").Append(Responses).Append("\n");
+            sb.Append("  Responses: ").Append(Responses).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

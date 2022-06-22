@@ -76,12 +76,12 @@ namespace Cherwell.Api.Model.BusinessObject
         {
             var sb = new StringBuilder();
             sb.Append("class BusinessObjectRelationship {\n");
-            sb.Append("  Cardinality: ").Append(Cardinality).Append("\n");
-            sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
-            sb.Append("  FieldDefinitions: ").Append(FieldDefinitions).Append("\n");
-            sb.Append("  RelationshipId: ").Append(RelationshipId).Append("\n");
-            sb.Append("  Target: ").Append(Target).Append("\n");
+            sb.Append("  Cardinality: ").Append(Cardinality).Append('\n');
+            sb.Append("  Description: ").Append(Description).Append('\n');
+            sb.Append("  DisplayName: ").Append(DisplayName).Append('\n');
+            sb.Append("  FieldDefinitions: ").Append(FieldDefinitions).Append('\n');
+            sb.Append("  RelationshipId: ").Append(RelationshipId).Append('\n');
+            sb.Append("  Target: ").Append(Target).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

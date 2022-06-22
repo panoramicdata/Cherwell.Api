@@ -76,12 +76,12 @@ namespace Cherwell.Api.Model.Core
         {
             var sb = new StringBuilder();
             sb.Append("class CoreServiceInfoResponse {\n");
-            sb.Append("  ApiVersion: ").Append(ApiVersion).Append("\n");
-            sb.Append("  CsmCulture: ").Append(CsmCulture).Append("\n");
-            sb.Append("  CsmVersion: ").Append(CsmVersion).Append("\n");
-            sb.Append("  SystemDateTime: ").Append(SystemDateTime).Append("\n");
-            sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
-            sb.Append("  SystemUtcOffset: ").Append(SystemUtcOffset).Append("\n");
+            sb.Append("  ApiVersion: ").Append(ApiVersion).Append('\n');
+            sb.Append("  CsmCulture: ").Append(CsmCulture).Append('\n');
+            sb.Append("  CsmVersion: ").Append(CsmVersion).Append('\n');
+            sb.Append("  SystemDateTime: ").Append(SystemDateTime).Append('\n');
+            sb.Append("  TimeZone: ").Append(TimeZone).Append('\n');
+            sb.Append("  SystemUtcOffset: ").Append(SystemUtcOffset).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

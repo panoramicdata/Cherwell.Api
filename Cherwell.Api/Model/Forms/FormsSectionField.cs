@@ -76,12 +76,12 @@ namespace Cherwell.Api.Model.Forms
         {
             var sb = new StringBuilder();
             sb.Append("class FormsSectionField {\n");
-            sb.Append("  Attributes: ").Append(Attributes).Append("\n");
-            sb.Append("  FieldId: ").Append(FieldId).Append("\n");
-            sb.Append("  FieldType: ").Append(FieldType).Append("\n");
-            sb.Append("  Label: ").Append(Label).Append("\n");
-            sb.Append("  Multiline: ").Append(Multiline).Append("\n");
-            sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  Attributes: ").Append(Attributes).Append('\n');
+            sb.Append("  FieldId: ").Append(FieldId).Append('\n');
+            sb.Append("  FieldType: ").Append(FieldType).Append('\n');
+            sb.Append("  Label: ").Append(Label).Append('\n');
+            sb.Append("  Multiline: ").Append(Multiline).Append('\n');
+            sb.Append("  Value: ").Append(Value).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

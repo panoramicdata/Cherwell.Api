@@ -62,10 +62,10 @@ namespace Cherwell.Api.Model.Lifecycle
         {
             var sb = new StringBuilder();
             sb.Append("class LifecycleGetTransitionsResponseTransition {\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  FromStatusId: ").Append(FromStatusId).Append("\n");
-            sb.Append("  ToStatusId: ").Append(ToStatusId).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append('\n');
+            sb.Append("  Name: ").Append(Name).Append('\n');
+            sb.Append("  FromStatusId: ").Append(FromStatusId).Append('\n');
+            sb.Append("  ToStatusId: ").Append(ToStatusId).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

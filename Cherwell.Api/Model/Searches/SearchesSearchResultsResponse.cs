@@ -408,18 +408,18 @@ namespace Cherwell.Api.Model.Searches
         {
             var sb = new StringBuilder();
             sb.Append("class SearchesSearchResultsResponse {\n");
-            sb.Append("  BusinessObjects: ").Append(BusinessObjects).Append("\n");
-            sb.Append("  HasPrompts: ").Append(HasPrompts).Append("\n");
-            sb.Append("  Links: ").Append(Links).Append("\n");
-            sb.Append("  Prompts: ").Append(Prompts).Append("\n");
-            sb.Append("  SearchResultsFields: ").Append(SearchResultsFields).Append("\n");
-            sb.Append("  SimpleResults: ").Append(SimpleResults).Append("\n");
-            sb.Append("  TotalRows: ").Append(TotalRows).Append("\n");
-            sb.Append("  HasMoreRecords: ").Append(HasMoreRecords).Append("\n");
-            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
+            sb.Append("  BusinessObjects: ").Append(BusinessObjects).Append('\n');
+            sb.Append("  HasPrompts: ").Append(HasPrompts).Append('\n');
+            sb.Append("  Links: ").Append(Links).Append('\n');
+            sb.Append("  Prompts: ").Append(Prompts).Append('\n');
+            sb.Append("  SearchResultsFields: ").Append(SearchResultsFields).Append('\n');
+            sb.Append("  SimpleResults: ").Append(SimpleResults).Append('\n');
+            sb.Append("  TotalRows: ").Append(TotalRows).Append('\n');
+            sb.Append("  HasMoreRecords: ").Append(HasMoreRecords).Append('\n');
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append('\n');
+            sb.Append("  HasError: ").Append(HasError).Append('\n');
+            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

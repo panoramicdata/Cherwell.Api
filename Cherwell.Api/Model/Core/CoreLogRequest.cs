@@ -99,9 +99,9 @@ namespace Cherwell.Api.Model.Core
         {
             var sb = new StringBuilder();
             sb.Append("class CoreLogRequest {\n");
-            sb.Append("  KeyValueProperties: ").Append(KeyValueProperties).Append("\n");
-            sb.Append("  Level: ").Append(Level).Append("\n");
-            sb.Append("  Message: ").Append(Message).Append("\n");
+            sb.Append("  KeyValueProperties: ").Append(KeyValueProperties).Append('\n');
+            sb.Append("  Level: ").Append(Level).Append('\n');
+            sb.Append("  Message: ").Append(Message).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -48,8 +48,8 @@ namespace Cherwell.Api.Model.Users
         {
             var sb = new StringBuilder();
             sb.Append("class UsersUserBatchSaveRequest {\n");
-            sb.Append("  SaveRequests: ").Append(SaveRequests).Append("\n");
-            sb.Append("  StopOnError: ").Append(StopOnError).Append("\n");
+            sb.Append("  SaveRequests: ").Append(SaveRequests).Append('\n');
+            sb.Append("  StopOnError: ").Append(StopOnError).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

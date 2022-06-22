@@ -55,9 +55,9 @@ namespace Cherwell.Api.Model.Teams
         {
             var sb = new StringBuilder();
             sb.Append("class TeamsAddUserToTeamRequest {\n");
-            sb.Append("  TeamId: ").Append(TeamId).Append("\n");
-            sb.Append("  UserIsTeamManager: ").Append(UserIsTeamManager).Append("\n");
-            sb.Append("  UserRecordId: ").Append(UserRecordId).Append("\n");
+            sb.Append("  TeamId: ").Append(TeamId).Append('\n');
+            sb.Append("  UserIsTeamManager: ").Append(UserIsTeamManager).Append('\n');
+            sb.Append("  UserRecordId: ").Append(UserRecordId).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

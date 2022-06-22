@@ -69,11 +69,11 @@ namespace Cherwell.Api.Model.BusinessObject
         {
             var sb = new StringBuilder();
             sb.Append("class BusinessObjectTemplateRequest {\n");
-            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
-            sb.Append("  FieldNames: ").Append(FieldNames).Append("\n");
-            sb.Append("  FieldIds: ").Append(FieldIds).Append("\n");
-            sb.Append("  IncludeAll: ").Append(IncludeAll).Append("\n");
-            sb.Append("  IncludeRequired: ").Append(IncludeRequired).Append("\n");
+            sb.Append("  BusObId: ").Append(BusObId).Append('\n');
+            sb.Append("  FieldNames: ").Append(FieldNames).Append('\n');
+            sb.Append("  FieldIds: ").Append(FieldIds).Append('\n');
+            sb.Append("  IncludeAll: ").Append(IncludeAll).Append('\n');
+            sb.Append("  IncludeRequired: ").Append(IncludeRequired).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

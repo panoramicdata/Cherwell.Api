@@ -132,20 +132,20 @@ namespace Cherwell.Api.Model.Security
         {
             var sb = new StringBuilder();
             sb.Append("class SecurityFieldPermission {\n");
-            sb.Append("  DepartmentMemberEdit: ").Append(DepartmentMemberEdit).Append("\n");
-            sb.Append("  DepartmentMemberView: ").Append(DepartmentMemberView).Append("\n");
-            sb.Append("  Edit: ").Append(Edit).Append("\n");
-            sb.Append("  FieldId: ").Append(FieldId).Append("\n");
-            sb.Append("  FieldName: ").Append(FieldName).Append("\n");
-            sb.Append("  ManagerOfOwnerEdit: ").Append(ManagerOfOwnerEdit).Append("\n");
-            sb.Append("  ManagerOfOwnerView: ").Append(ManagerOfOwnerView).Append("\n");
-            sb.Append("  OwnerEdit: ").Append(OwnerEdit).Append("\n");
-            sb.Append("  OwnerView: ").Append(OwnerView).Append("\n");
-            sb.Append("  TeamEdit: ").Append(TeamEdit).Append("\n");
-            sb.Append("  TeamManagerOfOwnerEdit: ").Append(TeamManagerOfOwnerEdit).Append("\n");
-            sb.Append("  TeamManagerOfOwnerView: ").Append(TeamManagerOfOwnerView).Append("\n");
-            sb.Append("  TeamView: ").Append(TeamView).Append("\n");
-            sb.Append("  View: ").Append(View).Append("\n");
+            sb.Append("  DepartmentMemberEdit: ").Append(DepartmentMemberEdit).Append('\n');
+            sb.Append("  DepartmentMemberView: ").Append(DepartmentMemberView).Append('\n');
+            sb.Append("  Edit: ").Append(Edit).Append('\n');
+            sb.Append("  FieldId: ").Append(FieldId).Append('\n');
+            sb.Append("  FieldName: ").Append(FieldName).Append('\n');
+            sb.Append("  ManagerOfOwnerEdit: ").Append(ManagerOfOwnerEdit).Append('\n');
+            sb.Append("  ManagerOfOwnerView: ").Append(ManagerOfOwnerView).Append('\n');
+            sb.Append("  OwnerEdit: ").Append(OwnerEdit).Append('\n');
+            sb.Append("  OwnerView: ").Append(OwnerView).Append('\n');
+            sb.Append("  TeamEdit: ").Append(TeamEdit).Append('\n');
+            sb.Append("  TeamManagerOfOwnerEdit: ").Append(TeamManagerOfOwnerEdit).Append('\n');
+            sb.Append("  TeamManagerOfOwnerView: ").Append(TeamManagerOfOwnerView).Append('\n');
+            sb.Append("  TeamView: ").Append(TeamView).Append('\n');
+            sb.Append("  View: ").Append(View).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

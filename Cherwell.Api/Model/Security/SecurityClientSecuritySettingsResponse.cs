@@ -62,10 +62,10 @@ namespace Cherwell.Api.Model.Security
         {
             var sb = new StringBuilder();
             sb.Append("class SecurityClientSecuritySettingsResponse {\n");
-            sb.Append("  InternalLoginAllowed: ").Append(InternalLoginAllowed).Append("\n");
-            sb.Append("  LdapLoginAllowed: ").Append(LdapLoginAllowed).Append("\n");
-            sb.Append("  SamlLoginAllowed: ").Append(SamlLoginAllowed).Append("\n");
-            sb.Append("  WindowsLoginAllowed: ").Append(WindowsLoginAllowed).Append("\n");
+            sb.Append("  InternalLoginAllowed: ").Append(InternalLoginAllowed).Append('\n');
+            sb.Append("  LdapLoginAllowed: ").Append(LdapLoginAllowed).Append('\n');
+            sb.Append("  SamlLoginAllowed: ").Append(SamlLoginAllowed).Append('\n');
+            sb.Append("  WindowsLoginAllowed: ").Append(WindowsLoginAllowed).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

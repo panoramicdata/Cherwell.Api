@@ -41,7 +41,7 @@ namespace Cherwell.Api.Model.Searches
         {
             var sb = new StringBuilder();
             sb.Append("class SearchesQuickSearchConfigurationRequest {\n");
-            sb.Append("  BusObIds: ").Append(BusObIds).Append("\n");
+            sb.Append("  BusObIds: ").Append(BusObIds).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

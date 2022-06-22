@@ -96,12 +96,12 @@ namespace Cherwell.Api.Model.Teams
         {
             var sb = new StringBuilder();
             sb.Append("class TeamsTeamSaveRequest {\n");
-            sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  EmailAlias: ").Append(EmailAlias).Append("\n");
-            sb.Append("  Image: ").Append(Image).Append("\n");
-            sb.Append("  TeamId: ").Append(TeamId).Append("\n");
-            sb.Append("  TeamName: ").Append(TeamName).Append("\n");
-            sb.Append("  TeamType: ").Append(TeamType).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append('\n');
+            sb.Append("  EmailAlias: ").Append(EmailAlias).Append('\n');
+            sb.Append("  Image: ").Append(Image).Append('\n');
+            sb.Append("  TeamId: ").Append(TeamId).Append('\n');
+            sb.Append("  TeamName: ").Append(TeamName).Append('\n');
+            sb.Append("  TeamType: ").Append(TeamType).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

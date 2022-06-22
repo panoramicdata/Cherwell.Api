@@ -116,14 +116,14 @@ namespace Cherwell.Api.Model.Core
         {
             var sb = new StringBuilder();
             sb.Append("class CoreSaveGalleryImageRequest {\n");
-            sb.Append("  Base64EncodedImageData: ").Append(Base64EncodedImageData).Append("\n");
-            sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  Folder: ").Append(Folder).Append("\n");
-            sb.Append("  ImageType: ").Append(ImageType).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Scope: ").Append(Scope).Append("\n");
-            sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append("\n");
-            sb.Append("  StandInKey: ").Append(StandInKey).Append("\n");
+            sb.Append("  Base64EncodedImageData: ").Append(Base64EncodedImageData).Append('\n');
+            sb.Append("  Description: ").Append(Description).Append('\n');
+            sb.Append("  Folder: ").Append(Folder).Append('\n');
+            sb.Append("  ImageType: ").Append(ImageType).Append('\n');
+            sb.Append("  Name: ").Append(Name).Append('\n');
+            sb.Append("  Scope: ").Append(Scope).Append('\n');
+            sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append('\n');
+            sb.Append("  StandInKey: ").Append(StandInKey).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

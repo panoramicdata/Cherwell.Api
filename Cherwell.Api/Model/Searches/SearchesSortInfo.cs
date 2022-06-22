@@ -48,8 +48,8 @@ namespace Cherwell.Api.Model.Searches
         {
             var sb = new StringBuilder();
             sb.Append("class SearchesSortInfo {\n");
-            sb.Append("  FieldId: ").Append(FieldId).Append("\n");
-            sb.Append("  SortDirection: ").Append(SortDirection).Append("\n");
+            sb.Append("  FieldId: ").Append(FieldId).Append('\n');
+            sb.Append("  SortDirection: ").Append(SortDirection).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

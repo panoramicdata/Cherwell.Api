@@ -109,13 +109,13 @@ namespace Cherwell.Api.Model.BusinessObject
         {
             var sb = new StringBuilder();
             sb.Append("class BusinessObjectSaveRequest {\n");
-            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
-            sb.Append("  BusObPublicId: ").Append(BusObPublicId).Append("\n");
-            sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
-            sb.Append("  CacheKey: ").Append(CacheKey).Append("\n");
-            sb.Append("  CacheScope: ").Append(CacheScope).Append("\n");
-            sb.Append("  Fields: ").Append(Fields).Append("\n");
-            sb.Append("  Persist: ").Append(Persist).Append("\n");
+            sb.Append("  BusObId: ").Append(BusObId).Append('\n');
+            sb.Append("  BusObPublicId: ").Append(BusObPublicId).Append('\n');
+            sb.Append("  BusObRecId: ").Append(BusObRecId).Append('\n');
+            sb.Append("  CacheKey: ").Append(CacheKey).Append('\n');
+            sb.Append("  CacheScope: ").Append(CacheScope).Append('\n');
+            sb.Append("  Fields: ").Append(Fields).Append('\n');
+            sb.Append("  Persist: ").Append(Persist).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

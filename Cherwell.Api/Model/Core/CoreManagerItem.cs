@@ -125,19 +125,19 @@ namespace Cherwell.Api.Model.Core
         {
             var sb = new StringBuilder();
             sb.Append("class CoreManagerItem {\n");
-            sb.Append("  Association: ").Append(Association).Append("\n");
-            sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
-            sb.Append("  GalleryImage: ").Append(GalleryImage).Append("\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Links: ").Append(Links).Append("\n");
-            sb.Append("  LocalizedScopeName: ").Append(LocalizedScopeName).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  ParentFolder: ").Append(ParentFolder).Append("\n");
-            sb.Append("  ParentIsScopeFolder: ").Append(ParentIsScopeFolder).Append("\n");
-            sb.Append("  Scope: ").Append(Scope).Append("\n");
-            sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append("\n");
-            sb.Append("  StandInKey: ").Append(StandInKey).Append("\n");
+            sb.Append("  Association: ").Append(Association).Append('\n');
+            sb.Append("  Description: ").Append(Description).Append('\n');
+            sb.Append("  DisplayName: ").Append(DisplayName).Append('\n');
+            sb.Append("  GalleryImage: ").Append(GalleryImage).Append('\n');
+            sb.Append("  Id: ").Append(Id).Append('\n');
+            sb.Append("  Links: ").Append(Links).Append('\n');
+            sb.Append("  LocalizedScopeName: ").Append(LocalizedScopeName).Append('\n');
+            sb.Append("  Name: ").Append(Name).Append('\n');
+            sb.Append("  ParentFolder: ").Append(ParentFolder).Append('\n');
+            sb.Append("  ParentIsScopeFolder: ").Append(ParentIsScopeFolder).Append('\n');
+            sb.Append("  Scope: ").Append(Scope).Append('\n');
+            sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append('\n');
+            sb.Append("  StandInKey: ").Append(StandInKey).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

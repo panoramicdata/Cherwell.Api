@@ -180,14 +180,14 @@ namespace Cherwell.Api.Model.BusinessObject
         {
             var sb = new StringBuilder();
             sb.Append("class BusinessObjectAttachmentsRequest {\n");
-            sb.Append("  AttachmentId: ").Append(AttachmentId).Append("\n");
-            sb.Append("  AttachmentTypes: ").Append(AttachmentTypes).Append("\n");
-            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
-            sb.Append("  BusObName: ").Append(BusObName).Append("\n");
-            sb.Append("  BusObPublicId: ").Append(BusObPublicId).Append("\n");
-            sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
-            sb.Append("  IncludeLinks: ").Append(IncludeLinks).Append("\n");
-            sb.Append("  Types: ").Append(Types).Append("\n");
+            sb.Append("  AttachmentId: ").Append(AttachmentId).Append('\n');
+            sb.Append("  AttachmentTypes: ").Append(AttachmentTypes).Append('\n');
+            sb.Append("  BusObId: ").Append(BusObId).Append('\n');
+            sb.Append("  BusObName: ").Append(BusObName).Append('\n');
+            sb.Append("  BusObPublicId: ").Append(BusObPublicId).Append('\n');
+            sb.Append("  BusObRecId: ").Append(BusObRecId).Append('\n');
+            sb.Append("  IncludeLinks: ").Append(IncludeLinks).Append('\n');
+            sb.Append("  Types: ").Append(Types).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

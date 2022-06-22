@@ -69,11 +69,11 @@ namespace Cherwell.Api.Model.Core
         {
             var sb = new StringBuilder();
             sb.Append("class CoreLocation {\n");
-            sb.Append("  Altitude: ").Append(Altitude).Append("\n");
-            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
-            sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
-            sb.Append("  Latitude: ").Append(Latitude).Append("\n");
-            sb.Append("  Longitude: ").Append(Longitude).Append("\n");
+            sb.Append("  Altitude: ").Append(Altitude).Append('\n');
+            sb.Append("  BusObId: ").Append(BusObId).Append('\n');
+            sb.Append("  BusObRecId: ").Append(BusObRecId).Append('\n');
+            sb.Append("  Latitude: ").Append(Latitude).Append('\n');
+            sb.Append("  Longitude: ").Append(Longitude).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -104,16 +104,16 @@ namespace Cherwell.Api.Model.Core
         {
             var sb = new StringBuilder();
             sb.Append("class CoreManagerFolder {\n");
-            sb.Append("  Association: ").Append(Association).Append("\n");
-            sb.Append("  ChildFolders: ").Append(ChildFolders).Append("\n");
-            sb.Append("  ChildItems: ").Append(ChildItems).Append("\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Links: ").Append(Links).Append("\n");
-            sb.Append("  LocalizedScopeName: ").Append(LocalizedScopeName).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  ParentId: ").Append(ParentId).Append("\n");
-            sb.Append("  Scope: ").Append(Scope).Append("\n");
-            sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append("\n");
+            sb.Append("  Association: ").Append(Association).Append('\n');
+            sb.Append("  ChildFolders: ").Append(ChildFolders).Append('\n');
+            sb.Append("  ChildItems: ").Append(ChildItems).Append('\n');
+            sb.Append("  Id: ").Append(Id).Append('\n');
+            sb.Append("  Links: ").Append(Links).Append('\n');
+            sb.Append("  LocalizedScopeName: ").Append(LocalizedScopeName).Append('\n');
+            sb.Append("  Name: ").Append(Name).Append('\n');
+            sb.Append("  ParentId: ").Append(ParentId).Append('\n');
+            sb.Append("  Scope: ").Append(Scope).Append('\n');
+            sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

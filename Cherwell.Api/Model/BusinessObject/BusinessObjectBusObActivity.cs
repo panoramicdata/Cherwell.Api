@@ -118,18 +118,18 @@ namespace Cherwell.Api.Model.BusinessObject
         {
             var sb = new StringBuilder();
             sb.Append("class BusinessObjectBusObActivity {\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  ParentBusObDefId: ").Append(ParentBusObDefId).Append("\n");
-            sb.Append("  ParentBusObRecId: ").Append(ParentBusObRecId).Append("\n");
-            sb.Append("  HistoryBusObDefId: ").Append(HistoryBusObDefId).Append("\n");
-            sb.Append("  HistoryBusObRecId: ").Append(HistoryBusObRecId).Append("\n");
-            sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  Title: ").Append(Title).Append("\n");
-            sb.Append("  Body: ").Append(Body).Append("\n");
-            sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            sb.Append("  Created: ").Append(Created).Append("\n");
-            sb.Append("  Modified: ").Append(Modified).Append("\n");
-            sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append('\n');
+            sb.Append("  ParentBusObDefId: ").Append(ParentBusObDefId).Append('\n');
+            sb.Append("  ParentBusObRecId: ").Append(ParentBusObRecId).Append('\n');
+            sb.Append("  HistoryBusObDefId: ").Append(HistoryBusObDefId).Append('\n');
+            sb.Append("  HistoryBusObRecId: ").Append(HistoryBusObRecId).Append('\n');
+            sb.Append("  Type: ").Append(Type).Append('\n');
+            sb.Append("  Title: ").Append(Title).Append('\n');
+            sb.Append("  Body: ").Append(Body).Append('\n');
+            sb.Append("  CreatedBy: ").Append(CreatedBy).Append('\n');
+            sb.Append("  Created: ").Append(Created).Append('\n');
+            sb.Append("  Modified: ").Append(Modified).Append('\n');
+            sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

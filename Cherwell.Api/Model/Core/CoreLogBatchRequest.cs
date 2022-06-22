@@ -41,7 +41,7 @@ namespace Cherwell.Api.Model.Core
         {
             var sb = new StringBuilder();
             sb.Append("class CoreLogBatchRequest {\n");
-            sb.Append("  LogRequests: ").Append(LogRequests).Append("\n");
+            sb.Append("  LogRequests: ").Append(LogRequests).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

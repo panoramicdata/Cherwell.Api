@@ -48,8 +48,8 @@ namespace Cherwell.Api.Model.Searches
         {
             var sb = new StringBuilder();
             sb.Append("class SearchesStoredSearchResults {\n");
-            sb.Append("  Columns: ").Append(Columns).Append("\n");
-            sb.Append("  Rows: ").Append(Rows).Append("\n");
+            sb.Append("  Columns: ").Append(Columns).Append('\n');
+            sb.Append("  Rows: ").Append(Rows).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

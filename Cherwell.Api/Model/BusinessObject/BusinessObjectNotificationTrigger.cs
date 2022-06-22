@@ -62,10 +62,10 @@ namespace Cherwell.Api.Model.BusinessObject
         {
             var sb = new StringBuilder();
             sb.Append("class BusinessObjectNotificationTrigger {\n");
-            sb.Append("  SourceType: ").Append(SourceType).Append("\n");
-            sb.Append("  SourceId: ").Append(SourceId).Append("\n");
-            sb.Append("  SourceChange: ").Append(SourceChange).Append("\n");
-            sb.Append("  Key: ").Append(Key).Append("\n");
+            sb.Append("  SourceType: ").Append(SourceType).Append('\n');
+            sb.Append("  SourceId: ").Append(SourceId).Append('\n');
+            sb.Append("  SourceChange: ").Append(SourceChange).Append('\n');
+            sb.Append("  Key: ").Append(Key).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -55,9 +55,9 @@ namespace Cherwell.Api.Model.Queues
         {
             var sb = new StringBuilder();
             sb.Append("class QueuesAddItemToQueueRequest {\n");
-            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
-            sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
-            sb.Append("  QueueStandInKey: ").Append(QueueStandInKey).Append("\n");
+            sb.Append("  BusObId: ").Append(BusObId).Append('\n');
+            sb.Append("  BusObRecId: ").Append(BusObRecId).Append('\n');
+            sb.Append("  QueueStandInKey: ").Append(QueueStandInKey).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

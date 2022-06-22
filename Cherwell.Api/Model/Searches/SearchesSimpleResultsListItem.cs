@@ -111,17 +111,17 @@ namespace Cherwell.Api.Model.Searches
         {
             var sb = new StringBuilder();
             sb.Append("class SearchesSimpleResultsListItem {\n");
-            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
-            sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
-            sb.Append("  DocRepositoryItemId: ").Append(DocRepositoryItemId).Append("\n");
-            sb.Append("  GalleryImage: ").Append(GalleryImage).Append("\n");
-            sb.Append("  Links: ").Append(Links).Append("\n");
-            sb.Append("  PublicId: ").Append(PublicId).Append("\n");
-            sb.Append("  Scope: ").Append(Scope).Append("\n");
-            sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append("\n");
-            sb.Append("  SubTitle: ").Append(SubTitle).Append("\n");
-            sb.Append("  Text: ").Append(Text).Append("\n");
-            sb.Append("  Title: ").Append(Title).Append("\n");
+            sb.Append("  BusObId: ").Append(BusObId).Append('\n');
+            sb.Append("  BusObRecId: ").Append(BusObRecId).Append('\n');
+            sb.Append("  DocRepositoryItemId: ").Append(DocRepositoryItemId).Append('\n');
+            sb.Append("  GalleryImage: ").Append(GalleryImage).Append('\n');
+            sb.Append("  Links: ").Append(Links).Append('\n');
+            sb.Append("  PublicId: ").Append(PublicId).Append('\n');
+            sb.Append("  Scope: ").Append(Scope).Append('\n');
+            sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append('\n');
+            sb.Append("  SubTitle: ").Append(SubTitle).Append('\n');
+            sb.Append("  Text: ").Append(Text).Append('\n');
+            sb.Append("  Title: ").Append(Title).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

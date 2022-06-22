@@ -48,8 +48,8 @@ namespace Cherwell.Api.Model.Searches
         {
             var sb = new StringBuilder();
             sb.Append("class SearchesAssociation {\n");
-            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
-            sb.Append("  BusObName: ").Append(BusObName).Append("\n");
+            sb.Append("  BusObId: ").Append(BusObId).Append('\n');
+            sb.Append("  BusObName: ").Append(BusObName).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

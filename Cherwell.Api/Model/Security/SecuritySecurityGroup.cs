@@ -55,9 +55,9 @@ namespace Cherwell.Api.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SecuritySecurityGroup {\n");
-            sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  GroupId: ").Append(GroupId).Append("\n");
-            sb.Append("  GroupName: ").Append(GroupName).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append('\n');
+            sb.Append("  GroupId: ").Append(GroupId).Append('\n');
+            sb.Append("  GroupName: ").Append(GroupName).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

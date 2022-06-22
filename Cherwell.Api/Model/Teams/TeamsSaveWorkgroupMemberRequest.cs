@@ -55,9 +55,9 @@ namespace Cherwell.Api.Model.Teams
         {
             var sb = new StringBuilder();
             sb.Append("class TeamsSaveWorkgroupMemberRequest {\n");
-            sb.Append("  CustomerRecordId: ").Append(CustomerRecordId).Append("\n");
-            sb.Append("  WorkgroupId: ").Append(WorkgroupId).Append("\n");
-            sb.Append("  CustomerIsWorkgroupManager: ").Append(CustomerIsWorkgroupManager).Append("\n");
+            sb.Append("  CustomerRecordId: ").Append(CustomerRecordId).Append('\n');
+            sb.Append("  WorkgroupId: ").Append(WorkgroupId).Append('\n');
+            sb.Append("  CustomerIsWorkgroupManager: ").Append(CustomerIsWorkgroupManager).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

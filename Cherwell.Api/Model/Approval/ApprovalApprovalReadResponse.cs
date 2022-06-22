@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json;
-using Cherwell.Model;
 
 namespace Cherwell.Api.Model.Approval
 {
@@ -365,12 +364,12 @@ namespace Cherwell.Api.Model.Approval
         {
             var sb = new StringBuilder();
             sb.Append("class ApprovalApprovalReadResponse {\n");
-            sb.Append("  Properties: ").Append(Properties).Append("\n");
-            sb.Append("  Links: ").Append(Links).Append("\n");
-            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
+            sb.Append("  Properties: ").Append(Properties).Append('\n');
+            sb.Append("  Links: ").Append(Links).Append('\n');
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append('\n');
+            sb.Append("  HasError: ").Append(HasError).Append('\n');
+            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

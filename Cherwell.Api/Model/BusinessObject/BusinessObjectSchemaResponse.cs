@@ -415,19 +415,19 @@ namespace Cherwell.Api.Model.BusinessObject
         {
             var sb = new StringBuilder();
             sb.Append("class BusinessObjectSchemaResponse {\n");
-            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
-            sb.Append("  FieldDefinitions: ").Append(FieldDefinitions).Append("\n");
-            sb.Append("  FirstRecIdField: ").Append(FirstRecIdField).Append("\n");
-            sb.Append("  GridDefinitions: ").Append(GridDefinitions).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  RecIdFields: ").Append(RecIdFields).Append("\n");
-            sb.Append("  Relationships: ").Append(Relationships).Append("\n");
-            sb.Append("  StateFieldId: ").Append(StateFieldId).Append("\n");
-            sb.Append("  States: ").Append(States).Append("\n");
-            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
+            sb.Append("  BusObId: ").Append(BusObId).Append('\n');
+            sb.Append("  FieldDefinitions: ").Append(FieldDefinitions).Append('\n');
+            sb.Append("  FirstRecIdField: ").Append(FirstRecIdField).Append('\n');
+            sb.Append("  GridDefinitions: ").Append(GridDefinitions).Append('\n');
+            sb.Append("  Name: ").Append(Name).Append('\n');
+            sb.Append("  RecIdFields: ").Append(RecIdFields).Append('\n');
+            sb.Append("  Relationships: ").Append(Relationships).Append('\n');
+            sb.Append("  StateFieldId: ").Append(StateFieldId).Append('\n');
+            sb.Append("  States: ").Append(States).Append('\n');
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append('\n');
+            sb.Append("  HasError: ").Append(HasError).Append('\n');
+            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

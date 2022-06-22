@@ -387,15 +387,15 @@ namespace Cherwell.Api.Model.Searches
         {
             var sb = new StringBuilder();
             sb.Append("class SearchesSimpleResultsListGroup {\n");
-            sb.Append("  IsBusObTarget: ").Append(IsBusObTarget).Append("\n");
-            sb.Append("  SimpleResultsListItems: ").Append(SimpleResultsListItems).Append("\n");
-            sb.Append("  SubTitle: ").Append(SubTitle).Append("\n");
-            sb.Append("  TargetId: ").Append(TargetId).Append("\n");
-            sb.Append("  Title: ").Append(Title).Append("\n");
-            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
+            sb.Append("  IsBusObTarget: ").Append(IsBusObTarget).Append('\n');
+            sb.Append("  SimpleResultsListItems: ").Append(SimpleResultsListItems).Append('\n');
+            sb.Append("  SubTitle: ").Append(SubTitle).Append('\n');
+            sb.Append("  TargetId: ").Append(TargetId).Append('\n');
+            sb.Append("  Title: ").Append(Title).Append('\n');
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append('\n');
+            sb.Append("  HasError: ").Append(HasError).Append('\n');
+            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

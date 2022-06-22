@@ -62,10 +62,10 @@ namespace Cherwell.Api.Model.Users
         {
             var sb = new StringBuilder();
             sb.Append("class UsersUserReadResponse {\n");
-            sb.Append("  Error: ").Append(Error).Append("\n");
-            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            sb.Append("  HasError: ").Append(HasError).Append("\n");
-            sb.Append("  Users: ").Append(Users).Append("\n");
+            sb.Append("  Error: ").Append(Error).Append('\n');
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
+            sb.Append("  HasError: ").Append(HasError).Append('\n');
+            sb.Append("  Users: ").Append(Users).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

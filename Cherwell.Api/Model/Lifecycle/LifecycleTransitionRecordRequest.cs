@@ -41,7 +41,7 @@ namespace Cherwell.Api.Model.Lifecycle
         {
             var sb = new StringBuilder();
             sb.Append("class LifecycleTransitionRecordRequest {\n");
-            sb.Append("  TransitionOptionId: ").Append(TransitionOptionId).Append("\n");
+            sb.Append("  TransitionOptionId: ").Append(TransitionOptionId).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

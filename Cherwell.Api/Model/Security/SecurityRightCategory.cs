@@ -55,9 +55,9 @@ namespace Cherwell.Api.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SecurityRightCategory {\n");
-            sb.Append("  CategoryDescription: ").Append(CategoryDescription).Append("\n");
-            sb.Append("  CategoryId: ").Append(CategoryId).Append("\n");
-            sb.Append("  CategoryName: ").Append(CategoryName).Append("\n");
+            sb.Append("  CategoryDescription: ").Append(CategoryDescription).Append('\n');
+            sb.Append("  CategoryId: ").Append(CategoryId).Append('\n');
+            sb.Append("  CategoryName: ").Append(CategoryName).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -90,14 +90,14 @@ namespace Cherwell.Api.Model.Core
         {
             var sb = new StringBuilder();
             sb.Append("class CorePromptValue {\n");
-            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
-            sb.Append("  CollectionStoreEntireRow: ").Append(CollectionStoreEntireRow).Append("\n");
-            sb.Append("  CollectionValueField: ").Append(CollectionValueField).Append("\n");
-            sb.Append("  FieldId: ").Append(FieldId).Append("\n");
-            sb.Append("  ListReturnFieldId: ").Append(ListReturnFieldId).Append("\n");
-            sb.Append("  PromptId: ").Append(PromptId).Append("\n");
-            sb.Append("  Value: ").Append(Value).Append("\n");
-            sb.Append("  ValueIsRecId: ").Append(ValueIsRecId).Append("\n");
+            sb.Append("  BusObId: ").Append(BusObId).Append('\n');
+            sb.Append("  CollectionStoreEntireRow: ").Append(CollectionStoreEntireRow).Append('\n');
+            sb.Append("  CollectionValueField: ").Append(CollectionValueField).Append('\n');
+            sb.Append("  FieldId: ").Append(FieldId).Append('\n');
+            sb.Append("  ListReturnFieldId: ").Append(ListReturnFieldId).Append('\n');
+            sb.Append("  PromptId: ").Append(PromptId).Append('\n');
+            sb.Append("  Value: ").Append(Value).Append('\n');
+            sb.Append("  ValueIsRecId: ").Append(ValueIsRecId).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

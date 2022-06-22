@@ -394,16 +394,16 @@ namespace Cherwell.Api.Model.Forms
         {
             var sb = new StringBuilder();
             sb.Append("class FormsMobileFormResponse {\n");
-            sb.Append("  Actions: ").Append(Actions).Append("\n");
-            sb.Append("  Attachments: ").Append(Attachments).Append("\n");
-            sb.Append("  GalleryImage: ").Append(GalleryImage).Append("\n");
-            sb.Append("  LocationInformation: ").Append(LocationInformation).Append("\n");
-            sb.Append("  Sections: ").Append(Sections).Append("\n");
-            sb.Append("  Title: ").Append(Title).Append("\n");
-            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
+            sb.Append("  Actions: ").Append(Actions).Append('\n');
+            sb.Append("  Attachments: ").Append(Attachments).Append('\n');
+            sb.Append("  GalleryImage: ").Append(GalleryImage).Append('\n');
+            sb.Append("  LocationInformation: ").Append(LocationInformation).Append('\n');
+            sb.Append("  Sections: ").Append(Sections).Append('\n');
+            sb.Append("  Title: ").Append(Title).Append('\n');
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append('\n');
+            sb.Append("  HasError: ").Append(HasError).Append('\n');
+            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

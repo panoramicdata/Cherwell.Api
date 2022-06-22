@@ -41,7 +41,7 @@ namespace Cherwell.Api.Model.BusinessObject
         {
             var sb = new StringBuilder();
             sb.Append("class BusinessObjectBusObsForViewResponse {\n");
-            sb.Append("  Summaries: ").Append(Summaries).Append("\n");
+            sb.Append("  Summaries: ").Append(Summaries).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

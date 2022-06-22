@@ -366,12 +366,12 @@ namespace Cherwell.Api.Model.Approval
         {
             var sb = new StringBuilder();
             sb.Append("class ApprovalGetApprovalsResponse {\n");
-            sb.Append("  TotalRecords: ").Append(TotalRecords).Append("\n");
-            sb.Append("  Approvals: ").Append(Approvals).Append("\n");
-            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
+            sb.Append("  TotalRecords: ").Append(TotalRecords).Append('\n');
+            sb.Append("  Approvals: ").Append(Approvals).Append('\n');
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append('\n');
+            sb.Append("  HasError: ").Append(HasError).Append('\n');
+            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

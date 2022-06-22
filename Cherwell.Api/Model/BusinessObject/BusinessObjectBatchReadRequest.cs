@@ -48,8 +48,8 @@ namespace Cherwell.Api.Model.BusinessObject
         {
             var sb = new StringBuilder();
             sb.Append("class BusinessObjectBatchReadRequest {\n");
-            sb.Append("  ReadRequests: ").Append(ReadRequests).Append("\n");
-            sb.Append("  StopOnError: ").Append(StopOnError).Append("\n");
+            sb.Append("  ReadRequests: ").Append(ReadRequests).Append('\n');
+            sb.Append("  StopOnError: ").Append(StopOnError).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

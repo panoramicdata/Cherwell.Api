@@ -48,8 +48,8 @@ namespace Cherwell.Api.Model.BusinessObject
         {
             var sb = new StringBuilder();
             sb.Append("class BusinessObjectBatchDeleteRequest {\n");
-            sb.Append("  DeleteRequests: ").Append(DeleteRequests).Append("\n");
-            sb.Append("  StopOnError: ").Append(StopOnError).Append("\n");
+            sb.Append("  DeleteRequests: ").Append(DeleteRequests).Append('\n');
+            sb.Append("  StopOnError: ").Append(StopOnError).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

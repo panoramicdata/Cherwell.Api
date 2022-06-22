@@ -76,12 +76,12 @@ namespace Cherwell.Api.Model.Forms
         {
             var sb = new StringBuilder();
             sb.Append("class FormsSection {\n");
-            sb.Append("  SectionFields: ").Append(SectionFields).Append("\n");
-            sb.Append("  GalleryImage: ").Append(GalleryImage).Append("\n");
-            sb.Append("  Title: ").Append(Title).Append("\n");
-            sb.Append("  RelationshipId: ").Append(RelationshipId).Append("\n");
-            sb.Append("  TargetBusObId: ").Append(TargetBusObId).Append("\n");
-            sb.Append("  TargetBusObRecId: ").Append(TargetBusObRecId).Append("\n");
+            sb.Append("  SectionFields: ").Append(SectionFields).Append('\n');
+            sb.Append("  GalleryImage: ").Append(GalleryImage).Append('\n');
+            sb.Append("  Title: ").Append(Title).Append('\n');
+            sb.Append("  RelationshipId: ").Append(RelationshipId).Append('\n');
+            sb.Append("  TargetBusObId: ").Append(TargetBusObId).Append('\n');
+            sb.Append("  TargetBusObRecId: ").Append(TargetBusObRecId).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

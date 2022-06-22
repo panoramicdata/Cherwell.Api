@@ -76,12 +76,12 @@ namespace Cherwell.Api.Model.Searches
         {
             var sb = new StringBuilder();
             sb.Append("class SearchesSearchResultsRow {\n");
-            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
-            sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
-            sb.Append("  Links: ").Append(Links).Append("\n");
-            sb.Append("  PublicId: ").Append(PublicId).Append("\n");
-            sb.Append("  RowColor: ").Append(RowColor).Append("\n");
-            sb.Append("  SearchResultsFieldValues: ").Append(SearchResultsFieldValues).Append("\n");
+            sb.Append("  BusObId: ").Append(BusObId).Append('\n');
+            sb.Append("  BusObRecId: ").Append(BusObRecId).Append('\n');
+            sb.Append("  Links: ").Append(Links).Append('\n');
+            sb.Append("  PublicId: ").Append(PublicId).Append('\n');
+            sb.Append("  RowColor: ").Append(RowColor).Append('\n');
+            sb.Append("  SearchResultsFieldValues: ").Append(SearchResultsFieldValues).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

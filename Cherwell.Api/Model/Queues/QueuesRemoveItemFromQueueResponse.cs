@@ -373,13 +373,13 @@ namespace Cherwell.Api.Model.Queues
         {
             var sb = new StringBuilder();
             sb.Append("class QueuesRemoveItemFromQueueResponse {\n");
-            sb.Append("  HistoryRecId: ").Append(HistoryRecId).Append("\n");
-            sb.Append("  HistoryText: ").Append(HistoryText).Append("\n");
-            sb.Append("  HistoryTypeId: ").Append(HistoryTypeId).Append("\n");
-            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
+            sb.Append("  HistoryRecId: ").Append(HistoryRecId).Append('\n');
+            sb.Append("  HistoryText: ").Append(HistoryText).Append('\n');
+            sb.Append("  HistoryTypeId: ").Append(HistoryTypeId).Append('\n');
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append('\n');
+            sb.Append("  HasError: ").Append(HasError).Append('\n');
+            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

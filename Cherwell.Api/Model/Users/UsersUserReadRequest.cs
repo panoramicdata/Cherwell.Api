@@ -48,8 +48,8 @@ namespace Cherwell.Api.Model.Users
         {
             var sb = new StringBuilder();
             sb.Append("class UsersUserReadRequest {\n");
-            sb.Append("  LoginId: ").Append(LoginId).Append("\n");
-            sb.Append("  PublicId: ").Append(PublicId).Append("\n");
+            sb.Append("  LoginId: ").Append(LoginId).Append('\n');
+            sb.Append("  PublicId: ").Append(PublicId).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -55,9 +55,9 @@ namespace Cherwell.Api.Model.BusinessObject
         {
             var sb = new StringBuilder();
             sb.Append("class BusinessObjectFieldValidationError {\n");
-            sb.Append("  Error: ").Append(Error).Append("\n");
-            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            sb.Append("  FieldId: ").Append(FieldId).Append("\n");
+            sb.Append("  Error: ").Append(Error).Append('\n');
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
+            sb.Append("  FieldId: ").Append(FieldId).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

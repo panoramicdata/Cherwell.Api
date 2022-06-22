@@ -97,15 +97,15 @@ namespace Cherwell.Api.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SecurityRole {\n");
-            sb.Append("  BrowserClientCustomViewId: ").Append(BrowserClientCustomViewId).Append("\n");
-            sb.Append("  BusinessObjectExcludeList: ").Append(BusinessObjectExcludeList).Append("\n");
-            sb.Append("  Culture: ").Append(Culture).Append("\n");
-            sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  MobileClientCustomViewId: ").Append(MobileClientCustomViewId).Append("\n");
-            sb.Append("  PrimaryBusObId: ").Append(PrimaryBusObId).Append("\n");
-            sb.Append("  RoleId: ").Append(RoleId).Append("\n");
-            sb.Append("  RoleName: ").Append(RoleName).Append("\n");
-            sb.Append("  SmartClientCustomViewId: ").Append(SmartClientCustomViewId).Append("\n");
+            sb.Append("  BrowserClientCustomViewId: ").Append(BrowserClientCustomViewId).Append('\n');
+            sb.Append("  BusinessObjectExcludeList: ").Append(BusinessObjectExcludeList).Append('\n');
+            sb.Append("  Culture: ").Append(Culture).Append('\n');
+            sb.Append("  Description: ").Append(Description).Append('\n');
+            sb.Append("  MobileClientCustomViewId: ").Append(MobileClientCustomViewId).Append('\n');
+            sb.Append("  PrimaryBusObId: ").Append(PrimaryBusObId).Append('\n');
+            sb.Append("  RoleId: ").Append(RoleId).Append('\n');
+            sb.Append("  RoleName: ").Append(RoleName).Append('\n');
+            sb.Append("  SmartClientCustomViewId: ").Append(SmartClientCustomViewId).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

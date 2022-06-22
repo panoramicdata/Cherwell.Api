@@ -55,9 +55,9 @@ namespace Cherwell.Api.Model.BusinessObject
         {
             var sb = new StringBuilder();
             sb.Append("class BusinessObjectGridDefinition {\n");
-            sb.Append("  GridId: ").Append(GridId).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  GridId: ").Append(GridId).Append('\n');
+            sb.Append("  Name: ").Append(Name).Append('\n');
+            sb.Append("  DisplayName: ").Append(DisplayName).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

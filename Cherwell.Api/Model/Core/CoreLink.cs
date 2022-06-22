@@ -48,8 +48,8 @@ namespace Cherwell.Api.Model.Core
         {
             var sb = new StringBuilder();
             sb.Append("class CoreLink {\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Url: ").Append(Url).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append('\n');
+            sb.Append("  Url: ").Append(Url).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

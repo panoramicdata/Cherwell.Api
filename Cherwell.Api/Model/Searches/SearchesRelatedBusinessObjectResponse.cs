@@ -129,18 +129,18 @@ namespace Cherwell.Api.Model.Searches
         {
             var sb = new StringBuilder();
             sb.Append("class SearchesRelatedBusinessObjectResponse {\n");
-            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(HasError).Append("\n");
-            sb.Append("  Links: ").Append(Links).Append("\n");
-            sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
-            sb.Append("  PageSize: ").Append(PageSize).Append("\n");
-            sb.Append("  ParentBusObId: ").Append(ParentBusObId).Append("\n");
-            sb.Append("  ParentBusObPublicId: ").Append(ParentBusObPublicId).Append("\n");
-            sb.Append("  ParentBusObRecId: ").Append(ParentBusObRecId).Append("\n");
-            sb.Append("  RelatedBusinessObjects: ").Append(RelatedBusinessObjects).Append("\n");
-            sb.Append("  RelationshipId: ").Append(RelationshipId).Append("\n");
-            sb.Append("  TotalRecords: ").Append(TotalRecords).Append("\n");
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append('\n');
+            sb.Append("  HasError: ").Append(HasError).Append('\n');
+            sb.Append("  Links: ").Append(Links).Append('\n');
+            sb.Append("  PageNumber: ").Append(PageNumber).Append('\n');
+            sb.Append("  PageSize: ").Append(PageSize).Append('\n');
+            sb.Append("  ParentBusObId: ").Append(ParentBusObId).Append('\n');
+            sb.Append("  ParentBusObPublicId: ").Append(ParentBusObPublicId).Append('\n');
+            sb.Append("  ParentBusObRecId: ").Append(ParentBusObRecId).Append('\n');
+            sb.Append("  RelatedBusinessObjects: ").Append(RelatedBusinessObjects).Append('\n');
+            sb.Append("  RelationshipId: ").Append(RelationshipId).Append('\n');
+            sb.Append("  TotalRecords: ").Append(TotalRecords).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }

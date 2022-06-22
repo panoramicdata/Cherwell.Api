@@ -104,16 +104,16 @@ namespace Cherwell.Api.Model.BusinessObject
         {
             var sb = new StringBuilder();
             sb.Append("class BusinessObjectViewSummary {\n");
-            sb.Append("  GroupSummaries: ").Append(GroupSummaries).Append("\n");
-            sb.Append("  Image: ").Append(Image).Append("\n");
-            sb.Append("  IsPartOfView: ").Append(IsPartOfView).Append("\n");
-            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
-            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
-            sb.Append("  Group: ").Append(Group).Append("\n");
-            sb.Append("  Lookup: ").Append(Lookup).Append("\n");
-            sb.Append("  Major: ").Append(Major).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Supporting: ").Append(Supporting).Append("\n");
+            sb.Append("  GroupSummaries: ").Append(GroupSummaries).Append('\n');
+            sb.Append("  Image: ").Append(Image).Append('\n');
+            sb.Append("  IsPartOfView: ").Append(IsPartOfView).Append('\n');
+            sb.Append("  BusObId: ").Append(BusObId).Append('\n');
+            sb.Append("  DisplayName: ").Append(DisplayName).Append('\n');
+            sb.Append("  Group: ").Append(Group).Append('\n');
+            sb.Append("  Lookup: ").Append(Lookup).Append('\n');
+            sb.Append("  Major: ").Append(Major).Append('\n');
+            sb.Append("  Name: ").Append(Name).Append('\n');
+            sb.Append("  Supporting: ").Append(Supporting).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
         }
