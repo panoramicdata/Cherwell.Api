@@ -6,3 +6,4 @@ global using Cherwell.Model.Lifecycle;
 global using Cherwell.Model.OneStepActions;
 global using Cherwell.Model.Queues;
 global using Cherwell.Model.Searches;
+global using Cherwell.Model.Security;
