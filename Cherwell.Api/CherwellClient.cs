@@ -1,3 +1,5 @@
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
 using Refit;
 
 namespace Cherwell.Api
@@ -7,65 +9,69 @@ namespace Cherwell.Api
 	/// </summary>
 	public partial class CherwellClient
 	{
-		private CherwellClient(HttpClient client)
+		private readonly ILogger _logger;
+
+		private CherwellClient(HttpClient client, ILogger? logger)
 		{
-			ApprovalApiClient = RestService.For<IApprovalApi>(client);
-			BusinessObjectApiClient = RestService.For<IBusinessObjectApi>(client);
-			CoreApiClient = RestService.For<ICoreApi>(client);
-			FormsApiClient = RestService.For<IFormsApi>(client);
-			LifecycleApiClient = RestService.For<ILifecycleApi>(client);
-			OneStepActionsApiClient = RestService.For<IOneStepActionsApi>(client);
-			QueuesApiClient = RestService.For<IQueuesApi>(client);
-			SearchesApiClient = RestService.For<ISearchesApi>(client);
-			SecurityApiClient = RestService.For<ISecurityApi>(client);
-			ServiceApiClient = RestService.For<IServiceApi>(client);
-			TeamsApiClient = RestService.For<ITeamsApi>(client);
-			UsersApiClient = RestService.For<IUsersApi>(client);
+			_logger = logger ?? NullLogger.Instance;
+
+			Approval = RestService.For<IApprovalApi>(client);
+			BusinessObject = RestService.For<IBusinessObjectApi>(client);
+			Core = RestService.For<ICoreApi>(client);
+			Forms = RestService.For<IFormsApi>(client);
+			Lifecycle = RestService.For<ILifecycleApi>(client);
+			OneStepActions = RestService.For<IOneStepActionsApi>(client);
+			Queues = RestService.For<IQueuesApi>(client);
+			Searches = RestService.For<ISearchesApi>(client);
+			Security = RestService.For<ISecurityApi>(client);
+			Service = RestService.For<IServiceApi>(client);
+			Teams = RestService.For<ITeamsApi>(client);
+			Users = RestService.For<IUsersApi>(client);
 		}
 
 		/// <param name="options">The options used to configure the behaviour of the client</param>
-		public CherwellClient(CherwellClientOptions options) : this(new HttpClient(new AuthenticatedHttpClientHandler(options))
+		public CherwellClient(CherwellClientOptions options, ILogger? logger = null) : this(new HttpClient(new AuthenticatedHttpClientHandler(options))
 		{
 			BaseAddress = new Uri(options.BaseAddress)
-		})
+		}, logger)
 		{
 		}
 
 		/// <inheritdoc />
-		public IApprovalApi ApprovalApiClient { get; }
+		public IApprovalApi Approval { get; }
 
 		/// <inheritdoc />
-		public IBusinessObjectApi BusinessObjectApiClient { get; }
+		public IBusinessObjectApi BusinessObject { get; }
 
 		/// <inheritdoc />
-		public ICoreApi CoreApiClient { get; }
+		public ICoreApi Core { get; }
 
 		/// <inheritdoc />
-		public IFormsApi FormsApiClient { get; }
+		public IFormsApi Forms { get; }
 
 		/// <inheritdoc />
-		public ILifecycleApi LifecycleApiClient { get; }
+		public ILifecycleApi Lifecycle { get; }
 
 		/// <inheritdoc />
-		public IOneStepActionsApi OneStepActionsApiClient { get; }
+		public IOneStepActionsApi OneStepActions { get; }
 
 		/// <inheritdoc />
-		public IQueuesApi QueuesApiClient { get; }
+		public IQueuesApi Queues { get; }
 
 		/// <inheritdoc />
-		public ISearchesApi SearchesApiClient { get; }
+		public ISearchesApi Searches { get; }
 
 		/// <inheritdoc />
-		public ISecurityApi SecurityApiClient { get; }
+		public ISecurityApi Security { get; }
 
 		/// <inheritdoc />
-		public IServiceApi ServiceApiClient { get; }
+		public IServiceApi Service { get; }
 
 		/// <inheritdoc />
-		public ITeamsApi TeamsApiClient { get; }
+		public ITeamsApi Teams { get; }
 
 		/// <inheritdoc />
-		public IUsersApi UsersApiClient { get; }
+		public IUsersApi Users { get; }
 
 
 		public string? Scheme { get; }
