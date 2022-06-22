@@ -1,13 +1,11 @@
-using System.Net.Http.Headers;
-using Cherwell.Api;
 using Refit;
 
-namespace Cherwell.Client
+namespace Cherwell.Api
 {
-	/// <summary>
-	/// API client is mainly responsible for making the HTTP call to the API backend.
-	/// </summary>
-	public partial class CherwellClient
+    /// <summary>
+    /// API client is mainly responsible for making the HTTP call to the API backend.
+    /// </summary>
+    public partial class CherwellClient
     {
         public CherwellClient(HttpClient client)
         {
@@ -27,9 +25,9 @@ namespace Cherwell.Client
 
         /// <param name="getSchemeAndToken"></param>
         public CherwellClient(string url, Func<Task<Tuple<string, string>>> getSchemeAndToken) : this(new HttpClient(new AuthenticatedHttpClientHandler(getSchemeAndToken))
-            {
+        {
             BaseAddress = new Uri(url)
-            })
+        })
         {
         }
 
@@ -77,32 +75,6 @@ namespace Cherwell.Client
         private Task<Tuple<string, string>> GetSchemeAndToken()
         {
             return Task.FromResult(new Tuple<string, string>(Scheme, Token));
-        }
-    }
-
-    public class AuthenticatedHttpClientHandler : HttpClientHandler
-    {
-        private readonly Func<Task<Tuple<string, string>>> getSchemeAndToken;
-
-        public AuthenticatedHttpClientHandler(Func<Task<Tuple<string, string>>> getSchemeAndToken)
-        {
-            this.getSchemeAndToken = getSchemeAndToken;
-        }
-
-        protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request,
-            CancellationToken cancellationToken)
-        {
-            // See if the request has an authorize header
-            var auth = request.Headers.Authorization;
-            var schemeAndToken = await getSchemeAndToken().ConfigureAwait(false);
-
-            if (schemeAndToken != null)
-            {
-            request.Headers.Authorization = new AuthenticationHeaderValue(schemeAndToken.Item1, schemeAndToken.Item2);
-            }
-
-
-            return await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
         }
     }
 }
