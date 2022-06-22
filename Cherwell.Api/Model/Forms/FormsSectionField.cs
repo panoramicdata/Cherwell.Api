@@ -100,7 +100,7 @@ namespace Cherwell.Api.Model.Forms
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as FormsSectionField);
@@ -111,7 +111,7 @@ namespace Cherwell.Api.Model.Forms
         /// </summary>
         /// <param name="other">Instance of FormsSectionField to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(FormsSectionField other)
+        public bool Equals(FormsSectionField? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -126,17 +126,17 @@ namespace Cherwell.Api.Model.Forms
                 (
                     this.FieldId == other.FieldId ||
                     this.FieldId != null &&
-                    this.FieldId.Equals(other.FieldId)
+                    this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.FieldType == other.FieldType ||
                     this.FieldType != null &&
-                    this.FieldType.Equals(other.FieldType)
+                    this.FieldType.Equals(other.FieldType, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Label == other.Label ||
                     this.Label != null &&
-                    this.Label.Equals(other.Label)
+                    this.Label.Equals(other.Label, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Multiline == other.Multiline ||
@@ -146,7 +146,7 @@ namespace Cherwell.Api.Model.Forms
                 (
                     this.Value == other.Value ||
                     this.Value != null &&
-                    this.Value.Equals(other.Value)
+                    this.Value.Equals(other.Value, StringComparison.Ordinal)
                 );
         }
 

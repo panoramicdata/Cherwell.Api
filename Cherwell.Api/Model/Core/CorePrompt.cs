@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets ListDisplayOption
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum ListDisplayOptionEnum
+        public enum EnumListDisplayOption
         {
 
             /// <summary>
@@ -67,7 +67,7 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets PromptType
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum PromptTypeEnum
+        public enum EnumPromptType
         {
 
             /// <summary>
@@ -153,12 +153,12 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets ListDisplayOption
         /// </summary>
         [DataMember(Name = "listDisplayOption", EmitDefaultValue = false)]
-        public ListDisplayOptionEnum? ListDisplayOption { get; set; }
+        public EnumListDisplayOption? ListDisplayOption { get; set; }
         /// <summary>
         /// Gets or Sets PromptType
         /// </summary>
         [DataMember(Name = "promptType", EmitDefaultValue = false)]
-        public PromptTypeEnum? PromptType { get; set; }
+        public EnumPromptType? PromptType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CorePrompt" /> class.
         /// </summary>
@@ -168,7 +168,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="CollectionValueField">CollectionValueField.</param>
         /// <param name="ConstraintXml">ConstraintXml.</param>
         /// <param name="Contents">Contents.</param>
-        /// <param name="_Default">_Default.</param>
+        /// <param name="Default">_Default.</param>
         /// <param name="FieldId">FieldId.</param>
         /// <param name="IsDateRange">IsDateRange.</param>
         /// <param name="ListDisplayOption">ListDisplayOption.</param>
@@ -181,7 +181,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="Text">Text.</param>
         /// <param name="Value">Value.</param>
         /// <param name="Values">Values.</param>
-        public CorePrompt(bool? AllowValuesOnly = default(bool?), string BusObId = default(string), string CollectionStoreEntireRow = default(string), string CollectionValueField = default(string), string ConstraintXml = default(string), string Contents = default(string), string _Default = default(string), string FieldId = default(string), bool? IsDateRange = default(bool?), ListDisplayOptionEnum? ListDisplayOption = default(ListDisplayOptionEnum?), string ListReturnFieldId = default(string), bool? MultiLine = default(bool?), string PromptId = default(string), PromptTypeEnum? PromptType = default(PromptTypeEnum?), string PromptTypeName = default(string), bool? Required = default(bool?), string Text = default(string), Object Value = default(Object), List<string> Values = default(List<string>))
+        public CorePrompt(bool? AllowValuesOnly = default(bool?), string BusObId = default(string), string CollectionStoreEntireRow = default(string), string CollectionValueField = default(string), string ConstraintXml = default(string), string Contents = default(string), string Default = default(string), string FieldId = default(string), bool? IsDateRange = default(bool?), EnumListDisplayOption? ListDisplayOption = default(EnumListDisplayOption?), string ListReturnFieldId = default(string), bool? MultiLine = default(bool?), string PromptId = default(string), EnumPromptType? PromptType = default(EnumPromptType?), string PromptTypeName = default(string), bool? Required = default(bool?), string Text = default(string), Object Value = default(Object), List<string> Values = default(List<string>))
         {
             this.AllowValuesOnly = AllowValuesOnly;
             this.BusObId = BusObId;
@@ -189,7 +189,7 @@ namespace Cherwell.Api.Model.Core
             this.CollectionValueField = CollectionValueField;
             this.ConstraintXml = ConstraintXml;
             this.Contents = Contents;
-            this._Default = _Default;
+            this.Default = Default;
             this.FieldId = FieldId;
             this.IsDateRange = IsDateRange;
             this.ListDisplayOption = ListDisplayOption;
@@ -238,7 +238,7 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets _Default
         /// </summary>
         [DataMember(Name = "default", EmitDefaultValue = false)]
-        public string _Default { get; set; }
+        public string Default { get; set; }
         /// <summary>
         /// Gets or Sets FieldId
         /// </summary>
@@ -303,7 +303,7 @@ namespace Cherwell.Api.Model.Core
             sb.Append("  CollectionValueField: ").Append(CollectionValueField).Append('\n');
             sb.Append("  ConstraintXml: ").Append(ConstraintXml).Append('\n');
             sb.Append("  Contents: ").Append(Contents).Append('\n');
-            sb.Append("  _Default: ").Append(_Default).Append('\n');
+            sb.Append("  _Default: ").Append(Default).Append('\n');
             sb.Append("  FieldId: ").Append(FieldId).Append('\n');
             sb.Append("  IsDateRange: ").Append(IsDateRange).Append('\n');
             sb.Append("  ListDisplayOption: ").Append(ListDisplayOption).Append('\n');
@@ -334,7 +334,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as CorePrompt);
@@ -345,7 +345,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CorePrompt to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CorePrompt other)
+        public bool Equals(CorePrompt? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -360,37 +360,37 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.BusObId == other.BusObId ||
                     this.BusObId != null &&
-                    this.BusObId.Equals(other.BusObId)
+                    this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.CollectionStoreEntireRow == other.CollectionStoreEntireRow ||
                     this.CollectionStoreEntireRow != null &&
-                    this.CollectionStoreEntireRow.Equals(other.CollectionStoreEntireRow)
+                    this.CollectionStoreEntireRow.Equals(other.CollectionStoreEntireRow, StringComparison.Ordinal)
                 ) &&
                 (
                     this.CollectionValueField == other.CollectionValueField ||
                     this.CollectionValueField != null &&
-                    this.CollectionValueField.Equals(other.CollectionValueField)
+                    this.CollectionValueField.Equals(other.CollectionValueField, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ConstraintXml == other.ConstraintXml ||
                     this.ConstraintXml != null &&
-                    this.ConstraintXml.Equals(other.ConstraintXml)
+                    this.ConstraintXml.Equals(other.ConstraintXml, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Contents == other.Contents ||
                     this.Contents != null &&
-                    this.Contents.Equals(other.Contents)
+                    this.Contents.Equals(other.Contents, StringComparison.Ordinal)
                 ) &&
                 (
-                    this._Default == other._Default ||
-                    this._Default != null &&
-                    this._Default.Equals(other._Default)
+                    this.Default == other.Default ||
+                    this.Default != null &&
+                    this.Default.Equals(other.Default, StringComparison.Ordinal)
                 ) &&
                 (
                     this.FieldId == other.FieldId ||
                     this.FieldId != null &&
-                    this.FieldId.Equals(other.FieldId)
+                    this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.IsDateRange == other.IsDateRange ||
@@ -405,7 +405,7 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.ListReturnFieldId == other.ListReturnFieldId ||
                     this.ListReturnFieldId != null &&
-                    this.ListReturnFieldId.Equals(other.ListReturnFieldId)
+                    this.ListReturnFieldId.Equals(other.ListReturnFieldId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.MultiLine == other.MultiLine ||
@@ -415,7 +415,7 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.PromptId == other.PromptId ||
                     this.PromptId != null &&
-                    this.PromptId.Equals(other.PromptId)
+                    this.PromptId.Equals(other.PromptId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.PromptType == other.PromptType ||
@@ -425,7 +425,7 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.PromptTypeName == other.PromptTypeName ||
                     this.PromptTypeName != null &&
-                    this.PromptTypeName.Equals(other.PromptTypeName)
+                    this.PromptTypeName.Equals(other.PromptTypeName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Required == other.Required ||
@@ -435,7 +435,7 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.Text == other.Text ||
                     this.Text != null &&
-                    this.Text.Equals(other.Text)
+                    this.Text.Equals(other.Text, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Value == other.Value ||
@@ -472,8 +472,8 @@ namespace Cherwell.Api.Model.Core
                     hash = hash * 59 + this.ConstraintXml.GetHashCode();
                 if (this.Contents != null)
                     hash = hash * 59 + this.Contents.GetHashCode();
-                if (this._Default != null)
-                    hash = hash * 59 + this._Default.GetHashCode();
+                if (this.Default != null)
+                    hash = hash * 59 + this.Default.GetHashCode();
                 if (this.FieldId != null)
                     hash = hash * 59 + this.FieldId.GetHashCode();
                 if (this.IsDateRange != null)

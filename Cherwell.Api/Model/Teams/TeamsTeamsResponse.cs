@@ -84,7 +84,7 @@ namespace Cherwell.Api.Model.Teams
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as TeamsTeamsResponse);
@@ -95,7 +95,7 @@ namespace Cherwell.Api.Model.Teams
         /// </summary>
         /// <param name="other">Instance of TeamsTeamsResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsTeamsResponse other)
+        public bool Equals(TeamsTeamsResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -105,12 +105,12 @@ namespace Cherwell.Api.Model.Teams
                 (
                     this.Error == other.Error ||
                     this.Error != null &&
-                    this.Error.Equals(other.Error)
+                    this.Error.Equals(other.Error, StringComparison.Ordinal)
                 ) && 
                 (
                     this.ErrorCode == other.ErrorCode ||
                     this.ErrorCode != null &&
-                    this.ErrorCode.Equals(other.ErrorCode)
+                    this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
                 ) && 
                 (
                     this.HasError == other.HasError ||

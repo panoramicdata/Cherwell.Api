@@ -23,12 +23,12 @@ namespace Cherwell.Api.Model.Searches
         /// Initializes a new instance of the <see cref="SearchesFilterInfo" /> class.
         /// </summary>
         /// <param name="FieldId">FieldId.</param>
-        /// <param name="_Operator">_Operator.</param>
+        /// <param name="Operator">_Operator.</param>
         /// <param name="Value">Value.</param>
-        public SearchesFilterInfo(string FieldId = default(string), string _Operator = default(string), string Value = default(string))
+        public SearchesFilterInfo(string FieldId = default(string), string Operator = default(string), string Value = default(string))
         {
             this.FieldId = FieldId;
-            this._Operator = _Operator;
+            this.Operator = Operator;
             this.Value = Value;
         }
 
@@ -41,7 +41,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets _Operator
         /// </summary>
         [DataMember(Name = "operator", EmitDefaultValue = false)]
-        public string _Operator { get; set; }
+        public string Operator { get; set; }
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
@@ -56,7 +56,7 @@ namespace Cherwell.Api.Model.Searches
             var sb = new StringBuilder();
             sb.Append("class SearchesFilterInfo {\n");
             sb.Append("  FieldId: ").Append(FieldId).Append('\n');
-            sb.Append("  _Operator: ").Append(_Operator).Append('\n');
+            sb.Append("  _Operator: ").Append(Operator).Append('\n');
             sb.Append("  Value: ").Append(Value).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
@@ -76,7 +76,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as SearchesFilterInfo);
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesFilterInfo to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesFilterInfo other)
+        public bool Equals(SearchesFilterInfo? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -97,17 +97,17 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.FieldId == other.FieldId ||
                     this.FieldId != null &&
-                    this.FieldId.Equals(other.FieldId)
+                    this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
                 ) &&
                 (
-                    this._Operator == other._Operator ||
-                    this._Operator != null &&
-                    this._Operator.Equals(other._Operator)
+                    this.Operator == other.Operator ||
+                    this.Operator != null &&
+                    this.Operator.Equals(other.Operator, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Value == other.Value ||
                     this.Value != null &&
-                    this.Value.Equals(other.Value)
+                    this.Value.Equals(other.Value, StringComparison.Ordinal)
                 );
         }
 
@@ -124,8 +124,8 @@ namespace Cherwell.Api.Model.Searches
                 // Suitable nullity checks etc, of course :)
                 if (this.FieldId != null)
                     hash = hash * 59 + this.FieldId.GetHashCode();
-                if (this._Operator != null)
-                    hash = hash * 59 + this._Operator.GetHashCode();
+                if (this.Operator != null)
+                    hash = hash * 59 + this.Operator.GetHashCode();
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
                 return hash;

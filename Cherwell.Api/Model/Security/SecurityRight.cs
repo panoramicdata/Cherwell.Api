@@ -180,7 +180,7 @@ namespace Cherwell.Api.Model.Security
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as SecurityRight);
@@ -191,7 +191,7 @@ namespace Cherwell.Api.Model.Security
         /// </summary>
         /// <param name="other">Instance of SecurityRight to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecurityRight other)
+        public bool Equals(SecurityRight? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -211,17 +211,17 @@ namespace Cherwell.Api.Model.Security
                 (
                     this.CategoryDescription == other.CategoryDescription ||
                     this.CategoryDescription != null &&
-                    this.CategoryDescription.Equals(other.CategoryDescription)
+                    this.CategoryDescription.Equals(other.CategoryDescription, StringComparison.Ordinal)
                 ) && 
                 (
                     this.CategoryId == other.CategoryId ||
                     this.CategoryId != null &&
-                    this.CategoryId.Equals(other.CategoryId)
+                    this.CategoryId.Equals(other.CategoryId, StringComparison.Ordinal)
                 ) && 
                 (
                     this.CategoryName == other.CategoryName ||
                     this.CategoryName != null &&
-                    this.CategoryName.Equals(other.CategoryName)
+                    this.CategoryName.Equals(other.CategoryName, StringComparison.Ordinal)
                 ) && 
                 (
                     this.Delete == other.Delete ||

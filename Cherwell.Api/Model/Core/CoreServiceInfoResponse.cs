@@ -100,7 +100,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as CoreServiceInfoResponse);
@@ -111,7 +111,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreServiceInfoResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreServiceInfoResponse other)
+        public bool Equals(CoreServiceInfoResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -121,17 +121,17 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.ApiVersion == other.ApiVersion ||
                     this.ApiVersion != null &&
-                    this.ApiVersion.Equals(other.ApiVersion)
+                    this.ApiVersion.Equals(other.ApiVersion, StringComparison.Ordinal)
                 ) &&
                 (
                     this.CsmCulture == other.CsmCulture ||
                     this.CsmCulture != null &&
-                    this.CsmCulture.Equals(other.CsmCulture)
+                    this.CsmCulture.Equals(other.CsmCulture, StringComparison.Ordinal)
                 ) &&
                 (
                     this.CsmVersion == other.CsmVersion ||
                     this.CsmVersion != null &&
-                    this.CsmVersion.Equals(other.CsmVersion)
+                    this.CsmVersion.Equals(other.CsmVersion, StringComparison.Ordinal)
                 ) &&
                 (
                     this.SystemDateTime == other.SystemDateTime ||
@@ -146,7 +146,7 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.SystemUtcOffset == other.SystemUtcOffset ||
                     this.SystemUtcOffset != null &&
-                    this.SystemUtcOffset.Equals(other.SystemUtcOffset)
+                    this.SystemUtcOffset.Equals(other.SystemUtcOffset, StringComparison.Ordinal)
                 );
         }
 

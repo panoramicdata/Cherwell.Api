@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Teams
         /// Gets or Sets TeamType
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TeamTypeEnum
+        public enum EnumTeamType
         {
             
             /// <summary>
@@ -43,7 +43,7 @@ namespace Cherwell.Api.Model.Teams
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum HttpStatusCodeEnum
+        public enum EnumHttpStatusCode
         {
             
             /// <summary>
@@ -333,12 +333,12 @@ namespace Cherwell.Api.Model.Teams
         /// Gets or Sets TeamType
         /// </summary>
         [DataMember(Name="teamType", EmitDefaultValue=false)]
-        public TeamTypeEnum? TeamType { get; set; }
+        public EnumTeamType? TeamType { get; set; }
         /// <summary>
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+        public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="TeamsTeamResponse" /> class.
         /// </summary>
@@ -353,7 +353,7 @@ namespace Cherwell.Api.Model.Teams
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TeamsTeamResponse(string Description = default(string), string EmailAlias = default(string), List<BusinessObjectFieldTemplateItem> Fields = default(List<BusinessObjectFieldTemplateItem>), string Image = default(string), string Name = default(string), string TeamId = default(string), TeamTypeEnum? TeamType = default(TeamTypeEnum?), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public TeamsTeamResponse(string Description = default(string), string EmailAlias = default(string), List<BusinessObjectFieldTemplateItem> Fields = default(List<BusinessObjectFieldTemplateItem>), string Image = default(string), string Name = default(string), string TeamId = default(string), EnumTeamType? TeamType = default(EnumTeamType?), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Description = Description;
             this.EmailAlias = EmailAlias;
@@ -450,7 +450,7 @@ namespace Cherwell.Api.Model.Teams
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as TeamsTeamResponse);
@@ -461,7 +461,7 @@ namespace Cherwell.Api.Model.Teams
         /// </summary>
         /// <param name="other">Instance of TeamsTeamResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsTeamResponse other)
+        public bool Equals(TeamsTeamResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -471,12 +471,12 @@ namespace Cherwell.Api.Model.Teams
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
-                    this.Description.Equals(other.Description)
+                    this.Description.Equals(other.Description, StringComparison.Ordinal)
                 ) && 
                 (
                     this.EmailAlias == other.EmailAlias ||
                     this.EmailAlias != null &&
-                    this.EmailAlias.Equals(other.EmailAlias)
+                    this.EmailAlias.Equals(other.EmailAlias, StringComparison.Ordinal)
                 ) && 
                 (
                     this.Fields == other.Fields ||
@@ -486,17 +486,17 @@ namespace Cherwell.Api.Model.Teams
                 (
                     this.Image == other.Image ||
                     this.Image != null &&
-                    this.Image.Equals(other.Image)
+                    this.Image.Equals(other.Image, StringComparison.Ordinal)
                 ) && 
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name.Equals(other.Name, StringComparison.Ordinal)
                 ) && 
                 (
                     this.TeamId == other.TeamId ||
                     this.TeamId != null &&
-                    this.TeamId.Equals(other.TeamId)
+                    this.TeamId.Equals(other.TeamId, StringComparison.Ordinal)
                 ) && 
                 (
                     this.TeamType == other.TeamType ||
@@ -506,12 +506,12 @@ namespace Cherwell.Api.Model.Teams
                 (
                     this.ErrorCode == other.ErrorCode ||
                     this.ErrorCode != null &&
-                    this.ErrorCode.Equals(other.ErrorCode)
+                    this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
                 ) && 
                 (
                     this.ErrorMessage == other.ErrorMessage ||
                     this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(other.ErrorMessage)
+                    this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
                 ) && 
                 (
                     this.HasError == other.HasError ||

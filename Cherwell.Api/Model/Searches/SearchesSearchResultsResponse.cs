@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum HttpStatusCodeEnum
+        public enum EnumHttpStatusCode
         {
 
             /// <summary>
@@ -313,7 +313,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+        public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchesSearchResultsResponse" /> class.
         /// </summary>
@@ -329,7 +329,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SearchesSearchResultsResponse(List<BusinessObjectReadResponse> BusinessObjects = default(List<BusinessObjectReadResponse>), bool? HasPrompts = default(bool?), List<CoreLink> Links = default(List<CoreLink>), List<CorePrompt> Prompts = default(List<CorePrompt>), List<SearchesField> SearchResultsFields = default(List<SearchesField>), SearchesSimpleResultsList SimpleResults = default(SearchesSimpleResultsList), long? TotalRows = default(long?), bool? HasMoreRecords = default(bool?), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public SearchesSearchResultsResponse(List<BusinessObjectReadResponse> BusinessObjects = default(List<BusinessObjectReadResponse>), bool? HasPrompts = default(bool?), List<CoreLink> Links = default(List<CoreLink>), List<CorePrompt> Prompts = default(List<CorePrompt>), List<SearchesField> SearchResultsFields = default(List<SearchesField>), SearchesSimpleResultsList SimpleResults = default(SearchesSimpleResultsList), long? TotalRows = default(long?), bool? HasMoreRecords = default(bool?), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.BusinessObjects = BusinessObjects;
             this.HasPrompts = HasPrompts;
@@ -438,7 +438,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as SearchesSearchResultsResponse);
@@ -449,7 +449,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesSearchResultsResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesSearchResultsResponse other)
+        public bool Equals(SearchesSearchResultsResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

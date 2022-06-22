@@ -188,7 +188,7 @@ namespace Cherwell.Api.Model.Users
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return Equals(obj as UsersUserSaveV2Request);
@@ -199,7 +199,7 @@ namespace Cherwell.Api.Model.Users
         /// </summary>
         /// <param name="other">Instance of UsersUserSaveV2Request to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUserSaveV2Request other)
+        public bool Equals(UsersUserSaveV2Request? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -219,22 +219,22 @@ namespace Cherwell.Api.Model.Users
                 (
                     BusObId == other.BusObId ||
                     BusObId != null &&
-                    BusObId.Equals(other.BusObId)
+                    BusObId.Equals(other.BusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     BusObPublicId == other.BusObPublicId ||
                     BusObPublicId != null &&
-                    BusObPublicId.Equals(other.BusObPublicId)
+                    BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
                 ) &&
                 (
                     BusObRecId == other.BusObRecId ||
                     BusObRecId != null &&
-                    BusObRecId.Equals(other.BusObRecId)
+                    BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
                 ) &&
                 (
                     DisplayName == other.DisplayName ||
                     DisplayName != null &&
-                    DisplayName.Equals(other.DisplayName)
+                    DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
                 ) &&
                 (
                     LdapRequired == other.LdapRequired ||
@@ -244,7 +244,7 @@ namespace Cherwell.Api.Model.Users
                 (
                     LoginId == other.LoginId ||
                     LoginId != null &&
-                    LoginId.Equals(other.LoginId)
+                    LoginId.Equals(other.LoginId, StringComparison.Ordinal)
                 ) &&
                 (
                     NextPasswordResetDate == other.NextPasswordResetDate ||
@@ -254,7 +254,7 @@ namespace Cherwell.Api.Model.Users
                 (
                     Password == other.Password ||
                     Password != null &&
-                    Password.Equals(other.Password)
+                    Password.Equals(other.Password, StringComparison.Ordinal)
                 ) &&
                 (
                     PasswordNeverExpires == other.PasswordNeverExpires ||
@@ -264,12 +264,12 @@ namespace Cherwell.Api.Model.Users
                 (
                     SecurityGroupId == other.SecurityGroupId ||
                     SecurityGroupId != null &&
-                    SecurityGroupId.Equals(other.SecurityGroupId)
+                    SecurityGroupId.Equals(other.SecurityGroupId, StringComparison.Ordinal)
                 ) &&
                 (
                     SpecificCulture == other.SpecificCulture ||
                     SpecificCulture != null &&
-                    SpecificCulture.Equals(other.SpecificCulture)
+                    SpecificCulture.Equals(other.SpecificCulture, StringComparison.Ordinal)
                 ) &&
                 (
                     UserCannotChangePassword == other.UserCannotChangePassword ||
@@ -289,7 +289,7 @@ namespace Cherwell.Api.Model.Users
                 (
                     WindowsUserId == other.WindowsUserId ||
                     WindowsUserId != null &&
-                    WindowsUserId.Equals(other.WindowsUserId)
+                    WindowsUserId.Equals(other.WindowsUserId, StringComparison.Ordinal)
                 );
         }
 

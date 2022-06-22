@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.Approval
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [Newtonsoft.Json.JsonConverter(typeof(StringEnumConverter))]
-        public enum HttpStatusCodeEnum
+        public enum EnumHttpStatusCode
         {
 
             /// <summary>
@@ -307,7 +307,7 @@ namespace Cherwell.Api.Model.Approval
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+        public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ApprovalApprovalReadResponse" /> class.
         /// </summary>
@@ -321,7 +321,7 @@ namespace Cherwell.Api.Model.Approval
             default, List<CoreLink> Links =
             default, string ErrorCode =
             default, string ErrorMessage =
-            default, bool? HasError = default, HttpStatusCodeEnum? HttpStatusCode = default)
+            default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
         {
             this.Properties = Properties;
             this.Links = Links;
@@ -419,12 +419,12 @@ namespace Cherwell.Api.Model.Approval
                 (
                     ErrorCode == other.ErrorCode ||
                     ErrorCode != null &&
-                    ErrorCode.Equals(other.ErrorCode)
+                    ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
                 ) &&
                 (
                     ErrorMessage == other.ErrorMessage ||
                     ErrorMessage != null &&
-                    ErrorMessage.Equals(other.ErrorMessage)
+                    ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
                 ) &&
                 (
                     HasError == other.HasError ||

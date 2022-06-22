@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets StoredValueType
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StoredValueTypeEnum
+        public enum EnumStoredValueType
         {
 
             /// <summary>
@@ -85,7 +85,7 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets StoredValueType
         /// </summary>
         [DataMember(Name = "storedValueType", EmitDefaultValue = false)]
-        public StoredValueTypeEnum? StoredValueType { get; set; }
+        public EnumStoredValueType? StoredValueType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CoreSaveStoredValueRequest" /> class.
         /// </summary>
@@ -97,7 +97,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="StandInKey">StandInKey.</param>
         /// <param name="StoredValueType">StoredValueType.</param>
         /// <param name="Value">Value.</param>
-        public CoreSaveStoredValueRequest(string Description = default(string), string Folder = default(string), string Name = default(string), string Scope = default(string), string ScopeOwner = default(string), string StandInKey = default(string), StoredValueTypeEnum? StoredValueType = default(StoredValueTypeEnum?), string Value = default(string))
+        public CoreSaveStoredValueRequest(string Description = default(string), string Folder = default(string), string Name = default(string), string Scope = default(string), string ScopeOwner = default(string), string StandInKey = default(string), EnumStoredValueType? StoredValueType = default(EnumStoredValueType?), string Value = default(string))
         {
             this.Description = Description;
             this.Folder = Folder;
@@ -178,7 +178,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as CoreSaveStoredValueRequest);
@@ -189,7 +189,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreSaveStoredValueRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreSaveStoredValueRequest other)
+        public bool Equals(CoreSaveStoredValueRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -199,32 +199,32 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
-                    this.Description.Equals(other.Description)
+                    this.Description.Equals(other.Description, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Folder == other.Folder ||
                     this.Folder != null &&
-                    this.Folder.Equals(other.Folder)
+                    this.Folder.Equals(other.Folder, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name.Equals(other.Name, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Scope == other.Scope ||
                     this.Scope != null &&
-                    this.Scope.Equals(other.Scope)
+                    this.Scope.Equals(other.Scope, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ScopeOwner == other.ScopeOwner ||
                     this.ScopeOwner != null &&
-                    this.ScopeOwner.Equals(other.ScopeOwner)
+                    this.ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
                 ) &&
                 (
                     this.StandInKey == other.StandInKey ||
                     this.StandInKey != null &&
-                    this.StandInKey.Equals(other.StandInKey)
+                    this.StandInKey.Equals(other.StandInKey, StringComparison.Ordinal)
                 ) &&
                 (
                     this.StoredValueType == other.StoredValueType ||
@@ -234,7 +234,7 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.Value == other.Value ||
                     this.Value != null &&
-                    this.Value.Equals(other.Value)
+                    this.Value.Equals(other.Value, StringComparison.Ordinal)
                 );
         }
 

@@ -76,7 +76,7 @@ namespace Cherwell.Api.Model.Lifecycle
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as LifecycleGetStagesResponseStages);
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.Lifecycle
         /// </summary>
         /// <param name="other">Instance of LifecycleGetStagesResponseStages to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(LifecycleGetStagesResponseStages other)
+        public bool Equals(LifecycleGetStagesResponseStages? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -97,7 +97,7 @@ namespace Cherwell.Api.Model.Lifecycle
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.Id.Equals(other.Id, StringComparison.Ordinal)
                 ) &&
                 (
                     this.IsFinal == other.IsFinal ||
@@ -107,7 +107,7 @@ namespace Cherwell.Api.Model.Lifecycle
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name.Equals(other.Name, StringComparison.Ordinal)
                 );
         }
 

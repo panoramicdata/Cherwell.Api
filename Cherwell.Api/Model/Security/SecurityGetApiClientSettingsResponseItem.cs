@@ -68,7 +68,7 @@ namespace Cherwell.Api.Model.Security
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as SecurityGetApiClientSettingsResponseItem);
@@ -79,7 +79,7 @@ namespace Cherwell.Api.Model.Security
         /// </summary>
         /// <param name="other">Instance of SecurityGetApiClientSettingsResponseItem to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecurityGetApiClientSettingsResponseItem other)
+        public bool Equals(SecurityGetApiClientSettingsResponseItem? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -89,12 +89,12 @@ namespace Cherwell.Api.Model.Security
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name.Equals(other.Name, StringComparison.Ordinal)
                 ) &&
                 (
                     this.StandInKey == other.StandInKey ||
                     this.StandInKey != null &&
-                    this.StandInKey.Equals(other.StandInKey)
+                    this.StandInKey.Equals(other.StandInKey, StringComparison.Ordinal)
                 );
         }
 

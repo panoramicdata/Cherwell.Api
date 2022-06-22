@@ -92,7 +92,7 @@ namespace Cherwell.Api.Model.Users
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return Equals(obj as UsersUserSaveResponse);
@@ -103,7 +103,7 @@ namespace Cherwell.Api.Model.Users
         /// </summary>
         /// <param name="other">Instance of UsersUserSaveResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUserSaveResponse other)
+        public bool Equals(UsersUserSaveResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -113,22 +113,22 @@ namespace Cherwell.Api.Model.Users
                 (
                     BusObPublicId == other.BusObPublicId ||
                     BusObPublicId != null &&
-                    BusObPublicId.Equals(other.BusObPublicId)
+                    BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
                 ) &&
                 (
                     BusObRecId == other.BusObRecId ||
                     BusObRecId != null &&
-                    BusObRecId.Equals(other.BusObRecId)
+                    BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
                 ) &&
                 (
                     Error == other.Error ||
                     Error != null &&
-                    Error.Equals(other.Error)
+                    Error.Equals(other.Error, StringComparison.Ordinal)
                 ) &&
                 (
                     ErrorCode == other.ErrorCode ||
                     ErrorCode != null &&
-                    ErrorCode.Equals(other.ErrorCode)
+                    ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
                 ) &&
                 (
                     HasError == other.HasError ||

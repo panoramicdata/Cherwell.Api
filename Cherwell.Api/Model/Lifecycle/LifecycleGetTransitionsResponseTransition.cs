@@ -84,7 +84,7 @@ namespace Cherwell.Api.Model.Lifecycle
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as LifecycleGetTransitionsResponseTransition);
@@ -95,7 +95,7 @@ namespace Cherwell.Api.Model.Lifecycle
         /// </summary>
         /// <param name="other">Instance of LifecycleGetTransitionsResponseTransition to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(LifecycleGetTransitionsResponseTransition other)
+        public bool Equals(LifecycleGetTransitionsResponseTransition? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -105,22 +105,22 @@ namespace Cherwell.Api.Model.Lifecycle
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.Id.Equals(other.Id, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name.Equals(other.Name, StringComparison.Ordinal)
                 ) &&
                 (
                     this.FromStatusId == other.FromStatusId ||
                     this.FromStatusId != null &&
-                    this.FromStatusId.Equals(other.FromStatusId)
+                    this.FromStatusId.Equals(other.FromStatusId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ToStatusId == other.ToStatusId ||
                     this.ToStatusId != null &&
-                    this.ToStatusId.Equals(other.ToStatusId)
+                    this.ToStatusId.Equals(other.ToStatusId, StringComparison.Ordinal)
                 );
         }
 

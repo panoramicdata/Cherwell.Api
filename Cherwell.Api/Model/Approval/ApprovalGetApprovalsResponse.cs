@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Approval
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum HttpStatusCodeEnum
+        public enum EnumHttpStatusCode
         {
 
             /// <summary>
@@ -313,7 +313,7 @@ namespace Cherwell.Api.Model.Approval
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+        public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ApprovalGetApprovalsResponse" /> class.
         /// </summary>
@@ -323,7 +323,7 @@ namespace Cherwell.Api.Model.Approval
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public ApprovalGetApprovalsResponse(int? TotalRecords = default, List<ApprovalApprovalReadResponse> Approvals = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, HttpStatusCodeEnum? HttpStatusCode = default)
+        public ApprovalGetApprovalsResponse(int? TotalRecords = default, List<ApprovalApprovalReadResponse> Approvals = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
         {
             this.TotalRecords = TotalRecords;
             this.Approvals = Approvals;
@@ -421,12 +421,12 @@ namespace Cherwell.Api.Model.Approval
                 (
                     ErrorCode == other.ErrorCode ||
                     ErrorCode != null &&
-                    ErrorCode.Equals(other.ErrorCode)
+                    ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
                 ) &&
                 (
                     ErrorMessage == other.ErrorMessage ||
                     ErrorMessage != null &&
-                    ErrorMessage.Equals(other.ErrorMessage)
+                    ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
                 ) &&
                 (
                     HasError == other.HasError ||

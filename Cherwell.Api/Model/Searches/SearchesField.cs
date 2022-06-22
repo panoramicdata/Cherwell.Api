@@ -236,7 +236,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as SearchesField);
@@ -247,7 +247,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesField to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesField other)
+        public bool Equals(SearchesField? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -257,17 +257,17 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.Caption == other.Caption ||
                     this.Caption != null &&
-                    this.Caption.Equals(other.Caption)
+                    this.Caption.Equals(other.Caption, StringComparison.Ordinal)
                 ) &&
                 (
                     this.CurrencyCulture == other.CurrencyCulture ||
                     this.CurrencyCulture != null &&
-                    this.CurrencyCulture.Equals(other.CurrencyCulture)
+                    this.CurrencyCulture.Equals(other.CurrencyCulture, StringComparison.Ordinal)
                 ) &&
                 (
                     this.CurrencySymbol == other.CurrencySymbol ||
                     this.CurrencySymbol != null &&
-                    this.CurrencySymbol.Equals(other.CurrencySymbol)
+                    this.CurrencySymbol.Equals(other.CurrencySymbol, StringComparison.Ordinal)
                 ) &&
                 (
                     this.DecimalDigits == other.DecimalDigits ||
@@ -282,17 +282,17 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.DisplayName == other.DisplayName ||
                     this.DisplayName != null &&
-                    this.DisplayName.Equals(other.DisplayName)
+                    this.DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.FieldName == other.FieldName ||
                     this.FieldName != null &&
-                    this.FieldName.Equals(other.FieldName)
+                    this.FieldName.Equals(other.FieldName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.FullFieldId == other.FullFieldId ||
                     this.FullFieldId != null &&
-                    this.FullFieldId.Equals(other.FullFieldId)
+                    this.FullFieldId.Equals(other.FullFieldId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.HasDefaultSortField == other.HasDefaultSortField ||
@@ -302,7 +302,7 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.FieldId == other.FieldId ||
                     this.FieldId != null &&
-                    this.FieldId.Equals(other.FieldId)
+                    this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.IsBinary == other.IsBinary ||
@@ -357,12 +357,12 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.SortOrder == other.SortOrder ||
                     this.SortOrder != null &&
-                    this.SortOrder.Equals(other.SortOrder)
+                    this.SortOrder.Equals(other.SortOrder, StringComparison.Ordinal)
                 ) &&
                 (
                     this.StorageName == other.StorageName ||
                     this.StorageName != null &&
-                    this.StorageName.Equals(other.StorageName)
+                    this.StorageName.Equals(other.StorageName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.WholeDigits == other.WholeDigits ||

@@ -188,7 +188,7 @@ namespace Cherwell.Api.Model.Users
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return Equals(obj as UsersUser);
@@ -199,7 +199,7 @@ namespace Cherwell.Api.Model.Users
         /// </summary>
         /// <param name="other">Instance of UsersUser to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUser other)
+        public bool Equals(UsersUser? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -219,17 +219,17 @@ namespace Cherwell.Api.Model.Users
                 (
                     DisplayName == other.DisplayName ||
                     DisplayName != null &&
-                    DisplayName.Equals(other.DisplayName)
+                    DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
                 ) &&
                 (
                     Error == other.Error ||
                     Error != null &&
-                    Error.Equals(other.Error)
+                    Error.Equals(other.Error, StringComparison.Ordinal)
                 ) &&
                 (
                     ErrorCode == other.ErrorCode ||
                     ErrorCode != null &&
-                    ErrorCode.Equals(other.ErrorCode)
+                    ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
                 ) &&
                 (
                     Fields == other.Fields ||
@@ -264,22 +264,22 @@ namespace Cherwell.Api.Model.Users
                 (
                     PublicId == other.PublicId ||
                     PublicId != null &&
-                    PublicId.Equals(other.PublicId)
+                    PublicId.Equals(other.PublicId, StringComparison.Ordinal)
                 ) &&
                 (
                     RecordId == other.RecordId ||
                     RecordId != null &&
-                    RecordId.Equals(other.RecordId)
+                    RecordId.Equals(other.RecordId, StringComparison.Ordinal)
                 ) &&
                 (
                     SecurityGroupId == other.SecurityGroupId ||
                     SecurityGroupId != null &&
-                    SecurityGroupId.Equals(other.SecurityGroupId)
+                    SecurityGroupId.Equals(other.SecurityGroupId, StringComparison.Ordinal)
                 ) &&
                 (
                     ShortDisplayName == other.ShortDisplayName ||
                     ShortDisplayName != null &&
-                    ShortDisplayName.Equals(other.ShortDisplayName)
+                    ShortDisplayName.Equals(other.ShortDisplayName, StringComparison.Ordinal)
                 ) &&
                 (
                     UserCannotChangePassword == other.UserCannotChangePassword ||

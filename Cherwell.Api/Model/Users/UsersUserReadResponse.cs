@@ -84,7 +84,7 @@ namespace Cherwell.Api.Model.Users
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return Equals(obj as UsersUserReadResponse);
@@ -95,7 +95,7 @@ namespace Cherwell.Api.Model.Users
         /// </summary>
         /// <param name="other">Instance of UsersUserReadResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUserReadResponse other)
+        public bool Equals(UsersUserReadResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -105,12 +105,12 @@ namespace Cherwell.Api.Model.Users
                 (
                     Error == other.Error ||
                     Error != null &&
-                    Error.Equals(other.Error)
+                    Error.Equals(other.Error, StringComparison.Ordinal)
                 ) &&
                 (
                     ErrorCode == other.ErrorCode ||
                     ErrorCode != null &&
-                    ErrorCode.Equals(other.ErrorCode)
+                    ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
                 ) &&
                 (
                     HasError == other.HasError ||

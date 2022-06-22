@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Users
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum HttpStatusCodeEnum
+        public enum EnumHttpStatusCode
         {
 
             /// <summary>
@@ -313,7 +313,7 @@ namespace Cherwell.Api.Model.Users
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+        public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="UsersUserBatchReadResponse" /> class.
         /// </summary>
@@ -322,7 +322,7 @@ namespace Cherwell.Api.Model.Users
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public UsersUserBatchReadResponse(List<UsersUserReadV2Response> Responses = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, HttpStatusCodeEnum? HttpStatusCode = default)
+        public UsersUserBatchReadResponse(List<UsersUserReadV2Response> Responses = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
         {
             this.Responses = Responses;
             this.ErrorCode = ErrorCode;
@@ -382,7 +382,7 @@ namespace Cherwell.Api.Model.Users
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return Equals(obj as UsersUserBatchReadResponse);
@@ -393,7 +393,7 @@ namespace Cherwell.Api.Model.Users
         /// </summary>
         /// <param name="other">Instance of UsersUserBatchReadResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUserBatchReadResponse other)
+        public bool Equals(UsersUserBatchReadResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -408,12 +408,12 @@ namespace Cherwell.Api.Model.Users
                 (
                     ErrorCode == other.ErrorCode ||
                     ErrorCode != null &&
-                    ErrorCode.Equals(other.ErrorCode)
+                    ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
                 ) &&
                 (
                     ErrorMessage == other.ErrorMessage ||
                     ErrorMessage != null &&
-                    ErrorMessage.Equals(other.ErrorMessage)
+                    ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
                 ) &&
                 (
                     HasError == other.HasError ||

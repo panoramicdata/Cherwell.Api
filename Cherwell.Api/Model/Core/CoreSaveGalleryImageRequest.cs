@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets ImageType
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum ImageTypeEnum
+        public enum EnumImageType
         {
 
             /// <summary>
@@ -49,7 +49,7 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets ImageType
         /// </summary>
         [DataMember(Name = "imageType", EmitDefaultValue = false)]
-        public ImageTypeEnum? ImageType { get; set; }
+        public EnumImageType? ImageType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CoreSaveGalleryImageRequest" /> class.
         /// </summary>
@@ -61,7 +61,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="Scope">Scope.</param>
         /// <param name="ScopeOwner">ScopeOwner.</param>
         /// <param name="StandInKey">StandInKey.</param>
-        public CoreSaveGalleryImageRequest(string Base64EncodedImageData = default(string), string Description = default(string), string Folder = default(string), ImageTypeEnum? ImageType = default(ImageTypeEnum?), string Name = default(string), string Scope = default(string), string ScopeOwner = default(string), string StandInKey = default(string))
+        public CoreSaveGalleryImageRequest(string Base64EncodedImageData = default(string), string Description = default(string), string Folder = default(string), EnumImageType? ImageType = default(EnumImageType?), string Name = default(string), string Scope = default(string), string ScopeOwner = default(string), string StandInKey = default(string))
         {
             this.Base64EncodedImageData = Base64EncodedImageData;
             this.Description = Description;
@@ -142,7 +142,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as CoreSaveGalleryImageRequest);
@@ -153,7 +153,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreSaveGalleryImageRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreSaveGalleryImageRequest other)
+        public bool Equals(CoreSaveGalleryImageRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -163,17 +163,17 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.Base64EncodedImageData == other.Base64EncodedImageData ||
                     this.Base64EncodedImageData != null &&
-                    this.Base64EncodedImageData.Equals(other.Base64EncodedImageData)
+                    this.Base64EncodedImageData.Equals(other.Base64EncodedImageData, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
-                    this.Description.Equals(other.Description)
+                    this.Description.Equals(other.Description, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Folder == other.Folder ||
                     this.Folder != null &&
-                    this.Folder.Equals(other.Folder)
+                    this.Folder.Equals(other.Folder, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ImageType == other.ImageType ||
@@ -183,22 +183,22 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name.Equals(other.Name, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Scope == other.Scope ||
                     this.Scope != null &&
-                    this.Scope.Equals(other.Scope)
+                    this.Scope.Equals(other.Scope, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ScopeOwner == other.ScopeOwner ||
                     this.ScopeOwner != null &&
-                    this.ScopeOwner.Equals(other.ScopeOwner)
+                    this.ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
                 ) &&
                 (
                     this.StandInKey == other.StandInKey ||
                     this.StandInKey != null &&
-                    this.StandInKey.Equals(other.StandInKey)
+                    this.StandInKey.Equals(other.StandInKey, StringComparison.Ordinal)
                 );
         }
 

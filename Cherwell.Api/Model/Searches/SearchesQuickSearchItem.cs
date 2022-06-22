@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets ChangedOption
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum ChangedOptionEnum
+        public enum EnumChangedOption
         {
 
             /// <summary>
@@ -55,7 +55,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets NonFinalStateOption
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum NonFinalStateOptionEnum
+        public enum EnumNonFinalStateOption
         {
 
             /// <summary>
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets SearchAnyWordsOption
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum SearchAnyWordsOptionEnum
+        public enum EnumSearchAnyWordsOption
         {
 
             /// <summary>
@@ -119,7 +119,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets SearchAttachmentsOption
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum SearchAttachmentsOptionEnum
+        public enum EnumSearchAttachmentsOption
         {
 
             /// <summary>
@@ -151,7 +151,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets SearchRelatedOption
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum SearchRelatedOptionEnum
+        public enum EnumSearchRelatedOption
         {
 
             /// <summary>
@@ -183,7 +183,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets SearchTargetType
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum SearchTargetTypeEnum
+        public enum EnumSearchTargetType
         {
 
             /// <summary>
@@ -203,7 +203,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets SortByOption
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum SortByOptionEnum
+        public enum EnumSortByOption
         {
 
             /// <summary>
@@ -235,37 +235,37 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets ChangedOption
         /// </summary>
         [DataMember(Name = "changedOption", EmitDefaultValue = false)]
-        public ChangedOptionEnum? ChangedOption { get; set; }
+        public EnumChangedOption? ChangedOption { get; set; }
         /// <summary>
         /// Gets or Sets NonFinalStateOption
         /// </summary>
         [DataMember(Name = "nonFinalStateOption", EmitDefaultValue = false)]
-        public NonFinalStateOptionEnum? NonFinalStateOption { get; set; }
+        public EnumNonFinalStateOption? NonFinalStateOption { get; set; }
         /// <summary>
         /// Gets or Sets SearchAnyWordsOption
         /// </summary>
         [DataMember(Name = "searchAnyWordsOption", EmitDefaultValue = false)]
-        public SearchAnyWordsOptionEnum? SearchAnyWordsOption { get; set; }
+        public EnumSearchAnyWordsOption? SearchAnyWordsOption { get; set; }
         /// <summary>
         /// Gets or Sets SearchAttachmentsOption
         /// </summary>
         [DataMember(Name = "searchAttachmentsOption", EmitDefaultValue = false)]
-        public SearchAttachmentsOptionEnum? SearchAttachmentsOption { get; set; }
+        public EnumSearchAttachmentsOption? SearchAttachmentsOption { get; set; }
         /// <summary>
         /// Gets or Sets SearchRelatedOption
         /// </summary>
         [DataMember(Name = "searchRelatedOption", EmitDefaultValue = false)]
-        public SearchRelatedOptionEnum? SearchRelatedOption { get; set; }
+        public EnumSearchRelatedOption? SearchRelatedOption { get; set; }
         /// <summary>
         /// Gets or Sets SearchTargetType
         /// </summary>
         [DataMember(Name = "searchTargetType", EmitDefaultValue = false)]
-        public SearchTargetTypeEnum? SearchTargetType { get; set; }
+        public EnumSearchTargetType? SearchTargetType { get; set; }
         /// <summary>
         /// Gets or Sets SortByOption
         /// </summary>
         [DataMember(Name = "sortByOption", EmitDefaultValue = false)]
-        public SortByOptionEnum? SortByOption { get; set; }
+        public EnumSortByOption? SortByOption { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchesQuickSearchItem" /> class.
         /// </summary>
@@ -286,7 +286,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="SortByFields">SortByFields.</param>
         /// <param name="SortByOption">SortByOption.</param>
         /// <param name="WatermarkText">WatermarkText.</param>
-        public SearchesQuickSearchItem(bool? Ascending = default(bool?), List<SearchesChangedLimit> ChangedLimits = default(List<SearchesChangedLimit>), ChangedOptionEnum? ChangedOption = default(ChangedOptionEnum?), string DisplayName = default(string), string GalleryImage = default(string), bool? HasAnyOptions = default(bool?), NonFinalStateOptionEnum? NonFinalStateOption = default(NonFinalStateOptionEnum?), SearchAnyWordsOptionEnum? SearchAnyWordsOption = default(SearchAnyWordsOptionEnum?), SearchAttachmentsOptionEnum? SearchAttachmentsOption = default(SearchAttachmentsOptionEnum?), SearchRelatedOptionEnum? SearchRelatedOption = default(SearchRelatedOptionEnum?), string SearchTargetId = default(string), SearchTargetTypeEnum? SearchTargetType = default(SearchTargetTypeEnum?), SearchesChangedLimit SelectedChangedLimit = default(SearchesChangedLimit), string SelectedSortByFieldId = default(string), Dictionary<string, string> SortByFields = default(Dictionary<string, string>), SortByOptionEnum? SortByOption = default(SortByOptionEnum?), string WatermarkText = default(string))
+        public SearchesQuickSearchItem(bool? Ascending = default(bool?), List<SearchesChangedLimit> ChangedLimits = default(List<SearchesChangedLimit>), EnumChangedOption? ChangedOption = default(EnumChangedOption?), string DisplayName = default(string), string GalleryImage = default(string), bool? HasAnyOptions = default(bool?), EnumNonFinalStateOption? NonFinalStateOption = default(EnumNonFinalStateOption?), EnumSearchAnyWordsOption? SearchAnyWordsOption = default(EnumSearchAnyWordsOption?), EnumSearchAttachmentsOption? SearchAttachmentsOption = default(EnumSearchAttachmentsOption?), EnumSearchRelatedOption? SearchRelatedOption = default(EnumSearchRelatedOption?), string SearchTargetId = default(string), EnumSearchTargetType? SearchTargetType = default(EnumSearchTargetType?), SearchesChangedLimit SelectedChangedLimit = default(SearchesChangedLimit), string SelectedSortByFieldId = default(string), Dictionary<string, string> SortByFields = default(Dictionary<string, string>), EnumSortByOption? SortByOption = default(EnumSortByOption?), string WatermarkText = default(string))
         {
             this.Ascending = Ascending;
             this.ChangedLimits = ChangedLimits;
@@ -400,7 +400,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as SearchesQuickSearchItem);
@@ -411,7 +411,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesQuickSearchItem to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesQuickSearchItem other)
+        public bool Equals(SearchesQuickSearchItem? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -436,12 +436,12 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.DisplayName == other.DisplayName ||
                     this.DisplayName != null &&
-                    this.DisplayName.Equals(other.DisplayName)
+                    this.DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.GalleryImage == other.GalleryImage ||
                     this.GalleryImage != null &&
-                    this.GalleryImage.Equals(other.GalleryImage)
+                    this.GalleryImage.Equals(other.GalleryImage, StringComparison.Ordinal)
                 ) &&
                 (
                     this.HasAnyOptions == other.HasAnyOptions ||
@@ -471,7 +471,7 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.SearchTargetId == other.SearchTargetId ||
                     this.SearchTargetId != null &&
-                    this.SearchTargetId.Equals(other.SearchTargetId)
+                    this.SearchTargetId.Equals(other.SearchTargetId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.SearchTargetType == other.SearchTargetType ||
@@ -486,7 +486,7 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.SelectedSortByFieldId == other.SelectedSortByFieldId ||
                     this.SelectedSortByFieldId != null &&
-                    this.SelectedSortByFieldId.Equals(other.SelectedSortByFieldId)
+                    this.SelectedSortByFieldId.Equals(other.SelectedSortByFieldId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.SortByFields == other.SortByFields ||
@@ -501,7 +501,7 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.WatermarkText == other.WatermarkText ||
                     this.WatermarkText != null &&
-                    this.WatermarkText.Equals(other.WatermarkText)
+                    this.WatermarkText.Equals(other.WatermarkText, StringComparison.Ordinal)
                 );
         }
 

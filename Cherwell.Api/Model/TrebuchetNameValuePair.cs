@@ -116,7 +116,7 @@ namespace Cherwell.Api.Model
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as TrebuchetNameValuePair);
@@ -127,7 +127,7 @@ namespace Cherwell.Api.Model
         /// </summary>
         /// <param name="other">Instance of TrebuchetNameValuePair to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetNameValuePair other)
+        public bool Equals(TrebuchetNameValuePair? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -137,7 +137,7 @@ namespace Cherwell.Api.Model
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name.Equals(other.Name, StringComparison.Ordinal)
                 ) && 
                 (
                     this.ValueObject == other.ValueObject ||
@@ -147,17 +147,17 @@ namespace Cherwell.Api.Model
                 (
                     this.ValueString == other.ValueString ||
                     this.ValueString != null &&
-                    this.ValueString.Equals(other.ValueString)
+                    this.ValueString.Equals(other.ValueString, StringComparison.Ordinal)
                 ) && 
                 (
                     this.Category == other.Category ||
                     this.Category != null &&
-                    this.Category.Equals(other.Category)
+                    this.Category.Equals(other.Category, StringComparison.Ordinal)
                 ) && 
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
-                    this.Description.Equals(other.Description)
+                    this.Description.Equals(other.Description, StringComparison.Ordinal)
                 ) && 
                 (
                     this.DisplayShowsValue == other.DisplayShowsValue ||
@@ -172,7 +172,7 @@ namespace Cherwell.Api.Model
                 (
                     this.DisplayString == other.DisplayString ||
                     this.DisplayString != null &&
-                    this.DisplayString.Equals(other.DisplayString)
+                    this.DisplayString.Equals(other.DisplayString, StringComparison.Ordinal)
                 );
         }
 

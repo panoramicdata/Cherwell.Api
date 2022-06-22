@@ -76,7 +76,7 @@ namespace Cherwell.Api.Model.Queues
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as QueuesAddItemToQueueRequest);
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.Queues
         /// </summary>
         /// <param name="other">Instance of QueuesAddItemToQueueRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(QueuesAddItemToQueueRequest other)
+        public bool Equals(QueuesAddItemToQueueRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -97,17 +97,17 @@ namespace Cherwell.Api.Model.Queues
                 (
                     this.BusObId == other.BusObId ||
                     this.BusObId != null &&
-                    this.BusObId.Equals(other.BusObId)
+                    this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObRecId == other.BusObRecId ||
                     this.BusObRecId != null &&
-                    this.BusObRecId.Equals(other.BusObRecId)
+                    this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.QueueStandInKey == other.QueueStandInKey ||
                     this.QueueStandInKey != null &&
-                    this.QueueStandInKey.Equals(other.QueueStandInKey)
+                    this.QueueStandInKey.Equals(other.QueueStandInKey, StringComparison.Ordinal)
                 );
         }
 

@@ -68,7 +68,7 @@ namespace Cherwell.Api.Model.Security
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as SecurityCloneSecurityGroupRequest);
@@ -79,7 +79,7 @@ namespace Cherwell.Api.Model.Security
         /// </summary>
         /// <param name="other">Instance of SecurityCloneSecurityGroupRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecurityCloneSecurityGroupRequest other)
+        public bool Equals(SecurityCloneSecurityGroupRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -89,12 +89,12 @@ namespace Cherwell.Api.Model.Security
                 (
                     this.SecurityGroupName == other.SecurityGroupName ||
                     this.SecurityGroupName != null &&
-                    this.SecurityGroupName.Equals(other.SecurityGroupName)
+                    this.SecurityGroupName.Equals(other.SecurityGroupName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.SourceSecurityGroupNameOrId == other.SourceSecurityGroupNameOrId ||
                     this.SourceSecurityGroupNameOrId != null &&
-                    this.SourceSecurityGroupNameOrId.Equals(other.SourceSecurityGroupNameOrId)
+                    this.SourceSecurityGroupNameOrId.Equals(other.SourceSecurityGroupNameOrId, StringComparison.Ordinal)
                 );
         }
 

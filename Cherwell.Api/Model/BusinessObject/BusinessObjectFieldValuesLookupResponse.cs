@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum HttpStatusCodeEnum
+        public enum EnumHttpStatusCode
         {
 
             /// <summary>
@@ -313,7 +313,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+        public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="BusinessObjectFieldValuesLookupResponse" /> class.
         /// </summary>
@@ -322,7 +322,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public BusinessObjectFieldValuesLookupResponse(List<string> Values = default(List<string>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public BusinessObjectFieldValuesLookupResponse(List<string> Values = default(List<string>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Values = Values;
             this.ErrorCode = ErrorCode;

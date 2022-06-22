@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum HttpStatusCodeEnum
+        public enum EnumHttpStatusCode
         {
 
             /// <summary>
@@ -313,7 +313,7 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+        public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CoreSaveGalleryImageResponse" /> class.
         /// </summary>
@@ -323,7 +323,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public CoreSaveGalleryImageResponse(string Name = default(string), string StandInKey = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public CoreSaveGalleryImageResponse(string Name = default(string), string StandInKey = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Name = Name;
             this.StandInKey = StandInKey;
@@ -390,7 +390,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as CoreSaveGalleryImageResponse);
@@ -401,7 +401,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreSaveGalleryImageResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreSaveGalleryImageResponse other)
+        public bool Equals(CoreSaveGalleryImageResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -411,22 +411,22 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name.Equals(other.Name, StringComparison.Ordinal)
                 ) &&
                 (
                     this.StandInKey == other.StandInKey ||
                     this.StandInKey != null &&
-                    this.StandInKey.Equals(other.StandInKey)
+                    this.StandInKey.Equals(other.StandInKey, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ErrorCode == other.ErrorCode ||
                     this.ErrorCode != null &&
-                    this.ErrorCode.Equals(other.ErrorCode)
+                    this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ErrorMessage == other.ErrorMessage ||
                     this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(other.ErrorMessage)
+                    this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
                 ) &&
                 (
                     this.HasError == other.HasError ||

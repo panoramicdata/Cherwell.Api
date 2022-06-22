@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets Type
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum
+        public enum EnumType
         {
 
             /// <summary>
@@ -48,7 +48,7 @@ namespace Cherwell.Api.Model.Searches
             /// Enum Integer for "Integer"
             /// </summary>
             [EnumMember(Value = "Integer")]
-            Integer,
+            EnumInteger,
 
             /// <summary>
             /// Enum Datetime for "Datetime"
@@ -79,14 +79,14 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name = "type", EmitDefaultValue = false)]
-        public TypeEnum? Type { get; set; }
+        public EnumType? Type { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchesColumnSchema" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="FieldId">FieldId.</param>
         /// <param name="Type">Type.</param>
-        public SearchesColumnSchema(string Name = default(string), string FieldId = default(string), TypeEnum? Type = default(TypeEnum?))
+        public SearchesColumnSchema(string Name = default(string), string FieldId = default(string), EnumType? Type = default(EnumType?))
         {
             this.Name = Name;
             this.FieldId = FieldId;
@@ -132,7 +132,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as SearchesColumnSchema);
@@ -143,7 +143,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesColumnSchema to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesColumnSchema other)
+        public bool Equals(SearchesColumnSchema? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -153,12 +153,12 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name.Equals(other.Name, StringComparison.Ordinal)
                 ) &&
                 (
                     this.FieldId == other.FieldId ||
                     this.FieldId != null &&
-                    this.FieldId.Equals(other.FieldId)
+                    this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Type == other.Type ||

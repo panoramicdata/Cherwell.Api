@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Queues
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum HttpStatusCodeEnum
+        public enum EnumHttpStatusCode
         {
 
             /// <summary>
@@ -313,7 +313,7 @@ namespace Cherwell.Api.Model.Queues
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+        public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="QueuesAddItemToQueueResponse" /> class.
         /// </summary>
@@ -324,7 +324,7 @@ namespace Cherwell.Api.Model.Queues
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public QueuesAddItemToQueueResponse(string HistoryRecId = default(string), string HistoryText = default(string), string HistoryTypeId = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public QueuesAddItemToQueueResponse(string HistoryRecId = default(string), string HistoryText = default(string), string HistoryTypeId = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.HistoryRecId = HistoryRecId;
             this.HistoryText = HistoryText;
@@ -398,7 +398,7 @@ namespace Cherwell.Api.Model.Queues
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as QueuesAddItemToQueueResponse);
@@ -409,7 +409,7 @@ namespace Cherwell.Api.Model.Queues
         /// </summary>
         /// <param name="other">Instance of QueuesAddItemToQueueResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(QueuesAddItemToQueueResponse other)
+        public bool Equals(QueuesAddItemToQueueResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -419,27 +419,27 @@ namespace Cherwell.Api.Model.Queues
                 (
                     this.HistoryRecId == other.HistoryRecId ||
                     this.HistoryRecId != null &&
-                    this.HistoryRecId.Equals(other.HistoryRecId)
+                    this.HistoryRecId.Equals(other.HistoryRecId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.HistoryText == other.HistoryText ||
                     this.HistoryText != null &&
-                    this.HistoryText.Equals(other.HistoryText)
+                    this.HistoryText.Equals(other.HistoryText, StringComparison.Ordinal)
                 ) &&
                 (
                     this.HistoryTypeId == other.HistoryTypeId ||
                     this.HistoryTypeId != null &&
-                    this.HistoryTypeId.Equals(other.HistoryTypeId)
+                    this.HistoryTypeId.Equals(other.HistoryTypeId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ErrorCode == other.ErrorCode ||
                     this.ErrorCode != null &&
-                    this.ErrorCode.Equals(other.ErrorCode)
+                    this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ErrorMessage == other.ErrorMessage ||
                     this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(other.ErrorMessage)
+                    this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
                 ) &&
                 (
                     this.HasError == other.HasError ||

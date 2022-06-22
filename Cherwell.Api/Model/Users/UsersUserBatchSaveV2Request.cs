@@ -68,7 +68,7 @@ namespace Cherwell.Api.Model.Users
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return Equals(obj as UsersUserBatchSaveV2Request);
@@ -79,7 +79,7 @@ namespace Cherwell.Api.Model.Users
         /// </summary>
         /// <param name="other">Instance of UsersUserBatchSaveV2Request to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUserBatchSaveV2Request other)
+        public bool Equals(UsersUserBatchSaveV2Request? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

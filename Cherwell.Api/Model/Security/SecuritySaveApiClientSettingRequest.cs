@@ -124,7 +124,7 @@ namespace Cherwell.Api.Model
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as SecuritySaveApiClientSettingRequest);
@@ -135,7 +135,7 @@ namespace Cherwell.Api.Model
         /// </summary>
         /// <param name="other">Instance of SecuritySaveApiClientSettingRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecuritySaveApiClientSettingRequest other)
+        public bool Equals(SecuritySaveApiClientSettingRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -160,17 +160,17 @@ namespace Cherwell.Api.Model
                 (
                     this.Culture == other.Culture ||
                     this.Culture != null &&
-                    this.Culture.Equals(other.Culture)
+                    this.Culture.Equals(other.Culture, StringComparison.Ordinal)
                 ) && 
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
-                    this.Description.Equals(other.Description)
+                    this.Description.Equals(other.Description, StringComparison.Ordinal)
                 ) && 
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name.Equals(other.Name, StringComparison.Ordinal)
                 ) && 
                 (
                     this.RefreshTokenLifespanMinutes == other.RefreshTokenLifespanMinutes ||
@@ -180,7 +180,7 @@ namespace Cherwell.Api.Model
                 (
                     this.StandInKey == other.StandInKey ||
                     this.StandInKey != null &&
-                    this.StandInKey.Equals(other.StandInKey)
+                    this.StandInKey.Equals(other.StandInKey, StringComparison.Ordinal)
                 ) && 
                 (
                     this.TokenLifespanMinutes == other.TokenLifespanMinutes ||

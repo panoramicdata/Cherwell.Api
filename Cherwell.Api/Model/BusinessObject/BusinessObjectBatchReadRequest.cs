@@ -68,7 +68,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as BusinessObjectBatchReadRequest);
@@ -79,7 +79,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectBatchReadRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectBatchReadRequest other)
+        public bool Equals(BusinessObjectBatchReadRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

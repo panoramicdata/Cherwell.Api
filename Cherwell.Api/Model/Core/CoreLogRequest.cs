@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets Level
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum LevelEnum
+        public enum EnumLevel
         {
 
             /// <summary>
@@ -67,14 +67,14 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets Level
         /// </summary>
         [DataMember(Name = "level", EmitDefaultValue = false)]
-        public LevelEnum? Level { get; set; }
+        public EnumLevel? Level { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CoreLogRequest" /> class.
         /// </summary>
         /// <param name="KeyValueProperties">KeyValueProperties.</param>
         /// <param name="Level">Level.</param>
         /// <param name="Message">Message.</param>
-        public CoreLogRequest(List<Object> KeyValueProperties = default(List<Object>), LevelEnum? Level = default(LevelEnum?), string Message = default(string))
+        public CoreLogRequest(List<Object> KeyValueProperties = default(List<Object>), EnumLevel? Level = default(EnumLevel?), string Message = default(string))
         {
             this.KeyValueProperties = KeyValueProperties;
             this.Level = Level;
@@ -120,7 +120,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as CoreLogRequest);
@@ -131,7 +131,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreLogRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreLogRequest other)
+        public bool Equals(CoreLogRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -151,7 +151,7 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.Message == other.Message ||
                     this.Message != null &&
-                    this.Message.Equals(other.Message)
+                    this.Message.Equals(other.Message, StringComparison.Ordinal)
                 );
         }
 

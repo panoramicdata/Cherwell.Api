@@ -116,7 +116,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as CorePromptValue);
@@ -127,7 +127,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CorePromptValue to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CorePromptValue other)
+        public bool Equals(CorePromptValue? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -137,32 +137,32 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.BusObId == other.BusObId ||
                     this.BusObId != null &&
-                    this.BusObId.Equals(other.BusObId)
+                    this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.CollectionStoreEntireRow == other.CollectionStoreEntireRow ||
                     this.CollectionStoreEntireRow != null &&
-                    this.CollectionStoreEntireRow.Equals(other.CollectionStoreEntireRow)
+                    this.CollectionStoreEntireRow.Equals(other.CollectionStoreEntireRow, StringComparison.Ordinal)
                 ) &&
                 (
                     this.CollectionValueField == other.CollectionValueField ||
                     this.CollectionValueField != null &&
-                    this.CollectionValueField.Equals(other.CollectionValueField)
+                    this.CollectionValueField.Equals(other.CollectionValueField, StringComparison.Ordinal)
                 ) &&
                 (
                     this.FieldId == other.FieldId ||
                     this.FieldId != null &&
-                    this.FieldId.Equals(other.FieldId)
+                    this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ListReturnFieldId == other.ListReturnFieldId ||
                     this.ListReturnFieldId != null &&
-                    this.ListReturnFieldId.Equals(other.ListReturnFieldId)
+                    this.ListReturnFieldId.Equals(other.ListReturnFieldId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.PromptId == other.PromptId ||
                     this.PromptId != null &&
-                    this.PromptId.Equals(other.PromptId)
+                    this.PromptId.Equals(other.PromptId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Value == other.Value ||

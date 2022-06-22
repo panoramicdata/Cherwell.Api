@@ -116,7 +116,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as SearchesStoredSearchRequest);
@@ -127,7 +127,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesStoredSearchRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesStoredSearchRequest other)
+        public bool Equals(SearchesStoredSearchRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -137,17 +137,17 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.AssociationId == other.AssociationId ||
                     this.AssociationId != null &&
-                    this.AssociationId.Equals(other.AssociationId)
+                    this.AssociationId.Equals(other.AssociationId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.AssociationName == other.AssociationName ||
                     this.AssociationName != null &&
-                    this.AssociationName.Equals(other.AssociationName)
+                    this.AssociationName.Equals(other.AssociationName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.GridId == other.GridId ||
                     this.GridId != null &&
-                    this.GridId.Equals(other.GridId)
+                    this.GridId.Equals(other.GridId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.IncludeSchema == other.IncludeSchema ||
@@ -157,22 +157,22 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.Scope == other.Scope ||
                     this.Scope != null &&
-                    this.Scope.Equals(other.Scope)
+                    this.Scope.Equals(other.Scope, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ScopeOwnerId == other.ScopeOwnerId ||
                     this.ScopeOwnerId != null &&
-                    this.ScopeOwnerId.Equals(other.ScopeOwnerId)
+                    this.ScopeOwnerId.Equals(other.ScopeOwnerId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.SearchId == other.SearchId ||
                     this.SearchId != null &&
-                    this.SearchId.Equals(other.SearchId)
+                    this.SearchId.Equals(other.SearchId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.SearchName == other.SearchName ||
                     this.SearchName != null &&
-                    this.SearchName.Equals(other.SearchName)
+                    this.SearchName.Equals(other.SearchName, StringComparison.Ordinal)
                 );
         }
 

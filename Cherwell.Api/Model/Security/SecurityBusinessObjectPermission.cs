@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Security
 {
     /// <summary>
-    /// SecurityBusinessObjectPermission
+    /// PermissionSecurityBusinessObject
     /// </summary>
     [DataContract]
-    public partial class SecurityBusinessObjectPermission : IEquatable<SecurityBusinessObjectPermission>, IValidatableObject
+    public partial class PermissionSecurityBusinessObject : IEquatable<PermissionSecurityBusinessObject>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecurityBusinessObjectPermission" /> class.
+        /// Initializes a new instance of the <see cref="PermissionSecurityBusinessObject" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObName">BusObName.</param>
@@ -37,7 +37,7 @@ namespace Cherwell.Api.Model.Security
         /// <param name="TeamManagerOfOwnerView">TeamManagerOfOwnerView.</param>
         /// <param name="TeamView">TeamView.</param>
         /// <param name="View">View.</param>
-        public SecurityBusinessObjectPermission(string BusObId = default(string), string BusObName = default(string), bool? DepartmentMemberEdit = default(bool?), bool? DepartmentMemberView = default(bool?), bool? Edit = default(bool?), List<SecurityFieldPermission> FieldPermissions = default(List<SecurityFieldPermission>), bool? ManagerOfOwnerEdit = default(bool?), bool? ManagerOfOwnerView = default(bool?), bool? OwnerEdit = default(bool?), bool? OwnerView = default(bool?), bool? TeamEdit = default(bool?), bool? TeamManagerOfOwnerEdit = default(bool?), bool? TeamManagerOfOwnerView = default(bool?), bool? TeamView = default(bool?), bool? View = default(bool?))
+        public PermissionSecurityBusinessObject(string BusObId = default(string), string BusObName = default(string), bool? DepartmentMemberEdit = default(bool?), bool? DepartmentMemberView = default(bool?), bool? Edit = default(bool?), List<PermissionSecurityField> FieldPermissions = default(List<PermissionSecurityField>), bool? ManagerOfOwnerEdit = default(bool?), bool? ManagerOfOwnerView = default(bool?), bool? OwnerEdit = default(bool?), bool? OwnerView = default(bool?), bool? TeamEdit = default(bool?), bool? TeamManagerOfOwnerEdit = default(bool?), bool? TeamManagerOfOwnerView = default(bool?), bool? TeamView = default(bool?), bool? View = default(bool?))
         {
             this.BusObId = BusObId;
             this.BusObName = BusObName;
@@ -85,7 +85,7 @@ namespace Cherwell.Api.Model.Security
         /// Gets or Sets FieldPermissions
         /// </summary>
         [DataMember(Name = "fieldPermissions", EmitDefaultValue = false)]
-        public List<SecurityFieldPermission> FieldPermissions { get; set; }
+        public List<PermissionSecurityField> FieldPermissions { get; set; }
         /// <summary>
         /// Gets or Sets ManagerOfOwnerEdit
         /// </summary>
@@ -138,7 +138,7 @@ namespace Cherwell.Api.Model.Security
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class SecurityBusinessObjectPermission {\n");
+            sb.Append("class PermissionSecurityBusinessObject {\n");
             sb.Append("  BusObId: ").Append(BusObId).Append('\n');
             sb.Append("  BusObName: ").Append(BusObName).Append('\n');
             sb.Append("  DepartmentMemberEdit: ").Append(DepartmentMemberEdit).Append('\n');
@@ -172,18 +172,18 @@ namespace Cherwell.Api.Model.Security
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SecurityBusinessObjectPermission);
+            return this.Equals(obj as PermissionSecurityBusinessObject);
         }
 
         /// <summary>
-        /// Returns true if SecurityBusinessObjectPermission instances are equal
+        /// Returns true if PermissionSecurityBusinessObject instances are equal
         /// </summary>
-        /// <param name="other">Instance of SecurityBusinessObjectPermission to be compared</param>
+        /// <param name="other">Instance of PermissionSecurityBusinessObject to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecurityBusinessObjectPermission other)
+        public bool Equals(PermissionSecurityBusinessObject? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -193,12 +193,12 @@ namespace Cherwell.Api.Model.Security
                 (
                     this.BusObId == other.BusObId ||
                     this.BusObId != null &&
-                    this.BusObId.Equals(other.BusObId)
+                    this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObName == other.BusObName ||
                     this.BusObName != null &&
-                    this.BusObName.Equals(other.BusObName)
+                    this.BusObName.Equals(other.BusObName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.DepartmentMemberEdit == other.DepartmentMemberEdit ||

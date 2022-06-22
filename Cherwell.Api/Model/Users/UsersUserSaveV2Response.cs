@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Users
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum HttpStatusCodeEnum
+        public enum EnumHttpStatusCode
         {
 
             /// <summary>
@@ -313,7 +313,7 @@ namespace Cherwell.Api.Model.Users
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+        public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="UsersUserSaveV2Response" /> class.
         /// </summary>
@@ -323,7 +323,7 @@ namespace Cherwell.Api.Model.Users
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public UsersUserSaveV2Response(string BusObPublicId = default, string BusObRecId = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, HttpStatusCodeEnum? HttpStatusCode = default)
+        public UsersUserSaveV2Response(string BusObPublicId = default, string BusObRecId = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
         {
             this.BusObPublicId = BusObPublicId;
             this.BusObRecId = BusObRecId;
@@ -390,7 +390,7 @@ namespace Cherwell.Api.Model.Users
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return Equals(obj as UsersUserSaveV2Response);
@@ -401,7 +401,7 @@ namespace Cherwell.Api.Model.Users
         /// </summary>
         /// <param name="other">Instance of UsersUserSaveV2Response to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUserSaveV2Response other)
+        public bool Equals(UsersUserSaveV2Response? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

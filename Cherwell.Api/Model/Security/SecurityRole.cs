@@ -124,7 +124,7 @@ namespace Cherwell.Api.Model
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as SecurityRole);
@@ -135,7 +135,7 @@ namespace Cherwell.Api.Model
         /// </summary>
         /// <param name="other">Instance of SecurityRole to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecurityRole other)
+        public bool Equals(SecurityRole? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -145,7 +145,7 @@ namespace Cherwell.Api.Model
                 (
                     this.BrowserClientCustomViewId == other.BrowserClientCustomViewId ||
                     this.BrowserClientCustomViewId != null &&
-                    this.BrowserClientCustomViewId.Equals(other.BrowserClientCustomViewId)
+                    this.BrowserClientCustomViewId.Equals(other.BrowserClientCustomViewId, StringComparison.Ordinal)
                 ) && 
                 (
                     this.BusinessObjectExcludeList == other.BusinessObjectExcludeList ||
@@ -155,37 +155,37 @@ namespace Cherwell.Api.Model
                 (
                     this.Culture == other.Culture ||
                     this.Culture != null &&
-                    this.Culture.Equals(other.Culture)
+                    this.Culture.Equals(other.Culture, StringComparison.Ordinal)
                 ) && 
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
-                    this.Description.Equals(other.Description)
+                    this.Description.Equals(other.Description, StringComparison.Ordinal)
                 ) && 
                 (
                     this.MobileClientCustomViewId == other.MobileClientCustomViewId ||
                     this.MobileClientCustomViewId != null &&
-                    this.MobileClientCustomViewId.Equals(other.MobileClientCustomViewId)
+                    this.MobileClientCustomViewId.Equals(other.MobileClientCustomViewId, StringComparison.Ordinal)
                 ) && 
                 (
                     this.PrimaryBusObId == other.PrimaryBusObId ||
                     this.PrimaryBusObId != null &&
-                    this.PrimaryBusObId.Equals(other.PrimaryBusObId)
+                    this.PrimaryBusObId.Equals(other.PrimaryBusObId, StringComparison.Ordinal)
                 ) && 
                 (
                     this.RoleId == other.RoleId ||
                     this.RoleId != null &&
-                    this.RoleId.Equals(other.RoleId)
+                    this.RoleId.Equals(other.RoleId, StringComparison.Ordinal)
                 ) && 
                 (
                     this.RoleName == other.RoleName ||
                     this.RoleName != null &&
-                    this.RoleName.Equals(other.RoleName)
+                    this.RoleName.Equals(other.RoleName, StringComparison.Ordinal)
                 ) && 
                 (
                     this.SmartClientCustomViewId == other.SmartClientCustomViewId ||
                     this.SmartClientCustomViewId != null &&
-                    this.SmartClientCustomViewId.Equals(other.SmartClientCustomViewId)
+                    this.SmartClientCustomViewId.Equals(other.SmartClientCustomViewId, StringComparison.Ordinal)
                 );
         }
 

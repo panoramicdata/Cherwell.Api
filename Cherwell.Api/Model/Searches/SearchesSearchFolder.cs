@@ -152,7 +152,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesSearchFolder to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesSearchFolder other)
+        public bool Equals(SearchesSearchFolder? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

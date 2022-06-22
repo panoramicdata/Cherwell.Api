@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum HttpStatusCodeEnum
+        public enum EnumHttpStatusCode
         {
 
             /// <summary>
@@ -313,7 +313,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+        public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchesSimpleResultsListGroup" /> class.
         /// </summary>
@@ -326,7 +326,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SearchesSimpleResultsListGroup(bool? IsBusObTarget = default(bool?), List<SearchesSimpleResultsListItem> SimpleResultsListItems = default(List<SearchesSimpleResultsListItem>), string SubTitle = default(string), string TargetId = default(string), string Title = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public SearchesSimpleResultsListGroup(bool? IsBusObTarget = default(bool?), List<SearchesSimpleResultsListItem> SimpleResultsListItems = default(List<SearchesSimpleResultsListItem>), string SubTitle = default(string), string TargetId = default(string), string Title = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.IsBusObTarget = IsBusObTarget;
             this.SimpleResultsListItems = SimpleResultsListItems;
@@ -414,7 +414,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as SearchesSimpleResultsListGroup);
@@ -425,7 +425,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesSimpleResultsListGroup to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesSimpleResultsListGroup other)
+        public bool Equals(SearchesSimpleResultsListGroup? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -445,27 +445,27 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.SubTitle == other.SubTitle ||
                     this.SubTitle != null &&
-                    this.SubTitle.Equals(other.SubTitle)
+                    this.SubTitle.Equals(other.SubTitle, StringComparison.Ordinal)
                 ) &&
                 (
                     this.TargetId == other.TargetId ||
                     this.TargetId != null &&
-                    this.TargetId.Equals(other.TargetId)
+                    this.TargetId.Equals(other.TargetId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Title == other.Title ||
                     this.Title != null &&
-                    this.Title.Equals(other.Title)
+                    this.Title.Equals(other.Title, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ErrorCode == other.ErrorCode ||
                     this.ErrorCode != null &&
-                    this.ErrorCode.Equals(other.ErrorCode)
+                    this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ErrorMessage == other.ErrorMessage ||
                     this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(other.ErrorMessage)
+                    this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
                 ) &&
                 (
                     this.HasError == other.HasError ||

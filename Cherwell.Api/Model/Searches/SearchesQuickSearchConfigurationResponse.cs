@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum HttpStatusCodeEnum
+        public enum EnumHttpStatusCode
         {
 
             /// <summary>
@@ -313,7 +313,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+        public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchesQuickSearchConfigurationResponse" /> class.
         /// </summary>
@@ -337,7 +337,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SearchesQuickSearchConfigurationResponse(bool? AllowQuickSearch = default(bool?), bool? AllowSpecificSearch = default(bool?), bool? DefaultToQuickSearch = default(bool?), string DisplayName = default(string), string GalleryImage = default(string), List<string> History = default(List<string>), bool? IncludeAvailableInSpecific = default(bool?), bool? IncludeQuickSearchInSpecific = default(bool?), string QuickSearchId = default(string), List<SearchesQuickSearchItem> QuickSearchItems = default(List<SearchesQuickSearchItem>), string QuickSearchWatermark = default(string), bool? SortByRelevance = default(bool?), string ResolvedQuickSearchWatermark = default(string), string Scope = default(string), string ScopeOwner = default(string), List<SearchesQuickSearchItem> SpecificSearchItems = default(List<SearchesQuickSearchItem>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public SearchesQuickSearchConfigurationResponse(bool? AllowQuickSearch = default(bool?), bool? AllowSpecificSearch = default(bool?), bool? DefaultToQuickSearch = default(bool?), string DisplayName = default(string), string GalleryImage = default(string), List<string> History = default(List<string>), bool? IncludeAvailableInSpecific = default(bool?), bool? IncludeQuickSearchInSpecific = default(bool?), string QuickSearchId = default(string), List<SearchesQuickSearchItem> QuickSearchItems = default(List<SearchesQuickSearchItem>), string QuickSearchWatermark = default(string), bool? SortByRelevance = default(bool?), string ResolvedQuickSearchWatermark = default(string), string Scope = default(string), string ScopeOwner = default(string), List<SearchesQuickSearchItem> SpecificSearchItems = default(List<SearchesQuickSearchItem>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.AllowQuickSearch = AllowQuickSearch;
             this.AllowSpecificSearch = AllowSpecificSearch;
@@ -502,7 +502,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as SearchesQuickSearchConfigurationResponse);
@@ -513,7 +513,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesQuickSearchConfigurationResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesQuickSearchConfigurationResponse other)
+        public bool Equals(SearchesQuickSearchConfigurationResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -538,12 +538,12 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.DisplayName == other.DisplayName ||
                     this.DisplayName != null &&
-                    this.DisplayName.Equals(other.DisplayName)
+                    this.DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.GalleryImage == other.GalleryImage ||
                     this.GalleryImage != null &&
-                    this.GalleryImage.Equals(other.GalleryImage)
+                    this.GalleryImage.Equals(other.GalleryImage, StringComparison.Ordinal)
                 ) &&
                 (
                     this.History == other.History ||
@@ -563,7 +563,7 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.QuickSearchId == other.QuickSearchId ||
                     this.QuickSearchId != null &&
-                    this.QuickSearchId.Equals(other.QuickSearchId)
+                    this.QuickSearchId.Equals(other.QuickSearchId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.QuickSearchItems == other.QuickSearchItems ||
@@ -573,7 +573,7 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.QuickSearchWatermark == other.QuickSearchWatermark ||
                     this.QuickSearchWatermark != null &&
-                    this.QuickSearchWatermark.Equals(other.QuickSearchWatermark)
+                    this.QuickSearchWatermark.Equals(other.QuickSearchWatermark, StringComparison.Ordinal)
                 ) &&
                 (
                     this.SortByRelevance == other.SortByRelevance ||
@@ -583,17 +583,17 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.ResolvedQuickSearchWatermark == other.ResolvedQuickSearchWatermark ||
                     this.ResolvedQuickSearchWatermark != null &&
-                    this.ResolvedQuickSearchWatermark.Equals(other.ResolvedQuickSearchWatermark)
+                    this.ResolvedQuickSearchWatermark.Equals(other.ResolvedQuickSearchWatermark, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Scope == other.Scope ||
                     this.Scope != null &&
-                    this.Scope.Equals(other.Scope)
+                    this.Scope.Equals(other.Scope, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ScopeOwner == other.ScopeOwner ||
                     this.ScopeOwner != null &&
-                    this.ScopeOwner.Equals(other.ScopeOwner)
+                    this.ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
                 ) &&
                 (
                     this.SpecificSearchItems == other.SpecificSearchItems ||
@@ -603,12 +603,12 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.ErrorCode == other.ErrorCode ||
                     this.ErrorCode != null &&
-                    this.ErrorCode.Equals(other.ErrorCode)
+                    this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ErrorMessage == other.ErrorMessage ||
                     this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(other.ErrorMessage)
+                    this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
                 ) &&
                 (
                     this.HasError == other.HasError ||

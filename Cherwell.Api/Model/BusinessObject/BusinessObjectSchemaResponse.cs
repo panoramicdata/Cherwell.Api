@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum HttpStatusCodeEnum
+        public enum EnumHttpStatusCode
         {
 
             /// <summary>
@@ -313,7 +313,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+        public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="BusinessObjectSchemaResponse" /> class.
         /// </summary>
@@ -330,7 +330,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public BusinessObjectSchemaResponse(string BusObId = default(string), List<BusinessObjectFieldDefinition> FieldDefinitions = default(List<BusinessObjectFieldDefinition>), string FirstRecIdField = default(string), List<BusinessObjectGridDefinition> GridDefinitions = default(List<BusinessObjectGridDefinition>), string Name = default(string), string RecIdFields = default(string), List<BusinessObjectRelationship> Relationships = default(List<BusinessObjectRelationship>), string StateFieldId = default(string), string States = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public BusinessObjectSchemaResponse(string BusObId = default(string), List<BusinessObjectFieldDefinition> FieldDefinitions = default(List<BusinessObjectFieldDefinition>), string FirstRecIdField = default(string), List<BusinessObjectGridDefinition> GridDefinitions = default(List<BusinessObjectGridDefinition>), string Name = default(string), string RecIdFields = default(string), List<BusinessObjectRelationship> Relationships = default(List<BusinessObjectRelationship>), string StateFieldId = default(string), string States = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.BusObId = BusObId;
             this.FieldDefinitions = FieldDefinitions;
@@ -446,7 +446,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as BusinessObjectSchemaResponse);

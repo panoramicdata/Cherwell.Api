@@ -196,7 +196,7 @@ namespace Cherwell.Api.Model.Users
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return Equals(obj as UsersUserSaveRequest);
@@ -207,7 +207,7 @@ namespace Cherwell.Api.Model.Users
         /// </summary>
         /// <param name="other">Instance of UsersUserSaveRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUserSaveRequest other)
+        public bool Equals(UsersUserSaveRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -222,32 +222,32 @@ namespace Cherwell.Api.Model.Users
                 (
                     BusObId == other.BusObId ||
                     BusObId != null &&
-                    BusObId.Equals(other.BusObId)
+                    BusObId.Equals(other.BusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     BusObPublicId == other.BusObPublicId ||
                     BusObPublicId != null &&
-                    BusObPublicId.Equals(other.BusObPublicId)
+                    BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
                 ) &&
                 (
                     BusObRecId == other.BusObRecId ||
                     BusObRecId != null &&
-                    BusObRecId.Equals(other.BusObRecId)
+                    BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
                 ) &&
                 (
                     DisplayName == other.DisplayName ||
                     DisplayName != null &&
-                    DisplayName.Equals(other.DisplayName)
+                    DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
                 ) &&
                 (
                     Error == other.Error ||
                     Error != null &&
-                    Error.Equals(other.Error)
+                    Error.Equals(other.Error, StringComparison.Ordinal)
                 ) &&
                 (
                     ErrorCode == other.ErrorCode ||
                     ErrorCode != null &&
-                    ErrorCode.Equals(other.ErrorCode)
+                    ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
                 ) &&
                 (
                     HasError == other.HasError ||
@@ -262,7 +262,7 @@ namespace Cherwell.Api.Model.Users
                 (
                     LoginId == other.LoginId ||
                     LoginId != null &&
-                    LoginId.Equals(other.LoginId)
+                    LoginId.Equals(other.LoginId, StringComparison.Ordinal)
                 ) &&
                 (
                     NextPasswordResetDate == other.NextPasswordResetDate ||
@@ -272,7 +272,7 @@ namespace Cherwell.Api.Model.Users
                 (
                     Password == other.Password ||
                     Password != null &&
-                    Password.Equals(other.Password)
+                    Password.Equals(other.Password, StringComparison.Ordinal)
                 ) &&
                 (
                     PasswordNeverExpires == other.PasswordNeverExpires ||
@@ -282,7 +282,7 @@ namespace Cherwell.Api.Model.Users
                 (
                     SecurityGroupId == other.SecurityGroupId ||
                     SecurityGroupId != null &&
-                    SecurityGroupId.Equals(other.SecurityGroupId)
+                    SecurityGroupId.Equals(other.SecurityGroupId, StringComparison.Ordinal)
                 ) &&
                 (
                     UserCannotChangePassword == other.UserCannotChangePassword ||
@@ -302,7 +302,7 @@ namespace Cherwell.Api.Model.Users
                 (
                     WindowsUserId == other.WindowsUserId ||
                     WindowsUserId != null &&
-                    WindowsUserId.Equals(other.WindowsUserId)
+                    WindowsUserId.Equals(other.WindowsUserId, StringComparison.Ordinal)
                 );
         }
 

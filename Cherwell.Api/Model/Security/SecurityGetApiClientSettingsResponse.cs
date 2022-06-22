@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Security
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum HttpStatusCodeEnum
+        public enum EnumHttpStatusCode
         {
 
             /// <summary>
@@ -313,7 +313,7 @@ namespace Cherwell.Api.Model.Security
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+        public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="SecurityGetApiClientSettingsResponse" /> class.
         /// </summary>
@@ -322,7 +322,7 @@ namespace Cherwell.Api.Model.Security
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SecurityGetApiClientSettingsResponse(List<SecurityGetApiClientSettingsResponseItem> Settings = default(List<SecurityGetApiClientSettingsResponseItem>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public SecurityGetApiClientSettingsResponse(List<SecurityGetApiClientSettingsResponseItem> Settings = default(List<SecurityGetApiClientSettingsResponseItem>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Settings = Settings;
             this.ErrorCode = ErrorCode;
@@ -382,7 +382,7 @@ namespace Cherwell.Api.Model.Security
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as SecurityGetApiClientSettingsResponse);
@@ -393,7 +393,7 @@ namespace Cherwell.Api.Model.Security
         /// </summary>
         /// <param name="other">Instance of SecurityGetApiClientSettingsResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecurityGetApiClientSettingsResponse other)
+        public bool Equals(SecurityGetApiClientSettingsResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -408,12 +408,12 @@ namespace Cherwell.Api.Model.Security
                 (
                     this.ErrorCode == other.ErrorCode ||
                     this.ErrorCode != null &&
-                    this.ErrorCode.Equals(other.ErrorCode)
+                    this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ErrorMessage == other.ErrorMessage ||
                     this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(other.ErrorMessage)
+                    this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
                 ) &&
                 (
                     this.HasError == other.HasError ||

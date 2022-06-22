@@ -132,7 +132,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as CoreManagerFolder);
@@ -143,7 +143,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreManagerFolder to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreManagerFolder other)
+        public bool Equals(CoreManagerFolder? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -153,7 +153,7 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.Association == other.Association ||
                     this.Association != null &&
-                    this.Association.Equals(other.Association)
+                    this.Association.Equals(other.Association, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ChildFolders == other.ChildFolders ||
@@ -168,7 +168,7 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.Id.Equals(other.Id, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Links == other.Links ||
@@ -178,27 +178,27 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.LocalizedScopeName == other.LocalizedScopeName ||
                     this.LocalizedScopeName != null &&
-                    this.LocalizedScopeName.Equals(other.LocalizedScopeName)
+                    this.LocalizedScopeName.Equals(other.LocalizedScopeName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name.Equals(other.Name, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ParentId == other.ParentId ||
                     this.ParentId != null &&
-                    this.ParentId.Equals(other.ParentId)
+                    this.ParentId.Equals(other.ParentId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Scope == other.Scope ||
                     this.Scope != null &&
-                    this.Scope.Equals(other.Scope)
+                    this.Scope.Equals(other.Scope, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ScopeOwner == other.ScopeOwner ||
                     this.ScopeOwner != null &&
-                    this.ScopeOwner.Equals(other.ScopeOwner)
+                    this.ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
                 );
         }
 

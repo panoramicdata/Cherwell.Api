@@ -156,7 +156,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as CoreManagerItem);
@@ -167,7 +167,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreManagerItem to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreManagerItem other)
+        public bool Equals(CoreManagerItem? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -177,27 +177,27 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.Association == other.Association ||
                     this.Association != null &&
-                    this.Association.Equals(other.Association)
+                    this.Association.Equals(other.Association, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
-                    this.Description.Equals(other.Description)
+                    this.Description.Equals(other.Description, StringComparison.Ordinal)
                 ) &&
                 (
                     this.DisplayName == other.DisplayName ||
                     this.DisplayName != null &&
-                    this.DisplayName.Equals(other.DisplayName)
+                    this.DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.GalleryImage == other.GalleryImage ||
                     this.GalleryImage != null &&
-                    this.GalleryImage.Equals(other.GalleryImage)
+                    this.GalleryImage.Equals(other.GalleryImage, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.Id.Equals(other.Id, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Links == other.Links ||
@@ -207,17 +207,17 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.LocalizedScopeName == other.LocalizedScopeName ||
                     this.LocalizedScopeName != null &&
-                    this.LocalizedScopeName.Equals(other.LocalizedScopeName)
+                    this.LocalizedScopeName.Equals(other.LocalizedScopeName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name.Equals(other.Name, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ParentFolder == other.ParentFolder ||
                     this.ParentFolder != null &&
-                    this.ParentFolder.Equals(other.ParentFolder)
+                    this.ParentFolder.Equals(other.ParentFolder, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ParentIsScopeFolder == other.ParentIsScopeFolder ||
@@ -227,17 +227,17 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.Scope == other.Scope ||
                     this.Scope != null &&
-                    this.Scope.Equals(other.Scope)
+                    this.Scope.Equals(other.Scope, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ScopeOwner == other.ScopeOwner ||
                     this.ScopeOwner != null &&
-                    this.ScopeOwner.Equals(other.ScopeOwner)
+                    this.ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
                 ) &&
                 (
                     this.StandInKey == other.StandInKey ||
                     this.StandInKey != null &&
-                    this.StandInKey.Equals(other.StandInKey)
+                    this.StandInKey.Equals(other.StandInKey, StringComparison.Ordinal)
                 );
         }
 

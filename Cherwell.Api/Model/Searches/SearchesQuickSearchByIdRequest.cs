@@ -84,7 +84,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as SearchesQuickSearchByIdRequest);
@@ -95,7 +95,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesQuickSearchByIdRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesQuickSearchByIdRequest other)
+        public bool Equals(SearchesQuickSearchByIdRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -115,12 +115,12 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.SearchText == other.SearchText ||
                     this.SearchText != null &&
-                    this.SearchText.Equals(other.SearchText)
+                    this.SearchText.Equals(other.SearchText, StringComparison.Ordinal)
                 ) &&
                 (
                     this.StandIn == other.StandIn ||
                     this.StandIn != null &&
-                    this.StandIn.Equals(other.StandIn)
+                    this.StandIn.Equals(other.StandIn, StringComparison.Ordinal)
                 );
         }
 

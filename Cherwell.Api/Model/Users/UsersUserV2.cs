@@ -23,7 +23,7 @@ public partial class UsersUserV2 : IEquatable<UsersUserV2>, IValidatableObject
     /// Gets or Sets HttpStatusCode
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum HttpStatusCodeEnum
+    public enum EnumHttpStatusCode
     {
 
         /// <summary>
@@ -313,7 +313,7 @@ public partial class UsersUserV2 : IEquatable<UsersUserV2>, IValidatableObject
     /// Gets or Sets HttpStatusCode
     /// </summary>
     [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-    public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+    public EnumHttpStatusCode? HttpStatusCode { get; set; }
     /// <summary>
     /// Initializes a new instance of the <see cref="UsersUserV2" /> class.
     /// </summary>
@@ -335,7 +335,7 @@ public partial class UsersUserV2 : IEquatable<UsersUserV2>, IValidatableObject
     /// <param name="ErrorMessage">ErrorMessage.</param>
     /// <param name="HasError">HasError.</param>
     /// <param name="HttpStatusCode">HttpStatusCode.</param>
-    public UsersUserV2(bool? AccountLocked = default, DateTime? CreateDateTime = default, string DisplayName = default, List<BusinessObjectFieldTemplateItem> Fields = default, DateTime? LastPasswordResetDate = default, DateTime? LastResetDateTime = default, bool? LdapRequired = default, bool? PasswordNeverExpires = default, string PublicId = default, string RecordId = default, string SecurityGroupId = default, string ShortDisplayName = default, bool? UserCannotChangePassword = default, bool? UserMustResetPasswordAtNextLogin = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, HttpStatusCodeEnum? HttpStatusCode = default)
+    public UsersUserV2(bool? AccountLocked = default, DateTime? CreateDateTime = default, string DisplayName = default, List<BusinessObjectFieldTemplateItem> Fields = default, DateTime? LastPasswordResetDate = default, DateTime? LastResetDateTime = default, bool? LdapRequired = default, bool? PasswordNeverExpires = default, string PublicId = default, string RecordId = default, string SecurityGroupId = default, string ShortDisplayName = default, bool? UserCannotChangePassword = default, bool? UserMustResetPasswordAtNextLogin = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
     {
         this.AccountLocked = AccountLocked;
         this.CreateDateTime = CreateDateTime;
@@ -497,7 +497,7 @@ public partial class UsersUserV2 : IEquatable<UsersUserV2>, IValidatableObject
     /// </summary>
     /// <param name="other">Instance of UsersUserV2 to be compared</param>
     /// <returns>Boolean</returns>
-    public bool Equals(UsersUserV2 other)
+    public bool Equals(UsersUserV2? other)
     {
         // credit: http://stackoverflow.com/a/10454552/677735
         if (other == null)

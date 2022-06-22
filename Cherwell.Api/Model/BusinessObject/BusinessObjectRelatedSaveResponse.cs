@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum HttpStatusCodeEnum
+        public enum EnumHttpStatusCode
         {
 
             /// <summary>
@@ -313,7 +313,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+        public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="BusinessObjectRelatedSaveResponse" /> class.
         /// </summary>
@@ -330,7 +330,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public BusinessObjectRelatedSaveResponse(string ParentBusObId = default(string), string ParentBusObPublicId = default(string), string ParentBusObRecId = default(string), string RelationshipId = default(string), string BusObPublicId = default(string), string BusObRecId = default(string), string CacheKey = default(string), List<BusinessObjectFieldValidationError> FieldValidationErrors = default(List<BusinessObjectFieldValidationError>), List<BusinessObjectNotificationTrigger> NotificationTriggers = default(List<BusinessObjectNotificationTrigger>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public BusinessObjectRelatedSaveResponse(string ParentBusObId = default(string), string ParentBusObPublicId = default(string), string ParentBusObRecId = default(string), string RelationshipId = default(string), string BusObPublicId = default(string), string BusObRecId = default(string), string CacheKey = default(string), List<BusinessObjectFieldValidationError> FieldValidationErrors = default(List<BusinessObjectFieldValidationError>), List<BusinessObjectNotificationTrigger> NotificationTriggers = default(List<BusinessObjectNotificationTrigger>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.ParentBusObId = ParentBusObId;
             this.ParentBusObPublicId = ParentBusObPublicId;
@@ -446,7 +446,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as BusinessObjectRelatedSaveResponse);

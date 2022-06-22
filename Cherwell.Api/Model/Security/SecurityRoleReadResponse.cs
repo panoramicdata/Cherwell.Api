@@ -84,7 +84,7 @@ namespace Cherwell.Api.Model
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as SecurityRoleReadResponse);
@@ -95,7 +95,7 @@ namespace Cherwell.Api.Model
         /// </summary>
         /// <param name="other">Instance of SecurityRoleReadResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecurityRoleReadResponse other)
+        public bool Equals(SecurityRoleReadResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -105,12 +105,12 @@ namespace Cherwell.Api.Model
                 (
                     this.Error == other.Error ||
                     this.Error != null &&
-                    this.Error.Equals(other.Error)
+                    this.Error.Equals(other.Error, StringComparison.Ordinal)
                 ) && 
                 (
                     this.ErrorCode == other.ErrorCode ||
                     this.ErrorCode != null &&
-                    this.ErrorCode.Equals(other.ErrorCode)
+                    this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
                 ) && 
                 (
                     this.HasError == other.HasError ||

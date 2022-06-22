@@ -76,7 +76,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as CoreSimplePromptValue);
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreSimplePromptValue to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreSimplePromptValue other)
+        public bool Equals(CoreSimplePromptValue? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -97,17 +97,17 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.PromptDefId == other.PromptDefId ||
                     this.PromptDefId != null &&
-                    this.PromptDefId.Equals(other.PromptDefId)
+                    this.PromptDefId.Equals(other.PromptDefId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.PromptName == other.PromptName ||
                     this.PromptName != null &&
-                    this.PromptName.Equals(other.PromptName)
+                    this.PromptName.Equals(other.PromptName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Value == other.Value ||
                     this.Value != null &&
-                    this.Value.Equals(other.Value)
+                    this.Value.Equals(other.Value, StringComparison.Ordinal)
                 );
         }
 

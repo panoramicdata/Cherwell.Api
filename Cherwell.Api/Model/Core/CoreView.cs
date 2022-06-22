@@ -76,7 +76,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as CoreView);
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreView to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreView other)
+        public bool Equals(CoreView? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -97,17 +97,17 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name.Equals(other.Name, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ViewId == other.ViewId ||
                     this.ViewId != null &&
-                    this.ViewId.Equals(other.ViewId)
+                    this.ViewId.Equals(other.ViewId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Image == other.Image ||
                     this.Image != null &&
-                    this.Image.Equals(other.Image)
+                    this.Image.Equals(other.Image, StringComparison.Ordinal)
                 );
         }
 

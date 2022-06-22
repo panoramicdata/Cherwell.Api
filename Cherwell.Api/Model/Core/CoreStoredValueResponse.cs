@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets StoredValueType
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum StoredValueTypeEnum
+        public enum EnumStoredValueType
         {
 
             /// <summary>
@@ -85,7 +85,7 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum HttpStatusCodeEnum
+        public enum EnumHttpStatusCode
         {
 
             /// <summary>
@@ -375,12 +375,12 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets StoredValueType
         /// </summary>
         [DataMember(Name = "storedValueType", EmitDefaultValue = false)]
-        public StoredValueTypeEnum? StoredValueType { get; set; }
+        public EnumStoredValueType? StoredValueType { get; set; }
         /// <summary>
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+        public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CoreStoredValueResponse" /> class.
         /// </summary>
@@ -397,7 +397,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public CoreStoredValueResponse(string Description = default(string), string Folder = default(string), string Id = default(string), string Name = default(string), string Scope = default(string), string ScopeOwner = default(string), string StandInKey = default(string), StoredValueTypeEnum? StoredValueType = default(StoredValueTypeEnum?), string Value = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public CoreStoredValueResponse(string Description = default(string), string Folder = default(string), string Id = default(string), string Name = default(string), string Scope = default(string), string ScopeOwner = default(string), string StandInKey = default(string), EnumStoredValueType? StoredValueType = default(EnumStoredValueType?), string Value = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Description = Description;
             this.Folder = Folder;
@@ -508,7 +508,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as CoreStoredValueResponse);
@@ -519,7 +519,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreStoredValueResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreStoredValueResponse other)
+        public bool Equals(CoreStoredValueResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -529,37 +529,37 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
-                    this.Description.Equals(other.Description)
+                    this.Description.Equals(other.Description, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Folder == other.Folder ||
                     this.Folder != null &&
-                    this.Folder.Equals(other.Folder)
+                    this.Folder.Equals(other.Folder, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.Id.Equals(other.Id, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name.Equals(other.Name, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Scope == other.Scope ||
                     this.Scope != null &&
-                    this.Scope.Equals(other.Scope)
+                    this.Scope.Equals(other.Scope, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ScopeOwner == other.ScopeOwner ||
                     this.ScopeOwner != null &&
-                    this.ScopeOwner.Equals(other.ScopeOwner)
+                    this.ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
                 ) &&
                 (
                     this.StandInKey == other.StandInKey ||
                     this.StandInKey != null &&
-                    this.StandInKey.Equals(other.StandInKey)
+                    this.StandInKey.Equals(other.StandInKey, StringComparison.Ordinal)
                 ) &&
                 (
                     this.StoredValueType == other.StoredValueType ||
@@ -569,17 +569,17 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.Value == other.Value ||
                     this.Value != null &&
-                    this.Value.Equals(other.Value)
+                    this.Value.Equals(other.Value, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ErrorCode == other.ErrorCode ||
                     this.ErrorCode != null &&
-                    this.ErrorCode.Equals(other.ErrorCode)
+                    this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ErrorMessage == other.ErrorMessage ||
                     this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(other.ErrorMessage)
+                    this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
                 ) &&
                 (
                     this.HasError == other.HasError ||

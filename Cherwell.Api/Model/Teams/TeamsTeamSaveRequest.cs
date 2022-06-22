@@ -120,7 +120,7 @@ namespace Cherwell.Api.Model.Teams
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as TeamsTeamSaveRequest);
@@ -131,7 +131,7 @@ namespace Cherwell.Api.Model.Teams
         /// </summary>
         /// <param name="other">Instance of TeamsTeamSaveRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsTeamSaveRequest other)
+        public bool Equals(TeamsTeamSaveRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -141,27 +141,27 @@ namespace Cherwell.Api.Model.Teams
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
-                    this.Description.Equals(other.Description)
+                    this.Description.Equals(other.Description, StringComparison.Ordinal)
                 ) && 
                 (
                     this.EmailAlias == other.EmailAlias ||
                     this.EmailAlias != null &&
-                    this.EmailAlias.Equals(other.EmailAlias)
+                    this.EmailAlias.Equals(other.EmailAlias, StringComparison.Ordinal)
                 ) && 
                 (
                     this.Image == other.Image ||
                     this.Image != null &&
-                    this.Image.Equals(other.Image)
+                    this.Image.Equals(other.Image, StringComparison.Ordinal)
                 ) && 
                 (
                     this.TeamId == other.TeamId ||
                     this.TeamId != null &&
-                    this.TeamId.Equals(other.TeamId)
+                    this.TeamId.Equals(other.TeamId, StringComparison.Ordinal)
                 ) && 
                 (
                     this.TeamName == other.TeamName ||
                     this.TeamName != null &&
-                    this.TeamName.Equals(other.TeamName)
+                    this.TeamName.Equals(other.TeamName, StringComparison.Ordinal)
                 ) && 
                 (
                     this.TeamType == other.TeamType ||

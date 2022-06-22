@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Security
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum HttpStatusCodeEnum
+        public enum EnumHttpStatusCode
         {
 
             /// <summary>
@@ -313,7 +313,7 @@ namespace Cherwell.Api.Model.Security
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+        public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="SecurityApiClientSettingResponse" /> class.
         /// </summary>
@@ -330,7 +330,7 @@ namespace Cherwell.Api.Model.Security
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SecurityApiClientSettingResponse(string Name = default(string), string Description = default(string), string Culture = default(string), string ClientKey = default(string), int? TokenLifespanMinutes = default(int?), int? RefreshTokenLifespanMinutes = default(int?), bool? ApiAccessIsEnabled = default(bool?), bool? AllowAnonymousAccess = default(bool?), string StandInKey = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public SecurityApiClientSettingResponse(string Name = default(string), string Description = default(string), string Culture = default(string), string ClientKey = default(string), int? TokenLifespanMinutes = default(int?), int? RefreshTokenLifespanMinutes = default(int?), bool? ApiAccessIsEnabled = default(bool?), bool? AllowAnonymousAccess = default(bool?), string StandInKey = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Name = Name;
             this.Description = Description;
@@ -446,7 +446,7 @@ namespace Cherwell.Api.Model.Security
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as SecurityApiClientSettingResponse);
@@ -457,7 +457,7 @@ namespace Cherwell.Api.Model.Security
         /// </summary>
         /// <param name="other">Instance of SecurityApiClientSettingResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecurityApiClientSettingResponse other)
+        public bool Equals(SecurityApiClientSettingResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -467,22 +467,22 @@ namespace Cherwell.Api.Model.Security
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name.Equals(other.Name, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
-                    this.Description.Equals(other.Description)
+                    this.Description.Equals(other.Description, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Culture == other.Culture ||
                     this.Culture != null &&
-                    this.Culture.Equals(other.Culture)
+                    this.Culture.Equals(other.Culture, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ClientKey == other.ClientKey ||
                     this.ClientKey != null &&
-                    this.ClientKey.Equals(other.ClientKey)
+                    this.ClientKey.Equals(other.ClientKey, StringComparison.Ordinal)
                 ) &&
                 (
                     this.TokenLifespanMinutes == other.TokenLifespanMinutes ||
@@ -507,17 +507,17 @@ namespace Cherwell.Api.Model.Security
                 (
                     this.StandInKey == other.StandInKey ||
                     this.StandInKey != null &&
-                    this.StandInKey.Equals(other.StandInKey)
+                    this.StandInKey.Equals(other.StandInKey, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ErrorCode == other.ErrorCode ||
                     this.ErrorCode != null &&
-                    this.ErrorCode.Equals(other.ErrorCode)
+                    this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ErrorMessage == other.ErrorMessage ||
                     this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(other.ErrorMessage)
+                    this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
                 ) &&
                 (
                     this.HasError == other.HasError ||

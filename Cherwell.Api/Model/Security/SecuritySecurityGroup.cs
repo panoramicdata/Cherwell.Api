@@ -76,7 +76,7 @@ namespace Cherwell.Api.Model
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as SecuritySecurityGroup);
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model
         /// </summary>
         /// <param name="other">Instance of SecuritySecurityGroup to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecuritySecurityGroup other)
+        public bool Equals(SecuritySecurityGroup? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -97,17 +97,17 @@ namespace Cherwell.Api.Model
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
-                    this.Description.Equals(other.Description)
+                    this.Description.Equals(other.Description, StringComparison.Ordinal)
                 ) && 
                 (
                     this.GroupId == other.GroupId ||
                     this.GroupId != null &&
-                    this.GroupId.Equals(other.GroupId)
+                    this.GroupId.Equals(other.GroupId, StringComparison.Ordinal)
                 ) && 
                 (
                     this.GroupName == other.GroupName ||
                     this.GroupName != null &&
-                    this.GroupName.Equals(other.GroupName)
+                    this.GroupName.Equals(other.GroupName, StringComparison.Ordinal)
                 );
         }
 

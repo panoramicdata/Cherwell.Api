@@ -140,7 +140,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as SearchesRelatedBusinessObjectRequest);
@@ -151,7 +151,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesRelatedBusinessObjectRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesRelatedBusinessObjectRequest other)
+        public bool Equals(SearchesRelatedBusinessObjectRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -166,7 +166,7 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.CustomGridId == other.CustomGridId ||
                     this.CustomGridId != null &&
-                    this.CustomGridId.Equals(other.CustomGridId)
+                    this.CustomGridId.Equals(other.CustomGridId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.FieldsList == other.FieldsList ||
@@ -191,17 +191,17 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.ParentBusObId == other.ParentBusObId ||
                     this.ParentBusObId != null &&
-                    this.ParentBusObId.Equals(other.ParentBusObId)
+                    this.ParentBusObId.Equals(other.ParentBusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ParentBusObRecId == other.ParentBusObRecId ||
                     this.ParentBusObRecId != null &&
-                    this.ParentBusObRecId.Equals(other.ParentBusObRecId)
+                    this.ParentBusObRecId.Equals(other.ParentBusObRecId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.RelationshipId == other.RelationshipId ||
                     this.RelationshipId != null &&
-                    this.RelationshipId.Equals(other.RelationshipId)
+                    this.RelationshipId.Equals(other.RelationshipId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Sorting == other.Sorting ||

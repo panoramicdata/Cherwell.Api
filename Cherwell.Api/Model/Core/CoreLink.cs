@@ -68,7 +68,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as CoreLink);
@@ -79,7 +79,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreLink to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreLink other)
+        public bool Equals(CoreLink? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -89,12 +89,12 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name.Equals(other.Name, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Url == other.Url ||
                     this.Url != null &&
-                    this.Url.Equals(other.Url)
+                    this.Url.Equals(other.Url, StringComparison.Ordinal)
                 );
         }
 

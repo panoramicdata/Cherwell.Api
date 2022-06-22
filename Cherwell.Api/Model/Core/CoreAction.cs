@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets ActionType
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum ActionTypeEnum
+        public enum EnumActionType
         {
 
             /// <summary>
@@ -127,7 +127,7 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets LoginEnabledMode
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum LoginEnabledModeEnum
+        public enum EnumLoginEnabledMode
         {
 
             /// <summary>
@@ -153,7 +153,7 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets LoginVisibilityMode
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum LoginVisibilityModeEnum
+        public enum EnumLoginVisibilityMode
         {
 
             /// <summary>
@@ -179,17 +179,17 @@ namespace Cherwell.Api.Model.Core
         /// Gets or Sets ActionType
         /// </summary>
         [DataMember(Name = "actionType", EmitDefaultValue = false)]
-        public ActionTypeEnum? ActionType { get; set; }
+        public EnumActionType? ActionType { get; set; }
         /// <summary>
         /// Gets or Sets LoginEnabledMode
         /// </summary>
         [DataMember(Name = "loginEnabledMode", EmitDefaultValue = false)]
-        public LoginEnabledModeEnum? LoginEnabledMode { get; set; }
+        public EnumLoginEnabledMode? LoginEnabledMode { get; set; }
         /// <summary>
         /// Gets or Sets LoginVisibilityMode
         /// </summary>
         [DataMember(Name = "loginVisibilityMode", EmitDefaultValue = false)]
-        public LoginVisibilityModeEnum? LoginVisibilityMode { get; set; }
+        public EnumLoginVisibilityMode? LoginVisibilityMode { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CoreAction" /> class.
         /// </summary>
@@ -208,7 +208,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="Name">Name.</param>
         /// <param name="Parameters">Parameters.</param>
         /// <param name="Visible">Visible.</param>
-        public CoreAction(string ActionCommand = default(string), ActionTypeEnum? ActionType = default(ActionTypeEnum?), bool? AlwaysTextAndImage = default(bool?), bool? BeginGroup = default(bool?), List<CoreAction> ChildActions = default(List<CoreAction>), List<string> Dependencies = default(List<string>), string DisplayText = default(string), bool? Enabled = default(bool?), string GalleryImage = default(string), string HelpText = default(string), LoginEnabledModeEnum? LoginEnabledMode = default(LoginEnabledModeEnum?), LoginVisibilityModeEnum? LoginVisibilityMode = default(LoginVisibilityModeEnum?), string Name = default(string), Dictionary<string, string> Parameters = default(Dictionary<string, string>), bool? Visible = default(bool?))
+        public CoreAction(string ActionCommand = default(string), EnumActionType? ActionType = default(EnumActionType?), bool? AlwaysTextAndImage = default(bool?), bool? BeginGroup = default(bool?), List<CoreAction> ChildActions = default(List<CoreAction>), List<string> Dependencies = default(List<string>), string DisplayText = default(string), bool? Enabled = default(bool?), string GalleryImage = default(string), string HelpText = default(string), EnumLoginEnabledMode? LoginEnabledMode = default(EnumLoginEnabledMode?), EnumLoginVisibilityMode? LoginVisibilityMode = default(EnumLoginVisibilityMode?), string Name = default(string), Dictionary<string, string> Parameters = default(Dictionary<string, string>), bool? Visible = default(bool?))
         {
             this.ActionCommand = ActionCommand;
             this.ActionType = ActionType;
@@ -328,7 +328,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as CoreAction);
@@ -339,7 +339,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="other">Instance of CoreAction to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CoreAction other)
+        public bool Equals(CoreAction? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -349,7 +349,7 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.ActionCommand == other.ActionCommand ||
                     this.ActionCommand != null &&
-                    this.ActionCommand.Equals(other.ActionCommand)
+                    this.ActionCommand.Equals(other.ActionCommand, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ActionType == other.ActionType ||
@@ -379,7 +379,7 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.DisplayText == other.DisplayText ||
                     this.DisplayText != null &&
-                    this.DisplayText.Equals(other.DisplayText)
+                    this.DisplayText.Equals(other.DisplayText, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Enabled == other.Enabled ||
@@ -389,12 +389,12 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.GalleryImage == other.GalleryImage ||
                     this.GalleryImage != null &&
-                    this.GalleryImage.Equals(other.GalleryImage)
+                    this.GalleryImage.Equals(other.GalleryImage, StringComparison.Ordinal)
                 ) &&
                 (
                     this.HelpText == other.HelpText ||
                     this.HelpText != null &&
-                    this.HelpText.Equals(other.HelpText)
+                    this.HelpText.Equals(other.HelpText, StringComparison.Ordinal)
                 ) &&
                 (
                     this.LoginEnabledMode == other.LoginEnabledMode ||
@@ -409,7 +409,7 @@ namespace Cherwell.Api.Model.Core
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name.Equals(other.Name, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Parameters == other.Parameters ||

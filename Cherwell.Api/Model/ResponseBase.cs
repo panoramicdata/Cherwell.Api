@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum HttpStatusCodeEnum
+        public enum EnumHttpStatusCode
         {
             
             /// <summary>
@@ -313,7 +313,7 @@ namespace Cherwell.Api.Model
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+        public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseBase" /> class.
         /// </summary>
@@ -321,7 +321,7 @@ namespace Cherwell.Api.Model
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public ResponseBase(string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public ResponseBase(string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.ErrorCode = ErrorCode;
             this.ErrorMessage = ErrorMessage;
@@ -374,7 +374,7 @@ namespace Cherwell.Api.Model
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as ResponseBase);
@@ -385,7 +385,7 @@ namespace Cherwell.Api.Model
         /// </summary>
         /// <param name="other">Instance of ResponseBase to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ResponseBase other)
+        public bool Equals(ResponseBase? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -395,12 +395,12 @@ namespace Cherwell.Api.Model
                 (
                     this.ErrorCode == other.ErrorCode ||
                     this.ErrorCode != null &&
-                    this.ErrorCode.Equals(other.ErrorCode)
+                    this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
                 ) && 
                 (
                     this.ErrorMessage == other.ErrorMessage ||
                     this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(other.ErrorMessage)
+                    this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
                 ) && 
                 (
                     this.HasError == other.HasError ||

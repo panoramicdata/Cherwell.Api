@@ -76,7 +76,7 @@ namespace Cherwell.Api.Model.Teams
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as TeamsSaveWorkgroupMemberRequest);
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.Teams
         /// </summary>
         /// <param name="other">Instance of TeamsSaveWorkgroupMemberRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsSaveWorkgroupMemberRequest other)
+        public bool Equals(TeamsSaveWorkgroupMemberRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -97,12 +97,12 @@ namespace Cherwell.Api.Model.Teams
                 (
                     this.CustomerRecordId == other.CustomerRecordId ||
                     this.CustomerRecordId != null &&
-                    this.CustomerRecordId.Equals(other.CustomerRecordId)
+                    this.CustomerRecordId.Equals(other.CustomerRecordId, StringComparison.Ordinal)
                 ) && 
                 (
                     this.WorkgroupId == other.WorkgroupId ||
                     this.WorkgroupId != null &&
-                    this.WorkgroupId.Equals(other.WorkgroupId)
+                    this.WorkgroupId.Equals(other.WorkgroupId, StringComparison.Ordinal)
                 ) && 
                 (
                     this.CustomerIsWorkgroupManager == other.CustomerIsWorkgroupManager ||

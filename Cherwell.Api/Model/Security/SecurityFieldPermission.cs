@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Security
 {
     /// <summary>
-    /// SecurityFieldPermission
+    /// PermissionSecurityField
     /// </summary>
     [DataContract]
-    public partial class SecurityFieldPermission : IEquatable<SecurityFieldPermission>, IValidatableObject
+    public partial class PermissionSecurityField : IEquatable<PermissionSecurityField>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecurityFieldPermission" /> class.
+        /// Initializes a new instance of the <see cref="PermissionSecurityField" /> class.
         /// </summary>
         /// <param name="DepartmentMemberEdit">DepartmentMemberEdit.</param>
         /// <param name="DepartmentMemberView">DepartmentMemberView.</param>
@@ -36,7 +36,7 @@ namespace Cherwell.Api.Model.Security
         /// <param name="TeamManagerOfOwnerView">TeamManagerOfOwnerView.</param>
         /// <param name="TeamView">TeamView.</param>
         /// <param name="View">View.</param>
-        public SecurityFieldPermission(bool? DepartmentMemberEdit = default(bool?), bool? DepartmentMemberView = default(bool?), bool? Edit = default(bool?), string FieldId = default(string), string FieldName = default(string), bool? ManagerOfOwnerEdit = default(bool?), bool? ManagerOfOwnerView = default(bool?), bool? OwnerEdit = default(bool?), bool? OwnerView = default(bool?), bool? TeamEdit = default(bool?), bool? TeamManagerOfOwnerEdit = default(bool?), bool? TeamManagerOfOwnerView = default(bool?), bool? TeamView = default(bool?), bool? View = default(bool?))
+        public PermissionSecurityField(bool? DepartmentMemberEdit = default(bool?), bool? DepartmentMemberView = default(bool?), bool? Edit = default(bool?), string FieldId = default(string), string FieldName = default(string), bool? ManagerOfOwnerEdit = default(bool?), bool? ManagerOfOwnerView = default(bool?), bool? OwnerEdit = default(bool?), bool? OwnerView = default(bool?), bool? TeamEdit = default(bool?), bool? TeamManagerOfOwnerEdit = default(bool?), bool? TeamManagerOfOwnerView = default(bool?), bool? TeamView = default(bool?), bool? View = default(bool?))
         {
             this.DepartmentMemberEdit = DepartmentMemberEdit;
             this.DepartmentMemberView = DepartmentMemberView;
@@ -131,7 +131,7 @@ namespace Cherwell.Api.Model.Security
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class SecurityFieldPermission {\n");
+            sb.Append("class PermissionSecurityField {\n");
             sb.Append("  DepartmentMemberEdit: ").Append(DepartmentMemberEdit).Append('\n');
             sb.Append("  DepartmentMemberView: ").Append(DepartmentMemberView).Append('\n');
             sb.Append("  Edit: ").Append(Edit).Append('\n');
@@ -164,18 +164,18 @@ namespace Cherwell.Api.Model.Security
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SecurityFieldPermission);
+            return this.Equals(obj as PermissionSecurityField);
         }
 
         /// <summary>
-        /// Returns true if SecurityFieldPermission instances are equal
+        /// Returns true if PermissionSecurityField instances are equal
         /// </summary>
-        /// <param name="other">Instance of SecurityFieldPermission to be compared</param>
+        /// <param name="other">Instance of PermissionSecurityField to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecurityFieldPermission other)
+        public bool Equals(PermissionSecurityField? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -200,12 +200,12 @@ namespace Cherwell.Api.Model.Security
                 (
                     this.FieldId == other.FieldId ||
                     this.FieldId != null &&
-                    this.FieldId.Equals(other.FieldId)
+                    this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.FieldName == other.FieldName ||
                     this.FieldName != null &&
-                    this.FieldName.Equals(other.FieldName)
+                    this.FieldName.Equals(other.FieldName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ManagerOfOwnerEdit == other.ManagerOfOwnerEdit ||

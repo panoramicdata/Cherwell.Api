@@ -100,7 +100,7 @@ namespace Cherwell.Api.Model.Forms
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as FormsSection);
@@ -111,7 +111,7 @@ namespace Cherwell.Api.Model.Forms
         /// </summary>
         /// <param name="other">Instance of FormsSection to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(FormsSection other)
+        public bool Equals(FormsSection? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -126,27 +126,27 @@ namespace Cherwell.Api.Model.Forms
                 (
                     this.GalleryImage == other.GalleryImage ||
                     this.GalleryImage != null &&
-                    this.GalleryImage.Equals(other.GalleryImage)
+                    this.GalleryImage.Equals(other.GalleryImage, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Title == other.Title ||
                     this.Title != null &&
-                    this.Title.Equals(other.Title)
+                    this.Title.Equals(other.Title, StringComparison.Ordinal)
                 ) &&
                 (
                     this.RelationshipId == other.RelationshipId ||
                     this.RelationshipId != null &&
-                    this.RelationshipId.Equals(other.RelationshipId)
+                    this.RelationshipId.Equals(other.RelationshipId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.TargetBusObId == other.TargetBusObId ||
                     this.TargetBusObId != null &&
-                    this.TargetBusObId.Equals(other.TargetBusObId)
+                    this.TargetBusObId.Equals(other.TargetBusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.TargetBusObRecId == other.TargetBusObRecId ||
                     this.TargetBusObRecId != null &&
-                    this.TargetBusObRecId.Equals(other.TargetBusObRecId)
+                    this.TargetBusObRecId.Equals(other.TargetBusObRecId, StringComparison.Ordinal)
                 );
         }
 

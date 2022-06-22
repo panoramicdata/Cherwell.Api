@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Teams
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum HttpStatusCodeEnum
+        public enum EnumHttpStatusCode
         {
             
             /// <summary>
@@ -313,7 +313,7 @@ namespace Cherwell.Api.Model.Teams
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+        public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="TeamsTeamsV2Response" /> class.
         /// </summary>
@@ -322,7 +322,7 @@ namespace Cherwell.Api.Model.Teams
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TeamsTeamsV2Response(List<TeamsTeam> Teams = default(List<TeamsTeam>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), HttpStatusCodeEnum? HttpStatusCode = default(HttpStatusCodeEnum?))
+        public TeamsTeamsV2Response(List<TeamsTeam> Teams = default(List<TeamsTeam>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Teams = Teams;
             this.ErrorCode = ErrorCode;
@@ -382,7 +382,7 @@ namespace Cherwell.Api.Model.Teams
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as TeamsTeamsV2Response);
@@ -393,7 +393,7 @@ namespace Cherwell.Api.Model.Teams
         /// </summary>
         /// <param name="other">Instance of TeamsTeamsV2Response to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsTeamsV2Response other)
+        public bool Equals(TeamsTeamsV2Response? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

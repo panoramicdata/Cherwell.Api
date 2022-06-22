@@ -164,7 +164,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as SearchesQuickSearchSpecificByIdRequest);
@@ -175,7 +175,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesQuickSearchSpecificByIdRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesQuickSearchSpecificByIdRequest other)
+        public bool Equals(SearchesQuickSearchSpecificByIdRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -190,7 +190,7 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.StandIn == other.StandIn ||
                     this.StandIn != null &&
-                    this.StandIn.Equals(other.StandIn)
+                    this.StandIn.Equals(other.StandIn, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Ascending == other.Ascending ||
@@ -225,7 +225,7 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.SearchText == other.SearchText ||
                     this.SearchText != null &&
-                    this.SearchText.Equals(other.SearchText)
+                    this.SearchText.Equals(other.SearchText, StringComparison.Ordinal)
                 ) &&
                 (
                     this.SelectedChangedLimit == other.SelectedChangedLimit ||
@@ -235,7 +235,7 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.SelectedSortByFieldId == other.SelectedSortByFieldId ||
                     this.SelectedSortByFieldId != null &&
-                    this.SelectedSortByFieldId.Equals(other.SelectedSortByFieldId)
+                    this.SelectedSortByFieldId.Equals(other.SelectedSortByFieldId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.SortByRelevance == other.SortByRelevance ||
@@ -245,7 +245,7 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.SpecificSearchTargetId == other.SpecificSearchTargetId ||
                     this.SpecificSearchTargetId != null &&
-                    this.SpecificSearchTargetId.Equals(other.SpecificSearchTargetId)
+                    this.SpecificSearchTargetId.Equals(other.SpecificSearchTargetId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.UseSortBy == other.UseSortBy ||
