@@ -10,33 +10,38 @@ namespace Cherwell.Api
 	public partial class CherwellClient : IDisposable
 	{
 		private readonly ILogger _logger;
-		private readonly HttpClient _client;
+		private readonly HttpClient _httpClient;
 
-		private CherwellClient(HttpClient client, ILogger? logger)
+		/// <summary>
+		/// Create an instance of the client for accessing the Cherwell API
+		/// </summary>
+		/// <param name="options">The options to be used when accessing the API</param>
+		/// <param name="logger">Optional logger to which to output details of the operations performed</param>
+		public CherwellClient(CherwellClientOptions options, ILogger? logger = null)
 		{
+			ArgumentNullException.ThrowIfNull(options);
 			_logger = logger ?? NullLogger.Instance;
-			_client = client;
 
-			Approval = RestService.For<IApprovalApi>(client);
-			BusinessObject = RestService.For<IBusinessObjectApi>(client);
-			Core = RestService.For<ICoreApi>(client);
-			Forms = RestService.For<IFormsApi>(client);
-			Lifecycle = RestService.For<ILifecycleApi>(client);
-			OneStepActions = RestService.For<IOneStepActionsApi>(client);
-			Queues = RestService.For<IQueuesApi>(client);
-			Searches = RestService.For<ISearchesApi>(client);
-			Security = RestService.For<ISecurityApi>(client);
-			Service = RestService.For<IServiceApi>(client);
-			Teams = RestService.For<ITeamsApi>(client);
-			Users = RestService.For<IUsersApi>(client);
-		}
+			// Validate that all of the necessary configuration has been provided
+			options.Validate();
 
-		/// <param name="options">The options used to configure the behaviour of the client</param>
-		public CherwellClient(CherwellClientOptions options, ILogger? logger = null) : this(new HttpClient(new AuthenticatedHttpClientHandler(options))
-		{
-			BaseAddress = new Uri(options.BaseAddress)
-		}, logger)
-		{
+			_httpClient = new HttpClient(new AuthenticatedHttpClientHandler(options, _logger))
+			{
+				BaseAddress = new Uri(options.BaseAddress!)
+			};
+
+			Approval = RestService.For<IApprovalApi>(_httpClient);
+			BusinessObject = RestService.For<IBusinessObjectApi>(_httpClient);
+			Core = RestService.For<ICoreApi>(_httpClient);
+			Forms = RestService.For<IFormsApi>(_httpClient);
+			Lifecycle = RestService.For<ILifecycleApi>(_httpClient);
+			OneStepActions = RestService.For<IOneStepActionsApi>(_httpClient);
+			Queues = RestService.For<IQueuesApi>(_httpClient);
+			Searches = RestService.For<ISearchesApi>(_httpClient);
+			Security = RestService.For<ISecurityApi>(_httpClient);
+			Service = RestService.For<IServiceApi>(_httpClient);
+			Teams = RestService.For<ITeamsApi>(_httpClient);
+			Users = RestService.For<IUsersApi>(_httpClient);
 		}
 
 		/// <inheritdoc />
@@ -75,15 +80,7 @@ namespace Cherwell.Api
 		/// <inheritdoc />
 		public IUsersApi Users { get; }
 
-
-		public string? Scheme { get; }
-
-		public string? Token { get; }
-
-		private Task<Tuple<string, string>> GetSchemeAndToken()
-		{
-			return Task.FromResult(new Tuple<string, string>(Scheme, Token));
-		}
+		#region Dispose
 
 		private bool _disposedValue;
 
@@ -94,7 +91,7 @@ namespace Cherwell.Api
 				if (disposing)
 				{
 					/// _logger.LogTrace("{Message}", Resources.Disposing);
-					_client.Dispose();
+					_httpClient.Dispose();
 					/// _logger.LogTrace("{Message}", Resources.Disposed);
 				}
 			}
@@ -106,5 +103,7 @@ namespace Cherwell.Api
 
 			GC.SuppressFinalize(this);
 		}
+
+		#endregion
 	}
 }

@@ -59,5 +59,14 @@ namespace Cherwell.Api {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to log out of the remote service.
+        /// </summary>
+        internal static string FailedToLogOut {
+            get {
+                return ResourceManager.GetString("FailedToLogOut", resourceCulture);
+            }
+        }
     }
 }

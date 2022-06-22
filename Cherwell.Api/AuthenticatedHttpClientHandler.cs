@@ -1,4 +1,4 @@
-﻿using Cherwell.Api.Model;
+﻿using Microsoft.Extensions.Logging;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Security.Authentication;
@@ -9,17 +9,19 @@ namespace Cherwell.Api
 	public class AuthenticatedHttpClientHandler : HttpClientHandler
 	{
 		private readonly CherwellClientOptions _options;
+		private readonly ILogger _logger;
 		private readonly HttpClient _authenticatingClient;
 		private string? _accessToken;
 		private string? _refreshToken;
 		private DateTime _tokenRefreshRequiredAt = DateTime.MaxValue;
 		private const string _authenticationType = "Bearer";
 
-		public AuthenticatedHttpClientHandler(CherwellClientOptions options)
+		public AuthenticatedHttpClientHandler(CherwellClientOptions options, ILogger logger)
 		{
 			_options = options;
+			_logger = logger;
 			_authenticatingClient = new HttpClient();
-			_authenticatingClient.BaseAddress = new Uri(options.BaseAddress);
+			_authenticatingClient.BaseAddress = new Uri(options.BaseAddress!);
 		}
 
 		/// <summary>
@@ -52,6 +54,7 @@ namespace Cherwell.Api
 			if (_accessToken is null)
 			{
 				// First connection; we need to create a token
+				_logger.LogDebug("Requesting authentication token");
 				await GenerateAccessTokenAsync(GrantTypes.Password, cancellationToken)
 					.ConfigureAwait(false);
 				return _accessToken!;
@@ -63,6 +66,7 @@ namespace Cherwell.Api
 			}
 
 			// The time has come to refresh the token
+			_logger.LogDebug("Refreshing authentication token");
 			await GenerateAccessTokenAsync(GrantTypes.RefreshToken, cancellationToken)
 				.ConfigureAwait(false);
 			return _accessToken;
@@ -133,12 +137,13 @@ namespace Cherwell.Api
 			var response = await _authenticatingClient
 				.SendAsync(request)
 				.ConfigureAwait(false);
-#if DEBUG
 			if (!response.IsSuccessStatusCode)
 			{
+				_logger.LogWarning(Resources.FailedToLogOut);
+#if DEBUG
 				throw new AuthenticationException();
-			}
 #endif
+			}
 		}
 
 		#region Dispose
