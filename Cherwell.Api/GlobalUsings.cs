@@ -1,9 +1,9 @@
 ﻿global using Cherwell.Api.Model.Approval;
-global using Cherwell.Model.BusinessObject;
-global using Cherwell.Model.Core;
-global using Cherwell.Model.Forms;
-global using Cherwell.Model.Lifecycle;
-global using Cherwell.Model.OneStepActions;
-global using Cherwell.Model.Queues;
-global using Cherwell.Model.Searches;
-global using Cherwell.Model.Security;
+global using Cherwell.Api.Model.BusinessObject;
+global using Cherwell.Api.Model.Core;
+global using Cherwell.Api.Model.Forms;
+global using Cherwell.Api.Model.Lifecycle;
+global using Cherwell.Api.Model.OneStepActions;
+global using Cherwell.Api.Model.Queues;
+global using Cherwell.Api.Model.Searches;
+global using Cherwell.Api.Model.Security;
