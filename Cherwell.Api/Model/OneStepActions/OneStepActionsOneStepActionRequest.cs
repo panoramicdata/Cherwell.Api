@@ -118,17 +118,17 @@ namespace Cherwell.Api.Model.OneStepActions
                 (
                     this.BusObId == other.BusObId ||
                     this.BusObId != null &&
-                    this.BusObId.Equals(other.BusObId)
+                    this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObRecId == other.BusObRecId ||
                     this.BusObRecId != null &&
-                    this.BusObRecId.Equals(other.BusObRecId)
+                    this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.OneStepActionStandInKey == other.OneStepActionStandInKey ||
                     this.OneStepActionStandInKey != null &&
-                    this.OneStepActionStandInKey.Equals(other.OneStepActionStandInKey)
+                    this.OneStepActionStandInKey.Equals(other.OneStepActionStandInKey, StringComparison.Ordinal)
                 ) &&
                 (
                     this.PromptValues == other.PromptValues ||

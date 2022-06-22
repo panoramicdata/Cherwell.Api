@@ -34,7 +34,18 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="RelatedBusinessObjects">RelatedBusinessObjects.</param>
         /// <param name="RelationshipId">RelationshipId.</param>
         /// <param name="TotalRecords">TotalRecords.</param>
-        public SearchesRelatedBusinessObjectResponse(string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), List<CoreLink> Links = default(List<CoreLink>), int? PageNumber = default(int?), int? PageSize = default(int?), string ParentBusObId = default(string), string ParentBusObPublicId = default(string), string ParentBusObRecId = default(string), List<BusinessObjectReadResponse> RelatedBusinessObjects = default(List<BusinessObjectReadResponse>), string RelationshipId = default(string), int? TotalRecords = default(int?))
+        public SearchesRelatedBusinessObjectResponse(string ErrorCode = default,
+            string ErrorMessage = default,
+            bool? HasError = default,
+            List<CoreLink> Links = default,
+            int? PageNumber = default,
+            int? PageSize = default,
+            string ParentBusObId = default,
+            string ParentBusObPublicId = default,
+            string ParentBusObRecId = default,
+            List<BusinessObjectReadResponse> RelatedBusinessObjects = default,
+            string RelationshipId = default,
+            int? TotalRecords = default)
         {
             this.ErrorCode = ErrorCode;
             this.ErrorMessage = ErrorMessage;
@@ -159,7 +170,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesRelatedBusinessObjectResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesRelatedBusinessObjectResponse other)
+        public bool Equals(SearchesRelatedBusinessObjectResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -169,12 +180,12 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.ErrorCode == other.ErrorCode ||
                     this.ErrorCode != null &&
-                    this.ErrorCode.Equals(other.ErrorCode)
+                    this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ErrorMessage == other.ErrorMessage ||
                     this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(other.ErrorMessage)
+                    this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
                 ) &&
                 (
                     this.HasError == other.HasError ||
@@ -199,17 +210,17 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.ParentBusObId == other.ParentBusObId ||
                     this.ParentBusObId != null &&
-                    this.ParentBusObId.Equals(other.ParentBusObId)
+                    this.ParentBusObId.Equals(other.ParentBusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ParentBusObPublicId == other.ParentBusObPublicId ||
                     this.ParentBusObPublicId != null &&
-                    this.ParentBusObPublicId.Equals(other.ParentBusObPublicId)
+                    this.ParentBusObPublicId.Equals(other.ParentBusObPublicId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ParentBusObRecId == other.ParentBusObRecId ||
                     this.ParentBusObRecId != null &&
-                    this.ParentBusObRecId.Equals(other.ParentBusObRecId)
+                    this.ParentBusObRecId.Equals(other.ParentBusObRecId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.RelatedBusinessObjects == other.RelatedBusinessObjects ||
@@ -219,7 +230,7 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.RelationshipId == other.RelationshipId ||
                     this.RelationshipId != null &&
-                    this.RelationshipId.Equals(other.RelationshipId)
+                    this.RelationshipId.Equals(other.RelationshipId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.TotalRecords == other.TotalRecords ||

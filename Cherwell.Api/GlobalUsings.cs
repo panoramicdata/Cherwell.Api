@@ -1,4 +1,5 @@
-﻿global using Cherwell.Api.Model.Approval;
+﻿global using Cherwell.Api.Model;
+global using Cherwell.Api.Model.Approval;
 global using Cherwell.Api.Model.BusinessObject;
 global using Cherwell.Api.Model.Core;
 global using Cherwell.Api.Model.Forms;

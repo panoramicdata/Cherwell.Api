@@ -435,17 +435,17 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.BusObId == other.BusObId ||
                     this.BusObId != null &&
-                    this.BusObId.Equals(other.BusObId)
+                    this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObPublicId == other.BusObPublicId ||
                     this.BusObPublicId != null &&
-                    this.BusObPublicId.Equals(other.BusObPublicId)
+                    this.BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObRecId == other.BusObRecId ||
                     this.BusObRecId != null &&
-                    this.BusObRecId.Equals(other.BusObRecId)
+                    this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Fields == other.Fields ||
@@ -460,12 +460,12 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.ErrorCode == other.ErrorCode ||
                     this.ErrorCode != null &&
-                    this.ErrorCode.Equals(other.ErrorCode)
+                    this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ErrorMessage == other.ErrorMessage ||
                     this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(other.ErrorMessage)
+                    this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
                 ) &&
                 (
                     this.HasError == other.HasError ||

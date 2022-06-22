@@ -225,32 +225,32 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.Association == other.Association ||
                     this.Association != null &&
-                    this.Association.Equals(other.Association)
+                    this.Association.Equals(other.Association, StringComparison.Ordinal)
                 ) &&
                 (
                     this.AssociationName == other.AssociationName ||
                     this.AssociationName != null &&
-                    this.AssociationName.Equals(other.AssociationName)
+                    this.AssociationName.Equals(other.AssociationName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObId == other.BusObId ||
                     this.BusObId != null &&
-                    this.BusObId.Equals(other.BusObId)
+                    this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.CustomGridDefId == other.CustomGridDefId ||
                     this.CustomGridDefId != null &&
-                    this.CustomGridDefId.Equals(other.CustomGridDefId)
+                    this.CustomGridDefId.Equals(other.CustomGridDefId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.DateTimeFormatting == other.DateTimeFormatting ||
                     this.DateTimeFormatting != null &&
-                    this.DateTimeFormatting.Equals(other.DateTimeFormatting)
+                    this.DateTimeFormatting.Equals(other.DateTimeFormatting, StringComparison.Ordinal)
                 ) &&
                 (
                     this.FieldId == other.FieldId ||
                     this.FieldId != null &&
-                    this.FieldId.Equals(other.FieldId)
+                    this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Fields == other.Fields ||
@@ -285,27 +285,27 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.Scope == other.Scope ||
                     this.Scope != null &&
-                    this.Scope.Equals(other.Scope)
+                    this.Scope.Equals(other.Scope, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ScopeOwner == other.ScopeOwner ||
                     this.ScopeOwner != null &&
-                    this.ScopeOwner.Equals(other.ScopeOwner)
+                    this.ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
                 ) &&
                 (
                     this.SearchId == other.SearchId ||
                     this.SearchId != null &&
-                    this.SearchId.Equals(other.SearchId)
+                    this.SearchId.Equals(other.SearchId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.SearchName == other.SearchName ||
                     this.SearchName != null &&
-                    this.SearchName.Equals(other.SearchName)
+                    this.SearchName.Equals(other.SearchName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.SearchText == other.SearchText ||
                     this.SearchText != null &&
-                    this.SearchText.Equals(other.SearchText)
+                    this.SearchText.Equals(other.SearchText, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Sorting == other.Sorting ||

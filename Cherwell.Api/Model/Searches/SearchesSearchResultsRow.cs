@@ -121,12 +121,12 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.BusObId == other.BusObId ||
                     this.BusObId != null &&
-                    this.BusObId.Equals(other.BusObId)
+                    this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObRecId == other.BusObRecId ||
                     this.BusObRecId != null &&
-                    this.BusObRecId.Equals(other.BusObRecId)
+                    this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Links == other.Links ||
@@ -136,12 +136,12 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.PublicId == other.PublicId ||
                     this.PublicId != null &&
-                    this.PublicId.Equals(other.PublicId)
+                    this.PublicId.Equals(other.PublicId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.RowColor == other.RowColor ||
                     this.RowColor != null &&
-                    this.RowColor.Equals(other.RowColor)
+                    this.RowColor.Equals(other.RowColor, StringComparison.Ordinal)
                 ) &&
                 (
                     this.SearchResultsFieldValues == other.SearchResultsFieldValues ||

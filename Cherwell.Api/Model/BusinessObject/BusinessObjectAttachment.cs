@@ -389,32 +389,32 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.AttachedBusObId == other.AttachedBusObId ||
                     this.AttachedBusObId != null &&
-                    this.AttachedBusObId.Equals(other.AttachedBusObId)
+                    this.AttachedBusObId.Equals(other.AttachedBusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.AttachedBusObRecId == other.AttachedBusObRecId ||
                     this.AttachedBusObRecId != null &&
-                    this.AttachedBusObRecId.Equals(other.AttachedBusObRecId)
+                    this.AttachedBusObRecId.Equals(other.AttachedBusObRecId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.AttachmentFileId == other.AttachmentFileId ||
                     this.AttachmentFileId != null &&
-                    this.AttachmentFileId.Equals(other.AttachmentFileId)
+                    this.AttachmentFileId.Equals(other.AttachmentFileId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.AttachmentFileName == other.AttachmentFileName ||
                     this.AttachmentFileName != null &&
-                    this.AttachmentFileName.Equals(other.AttachmentFileName)
+                    this.AttachmentFileName.Equals(other.AttachmentFileName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.AttachmentFileType == other.AttachmentFileType ||
                     this.AttachmentFileType != null &&
-                    this.AttachmentFileType.Equals(other.AttachmentFileType)
+                    this.AttachmentFileType.Equals(other.AttachmentFileType, StringComparison.Ordinal)
                 ) &&
                 (
                     this.AttachmentId == other.AttachmentId ||
                     this.AttachmentId != null &&
-                    this.AttachmentId.Equals(other.AttachmentId)
+                    this.AttachmentId.Equals(other.AttachmentId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.AttachmentType == other.AttachmentType ||
@@ -424,17 +424,17 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.BusObId == other.BusObId ||
                     this.BusObId != null &&
-                    this.BusObId.Equals(other.BusObId)
+                    this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObRecId == other.BusObRecId ||
                     this.BusObRecId != null &&
-                    this.BusObRecId.Equals(other.BusObRecId)
+                    this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Comment == other.Comment ||
                     this.Comment != null &&
-                    this.Comment.Equals(other.Comment)
+                    this.Comment.Equals(other.Comment, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Created == other.Created ||
@@ -444,7 +444,7 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.DisplayText == other.DisplayText ||
                     this.DisplayText != null &&
-                    this.DisplayText.Equals(other.DisplayText)
+                    this.DisplayText.Equals(other.DisplayText, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Links == other.Links ||
@@ -454,7 +454,7 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.Owner == other.Owner ||
                     this.Owner != null &&
-                    this.Owner.Equals(other.Owner)
+                    this.Owner.Equals(other.Owner, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Scope == other.Scope ||
@@ -464,7 +464,7 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.ScopeOwner == other.ScopeOwner ||
                     this.ScopeOwner != null &&
-                    this.ScopeOwner.Equals(other.ScopeOwner)
+                    this.ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Type == other.Type ||

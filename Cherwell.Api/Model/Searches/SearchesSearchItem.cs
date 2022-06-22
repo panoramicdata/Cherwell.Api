@@ -137,7 +137,7 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.Association == other.Association ||
                     this.Association != null &&
-                    this.Association.Equals(other.Association)
+                    this.Association.Equals(other.Association, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Links == other.Links ||
@@ -147,32 +147,32 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.LocalizedScopeName == other.LocalizedScopeName ||
                     this.LocalizedScopeName != null &&
-                    this.LocalizedScopeName.Equals(other.LocalizedScopeName)
+                    this.LocalizedScopeName.Equals(other.LocalizedScopeName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ParentFolderId == other.ParentFolderId ||
                     this.ParentFolderId != null &&
-                    this.ParentFolderId.Equals(other.ParentFolderId)
+                    this.ParentFolderId.Equals(other.ParentFolderId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Scope == other.Scope ||
                     this.Scope != null &&
-                    this.Scope.Equals(other.Scope)
+                    this.Scope.Equals(other.Scope, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ScopeOwner == other.ScopeOwner ||
                     this.ScopeOwner != null &&
-                    this.ScopeOwner.Equals(other.ScopeOwner)
+                    this.ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
                 ) &&
                 (
                     this.SearchId == other.SearchId ||
                     this.SearchId != null &&
-                    this.SearchId.Equals(other.SearchId)
+                    this.SearchId.Equals(other.SearchId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.SearchName == other.SearchName ||
                     this.SearchName != null &&
-                    this.SearchName.Equals(other.SearchName)
+                    this.SearchName.Equals(other.SearchName, StringComparison.Ordinal)
                 );
         }
 

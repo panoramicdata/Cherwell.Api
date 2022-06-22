@@ -161,22 +161,22 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.BusObId == other.BusObId ||
                     this.BusObId != null &&
-                    this.BusObId.Equals(other.BusObId)
+                    this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObRecId == other.BusObRecId ||
                     this.BusObRecId != null &&
-                    this.BusObRecId.Equals(other.BusObRecId)
+                    this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.DocRepositoryItemId == other.DocRepositoryItemId ||
                     this.DocRepositoryItemId != null &&
-                    this.DocRepositoryItemId.Equals(other.DocRepositoryItemId)
+                    this.DocRepositoryItemId.Equals(other.DocRepositoryItemId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.GalleryImage == other.GalleryImage ||
                     this.GalleryImage != null &&
-                    this.GalleryImage.Equals(other.GalleryImage)
+                    this.GalleryImage.Equals(other.GalleryImage, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Links == other.Links ||
@@ -186,32 +186,32 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.PublicId == other.PublicId ||
                     this.PublicId != null &&
-                    this.PublicId.Equals(other.PublicId)
+                    this.PublicId.Equals(other.PublicId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Scope == other.Scope ||
                     this.Scope != null &&
-                    this.Scope.Equals(other.Scope)
+                    this.Scope.Equals(other.Scope, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ScopeOwner == other.ScopeOwner ||
                     this.ScopeOwner != null &&
-                    this.ScopeOwner.Equals(other.ScopeOwner)
+                    this.ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
                 ) &&
                 (
                     this.SubTitle == other.SubTitle ||
                     this.SubTitle != null &&
-                    this.SubTitle.Equals(other.SubTitle)
+                    this.SubTitle.Equals(other.SubTitle, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Text == other.Text ||
                     this.Text != null &&
-                    this.Text.Equals(other.Text)
+                    this.Text.Equals(other.Text, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Title == other.Title ||
                     this.Title != null &&
-                    this.Title.Equals(other.Title)
+                    this.Title.Equals(other.Title, StringComparison.Ordinal)
                 );
         }
 

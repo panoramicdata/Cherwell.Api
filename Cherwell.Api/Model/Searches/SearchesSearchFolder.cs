@@ -32,7 +32,16 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="ParentFolderId">ParentFolderId.</param>
         /// <param name="Scope">Scope.</param>
         /// <param name="ScopeOwner">ScopeOwner.</param>
-        public SearchesSearchFolder(string Association = default(string), List<SearchesSearchFolder> ChildFolders = default(List<SearchesSearchFolder>), List<SearchesSearchItem> ChildItems = default(List<SearchesSearchItem>), string FolderId = default(string), string FolderName = default(string), List<CoreLink> Links = default(List<CoreLink>), string LocalizedScopeName = default(string), string ParentFolderId = default(string), string Scope = default(string), string ScopeOwner = default(string))
+        public SearchesSearchFolder(string Association = default,
+            List<SearchesSearchFolder> ChildFolders = default,
+            List<SearchesSearchItem> ChildItems = default, 
+            string FolderId = default, 
+            string FolderName = default, 
+            List<CoreLink> Links = default, 
+            string LocalizedScopeName = default, 
+            string ParentFolderId = default, 
+            string Scope = default, 
+            string ScopeOwner = default)
         {
             this.Association = Association;
             this.ChildFolders = ChildFolders;
@@ -132,7 +141,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="obj">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             return this.Equals(obj as SearchesSearchFolder);
@@ -153,7 +162,7 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.Association == other.Association ||
                     this.Association != null &&
-                    this.Association.Equals(other.Association)
+                    this.Association.Equals(other.Association, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ChildFolders == other.ChildFolders ||
@@ -168,12 +177,12 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.FolderId == other.FolderId ||
                     this.FolderId != null &&
-                    this.FolderId.Equals(other.FolderId)
+                    this.FolderId.Equals(other.FolderId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.FolderName == other.FolderName ||
                     this.FolderName != null &&
-                    this.FolderName.Equals(other.FolderName)
+                    this.FolderName.Equals(other.FolderName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Links == other.Links ||
@@ -183,22 +192,22 @@ namespace Cherwell.Api.Model.Searches
                 (
                     this.LocalizedScopeName == other.LocalizedScopeName ||
                     this.LocalizedScopeName != null &&
-                    this.LocalizedScopeName.Equals(other.LocalizedScopeName)
+                    this.LocalizedScopeName.Equals(other.LocalizedScopeName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ParentFolderId == other.ParentFolderId ||
                     this.ParentFolderId != null &&
-                    this.ParentFolderId.Equals(other.ParentFolderId)
+                    this.ParentFolderId.Equals(other.ParentFolderId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Scope == other.Scope ||
                     this.Scope != null &&
-                    this.Scope.Equals(other.Scope)
+                    this.Scope.Equals(other.Scope, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ScopeOwner == other.ScopeOwner ||
                     this.ScopeOwner != null &&
-                    this.ScopeOwner.Equals(other.ScopeOwner)
+                    this.ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
                 );
         }
 
