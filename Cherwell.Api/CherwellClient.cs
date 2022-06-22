@@ -7,13 +7,15 @@ namespace Cherwell.Api
 	/// <summary>
 	/// API client is mainly responsible for making the HTTP call to the API backend.
 	/// </summary>
-	public partial class CherwellClient
+	public partial class CherwellClient : IDisposable
 	{
 		private readonly ILogger _logger;
+		private readonly HttpClient _client;
 
 		private CherwellClient(HttpClient client, ILogger? logger)
 		{
 			_logger = logger ?? NullLogger.Instance;
+			_client = client;
 
 			Approval = RestService.For<IApprovalApi>(client);
 			BusinessObject = RestService.For<IBusinessObjectApi>(client);
@@ -85,17 +87,24 @@ namespace Cherwell.Api
 
 		private bool _disposedValue;
 
-		//protected virtual void Dispose(bool disposing, HttpClient client)
-		//{
-		//	if (!_disposedValue)
-		//	{
-		//		if (disposing)
-		//		{
-		//			/// _logger.LogTrace("{Message}", Resources.Disposing);
-		//			client.Dispose();
+		protected virtual void Dispose(bool disposing)
+		{
+			if (!_disposedValue)
+			{
+				if (disposing)
+				{
+					/// _logger.LogTrace("{Message}", Resources.Disposing);
+					_client.Dispose();
+					/// _logger.LogTrace("{Message}", Resources.Disposed);
+				}
+			}
+		}
 
-		//		}
-		//	}
-		//}
+		public void Dispose()
+		{
+			Dispose(true);
+
+			GC.SuppressFinalize(this);
+		}
 	}
 }
