@@ -26,7 +26,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="SourceId">SourceId.</param>
         /// <param name="SourceChange">SourceChange.</param>
         /// <param name="Key">Key.</param>
-        public BusinessObjectNotificationTrigger(string SourceType = default(string), string SourceId = default(string), string SourceChange = default(string), string Key = default(string))
+        public BusinessObjectNotificationTrigger(string SourceType = default, string SourceId = default, string SourceChange = default, string Key = default)
         {
             this.SourceType = SourceType;
             this.SourceId = SourceId;
@@ -95,7 +95,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectNotificationTrigger to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectNotificationTrigger other)
+        public bool Equals(BusinessObjectNotificationTrigger? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -105,22 +105,22 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.SourceType == other.SourceType ||
                     this.SourceType != null &&
-                    this.SourceType.Equals(other.SourceType)
+                    this.SourceType.Equals(other.SourceType, StringComparison.Ordinal)
                 ) &&
                 (
                     this.SourceId == other.SourceId ||
                     this.SourceId != null &&
-                    this.SourceId.Equals(other.SourceId)
+                    this.SourceId.Equals(other.SourceId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.SourceChange == other.SourceChange ||
                     this.SourceChange != null &&
-                    this.SourceChange.Equals(other.SourceChange)
+                    this.SourceChange.Equals(other.SourceChange, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Key == other.Key ||
                     this.Key != null &&
-                    this.Key.Equals(other.Key)
+                    this.Key.Equals(other.Key, StringComparison.Ordinal)
                 );
         }
 

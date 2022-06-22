@@ -30,7 +30,7 @@ namespace Cherwell.Api.Model
         /// <param name="RefreshToken">RefreshToken.</param>
         /// <param name="TokenType">TokenType.</param>
         /// <param name="Username">Username.</param>
-        public SecurityTokenResponse(string AccessToken = default(string), string AsclientId = default(string), string Expires = default(string), int? ExpiresIn = default(int?), string Issued = default(string), string RefreshToken = default(string), string TokenType = default(string), string Username = default(string))
+        public SecurityTokenResponse(string AccessToken = default, string AsclientId = default, string Expires = default, int? ExpiresIn = default(int?), string Issued = default, string RefreshToken = default, string TokenType = default, string Username = default)
         {
             this.AccessToken = AccessToken;
             this.AsclientId = AsclientId;
@@ -137,17 +137,17 @@ namespace Cherwell.Api.Model
                 (
                     this.AccessToken == other.AccessToken ||
                     this.AccessToken != null &&
-                    this.AccessToken.Equals(other.AccessToken)
+                    this.AccessToken.Equals(other.AccessToken, StringComparison.Ordinal)
                 ) && 
                 (
                     this.AsclientId == other.AsclientId ||
                     this.AsclientId != null &&
-                    this.AsclientId.Equals(other.AsclientId)
+                    this.AsclientId.Equals(other.AsclientId, StringComparison.Ordinal)
                 ) && 
                 (
                     this.Expires == other.Expires ||
                     this.Expires != null &&
-                    this.Expires.Equals(other.Expires)
+                    this.Expires.Equals(other.Expires, StringComparison.Ordinal)
                 ) && 
                 (
                     this.ExpiresIn == other.ExpiresIn ||
@@ -157,22 +157,22 @@ namespace Cherwell.Api.Model
                 (
                     this.Issued == other.Issued ||
                     this.Issued != null &&
-                    this.Issued.Equals(other.Issued)
+                    this.Issued.Equals(other.Issued, StringComparison.Ordinal)
                 ) && 
                 (
                     this.RefreshToken == other.RefreshToken ||
                     this.RefreshToken != null &&
-                    this.RefreshToken.Equals(other.RefreshToken)
+                    this.RefreshToken.Equals(other.RefreshToken, StringComparison.Ordinal)
                 ) && 
                 (
                     this.TokenType == other.TokenType ||
                     this.TokenType != null &&
-                    this.TokenType.Equals(other.TokenType)
+                    this.TokenType.Equals(other.TokenType, StringComparison.Ordinal)
                 ) && 
                 (
                     this.Username == other.Username ||
                     this.Username != null &&
-                    this.Username.Equals(other.Username)
+                    this.Username.Equals(other.Username, StringComparison.Ordinal)
                 );
         }
 

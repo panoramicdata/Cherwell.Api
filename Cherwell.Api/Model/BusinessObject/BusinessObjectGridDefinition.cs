@@ -25,7 +25,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="GridId">GridId.</param>
         /// <param name="Name">Name.</param>
         /// <param name="DisplayName">DisplayName.</param>
-        public BusinessObjectGridDefinition(string GridId = default(string), string Name = default(string), string DisplayName = default(string))
+        public BusinessObjectGridDefinition(string GridId = default, string Name = default, string DisplayName = default)
         {
             this.GridId = GridId;
             this.Name = Name;
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectGridDefinition to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectGridDefinition other)
+        public bool Equals(BusinessObjectGridDefinition? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -97,17 +97,17 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.GridId == other.GridId ||
                     this.GridId != null &&
-                    this.GridId.Equals(other.GridId)
+                    this.GridId.Equals(other.GridId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name.Equals(other.Name, StringComparison.Ordinal)
                 ) &&
                 (
                     this.DisplayName == other.DisplayName ||
                     this.DisplayName != null &&
-                    this.DisplayName.Equals(other.DisplayName)
+                    this.DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
                 );
         }
 

@@ -24,7 +24,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="BusObIds">BusObIds.</param>
         /// <param name="SearchText">SearchText.</param>
-        public SearchesQuickSearchRequest(List<string> BusObIds = default(List<string>), string SearchText = default(string))
+        public SearchesQuickSearchRequest(List<string> BusObIds = default(List<string>), string SearchText = default)
         {
             this.BusObIds = BusObIds;
             this.SearchText = SearchText;

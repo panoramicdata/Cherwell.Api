@@ -24,7 +24,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets AttachmentTypes
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum AttachmentTypesEnum
+        public enum EnumAttachmentTypes
         {
 
             /// <summary>
@@ -51,7 +51,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets Types
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypesEnum
+        public enum EnumTypes
         {
 
             /// <summary>
@@ -113,12 +113,12 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets AttachmentTypes
         /// </summary>
         [DataMember(Name = "attachmentTypes", EmitDefaultValue = false)]
-        public List<AttachmentTypesEnum> AttachmentTypes { get; set; }
+        public List<EnumAttachmentTypes> AttachmentTypes { get; set; }
         /// <summary>
         /// Gets or Sets Types
         /// </summary>
         [DataMember(Name = "types", EmitDefaultValue = false)]
-        public List<TypesEnum> Types { get; set; }
+        public List<EnumTypes> Types { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="BusinessObjectAttachmentsRequest" /> class.
         /// </summary>
@@ -130,7 +130,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="BusObRecId">BusObRecId.</param>
         /// <param name="IncludeLinks">IncludeLinks.</param>
         /// <param name="Types">Types.</param>
-        public BusinessObjectAttachmentsRequest(string AttachmentId = default(string), List<AttachmentTypesEnum> AttachmentTypes = default(List<AttachmentTypesEnum>), string BusObId = default(string), string BusObName = default(string), string BusObPublicId = default(string), string BusObRecId = default(string), bool? IncludeLinks = default(bool?), List<TypesEnum> Types = default(List<TypesEnum>))
+        public BusinessObjectAttachmentsRequest(string AttachmentId = default, List<EnumAttachmentTypes> AttachmentTypes = default(List<EnumAttachmentTypes>), string BusObId = default, string BusObName = default, string BusObPublicId = default, string BusObRecId = default, bool? IncludeLinks = default(bool?), List<EnumTypes> Types = default(List<EnumTypes>))
         {
             this.AttachmentId = AttachmentId;
             this.AttachmentTypes = AttachmentTypes;
@@ -227,7 +227,7 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.AttachmentId == other.AttachmentId ||
                     this.AttachmentId != null &&
-                    this.AttachmentId.Equals(other.AttachmentId)
+                    this.AttachmentId.Equals(other.AttachmentId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.AttachmentTypes == other.AttachmentTypes ||
@@ -237,22 +237,22 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.BusObId == other.BusObId ||
                     this.BusObId != null &&
-                    this.BusObId.Equals(other.BusObId)
+                    this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObName == other.BusObName ||
                     this.BusObName != null &&
-                    this.BusObName.Equals(other.BusObName)
+                    this.BusObName.Equals(other.BusObName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObPublicId == other.BusObPublicId ||
                     this.BusObPublicId != null &&
-                    this.BusObPublicId.Equals(other.BusObPublicId)
+                    this.BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObRecId == other.BusObRecId ||
                     this.BusObRecId != null &&
-                    this.BusObRecId.Equals(other.BusObRecId)
+                    this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.IncludeLinks == other.IncludeLinks ||

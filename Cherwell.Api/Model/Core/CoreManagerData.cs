@@ -323,7 +323,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public CoreManagerData(CoreManagerFolder Root = default(CoreManagerFolder), List<TrebuchetNameValuePair> SupportedAssociations = default(List<TrebuchetNameValuePair>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public CoreManagerData(CoreManagerFolder Root = default(CoreManagerFolder), List<TrebuchetNameValuePair> SupportedAssociations = default(List<TrebuchetNameValuePair>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Root = Root;
             this.SupportedAssociations = SupportedAssociations;

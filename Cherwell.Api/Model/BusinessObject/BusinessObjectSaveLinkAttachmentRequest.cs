@@ -30,7 +30,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="DisplayText">DisplayText.</param>
         /// <param name="IncludeLinks">IncludeLinks.</param>
         /// <param name="UncFilePath">UncFilePath.</param>
-        public BusinessObjectSaveLinkAttachmentRequest(string BusObId = default(string), string BusObName = default(string), string BusObPublicId = default(string), string BusObRecId = default(string), string Comment = default(string), string DisplayText = default(string), bool? IncludeLinks = default(bool?), string UncFilePath = default(string))
+        public BusinessObjectSaveLinkAttachmentRequest(string BusObId = default, string BusObName = default, string BusObPublicId = default, string BusObRecId = default, string Comment = default, string DisplayText = default, bool? IncludeLinks = default(bool?), string UncFilePath = default)
         {
             this.BusObId = BusObId;
             this.BusObName = BusObName;
@@ -127,7 +127,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectSaveLinkAttachmentRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectSaveLinkAttachmentRequest other)
+        public bool Equals(BusinessObjectSaveLinkAttachmentRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -137,32 +137,32 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.BusObId == other.BusObId ||
                     this.BusObId != null &&
-                    this.BusObId.Equals(other.BusObId)
+                    this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObName == other.BusObName ||
                     this.BusObName != null &&
-                    this.BusObName.Equals(other.BusObName)
+                    this.BusObName.Equals(other.BusObName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObPublicId == other.BusObPublicId ||
                     this.BusObPublicId != null &&
-                    this.BusObPublicId.Equals(other.BusObPublicId)
+                    this.BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObRecId == other.BusObRecId ||
                     this.BusObRecId != null &&
-                    this.BusObRecId.Equals(other.BusObRecId)
+                    this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Comment == other.Comment ||
                     this.Comment != null &&
-                    this.Comment.Equals(other.Comment)
+                    this.Comment.Equals(other.Comment, StringComparison.Ordinal)
                 ) &&
                 (
                     this.DisplayText == other.DisplayText ||
                     this.DisplayText != null &&
-                    this.DisplayText.Equals(other.DisplayText)
+                    this.DisplayText.Equals(other.DisplayText, StringComparison.Ordinal)
                 ) &&
                 (
                     this.IncludeLinks == other.IncludeLinks ||
@@ -172,7 +172,7 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.UncFilePath == other.UncFilePath ||
                     this.UncFilePath != null &&
-                    this.UncFilePath.Equals(other.UncFilePath)
+                    this.UncFilePath.Equals(other.UncFilePath, StringComparison.Ordinal)
                 );
         }
 

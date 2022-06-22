@@ -322,7 +322,7 @@ namespace Cherwell.Api.Model.Lifecycle
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public LifecycleGetTransitionsResponse(List<LifecycleGetTransitionsResponseTransition> Transitions = default(List<LifecycleGetTransitionsResponseTransition>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public LifecycleGetTransitionsResponse(List<LifecycleGetTransitionsResponseTransition> Transitions = default(List<LifecycleGetTransitionsResponseTransition>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Transitions = Transitions;
             this.ErrorCode = ErrorCode;

@@ -24,7 +24,7 @@ namespace Cherwell.Api.Model.Security
         /// </summary>
         /// <param name="SecurityGroupName">SecurityGroupName.</param>
         /// <param name="SourceSecurityGroupNameOrId">SourceSecurityGroupNameOrId.</param>
-        public SecurityCloneSecurityGroupRequest(string SecurityGroupName = default(string), string SourceSecurityGroupNameOrId = default(string))
+        public SecurityCloneSecurityGroupRequest(string SecurityGroupName = default, string SourceSecurityGroupNameOrId = default)
         {
             this.SecurityGroupName = SecurityGroupName;
             this.SourceSecurityGroupNameOrId = SourceSecurityGroupNameOrId;

@@ -25,7 +25,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObPublicId">BusObPublicId.</param>
         /// <param name="BusObRecId">BusObRecId.</param>
-        public BusinessObjectReadRequest(string BusObId = default(string), string BusObPublicId = default(string), string BusObRecId = default(string))
+        public BusinessObjectReadRequest(string BusObId = default, string BusObPublicId = default, string BusObRecId = default)
         {
             this.BusObId = BusObId;
             this.BusObPublicId = BusObPublicId;
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectReadRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectReadRequest other)
+        public bool Equals(BusinessObjectReadRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -97,17 +97,17 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.BusObId == other.BusObId ||
                     this.BusObId != null &&
-                    this.BusObId.Equals(other.BusObId)
+                    this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObPublicId == other.BusObPublicId ||
                     this.BusObPublicId != null &&
-                    this.BusObPublicId.Equals(other.BusObPublicId)
+                    this.BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObRecId == other.BusObRecId ||
                     this.BusObRecId != null &&
-                    this.BusObRecId.Equals(other.BusObRecId)
+                    this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
                 );
         }
 

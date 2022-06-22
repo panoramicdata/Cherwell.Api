@@ -79,7 +79,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectBatchSaveRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectBatchSaveRequest other)
+        public bool Equals(BusinessObjectBatchSaveRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

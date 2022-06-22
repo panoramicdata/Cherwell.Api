@@ -30,7 +30,7 @@ namespace Cherwell.Api.Model
         /// <param name="DisplayShowsValue">DisplayShowsValue.</param>
         /// <param name="SpecialUseFlag">SpecialUseFlag.</param>
         /// <param name="DisplayString">DisplayString.</param>
-        public TrebuchetNameValuePair(string Name = default(string), Object ValueObject = default(Object), string ValueString = default(string), string Category = default(string), string Description = default(string), bool? DisplayShowsValue = default(bool?), bool? SpecialUseFlag = default(bool?), string DisplayString = default(string))
+        public TrebuchetNameValuePair(string Name = default, Object ValueObject = default(Object), string ValueString = default, string Category = default, string Description = default, bool? DisplayShowsValue = default(bool?), bool? SpecialUseFlag = default(bool?), string DisplayString = default)
         {
             this.Name = Name;
             this.ValueObject = ValueObject;

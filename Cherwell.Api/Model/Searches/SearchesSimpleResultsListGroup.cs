@@ -326,7 +326,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SearchesSimpleResultsListGroup(bool? IsBusObTarget = default(bool?), List<SearchesSimpleResultsListItem> SimpleResultsListItems = default(List<SearchesSimpleResultsListItem>), string SubTitle = default(string), string TargetId = default(string), string Title = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public SearchesSimpleResultsListGroup(bool? IsBusObTarget = default(bool?), List<SearchesSimpleResultsListItem> SimpleResultsListItems = default(List<SearchesSimpleResultsListItem>), string SubTitle = default, string TargetId = default, string Title = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.IsBusObTarget = IsBusObTarget;
             this.SimpleResultsListItems = SimpleResultsListItems;

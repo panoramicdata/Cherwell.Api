@@ -86,7 +86,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="Name">Name.</param>
         /// <param name="FieldId">FieldId.</param>
         /// <param name="Type">Type.</param>
-        public SearchesColumnSchema(string Name = default(string), string FieldId = default(string), EnumType? Type = default(EnumType?))
+        public SearchesColumnSchema(string Name = default, string FieldId = default, EnumType? Type = default(EnumType?))
         {
             this.Name = Name;
             this.FieldId = FieldId;

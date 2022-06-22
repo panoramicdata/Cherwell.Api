@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Teams
         /// Gets or Sets TeamType
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TeamTypeEnum
+        public enum EnumTeamType
         {
             
             /// <summary>
@@ -43,7 +43,7 @@ namespace Cherwell.Api.Model.Teams
         /// Gets or Sets TeamType
         /// </summary>
         [DataMember(Name="teamType", EmitDefaultValue=false)]
-        public TeamTypeEnum? TeamType { get; set; }
+        public EnumTeamType? TeamType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="TeamsTeamSaveRequest" /> class.
         /// </summary>
@@ -53,7 +53,7 @@ namespace Cherwell.Api.Model.Teams
         /// <param name="TeamId">TeamId.</param>
         /// <param name="TeamName">TeamName.</param>
         /// <param name="TeamType">TeamType.</param>
-        public TeamsTeamSaveRequest(string Description = default(string), string EmailAlias = default(string), string Image = default(string), string TeamId = default(string), string TeamName = default(string), TeamTypeEnum? TeamType = default(TeamTypeEnum?))
+        public TeamsTeamSaveRequest(string Description = default, string EmailAlias = default, string Image = default, string TeamId = default, string TeamName = default, EnumTeamType? TeamType = default(EnumTeamType?))
         {
             this.Description = Description;
             this.EmailAlias = EmailAlias;

@@ -32,7 +32,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="BusObRecId">BusObRecId.</param>
         /// <param name="Comment">Comment.</param>
         /// <param name="IncludeLinks">IncludeLinks.</param>
-        public BusinessObjectSaveBusObAttachmentRequest(string AttachBusObId = default(string), string AttachBusObName = default(string), string AttachBusObPublicId = default(string), string AttachBusObRecId = default(string), string BusObId = default(string), string BusObName = default(string), string BusObPublicId = default(string), string BusObRecId = default(string), string Comment = default(string), bool? IncludeLinks = default(bool?))
+        public BusinessObjectSaveBusObAttachmentRequest(string AttachBusObId = default, string AttachBusObName = default, string AttachBusObPublicId = default, string AttachBusObRecId = default, string BusObId = default, string BusObName = default, string BusObPublicId = default, string BusObRecId = default, string Comment = default, bool? IncludeLinks = default(bool?))
         {
             this.AttachBusObId = AttachBusObId;
             this.AttachBusObName = AttachBusObName;
@@ -143,7 +143,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectSaveBusObAttachmentRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectSaveBusObAttachmentRequest other)
+        public bool Equals(BusinessObjectSaveBusObAttachmentRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -153,47 +153,47 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.AttachBusObId == other.AttachBusObId ||
                     this.AttachBusObId != null &&
-                    this.AttachBusObId.Equals(other.AttachBusObId)
+                    this.AttachBusObId.Equals(other.AttachBusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.AttachBusObName == other.AttachBusObName ||
                     this.AttachBusObName != null &&
-                    this.AttachBusObName.Equals(other.AttachBusObName)
+                    this.AttachBusObName.Equals(other.AttachBusObName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.AttachBusObPublicId == other.AttachBusObPublicId ||
                     this.AttachBusObPublicId != null &&
-                    this.AttachBusObPublicId.Equals(other.AttachBusObPublicId)
+                    this.AttachBusObPublicId.Equals(other.AttachBusObPublicId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.AttachBusObRecId == other.AttachBusObRecId ||
                     this.AttachBusObRecId != null &&
-                    this.AttachBusObRecId.Equals(other.AttachBusObRecId)
+                    this.AttachBusObRecId.Equals(other.AttachBusObRecId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObId == other.BusObId ||
                     this.BusObId != null &&
-                    this.BusObId.Equals(other.BusObId)
+                    this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObName == other.BusObName ||
                     this.BusObName != null &&
-                    this.BusObName.Equals(other.BusObName)
+                    this.BusObName.Equals(other.BusObName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObPublicId == other.BusObPublicId ||
                     this.BusObPublicId != null &&
-                    this.BusObPublicId.Equals(other.BusObPublicId)
+                    this.BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObRecId == other.BusObRecId ||
                     this.BusObRecId != null &&
-                    this.BusObRecId.Equals(other.BusObRecId)
+                    this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Comment == other.Comment ||
                     this.Comment != null &&
-                    this.Comment.Equals(other.Comment)
+                    this.Comment.Equals(other.Comment, StringComparison.Ordinal)
                 ) &&
                 (
                     this.IncludeLinks == other.IncludeLinks ||

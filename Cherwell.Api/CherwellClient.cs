@@ -18,7 +18,7 @@ namespace Cherwell.Api
 			QueuesApiClient = RestService.For<IQueuesApi>(client);
 			SearchesApiClient = RestService.For<ISearchesApi>(client);
 			SecurityApiClient = RestService.For<ISecurityApi>(client);
-			ServiceApiClient = RestService.For<ServiceApi>(client);
+			ServiceApiClient = RestService.For<IServiceApi>(client);
 			TeamsApiClient = RestService.For<ITeamsApi>(client);
 			UsersApiClient = RestService.For<IUsersApi>(client);
 		}
@@ -59,7 +59,7 @@ namespace Cherwell.Api
 		public ISecurityApi SecurityApiClient { get; }
 
 		/// <inheritdoc />
-		public ServiceApi ServiceApiClient { get; }
+		public IServiceApi ServiceApiClient { get; }
 
 		/// <inheritdoc />
 		public ITeamsApi TeamsApiClient { get; }

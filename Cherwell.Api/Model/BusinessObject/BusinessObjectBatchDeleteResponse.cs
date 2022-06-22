@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Initializes a new instance of the <see cref="BusinessObjectBatchDeleteResponse" /> class.
         /// </summary>
         /// <param name="Responses">Responses.</param>
-        public BusinessObjectBatchDeleteResponse(List<BusinessObjectDeleteResponse> Responses = default(List<BusinessObjectDeleteResponse>))
+        public BusinessObjectBatchDeleteResponse(List<BusinessObjectDeleteResponse> Responses = default)
         {
             this.Responses = Responses;
         }

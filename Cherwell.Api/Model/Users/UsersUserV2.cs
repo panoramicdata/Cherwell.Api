@@ -517,7 +517,7 @@ public partial class UsersUserV2 : IEquatable<UsersUserV2>, IValidatableObject
             (
                 DisplayName == other.DisplayName ||
                 DisplayName != null &&
-                DisplayName.Equals(other.DisplayName)
+                DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
             ) &&
             (
                 Fields == other.Fields ||
@@ -547,22 +547,22 @@ public partial class UsersUserV2 : IEquatable<UsersUserV2>, IValidatableObject
             (
                 PublicId == other.PublicId ||
                 PublicId != null &&
-                PublicId.Equals(other.PublicId)
+                PublicId.Equals(other.PublicId, StringComparison.Ordinal)
             ) &&
             (
                 RecordId == other.RecordId ||
                 RecordId != null &&
-                RecordId.Equals(other.RecordId)
+                RecordId.Equals(other.RecordId, StringComparison.Ordinal)
             ) &&
             (
                 SecurityGroupId == other.SecurityGroupId ||
                 SecurityGroupId != null &&
-                SecurityGroupId.Equals(other.SecurityGroupId)
+                SecurityGroupId.Equals(other.SecurityGroupId, StringComparison.Ordinal)
             ) &&
             (
                 ShortDisplayName == other.ShortDisplayName ||
                 ShortDisplayName != null &&
-                ShortDisplayName.Equals(other.ShortDisplayName)
+                ShortDisplayName.Equals(other.ShortDisplayName, StringComparison.Ordinal)
             ) &&
             (
                 UserCannotChangePassword == other.UserCannotChangePassword ||
@@ -577,12 +577,12 @@ public partial class UsersUserV2 : IEquatable<UsersUserV2>, IValidatableObject
             (
                 ErrorCode == other.ErrorCode ||
                 ErrorCode != null &&
-                ErrorCode.Equals(other.ErrorCode)
+                ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
             ) &&
             (
                 ErrorMessage == other.ErrorMessage ||
                 ErrorMessage != null &&
-                ErrorMessage.Equals(other.ErrorMessage)
+                ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
             ) &&
             (
                 HasError == other.HasError ||

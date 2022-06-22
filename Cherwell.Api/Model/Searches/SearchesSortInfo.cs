@@ -24,7 +24,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="FieldId">FieldId.</param>
         /// <param name="SortDirection">SortDirection.</param>
-        public SearchesSortInfo(string FieldId = default(string), int? SortDirection = default(int?))
+        public SearchesSortInfo(string FieldId = default, int? SortDirection = default(int?))
         {
             this.FieldId = FieldId;
             this.SortDirection = SortDirection;

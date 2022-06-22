@@ -27,7 +27,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="FieldIds">FieldIds.</param>
         /// <param name="IncludeAll">IncludeAll.</param>
         /// <param name="IncludeRequired">IncludeRequired.</param>
-        public BusinessObjectTemplateRequest(string BusObId = default(string), List<string> FieldNames = default(List<string>), List<string> FieldIds = default(List<string>), bool? IncludeAll = default(bool?), bool? IncludeRequired = default(bool?))
+        public BusinessObjectTemplateRequest(string BusObId = default, List<string> FieldNames = default(List<string>), List<string> FieldIds = default(List<string>), bool? IncludeAll = default(bool?), bool? IncludeRequired = default(bool?))
         {
             this.BusObId = BusObId;
             this.FieldNames = FieldNames;
@@ -103,7 +103,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectTemplateRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectTemplateRequest other)
+        public bool Equals(BusinessObjectTemplateRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -113,7 +113,7 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.BusObId == other.BusObId ||
                     this.BusObId != null &&
-                    this.BusObId.Equals(other.BusObId)
+                    this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.FieldNames == other.FieldNames ||

@@ -326,7 +326,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public BusinessObjectSaveResponse(string BusObPublicId = default(string), string BusObRecId = default(string), string CacheKey = default(string), List<BusinessObjectFieldValidationError> FieldValidationErrors = default(List<BusinessObjectFieldValidationError>), List<BusinessObjectNotificationTrigger> NotificationTriggers = default(List<BusinessObjectNotificationTrigger>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public BusinessObjectSaveResponse(string BusObPublicId = default, string BusObRecId = default, string CacheKey = default, List<BusinessObjectFieldValidationError> FieldValidationErrors = default(List<BusinessObjectFieldValidationError>), List<BusinessObjectNotificationTrigger> NotificationTriggers = default(List<BusinessObjectNotificationTrigger>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.BusObPublicId = BusObPublicId;
             this.BusObRecId = BusObRecId;
@@ -425,7 +425,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectSaveResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectSaveResponse other)
+        public bool Equals(BusinessObjectSaveResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -435,17 +435,17 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.BusObPublicId == other.BusObPublicId ||
                     this.BusObPublicId != null &&
-                    this.BusObPublicId.Equals(other.BusObPublicId)
+                    this.BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObRecId == other.BusObRecId ||
                     this.BusObRecId != null &&
-                    this.BusObRecId.Equals(other.BusObRecId)
+                    this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.CacheKey == other.CacheKey ||
                     this.CacheKey != null &&
-                    this.CacheKey.Equals(other.CacheKey)
+                    this.CacheKey.Equals(other.CacheKey, StringComparison.Ordinal)
                 ) &&
                 (
                     this.FieldValidationErrors == other.FieldValidationErrors ||
@@ -460,12 +460,12 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.ErrorCode == other.ErrorCode ||
                     this.ErrorCode != null &&
-                    this.ErrorCode.Equals(other.ErrorCode)
+                    this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ErrorMessage == other.ErrorMessage ||
                     this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(other.ErrorMessage)
+                    this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
                 ) &&
                 (
                     this.HasError == other.HasError ||

@@ -397,7 +397,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public CoreStoredValueResponse(string Description = default(string), string Folder = default(string), string Id = default(string), string Name = default(string), string Scope = default(string), string ScopeOwner = default(string), string StandInKey = default(string), EnumStoredValueType? StoredValueType = default(EnumStoredValueType?), string Value = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public CoreStoredValueResponse(string Description = default, string Folder = default, string Id = default, string Name = default, string Scope = default, string ScopeOwner = default, string StandInKey = default, EnumStoredValueType? StoredValueType = default(EnumStoredValueType?), string Value = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Description = Description;
             this.Folder = Folder;

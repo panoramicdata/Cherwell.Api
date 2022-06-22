@@ -33,7 +33,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="RelationshipId">RelationshipId.</param>
         /// <param name="Sorting">Sorting.</param>
         /// <param name="UseDefaultGrid">UseDefaultGrid.</param>
-        public SearchesRelatedBusinessObjectRequest(bool? AllFields = default(bool?), string CustomGridId = default(string), List<string> FieldsList = default(List<string>), List<SearchesFilterInfo> Filters = default(List<SearchesFilterInfo>), int? PageNumber = default(int?), int? PageSize = default(int?), string ParentBusObId = default(string), string ParentBusObRecId = default(string), string RelationshipId = default(string), List<SearchesSortInfo> Sorting = default(List<SearchesSortInfo>), bool? UseDefaultGrid = default(bool?))
+        public SearchesRelatedBusinessObjectRequest(bool? AllFields = default(bool?), string CustomGridId = default, List<string> FieldsList = default(List<string>), List<SearchesFilterInfo> Filters = default(List<SearchesFilterInfo>), int? PageNumber = default(int?), int? PageSize = default(int?), string ParentBusObId = default, string ParentBusObRecId = default, string RelationshipId = default, List<SearchesSortInfo> Sorting = default(List<SearchesSortInfo>), bool? UseDefaultGrid = default(bool?))
         {
             this.AllFields = AllFields;
             this.CustomGridId = CustomGridId;

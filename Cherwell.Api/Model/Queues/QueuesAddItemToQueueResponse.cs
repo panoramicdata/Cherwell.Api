@@ -324,7 +324,7 @@ namespace Cherwell.Api.Model.Queues
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public QueuesAddItemToQueueResponse(string HistoryRecId = default(string), string HistoryText = default(string), string HistoryTypeId = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public QueuesAddItemToQueueResponse(string HistoryRecId = default, string HistoryText = default, string HistoryTypeId = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.HistoryRecId = HistoryRecId;
             this.HistoryText = HistoryText;

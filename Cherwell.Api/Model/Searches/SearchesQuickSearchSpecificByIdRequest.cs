@@ -36,7 +36,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="SortByRelevance">SortByRelevance.</param>
         /// <param name="SpecificSearchTargetId">SpecificSearchTargetId.</param>
         /// <param name="UseSortBy">UseSortBy.</param>
-        public SearchesQuickSearchSpecificByIdRequest(List<string> BusObIds = default(List<string>), string StandIn = default(string), bool? Ascending = default(bool?), bool? IsBusObTarget = default(bool?), bool? NonFinalState = default(bool?), bool? SearchAnyWords = default(bool?), bool? SearchAttachments = default(bool?), bool? SearchRelated = default(bool?), string SearchText = default(string), SearchesChangedLimit SelectedChangedLimit = default(SearchesChangedLimit), string SelectedSortByFieldId = default(string), bool? SortByRelevance = default(bool?), string SpecificSearchTargetId = default(string), bool? UseSortBy = default(bool?))
+        public SearchesQuickSearchSpecificByIdRequest(List<string> BusObIds = default(List<string>), string StandIn = default, bool? Ascending = default(bool?), bool? IsBusObTarget = default(bool?), bool? NonFinalState = default(bool?), bool? SearchAnyWords = default(bool?), bool? SearchAttachments = default(bool?), bool? SearchRelated = default(bool?), string SearchText = default, SearchesChangedLimit SelectedChangedLimit = default(SearchesChangedLimit), string SelectedSortByFieldId = default, bool? SortByRelevance = default(bool?), string SpecificSearchTargetId = default, bool? UseSortBy = default(bool?))
         {
             this.BusObIds = BusObIds;
             this.StandIn = StandIn;

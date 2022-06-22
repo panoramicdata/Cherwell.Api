@@ -208,7 +208,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="Name">Name.</param>
         /// <param name="Parameters">Parameters.</param>
         /// <param name="Visible">Visible.</param>
-        public CoreAction(string ActionCommand = default(string), EnumActionType? ActionType = default(EnumActionType?), bool? AlwaysTextAndImage = default(bool?), bool? BeginGroup = default(bool?), List<CoreAction> ChildActions = default(List<CoreAction>), List<string> Dependencies = default(List<string>), string DisplayText = default(string), bool? Enabled = default(bool?), string GalleryImage = default(string), string HelpText = default(string), EnumLoginEnabledMode? LoginEnabledMode = default(EnumLoginEnabledMode?), EnumLoginVisibilityMode? LoginVisibilityMode = default(EnumLoginVisibilityMode?), string Name = default(string), Dictionary<string, string> Parameters = default(Dictionary<string, string>), bool? Visible = default(bool?))
+        public CoreAction(string ActionCommand = default, EnumActionType? ActionType = default(EnumActionType?), bool? AlwaysTextAndImage = default(bool?), bool? BeginGroup = default(bool?), List<CoreAction> ChildActions = default(List<CoreAction>), List<string> Dependencies = default(List<string>), string DisplayText = default, bool? Enabled = default(bool?), string GalleryImage = default, string HelpText = default, EnumLoginEnabledMode? LoginEnabledMode = default(EnumLoginEnabledMode?), EnumLoginVisibilityMode? LoginVisibilityMode = default(EnumLoginVisibilityMode?), string Name = default, Dictionary<string, string> Parameters = default(Dictionary<string, string>), bool? Visible = default(bool?))
         {
             this.ActionCommand = ActionCommand;
             this.ActionType = ActionType;

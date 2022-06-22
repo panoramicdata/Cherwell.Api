@@ -25,7 +25,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="PromptDefId">PromptDefId.</param>
         /// <param name="PromptName">PromptName.</param>
         /// <param name="Value">Value.</param>
-        public CoreSimplePromptValue(string PromptDefId = default(string), string PromptName = default(string), string Value = default(string))
+        public CoreSimplePromptValue(string PromptDefId = default, string PromptName = default, string Value = default)
         {
             this.PromptDefId = PromptDefId;
             this.PromptName = PromptName;

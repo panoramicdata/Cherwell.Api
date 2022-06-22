@@ -38,7 +38,7 @@ namespace Cherwell.Api.Model.Security
         /// <param name="RightName">RightName.</param>
         /// <param name="StandardRightName">StandardRightName.</param>
         /// <param name="ViewRunOpen">ViewRunOpen.</param>
-        public SecurityRight(bool? Add = default(bool?), bool? Allow = default(bool?), string CategoryDescription = default(string), string CategoryId = default(string), string CategoryName = default(string), bool? Delete = default(bool?), bool? Edit = default(bool?), bool? IsYesNoRight = default(bool?), bool? NonScopeOwnerAdd = default(bool?), bool? NonScopeOwnerDelete = default(bool?), bool? NonScopeOwnerEdit = default(bool?), bool? NonScopeOwnerView = default(bool?), string RightId = default(string), string RightName = default(string), string StandardRightName = default(string), bool? ViewRunOpen = default(bool?))
+        public SecurityRight(bool? Add = default(bool?), bool? Allow = default(bool?), string CategoryDescription = default, string CategoryId = default, string CategoryName = default, bool? Delete = default(bool?), bool? Edit = default(bool?), bool? IsYesNoRight = default(bool?), bool? NonScopeOwnerAdd = default(bool?), bool? NonScopeOwnerDelete = default(bool?), bool? NonScopeOwnerEdit = default(bool?), bool? NonScopeOwnerView = default(bool?), string RightId = default, string RightName = default, string StandardRightName = default, bool? ViewRunOpen = default(bool?))
         {
             this.Add = Add;
             this.Allow = Allow;
@@ -261,17 +261,17 @@ namespace Cherwell.Api.Model.Security
                 (
                     this.RightId == other.RightId ||
                     this.RightId != null &&
-                    this.RightId.Equals(other.RightId)
+                    this.RightId.Equals(other.RightId, StringComparison.Ordinal)
                 ) && 
                 (
                     this.RightName == other.RightName ||
                     this.RightName != null &&
-                    this.RightName.Equals(other.RightName)
+                    this.RightName.Equals(other.RightName, StringComparison.Ordinal)
                 ) && 
                 (
                     this.StandardRightName == other.StandardRightName ||
                     this.StandardRightName != null &&
-                    this.StandardRightName.Equals(other.StandardRightName)
+                    this.StandardRightName.Equals(other.StandardRightName, StringComparison.Ordinal)
                 ) && 
                 (
                     this.ViewRunOpen == other.ViewRunOpen ||

@@ -29,7 +29,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="Html">Html.</param>
         /// <param name="Name">Name.</param>
         /// <param name="Value">Value.</param>
-        public BusinessObjectFieldTemplateItem(bool? Dirty = default(bool?), string DisplayName = default(string), string FieldId = default(string), string FullFieldId = default(string), string Html = default(string), string Name = default(string), string Value = default(string))
+        public BusinessObjectFieldTemplateItem(bool? Dirty = default(bool?), string DisplayName = default, string FieldId = default, string FullFieldId = default, string Html = default, string Name = default, string Value = default)
         {
             this.Dirty = Dirty;
             this.DisplayName = DisplayName;
@@ -119,7 +119,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectFieldTemplateItem to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectFieldTemplateItem other)
+        public bool Equals(BusinessObjectFieldTemplateItem? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -134,32 +134,32 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.DisplayName == other.DisplayName ||
                     this.DisplayName != null &&
-                    this.DisplayName.Equals(other.DisplayName)
+                    this.DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.FieldId == other.FieldId ||
                     this.FieldId != null &&
-                    this.FieldId.Equals(other.FieldId)
+                    this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.FullFieldId == other.FullFieldId ||
                     this.FullFieldId != null &&
-                    this.FullFieldId.Equals(other.FullFieldId)
+                    this.FullFieldId.Equals(other.FullFieldId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Html == other.Html ||
                     this.Html != null &&
-                    this.Html.Equals(other.Html)
+                    this.Html.Equals(other.Html, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name.Equals(other.Name, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Value == other.Value ||
                     this.Value != null &&
-                    this.Value.Equals(other.Value)
+                    this.Value.Equals(other.Value, StringComparison.Ordinal)
                 );
         }
 

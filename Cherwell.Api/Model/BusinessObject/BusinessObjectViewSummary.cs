@@ -32,7 +32,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="Major">Major.</param>
         /// <param name="Name">Name.</param>
         /// <param name="Supporting">Supporting.</param>
-        public BusinessObjectViewSummary(List<BusinessObjectViewSummary> GroupSummaries = default(List<BusinessObjectViewSummary>), string Image = default(string), bool? IsPartOfView = default(bool?), string BusObId = default(string), string DisplayName = default(string), bool? Group = default(bool?), bool? Lookup = default(bool?), bool? Major = default(bool?), string Name = default(string), bool? Supporting = default(bool?))
+        public BusinessObjectViewSummary(List<BusinessObjectViewSummary> GroupSummaries = default(List<BusinessObjectViewSummary>), string Image = default, bool? IsPartOfView = default(bool?), string BusObId = default, string DisplayName = default, bool? Group = default(bool?), bool? Lookup = default(bool?), bool? Major = default(bool?), string Name = default, bool? Supporting = default(bool?))
         {
             this.GroupSummaries = GroupSummaries;
             this.Image = Image;
@@ -143,7 +143,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectViewSummary to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectViewSummary other)
+        public bool Equals(BusinessObjectViewSummary? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -158,7 +158,7 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.Image == other.Image ||
                     this.Image != null &&
-                    this.Image.Equals(other.Image)
+                    this.Image.Equals(other.Image, StringComparison.Ordinal)
                 ) &&
                 (
                     this.IsPartOfView == other.IsPartOfView ||
@@ -168,12 +168,12 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.BusObId == other.BusObId ||
                     this.BusObId != null &&
-                    this.BusObId.Equals(other.BusObId)
+                    this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.DisplayName == other.DisplayName ||
                     this.DisplayName != null &&
-                    this.DisplayName.Equals(other.DisplayName)
+                    this.DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Group == other.Group ||
@@ -193,7 +193,7 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name.Equals(other.Name, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Supporting == other.Supporting ||

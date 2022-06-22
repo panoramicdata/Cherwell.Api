@@ -28,7 +28,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="SystemDateTime">SystemDateTime.</param>
         /// <param name="TimeZone">TimeZone.</param>
         /// <param name="SystemUtcOffset">SystemUtcOffset.</param>
-        public CoreServiceInfoResponse(string ApiVersion = default(string), string CsmCulture = default(string), string CsmVersion = default(string), DateTime? SystemDateTime = default(DateTime?), Object TimeZone = default(Object), string SystemUtcOffset = default(string))
+        public CoreServiceInfoResponse(string ApiVersion = default, string CsmCulture = default, string CsmVersion = default, DateTime? SystemDateTime = default(DateTime?), Object TimeZone = default(Object), string SystemUtcOffset = default)
         {
             this.ApiVersion = ApiVersion;
             this.CsmCulture = CsmCulture;

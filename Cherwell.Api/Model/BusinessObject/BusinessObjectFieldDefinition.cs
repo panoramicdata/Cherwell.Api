@@ -36,13 +36,13 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="IsFullTextSearchable">IsFullTextSearchable.</param>
         /// <param name="MaximumSize">MaximumSize.</param>
         /// <param name="Name">Name.</param>
-        /// <param name="_ReadOnly">_ReadOnly.</param>
+        /// <param name="ReadOnly">_ReadOnly.</param>
         /// <param name="Required">Required.</param>
         /// <param name="Type">Type.</param>
         /// <param name="TypeLocalized">TypeLocalized.</param>
         /// <param name="Validated">Validated.</param>
         /// <param name="WholeDigits">WholeDigits.</param>
-        public BusinessObjectFieldDefinition(bool? AutoFill = default(bool?), bool? Calculated = default(bool?), string Category = default(string), int? DecimalDigits = default(int?), string Description = default(string), string Details = default(string), string DisplayName = default(string), bool? Enabled = default(bool?), string FieldId = default(string), bool? HasDate = default(bool?), bool? HasTime = default(bool?), bool? IsFullTextSearchable = default(bool?), string MaximumSize = default(string), string Name = default(string), bool? _ReadOnly = default(bool?), bool? Required = default(bool?), string Type = default(string), string TypeLocalized = default(string), bool? Validated = default(bool?), int? WholeDigits = default(int?))
+        public BusinessObjectFieldDefinition(bool? AutoFill = default, bool? Calculated = default, string Category = default, int? DecimalDigits = default, string Description = default, string Details = default, string DisplayName = default, bool? Enabled = default, string FieldId = default, bool? HasDate = default, bool? HasTime = default, bool? IsFullTextSearchable = default, string MaximumSize = default, string Name = default, bool? ReadOnly = default, bool? Required = default, string Type = default, string TypeLocalized = default, bool? Validated = default, int? WholeDigits = default)
         {
             this.AutoFill = AutoFill;
             this.Calculated = Calculated;
@@ -58,7 +58,7 @@ namespace Cherwell.Api.Model.BusinessObject
             this.IsFullTextSearchable = IsFullTextSearchable;
             this.MaximumSize = MaximumSize;
             this.Name = Name;
-            this._ReadOnly = _ReadOnly;
+            this.ReadOnly = ReadOnly;
             this.Required = Required;
             this.Type = Type;
             this.TypeLocalized = TypeLocalized;
@@ -140,7 +140,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets _ReadOnly
         /// </summary>
         [DataMember(Name = "readOnly", EmitDefaultValue = false)]
-        public bool? _ReadOnly { get; set; }
+        public bool? ReadOnly { get; set; }
         /// <summary>
         /// Gets or Sets Required
         /// </summary>
@@ -188,7 +188,7 @@ namespace Cherwell.Api.Model.BusinessObject
             sb.Append("  IsFullTextSearchable: ").Append(IsFullTextSearchable).Append('\n');
             sb.Append("  MaximumSize: ").Append(MaximumSize).Append('\n');
             sb.Append("  Name: ").Append(Name).Append('\n');
-            sb.Append("  _ReadOnly: ").Append(_ReadOnly).Append('\n');
+            sb.Append("  _ReadOnly: ").Append(ReadOnly).Append('\n');
             sb.Append("  Required: ").Append(Required).Append('\n');
             sb.Append("  Type: ").Append(Type).Append('\n');
             sb.Append("  TypeLocalized: ").Append(TypeLocalized).Append('\n');
@@ -223,7 +223,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectFieldDefinition to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectFieldDefinition other)
+        public bool Equals(BusinessObjectFieldDefinition? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -243,7 +243,7 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.Category == other.Category ||
                     this.Category != null &&
-                    this.Category.Equals(other.Category)
+                    this.Category.Equals(other.Category, StringComparison.Ordinal)
                 ) &&
                 (
                     this.DecimalDigits == other.DecimalDigits ||
@@ -253,17 +253,17 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
-                    this.Description.Equals(other.Description)
+                    this.Description.Equals(other.Description, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Details == other.Details ||
                     this.Details != null &&
-                    this.Details.Equals(other.Details)
+                    this.Details.Equals(other.Details, StringComparison.Ordinal)
                 ) &&
                 (
                     this.DisplayName == other.DisplayName ||
                     this.DisplayName != null &&
-                    this.DisplayName.Equals(other.DisplayName)
+                    this.DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Enabled == other.Enabled ||
@@ -273,7 +273,7 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.FieldId == other.FieldId ||
                     this.FieldId != null &&
-                    this.FieldId.Equals(other.FieldId)
+                    this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.HasDate == other.HasDate ||
@@ -293,17 +293,17 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.MaximumSize == other.MaximumSize ||
                     this.MaximumSize != null &&
-                    this.MaximumSize.Equals(other.MaximumSize)
+                    this.MaximumSize.Equals(other.MaximumSize, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name.Equals(other.Name, StringComparison.Ordinal)
                 ) &&
                 (
-                    this._ReadOnly == other._ReadOnly ||
-                    this._ReadOnly != null &&
-                    this._ReadOnly.Equals(other._ReadOnly)
+                    this.ReadOnly == other.ReadOnly ||
+                    this.ReadOnly != null &&
+                    this.ReadOnly.Equals(other.ReadOnly)
                 ) &&
                 (
                     this.Required == other.Required ||
@@ -313,12 +313,12 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
-                    this.Type.Equals(other.Type)
+                    this.Type.Equals(other.Type, StringComparison.Ordinal)
                 ) &&
                 (
                     this.TypeLocalized == other.TypeLocalized ||
                     this.TypeLocalized != null &&
-                    this.TypeLocalized.Equals(other.TypeLocalized)
+                    this.TypeLocalized.Equals(other.TypeLocalized, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Validated == other.Validated ||
@@ -371,8 +371,8 @@ namespace Cherwell.Api.Model.BusinessObject
                     hash = hash * 59 + this.MaximumSize.GetHashCode();
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                if (this._ReadOnly != null)
-                    hash = hash * 59 + this._ReadOnly.GetHashCode();
+                if (this.ReadOnly != null)
+                    hash = hash * 59 + this.ReadOnly.GetHashCode();
                 if (this.Required != null)
                     hash = hash * 59 + this.Required.GetHashCode();
                 if (this.Type != null)

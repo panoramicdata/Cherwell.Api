@@ -28,7 +28,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="FieldId">FieldId.</param>
         /// <param name="FieldName">FieldName.</param>
         /// <param name="Fields">Fields.</param>
-        public BusinessObjectFieldValuesLookupRequest(string BusbPublicId = default(string), string BusObId = default(string), string BusObRecId = default(string), string FieldId = default(string), string FieldName = default(string), List<BusinessObjectFieldTemplateItem> Fields = default(List<BusinessObjectFieldTemplateItem>))
+        public BusinessObjectFieldValuesLookupRequest(string BusbPublicId = default, string BusObId = default, string BusObRecId = default, string FieldId = default, string FieldName = default, List<BusinessObjectFieldTemplateItem> Fields = default(List<BusinessObjectFieldTemplateItem>))
         {
             this.BusbPublicId = BusbPublicId;
             this.BusObId = BusObId;
@@ -111,7 +111,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectFieldValuesLookupRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectFieldValuesLookupRequest other)
+        public bool Equals(BusinessObjectFieldValuesLookupRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -121,27 +121,27 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.BusbPublicId == other.BusbPublicId ||
                     this.BusbPublicId != null &&
-                    this.BusbPublicId.Equals(other.BusbPublicId)
+                    this.BusbPublicId.Equals(other.BusbPublicId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObId == other.BusObId ||
                     this.BusObId != null &&
-                    this.BusObId.Equals(other.BusObId)
+                    this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObRecId == other.BusObRecId ||
                     this.BusObRecId != null &&
-                    this.BusObRecId.Equals(other.BusObRecId)
+                    this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.FieldId == other.FieldId ||
                     this.FieldId != null &&
-                    this.FieldId.Equals(other.FieldId)
+                    this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.FieldName == other.FieldName ||
                     this.FieldName != null &&
-                    this.FieldName.Equals(other.FieldName)
+                    this.FieldName.Equals(other.FieldName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Fields == other.Fields ||

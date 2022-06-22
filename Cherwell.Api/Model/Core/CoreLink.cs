@@ -24,7 +24,7 @@ namespace Cherwell.Api.Model.Core
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Url">Url.</param>
-        public CoreLink(string Name = default(string), string Url = default(string))
+        public CoreLink(string Name = default, string Url = default)
         {
             this.Name = Name;
             this.Url = Url;

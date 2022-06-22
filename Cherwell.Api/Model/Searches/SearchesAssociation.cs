@@ -24,7 +24,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObName">BusObName.</param>
-        public SearchesAssociation(string BusObId = default(string), string BusObName = default(string))
+        public SearchesAssociation(string BusObId = default, string BusObName = default)
         {
             this.BusObId = BusObId;
             this.BusObName = BusObName;

@@ -329,7 +329,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SearchesSearchResultsResponse(List<BusinessObjectReadResponse> BusinessObjects = default(List<BusinessObjectReadResponse>), bool? HasPrompts = default(bool?), List<CoreLink> Links = default(List<CoreLink>), List<CorePrompt> Prompts = default(List<CorePrompt>), List<SearchesField> SearchResultsFields = default(List<SearchesField>), SearchesSimpleResultsList SimpleResults = default(SearchesSimpleResultsList), long? TotalRows = default(long?), bool? HasMoreRecords = default(bool?), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public SearchesSearchResultsResponse(List<BusinessObjectReadResponse> BusinessObjects = default(List<BusinessObjectReadResponse>), bool? HasPrompts = default(bool?), List<CoreLink> Links = default(List<CoreLink>), List<CorePrompt> Prompts = default(List<CorePrompt>), List<SearchesField> SearchResultsFields = default(List<SearchesField>), SearchesSimpleResultsList SimpleResults = default(SearchesSimpleResultsList), long? TotalRows = default(long?), bool? HasMoreRecords = default(bool?), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.BusinessObjects = BusinessObjects;
             this.HasPrompts = HasPrompts;

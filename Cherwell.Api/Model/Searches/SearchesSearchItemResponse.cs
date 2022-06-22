@@ -323,7 +323,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SearchesSearchItemResponse(SearchesSearchFolder Root = default(SearchesSearchFolder), List<SearchesAssociation> SupportedAssociations = default(List<SearchesAssociation>), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public SearchesSearchItemResponse(SearchesSearchFolder Root = default(SearchesSearchFolder), List<SearchesAssociation> SupportedAssociations = default(List<SearchesAssociation>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Root = Root;
             this.SupportedAssociations = SupportedAssociations;

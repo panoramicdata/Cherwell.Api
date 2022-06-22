@@ -34,7 +34,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="Major">Major.</param>
         /// <param name="Name">Name.</param>
         /// <param name="Supporting">Supporting.</param>
-        public BusinessObjectSummary(string FirstRecIdField = default(string), List<BusinessObjectSummary> GroupSummaries = default(List<BusinessObjectSummary>), string RecIdFields = default(string), string StateFieldId = default(string), string States = default(string), string BusObId = default(string), string DisplayName = default(string), bool? Group = default(bool?), bool? Lookup = default(bool?), bool? Major = default(bool?), string Name = default(string), bool? Supporting = default(bool?))
+        public BusinessObjectSummary(string FirstRecIdField = default, List<BusinessObjectSummary> GroupSummaries = default(List<BusinessObjectSummary>), string RecIdFields = default, string StateFieldId = default, string States = default, string BusObId = default, string DisplayName = default, bool? Group = default(bool?), bool? Lookup = default(bool?), bool? Major = default(bool?), string Name = default, bool? Supporting = default(bool?))
         {
             this.FirstRecIdField = FirstRecIdField;
             this.GroupSummaries = GroupSummaries;
@@ -159,7 +159,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectSummary to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectSummary other)
+        public bool Equals(BusinessObjectSummary? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -169,7 +169,7 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.FirstRecIdField == other.FirstRecIdField ||
                     this.FirstRecIdField != null &&
-                    this.FirstRecIdField.Equals(other.FirstRecIdField)
+                    this.FirstRecIdField.Equals(other.FirstRecIdField, StringComparison.Ordinal)
                 ) &&
                 (
                     this.GroupSummaries == other.GroupSummaries ||
@@ -179,27 +179,27 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.RecIdFields == other.RecIdFields ||
                     this.RecIdFields != null &&
-                    this.RecIdFields.Equals(other.RecIdFields)
+                    this.RecIdFields.Equals(other.RecIdFields, StringComparison.Ordinal)
                 ) &&
                 (
                     this.StateFieldId == other.StateFieldId ||
                     this.StateFieldId != null &&
-                    this.StateFieldId.Equals(other.StateFieldId)
+                    this.StateFieldId.Equals(other.StateFieldId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.States == other.States ||
                     this.States != null &&
-                    this.States.Equals(other.States)
+                    this.States.Equals(other.States, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObId == other.BusObId ||
                     this.BusObId != null &&
-                    this.BusObId.Equals(other.BusObId)
+                    this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.DisplayName == other.DisplayName ||
                     this.DisplayName != null &&
-                    this.DisplayName.Equals(other.DisplayName)
+                    this.DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Group == other.Group ||
@@ -219,7 +219,7 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name.Equals(other.Name, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Supporting == other.Supporting ||

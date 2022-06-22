@@ -31,7 +31,7 @@ namespace Cherwell.Api.Model
         /// <param name="RoleId">RoleId.</param>
         /// <param name="RoleName">RoleName.</param>
         /// <param name="SmartClientCustomViewId">SmartClientCustomViewId.</param>
-        public SecurityRole(string BrowserClientCustomViewId = default(string), List<string> BusinessObjectExcludeList = default(List<string>), string Culture = default(string), string Description = default(string), string MobileClientCustomViewId = default(string), string PrimaryBusObId = default(string), string RoleId = default(string), string RoleName = default(string), string SmartClientCustomViewId = default(string))
+        public SecurityRole(string BrowserClientCustomViewId = default, List<string> BusinessObjectExcludeList = default(List<string>), string Culture = default, string Description = default, string MobileClientCustomViewId = default, string PrimaryBusObId = default, string RoleId = default, string RoleName = default, string SmartClientCustomViewId = default)
         {
             this.BrowserClientCustomViewId = BrowserClientCustomViewId;
             this.BusinessObjectExcludeList = BusinessObjectExcludeList;

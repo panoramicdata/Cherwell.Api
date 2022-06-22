@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets AttachmentType
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum AttachmentTypeEnum
+        public enum EnumAttachmentType
         {
 
             /// <summary>
@@ -49,7 +49,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets Scope
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum ScopeEnum
+        public enum EnumScope
         {
 
             /// <summary>
@@ -141,7 +141,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets Type
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum
+        public enum EnumType
         {
 
             /// <summary>
@@ -203,17 +203,17 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets AttachmentType
         /// </summary>
         [DataMember(Name = "attachmentType", EmitDefaultValue = false)]
-        public AttachmentTypeEnum? AttachmentType { get; set; }
+        public EnumAttachmentType? AttachmentType { get; set; }
         /// <summary>
         /// Gets or Sets Scope
         /// </summary>
         [DataMember(Name = "scope", EmitDefaultValue = false)]
-        public ScopeEnum? Scope { get; set; }
+        public EnumScope? Scope { get; set; }
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name = "type", EmitDefaultValue = false)]
-        public TypeEnum? Type { get; set; }
+        public EnumType? Type { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="BusinessObjectAttachment" /> class.
         /// </summary>
@@ -234,7 +234,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="Scope">Scope.</param>
         /// <param name="ScopeOwner">ScopeOwner.</param>
         /// <param name="Type">Type.</param>
-        public BusinessObjectAttachment(string AttachedBusObId = default(string), string AttachedBusObRecId = default(string), string AttachmentFileId = default(string), string AttachmentFileName = default(string), string AttachmentFileType = default(string), string AttachmentId = default(string), AttachmentTypeEnum? AttachmentType = default(AttachmentTypeEnum?), string BusObId = default(string), string BusObRecId = default(string), string Comment = default(string), DateTime? Created = default(DateTime?), string DisplayText = default(string), List<CoreLink> Links = default(List<CoreLink>), string Owner = default(string), ScopeEnum? Scope = default(ScopeEnum?), string ScopeOwner = default(string), TypeEnum? Type = default(TypeEnum?))
+        public BusinessObjectAttachment(string AttachedBusObId = default, string AttachedBusObRecId = default, string AttachmentFileId = default, string AttachmentFileName = default, string AttachmentFileType = default, string AttachmentId = default, EnumAttachmentType? AttachmentType = default(EnumAttachmentType?), string BusObId = default, string BusObRecId = default, string Comment = default, DateTime? Created = default(DateTime?), string DisplayText = default, List<CoreLink> Links = default(List<CoreLink>), string Owner = default, EnumScope? Scope = default(EnumScope?), string ScopeOwner = default, EnumType? Type = default(EnumType?))
         {
             this.AttachedBusObId = AttachedBusObId;
             this.AttachedBusObRecId = AttachedBusObRecId;

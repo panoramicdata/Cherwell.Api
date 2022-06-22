@@ -27,7 +27,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="BusObRecId">BusObRecId.</param>
         /// <param name="Latitude">Latitude.</param>
         /// <param name="Longitude">Longitude.</param>
-        public CoreLocation(double? Altitude = default(double?), string BusObId = default(string), string BusObRecId = default(string), double? Latitude = default(double?), double? Longitude = default(double?))
+        public CoreLocation(double? Altitude = default(double?), string BusObId = default, string BusObRecId = default, double? Latitude = default(double?), double? Longitude = default(double?))
         {
             this.Altitude = Altitude;
             this.BusObId = BusObId;

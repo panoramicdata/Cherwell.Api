@@ -32,7 +32,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="ParentId">ParentId.</param>
         /// <param name="Scope">Scope.</param>
         /// <param name="ScopeOwner">ScopeOwner.</param>
-        public CoreManagerFolder(string Association = default(string), List<CoreManagerFolder> ChildFolders = default(List<CoreManagerFolder>), List<CoreManagerItem> ChildItems = default(List<CoreManagerItem>), string Id = default(string), List<CoreLink> Links = default(List<CoreLink>), string LocalizedScopeName = default(string), string Name = default(string), string ParentId = default(string), string Scope = default(string), string ScopeOwner = default(string))
+        public CoreManagerFolder(string Association = default, List<CoreManagerFolder> ChildFolders = default(List<CoreManagerFolder>), List<CoreManagerItem> ChildItems = default(List<CoreManagerItem>), string Id = default, List<CoreLink> Links = default(List<CoreLink>), string LocalizedScopeName = default, string Name = default, string ParentId = default, string Scope = default, string ScopeOwner = default)
         {
             this.Association = Association;
             this.ChildFolders = ChildFolders;

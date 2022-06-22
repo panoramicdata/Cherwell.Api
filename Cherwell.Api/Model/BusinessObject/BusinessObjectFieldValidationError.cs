@@ -25,7 +25,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="Error">Error.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="FieldId">FieldId.</param>
-        public BusinessObjectFieldValidationError(string Error = default(string), string ErrorCode = default(string), string FieldId = default(string))
+        public BusinessObjectFieldValidationError(string Error = default, string ErrorCode = default, string FieldId = default)
         {
             this.Error = Error;
             this.ErrorCode = ErrorCode;
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectFieldValidationError to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectFieldValidationError other)
+        public bool Equals(BusinessObjectFieldValidationError? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -97,17 +97,17 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.Error == other.Error ||
                     this.Error != null &&
-                    this.Error.Equals(other.Error)
+                    this.Error.Equals(other.Error, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ErrorCode == other.ErrorCode ||
                     this.ErrorCode != null &&
-                    this.ErrorCode.Equals(other.ErrorCode)
+                    this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
                 ) &&
                 (
                     this.FieldId == other.FieldId ||
                     this.FieldId != null &&
-                    this.FieldId.Equals(other.FieldId)
+                    this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
                 );
         }
 

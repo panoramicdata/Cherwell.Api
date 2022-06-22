@@ -330,7 +330,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public BusinessObjectSchemaResponse(string BusObId = default(string), List<BusinessObjectFieldDefinition> FieldDefinitions = default(List<BusinessObjectFieldDefinition>), string FirstRecIdField = default(string), List<BusinessObjectGridDefinition> GridDefinitions = default(List<BusinessObjectGridDefinition>), string Name = default(string), string RecIdFields = default(string), List<BusinessObjectRelationship> Relationships = default(List<BusinessObjectRelationship>), string StateFieldId = default(string), string States = default(string), string ErrorCode = default(string), string ErrorMessage = default(string), bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public BusinessObjectSchemaResponse(string BusObId = default, List<BusinessObjectFieldDefinition> FieldDefinitions = default(List<BusinessObjectFieldDefinition>), string FirstRecIdField = default, List<BusinessObjectGridDefinition> GridDefinitions = default(List<BusinessObjectGridDefinition>), string Name = default, string RecIdFields = default, List<BusinessObjectRelationship> Relationships = default(List<BusinessObjectRelationship>), string StateFieldId = default, string States = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.BusObId = BusObId;
             this.FieldDefinitions = FieldDefinitions;
@@ -457,7 +457,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectSchemaResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectSchemaResponse other)
+        public bool Equals(BusinessObjectSchemaResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

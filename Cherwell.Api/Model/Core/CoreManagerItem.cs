@@ -35,7 +35,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="Scope">Scope.</param>
         /// <param name="ScopeOwner">ScopeOwner.</param>
         /// <param name="StandInKey">StandInKey.</param>
-        public CoreManagerItem(string Association = default(string), string Description = default(string), string DisplayName = default(string), string GalleryImage = default(string), string Id = default(string), List<CoreLink> Links = default(List<CoreLink>), string LocalizedScopeName = default(string), string Name = default(string), string ParentFolder = default(string), bool? ParentIsScopeFolder = default(bool?), string Scope = default(string), string ScopeOwner = default(string), string StandInKey = default(string))
+        public CoreManagerItem(string Association = default, string Description = default, string DisplayName = default, string GalleryImage = default, string Id = default, List<CoreLink> Links = default(List<CoreLink>), string LocalizedScopeName = default, string Name = default, string ParentFolder = default, bool? ParentIsScopeFolder = default(bool?), string Scope = default, string ScopeOwner = default, string StandInKey = default)
         {
             this.Association = Association;
             this.Description = Description;

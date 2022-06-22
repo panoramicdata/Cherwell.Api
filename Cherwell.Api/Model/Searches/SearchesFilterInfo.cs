@@ -25,7 +25,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="FieldId">FieldId.</param>
         /// <param name="Operator">_Operator.</param>
         /// <param name="Value">Value.</param>
-        public SearchesFilterInfo(string FieldId = default(string), string Operator = default(string), string Value = default(string))
+        public SearchesFilterInfo(string FieldId = default, string Operator = default, string Value = default)
         {
             this.FieldId = FieldId;
             this.Operator = Operator;

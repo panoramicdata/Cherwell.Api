@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets CacheScope
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum CacheScopeEnum
+        public enum EnumCacheScope
         {
 
             /// <summary>
@@ -49,7 +49,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets CacheScope
         /// </summary>
         [DataMember(Name = "cacheScope", EmitDefaultValue = false)]
-        public CacheScopeEnum? CacheScope { get; set; }
+        public EnumCacheScope? CacheScope { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="BusinessObjectSaveRequest" /> class.
         /// </summary>
@@ -60,7 +60,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="CacheScope">CacheScope.</param>
         /// <param name="Fields">Fields.</param>
         /// <param name="Persist">Persist.</param>
-        public BusinessObjectSaveRequest(string BusObId = default(string), string BusObPublicId = default(string), string BusObRecId = default(string), string CacheKey = default(string), CacheScopeEnum? CacheScope = default(CacheScopeEnum?), List<BusinessObjectFieldTemplateItem> Fields = default(List<BusinessObjectFieldTemplateItem>), bool? Persist = default(bool?))
+        public BusinessObjectSaveRequest(string BusObId = default, string BusObPublicId = default, string BusObRecId = default, string CacheKey = default, EnumCacheScope? CacheScope = default(EnumCacheScope?), List<BusinessObjectFieldTemplateItem> Fields = default(List<BusinessObjectFieldTemplateItem>), bool? Persist = default(bool?))
         {
             this.BusObId = BusObId;
             this.BusObPublicId = BusObPublicId;
@@ -145,7 +145,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectSaveRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectSaveRequest other)
+        public bool Equals(BusinessObjectSaveRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -155,22 +155,22 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.BusObId == other.BusObId ||
                     this.BusObId != null &&
-                    this.BusObId.Equals(other.BusObId)
+                    this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObPublicId == other.BusObPublicId ||
                     this.BusObPublicId != null &&
-                    this.BusObPublicId.Equals(other.BusObPublicId)
+                    this.BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObRecId == other.BusObRecId ||
                     this.BusObRecId != null &&
-                    this.BusObRecId.Equals(other.BusObRecId)
+                    this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.CacheKey == other.CacheKey ||
                     this.CacheKey != null &&
-                    this.CacheKey.Equals(other.CacheKey)
+                    this.CacheKey.Equals(other.CacheKey, StringComparison.Ordinal)
                 ) &&
                 (
                     this.CacheScope == other.CacheScope ||

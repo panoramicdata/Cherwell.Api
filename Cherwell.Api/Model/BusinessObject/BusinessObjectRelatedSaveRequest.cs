@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets CacheScope
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum CacheScopeEnum
+        public enum EnumCacheScope
         {
 
             /// <summary>
@@ -49,7 +49,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Gets or Sets CacheScope
         /// </summary>
         [DataMember(Name = "cacheScope", EmitDefaultValue = false)]
-        public CacheScopeEnum? CacheScope { get; set; }
+        public EnumCacheScope? CacheScope { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="BusinessObjectRelatedSaveRequest" /> class.
         /// </summary>
@@ -64,7 +64,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="CacheScope">CacheScope.</param>
         /// <param name="Fields">Fields.</param>
         /// <param name="Persist">Persist.</param>
-        public BusinessObjectRelatedSaveRequest(string ParentBusObId = default(string), string ParentBusObPublicId = default(string), string ParentBusObRecId = default(string), string RelationshipId = default(string), string BusObId = default(string), string BusObPublicId = default(string), string BusObRecId = default(string), string CacheKey = default(string), CacheScopeEnum? CacheScope = default(CacheScopeEnum?), List<BusinessObjectFieldTemplateItem> Fields = default(List<BusinessObjectFieldTemplateItem>), bool? Persist = default(bool?))
+        public BusinessObjectRelatedSaveRequest(string ParentBusObId = default, string ParentBusObPublicId = default, string ParentBusObRecId = default, string RelationshipId = default, string BusObId = default, string BusObPublicId = default, string BusObRecId = default, string CacheKey = default, EnumCacheScope? CacheScope = default(EnumCacheScope?), List<BusinessObjectFieldTemplateItem> Fields = default(List<BusinessObjectFieldTemplateItem>), bool? Persist = default(bool?))
         {
             this.ParentBusObId = ParentBusObId;
             this.ParentBusObPublicId = ParentBusObPublicId;
@@ -177,7 +177,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectRelatedSaveRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectRelatedSaveRequest other)
+        public bool Equals(BusinessObjectRelatedSaveRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -187,42 +187,42 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.ParentBusObId == other.ParentBusObId ||
                     this.ParentBusObId != null &&
-                    this.ParentBusObId.Equals(other.ParentBusObId)
+                    this.ParentBusObId.Equals(other.ParentBusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ParentBusObPublicId == other.ParentBusObPublicId ||
                     this.ParentBusObPublicId != null &&
-                    this.ParentBusObPublicId.Equals(other.ParentBusObPublicId)
+                    this.ParentBusObPublicId.Equals(other.ParentBusObPublicId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ParentBusObRecId == other.ParentBusObRecId ||
                     this.ParentBusObRecId != null &&
-                    this.ParentBusObRecId.Equals(other.ParentBusObRecId)
+                    this.ParentBusObRecId.Equals(other.ParentBusObRecId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.RelationshipId == other.RelationshipId ||
                     this.RelationshipId != null &&
-                    this.RelationshipId.Equals(other.RelationshipId)
+                    this.RelationshipId.Equals(other.RelationshipId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObId == other.BusObId ||
                     this.BusObId != null &&
-                    this.BusObId.Equals(other.BusObId)
+                    this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObPublicId == other.BusObPublicId ||
                     this.BusObPublicId != null &&
-                    this.BusObPublicId.Equals(other.BusObPublicId)
+                    this.BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.BusObRecId == other.BusObRecId ||
                     this.BusObRecId != null &&
-                    this.BusObRecId.Equals(other.BusObRecId)
+                    this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.CacheKey == other.CacheKey ||
                     this.CacheKey != null &&
-                    this.CacheKey.Equals(other.CacheKey)
+                    this.CacheKey.Equals(other.CacheKey, StringComparison.Ordinal)
                 ) &&
                 (
                     this.CacheScope == other.CacheScope ||

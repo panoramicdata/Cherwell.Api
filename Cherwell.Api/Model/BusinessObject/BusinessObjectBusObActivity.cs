@@ -34,7 +34,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="Created">Created.</param>
         /// <param name="Modified">Modified.</param>
         /// <param name="ModifiedBy">ModifiedBy.</param>
-        public BusinessObjectBusObActivity(string Id = default(string), string ParentBusObDefId = default(string), string ParentBusObRecId = default(string), string HistoryBusObDefId = default(string), string HistoryBusObRecId = default(string), string Type = default(string), string Title = default(string), string Body = default(string), string CreatedBy = default(string), DateTime? Created = default(DateTime?), DateTime? Modified = default(DateTime?), string ModifiedBy = default(string))
+        public BusinessObjectBusObActivity(string Id = default, string ParentBusObDefId = default, string ParentBusObRecId = default, string HistoryBusObDefId = default, string HistoryBusObRecId = default, string Type = default, string Title = default, string Body = default, string CreatedBy = default, DateTime? Created = default(DateTime?), DateTime? Modified = default(DateTime?), string ModifiedBy = default)
         {
             this.Id = Id;
             this.ParentBusObDefId = ParentBusObDefId;
@@ -159,7 +159,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectBusObActivity to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectBusObActivity other)
+        public bool Equals(BusinessObjectBusObActivity? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -169,47 +169,47 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.Id.Equals(other.Id, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ParentBusObDefId == other.ParentBusObDefId ||
                     this.ParentBusObDefId != null &&
-                    this.ParentBusObDefId.Equals(other.ParentBusObDefId)
+                    this.ParentBusObDefId.Equals(other.ParentBusObDefId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ParentBusObRecId == other.ParentBusObRecId ||
                     this.ParentBusObRecId != null &&
-                    this.ParentBusObRecId.Equals(other.ParentBusObRecId)
+                    this.ParentBusObRecId.Equals(other.ParentBusObRecId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.HistoryBusObDefId == other.HistoryBusObDefId ||
                     this.HistoryBusObDefId != null &&
-                    this.HistoryBusObDefId.Equals(other.HistoryBusObDefId)
+                    this.HistoryBusObDefId.Equals(other.HistoryBusObDefId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.HistoryBusObRecId == other.HistoryBusObRecId ||
                     this.HistoryBusObRecId != null &&
-                    this.HistoryBusObRecId.Equals(other.HistoryBusObRecId)
+                    this.HistoryBusObRecId.Equals(other.HistoryBusObRecId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
-                    this.Type.Equals(other.Type)
+                    this.Type.Equals(other.Type, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Title == other.Title ||
                     this.Title != null &&
-                    this.Title.Equals(other.Title)
+                    this.Title.Equals(other.Title, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Body == other.Body ||
                     this.Body != null &&
-                    this.Body.Equals(other.Body)
+                    this.Body.Equals(other.Body, StringComparison.Ordinal)
                 ) &&
                 (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
-                    this.CreatedBy.Equals(other.CreatedBy)
+                    this.CreatedBy.Equals(other.CreatedBy, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Created == other.Created ||
@@ -224,7 +224,7 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.ModifiedBy == other.ModifiedBy ||
                     this.ModifiedBy != null &&
-                    this.ModifiedBy.Equals(other.ModifiedBy)
+                    this.ModifiedBy.Equals(other.ModifiedBy, StringComparison.Ordinal)
                 );
         }
 

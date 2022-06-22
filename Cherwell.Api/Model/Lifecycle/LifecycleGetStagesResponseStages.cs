@@ -25,7 +25,7 @@ namespace Cherwell.Api.Model.Lifecycle
         /// <param name="Id">Id.</param>
         /// <param name="IsFinal">IsFinal.</param>
         /// <param name="Name">Name.</param>
-        public LifecycleGetStagesResponseStages(string Id = default(string), bool? IsFinal = default(bool?), string Name = default(string))
+        public LifecycleGetStagesResponseStages(string Id = default, bool? IsFinal = default(bool?), string Name = default)
         {
             this.Id = Id;
             this.IsFinal = IsFinal;

@@ -411,22 +411,22 @@ namespace Cherwell.Api.Model.Users
                 (
                     BusObPublicId == other.BusObPublicId ||
                     BusObPublicId != null &&
-                    BusObPublicId.Equals(other.BusObPublicId)
+                    BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
                 ) &&
                 (
                     BusObRecId == other.BusObRecId ||
                     BusObRecId != null &&
-                    BusObRecId.Equals(other.BusObRecId)
+                    BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
                 ) &&
                 (
                     ErrorCode == other.ErrorCode ||
                     ErrorCode != null &&
-                    ErrorCode.Equals(other.ErrorCode)
+                    ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
                 ) &&
                 (
                     ErrorMessage == other.ErrorMessage ||
                     ErrorMessage != null &&
-                    ErrorMessage.Equals(other.ErrorMessage)
+                    ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
                 ) &&
                 (
                     HasError == other.HasError ||

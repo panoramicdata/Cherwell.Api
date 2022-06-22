@@ -24,7 +24,7 @@ namespace Cherwell.Api.Model.Teams
         /// </summary>
         /// <param name="TeamId">TeamId.</param>
         /// <param name="TeamName">TeamName.</param>
-        public TeamsTeam(string TeamId = default(string), string TeamName = default(string))
+        public TeamsTeam(string TeamId = default, string TeamName = default)
         {
             this.TeamId = TeamId;
             this.TeamName = TeamName;

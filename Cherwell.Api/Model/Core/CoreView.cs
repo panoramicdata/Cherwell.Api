@@ -25,7 +25,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="Name">Name.</param>
         /// <param name="ViewId">ViewId.</param>
         /// <param name="Image">Image.</param>
-        public CoreView(string Name = default(string), string ViewId = default(string), string Image = default(string))
+        public CoreView(string Name = default, string ViewId = default, string Image = default)
         {
             this.Name = Name;
             this.ViewId = ViewId;

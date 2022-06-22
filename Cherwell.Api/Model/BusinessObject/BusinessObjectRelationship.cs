@@ -28,7 +28,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="FieldDefinitions">FieldDefinitions.</param>
         /// <param name="RelationshipId">RelationshipId.</param>
         /// <param name="Target">Target.</param>
-        public BusinessObjectRelationship(string Cardinality = default(string), string Description = default(string), string DisplayName = default(string), List<BusinessObjectFieldDefinition> FieldDefinitions = default(List<BusinessObjectFieldDefinition>), string RelationshipId = default(string), string Target = default(string))
+        public BusinessObjectRelationship(string Cardinality = default, string Description = default, string DisplayName = default, List<BusinessObjectFieldDefinition> FieldDefinitions = default(List<BusinessObjectFieldDefinition>), string RelationshipId = default, string Target = default)
         {
             this.Cardinality = Cardinality;
             this.Description = Description;
@@ -111,7 +111,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="other">Instance of BusinessObjectRelationship to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectRelationship other)
+        public bool Equals(BusinessObjectRelationship? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -121,17 +121,17 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.Cardinality == other.Cardinality ||
                     this.Cardinality != null &&
-                    this.Cardinality.Equals(other.Cardinality)
+                    this.Cardinality.Equals(other.Cardinality, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
-                    this.Description.Equals(other.Description)
+                    this.Description.Equals(other.Description, StringComparison.Ordinal)
                 ) &&
                 (
                     this.DisplayName == other.DisplayName ||
                     this.DisplayName != null &&
-                    this.DisplayName.Equals(other.DisplayName)
+                    this.DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
                 ) &&
                 (
                     this.FieldDefinitions == other.FieldDefinitions ||
@@ -141,12 +141,12 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.RelationshipId == other.RelationshipId ||
                     this.RelationshipId != null &&
-                    this.RelationshipId.Equals(other.RelationshipId)
+                    this.RelationshipId.Equals(other.RelationshipId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Target == other.Target ||
                     this.Target != null &&
-                    this.Target.Equals(other.Target)
+                    this.Target.Equals(other.Target, StringComparison.Ordinal)
                 );
         }
 

@@ -26,7 +26,7 @@ namespace Cherwell.Api.Model.Lifecycle
         /// <param name="Name">Name.</param>
         /// <param name="FromStatusId">FromStatusId.</param>
         /// <param name="ToStatusId">ToStatusId.</param>
-        public LifecycleGetTransitionsResponseTransition(string Id = default(string), string Name = default(string), string FromStatusId = default(string), string ToStatusId = default(string))
+        public LifecycleGetTransitionsResponseTransition(string Id = default, string Name = default, string FromStatusId = default, string ToStatusId = default)
         {
             this.Id = Id;
             this.Name = Name;

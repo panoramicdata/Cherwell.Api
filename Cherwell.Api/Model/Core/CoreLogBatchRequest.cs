@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Core
         /// Initializes a new instance of the <see cref="CoreLogBatchRequest" /> class.
         /// </summary>
         /// <param name="LogRequests">LogRequests.</param>
-        public CoreLogBatchRequest(List<CoreLogRequest> LogRequests = default(List<CoreLogRequest>))
+        public CoreLogBatchRequest(List<CoreLogRequest> LogRequests = default)
         {
             this.LogRequests = LogRequests;
         }

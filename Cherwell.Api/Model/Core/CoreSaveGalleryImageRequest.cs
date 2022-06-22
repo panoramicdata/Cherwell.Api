@@ -61,7 +61,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="Scope">Scope.</param>
         /// <param name="ScopeOwner">ScopeOwner.</param>
         /// <param name="StandInKey">StandInKey.</param>
-        public CoreSaveGalleryImageRequest(string Base64EncodedImageData = default(string), string Description = default(string), string Folder = default(string), EnumImageType? ImageType = default(EnumImageType?), string Name = default(string), string Scope = default(string), string ScopeOwner = default(string), string StandInKey = default(string))
+        public CoreSaveGalleryImageRequest(string Base64EncodedImageData = default, string Description = default, string Folder = default, EnumImageType? ImageType = default(EnumImageType?), string Name = default, string Scope = default, string ScopeOwner = default, string StandInKey = default)
         {
             this.Base64EncodedImageData = Base64EncodedImageData;
             this.Description = Description;
