@@ -11,27 +11,27 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Api.Model
+namespace Cherwell.Api.Model.Users
 {
     /// <summary>
     /// UsersUserBatchDeleteResponse
     /// </summary>
     [DataContract]
-    public partial class UsersUserBatchDeleteResponse :  IEquatable<UsersUserBatchDeleteResponse>, IValidatableObject
+    public partial class UsersUserBatchDeleteResponse : IEquatable<UsersUserBatchDeleteResponse>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UsersUserBatchDeleteResponse" /> class.
         /// </summary>
         /// <param name="Responses">Responses.</param>
-        public UsersUserBatchDeleteResponse(List<UsersUserDeleteResponse> Responses = default(List<UsersUserDeleteResponse>))
+        public UsersUserBatchDeleteResponse(List<UsersUserDeleteResponse> Responses = default)
         {
             this.Responses = Responses;
         }
-        
+
         /// <summary>
         /// Gets or Sets Responses
         /// </summary>
-        [DataMember(Name="responses", EmitDefaultValue=false)]
+        [DataMember(Name = "responses", EmitDefaultValue = false)]
         public List<UsersUserDeleteResponse> Responses { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
@@ -45,7 +45,7 @@ namespace Cherwell.Api.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -63,7 +63,7 @@ namespace Cherwell.Api.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as UsersUserBatchDeleteResponse);
+            return Equals(obj as UsersUserBatchDeleteResponse);
         }
 
         /// <summary>
@@ -77,12 +77,12 @@ namespace Cherwell.Api.Model
             if (other == null)
                 return false;
 
-            return 
-                (
-                    this.Responses == other.Responses ||
-                    this.Responses != null &&
-                    this.Responses.SequenceEqual(other.Responses)
-                );
+            return
+
+                    Responses == other.Responses ||
+                    Responses != null &&
+                    Responses.SequenceEqual(other.Responses)
+                ;
         }
 
         /// <summary>
@@ -96,8 +96,8 @@ namespace Cherwell.Api.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Responses != null)
-                    hash = hash * 59 + this.Responses.GetHashCode();
+                if (Responses != null)
+                    hash = hash * 59 + Responses.GetHashCode();
                 return hash;
             }
         }

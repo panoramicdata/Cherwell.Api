@@ -11,13 +11,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Api.Model
+namespace Cherwell.Api.Model.Users
 {
     /// <summary>
     /// UsersUserSaveV2Request
     /// </summary>
     [DataContract]
-    public partial class UsersUserSaveV2Request :  IEquatable<UsersUserSaveV2Request>, IValidatableObject
+    public partial class UsersUserSaveV2Request : IEquatable<UsersUserSaveV2Request>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UsersUserSaveV2Request" /> class.
@@ -39,7 +39,7 @@ namespace Cherwell.Api.Model
         /// <param name="UserInfoFields">UserInfoFields.</param>
         /// <param name="UserMustChangePasswordAtNextLogin">UserMustChangePasswordAtNextLogin.</param>
         /// <param name="WindowsUserId">WindowsUserId.</param>
-        public UsersUserSaveV2Request(bool? AccountLocked = default(bool?), bool? AllCultures = default(bool?), string BusObId = default(string), string BusObPublicId = default(string), string BusObRecId = default(string), string DisplayName = default(string), bool? LdapRequired = default(bool?), string LoginId = default(string), DateTime? NextPasswordResetDate = default(DateTime?), string Password = default(string), bool? PasswordNeverExpires = default(bool?), string SecurityGroupId = default(string), string SpecificCulture = default(string), bool? UserCannotChangePassword = default(bool?), List<BusinessObjectFieldTemplateItem> UserInfoFields = default(List<BusinessObjectFieldTemplateItem>), bool? UserMustChangePasswordAtNextLogin = default(bool?), string WindowsUserId = default(string))
+        public UsersUserSaveV2Request(bool? AccountLocked = default, bool? AllCultures = default, string BusObId = default, string BusObPublicId = default, string BusObRecId = default, string DisplayName = default, bool? LdapRequired = default, string LoginId = default, DateTime? NextPasswordResetDate = default, string Password = default, bool? PasswordNeverExpires = default, string SecurityGroupId = default, string SpecificCulture = default, bool? UserCannotChangePassword = default, List<BusinessObjectFieldTemplateItem> UserInfoFields = default, bool? UserMustChangePasswordAtNextLogin = default, string WindowsUserId = default)
         {
             this.AccountLocked = AccountLocked;
             this.AllCultures = AllCultures;
@@ -59,91 +59,91 @@ namespace Cherwell.Api.Model
             this.UserMustChangePasswordAtNextLogin = UserMustChangePasswordAtNextLogin;
             this.WindowsUserId = WindowsUserId;
         }
-        
+
         /// <summary>
         /// Gets or Sets AccountLocked
         /// </summary>
-        [DataMember(Name="accountLocked", EmitDefaultValue=false)]
+        [DataMember(Name = "accountLocked", EmitDefaultValue = false)]
         public bool? AccountLocked { get; set; }
         /// <summary>
         /// Gets or Sets AllCultures
         /// </summary>
-        [DataMember(Name="allCultures", EmitDefaultValue=false)]
+        [DataMember(Name = "allCultures", EmitDefaultValue = false)]
         public bool? AllCultures { get; set; }
         /// <summary>
         /// Gets or Sets BusObId
         /// </summary>
-        [DataMember(Name="busObId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObId", EmitDefaultValue = false)]
         public string BusObId { get; set; }
         /// <summary>
         /// Gets or Sets BusObPublicId
         /// </summary>
-        [DataMember(Name="busObPublicId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
         public string BusObPublicId { get; set; }
         /// <summary>
         /// Gets or Sets BusObRecId
         /// </summary>
-        [DataMember(Name="busObRecId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObRecId", EmitDefaultValue = false)]
         public string BusObRecId { get; set; }
         /// <summary>
         /// Gets or Sets DisplayName
         /// </summary>
-        [DataMember(Name="displayName", EmitDefaultValue=false)]
+        [DataMember(Name = "displayName", EmitDefaultValue = false)]
         public string DisplayName { get; set; }
         /// <summary>
         /// Gets or Sets LdapRequired
         /// </summary>
-        [DataMember(Name="ldapRequired", EmitDefaultValue=false)]
+        [DataMember(Name = "ldapRequired", EmitDefaultValue = false)]
         public bool? LdapRequired { get; set; }
         /// <summary>
         /// Gets or Sets LoginId
         /// </summary>
-        [DataMember(Name="loginId", EmitDefaultValue=false)]
+        [DataMember(Name = "loginId", EmitDefaultValue = false)]
         public string LoginId { get; set; }
         /// <summary>
         /// Gets or Sets NextPasswordResetDate
         /// </summary>
-        [DataMember(Name="nextPasswordResetDate", EmitDefaultValue=false)]
+        [DataMember(Name = "nextPasswordResetDate", EmitDefaultValue = false)]
         public DateTime? NextPasswordResetDate { get; set; }
         /// <summary>
         /// Gets or Sets Password
         /// </summary>
-        [DataMember(Name="password", EmitDefaultValue=false)]
+        [DataMember(Name = "password", EmitDefaultValue = false)]
         public string Password { get; set; }
         /// <summary>
         /// Gets or Sets PasswordNeverExpires
         /// </summary>
-        [DataMember(Name="passwordNeverExpires", EmitDefaultValue=false)]
+        [DataMember(Name = "passwordNeverExpires", EmitDefaultValue = false)]
         public bool? PasswordNeverExpires { get; set; }
         /// <summary>
         /// Gets or Sets SecurityGroupId
         /// </summary>
-        [DataMember(Name="securityGroupId", EmitDefaultValue=false)]
+        [DataMember(Name = "securityGroupId", EmitDefaultValue = false)]
         public string SecurityGroupId { get; set; }
         /// <summary>
         /// Gets or Sets SpecificCulture
         /// </summary>
-        [DataMember(Name="specificCulture", EmitDefaultValue=false)]
+        [DataMember(Name = "specificCulture", EmitDefaultValue = false)]
         public string SpecificCulture { get; set; }
         /// <summary>
         /// Gets or Sets UserCannotChangePassword
         /// </summary>
-        [DataMember(Name="userCannotChangePassword", EmitDefaultValue=false)]
+        [DataMember(Name = "userCannotChangePassword", EmitDefaultValue = false)]
         public bool? UserCannotChangePassword { get; set; }
         /// <summary>
         /// Gets or Sets UserInfoFields
         /// </summary>
-        [DataMember(Name="userInfoFields", EmitDefaultValue=false)]
+        [DataMember(Name = "userInfoFields", EmitDefaultValue = false)]
         public List<BusinessObjectFieldTemplateItem> UserInfoFields { get; set; }
         /// <summary>
         /// Gets or Sets UserMustChangePasswordAtNextLogin
         /// </summary>
-        [DataMember(Name="userMustChangePasswordAtNextLogin", EmitDefaultValue=false)]
+        [DataMember(Name = "userMustChangePasswordAtNextLogin", EmitDefaultValue = false)]
         public bool? UserMustChangePasswordAtNextLogin { get; set; }
         /// <summary>
         /// Gets or Sets WindowsUserId
         /// </summary>
-        [DataMember(Name="windowsUserId", EmitDefaultValue=false)]
+        [DataMember(Name = "windowsUserId", EmitDefaultValue = false)]
         public string WindowsUserId { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
@@ -173,7 +173,7 @@ namespace Cherwell.Api.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -191,7 +191,7 @@ namespace Cherwell.Api.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as UsersUserSaveV2Request);
+            return Equals(obj as UsersUserSaveV2Request);
         }
 
         /// <summary>
@@ -205,91 +205,91 @@ namespace Cherwell.Api.Model
             if (other == null)
                 return false;
 
-            return 
+            return
                 (
-                    this.AccountLocked == other.AccountLocked ||
-                    this.AccountLocked != null &&
-                    this.AccountLocked.Equals(other.AccountLocked)
-                ) && 
+                    AccountLocked == other.AccountLocked ||
+                    AccountLocked != null &&
+                    AccountLocked.Equals(other.AccountLocked)
+                ) &&
                 (
-                    this.AllCultures == other.AllCultures ||
-                    this.AllCultures != null &&
-                    this.AllCultures.Equals(other.AllCultures)
-                ) && 
+                    AllCultures == other.AllCultures ||
+                    AllCultures != null &&
+                    AllCultures.Equals(other.AllCultures)
+                ) &&
                 (
-                    this.BusObId == other.BusObId ||
-                    this.BusObId != null &&
-                    this.BusObId.Equals(other.BusObId)
-                ) && 
+                    BusObId == other.BusObId ||
+                    BusObId != null &&
+                    BusObId.Equals(other.BusObId)
+                ) &&
                 (
-                    this.BusObPublicId == other.BusObPublicId ||
-                    this.BusObPublicId != null &&
-                    this.BusObPublicId.Equals(other.BusObPublicId)
-                ) && 
+                    BusObPublicId == other.BusObPublicId ||
+                    BusObPublicId != null &&
+                    BusObPublicId.Equals(other.BusObPublicId)
+                ) &&
                 (
-                    this.BusObRecId == other.BusObRecId ||
-                    this.BusObRecId != null &&
-                    this.BusObRecId.Equals(other.BusObRecId)
-                ) && 
+                    BusObRecId == other.BusObRecId ||
+                    BusObRecId != null &&
+                    BusObRecId.Equals(other.BusObRecId)
+                ) &&
                 (
-                    this.DisplayName == other.DisplayName ||
-                    this.DisplayName != null &&
-                    this.DisplayName.Equals(other.DisplayName)
-                ) && 
+                    DisplayName == other.DisplayName ||
+                    DisplayName != null &&
+                    DisplayName.Equals(other.DisplayName)
+                ) &&
                 (
-                    this.LdapRequired == other.LdapRequired ||
-                    this.LdapRequired != null &&
-                    this.LdapRequired.Equals(other.LdapRequired)
-                ) && 
+                    LdapRequired == other.LdapRequired ||
+                    LdapRequired != null &&
+                    LdapRequired.Equals(other.LdapRequired)
+                ) &&
                 (
-                    this.LoginId == other.LoginId ||
-                    this.LoginId != null &&
-                    this.LoginId.Equals(other.LoginId)
-                ) && 
+                    LoginId == other.LoginId ||
+                    LoginId != null &&
+                    LoginId.Equals(other.LoginId)
+                ) &&
                 (
-                    this.NextPasswordResetDate == other.NextPasswordResetDate ||
-                    this.NextPasswordResetDate != null &&
-                    this.NextPasswordResetDate.Equals(other.NextPasswordResetDate)
-                ) && 
+                    NextPasswordResetDate == other.NextPasswordResetDate ||
+                    NextPasswordResetDate != null &&
+                    NextPasswordResetDate.Equals(other.NextPasswordResetDate)
+                ) &&
                 (
-                    this.Password == other.Password ||
-                    this.Password != null &&
-                    this.Password.Equals(other.Password)
-                ) && 
+                    Password == other.Password ||
+                    Password != null &&
+                    Password.Equals(other.Password)
+                ) &&
                 (
-                    this.PasswordNeverExpires == other.PasswordNeverExpires ||
-                    this.PasswordNeverExpires != null &&
-                    this.PasswordNeverExpires.Equals(other.PasswordNeverExpires)
-                ) && 
+                    PasswordNeverExpires == other.PasswordNeverExpires ||
+                    PasswordNeverExpires != null &&
+                    PasswordNeverExpires.Equals(other.PasswordNeverExpires)
+                ) &&
                 (
-                    this.SecurityGroupId == other.SecurityGroupId ||
-                    this.SecurityGroupId != null &&
-                    this.SecurityGroupId.Equals(other.SecurityGroupId)
-                ) && 
+                    SecurityGroupId == other.SecurityGroupId ||
+                    SecurityGroupId != null &&
+                    SecurityGroupId.Equals(other.SecurityGroupId)
+                ) &&
                 (
-                    this.SpecificCulture == other.SpecificCulture ||
-                    this.SpecificCulture != null &&
-                    this.SpecificCulture.Equals(other.SpecificCulture)
-                ) && 
+                    SpecificCulture == other.SpecificCulture ||
+                    SpecificCulture != null &&
+                    SpecificCulture.Equals(other.SpecificCulture)
+                ) &&
                 (
-                    this.UserCannotChangePassword == other.UserCannotChangePassword ||
-                    this.UserCannotChangePassword != null &&
-                    this.UserCannotChangePassword.Equals(other.UserCannotChangePassword)
-                ) && 
+                    UserCannotChangePassword == other.UserCannotChangePassword ||
+                    UserCannotChangePassword != null &&
+                    UserCannotChangePassword.Equals(other.UserCannotChangePassword)
+                ) &&
                 (
-                    this.UserInfoFields == other.UserInfoFields ||
-                    this.UserInfoFields != null &&
-                    this.UserInfoFields.SequenceEqual(other.UserInfoFields)
-                ) && 
+                    UserInfoFields == other.UserInfoFields ||
+                    UserInfoFields != null &&
+                    UserInfoFields.SequenceEqual(other.UserInfoFields)
+                ) &&
                 (
-                    this.UserMustChangePasswordAtNextLogin == other.UserMustChangePasswordAtNextLogin ||
-                    this.UserMustChangePasswordAtNextLogin != null &&
-                    this.UserMustChangePasswordAtNextLogin.Equals(other.UserMustChangePasswordAtNextLogin)
-                ) && 
+                    UserMustChangePasswordAtNextLogin == other.UserMustChangePasswordAtNextLogin ||
+                    UserMustChangePasswordAtNextLogin != null &&
+                    UserMustChangePasswordAtNextLogin.Equals(other.UserMustChangePasswordAtNextLogin)
+                ) &&
                 (
-                    this.WindowsUserId == other.WindowsUserId ||
-                    this.WindowsUserId != null &&
-                    this.WindowsUserId.Equals(other.WindowsUserId)
+                    WindowsUserId == other.WindowsUserId ||
+                    WindowsUserId != null &&
+                    WindowsUserId.Equals(other.WindowsUserId)
                 );
         }
 
@@ -304,40 +304,40 @@ namespace Cherwell.Api.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.AccountLocked != null)
-                    hash = hash * 59 + this.AccountLocked.GetHashCode();
-                if (this.AllCultures != null)
-                    hash = hash * 59 + this.AllCultures.GetHashCode();
-                if (this.BusObId != null)
-                    hash = hash * 59 + this.BusObId.GetHashCode();
-                if (this.BusObPublicId != null)
-                    hash = hash * 59 + this.BusObPublicId.GetHashCode();
-                if (this.BusObRecId != null)
-                    hash = hash * 59 + this.BusObRecId.GetHashCode();
-                if (this.DisplayName != null)
-                    hash = hash * 59 + this.DisplayName.GetHashCode();
-                if (this.LdapRequired != null)
-                    hash = hash * 59 + this.LdapRequired.GetHashCode();
-                if (this.LoginId != null)
-                    hash = hash * 59 + this.LoginId.GetHashCode();
-                if (this.NextPasswordResetDate != null)
-                    hash = hash * 59 + this.NextPasswordResetDate.GetHashCode();
-                if (this.Password != null)
-                    hash = hash * 59 + this.Password.GetHashCode();
-                if (this.PasswordNeverExpires != null)
-                    hash = hash * 59 + this.PasswordNeverExpires.GetHashCode();
-                if (this.SecurityGroupId != null)
-                    hash = hash * 59 + this.SecurityGroupId.GetHashCode();
-                if (this.SpecificCulture != null)
-                    hash = hash * 59 + this.SpecificCulture.GetHashCode();
-                if (this.UserCannotChangePassword != null)
-                    hash = hash * 59 + this.UserCannotChangePassword.GetHashCode();
-                if (this.UserInfoFields != null)
-                    hash = hash * 59 + this.UserInfoFields.GetHashCode();
-                if (this.UserMustChangePasswordAtNextLogin != null)
-                    hash = hash * 59 + this.UserMustChangePasswordAtNextLogin.GetHashCode();
-                if (this.WindowsUserId != null)
-                    hash = hash * 59 + this.WindowsUserId.GetHashCode();
+                if (AccountLocked != null)
+                    hash = hash * 59 + AccountLocked.GetHashCode();
+                if (AllCultures != null)
+                    hash = hash * 59 + AllCultures.GetHashCode();
+                if (BusObId != null)
+                    hash = hash * 59 + BusObId.GetHashCode();
+                if (BusObPublicId != null)
+                    hash = hash * 59 + BusObPublicId.GetHashCode();
+                if (BusObRecId != null)
+                    hash = hash * 59 + BusObRecId.GetHashCode();
+                if (DisplayName != null)
+                    hash = hash * 59 + DisplayName.GetHashCode();
+                if (LdapRequired != null)
+                    hash = hash * 59 + LdapRequired.GetHashCode();
+                if (LoginId != null)
+                    hash = hash * 59 + LoginId.GetHashCode();
+                if (NextPasswordResetDate != null)
+                    hash = hash * 59 + NextPasswordResetDate.GetHashCode();
+                if (Password != null)
+                    hash = hash * 59 + Password.GetHashCode();
+                if (PasswordNeverExpires != null)
+                    hash = hash * 59 + PasswordNeverExpires.GetHashCode();
+                if (SecurityGroupId != null)
+                    hash = hash * 59 + SecurityGroupId.GetHashCode();
+                if (SpecificCulture != null)
+                    hash = hash * 59 + SpecificCulture.GetHashCode();
+                if (UserCannotChangePassword != null)
+                    hash = hash * 59 + UserCannotChangePassword.GetHashCode();
+                if (UserInfoFields != null)
+                    hash = hash * 59 + UserInfoFields.GetHashCode();
+                if (UserMustChangePasswordAtNextLogin != null)
+                    hash = hash * 59 + UserMustChangePasswordAtNextLogin.GetHashCode();
+                if (WindowsUserId != null)
+                    hash = hash * 59 + WindowsUserId.GetHashCode();
                 return hash;
             }
         }

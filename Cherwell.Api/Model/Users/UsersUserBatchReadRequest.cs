@@ -11,34 +11,34 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Api.Model
+namespace Cherwell.Api.Model.Users
 {
     /// <summary>
-    /// UsersUserBatchSaveRequest
+    /// UsersUserBatchReadRequest
     /// </summary>
     [DataContract]
-    public partial class UsersUserBatchSaveRequest :  IEquatable<UsersUserBatchSaveRequest>, IValidatableObject
+    public partial class UsersUserBatchReadRequest : IEquatable<UsersUserBatchReadRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsersUserBatchSaveRequest" /> class.
+        /// Initializes a new instance of the <see cref="UsersUserBatchReadRequest" /> class.
         /// </summary>
-        /// <param name="SaveRequests">SaveRequests.</param>
+        /// <param name="ReadRequests">ReadRequests.</param>
         /// <param name="StopOnError">StopOnError.</param>
-        public UsersUserBatchSaveRequest(List<UsersUserSaveRequest> SaveRequests = default(List<UsersUserSaveRequest>), bool? StopOnError = default(bool?))
+        public UsersUserBatchReadRequest(List<UsersUserReadRequest> ReadRequests = default, bool? StopOnError = default)
         {
-            this.SaveRequests = SaveRequests;
+            this.ReadRequests = ReadRequests;
             this.StopOnError = StopOnError;
         }
-        
+
         /// <summary>
-        /// Gets or Sets SaveRequests
+        /// Gets or Sets ReadRequests
         /// </summary>
-        [DataMember(Name="saveRequests", EmitDefaultValue=false)]
-        public List<UsersUserSaveRequest> SaveRequests { get; set; }
+        [DataMember(Name = "readRequests", EmitDefaultValue = false)]
+        public List<UsersUserReadRequest> ReadRequests { get; set; }
         /// <summary>
         /// Gets or Sets StopOnError
         /// </summary>
-        [DataMember(Name="stopOnError", EmitDefaultValue=false)]
+        [DataMember(Name = "stopOnError", EmitDefaultValue = false)]
         public bool? StopOnError { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
@@ -47,13 +47,13 @@ namespace Cherwell.Api.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UsersUserBatchSaveRequest {\n");
-            sb.Append("  SaveRequests: ").Append(SaveRequests).Append("\n");
+            sb.Append("class UsersUserBatchReadRequest {\n");
+            sb.Append("  ReadRequests: ").Append(ReadRequests).Append("\n");
             sb.Append("  StopOnError: ").Append(StopOnError).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -71,30 +71,30 @@ namespace Cherwell.Api.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as UsersUserBatchSaveRequest);
+            return Equals(obj as UsersUserBatchReadRequest);
         }
 
         /// <summary>
-        /// Returns true if UsersUserBatchSaveRequest instances are equal
+        /// Returns true if UsersUserBatchReadRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of UsersUserBatchSaveRequest to be compared</param>
+        /// <param name="other">Instance of UsersUserBatchReadRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUserBatchSaveRequest other)
+        public bool Equals(UsersUserBatchReadRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
                 return false;
 
-            return 
+            return
                 (
-                    this.SaveRequests == other.SaveRequests ||
-                    this.SaveRequests != null &&
-                    this.SaveRequests.SequenceEqual(other.SaveRequests)
-                ) && 
+                    ReadRequests == other.ReadRequests ||
+                    ReadRequests != null &&
+                    ReadRequests.SequenceEqual(other.ReadRequests)
+                ) &&
                 (
-                    this.StopOnError == other.StopOnError ||
-                    this.StopOnError != null &&
-                    this.StopOnError.Equals(other.StopOnError)
+                    StopOnError == other.StopOnError ||
+                    StopOnError != null &&
+                    StopOnError.Equals(other.StopOnError)
                 );
         }
 
@@ -109,10 +109,10 @@ namespace Cherwell.Api.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.SaveRequests != null)
-                    hash = hash * 59 + this.SaveRequests.GetHashCode();
-                if (this.StopOnError != null)
-                    hash = hash * 59 + this.StopOnError.GetHashCode();
+                if (ReadRequests != null)
+                    hash = hash * 59 + ReadRequests.GetHashCode();
+                if (StopOnError != null)
+                    hash = hash * 59 + StopOnError.GetHashCode();
                 return hash;
             }
         }

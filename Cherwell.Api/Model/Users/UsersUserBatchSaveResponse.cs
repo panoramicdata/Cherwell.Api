@@ -11,35 +11,28 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Api.Model
+namespace Cherwell.Api.Model.Users
 {
     /// <summary>
-    /// UsersUserBatchDeleteRequest
+    /// UsersUserBatchSaveResponse
     /// </summary>
     [DataContract]
-    public partial class UsersUserBatchDeleteRequest :  IEquatable<UsersUserBatchDeleteRequest>, IValidatableObject
+    public partial class UsersUserBatchSaveResponse : IEquatable<UsersUserBatchSaveResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsersUserBatchDeleteRequest" /> class.
+        /// Initializes a new instance of the <see cref="UsersUserBatchSaveResponse" /> class.
         /// </summary>
-        /// <param name="StopOnError">StopOnError.</param>
-        /// <param name="UserRecordIds">UserRecordIds.</param>
-        public UsersUserBatchDeleteRequest(bool? StopOnError = default(bool?), List<string> UserRecordIds = default(List<string>))
+        /// <param name="Responses">Responses.</param>
+        public UsersUserBatchSaveResponse(List<UsersUserSaveResponse> Responses = default)
         {
-            this.StopOnError = StopOnError;
-            this.UserRecordIds = UserRecordIds;
+            this.Responses = Responses;
         }
-        
+
         /// <summary>
-        /// Gets or Sets StopOnError
+        /// Gets or Sets Responses
         /// </summary>
-        [DataMember(Name="stopOnError", EmitDefaultValue=false)]
-        public bool? StopOnError { get; set; }
-        /// <summary>
-        /// Gets or Sets UserRecordIds
-        /// </summary>
-        [DataMember(Name="userRecordIds", EmitDefaultValue=false)]
-        public List<string> UserRecordIds { get; set; }
+        [DataMember(Name = "responses", EmitDefaultValue = false)]
+        public List<UsersUserSaveResponse> Responses { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,13 +40,12 @@ namespace Cherwell.Api.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UsersUserBatchDeleteRequest {\n");
-            sb.Append("  StopOnError: ").Append(StopOnError).Append("\n");
-            sb.Append("  UserRecordIds: ").Append(UserRecordIds).Append("\n");
+            sb.Append("class UsersUserBatchSaveResponse {\n");
+            sb.Append("  Responses: ").Append(Responses).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -71,31 +63,26 @@ namespace Cherwell.Api.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as UsersUserBatchDeleteRequest);
+            return Equals(obj as UsersUserBatchSaveResponse);
         }
 
         /// <summary>
-        /// Returns true if UsersUserBatchDeleteRequest instances are equal
+        /// Returns true if UsersUserBatchSaveResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of UsersUserBatchDeleteRequest to be compared</param>
+        /// <param name="other">Instance of UsersUserBatchSaveResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUserBatchDeleteRequest other)
+        public bool Equals(UsersUserBatchSaveResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
                 return false;
 
-            return 
-                (
-                    this.StopOnError == other.StopOnError ||
-                    this.StopOnError != null &&
-                    this.StopOnError.Equals(other.StopOnError)
-                ) && 
-                (
-                    this.UserRecordIds == other.UserRecordIds ||
-                    this.UserRecordIds != null &&
-                    this.UserRecordIds.SequenceEqual(other.UserRecordIds)
-                );
+            return
+
+                    Responses == other.Responses ||
+                    Responses != null &&
+                    Responses.SequenceEqual(other.Responses)
+                ;
         }
 
         /// <summary>
@@ -109,10 +96,8 @@ namespace Cherwell.Api.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.StopOnError != null)
-                    hash = hash * 59 + this.StopOnError.GetHashCode();
-                if (this.UserRecordIds != null)
-                    hash = hash * 59 + this.UserRecordIds.GetHashCode();
+                if (Responses != null)
+                    hash = hash * 59 + Responses.GetHashCode();
                 return hash;
             }
         }

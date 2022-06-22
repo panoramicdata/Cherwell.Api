@@ -7,3 +7,5 @@ global using Cherwell.Api.Model.OneStepActions;
 global using Cherwell.Api.Model.Queues;
 global using Cherwell.Api.Model.Searches;
 global using Cherwell.Api.Model.Security;
+global using Cherwell.Api.Model.Teams;
+global using Cherwell.Api.Model.Users;

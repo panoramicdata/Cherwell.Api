@@ -11,35 +11,35 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Api.Model
+namespace Cherwell.Api.Model.Users
 {
     /// <summary>
-    /// UsersUserBatchReadRequest
+    /// UsersUserReadRequest
     /// </summary>
     [DataContract]
-    public partial class UsersUserBatchReadRequest :  IEquatable<UsersUserBatchReadRequest>, IValidatableObject
+    public partial class UsersUserReadRequest : IEquatable<UsersUserReadRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsersUserBatchReadRequest" /> class.
+        /// Initializes a new instance of the <see cref="UsersUserReadRequest" /> class.
         /// </summary>
-        /// <param name="ReadRequests">ReadRequests.</param>
-        /// <param name="StopOnError">StopOnError.</param>
-        public UsersUserBatchReadRequest(List<UsersUserReadRequest> ReadRequests = default(List<UsersUserReadRequest>), bool? StopOnError = default(bool?))
+        /// <param name="LoginId">LoginId.</param>
+        /// <param name="PublicId">PublicId.</param>
+        public UsersUserReadRequest(string LoginId = default, string PublicId = default)
         {
-            this.ReadRequests = ReadRequests;
-            this.StopOnError = StopOnError;
+            this.LoginId = LoginId;
+            this.PublicId = PublicId;
         }
-        
+
         /// <summary>
-        /// Gets or Sets ReadRequests
+        /// Gets or Sets LoginId
         /// </summary>
-        [DataMember(Name="readRequests", EmitDefaultValue=false)]
-        public List<UsersUserReadRequest> ReadRequests { get; set; }
+        [DataMember(Name = "loginId", EmitDefaultValue = false)]
+        public string LoginId { get; set; }
         /// <summary>
-        /// Gets or Sets StopOnError
+        /// Gets or Sets PublicId
         /// </summary>
-        [DataMember(Name="stopOnError", EmitDefaultValue=false)]
-        public bool? StopOnError { get; set; }
+        [DataMember(Name = "publicId", EmitDefaultValue = false)]
+        public string PublicId { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,13 +47,13 @@ namespace Cherwell.Api.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UsersUserBatchReadRequest {\n");
-            sb.Append("  ReadRequests: ").Append(ReadRequests).Append("\n");
-            sb.Append("  StopOnError: ").Append(StopOnError).Append("\n");
+            sb.Append("class UsersUserReadRequest {\n");
+            sb.Append("  LoginId: ").Append(LoginId).Append("\n");
+            sb.Append("  PublicId: ").Append(PublicId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -71,30 +71,30 @@ namespace Cherwell.Api.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as UsersUserBatchReadRequest);
+            return Equals(obj as UsersUserReadRequest);
         }
 
         /// <summary>
-        /// Returns true if UsersUserBatchReadRequest instances are equal
+        /// Returns true if UsersUserReadRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of UsersUserBatchReadRequest to be compared</param>
+        /// <param name="other">Instance of UsersUserReadRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUserBatchReadRequest other)
+        public bool Equals(UsersUserReadRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
                 return false;
 
-            return 
+            return
                 (
-                    this.ReadRequests == other.ReadRequests ||
-                    this.ReadRequests != null &&
-                    this.ReadRequests.SequenceEqual(other.ReadRequests)
-                ) && 
+                    LoginId == other.LoginId ||
+                    LoginId != null &&
+                    LoginId.Equals(other.LoginId)
+                ) &&
                 (
-                    this.StopOnError == other.StopOnError ||
-                    this.StopOnError != null &&
-                    this.StopOnError.Equals(other.StopOnError)
+                    PublicId == other.PublicId ||
+                    PublicId != null &&
+                    PublicId.Equals(other.PublicId)
                 );
         }
 
@@ -109,10 +109,10 @@ namespace Cherwell.Api.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.ReadRequests != null)
-                    hash = hash * 59 + this.ReadRequests.GetHashCode();
-                if (this.StopOnError != null)
-                    hash = hash * 59 + this.StopOnError.GetHashCode();
+                if (LoginId != null)
+                    hash = hash * 59 + LoginId.GetHashCode();
+                if (PublicId != null)
+                    hash = hash * 59 + PublicId.GetHashCode();
                 return hash;
             }
         }

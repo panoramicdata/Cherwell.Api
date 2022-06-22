@@ -11,13 +11,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Api.Model
+namespace Cherwell.Api.Model.Users
 {
     /// <summary>
     /// UsersUserSaveResponse
     /// </summary>
     [DataContract]
-    public partial class UsersUserSaveResponse :  IEquatable<UsersUserSaveResponse>, IValidatableObject
+    public partial class UsersUserSaveResponse : IEquatable<UsersUserSaveResponse>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UsersUserSaveResponse" /> class.
@@ -27,7 +27,7 @@ namespace Cherwell.Api.Model
         /// <param name="Error">Error.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="HasError">HasError.</param>
-        public UsersUserSaveResponse(string BusObPublicId = default(string), string BusObRecId = default(string), string Error = default(string), string ErrorCode = default(string), bool? HasError = default(bool?))
+        public UsersUserSaveResponse(string BusObPublicId = default, string BusObRecId = default, string Error = default, string ErrorCode = default, bool? HasError = default)
         {
             this.BusObPublicId = BusObPublicId;
             this.BusObRecId = BusObRecId;
@@ -35,31 +35,31 @@ namespace Cherwell.Api.Model
             this.ErrorCode = ErrorCode;
             this.HasError = HasError;
         }
-        
+
         /// <summary>
         /// Gets or Sets BusObPublicId
         /// </summary>
-        [DataMember(Name="busObPublicId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
         public string BusObPublicId { get; set; }
         /// <summary>
         /// Gets or Sets BusObRecId
         /// </summary>
-        [DataMember(Name="busObRecId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObRecId", EmitDefaultValue = false)]
         public string BusObRecId { get; set; }
         /// <summary>
         /// Gets or Sets Error
         /// </summary>
-        [DataMember(Name="error", EmitDefaultValue=false)]
+        [DataMember(Name = "error", EmitDefaultValue = false)]
         public string Error { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
-        [DataMember(Name="errorCode", EmitDefaultValue=false)]
+        [DataMember(Name = "errorCode", EmitDefaultValue = false)]
         public string ErrorCode { get; set; }
         /// <summary>
         /// Gets or Sets HasError
         /// </summary>
-        [DataMember(Name="hasError", EmitDefaultValue=false)]
+        [DataMember(Name = "hasError", EmitDefaultValue = false)]
         public bool? HasError { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
@@ -77,7 +77,7 @@ namespace Cherwell.Api.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -95,7 +95,7 @@ namespace Cherwell.Api.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as UsersUserSaveResponse);
+            return Equals(obj as UsersUserSaveResponse);
         }
 
         /// <summary>
@@ -109,31 +109,31 @@ namespace Cherwell.Api.Model
             if (other == null)
                 return false;
 
-            return 
+            return
                 (
-                    this.BusObPublicId == other.BusObPublicId ||
-                    this.BusObPublicId != null &&
-                    this.BusObPublicId.Equals(other.BusObPublicId)
-                ) && 
+                    BusObPublicId == other.BusObPublicId ||
+                    BusObPublicId != null &&
+                    BusObPublicId.Equals(other.BusObPublicId)
+                ) &&
                 (
-                    this.BusObRecId == other.BusObRecId ||
-                    this.BusObRecId != null &&
-                    this.BusObRecId.Equals(other.BusObRecId)
-                ) && 
+                    BusObRecId == other.BusObRecId ||
+                    BusObRecId != null &&
+                    BusObRecId.Equals(other.BusObRecId)
+                ) &&
                 (
-                    this.Error == other.Error ||
-                    this.Error != null &&
-                    this.Error.Equals(other.Error)
-                ) && 
+                    Error == other.Error ||
+                    Error != null &&
+                    Error.Equals(other.Error)
+                ) &&
                 (
-                    this.ErrorCode == other.ErrorCode ||
-                    this.ErrorCode != null &&
-                    this.ErrorCode.Equals(other.ErrorCode)
-                ) && 
+                    ErrorCode == other.ErrorCode ||
+                    ErrorCode != null &&
+                    ErrorCode.Equals(other.ErrorCode)
+                ) &&
                 (
-                    this.HasError == other.HasError ||
-                    this.HasError != null &&
-                    this.HasError.Equals(other.HasError)
+                    HasError == other.HasError ||
+                    HasError != null &&
+                    HasError.Equals(other.HasError)
                 );
         }
 
@@ -148,16 +148,16 @@ namespace Cherwell.Api.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.BusObPublicId != null)
-                    hash = hash * 59 + this.BusObPublicId.GetHashCode();
-                if (this.BusObRecId != null)
-                    hash = hash * 59 + this.BusObRecId.GetHashCode();
-                if (this.Error != null)
-                    hash = hash * 59 + this.Error.GetHashCode();
-                if (this.ErrorCode != null)
-                    hash = hash * 59 + this.ErrorCode.GetHashCode();
-                if (this.HasError != null)
-                    hash = hash * 59 + this.HasError.GetHashCode();
+                if (BusObPublicId != null)
+                    hash = hash * 59 + BusObPublicId.GetHashCode();
+                if (BusObRecId != null)
+                    hash = hash * 59 + BusObRecId.GetHashCode();
+                if (Error != null)
+                    hash = hash * 59 + Error.GetHashCode();
+                if (ErrorCode != null)
+                    hash = hash * 59 + ErrorCode.GetHashCode();
+                if (HasError != null)
+                    hash = hash * 59 + HasError.GetHashCode();
                 return hash;
             }
         }

@@ -11,48 +11,48 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Api.Model
+namespace Cherwell.Api.Model.Users
 {
     /// <summary>
-    /// UsersUserReadResponse
+    /// UsersUserDeleteResponse
     /// </summary>
     [DataContract]
-    public partial class UsersUserReadResponse :  IEquatable<UsersUserReadResponse>, IValidatableObject
+    public partial class UsersUserDeleteResponse : IEquatable<UsersUserDeleteResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsersUserReadResponse" /> class.
+        /// Initializes a new instance of the <see cref="UsersUserDeleteResponse" /> class.
         /// </summary>
         /// <param name="Error">Error.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="Users">Users.</param>
-        public UsersUserReadResponse(string Error = default(string), string ErrorCode = default(string), bool? HasError = default(bool?), List<UsersUser> Users = default(List<UsersUser>))
+        public UsersUserDeleteResponse(string Error = default, string ErrorCode = default, bool? HasError = default, List<UsersUser> Users = default)
         {
             this.Error = Error;
             this.ErrorCode = ErrorCode;
             this.HasError = HasError;
             this.Users = Users;
         }
-        
+
         /// <summary>
         /// Gets or Sets Error
         /// </summary>
-        [DataMember(Name="error", EmitDefaultValue=false)]
+        [DataMember(Name = "error", EmitDefaultValue = false)]
         public string Error { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
-        [DataMember(Name="errorCode", EmitDefaultValue=false)]
+        [DataMember(Name = "errorCode", EmitDefaultValue = false)]
         public string ErrorCode { get; set; }
         /// <summary>
         /// Gets or Sets HasError
         /// </summary>
-        [DataMember(Name="hasError", EmitDefaultValue=false)]
+        [DataMember(Name = "hasError", EmitDefaultValue = false)]
         public bool? HasError { get; set; }
         /// <summary>
         /// Gets or Sets Users
         /// </summary>
-        [DataMember(Name="users", EmitDefaultValue=false)]
+        [DataMember(Name = "users", EmitDefaultValue = false)]
         public List<UsersUser> Users { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
@@ -61,7 +61,7 @@ namespace Cherwell.Api.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UsersUserReadResponse {\n");
+            sb.Append("class UsersUserDeleteResponse {\n");
             sb.Append("  Error: ").Append(Error).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  HasError: ").Append(HasError).Append("\n");
@@ -69,7 +69,7 @@ namespace Cherwell.Api.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -87,40 +87,40 @@ namespace Cherwell.Api.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as UsersUserReadResponse);
+            return Equals(obj as UsersUserDeleteResponse);
         }
 
         /// <summary>
-        /// Returns true if UsersUserReadResponse instances are equal
+        /// Returns true if UsersUserDeleteResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of UsersUserReadResponse to be compared</param>
+        /// <param name="other">Instance of UsersUserDeleteResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUserReadResponse other)
+        public bool Equals(UsersUserDeleteResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
                 return false;
 
-            return 
+            return
                 (
-                    this.Error == other.Error ||
-                    this.Error != null &&
-                    this.Error.Equals(other.Error)
-                ) && 
+                    Error == other.Error ||
+                    Error != null &&
+                    Error.Equals(other.Error)
+                ) &&
                 (
-                    this.ErrorCode == other.ErrorCode ||
-                    this.ErrorCode != null &&
-                    this.ErrorCode.Equals(other.ErrorCode)
-                ) && 
+                    ErrorCode == other.ErrorCode ||
+                    ErrorCode != null &&
+                    ErrorCode.Equals(other.ErrorCode)
+                ) &&
                 (
-                    this.HasError == other.HasError ||
-                    this.HasError != null &&
-                    this.HasError.Equals(other.HasError)
-                ) && 
+                    HasError == other.HasError ||
+                    HasError != null &&
+                    HasError.Equals(other.HasError)
+                ) &&
                 (
-                    this.Users == other.Users ||
-                    this.Users != null &&
-                    this.Users.SequenceEqual(other.Users)
+                    Users == other.Users ||
+                    Users != null &&
+                    Users.SequenceEqual(other.Users)
                 );
         }
 
@@ -135,14 +135,14 @@ namespace Cherwell.Api.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Error != null)
-                    hash = hash * 59 + this.Error.GetHashCode();
-                if (this.ErrorCode != null)
-                    hash = hash * 59 + this.ErrorCode.GetHashCode();
-                if (this.HasError != null)
-                    hash = hash * 59 + this.HasError.GetHashCode();
-                if (this.Users != null)
-                    hash = hash * 59 + this.Users.GetHashCode();
+                if (Error != null)
+                    hash = hash * 59 + Error.GetHashCode();
+                if (ErrorCode != null)
+                    hash = hash * 59 + ErrorCode.GetHashCode();
+                if (HasError != null)
+                    hash = hash * 59 + HasError.GetHashCode();
+                if (Users != null)
+                    hash = hash * 59 + Users.GetHashCode();
                 return hash;
             }
         }

@@ -11,13 +11,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Api.Model
+namespace Cherwell.Api.Model.Users
 {
     /// <summary>
     /// UsersUser
     /// </summary>
     [DataContract]
-    public partial class UsersUser :  IEquatable<UsersUser>, IValidatableObject
+    public partial class UsersUser : IEquatable<UsersUser>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UsersUser" /> class.
@@ -39,7 +39,7 @@ namespace Cherwell.Api.Model
         /// <param name="ShortDisplayName">ShortDisplayName.</param>
         /// <param name="UserCannotChangePassword">UserCannotChangePassword.</param>
         /// <param name="UserMustResetPasswordAtNextLogin">UserMustResetPasswordAtNextLogin.</param>
-        public UsersUser(bool? AccountLocked = default(bool?), DateTime? CreateDateTime = default(DateTime?), string DisplayName = default(string), string Error = default(string), string ErrorCode = default(string), List<BusinessObjectFieldTemplateItem> Fields = default(List<BusinessObjectFieldTemplateItem>), bool? HasError = default(bool?), DateTime? LastPasswordResetDate = default(DateTime?), DateTime? LastResetDateTime = default(DateTime?), bool? LdapRequired = default(bool?), bool? PasswordNeverExpires = default(bool?), string PublicId = default(string), string RecordId = default(string), string SecurityGroupId = default(string), string ShortDisplayName = default(string), bool? UserCannotChangePassword = default(bool?), bool? UserMustResetPasswordAtNextLogin = default(bool?))
+        public UsersUser(bool? AccountLocked = default, DateTime? CreateDateTime = default, string DisplayName = default, string Error = default, string ErrorCode = default, List<BusinessObjectFieldTemplateItem> Fields = default, bool? HasError = default, DateTime? LastPasswordResetDate = default, DateTime? LastResetDateTime = default, bool? LdapRequired = default, bool? PasswordNeverExpires = default, string PublicId = default, string RecordId = default, string SecurityGroupId = default, string ShortDisplayName = default, bool? UserCannotChangePassword = default, bool? UserMustResetPasswordAtNextLogin = default)
         {
             this.AccountLocked = AccountLocked;
             this.CreateDateTime = CreateDateTime;
@@ -59,91 +59,91 @@ namespace Cherwell.Api.Model
             this.UserCannotChangePassword = UserCannotChangePassword;
             this.UserMustResetPasswordAtNextLogin = UserMustResetPasswordAtNextLogin;
         }
-        
+
         /// <summary>
         /// Gets or Sets AccountLocked
         /// </summary>
-        [DataMember(Name="accountLocked", EmitDefaultValue=false)]
+        [DataMember(Name = "accountLocked", EmitDefaultValue = false)]
         public bool? AccountLocked { get; set; }
         /// <summary>
         /// Gets or Sets CreateDateTime
         /// </summary>
-        [DataMember(Name="createDateTime", EmitDefaultValue=false)]
+        [DataMember(Name = "createDateTime", EmitDefaultValue = false)]
         public DateTime? CreateDateTime { get; set; }
         /// <summary>
         /// Gets or Sets DisplayName
         /// </summary>
-        [DataMember(Name="displayName", EmitDefaultValue=false)]
+        [DataMember(Name = "displayName", EmitDefaultValue = false)]
         public string DisplayName { get; set; }
         /// <summary>
         /// Gets or Sets Error
         /// </summary>
-        [DataMember(Name="error", EmitDefaultValue=false)]
+        [DataMember(Name = "error", EmitDefaultValue = false)]
         public string Error { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
-        [DataMember(Name="errorCode", EmitDefaultValue=false)]
+        [DataMember(Name = "errorCode", EmitDefaultValue = false)]
         public string ErrorCode { get; set; }
         /// <summary>
         /// Gets or Sets Fields
         /// </summary>
-        [DataMember(Name="fields", EmitDefaultValue=false)]
+        [DataMember(Name = "fields", EmitDefaultValue = false)]
         public List<BusinessObjectFieldTemplateItem> Fields { get; set; }
         /// <summary>
         /// Gets or Sets HasError
         /// </summary>
-        [DataMember(Name="hasError", EmitDefaultValue=false)]
+        [DataMember(Name = "hasError", EmitDefaultValue = false)]
         public bool? HasError { get; set; }
         /// <summary>
         /// Gets or Sets LastPasswordResetDate
         /// </summary>
-        [DataMember(Name="lastPasswordResetDate", EmitDefaultValue=false)]
+        [DataMember(Name = "lastPasswordResetDate", EmitDefaultValue = false)]
         public DateTime? LastPasswordResetDate { get; set; }
         /// <summary>
         /// Gets or Sets LastResetDateTime
         /// </summary>
-        [DataMember(Name="lastResetDateTime", EmitDefaultValue=false)]
+        [DataMember(Name = "lastResetDateTime", EmitDefaultValue = false)]
         public DateTime? LastResetDateTime { get; set; }
         /// <summary>
         /// Gets or Sets LdapRequired
         /// </summary>
-        [DataMember(Name="ldapRequired", EmitDefaultValue=false)]
+        [DataMember(Name = "ldapRequired", EmitDefaultValue = false)]
         public bool? LdapRequired { get; set; }
         /// <summary>
         /// Gets or Sets PasswordNeverExpires
         /// </summary>
-        [DataMember(Name="passwordNeverExpires", EmitDefaultValue=false)]
+        [DataMember(Name = "passwordNeverExpires", EmitDefaultValue = false)]
         public bool? PasswordNeverExpires { get; set; }
         /// <summary>
         /// Gets or Sets PublicId
         /// </summary>
-        [DataMember(Name="publicId", EmitDefaultValue=false)]
+        [DataMember(Name = "publicId", EmitDefaultValue = false)]
         public string PublicId { get; set; }
         /// <summary>
         /// Gets or Sets RecordId
         /// </summary>
-        [DataMember(Name="recordId", EmitDefaultValue=false)]
+        [DataMember(Name = "recordId", EmitDefaultValue = false)]
         public string RecordId { get; set; }
         /// <summary>
         /// Gets or Sets SecurityGroupId
         /// </summary>
-        [DataMember(Name="securityGroupId", EmitDefaultValue=false)]
+        [DataMember(Name = "securityGroupId", EmitDefaultValue = false)]
         public string SecurityGroupId { get; set; }
         /// <summary>
         /// Gets or Sets ShortDisplayName
         /// </summary>
-        [DataMember(Name="shortDisplayName", EmitDefaultValue=false)]
+        [DataMember(Name = "shortDisplayName", EmitDefaultValue = false)]
         public string ShortDisplayName { get; set; }
         /// <summary>
         /// Gets or Sets UserCannotChangePassword
         /// </summary>
-        [DataMember(Name="userCannotChangePassword", EmitDefaultValue=false)]
+        [DataMember(Name = "userCannotChangePassword", EmitDefaultValue = false)]
         public bool? UserCannotChangePassword { get; set; }
         /// <summary>
         /// Gets or Sets UserMustResetPasswordAtNextLogin
         /// </summary>
-        [DataMember(Name="userMustResetPasswordAtNextLogin", EmitDefaultValue=false)]
+        [DataMember(Name = "userMustResetPasswordAtNextLogin", EmitDefaultValue = false)]
         public bool? UserMustResetPasswordAtNextLogin { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
@@ -173,7 +173,7 @@ namespace Cherwell.Api.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -191,7 +191,7 @@ namespace Cherwell.Api.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as UsersUser);
+            return Equals(obj as UsersUser);
         }
 
         /// <summary>
@@ -205,91 +205,91 @@ namespace Cherwell.Api.Model
             if (other == null)
                 return false;
 
-            return 
+            return
                 (
-                    this.AccountLocked == other.AccountLocked ||
-                    this.AccountLocked != null &&
-                    this.AccountLocked.Equals(other.AccountLocked)
-                ) && 
+                    AccountLocked == other.AccountLocked ||
+                    AccountLocked != null &&
+                    AccountLocked.Equals(other.AccountLocked)
+                ) &&
                 (
-                    this.CreateDateTime == other.CreateDateTime ||
-                    this.CreateDateTime != null &&
-                    this.CreateDateTime.Equals(other.CreateDateTime)
-                ) && 
+                    CreateDateTime == other.CreateDateTime ||
+                    CreateDateTime != null &&
+                    CreateDateTime.Equals(other.CreateDateTime)
+                ) &&
                 (
-                    this.DisplayName == other.DisplayName ||
-                    this.DisplayName != null &&
-                    this.DisplayName.Equals(other.DisplayName)
-                ) && 
+                    DisplayName == other.DisplayName ||
+                    DisplayName != null &&
+                    DisplayName.Equals(other.DisplayName)
+                ) &&
                 (
-                    this.Error == other.Error ||
-                    this.Error != null &&
-                    this.Error.Equals(other.Error)
-                ) && 
+                    Error == other.Error ||
+                    Error != null &&
+                    Error.Equals(other.Error)
+                ) &&
                 (
-                    this.ErrorCode == other.ErrorCode ||
-                    this.ErrorCode != null &&
-                    this.ErrorCode.Equals(other.ErrorCode)
-                ) && 
+                    ErrorCode == other.ErrorCode ||
+                    ErrorCode != null &&
+                    ErrorCode.Equals(other.ErrorCode)
+                ) &&
                 (
-                    this.Fields == other.Fields ||
-                    this.Fields != null &&
-                    this.Fields.SequenceEqual(other.Fields)
-                ) && 
+                    Fields == other.Fields ||
+                    Fields != null &&
+                    Fields.SequenceEqual(other.Fields)
+                ) &&
                 (
-                    this.HasError == other.HasError ||
-                    this.HasError != null &&
-                    this.HasError.Equals(other.HasError)
-                ) && 
+                    HasError == other.HasError ||
+                    HasError != null &&
+                    HasError.Equals(other.HasError)
+                ) &&
                 (
-                    this.LastPasswordResetDate == other.LastPasswordResetDate ||
-                    this.LastPasswordResetDate != null &&
-                    this.LastPasswordResetDate.Equals(other.LastPasswordResetDate)
-                ) && 
+                    LastPasswordResetDate == other.LastPasswordResetDate ||
+                    LastPasswordResetDate != null &&
+                    LastPasswordResetDate.Equals(other.LastPasswordResetDate)
+                ) &&
                 (
-                    this.LastResetDateTime == other.LastResetDateTime ||
-                    this.LastResetDateTime != null &&
-                    this.LastResetDateTime.Equals(other.LastResetDateTime)
-                ) && 
+                    LastResetDateTime == other.LastResetDateTime ||
+                    LastResetDateTime != null &&
+                    LastResetDateTime.Equals(other.LastResetDateTime)
+                ) &&
                 (
-                    this.LdapRequired == other.LdapRequired ||
-                    this.LdapRequired != null &&
-                    this.LdapRequired.Equals(other.LdapRequired)
-                ) && 
+                    LdapRequired == other.LdapRequired ||
+                    LdapRequired != null &&
+                    LdapRequired.Equals(other.LdapRequired)
+                ) &&
                 (
-                    this.PasswordNeverExpires == other.PasswordNeverExpires ||
-                    this.PasswordNeverExpires != null &&
-                    this.PasswordNeverExpires.Equals(other.PasswordNeverExpires)
-                ) && 
+                    PasswordNeverExpires == other.PasswordNeverExpires ||
+                    PasswordNeverExpires != null &&
+                    PasswordNeverExpires.Equals(other.PasswordNeverExpires)
+                ) &&
                 (
-                    this.PublicId == other.PublicId ||
-                    this.PublicId != null &&
-                    this.PublicId.Equals(other.PublicId)
-                ) && 
+                    PublicId == other.PublicId ||
+                    PublicId != null &&
+                    PublicId.Equals(other.PublicId)
+                ) &&
                 (
-                    this.RecordId == other.RecordId ||
-                    this.RecordId != null &&
-                    this.RecordId.Equals(other.RecordId)
-                ) && 
+                    RecordId == other.RecordId ||
+                    RecordId != null &&
+                    RecordId.Equals(other.RecordId)
+                ) &&
                 (
-                    this.SecurityGroupId == other.SecurityGroupId ||
-                    this.SecurityGroupId != null &&
-                    this.SecurityGroupId.Equals(other.SecurityGroupId)
-                ) && 
+                    SecurityGroupId == other.SecurityGroupId ||
+                    SecurityGroupId != null &&
+                    SecurityGroupId.Equals(other.SecurityGroupId)
+                ) &&
                 (
-                    this.ShortDisplayName == other.ShortDisplayName ||
-                    this.ShortDisplayName != null &&
-                    this.ShortDisplayName.Equals(other.ShortDisplayName)
-                ) && 
+                    ShortDisplayName == other.ShortDisplayName ||
+                    ShortDisplayName != null &&
+                    ShortDisplayName.Equals(other.ShortDisplayName)
+                ) &&
                 (
-                    this.UserCannotChangePassword == other.UserCannotChangePassword ||
-                    this.UserCannotChangePassword != null &&
-                    this.UserCannotChangePassword.Equals(other.UserCannotChangePassword)
-                ) && 
+                    UserCannotChangePassword == other.UserCannotChangePassword ||
+                    UserCannotChangePassword != null &&
+                    UserCannotChangePassword.Equals(other.UserCannotChangePassword)
+                ) &&
                 (
-                    this.UserMustResetPasswordAtNextLogin == other.UserMustResetPasswordAtNextLogin ||
-                    this.UserMustResetPasswordAtNextLogin != null &&
-                    this.UserMustResetPasswordAtNextLogin.Equals(other.UserMustResetPasswordAtNextLogin)
+                    UserMustResetPasswordAtNextLogin == other.UserMustResetPasswordAtNextLogin ||
+                    UserMustResetPasswordAtNextLogin != null &&
+                    UserMustResetPasswordAtNextLogin.Equals(other.UserMustResetPasswordAtNextLogin)
                 );
         }
 
@@ -304,40 +304,40 @@ namespace Cherwell.Api.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.AccountLocked != null)
-                    hash = hash * 59 + this.AccountLocked.GetHashCode();
-                if (this.CreateDateTime != null)
-                    hash = hash * 59 + this.CreateDateTime.GetHashCode();
-                if (this.DisplayName != null)
-                    hash = hash * 59 + this.DisplayName.GetHashCode();
-                if (this.Error != null)
-                    hash = hash * 59 + this.Error.GetHashCode();
-                if (this.ErrorCode != null)
-                    hash = hash * 59 + this.ErrorCode.GetHashCode();
-                if (this.Fields != null)
-                    hash = hash * 59 + this.Fields.GetHashCode();
-                if (this.HasError != null)
-                    hash = hash * 59 + this.HasError.GetHashCode();
-                if (this.LastPasswordResetDate != null)
-                    hash = hash * 59 + this.LastPasswordResetDate.GetHashCode();
-                if (this.LastResetDateTime != null)
-                    hash = hash * 59 + this.LastResetDateTime.GetHashCode();
-                if (this.LdapRequired != null)
-                    hash = hash * 59 + this.LdapRequired.GetHashCode();
-                if (this.PasswordNeverExpires != null)
-                    hash = hash * 59 + this.PasswordNeverExpires.GetHashCode();
-                if (this.PublicId != null)
-                    hash = hash * 59 + this.PublicId.GetHashCode();
-                if (this.RecordId != null)
-                    hash = hash * 59 + this.RecordId.GetHashCode();
-                if (this.SecurityGroupId != null)
-                    hash = hash * 59 + this.SecurityGroupId.GetHashCode();
-                if (this.ShortDisplayName != null)
-                    hash = hash * 59 + this.ShortDisplayName.GetHashCode();
-                if (this.UserCannotChangePassword != null)
-                    hash = hash * 59 + this.UserCannotChangePassword.GetHashCode();
-                if (this.UserMustResetPasswordAtNextLogin != null)
-                    hash = hash * 59 + this.UserMustResetPasswordAtNextLogin.GetHashCode();
+                if (AccountLocked != null)
+                    hash = hash * 59 + AccountLocked.GetHashCode();
+                if (CreateDateTime != null)
+                    hash = hash * 59 + CreateDateTime.GetHashCode();
+                if (DisplayName != null)
+                    hash = hash * 59 + DisplayName.GetHashCode();
+                if (Error != null)
+                    hash = hash * 59 + Error.GetHashCode();
+                if (ErrorCode != null)
+                    hash = hash * 59 + ErrorCode.GetHashCode();
+                if (Fields != null)
+                    hash = hash * 59 + Fields.GetHashCode();
+                if (HasError != null)
+                    hash = hash * 59 + HasError.GetHashCode();
+                if (LastPasswordResetDate != null)
+                    hash = hash * 59 + LastPasswordResetDate.GetHashCode();
+                if (LastResetDateTime != null)
+                    hash = hash * 59 + LastResetDateTime.GetHashCode();
+                if (LdapRequired != null)
+                    hash = hash * 59 + LdapRequired.GetHashCode();
+                if (PasswordNeverExpires != null)
+                    hash = hash * 59 + PasswordNeverExpires.GetHashCode();
+                if (PublicId != null)
+                    hash = hash * 59 + PublicId.GetHashCode();
+                if (RecordId != null)
+                    hash = hash * 59 + RecordId.GetHashCode();
+                if (SecurityGroupId != null)
+                    hash = hash * 59 + SecurityGroupId.GetHashCode();
+                if (ShortDisplayName != null)
+                    hash = hash * 59 + ShortDisplayName.GetHashCode();
+                if (UserCannotChangePassword != null)
+                    hash = hash * 59 + UserCannotChangePassword.GetHashCode();
+                if (UserMustResetPasswordAtNextLogin != null)
+                    hash = hash * 59 + UserMustResetPasswordAtNextLogin.GetHashCode();
                 return hash;
             }
         }
