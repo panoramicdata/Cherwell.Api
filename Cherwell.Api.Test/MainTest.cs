@@ -7,9 +7,12 @@ public class MainTest
 	[Fact]
 	public void ApiShouldReturnSomething()
 	{
-		var options = new CherwellClientOptions();
-		var client = new CherwellClient(options);
-		var response = client.Core.CoreGetViews("Tests");
+		CherwellClientOptions options = new CherwellClientOptions();
+		options.BaseAddress = "https://selfserviceacceptatie.avitgroup.com";
 
+		CherwellClient client = new CherwellClient(options);
+		var response = client.Approval.GetMyApprovalsAsync(options.UserAgent, null, null);
+
+		Assert.NotNull(response);
 	}
 }
