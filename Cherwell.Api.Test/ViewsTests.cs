@@ -11,7 +11,7 @@ public class ViewsTests : CherwellClientTest
    }
 
    [Fact]
-   public async void ApiShouldReturnSomething()
+   public async void Core_GetViews()
    {
 	  // Get a list of tickets from Cherwell
 	  var views = await TestCherwellClient
