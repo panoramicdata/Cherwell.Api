@@ -35,13 +35,13 @@ public class CherwellClientTest
 		 // No - we need to create one
 
 		 // Load config from file
-		 var fileInfo = new FileInfo("../../../appsettings.json");
+		 var fileInfo = new FileInfo("../../../appsettings.jsonc");
 
 		 // Does the config file exist?
 		 if (!fileInfo.Exists)
 		 {
 			// No - hint to the user what to do
-			throw new ConfigurationException("Missing appsettings.json.  Please copy the appsettings.example.json in the project root folder and set the various values appropriately.");
+			throw new ConfigurationException("Missing appsettings.jsonc.  Please copy the appsettings.example.json in the project root folder and set the various values appropriately.");
 		 }
 		 // Yes
 

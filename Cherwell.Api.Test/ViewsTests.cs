@@ -6,19 +6,19 @@ namespace Cherwell.Api.Test;
 
 public class ViewsTests : CherwellClientTest
 {
-   public ViewsTests(ITestOutputHelper iTestOutputHelper) : base(iTestOutputHelper)
-   {
-   }
+	public ViewsTests(ITestOutputHelper iTestOutputHelper) : base(iTestOutputHelper)
+	{
+	}
 
-   [Fact]
-   public async void ApiShouldReturnSomething()
-   {
-	  // Get a list of tickets from Cherwell
-	  var views = await TestCherwellClient
-		 .Core
-		 .GetViewsAsync("", "", "")
-		 .ConfigureAwait(false);
+	[Fact]
+	public async void ApiShouldReturnSomething()
+	{
+		// Get a list of views from Cherwell
+		var views = await TestCherwellClient
+		   .Core
+		   .GetViewsAsync()
+		   .ConfigureAwait(false);
 
-	  views.Should().NotBeNull();
-   }
+		views.Should().NotBeNull();
+	}
 }
