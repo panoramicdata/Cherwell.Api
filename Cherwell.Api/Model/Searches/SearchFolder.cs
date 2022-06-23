@@ -32,16 +32,16 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="ParentFolderId">ParentFolderId.</param>
         /// <param name="Scope">Scope.</param>
         /// <param name="ScopeOwner">ScopeOwner.</param>
-        public SearchFolder(string Association = default,
-            List<SearchFolder> ChildFolders = default,
-            List<SearchItem> ChildItems = default, 
-            string FolderId = default, 
-            string FolderName = default, 
-            List<Link> Links = default, 
-            string LocalizedScopeName = default, 
-            string ParentFolderId = default, 
-            string Scope = default, 
-            string ScopeOwner = default)
+        public SearchFolder(string Association,
+            List<SearchFolder> ChildFolders,
+            List<SearchItem> ChildItems, 
+            string FolderId, 
+            string FolderName, 
+            List<Link> Links, 
+            string LocalizedScopeName, 
+            string ParentFolderId, 
+            string Scope, 
+            string ScopeOwner)
         {
             this.Association = Association;
             this.ChildFolders = ChildFolders;

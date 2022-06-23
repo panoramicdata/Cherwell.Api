@@ -28,7 +28,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="FieldDefinitions">FieldDefinitions.</param>
         /// <param name="RelationshipId">RelationshipId.</param>
         /// <param name="Target">Target.</param>
-        public BusinessObjectRelationship(string Cardinality = default, string Description = default, string DisplayName = default, List<FieldDefinition> FieldDefinitions = default(List<FieldDefinition>), string RelationshipId = default, string Target = default)
+        public BusinessObjectRelationship(string Cardinality, string Description, string DisplayName, List<FieldDefinition> FieldDefinitions, string RelationshipId, string Target)
         {
             this.Cardinality = Cardinality;
             this.Description = Description;

@@ -34,7 +34,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="Created">Created.</param>
         /// <param name="Modified">Modified.</param>
         /// <param name="ModifiedBy">ModifiedBy.</param>
-        public BusObActivity(string Id = default, string ParentBusObDefId = default, string ParentBusObRecId = default, string HistoryBusObDefId = default, string HistoryBusObRecId = default, string Type = default, string Title = default, string Body = default, string CreatedBy = default, DateTime? Created = default(DateTime?), DateTime? Modified = default(DateTime?), string ModifiedBy = default)
+        public BusObActivity(string Id, string ParentBusObDefId, string ParentBusObRecId, string HistoryBusObDefId, string HistoryBusObRecId, string Type, string Title, string Body, string CreatedBy, DateTime? Created, DateTime? Modified, string ModifiedBy)
         {
             this.Id = Id;
             this.ParentBusObDefId = ParentBusObDefId;

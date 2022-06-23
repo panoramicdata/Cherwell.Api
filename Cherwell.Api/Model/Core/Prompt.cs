@@ -181,7 +181,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="Text">Text.</param>
         /// <param name="Value">Value.</param>
         /// <param name="Values">Values.</param>
-        public Prompt(bool? AllowValuesOnly = default(bool?), string BusObId = default, string CollectionStoreEntireRow = default, string CollectionValueField = default, string ConstraintXml = default, string Contents = default, string Default = default, string FieldId = default, bool? IsDateRange = default(bool?), EnumListDisplayOption? ListDisplayOption = default(EnumListDisplayOption?), string ListReturnFieldId = default, bool? MultiLine = default(bool?), string PromptId = default, EnumPromptType? PromptType = default(EnumPromptType?), string PromptTypeName = default, bool? Required = default(bool?), string Text = default, Object Value = default(Object), List<string> Values = default(List<string>))
+        public Prompt(bool? AllowValuesOnly, string BusObId, string CollectionStoreEntireRow, string CollectionValueField, string ConstraintXml, string Contents, string Default, string FieldId, bool? IsDateRange, EnumListDisplayOption? ListDisplayOption, string ListReturnFieldId, bool? MultiLine, string PromptId, EnumPromptType? PromptType, string PromptTypeName, bool? Required, string Text, Object Value, List<string> Values)
         {
             this.AllowValuesOnly = AllowValuesOnly;
             this.BusObId = BusObId;

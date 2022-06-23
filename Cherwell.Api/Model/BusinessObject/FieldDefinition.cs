@@ -42,7 +42,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="TypeLocalized">TypeLocalized.</param>
         /// <param name="Validated">Validated.</param>
         /// <param name="WholeDigits">WholeDigits.</param>
-        public FieldDefinition(bool? AutoFill = default, bool? Calculated = default, string Category = default, int? DecimalDigits = default, string Description = default, string Details = default, string DisplayName = default, bool? Enabled = default, string FieldId = default, bool? HasDate = default, bool? HasTime = default, bool? IsFullTextSearchable = default, string MaximumSize = default, string Name = default, bool? ReadOnly = default, bool? Required = default, string Type = default, string TypeLocalized = default, bool? Validated = default, int? WholeDigits = default)
+        public FieldDefinition(bool? AutoFill, bool? Calculated, string Category, int? DecimalDigits, string Description, string Details, string DisplayName, bool? Enabled, string FieldId, bool? HasDate, bool? HasTime, bool? IsFullTextSearchable, string MaximumSize, string Name, bool? ReadOnly, bool? Required, string Type, string TypeLocalized, bool? Validated, int? WholeDigits)
         {
             this.AutoFill = AutoFill;
             this.Calculated = Calculated;

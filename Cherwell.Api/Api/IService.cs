@@ -24,7 +24,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of CoreServiceInfoResponse</returns>
         [Get("/api/V1/serviceinfo")]
-        Task<ServiceInfoResponse> GetServiceInfo([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ServiceInfoResponse> GetServiceInfo([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang, [AliasAs("locale")]string locale);
 
         /// <summary>
         /// Log out user by token
@@ -37,7 +37,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of void</returns>
         [Delete("/api/V1/logout")]
-        Task LogoutUser([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task LogoutUser([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang, [AliasAs("locale")]string locale);
 
         /// <summary>
         /// Get an access token
@@ -56,7 +56,7 @@ namespace Cherwell.Api
         /// <param name="site_name">If for portal specify the Site name to use for requesting an access token. (optional)</param>
         /// <returns>Task of TokenResponse</returns>
         [Post("/token")]
-        Task<TokenResponse> Token([Header("UserAgent")] string userAgent, string grant_type, string client_id, string client_secret = null, string username = null, string password = null, string refresh_token = null, [AliasAs("auth_mode")]string auth_mode = null, [AliasAs("site_name")]string site_name = null);
+        Task<TokenResponse> Token([Header("UserAgent")] string userAgent, string grantType, string clientId, string clientSecret, string username, string password, string refreshToken, [AliasAs("auth_mode")]string authMode, [AliasAs("site_name")]string siteName);
         #endregion Asynchronous Operations
     }
 }

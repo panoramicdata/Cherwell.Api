@@ -130,7 +130,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="BusObRecId">BusObRecId.</param>
         /// <param name="IncludeLinks">IncludeLinks.</param>
         /// <param name="Types">Types.</param>
-        public AttachmentsRequest(string AttachmentId = default, List<EnumAttachmentTypes> AttachmentTypes = default(List<EnumAttachmentTypes>), string BusObId = default, string BusObName = default, string BusObPublicId = default, string BusObRecId = default, bool? IncludeLinks = default(bool?), List<EnumTypes> Types = default(List<EnumTypes>))
+        public AttachmentsRequest(string AttachmentId, List<EnumAttachmentTypes> AttachmentTypes, string BusObId, string BusObName, string BusObPublicId, string BusObRecId, bool? IncludeLinks, List<EnumTypes> Types)
         {
             this.AttachmentId = AttachmentId;
             this.AttachmentTypes = AttachmentTypes;

@@ -327,7 +327,7 @@ namespace Cherwell.Api.Model.Forms
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public MobileFormResponse(List<Core.Action> Actions = default(List<global::Cherwell.Api.Model.Core.Action>), List<ObjectAttachment> Attachments = default(List<ObjectAttachment>), string GalleryImage = default, Location LocationInformation = default(Location), List<Section> Sections = default(List<Section>), string Title = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public MobileFormResponse(List<Core.Action> Actions, List<ObjectAttachment> Attachments, string GalleryImage, Location LocationInformation, List<Section> Sections, string Title, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
         {
             this.Actions = Actions;
             this.Attachments = Attachments;

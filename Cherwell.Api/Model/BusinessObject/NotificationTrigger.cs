@@ -26,7 +26,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="SourceId">SourceId.</param>
         /// <param name="SourceChange">SourceChange.</param>
         /// <param name="Key">Key.</param>
-        public NotificationTrigger(string SourceType = default, string SourceId = default, string SourceChange = default, string Key = default)
+        public NotificationTrigger(string SourceType, string SourceId, string SourceChange, string Key)
         {
             this.SourceType = SourceType;
             this.SourceId = SourceId;

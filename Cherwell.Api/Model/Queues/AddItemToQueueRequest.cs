@@ -25,7 +25,7 @@ namespace Cherwell.Api.Model.Queues
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObRecId">BusObRecId.</param>
         /// <param name="QueueStandInKey">QueueStandInKey.</param>
-        public AddItemToQueueRequest(string BusObId = default, string BusObRecId = default, string QueueStandInKey = default)
+        public AddItemToQueueRequest(string BusObId, string BusObRecId, string QueueStandInKey)
         {
             this.BusObId = BusObId;
             this.BusObRecId = BusObRecId;

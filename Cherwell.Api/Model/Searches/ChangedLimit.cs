@@ -25,7 +25,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="DisplayName">DisplayName.</param>
         /// <param name="Units">Units.</param>
         /// <param name="Value">Value.</param>
-        public ChangedLimit(string DisplayName = default, string Units = default, int? Value = default(int?))
+        public ChangedLimit(string DisplayName, string Units, int? Value)
         {
             this.DisplayName = DisplayName;
             this.Units = Units;

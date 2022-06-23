@@ -74,7 +74,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="KeyValueProperties">KeyValueProperties.</param>
         /// <param name="Level">Level.</param>
         /// <param name="Message">Message.</param>
-        public LogRequest(List<Object> KeyValueProperties = default(List<Object>), EnumLevel? Level = default(EnumLevel?), string Message = default)
+        public LogRequest(List<Object> KeyValueProperties, EnumLevel? Level, string Message)
         {
             this.KeyValueProperties = KeyValueProperties;
             this.Level = Level;

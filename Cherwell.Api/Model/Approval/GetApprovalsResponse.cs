@@ -323,7 +323,7 @@ namespace Cherwell.Api.Model.Approval
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public GetApprovalsResponse(int? TotalRecords = default, List<ApprovalReadResponse> Approvals = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
+        public GetApprovalsResponse(int? TotalRecords, List<ApprovalReadResponse> Approvals, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
         {
             this.TotalRecords = TotalRecords;
             this.Approvals = Approvals;

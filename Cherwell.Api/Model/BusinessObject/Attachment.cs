@@ -234,7 +234,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="Scope">Scope.</param>
         /// <param name="ScopeOwner">ScopeOwner.</param>
         /// <param name="Type">Type.</param>
-        public ObjectAttachment(string AttachedBusObId = default, string AttachedBusObRecId = default, string AttachmentFileId = default, string AttachmentFileName = default, string AttachmentFileType = default, string AttachmentId = default, EnumAttachmentType? AttachmentType = default(EnumAttachmentType?), string BusObId = default, string BusObRecId = default, string Comment = default, DateTime? Created = default(DateTime?), string DisplayText = default, List<Link> Links = default(List<Link>), string Owner = default, EnumScope? Scope = default(EnumScope?), string ScopeOwner = default, EnumType? Type = default(EnumType?))
+        public ObjectAttachment(string AttachedBusObId, string AttachedBusObRecId, string AttachmentFileId, string AttachmentFileName, string AttachmentFileType, string AttachmentId, EnumAttachmentType? AttachmentType, string BusObId, string BusObRecId, string Comment, DateTime? Created, string DisplayText, List<Link> Links, string Owner, EnumScope? Scope, string ScopeOwner, EnumType? Type)
         {
             this.AttachedBusObId = AttachedBusObId;
             this.AttachedBusObRecId = AttachedBusObRecId;

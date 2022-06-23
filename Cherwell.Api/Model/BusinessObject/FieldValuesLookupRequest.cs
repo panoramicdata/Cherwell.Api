@@ -28,7 +28,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="FieldId">FieldId.</param>
         /// <param name="FieldName">FieldName.</param>
         /// <param name="Fields">Fields.</param>
-        public FieldValuesLookupRequest(string BusbPublicId = default, string BusObId = default, string BusObRecId = default, string FieldId = default, string FieldName = default, List<FieldTemplateItem> Fields = default(List<FieldTemplateItem>))
+        public FieldValuesLookupRequest(string BusbPublicId, string BusObId, string BusObRecId, string FieldId, string FieldName, List<FieldTemplateItem> Fields)
         {
             this.BusbPublicId = BusbPublicId;
             this.BusObId = BusObId;

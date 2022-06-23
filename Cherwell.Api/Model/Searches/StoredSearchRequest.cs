@@ -30,7 +30,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="ScopeOwnerId">ScopeOwnerId.</param>
         /// <param name="SearchId">SearchId.</param>
         /// <param name="SearchName">SearchName.</param>
-        public StoredSearchRequest(string AssociationId = default, string AssociationName = default, string GridId = default, bool? IncludeSchema = default(bool?), string Scope = default, string ScopeOwnerId = default, string SearchId = default, string SearchName = default)
+        public StoredSearchRequest(string AssociationId, string AssociationName, string GridId, bool? IncludeSchema, string Scope, string ScopeOwnerId, string SearchId, string SearchName)
         {
             this.AssociationId = AssociationId;
             this.AssociationName = AssociationName;

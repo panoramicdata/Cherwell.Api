@@ -30,7 +30,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="PromptId">PromptId.</param>
         /// <param name="Value">Value.</param>
         /// <param name="ValueIsRecId">ValueIsRecId.</param>
-        public PromptValue(string BusObId = default, string CollectionStoreEntireRow = default, string CollectionValueField = default, string FieldId = default, string ListReturnFieldId = default, string PromptId = default, Object Value = default(Object), bool? ValueIsRecId = default(bool?))
+        public PromptValue(string BusObId, string CollectionStoreEntireRow, string CollectionValueField, string FieldId, string ListReturnFieldId, string PromptId, Object Value, bool? ValueIsRecId)
         {
             this.BusObId = BusObId;
             this.CollectionStoreEntireRow = CollectionStoreEntireRow;

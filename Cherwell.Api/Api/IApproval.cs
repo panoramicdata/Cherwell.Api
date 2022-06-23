@@ -26,7 +26,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of BusinessObjectSaveResponse</returns>
         [Post("/api/V1/approval/{approvalRecId}/{approvalAction}")]
-        Task<SaveResponse> ActionApproval([Header("UserAgent")] string userAgent, [AliasAs("approvalRecId")]string approvalRecId, [AliasAs("approvalAction")]string approvalAction, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SaveResponse> ActionApproval([Header("UserAgent")] string userAgent, [AliasAs("approvalRecId")]string approvalRecId, [AliasAs("approvalAction")]string approvalAction, [AliasAs("lang")]string lang, [AliasAs("locale")]string locale);
 
         /// <summary>
         /// Get Approval
@@ -40,7 +40,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApprovalReadResponse</returns>
         [Get("/api/V1/approval/{approvalRecId}")]
-        Task<ApprovalReadResponse>GetApprovalByRecId([Header("UserAgent")] string userAgent, [AliasAs("approvalRecId")]string approvalRecId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ApprovalReadResponse>GetApprovalByRecId([Header("UserAgent")] string userAgent, [AliasAs("approvalRecId")]string approvalRecId, [AliasAs("lang")]string lang, [AliasAs("locale")]string locale);
 
         /// <summary>
         /// Get all waitings for the current user
@@ -53,7 +53,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task ofGetApprovalsResponse</returns>
         [Get("/api/V1/getmyapprovals")]
-        Task<GetApprovalsResponse>GetMyApprovals([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<GetApprovalsResponse>GetMyApprovals([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang, [AliasAs("locale")]string locale);
 
         /// <summary>
         /// Get all waiting approvals that were created by the current user
@@ -66,7 +66,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task ofGetApprovalsResponse</returns>
         [Get("/api/V1/getmypendingapprovals")]
-        Task<GetApprovalsResponse>GetMyPendingApprovals([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<GetApprovalsResponse>GetMyPendingApprovals([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang, [AliasAs("locale")]string locale);
         #endregion Asynchronous Operations
     }
 }

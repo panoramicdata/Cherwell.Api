@@ -82,18 +82,13 @@ namespace Cherwell.Api
 
 		#region Dispose
 
-		private bool _disposedValue;
-
 		protected virtual void Dispose(bool disposing)
 		{
-			if (!_disposedValue)
+			if (disposing)
 			{
-				if (disposing)
-				{
 					/// _logger.LogTrace("{Message}", Resources.Disposing);
 					_httpClient.Dispose();
 					/// _logger.LogTrace("{Message}", Resources.Disposed);
-				}
 			}
 		}
 

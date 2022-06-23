@@ -27,7 +27,7 @@ namespace Cherwell.Api.Model.OneStepActions
         /// <param name="BusObRecId">BusObRecId.</param>
         /// <param name="OneStepActionStandInKey">OneStepActionStandInKey.</param>
         /// <param name="PromptValues">PromptValues.</param>
-        public OneStepActionRequest(bool? AcquireLicense = default(bool?), string BusObId = default, string BusObRecId = default, string OneStepActionStandInKey = default, List<SimplePromptValue> PromptValues = default(List<SimplePromptValue>))
+        public OneStepActionRequest(bool? AcquireLicense, string BusObId, string BusObRecId, string OneStepActionStandInKey, List<SimplePromptValue> PromptValues)
         {
             this.AcquireLicense = AcquireLicense;
             this.BusObId = BusObId;

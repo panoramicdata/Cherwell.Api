@@ -30,7 +30,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="DisplayText">DisplayText.</param>
         /// <param name="IncludeLinks">IncludeLinks.</param>
         /// <param name="UncFilePath">UncFilePath.</param>
-        public SaveLinkAttachmentRequest(string BusObId = default, string BusObName = default, string BusObPublicId = default, string BusObRecId = default, string Comment = default, string DisplayText = default, bool? IncludeLinks = default(bool?), string UncFilePath = default)
+        public SaveLinkAttachmentRequest(string BusObId, string BusObName, string BusObPublicId, string BusObRecId, string Comment, string DisplayText, bool? IncludeLinks, string UncFilePath)
         {
             this.BusObId = BusObId;
             this.BusObName = BusObName;

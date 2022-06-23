@@ -24,7 +24,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="ReadRequests">ReadRequests.</param>
         /// <param name="StopOnError">StopOnError.</param>
-        public BatchReadRequest(List<ReadRequest> ReadRequests = default(List<ReadRequest>), bool? StopOnError = default(bool?))
+        public BatchReadRequest(List<ReadRequest> ReadRequests, bool? StopOnError = default(bool?))
         {
             this.ReadRequests = ReadRequests;
             this.StopOnError = StopOnError;

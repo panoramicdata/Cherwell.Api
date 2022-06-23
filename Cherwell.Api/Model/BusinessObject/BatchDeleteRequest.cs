@@ -24,7 +24,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="DeleteRequests">DeleteRequests.</param>
         /// <param name="StopOnError">StopOnError.</param>
-        public BatchDeleteRequest(List<DeleteRequest> DeleteRequests = default, bool? StopOnError = default)
+        public BatchDeleteRequest(List<DeleteRequest> DeleteRequests, bool? StopOnError)
         {
             this.DeleteRequests = DeleteRequests;
             this.StopOnError = StopOnError;

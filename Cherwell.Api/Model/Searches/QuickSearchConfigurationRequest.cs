@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Searches
         /// Initializes a new instance of the <see cref="QuickSearchConfigurationRequest" /> class.
         /// </summary>
         /// <param name="BusObIds">BusObIds.</param>
-        public QuickSearchConfigurationRequest(List<string> BusObIds = default(List<string>))
+        public QuickSearchConfigurationRequest(List<string> BusObIds)
         {
             this.BusObIds = BusObIds;
         }

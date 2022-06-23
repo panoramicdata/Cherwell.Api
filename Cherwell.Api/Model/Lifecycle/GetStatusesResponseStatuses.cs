@@ -26,7 +26,7 @@ namespace Cherwell.Api.Model.Lifecycle
         /// <param name="IsInitial">IsInitial.</param>
         /// <param name="Name">Name.</param>
         /// <param name="StageId">StageId.</param>
-        public GetStatusesResponseStatuses(string Id = default, bool? IsInitial = default(bool?), string Name = default, string StageId = default)
+        public GetStatusesResponseStatuses(string Id, bool? IsInitial, string Name, string StageId)
         {
             this.Id = Id;
             this.IsInitial = IsInitial;

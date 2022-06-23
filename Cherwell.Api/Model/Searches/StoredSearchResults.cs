@@ -24,7 +24,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="Columns">Columns.</param>
         /// <param name="Rows">Rows.</param>
-        public StoredSearchResults(List<ColumnSchema> Columns = default(List<ColumnSchema>), List<List<Object>> Rows = default(List<List<Object>>))
+        public StoredSearchResults(List<ColumnSchema> Columns, List<List<Object>> Rows)
         {
             this.Columns = Columns;
             this.Rows = Rows;

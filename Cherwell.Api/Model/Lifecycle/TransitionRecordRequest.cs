@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Lifecycle
         /// Initializes a new instance of the <see cref="TransitionRecordRequest" /> class.
         /// </summary>
         /// <param name="TransitionOptionId">TransitionOptionId.</param>
-        public TransitionRecordRequest(string TransitionOptionId = default)
+        public TransitionRecordRequest(string TransitionOptionId)
         {
             this.TransitionOptionId = TransitionOptionId;
         }

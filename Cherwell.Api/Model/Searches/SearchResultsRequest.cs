@@ -41,7 +41,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="SearchText">SearchText.</param>
         /// <param name="Sorting">Sorting.</param>
         /// <param name="PromptValues">PromptValues.</param>
-        public SearchResultsRequest(string Association = default, string AssociationName = default, string BusObId = default, string CustomGridDefId = default, string DateTimeFormatting = default, string FieldId = default, List<string> Fields = default(List<string>), List<FilterInfo> Filters = default(List<FilterInfo>), bool? IncludeAllFields = default(bool?), bool? IncludeSchema = default(bool?), int? PageNumber = default(int?), int? PageSize = default(int?), string Scope = default, string ScopeOwner = default, string SearchId = default, string SearchName = default, string SearchText = default, List<SortInfo> Sorting = default(List<SortInfo>), List<PromptValue> PromptValues = default(List<PromptValue>))
+        public SearchResultsRequest(string Association, string AssociationName, string BusObId, string CustomGridDefId, string DateTimeFormatting, string FieldId, List<string> Fields, List<FilterInfo> Filters, bool? IncludeAllFields, bool? IncludeSchema, int? PageNumber, int? PageSize, string Scope, string ScopeOwner, string SearchId, string SearchName, string SearchText, List<SortInfo> Sorting, List<PromptValue> PromptValues)
         {
             this.Association = Association;
             this.AssociationName = AssociationName;

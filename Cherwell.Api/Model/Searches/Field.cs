@@ -45,7 +45,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="SortOrder">SortOrder.</param>
         /// <param name="StorageName">StorageName.</param>
         /// <param name="WholeDigits">WholeDigits.</param>
-        public Field(string Caption = default, string CurrencyCulture = default, string CurrencySymbol = default, int? DecimalDigits = default(int?), bool? DefaultSortOrderAscending = default(bool?), string DisplayName = default, string FieldName = default, string FullFieldId = default, bool? HasDefaultSortField = default(bool?), string FieldId = default, bool? IsBinary = default(bool?), bool? IsCurrency = default(bool?), bool? IsDateTime = default(bool?), bool? IsFilterAllowed = default(bool?), bool? IsLogical = default(bool?), bool? IsNumber = default(bool?), bool? IsShortDate = default(bool?), bool? IsShortTime = default(bool?), bool? IsVisible = default(bool?), bool? Sortable = default(bool?), string SortOrder = default, string StorageName = default, int? WholeDigits = default(int?))
+        public Field(string Caption, string CurrencyCulture, string CurrencySymbol, int? DecimalDigits, bool? DefaultSortOrderAscending, string DisplayName, string FieldName, string FullFieldId, bool? HasDefaultSortField, string FieldId, bool? IsBinary, bool? IsCurrency, bool? IsDateTime, bool? IsFilterAllowed, bool? IsLogical, bool? IsNumber, bool? IsShortDate, bool? IsShortTime, bool? IsVisible, bool? Sortable, string SortOrder, string StorageName, int? WholeDigits)
         {
             this.Caption = Caption;
             this.CurrencyCulture = CurrencyCulture;

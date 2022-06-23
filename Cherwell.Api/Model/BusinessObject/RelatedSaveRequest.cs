@@ -64,7 +64,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="CacheScope">CacheScope.</param>
         /// <param name="Fields">Fields.</param>
         /// <param name="Persist">Persist.</param>
-        public RelatedSaveRequest(string ParentBusObId = default, string ParentBusObPublicId = default, string ParentBusObRecId = default, string RelationshipId = default, string BusObId = default, string BusObPublicId = default, string BusObRecId = default, string CacheKey = default, EnumCacheScope? CacheScope = default(EnumCacheScope?), List<FieldTemplateItem> Fields = default(List<FieldTemplateItem>), bool? Persist = default(bool?))
+        public RelatedSaveRequest(string ParentBusObId, string ParentBusObPublicId, string ParentBusObRecId, string RelationshipId, string BusObId, string BusObPublicId, string BusObRecId, string CacheKey, EnumCacheScope? CacheScope, List<FieldTemplateItem> Fields, bool? Persist)
         {
             this.ParentBusObId = ParentBusObId;
             this.ParentBusObPublicId = ParentBusObPublicId;

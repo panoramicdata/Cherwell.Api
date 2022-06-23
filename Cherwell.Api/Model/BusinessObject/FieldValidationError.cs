@@ -25,7 +25,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="Error">Error.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="FieldId">FieldId.</param>
-        public FieldValidationError(string Error = default, string ErrorCode = default, string FieldId = default)
+        public FieldValidationError(string Error, string ErrorCode, string FieldId)
         {
             this.Error = Error;
             this.ErrorCode = ErrorCode;

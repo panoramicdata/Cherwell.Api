@@ -317,11 +317,7 @@ namespace Cherwell.Api.Model.Approval
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public ApprovalReadResponse(Dictionary<string, object> Properties =
-            default, List<Link> Links =
-            default, string ErrorCode =
-            default, string ErrorMessage =
-            default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
+        public ApprovalReadResponse(Dictionary<string, object> Properties, List<Link> Links, string ErrorCode, string ErrorMessage, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
         {
             this.Properties = Properties;
             this.Links = Links;

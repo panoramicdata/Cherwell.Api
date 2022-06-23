@@ -24,7 +24,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// </summary>
         /// <param name="SaveRequests">SaveRequests.</param>
         /// <param name="StopOnError">StopOnError.</param>
-        public BatchSaveRequest(List<SaveRequest> SaveRequests = default(List<SaveRequest>), bool? StopOnError = default(bool?))
+        public BatchSaveRequest(List<SaveRequest> SaveRequests, bool? StopOnError)
         {
             this.SaveRequests = SaveRequests;
             this.StopOnError = StopOnError;

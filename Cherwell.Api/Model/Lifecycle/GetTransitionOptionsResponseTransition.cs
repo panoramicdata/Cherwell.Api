@@ -26,7 +26,7 @@ namespace Cherwell.Api.Model.Lifecycle
         /// <param name="Id">Id.</param>
         /// <param name="IsAvailable">IsAvailable.</param>
         /// <param name="Criteria">Criteria.</param>
-        public GetTransitionOptionsResponseTransition(string Name = default, string Id = default, bool? IsAvailable = default(bool?), List<string> Criteria = default(List<string>))
+        public GetTransitionOptionsResponseTransition(string Name, string Id, bool? IsAvailable, List<string> Criteria)
         {
             this.Name = Name;
             this.Id = Id;

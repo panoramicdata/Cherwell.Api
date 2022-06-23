@@ -323,7 +323,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public QuickSearchResponse(SearchResultsTableResponse SearchResultsTable = default(SearchResultsTableResponse), SimpleResultsList SimpleResultsList = default(SimpleResultsList), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public QuickSearchResponse(SearchResultsTableResponse SearchResultsTable, SimpleResultsList SimpleResultsList, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
         {
             this.SearchResultsTable = SearchResultsTable;
             this.SimpleResultsList = SimpleResultsList;

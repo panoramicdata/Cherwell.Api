@@ -318,29 +318,29 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Initializes a new instance of the <see cref="SchemaResponse" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
-        /// <param name="FieldDefinitions">FieldDefinitions.</param>
-        /// <param name="FirstRecIdField">FirstRecIdField.</param>
+        /// <param name="fieldDefinitions">FieldDefinitions.</param>
+        /// <param name="firstRecIdField">FirstRecIdField.</param>
         /// <param name="GridDefinitions">GridDefinitions.</param>
         /// <param name="Name">Name.</param>
         /// <param name="RecIdFields">RecIdFields.</param>
         /// <param name="Relationships">Relationships.</param>
         /// <param name="StateFieldId">StateFieldId.</param>
-        /// <param name="States">States.</param>
+        /// <param name="states">States.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SchemaResponse(string BusObId = default, List<FieldDefinition> FieldDefinitions = default(List<FieldDefinition>), string FirstRecIdField = default, List<GridDefinition> GridDefinitions = default(List<GridDefinition>), string Name = default, string RecIdFields = default, List<BusinessObjectRelationship> Relationships = default(List<BusinessObjectRelationship>), string StateFieldId = default, string States = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public SchemaResponse(string BusObId, List<FieldDefinition> fieldDefinitions, string firstRecIdField, List<GridDefinition> GridDefinitions, string Name, string RecIdFields, List<BusinessObjectRelationship> Relationships, string StateFieldId, string states, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
         {
             this.BusObId = BusObId;
-            this.FieldDefinitions = FieldDefinitions;
-            this.FirstRecIdField = FirstRecIdField;
+            this.FieldDefinitions = fieldDefinitions;
+            this.FirstRecIdField = firstRecIdField;
             this.GridDefinitions = GridDefinitions;
             this.Name = Name;
             this.RecIdFields = RecIdFields;
             this.Relationships = Relationships;
             this.StateFieldId = StateFieldId;
-            this.States = States;
+            this.States = states;
             this.ErrorCode = ErrorCode;
             this.ErrorMessage = ErrorMessage;
             this.HasError = HasError;
@@ -477,7 +477,7 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.FirstRecIdField == other.FirstRecIdField ||
                     this.FirstRecIdField != null &&
-                    this.FirstRecIdField.Equals(other.FirstRecIdField)
+                    this.FirstRecIdField.Equals(other.FirstRecIdField, StringComparison.Ordinal)
                 ) &&
                 (
                     this.GridDefinitions == other.GridDefinitions ||
@@ -487,12 +487,12 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name.Equals(other.Name, StringComparison.Ordinal)
                 ) &&
                 (
                     this.RecIdFields == other.RecIdFields ||
                     this.RecIdFields != null &&
-                    this.RecIdFields.Equals(other.RecIdFields)
+                    this.RecIdFields.Equals(other.RecIdFields, StringComparison.Ordinal)
                 ) &&
                 (
                     this.Relationships == other.Relationships ||
@@ -502,22 +502,22 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.StateFieldId == other.StateFieldId ||
                     this.StateFieldId != null &&
-                    this.StateFieldId.Equals(other.StateFieldId)
+                    this.StateFieldId.Equals(other.StateFieldId, StringComparison.Ordinal)
                 ) &&
                 (
                     this.States == other.States ||
                     this.States != null &&
-                    this.States.Equals(other.States)
+                    this.States.Equals(other.States, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ErrorCode == other.ErrorCode ||
                     this.ErrorCode != null &&
-                    this.ErrorCode.Equals(other.ErrorCode)
+                    this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
                 ) &&
                 (
                     this.ErrorMessage == other.ErrorMessage ||
                     this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(other.ErrorMessage)
+                    this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
                 ) &&
                 (
                     this.HasError == other.HasError ||

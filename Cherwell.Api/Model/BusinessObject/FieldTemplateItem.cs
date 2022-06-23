@@ -29,7 +29,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="Html">Html.</param>
         /// <param name="Name">Name.</param>
         /// <param name="Value">Value.</param>
-        public FieldTemplateItem(bool? Dirty = default(bool?), string DisplayName = default, string FieldId = default, string FullFieldId = default, string Html = default, string Name = default, string Value = default)
+        public FieldTemplateItem(bool? Dirty, string DisplayName, string FieldId, string FullFieldId, string Html, string Name, string Value)
         {
             this.Dirty = Dirty;
             this.DisplayName = DisplayName;

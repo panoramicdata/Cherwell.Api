@@ -326,7 +326,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public ReadResponse(string BusObId = default, string BusObPublicId = default, string BusObRecId = default, List<FieldTemplateItem> Fields = default, List<Link> Links = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
+        public ReadResponse(string BusObId, string BusObPublicId, string BusObRecId, List<FieldTemplateItem> Fields, List<Link> Links, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
         {
             this.BusObId = BusObId;
             this.BusObPublicId = BusObPublicId;

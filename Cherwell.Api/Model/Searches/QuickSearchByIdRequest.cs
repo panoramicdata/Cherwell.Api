@@ -26,7 +26,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="IsGeneral">IsGeneral.</param>
         /// <param name="SearchText">SearchText.</param>
         /// <param name="StandIn">StandIn.</param>
-        public QuickSearchByIdRequest(List<string> BusObIds = default(List<string>), bool? IsGeneral = default(bool?), string SearchText = default, string StandIn = default)
+        public QuickSearchByIdRequest(List<string> BusObIds, bool? IsGeneral, string SearchText, string StandIn)
         {
             this.BusObIds = BusObIds;
             this.IsGeneral = IsGeneral;

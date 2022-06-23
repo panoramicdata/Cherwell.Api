@@ -25,7 +25,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="GridId">GridId.</param>
         /// <param name="Name">Name.</param>
         /// <param name="DisplayName">DisplayName.</param>
-        public GridDefinition(string GridId = default, string Name = default, string DisplayName = default)
+        public GridDefinition(string GridId, string Name, string DisplayName)
         {
             this.GridId = GridId;
             this.Name = Name;

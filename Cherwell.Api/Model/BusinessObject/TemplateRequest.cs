@@ -27,7 +27,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="FieldIds">FieldIds.</param>
         /// <param name="IncludeAll">IncludeAll.</param>
         /// <param name="IncludeRequired">IncludeRequired.</param>
-        public TemplateRequest(string BusObId = default, List<string> FieldNames = default(List<string>), List<string> FieldIds = default(List<string>), bool? IncludeAll = default(bool?), bool? IncludeRequired = default(bool?))
+        public TemplateRequest(string BusObId, List<string> FieldNames, List<string> FieldIds, bool? IncludeAll, bool? IncludeRequired)
         {
             this.BusObId = BusObId;
             this.FieldNames = FieldNames;

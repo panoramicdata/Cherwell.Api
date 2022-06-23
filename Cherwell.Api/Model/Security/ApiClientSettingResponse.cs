@@ -330,7 +330,7 @@ namespace Cherwell.Api.Model.Security
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public ApiClientSettingResponse(string Name = default, string Description = default, string Culture = default, string ClientKey = default, int? TokenLifespanMinutes = default(int?), int? RefreshTokenLifespanMinutes = default(int?), bool? ApiAccessIsEnabled = default(bool?), bool? AllowAnonymousAccess = default(bool?), string StandInKey = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public ApiClientSettingResponse(string Name, string Description, string Culture, string ClientKey, int? TokenLifespanMinutes, int? RefreshTokenLifespanMinutes, bool? ApiAccessIsEnabled, bool? AllowAnonymousAccess, string StandInKey, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
         {
             this.Name = Name;
             this.Description = Description;

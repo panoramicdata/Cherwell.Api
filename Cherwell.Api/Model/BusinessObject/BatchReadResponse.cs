@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Initializes a new instance of the <see cref="BatchReadResponse" /> class.
         /// </summary>
         /// <param name="Responses">Responses.</param>
-        public BatchReadResponse(List<ReadResponse> Responses = default(List<ReadResponse>))
+        public BatchReadResponse(List<ReadResponse> Responses)
         {
             this.Responses = Responses;
         }

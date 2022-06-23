@@ -28,7 +28,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="PublicId">PublicId.</param>
         /// <param name="RowColor">RowColor.</param>
         /// <param name="SearchResultsFieldValues">SearchResultsFieldValues.</param>
-        public SearchResultsRow(string BusObId = default, string BusObRecId = default, List<Link> Links = default(List<Link>), string PublicId = default, string RowColor = default, List<FieldTemplateItem> SearchResultsFieldValues = default(List<FieldTemplateItem>))
+        public SearchResultsRow(string BusObId, string BusObRecId, List<Link> Links, string PublicId, string RowColor, List<FieldTemplateItem> SearchResultsFieldValues)
         {
             this.BusObId = BusObId;
             this.BusObRecId = BusObRecId;

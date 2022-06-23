@@ -33,7 +33,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="SubTitle">SubTitle.</param>
         /// <param name="Text">Text.</param>
         /// <param name="Title">Title.</param>
-        public SimpleResultsListItem(string BusObId = default, string BusObRecId = default, string DocRepositoryItemId = default, string GalleryImage = default, List<Link> Links = default(List<Link>), string PublicId = default, string Scope = default, string ScopeOwner = default, string SubTitle = default, string Text = default, string Title = default)
+        public SimpleResultsListItem(string BusObId, string BusObRecId, string DocRepositoryItemId, string GalleryImage, List<Link> Links, string PublicId, string Scope, string ScopeOwner, string SubTitle, string Text, string Title)
         {
             this.BusObId = BusObId;
             this.BusObRecId = BusObRecId;

@@ -60,7 +60,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="CacheScope">CacheScope.</param>
         /// <param name="Fields">Fields.</param>
         /// <param name="Persist">Persist.</param>
-        public SaveRequest(string BusObId = default, string BusObPublicId = default, string BusObRecId = default, string CacheKey = default, EnumCacheScope? CacheScope = default(EnumCacheScope?), List<FieldTemplateItem> Fields = default(List<FieldTemplateItem>), bool? Persist = default(bool?))
+        public SaveRequest(string BusObId, string BusObPublicId, string BusObRecId, string CacheKey, EnumCacheScope? CacheScope, List<FieldTemplateItem> Fields, bool? Persist)
         {
             this.BusObId = BusObId;
             this.BusObPublicId = BusObPublicId;

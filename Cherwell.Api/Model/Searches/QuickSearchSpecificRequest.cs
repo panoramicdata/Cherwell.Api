@@ -34,7 +34,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="SortByRelevance">SortByRelevance.</param>
         /// <param name="SpecificSearchTargetId">SpecificSearchTargetId.</param>
         /// <param name="UseSortBy">UseSortBy.</param>
-        public QuickSearchSpecificRequest(bool? Ascending = default(bool?), bool? IsBusObTarget = default(bool?), bool? NonFinalState = default(bool?), bool? SearchAnyWords = default(bool?), bool? SearchAttachments = default(bool?), bool? SearchRelated = default(bool?), string SearchText = default, ChangedLimit SelectedChangedLimit = default(ChangedLimit), string SelectedSortByFieldId = default, bool? SortByRelevance = default(bool?), string SpecificSearchTargetId = default, bool? UseSortBy = default(bool?))
+        public QuickSearchSpecificRequest(bool? Ascending, bool? IsBusObTarget, bool? NonFinalState, bool? SearchAnyWords, bool? SearchAttachments, bool? SearchRelated, string SearchText, ChangedLimit SelectedChangedLimit, string SelectedSortByFieldId, bool? SortByRelevance, string SpecificSearchTargetId, bool? UseSortBy)
         {
             this.Ascending = Ascending;
             this.IsBusObTarget = IsBusObTarget;

@@ -28,7 +28,7 @@ namespace Cherwell.Api.Model.Forms
         /// <param name="RelationshipId">RelationshipId.</param>
         /// <param name="TargetBusObId">TargetBusObId.</param>
         /// <param name="TargetBusObRecId">TargetBusObRecId.</param>
-        public Section(List<SectionField> SectionFields = default(List<SectionField>), string GalleryImage = default, string Title = default, string RelationshipId = default, string TargetBusObId = default, string TargetBusObRecId = default)
+        public Section(List<SectionField> SectionFields, string GalleryImage, string Title, string RelationshipId, string TargetBusObId, string TargetBusObRecId)
         {
             this.SectionFields = SectionFields;
             this.GalleryImage = GalleryImage;

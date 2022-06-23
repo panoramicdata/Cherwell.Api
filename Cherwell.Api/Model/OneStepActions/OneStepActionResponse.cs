@@ -326,7 +326,7 @@ namespace Cherwell.Api.Model.OneStepActions
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public OneStepActionResponse(bool? Completed = default(bool?), string CurrentPrimaryBusObId = default, string CurrentPrimaryBusObRecId = default, bool? HasNewAccessToken = default(bool?), string NewAccessToken = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public OneStepActionResponse(bool? Completed, string CurrentPrimaryBusObId, string CurrentPrimaryBusObRecId, bool? HasNewAccessToken, string NewAccessToken, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
         {
             this.Completed = Completed;
             this.CurrentPrimaryBusObId = CurrentPrimaryBusObId;

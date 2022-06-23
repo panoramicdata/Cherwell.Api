@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// Initializes a new instance of the <see cref="BusObsForViewResponse" /> class.
         /// </summary>
         /// <param name="Summaries">Summaries.</param>
-        public BusObsForViewResponse(List<ViewSummary> Summaries = default(List<ViewSummary>))
+        public BusObsForViewResponse(List<ViewSummary> Summaries)
         {
             this.Summaries = Summaries;
         }

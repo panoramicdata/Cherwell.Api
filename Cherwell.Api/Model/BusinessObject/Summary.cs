@@ -34,7 +34,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="Major">Major.</param>
         /// <param name="Name">Name.</param>
         /// <param name="Supporting">Supporting.</param>
-        public Summary(string FirstRecIdField = default, List<Summary> GroupSummaries = default(List<Summary>), string RecIdFields = default, string StateFieldId = default, string States = default, string BusObId = default, string DisplayName = default, bool? Group = default(bool?), bool? Lookup = default(bool?), bool? Major = default(bool?), string Name = default, bool? Supporting = default(bool?))
+        public Summary(string FirstRecIdField, List<Summary> GroupSummaries, string RecIdFields, string StateFieldId, string States, string BusObId, string DisplayName, bool? Group, bool? Lookup, bool? Major, string Name, bool? Supporting)
         {
             this.FirstRecIdField = FirstRecIdField;
             this.GroupSummaries = GroupSummaries;

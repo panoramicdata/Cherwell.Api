@@ -18,3 +18,5 @@ using System.Diagnostics.CodeAnalysis;
 	Scope = "member",
 	Target = "~M:Cherwell.Api.AuthenticatedHttpClientHandler.LogoutAsync~System.Threading.Tasks.Task")
 	]
+[assembly: SuppressMessage("Naming", "CA1711:Identifiers should not have incorrect suffix", Justification = "<Pending>", Scope = "type", Target = "~T:Cherwell.Api.Model.Security.BusinessObjectPermission")]
+[assembly: SuppressMessage("Style", "IDE0044:Add readonly modifier", Justification = "<Pending>", Scope = "member", Target = "~F:Cherwell.Api.CherwellClient._disposedValue")]

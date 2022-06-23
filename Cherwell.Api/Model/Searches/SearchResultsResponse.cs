@@ -329,7 +329,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SearchResultsResponse(List<ReadResponse> BusinessObjects = default(List<ReadResponse>), bool? HasPrompts = default(bool?), List<Link> Links = default(List<Link>), List<Prompt> Prompts = default(List<Prompt>), List<Field> SearchResultsFields = default(List<Field>), SimpleResultsList SimpleResults = default(SimpleResultsList), long? TotalRows = default(long?), bool? HasMoreRecords = default(bool?), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public SearchResultsResponse(List<ReadResponse> BusinessObjects, bool? HasPrompts, List<Link> Links, List<Prompt> Prompts, List<Field> SearchResultsFields, SimpleResultsList SimpleResults, long? TotalRows, bool? HasMoreRecords, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
         {
             this.BusinessObjects = BusinessObjects;
             this.HasPrompts = HasPrompts;

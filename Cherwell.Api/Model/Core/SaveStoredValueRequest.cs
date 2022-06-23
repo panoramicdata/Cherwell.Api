@@ -97,7 +97,7 @@ namespace Cherwell.Api.Model.Core
         /// <param name="StandInKey">StandInKey.</param>
         /// <param name="StoredValueType">StoredValueType.</param>
         /// <param name="Value">Value.</param>
-        public SaveStoredValueRequest(string Description = default, string Folder = default, string Name = default, string Scope = default, string ScopeOwner = default, string StandInKey = default, EnumStoredValueType? StoredValueType = default(EnumStoredValueType?), string Value = default)
+        public SaveStoredValueRequest(string Description, string Folder, string Name, string Scope, string ScopeOwner, string StandInKey, EnumStoredValueType? StoredValueType, string Value)
         {
             this.Description = Description;
             this.Folder = Folder;

@@ -25,7 +25,7 @@ namespace Cherwell.Api.Model.BusinessObject
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObPublicId">BusObPublicId.</param>
         /// <param name="BusObRecId">BusObRecId.</param>
-        public DeleteRequest(string BusObId = default, string BusObPublicId = default, string BusObRecId = default)
+        public DeleteRequest(string BusObId, string BusObPublicId, string BusObRecId)
         {
             this.BusObId = BusObId;
             this.BusObPublicId = BusObPublicId;

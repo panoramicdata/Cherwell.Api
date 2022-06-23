@@ -325,7 +325,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SearchResultsTableResponse(List<Field> Columns = default(List<Field>), List<SearchResultsRow> Rows = default(List<SearchResultsRow>), List<SortInfo> Sorting = default(List<SortInfo>), long? TotalRows = default(long?), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public SearchResultsTableResponse(List<Field> Columns, List<SearchResultsRow> Rows, List<SortInfo> Sorting, long? TotalRows, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
         {
             this.Columns = Columns;
             this.Rows = Rows;

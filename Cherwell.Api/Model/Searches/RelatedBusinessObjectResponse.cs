@@ -34,18 +34,18 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="RelatedBusinessObjects">RelatedBusinessObjects.</param>
         /// <param name="RelationshipId">RelationshipId.</param>
         /// <param name="TotalRecords">TotalRecords.</param>
-        public RelatedBusinessObjectResponse(string ErrorCode = default,
-            string ErrorMessage = default,
-            bool? HasError = default,
-            List<Link> Links = default,
-            int? PageNumber = default,
-            int? PageSize = default,
-            string ParentBusObId = default,
-            string ParentBusObPublicId = default,
-            string ParentBusObRecId = default,
-            List<ReadResponse> RelatedBusinessObjects = default,
-            string RelationshipId = default,
-            int? TotalRecords = default)
+        public RelatedBusinessObjectResponse(string ErrorCode,
+            string ErrorMessage,
+            bool? HasError,
+            List<Link> Links,
+            int? PageNumber,
+            int? PageSize,
+            string ParentBusObId,
+            string ParentBusObPublicId,
+            string ParentBusObRecId,
+            List<ReadResponse> RelatedBusinessObjects,
+            string RelationshipId,
+            int? TotalRecords)
         {
             this.ErrorCode = ErrorCode;
             this.ErrorMessage = ErrorMessage;
