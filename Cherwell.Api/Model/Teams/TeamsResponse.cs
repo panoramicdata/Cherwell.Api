@@ -26,7 +26,7 @@ namespace Cherwell.Api.Model.Teams
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="Teams">Teams.</param>
-        public TeamsResponse(string Error = default, string ErrorCode = default, bool? HasError = default(bool?), List<Team> Teams = default(List<Team>))
+        public TeamsResponse(string Error, string ErrorCode, bool? HasError, List<Team> Teams)
         {
             this.Error = Error;
             this.ErrorCode = ErrorCode;

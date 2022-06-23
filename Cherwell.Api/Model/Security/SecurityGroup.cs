@@ -25,7 +25,7 @@ namespace Cherwell.Api.Model.Security
         /// <param name="Description">Description.</param>
         /// <param name="GroupId">GroupId.</param>
         /// <param name="GroupName">GroupName.</param>
-        public SecurityGroup(string Description = default, string GroupId = default, string GroupName = default)
+        public SecurityGroup(string Description, string GroupId, string GroupName)
         {
             this.Description = Description;
             this.GroupId = GroupId;

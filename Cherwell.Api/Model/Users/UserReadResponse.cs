@@ -26,7 +26,7 @@ namespace Cherwell.Api.Model.Users
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="Users">Users.</param>
-        public UserReadResponse(string Error = default, string ErrorCode = default, bool? HasError = default, List<User> Users = default)
+        public UserReadResponse(string Error, string ErrorCode, bool? HasError, List<User> Users)
         {
             this.Error = Error;
             this.ErrorCode = ErrorCode;

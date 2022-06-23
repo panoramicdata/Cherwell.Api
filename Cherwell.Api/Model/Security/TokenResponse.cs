@@ -30,7 +30,7 @@ namespace Cherwell.Api.Model.Security
         /// <param name="RefreshToken">RefreshToken.</param>
         /// <param name="TokenType">TokenType.</param>
         /// <param name="Username">Username.</param>
-        public TokenResponse(string AccessToken = default, string AsclientId = default, string Expires = default, int? ExpiresIn = default(int?), string Issued = default, string RefreshToken = default, string TokenType = default, string Username = default)
+        public TokenResponse(string AccessToken, string AsclientId, string Expires, int? ExpiresIn, string Issued, string RefreshToken, string TokenType, string Username)
         {
             this.AccessToken = AccessToken;
             this.AsclientId = AsclientId;

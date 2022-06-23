@@ -24,7 +24,7 @@ namespace Cherwell.Api.Model.Users
         /// </summary>
         /// <param name="LoginId">LoginId.</param>
         /// <param name="PublicId">PublicId.</param>
-        public UserReadRequest(string LoginId = default, string PublicId = default)
+        public UserReadRequest(string LoginId, string PublicId)
         {
             this.LoginId = LoginId;
             this.PublicId = PublicId;

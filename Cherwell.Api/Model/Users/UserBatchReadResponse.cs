@@ -322,7 +322,7 @@ namespace Cherwell.Api.Model.Users
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public UserBatchReadResponse(List<UserReadV2Response> Responses = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
+        public UserBatchReadResponse(List<UserReadV2Response> Responses, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
         {
             this.Responses = Responses;
             this.ErrorCode = ErrorCode;

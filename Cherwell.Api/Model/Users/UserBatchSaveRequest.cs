@@ -24,7 +24,7 @@ namespace Cherwell.Api.Model.Users
         /// </summary>
         /// <param name="SaveRequests">SaveRequests.</param>
         /// <param name="StopOnError">StopOnError.</param>
-        public UserBatchSaveRequest(List<UserSaveRequest> SaveRequests = default, bool? StopOnError = default)
+        public UserBatchSaveRequest(List<UserSaveRequest> SaveRequests, bool? StopOnError)
         {
             this.SaveRequests = SaveRequests;
             this.StopOnError = StopOnError;

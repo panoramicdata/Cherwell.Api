@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Users
         /// Initializes a new instance of the <see cref="UserBatchSaveResponse" /> class.
         /// </summary>
         /// <param name="Responses">Responses.</param>
-        public UserBatchSaveResponse(List<UserSaveResponse> Responses = default)
+        public UserBatchSaveResponse(List<UserSaveResponse> Responses)
         {
             this.Responses = Responses;
         }

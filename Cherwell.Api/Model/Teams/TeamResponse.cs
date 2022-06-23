@@ -353,7 +353,7 @@ namespace Cherwell.Api.Model.Teams
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TeamResponse(string Description = default, string EmailAlias = default, List<FieldTemplateItem> Fields = default(List<FieldTemplateItem>), string Image = default, string Name = default, string TeamId = default, EnumTeamType? TeamType = default(EnumTeamType?), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public TeamResponse(string Description, string EmailAlias, List<FieldTemplateItem> Fields, string Image, string Name, string TeamId, EnumTeamType? TeamType, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
         {
             this.Description = Description;
             this.EmailAlias = EmailAlias;

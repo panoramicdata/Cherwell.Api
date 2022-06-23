@@ -24,7 +24,7 @@ namespace Cherwell.Api.Model.Security
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="StandInKey">StandInKey.</param>
-        public GetApiClientSettingsResponseItem(string Name = default, string StandInKey = default)
+        public GetApiClientSettingsResponseItem(string Name, string StandInKey)
         {
             this.Name = Name;
             this.StandInKey = StandInKey;

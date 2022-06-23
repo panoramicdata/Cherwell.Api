@@ -31,7 +31,7 @@ namespace Cherwell.Api.Model.Security
         /// <param name="RefreshTokenLifespanMinutes">RefreshTokenLifespanMinutes.</param>
         /// <param name="StandInKey">StandInKey.</param>
         /// <param name="TokenLifespanMinutes">TokenLifespanMinutes.</param>
-        public SaveApiClientSettingRequest(bool? AllowAnonymousAccess = default(bool?), bool? ApiAccessIsEnabled = default(bool?), bool? CreateNewClientKey = default(bool?), string Culture = default, string Description = default, string Name = default, int? RefreshTokenLifespanMinutes = default(int?), string StandInKey = default, int? TokenLifespanMinutes = default(int?))
+        public SaveApiClientSettingRequest(bool? AllowAnonymousAccess, bool? ApiAccessIsEnabled, bool? CreateNewClientKey, string Culture, string Description, string Name, int? RefreshTokenLifespanMinutes, string StandInKey, int? TokenLifespanMinutes)
         {
             this.AllowAnonymousAccess = AllowAnonymousAccess;
             this.ApiAccessIsEnabled = ApiAccessIsEnabled;

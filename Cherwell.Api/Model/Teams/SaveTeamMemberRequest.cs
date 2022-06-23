@@ -26,7 +26,7 @@ namespace Cherwell.Api.Model.Teams
         /// <param name="SetAsDefaultTeam">SetAsDefaultTeam.</param>
         /// <param name="TeamId">TeamId.</param>
         /// <param name="UserRecId">UserRecId.</param>
-        public SaveTeamMemberRequest(bool? IsTeamManager = default(bool?), bool? SetAsDefaultTeam = default(bool?), string TeamId = default, string UserRecId = default)
+        public SaveTeamMemberRequest(bool? IsTeamManager, bool? SetAsDefaultTeam, string TeamId, string UserRecId)
         {
             this.IsTeamManager = IsTeamManager;
             this.SetAsDefaultTeam = SetAsDefaultTeam;

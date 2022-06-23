@@ -27,7 +27,7 @@ namespace Cherwell.Api.Model.Users
         /// <param name="Error">Error.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="HasError">HasError.</param>
-        public UserSaveResponse(string BusObPublicId = default, string BusObRecId = default, string Error = default, string ErrorCode = default, bool? HasError = default)
+        public UserSaveResponse(string BusObPublicId, string BusObRecId, string Error, string ErrorCode, bool? HasError)
         {
             this.BusObPublicId = BusObPublicId;
             this.BusObRecId = BusObRecId;

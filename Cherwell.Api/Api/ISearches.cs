@@ -64,7 +64,7 @@ namespace Cherwell.Api
         /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dataRequest">Request object containing the parameters for specific Business Object Quick Search execution.</param>
         /// <param name="includeSchema">Flag to include the schema for the results. (optional)</param>
-        /// <param name="includeLocationFields">Flag to include location fields in the results. (optional)</param>
+        /// <param name="includeLocationFields">Flag to include location Fields in the results. (optional)</param>
         /// <param name="includeLinks">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
@@ -81,7 +81,7 @@ namespace Cherwell.Api
         /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dataRequest">Request object containing the parameters for specific Business Object Quick Search execution.</param>
         /// <param name="includeSchema">Flag to include the schema for the results. (optional)</param>
-        /// <param name="includeLocationFields">Flag to include location fields in the results. (optional)</param>
+        /// <param name="includeLocationFields">Flag to include location Fields in the results. (optional)</param>
         /// <param name="includeLinks">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>

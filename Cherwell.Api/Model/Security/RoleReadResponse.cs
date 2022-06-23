@@ -26,7 +26,7 @@ namespace Cherwell.Api.Model.Security
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="Roles">Roles.</param>
-        public RoleReadResponse(string Error = default, string ErrorCode = default, bool? HasError = default(bool?), List<Role> Roles = default(List<Role>))
+        public RoleReadResponse(string Error, string ErrorCode, bool? HasError, List<Role> Roles)
         {
             this.Error = Error;
             this.ErrorCode = ErrorCode;

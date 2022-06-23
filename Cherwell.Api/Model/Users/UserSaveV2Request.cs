@@ -39,7 +39,7 @@ namespace Cherwell.Api.Model.Users
         /// <param name="UserInfoFields">UserInfoFields.</param>
         /// <param name="UserMustChangePasswordAtNextLogin">UserMustChangePasswordAtNextLogin.</param>
         /// <param name="WindowsUserId">WindowsUserId.</param>
-        public UserSaveV2Request(bool? AccountLocked = default, bool? AllCultures = default, string BusObId = default, string BusObPublicId = default, string BusObRecId = default, string DisplayName = default, bool? LdapRequired = default, string LoginId = default, DateTime? NextPasswordResetDate = default, string Password = default, bool? PasswordNeverExpires = default, string SecurityGroupId = default, string SpecificCulture = default, bool? UserCannotChangePassword = default, List<FieldTemplateItem> UserInfoFields = default, bool? UserMustChangePasswordAtNextLogin = default, string WindowsUserId = default)
+        public UserSaveV2Request(bool? AccountLocked, bool? AllCultures, string BusObId, string BusObPublicId, string BusObRecId, string DisplayName, bool? LdapRequired, string LoginId, DateTime? NextPasswordResetDate, string Password, bool? PasswordNeverExpires, string SecurityGroupId, string SpecificCulture, bool? UserCannotChangePassword, List<FieldTemplateItem> UserInfoFields, bool? UserMustChangePasswordAtNextLogin, string WindowsUserId)
         {
             this.AccountLocked = AccountLocked;
             this.AllCultures = AllCultures;

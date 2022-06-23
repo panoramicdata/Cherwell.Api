@@ -25,7 +25,7 @@ namespace Cherwell.Api.Model.Teams
         /// <param name="CustomerRecordId">CustomerRecordId.</param>
         /// <param name="WorkgroupId">WorkgroupId.</param>
         /// <param name="CustomerIsWorkgroupManager">CustomerIsWorkgroupManager.</param>
-        public SaveWorkgroupMemberRequest(string CustomerRecordId = default, string WorkgroupId = default, bool? CustomerIsWorkgroupManager = default(bool?))
+        public SaveWorkgroupMemberRequest(string CustomerRecordId, string WorkgroupId, bool? CustomerIsWorkgroupManager)
         {
             this.CustomerRecordId = CustomerRecordId;
             this.WorkgroupId = WorkgroupId;

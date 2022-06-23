@@ -24,7 +24,7 @@ namespace Cherwell.Api.Model.Teams
         /// </summary>
         /// <param name="AddUserToTeamRequests">AddUserToTeamRequests.</param>
         /// <param name="StopOnError">StopOnError.</param>
-        public AddUserToTeamByBatchRequest(List<AddUserToTeamRequest> AddUserToTeamRequests = default(List<AddUserToTeamRequest>), bool? StopOnError = default(bool?))
+        public AddUserToTeamByBatchRequest(List<AddUserToTeamRequest> AddUserToTeamRequests, bool? StopOnError)
         {
             this.AddUserToTeamRequests = AddUserToTeamRequests;
             this.StopOnError = StopOnError;

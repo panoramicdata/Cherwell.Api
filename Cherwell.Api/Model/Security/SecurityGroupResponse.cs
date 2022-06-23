@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Security
         /// Initializes a new instance of the <see cref="SecurityGroupResponse" /> class.
         /// </summary>
         /// <param name="SecurityGroups">SecurityGroups.</param>
-        public SecurityGroupResponse(List<SecurityGroup> SecurityGroups = default(List<SecurityGroup>))
+        public SecurityGroupResponse(List<SecurityGroup> SecurityGroups)
         {
             this.SecurityGroups = SecurityGroups;
         }

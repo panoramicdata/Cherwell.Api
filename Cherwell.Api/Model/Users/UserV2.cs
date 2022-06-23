@@ -23,7 +23,7 @@ public partial class UserV2 : IEquatable<UserV2>, IValidatableObject
     /// Gets or Sets HttpStatusCode
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum EnumHttpStatusCode
+    public enum EnumhttpStatusCode
     {
 
         /// <summary>
@@ -313,48 +313,48 @@ public partial class UserV2 : IEquatable<UserV2>, IValidatableObject
     /// Gets or Sets HttpStatusCode
     /// </summary>
     [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-    public EnumHttpStatusCode? HttpStatusCode { get; set; }
+    public EnumhttpStatusCode? HttpStatusCode { get; set; }
     /// <summary>
     /// Initializes a new instance of the <see cref="UserV2" /> class.
     /// </summary>
-    /// <param name="AccountLocked">AccountLocked.</param>
-    /// <param name="CreateDateTime">CreateDateTime.</param>
-    /// <param name="DisplayName">DisplayName.</param>
-    /// <param name="Fields">Fields.</param>
-    /// <param name="LastPasswordResetDate">LastPasswordResetDate.</param>
-    /// <param name="LastResetDateTime">LastResetDateTime.</param>
-    /// <param name="LdapRequired">LdapRequired.</param>
-    /// <param name="PasswordNeverExpires">PasswordNeverExpires.</param>
-    /// <param name="PublicId">PublicId.</param>
-    /// <param name="RecordId">RecordId.</param>
-    /// <param name="SecurityGroupId">SecurityGroupId.</param>
-    /// <param name="ShortDisplayName">ShortDisplayName.</param>
-    /// <param name="UserCannotChangePassword">UserCannotChangePassword.</param>
-    /// <param name="UserMustResetPasswordAtNextLogin">UserMustResetPasswordAtNextLogin.</param>
-    /// <param name="ErrorCode">ErrorCode.</param>
-    /// <param name="ErrorMessage">ErrorMessage.</param>
-    /// <param name="HasError">HasError.</param>
-    /// <param name="HttpStatusCode">HttpStatusCode.</param>
-    public UserV2(bool? AccountLocked = default, DateTime? CreateDateTime = default, string DisplayName = default, List<FieldTemplateItem> Fields = default, DateTime? LastPasswordResetDate = default, DateTime? LastResetDateTime = default, bool? LdapRequired = default, bool? PasswordNeverExpires = default, string PublicId = default, string RecordId = default, string SecurityGroupId = default, string ShortDisplayName = default, bool? UserCannotChangePassword = default, bool? UserMustResetPasswordAtNextLogin = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
+    /// <param name="accountLocked">AccountLocked.</param>
+    /// <param name="createDateTime">CreateDateTime.</param>
+    /// <param name="displayName">DisplayName.</param>
+    /// <param name="fields">Fields.</param>
+    /// <param name="lastPasswordResetDate">LastPasswordResetDate.</param>
+    /// <param name="lastResetDateTime">LastResetDateTime.</param>
+    /// <param name="ldapRequired">LdapRequired.</param>
+    /// <param name="passwordNeverExpires">PasswordNeverExpires.</param>
+    /// <param name="publicId">PublicId.</param>
+    /// <param name="recordId">RecordId.</param>
+    /// <param name="securityGroupId">SecurityGroupId.</param>
+    /// <param name="shortdisplayName">ShortdisplayName.</param>
+    /// <param name="userCannotChangePassword">UserCannotChangePassword.</param>
+    /// <param name="userMustResetPasswordAtNextLogin">UserMustResetPasswordAtNextLogin.</param>
+    /// <param name="errorCode">ErrorCode.</param>
+    /// <param name="errorMessage">ErrorMessage.</param>
+    /// <param name="hasError">HasError.</param>
+    /// <param name="httpStatusCode">HttpStatusCode.</param>
+    public UserV2(bool? accountLocked, DateTime? createDateTime, string displayName, List<FieldTemplateItem> fields, DateTime? lastPasswordResetDate, DateTime? lastResetDateTime, bool? ldapRequired, bool? passwordNeverExpires, string publicId, string recordId, string securityGroupId, string shortdisplayName, bool? userCannotChangePassword, bool? userMustResetPasswordAtNextLogin, string errorCode, string errorMessage, bool? hasError, EnumhttpStatusCode? httpStatusCode)
     {
-        this.AccountLocked = AccountLocked;
-        this.CreateDateTime = CreateDateTime;
-        this.DisplayName = DisplayName;
-        this.Fields = Fields;
-        this.LastPasswordResetDate = LastPasswordResetDate;
-        this.LastResetDateTime = LastResetDateTime;
-        this.LdapRequired = LdapRequired;
-        this.PasswordNeverExpires = PasswordNeverExpires;
-        this.PublicId = PublicId;
-        this.RecordId = RecordId;
-        this.SecurityGroupId = SecurityGroupId;
-        this.ShortDisplayName = ShortDisplayName;
-        this.UserCannotChangePassword = UserCannotChangePassword;
-        this.UserMustResetPasswordAtNextLogin = UserMustResetPasswordAtNextLogin;
-        this.ErrorCode = ErrorCode;
-        this.ErrorMessage = ErrorMessage;
-        this.HasError = HasError;
-        this.HttpStatusCode = HttpStatusCode;
+        this.AccountLocked = accountLocked;
+        this.CreateDateTime = createDateTime;
+        this.DisplayName = displayName;
+        this.Fields = fields;
+        this.LastPasswordResetDate = lastPasswordResetDate;
+        this.LastResetDateTime = lastResetDateTime;
+        this.LdapRequired = ldapRequired;
+        this.PasswordNeverExpires = passwordNeverExpires;
+        this.PublicId = publicId;
+        this.RecordId = recordId;
+        this.SecurityGroupId = securityGroupId;
+        this.ShortdisplayName = shortdisplayName;
+        this.UserCannotChangePassword = userCannotChangePassword;
+        this.UserMustResetPasswordAtNextLogin = userMustResetPasswordAtNextLogin;
+        this.ErrorCode = errorCode;
+        this.ErrorMessage = errorMessage;
+        this.HasError = hasError;
+        this.HttpStatusCode = httpStatusCode;
     }
 
     /// <summary>
@@ -413,10 +413,10 @@ public partial class UserV2 : IEquatable<UserV2>, IValidatableObject
     [DataMember(Name = "securityGroupId", EmitDefaultValue = false)]
     public string SecurityGroupId { get; set; }
     /// <summary>
-    /// Gets or Sets ShortDisplayName
+    /// Gets or Sets ShortdisplayName
     /// </summary>
-    [DataMember(Name = "shortDisplayName", EmitDefaultValue = false)]
-    public string ShortDisplayName { get; set; }
+    [DataMember(Name = "shortdisplayName", EmitDefaultValue = false)]
+    public string ShortdisplayName { get; set; }
     /// <summary>
     /// Gets or Sets UserCannotChangePassword
     /// </summary>
@@ -450,24 +450,24 @@ public partial class UserV2 : IEquatable<UserV2>, IValidatableObject
     {
         var sb = new StringBuilder();
         sb.Append("class UserV2 {\n");
-        sb.Append("  AccountLocked: ").Append(AccountLocked).Append('\n');
-        sb.Append("  CreateDateTime: ").Append(CreateDateTime).Append('\n');
-        sb.Append("  DisplayName: ").Append(DisplayName).Append('\n');
-        sb.Append("  Fields: ").Append(Fields).Append('\n');
-        sb.Append("  LastPasswordResetDate: ").Append(LastPasswordResetDate).Append('\n');
-        sb.Append("  LastResetDateTime: ").Append(LastResetDateTime).Append('\n');
-        sb.Append("  LdapRequired: ").Append(LdapRequired).Append('\n');
-        sb.Append("  PasswordNeverExpires: ").Append(PasswordNeverExpires).Append('\n');
-        sb.Append("  PublicId: ").Append(PublicId).Append('\n');
-        sb.Append("  RecordId: ").Append(RecordId).Append('\n');
-        sb.Append("  SecurityGroupId: ").Append(SecurityGroupId).Append('\n');
-        sb.Append("  ShortDisplayName: ").Append(ShortDisplayName).Append('\n');
-        sb.Append("  UserCannotChangePassword: ").Append(UserCannotChangePassword).Append('\n');
-        sb.Append("  UserMustResetPasswordAtNextLogin: ").Append(UserMustResetPasswordAtNextLogin).Append('\n');
-        sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
-        sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append('\n');
-        sb.Append("  HasError: ").Append(HasError).Append('\n');
-        sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
+        sb.Append("  accountLocked: ").Append(AccountLocked).Append('\n');
+        sb.Append("  createDateTime: ").Append(CreateDateTime).Append('\n');
+        sb.Append("  displayName: ").Append(DisplayName).Append('\n');
+        sb.Append("  fields: ").Append(Fields).Append('\n');
+        sb.Append("  lastPasswordResetDate: ").Append(LastPasswordResetDate).Append('\n');
+        sb.Append("  lastResetDateTime: ").Append(LastResetDateTime).Append('\n');
+        sb.Append("  ldapRequired: ").Append(LdapRequired).Append('\n');
+        sb.Append("  passwordNeverExpires: ").Append(PasswordNeverExpires).Append('\n');
+        sb.Append("  publicId: ").Append(PublicId).Append('\n');
+        sb.Append("  recordId: ").Append(RecordId).Append('\n');
+        sb.Append("  securityGroupId: ").Append(SecurityGroupId).Append('\n');
+        sb.Append("  shortdisplayName: ").Append(ShortdisplayName).Append('\n');
+        sb.Append("  userCannotChangePassword: ").Append(UserCannotChangePassword).Append('\n');
+        sb.Append("  userMustResetPasswordAtNextLogin: ").Append(UserMustResetPasswordAtNextLogin).Append('\n');
+        sb.Append("  errorCode: ").Append(ErrorCode).Append('\n');
+        sb.Append("  errorMessage: ").Append(ErrorMessage).Append('\n');
+        sb.Append("  hasError: ").Append(HasError).Append('\n');
+        sb.Append("  httpStatusCode: ").Append(HttpStatusCode).Append('\n');
         sb.Append("}\n");
         return sb.ToString();
     }
@@ -499,11 +499,13 @@ public partial class UserV2 : IEquatable<UserV2>, IValidatableObject
     /// <returns>Boolean</returns>
     public bool Equals(UserV2? other)
     {
-        // credit: http://stackoverflow.com/a/10454552/677735
-        if (other == null)
-            return false;
+		// credit: http://stackoverflow.com/a/10454552/677735
+		if (other == null)
+		{
+			return false;
+		}
 
-        return
+		return
             (
                 AccountLocked == other.AccountLocked ||
                 AccountLocked != null &&
@@ -560,9 +562,9 @@ public partial class UserV2 : IEquatable<UserV2>, IValidatableObject
                 SecurityGroupId.Equals(other.SecurityGroupId, StringComparison.Ordinal)
             ) &&
             (
-                ShortDisplayName == other.ShortDisplayName ||
-                ShortDisplayName != null &&
-                ShortDisplayName.Equals(other.ShortDisplayName, StringComparison.Ordinal)
+                ShortdisplayName == other.ShortdisplayName ||
+                ShortdisplayName != null &&
+                ShortdisplayName.Equals(other.ShortdisplayName, StringComparison.Ordinal)
             ) &&
             (
                 UserCannotChangePassword == other.UserCannotChangePassword ||
@@ -608,42 +610,96 @@ public partial class UserV2 : IEquatable<UserV2>, IValidatableObject
             int hash = 41;
             // Suitable nullity checks etc, of course :)
             if (AccountLocked != null)
-                hash = hash * 59 + AccountLocked.GetHashCode();
-            if (CreateDateTime != null)
-                hash = hash * 59 + CreateDateTime.GetHashCode();
-            if (DisplayName != null)
-                hash = hash * 59 + DisplayName.GetHashCode();
-            if (Fields != null)
-                hash = hash * 59 + Fields.GetHashCode();
-            if (LastPasswordResetDate != null)
-                hash = hash * 59 + LastPasswordResetDate.GetHashCode();
-            if (LastResetDateTime != null)
-                hash = hash * 59 + LastResetDateTime.GetHashCode();
-            if (LdapRequired != null)
-                hash = hash * 59 + LdapRequired.GetHashCode();
-            if (PasswordNeverExpires != null)
-                hash = hash * 59 + PasswordNeverExpires.GetHashCode();
-            if (PublicId != null)
-                hash = hash * 59 + PublicId.GetHashCode();
-            if (RecordId != null)
-                hash = hash * 59 + RecordId.GetHashCode();
-            if (SecurityGroupId != null)
-                hash = hash * 59 + SecurityGroupId.GetHashCode();
-            if (ShortDisplayName != null)
-                hash = hash * 59 + ShortDisplayName.GetHashCode();
-            if (UserCannotChangePassword != null)
-                hash = hash * 59 + UserCannotChangePassword.GetHashCode();
-            if (UserMustResetPasswordAtNextLogin != null)
-                hash = hash * 59 + UserMustResetPasswordAtNextLogin.GetHashCode();
-            if (ErrorCode != null)
-                hash = hash * 59 + ErrorCode.GetHashCode();
-            if (ErrorMessage != null)
-                hash = hash * 59 + ErrorMessage.GetHashCode();
-            if (HasError != null)
-                hash = hash * 59 + HasError.GetHashCode();
-            if (HttpStatusCode != null)
-                hash = hash * 59 + HttpStatusCode.GetHashCode();
-            return hash;
+			{
+				hash = hash * 59 + AccountLocked.GetHashCode();
+			}
+
+			if (CreateDateTime != null)
+			{
+				hash = hash * 59 + CreateDateTime.GetHashCode();
+			}
+
+			if (DisplayName != null)
+			{
+				hash = hash * 59 + DisplayName.GetHashCode();
+			}
+
+			if (Fields != null)
+			{
+				hash = hash * 59 + Fields.GetHashCode();
+			}
+
+			if (LastPasswordResetDate != null)
+			{
+				hash = hash * 59 + LastPasswordResetDate.GetHashCode();
+			}
+
+			if (LastResetDateTime != null)
+			{
+				hash = hash * 59 + LastResetDateTime.GetHashCode();
+			}
+
+			if (LdapRequired != null)
+			{
+				hash = hash * 59 + LdapRequired.GetHashCode();
+			}
+
+			if (PasswordNeverExpires != null)
+			{
+				hash = hash * 59 + PasswordNeverExpires.GetHashCode();
+			}
+
+			if (PublicId != null)
+			{
+				hash = hash * 59 + PublicId.GetHashCode();
+			}
+
+			if (RecordId != null)
+			{
+				hash = hash * 59 + RecordId.GetHashCode();
+			}
+
+			if (SecurityGroupId != null)
+			{
+				hash = hash * 59 + SecurityGroupId.GetHashCode();
+			}
+
+			if (ShortdisplayName != null)
+			{
+				hash = hash * 59 + ShortdisplayName.GetHashCode();
+			}
+
+			if (UserCannotChangePassword != null)
+			{
+				hash = hash * 59 + UserCannotChangePassword.GetHashCode();
+			}
+
+			if (UserMustResetPasswordAtNextLogin != null)
+			{
+				hash = hash * 59 + UserMustResetPasswordAtNextLogin.GetHashCode();
+			}
+
+			if (ErrorCode != null)
+			{
+				hash = hash * 59 + ErrorCode.GetHashCode();
+			}
+
+			if (ErrorMessage != null)
+			{
+				hash = hash * 59 + ErrorMessage.GetHashCode();
+			}
+
+			if (HasError != null)
+			{
+				hash = hash * 59 + HasError.GetHashCode();
+			}
+
+			if (HttpStatusCode != null)
+			{
+				hash = hash * 59 + HttpStatusCode.GetHashCode();
+			}
+
+			return hash;
         }
     }
 

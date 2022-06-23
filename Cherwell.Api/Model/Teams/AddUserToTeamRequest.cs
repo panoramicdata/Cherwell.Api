@@ -25,7 +25,7 @@ namespace Cherwell.Api.Model.Teams
         /// <param name="TeamId">TeamId.</param>
         /// <param name="UserIsTeamManager">UserIsTeamManager.</param>
         /// <param name="UserRecordId">UserRecordId.</param>
-        public AddUserToTeamRequest(string TeamId = default, bool? UserIsTeamManager = default, string UserRecordId = default)
+        public AddUserToTeamRequest(string TeamId, bool? UserIsTeamManager, string UserRecordId)
         {
             this.TeamId = TeamId;
             this.UserIsTeamManager = UserIsTeamManager;

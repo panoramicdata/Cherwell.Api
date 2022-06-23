@@ -53,7 +53,7 @@ namespace Cherwell.Api.Model.Teams
         /// <param name="TeamId">TeamId.</param>
         /// <param name="TeamName">TeamName.</param>
         /// <param name="TeamType">TeamType.</param>
-        public TeamSaveRequest(string Description = default, string EmailAlias = default, string Image = default, string TeamId = default, string TeamName = default, EnumTeamType? TeamType = default(EnumTeamType?))
+        public TeamSaveRequest(string Description, string EmailAlias, string Image, string TeamId, string TeamName, EnumTeamType? TeamType)
         {
             this.Description = Description;
             this.EmailAlias = EmailAlias;

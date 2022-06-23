@@ -219,7 +219,7 @@ namespace Cherwell.Api
         /// Operation to create or update a user.  The response is a collection because if you use a public ID, more than one user could be updated since public IDs may not be unique. 
         /// </remarks>
         /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">Request object to specify user parameters and fields with values to be created or updated. The loginId and either the Business Object record ID or Public ID are required.</param>
+        /// <param name="request">Request object to specify user parameters and Fields with values to be created or updated. The loginId and either the Business Object record ID or Public ID are required.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of UserSaveResponse</returns>
@@ -233,7 +233,7 @@ namespace Cherwell.Api
         /// Operation to create or update a user.  The response is a collection because if you use a public ID, more than one user could be updated since public IDs may not be unique. 
         /// </remarks>
         /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">Request object to specify user parameters and fields with values to be created or updated. The loginId and either the Business Object record ID or Public ID are required.</param>
+        /// <param name="request">Request object to specify user parameters and Fields with values to be created or updated. The loginId and either the Business Object record ID or Public ID are required.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of UserSaveV2Response</returns>

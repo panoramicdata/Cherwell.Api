@@ -323,7 +323,7 @@ namespace Cherwell.Api.Model.Teams
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public RemoveUserFromTeamResponse(string TeamId = default, string UserRecordId = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public RemoveUserFromTeamResponse(string TeamId, string UserRecordId, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
         {
             this.TeamId = TeamId;
             this.UserRecordId = UserRecordId;

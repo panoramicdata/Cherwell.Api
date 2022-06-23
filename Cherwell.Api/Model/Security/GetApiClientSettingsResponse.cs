@@ -322,7 +322,7 @@ namespace Cherwell.Api.Model.Security
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public GetApiClientSettingsResponse(List<GetApiClientSettingsResponseItem> Settings = default(List<GetApiClientSettingsResponseItem>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public GetApiClientSettingsResponse(List<GetApiClientSettingsResponseItem> Settings, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
         {
             this.Settings = Settings;
             this.ErrorCode = ErrorCode;

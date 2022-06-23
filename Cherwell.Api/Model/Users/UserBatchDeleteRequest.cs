@@ -24,7 +24,7 @@ namespace Cherwell.Api.Model.Users
         /// </summary>
         /// <param name="StopOnError">StopOnError.</param>
         /// <param name="UserRecordIds">UserRecordIds.</param>
-        public UserBatchDeleteRequest(bool? StopOnError = default, List<string> UserRecordIds = default)
+        public UserBatchDeleteRequest(bool? StopOnError, List<string> UserRecordIds)
         {
             this.StopOnError = StopOnError;
             this.UserRecordIds = UserRecordIds;

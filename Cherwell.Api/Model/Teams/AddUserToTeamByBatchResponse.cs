@@ -322,7 +322,7 @@ namespace Cherwell.Api.Model.Teams
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public AddUserToTeamByBatchResponse(List<AddUserToTeamResponse> Responses = default(List<AddUserToTeamResponse>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public AddUserToTeamByBatchResponse(List<AddUserToTeamResponse> Responses, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
         {
             this.Responses = Responses;
             this.ErrorCode = ErrorCode;

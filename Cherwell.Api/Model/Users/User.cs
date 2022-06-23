@@ -11,8 +11,8 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Api.Model.Users
-{
+namespace Cherwell.Api.Model.Users;
+
     /// <summary>
     /// User
     /// </summary>
@@ -22,42 +22,42 @@ namespace Cherwell.Api.Model.Users
         /// <summary>
         /// Initializes a new instance of the <see cref="User" /> class.
         /// </summary>
-        /// <param name="AccountLocked">AccountLocked.</param>
-        /// <param name="CreateDateTime">CreateDateTime.</param>
-        /// <param name="DisplayName">DisplayName.</param>
-        /// <param name="Error">Error.</param>
-        /// <param name="ErrorCode">ErrorCode.</param>
-        /// <param name="Fields">Fields.</param>
-        /// <param name="HasError">HasError.</param>
-        /// <param name="LastPasswordResetDate">LastPasswordResetDate.</param>
-        /// <param name="LastResetDateTime">LastResetDateTime.</param>
-        /// <param name="LdapRequired">LdapRequired.</param>
-        /// <param name="PasswordNeverExpires">PasswordNeverExpires.</param>
-        /// <param name="PublicId">PublicId.</param>
-        /// <param name="RecordId">RecordId.</param>
-        /// <param name="SecurityGroupId">SecurityGroupId.</param>
-        /// <param name="ShortDisplayName">ShortDisplayName.</param>
-        /// <param name="UserCannotChangePassword">UserCannotChangePassword.</param>
-        /// <param name="UserMustResetPasswordAtNextLogin">UserMustResetPasswordAtNextLogin.</param>
-        public User(bool? AccountLocked = default, DateTime? CreateDateTime = default, string DisplayName = default, string Error = default, string ErrorCode = default, List<FieldTemplateItem> Fields = default, bool? HasError = default, DateTime? LastPasswordResetDate = default, DateTime? LastResetDateTime = default, bool? LdapRequired = default, bool? PasswordNeverExpires = default, string PublicId = default, string RecordId = default, string SecurityGroupId = default, string ShortDisplayName = default, bool? UserCannotChangePassword = default, bool? UserMustResetPasswordAtNextLogin = default)
+        /// <param name="accountLocked">AccountLocked.</param>
+        /// <param name="createDateTime">CreateDateTime.</param>
+        /// <param name="displayName">DisplayName.</param>
+        /// <param name="error">error.</param>
+        /// <param name="errorCode">ErrorCode.</param>
+        /// <param name="fields">Fields.</param>
+        /// <param name="hasError">HasError.</param>
+        /// <param name="lastPasswordResetDate">LastPasswordResetDate.</param>
+        /// <param name="lastResetDateTime">LastResetDateTime.</param>
+        /// <param name="ldapRequired">LdapRequired.</param>
+        /// <param name="passwordNeverExpires">PasswordNeverExpires.</param>
+        /// <param name="publicId">PublicId.</param>
+        /// <param name="recordId">RecordId.</param>
+        /// <param name="securityGroupId">SecurityGroupId.</param>
+        /// <param name="shortDisplayName">shortDisplayName.</param>
+        /// <param name="userCannotChangePassword">UserCannotChangePassword.</param>
+        /// <param name="userMustResetPasswordAtNextLogin">UserMustResetPasswordAtNextLogin.</param>
+        public User(bool? accountLocked, DateTime? createDateTime, string displayName, string error, string errorCode, List<FieldTemplateItem> fields, bool? hasError, DateTime? lastPasswordResetDate, DateTime? lastResetDateTime, bool? ldapRequired, bool? passwordNeverExpires, string publicId, string recordId, string securityGroupId, string shortDisplayName, bool? userCannotChangePassword, bool? userMustResetPasswordAtNextLogin)
         {
-            this.AccountLocked = AccountLocked;
-            this.CreateDateTime = CreateDateTime;
-            this.DisplayName = DisplayName;
-            this.Error = Error;
-            this.ErrorCode = ErrorCode;
-            this.Fields = Fields;
-            this.HasError = HasError;
-            this.LastPasswordResetDate = LastPasswordResetDate;
-            this.LastResetDateTime = LastResetDateTime;
-            this.LdapRequired = LdapRequired;
-            this.PasswordNeverExpires = PasswordNeverExpires;
-            this.PublicId = PublicId;
-            this.RecordId = RecordId;
-            this.SecurityGroupId = SecurityGroupId;
-            this.ShortDisplayName = ShortDisplayName;
-            this.UserCannotChangePassword = UserCannotChangePassword;
-            this.UserMustResetPasswordAtNextLogin = UserMustResetPasswordAtNextLogin;
+            this.AccountLocked = accountLocked;
+            this.CreateDateTime = createDateTime;
+            this.DisplayName = displayName;
+            this.Error = error;
+            this.ErrorCode = errorCode;
+            this.Fields = fields;
+            this.HasError = hasError;
+            this.LastPasswordResetDate = lastPasswordResetDate;
+            this.LastResetDateTime = lastResetDateTime;
+            this.LdapRequired = ldapRequired;
+            this.PasswordNeverExpires = passwordNeverExpires;
+            this.PublicId = publicId;
+            this.RecordId = recordId;
+            this.SecurityGroupId = securityGroupId;
+            this.ShortDisplayName = shortDisplayName;
+            this.UserCannotChangePassword = userCannotChangePassword;
+            this.UserMustResetPasswordAtNextLogin = userMustResetPasswordAtNextLogin;
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace Cherwell.Api.Model.Users
         [DataMember(Name = "displayName", EmitDefaultValue = false)]
         public string DisplayName { get; set; }
         /// <summary>
-        /// Gets or Sets Error
+        /// Gets or Sets error
         /// </summary>
         [DataMember(Name = "error", EmitDefaultValue = false)]
         public string Error { get; set; }
@@ -131,7 +131,7 @@ namespace Cherwell.Api.Model.Users
         [DataMember(Name = "securityGroupId", EmitDefaultValue = false)]
         public string SecurityGroupId { get; set; }
         /// <summary>
-        /// Gets or Sets ShortDisplayName
+        /// Gets or Sets shortDisplayName
         /// </summary>
         [DataMember(Name = "shortDisplayName", EmitDefaultValue = false)]
         public string ShortDisplayName { get; set; }
@@ -203,9 +203,11 @@ namespace Cherwell.Api.Model.Users
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
-                return false;
+		{
+			return false;
+		}
 
-            return
+		return
                 (
                     AccountLocked == other.AccountLocked ||
                     AccountLocked != null &&
@@ -305,40 +307,91 @@ namespace Cherwell.Api.Model.Users
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 if (AccountLocked != null)
-                    hash = hash * 59 + AccountLocked.GetHashCode();
-                if (CreateDateTime != null)
-                    hash = hash * 59 + CreateDateTime.GetHashCode();
-                if (DisplayName != null)
-                    hash = hash * 59 + DisplayName.GetHashCode();
-                if (Error != null)
-                    hash = hash * 59 + Error.GetHashCode();
-                if (ErrorCode != null)
-                    hash = hash * 59 + ErrorCode.GetHashCode();
-                if (Fields != null)
-                    hash = hash * 59 + Fields.GetHashCode();
-                if (HasError != null)
-                    hash = hash * 59 + HasError.GetHashCode();
-                if (LastPasswordResetDate != null)
-                    hash = hash * 59 + LastPasswordResetDate.GetHashCode();
-                if (LastResetDateTime != null)
-                    hash = hash * 59 + LastResetDateTime.GetHashCode();
-                if (LdapRequired != null)
-                    hash = hash * 59 + LdapRequired.GetHashCode();
-                if (PasswordNeverExpires != null)
-                    hash = hash * 59 + PasswordNeverExpires.GetHashCode();
-                if (PublicId != null)
-                    hash = hash * 59 + PublicId.GetHashCode();
-                if (RecordId != null)
-                    hash = hash * 59 + RecordId.GetHashCode();
-                if (SecurityGroupId != null)
-                    hash = hash * 59 + SecurityGroupId.GetHashCode();
-                if (ShortDisplayName != null)
-                    hash = hash * 59 + ShortDisplayName.GetHashCode();
-                if (UserCannotChangePassword != null)
-                    hash = hash * 59 + UserCannotChangePassword.GetHashCode();
-                if (UserMustResetPasswordAtNextLogin != null)
-                    hash = hash * 59 + UserMustResetPasswordAtNextLogin.GetHashCode();
-                return hash;
+			{
+				hash = hash * 59 + AccountLocked.GetHashCode();
+			}
+
+			if (CreateDateTime != null)
+			{
+				hash = hash * 59 + CreateDateTime.GetHashCode();
+			}
+
+			if (DisplayName != null)
+			{
+				hash = hash * 59 + DisplayName.GetHashCode();
+			}
+
+			if (Error != null)
+			{
+				hash = hash * 59 + Error.GetHashCode();
+			}
+
+			if (ErrorCode != null)
+			{
+				hash = hash * 59 + ErrorCode.GetHashCode();
+			}
+
+			if (Fields != null)
+			{
+				hash = hash * 59 + Fields.GetHashCode();
+			}
+
+			if (HasError != null)
+			{
+				hash = hash * 59 + HasError.GetHashCode();
+			}
+
+			if (LastPasswordResetDate != null)
+			{
+				hash = hash * 59 + LastPasswordResetDate.GetHashCode();
+			}
+
+			if (LastResetDateTime != null)
+			{
+				hash = hash * 59 + LastResetDateTime.GetHashCode();
+			}
+
+			if (LdapRequired != null)
+			{
+				hash = hash * 59 + LdapRequired.GetHashCode();
+			}
+
+			if (PasswordNeverExpires != null)
+			{
+				hash = hash * 59 + PasswordNeverExpires.GetHashCode();
+			}
+
+			if (PublicId != null)
+			{
+				hash = hash * 59 + PublicId.GetHashCode();
+			}
+
+			if (RecordId != null)
+			{
+				hash = hash * 59 + RecordId.GetHashCode();
+			}
+
+			if (SecurityGroupId != null)
+			{
+				hash = hash * 59 + SecurityGroupId.GetHashCode();
+			}
+
+			if (ShortDisplayName != null)
+			{
+				hash = hash * 59 + ShortDisplayName.GetHashCode();
+			}
+
+			if (UserCannotChangePassword != null)
+			{
+				hash = hash * 59 + UserCannotChangePassword.GetHashCode();
+			}
+
+			if (UserMustResetPasswordAtNextLogin != null)
+			{
+				hash = hash * 59 + UserMustResetPasswordAtNextLogin.GetHashCode();
+			}
+
+			return hash;
             }
         }
 
@@ -353,4 +406,3 @@ namespace Cherwell.Api.Model.Users
         }
     }
 
-}

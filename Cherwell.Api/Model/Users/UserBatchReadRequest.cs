@@ -24,7 +24,7 @@ namespace Cherwell.Api.Model.Users
         /// </summary>
         /// <param name="ReadRequests">ReadRequests.</param>
         /// <param name="StopOnError">StopOnError.</param>
-        public UserBatchReadRequest(List<UserReadRequest> ReadRequests = default, bool? StopOnError = default)
+        public UserBatchReadRequest(List<UserReadRequest> ReadRequests, bool? StopOnError)
         {
             this.ReadRequests = ReadRequests;
             this.StopOnError = StopOnError;

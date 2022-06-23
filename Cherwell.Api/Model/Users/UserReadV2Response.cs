@@ -322,7 +322,7 @@ namespace Cherwell.Api.Model.Users
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public UserReadV2Response(List<UserV2> Users = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
+        public UserReadV2Response(List<UserV2> Users, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
         {
             this.Users = Users;
             this.ErrorCode = ErrorCode;

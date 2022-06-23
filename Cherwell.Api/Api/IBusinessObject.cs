@@ -92,13 +92,13 @@ namespace Cherwell.Api
         Task<RelatedBusinessObjectResponse> DeleteRelatedBusinessObjectByRecId([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("lang")]string lang, [AliasAs("locale")]string locale);
 
         /// <summary>
-        /// Get lookup values for fields
+        /// Get lookup values for Fields
         /// </summary>
         /// <remarks>
-        /// Operation to get potentially valid values for Business Object fields.
+        /// Operation to get potentially valid values for Business Object Fields.
         /// </remarks>
         /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">Request object that specifies the Business Object and fields for which values are to be returned.</param>
+        /// <param name="request">Request object that specifies the Business Object and Fields for which values are to be returned.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of BusinessObjectFieldValuesLookupResponse</returns>
@@ -243,7 +243,7 @@ namespace Cherwell.Api
         /// Get a Business Object record
         /// </summary>
         /// <remarks>
-        /// Operation that returns a Business Object record that includes a list of fields and their record IDs, names, and set values.
+        /// Operation that returns a Business Object record that includes a list of Fields and their record IDs, names, and set values.
         /// </remarks>
         /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="busobid">Specify the Business Object ID.</param>
@@ -258,7 +258,7 @@ namespace Cherwell.Api
         /// Get a Business Object record
         /// </summary>
         /// <remarks>
-        /// Operation that returns a Business Object record that includes a list of fields and their record IDs, names, and set values.
+        /// Operation that returns a Business Object record that includes a list of Fields and their record IDs, names, and set values.
         /// </remarks>
         /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="busobid">Specify the Business Object ID.</param>
@@ -363,7 +363,7 @@ namespace Cherwell.Api
         /// Operation that returns a template to create Business Objects.  The template includes placeholders for field values. You can then send the template with these values to the Business Object Save operation.
         /// </remarks>
         /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">Specify the Business Object ID. Use true to include all required fields or all fields. Specify an optional fields list by adding field names in a comma-delimited list [\&quot;field1\&quot;, \&quot;field2\&quot;]. </param>
+        /// <param name="request">Specify the Business Object ID. Use true to include all required Fields or all Fields. Specify an optional Fields list by adding field names in a comma-delimited list [\&quot;field1\&quot;, \&quot;field2\&quot;]. </param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TemplateResponse</returns>
@@ -374,7 +374,7 @@ namespace Cherwell.Api
         /// Get related Business Objects using a request object
         /// </summary>
         /// <remarks>
-        /// Operation to get related Business Objects for a specific relationship. Specify a list of fields to include in the response. The order of parameter usage and overrides is: all fields set to true overrides default overrides;  custom grid overrides field list settings.
+        /// Operation to get related Business Objects for a specific relationship. Specify a list of Fields to include in the response. The order of parameter usage and overrides is: all Fields set to true overrides default overrides;  custom grid overrides field list settings.
         /// </remarks>
         /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relatedBusinessObjectRequest">Request object containing all the possible parameters to get related Business Objects.</param>
@@ -389,7 +389,7 @@ namespace Cherwell.Api
         /// Get related Business Objects by ID
         /// </summary>
         /// <remarks>
-        /// Operation to get the related objects for a Business Object relationship specifying all fields or default grid as the field to return.
+        /// Operation to get the related objects for a Business Object relationship specifying all Fields or default grid as the field to return.
         /// </remarks>
         /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentbusobid">Specify the Business Object ID for the parent Business Object.</param>
@@ -397,8 +397,8 @@ namespace Cherwell.Api
         /// <param name="relationshipid">Specify the Relationship ID for the related Business Object you want to return.</param>
         /// <param name="pageNumber">Specify the page number of the result set to return. (optional)</param>
         /// <param name="pageSize">Specify the number of rows to return per page. (optional)</param>
-        /// <param name="allfields">Flag to include all related Business Object fields.  Default is true if not supplied.  If true, then UseDefaultGrid is not used. (optional)</param>
-        /// <param name="usedefaultgrid">Flag to trigger the use of the related Business Objects default grid for the list of fields to return. (optional)</param>
+        /// <param name="allfields">Flag to include all related Business Object Fields.  Default is true if not supplied.  If true, then UseDefaultGrid is not used. (optional)</param>
+        /// <param name="usedefaultgrid">Flag to trigger the use of the related Business Objects default grid for the list of Fields to return. (optional)</param>
         /// <param name="includelinks">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
@@ -410,7 +410,7 @@ namespace Cherwell.Api
         /// Get related Business Objects custom grid
         /// </summary>
         /// <remarks>
-        /// Operation to get related Business Objects for a specific relationship. Specify a custom grid ID as the fields to return.
+        /// Operation to get related Business Objects for a specific relationship. Specify a custom grid ID as the Fields to return.
         /// </remarks>
         /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentbusobid">Specify the Business Object ID for the parent Business Object.</param>
@@ -589,7 +589,7 @@ namespace Cherwell.Api
         /// Operation that creates a new Business Object or updates an existing Business Object. To create, leave record ID and public ID empty. Upon creating or saving, a cache key is returned to use for subsequent requests. If the object is not found in the cache with said cache key, specify record ID or public ID to save and return a new cache key. Set persist &#x3D; true, to actually save the Business Object to disk, persist &#x3D; false will just cache it.
         /// </remarks>
         /// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">Specify a list of fields from a Business Object template. </param>
+        /// <param name="request">Specify a list of Fields from a Business Object template. </param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SaveResponse</returns>

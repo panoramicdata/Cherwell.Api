@@ -323,7 +323,7 @@ namespace Cherwell.Api.Model.Users
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public UserSaveV2Response(string BusObPublicId = default, string BusObRecId = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
+        public UserSaveV2Response(string BusObPublicId, string BusObRecId, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
         {
             this.BusObPublicId = BusObPublicId;
             this.BusObRecId = BusObRecId;

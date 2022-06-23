@@ -322,7 +322,7 @@ namespace Cherwell.Api.Model.Security
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SecurityRightCategoriesResponse(List<RightCategory> RightCategories = default(List<RightCategory>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public SecurityRightCategoriesResponse(List<RightCategory> RightCategories, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
         {
             this.RightCategories = RightCategories;
             this.ErrorCode = ErrorCode;

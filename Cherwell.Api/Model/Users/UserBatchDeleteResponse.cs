@@ -23,7 +23,7 @@ namespace Cherwell.Api.Model.Users
         /// Initializes a new instance of the <see cref="UserBatchDeleteResponse" /> class.
         /// </summary>
         /// <param name="Responses">Responses.</param>
-        public UserBatchDeleteResponse(List<UserDeleteResponse> Responses = default)
+        public UserBatchDeleteResponse(List<UserDeleteResponse> Responses)
         {
             this.Responses = Responses;
         }

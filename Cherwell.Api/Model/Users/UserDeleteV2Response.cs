@@ -322,7 +322,7 @@ namespace Cherwell.Api.Model.Users
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public UserDeleteV2Response(string UserRecordId = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
+        public UserDeleteV2Response(string UserRecordId, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
         {
             this.UserRecordId = UserRecordId;
             this.ErrorCode = ErrorCode;

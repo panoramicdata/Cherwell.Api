@@ -38,7 +38,7 @@ namespace Cherwell.Api.Model.Security
         /// <param name="RightName">RightName.</param>
         /// <param name="StandardRightName">StandardRightName.</param>
         /// <param name="ViewRunOpen">ViewRunOpen.</param>
-        public Right(bool? Add = default(bool?), bool? Allow = default(bool?), string CategoryDescription = default, string CategoryId = default, string CategoryName = default, bool? Delete = default(bool?), bool? Edit = default(bool?), bool? IsYesNoRight = default(bool?), bool? NonScopeOwnerAdd = default(bool?), bool? NonScopeOwnerDelete = default(bool?), bool? NonScopeOwnerEdit = default(bool?), bool? NonScopeOwnerView = default(bool?), string RightId = default, string RightName = default, string StandardRightName = default, bool? ViewRunOpen = default(bool?))
+        public Right(bool? Add, bool? Allow, string CategoryDescription, string CategoryId, string CategoryName, bool? Delete, bool? Edit, bool? IsYesNoRight, bool? NonScopeOwnerAdd, bool? NonScopeOwnerDelete, bool? NonScopeOwnerEdit, bool? NonScopeOwnerView, string RightId, string RightName, string StandardRightName, bool? ViewRunOpen)
         {
             this.Add = Add;
             this.Allow = Allow;

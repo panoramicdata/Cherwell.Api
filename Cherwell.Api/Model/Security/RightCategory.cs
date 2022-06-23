@@ -25,7 +25,7 @@ namespace Cherwell.Api.Model.Security
         /// <param name="CategoryDescription">CategoryDescription.</param>
         /// <param name="CategoryId">CategoryId.</param>
         /// <param name="CategoryName">CategoryName.</param>
-        public RightCategory(string CategoryDescription = default, string CategoryId = default, string CategoryName = default)
+        public RightCategory(string CategoryDescription, string CategoryId, string CategoryName)
         {
             this.CategoryDescription = CategoryDescription;
             this.CategoryId = CategoryId;
