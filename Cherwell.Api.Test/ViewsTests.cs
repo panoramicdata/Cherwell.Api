@@ -16,7 +16,7 @@ public class ViewsTests : CherwellClientTest
 		// Get a list of views from Cherwell
 		var views = await TestCherwellClient
 		   .Core
-		   .GetViewsAsync("", "", "")
+		   .GetViewsAsync()
 		   .ConfigureAwait(false);
 
 		views.Should().NotBeNull();

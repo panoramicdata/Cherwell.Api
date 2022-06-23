@@ -36,55 +36,55 @@ public partial class CherwellClient : IDisposable
 			BaseAddress = new Uri(options.BaseAddress!)
 		};
 
-		Approval = RestService.For<IApprovalApi>(_httpClient);
-		BusinessObject = RestService.For<IBusinessObjectApi>(_httpClient);
-		Core = RestService.For<ICoreApi>(_httpClient);
-		Forms = RestService.For<IFormsApi>(_httpClient);
-		Lifecycle = RestService.For<ILifecycleApi>(_httpClient);
-		OneStepActions = RestService.For<IOneStepActionsApi>(_httpClient);
-		Queues = RestService.For<IQueuesApi>(_httpClient);
-		Searches = RestService.For<ISearchesApi>(_httpClient);
-		Security = RestService.For<ISecurityApi>(_httpClient);
-		Service = RestService.For<IServiceApi>(_httpClient);
-		Teams = RestService.For<ITeamsApi>(_httpClient);
-		Users = RestService.For<IUsersApi>(_httpClient);
+		Approval = RestService.For<IApproval>(_httpClient);
+		BusinessObject = RestService.For<IBusinessObject>(_httpClient);
+		Core = RestService.For<ICore>(_httpClient);
+		Forms = RestService.For<IForms>(_httpClient);
+		Lifecycle = RestService.For<ILifecycle>(_httpClient);
+		OneStepActions = RestService.For<IOneStepActions>(_httpClient);
+		Queues = RestService.For<IQueues>(_httpClient);
+		Searches = RestService.For<ISearches>(_httpClient);
+		Security = RestService.For<ISecurity>(_httpClient);
+		Service = RestService.For<IService>(_httpClient);
+		Teams = RestService.For<ITeams>(_httpClient);
+		Users = RestService.For<IUsers>(_httpClient);
 	}
 
 	/// <inheritdoc />
-	public IApprovalApi Approval { get; }
+	public IApproval Approval { get; }
 
 	/// <inheritdoc />
-	public IBusinessObjectApi BusinessObject { get; }
+	public IBusinessObject BusinessObject { get; }
 
 	/// <inheritdoc />
-	public ICoreApi Core { get; }
+	public ICore Core { get; }
 
 	/// <inheritdoc />
-	public IFormsApi Forms { get; }
+	public IForms Forms { get; }
 
 	/// <inheritdoc />
-	public ILifecycleApi Lifecycle { get; }
+	public ILifecycle Lifecycle { get; }
 
 	/// <inheritdoc />
-	public IOneStepActionsApi OneStepActions { get; }
+	public IOneStepActions OneStepActions { get; }
 
 	/// <inheritdoc />
-	public IQueuesApi Queues { get; }
+	public IQueues Queues { get; }
 
 	/// <inheritdoc />
-	public ISearchesApi Searches { get; }
+	public ISearches Searches { get; }
 
 	/// <inheritdoc />
-	public ISecurityApi Security { get; }
+	public ISecurity Security { get; }
 
 	/// <inheritdoc />
-	public IServiceApi Service { get; }
+	public IService Service { get; }
 
 	/// <inheritdoc />
-	public ITeamsApi Teams { get; }
+	public ITeams Teams { get; }
 
 	/// <inheritdoc />
-	public IUsersApi Users { get; }
+	public IUsers Users { get; }
 
 	#region Dispose
 

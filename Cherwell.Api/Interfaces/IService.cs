@@ -5,7 +5,7 @@ namespace Cherwell.Api.Interfaces;
 /// <summary>
 /// Represents a collection of functions to interact with the API endpoints
 /// </summary>
-public interface IServiceApi
+public interface IService
 {
 	#region Asynchronous Operations
 
@@ -20,7 +20,7 @@ public interface IServiceApi
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CoreServiceInfoResponse</returns>
 	[Get("/api/V1/serviceinfo")]
-	Task<ServiceInfoResponse> GetServiceInfoAsync([Header("UserAgent")] string userAgent, [AliasAs("lang")] string lang, [AliasAs("locale")] string locale);
+	Task<ServiceInfoResponse> GetServiceInfoAsync([AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Log out user by token
@@ -33,7 +33,7 @@ public interface IServiceApi
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of void</returns>
 	[Delete("/api/V1/logout")]
-	Task LogoutUserAsync([Header("UserAgent")] string userAgent, [AliasAs("lang")] string lang, [AliasAs("locale")] string locale);
+	Task LogoutUserAsync([AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get an access token
@@ -52,6 +52,6 @@ public interface IServiceApi
 	/// <param name="site_name">If for portal specify the Site name to use for requesting an access token. (optional)</param>
 	/// <returns>Task of TokenResponse</returns>
 	[Post("/token")]
-	Task<TokenResponse> TokenAsync([Header("UserAgent")] string userAgent, string grantType, string clientId, string clientSecret, string username, string password, string refreshToken, [AliasAs("auth_mode")] string authMode, [AliasAs("site_name")] string? siteName = null);
+	Task<TokenResponse> TokenAsync(string grantType, string clientId, string clientSecret, string username, string password, string refreshToken, [AliasAs("auth_mode")] string authMode, [AliasAs("site_name")] string? siteName = null, CancellationToken cancellationToken = default);
 	#endregion Asynchronous Operations
 }
