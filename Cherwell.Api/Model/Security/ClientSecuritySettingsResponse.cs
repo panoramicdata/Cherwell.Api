@@ -14,19 +14,19 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Security
 {
     /// <summary>
-    /// SecurityClientSecuritySettingsResponse
+    /// ClientSecuritySettingsResponse
     /// </summary>
     [DataContract]
-    public partial class SecurityClientSecuritySettingsResponse : IEquatable<SecurityClientSecuritySettingsResponse>, IValidatableObject
+    public partial class ClientSecuritySettingsResponse : IEquatable<ClientSecuritySettingsResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecurityClientSecuritySettingsResponse" /> class.
+        /// Initializes a new instance of the <see cref="ClientSecuritySettingsResponse" /> class.
         /// </summary>
         /// <param name="InternalLoginAllowed">InternalLoginAllowed.</param>
         /// <param name="LdapLoginAllowed">LdapLoginAllowed.</param>
         /// <param name="SamlLoginAllowed">SamlLoginAllowed.</param>
         /// <param name="WindowsLoginAllowed">WindowsLoginAllowed.</param>
-        public SecurityClientSecuritySettingsResponse(bool? InternalLoginAllowed = default(bool?), bool? LdapLoginAllowed = default(bool?), bool? SamlLoginAllowed = default(bool?), bool? WindowsLoginAllowed = default(bool?))
+        public ClientSecuritySettingsResponse(bool? InternalLoginAllowed = default(bool?), bool? LdapLoginAllowed = default(bool?), bool? SamlLoginAllowed = default(bool?), bool? WindowsLoginAllowed = default(bool?))
         {
             this.InternalLoginAllowed = InternalLoginAllowed;
             this.LdapLoginAllowed = LdapLoginAllowed;
@@ -87,15 +87,15 @@ namespace Cherwell.Api.Model.Security
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SecurityClientSecuritySettingsResponse);
+            return this.Equals(obj as ClientSecuritySettingsResponse);
         }
 
         /// <summary>
-        /// Returns true if SecurityClientSecuritySettingsResponse instances are equal
+        /// Returns true if ClientSecuritySettingsResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of SecurityClientSecuritySettingsResponse to be compared</param>
+        /// <param name="other">Instance of ClientSecuritySettingsResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecurityClientSecuritySettingsResponse? other)
+        public bool Equals(ClientSecuritySettingsResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

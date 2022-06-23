@@ -17,10 +17,10 @@ namespace Cherwell.Api.Model.Forms
     /// FormsSection
     /// </summary>
     [DataContract]
-    public partial class FormsSection : IEquatable<FormsSection>, IValidatableObject
+    public partial class Section : IEquatable<Section>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="FormsSection" /> class.
+        /// Initializes a new instance of the <see cref="Section" /> class.
         /// </summary>
         /// <param name="SectionFields">SectionFields.</param>
         /// <param name="GalleryImage">GalleryImage.</param>
@@ -28,7 +28,7 @@ namespace Cherwell.Api.Model.Forms
         /// <param name="RelationshipId">RelationshipId.</param>
         /// <param name="TargetBusObId">TargetBusObId.</param>
         /// <param name="TargetBusObRecId">TargetBusObRecId.</param>
-        public FormsSection(List<FormsSectionField> SectionFields = default(List<FormsSectionField>), string GalleryImage = default, string Title = default, string RelationshipId = default, string TargetBusObId = default, string TargetBusObRecId = default)
+        public Section(List<SectionField> SectionFields = default(List<SectionField>), string GalleryImage = default, string Title = default, string RelationshipId = default, string TargetBusObId = default, string TargetBusObRecId = default)
         {
             this.SectionFields = SectionFields;
             this.GalleryImage = GalleryImage;
@@ -42,7 +42,7 @@ namespace Cherwell.Api.Model.Forms
         /// Gets or Sets SectionFields
         /// </summary>
         [DataMember(Name = "sectionFields", EmitDefaultValue = false)]
-        public List<FormsSectionField> SectionFields { get; set; }
+        public List<SectionField> SectionFields { get; set; }
         /// <summary>
         /// Gets or Sets GalleryImage
         /// </summary>
@@ -103,7 +103,7 @@ namespace Cherwell.Api.Model.Forms
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as FormsSection);
+            return this.Equals(obj as Section);
         }
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace Cherwell.Api.Model.Forms
         /// </summary>
         /// <param name="other">Instance of FormsSection to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(FormsSection? other)
+        public bool Equals(Section? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

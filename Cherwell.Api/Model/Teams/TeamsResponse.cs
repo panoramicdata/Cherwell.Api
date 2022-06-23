@@ -14,19 +14,19 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Teams
 {
     /// <summary>
-    /// TeamsTeamsResponse
+    /// TeamsResponse
     /// </summary>
     [DataContract]
-    public partial class TeamsTeamsResponse :  IEquatable<TeamsTeamsResponse>, IValidatableObject
+    public partial class TeamsResponse :  IEquatable<TeamsResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TeamsTeamsResponse" /> class.
+        /// Initializes a new instance of the <see cref="TeamsResponse" /> class.
         /// </summary>
         /// <param name="Error">Error.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="Teams">Teams.</param>
-        public TeamsTeamsResponse(string Error = default, string ErrorCode = default, bool? HasError = default(bool?), List<TeamsTeam> Teams = default(List<TeamsTeam>))
+        public TeamsResponse(string Error = default, string ErrorCode = default, bool? HasError = default(bool?), List<Team> Teams = default(List<Team>))
         {
             this.Error = Error;
             this.ErrorCode = ErrorCode;
@@ -53,7 +53,7 @@ namespace Cherwell.Api.Model.Teams
         /// Gets or Sets Teams
         /// </summary>
         [DataMember(Name="teams", EmitDefaultValue=false)]
-        public List<TeamsTeam> Teams { get; set; }
+        public List<Team> Teams { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -87,15 +87,15 @@ namespace Cherwell.Api.Model.Teams
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TeamsTeamsResponse);
+            return this.Equals(obj as TeamsResponse);
         }
 
         /// <summary>
-        /// Returns true if TeamsTeamsResponse instances are equal
+        /// Returns true if TeamsResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TeamsTeamsResponse to be compared</param>
+        /// <param name="other">Instance of TeamsResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsTeamsResponse? other)
+        public bool Equals(TeamsResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

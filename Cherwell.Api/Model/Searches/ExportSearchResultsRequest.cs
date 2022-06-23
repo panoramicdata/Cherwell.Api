@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesExportSearchResultsRequest
     /// </summary>
     [DataContract]
-    public partial class SearchesExportSearchResultsRequest : IEquatable<SearchesExportSearchResultsRequest>, IValidatableObject
+    public partial class ExportSearchResultsRequest : IEquatable<ExportSearchResultsRequest>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets ExportFormat
@@ -69,7 +69,7 @@ namespace Cherwell.Api.Model.Searches
         [DataMember(Name = "exportFormat", EmitDefaultValue = false)]
         public EnumExportFormat? ExportFormat { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesExportSearchResultsRequest" /> class.
+        /// Initializes a new instance of the <see cref="ExportSearchResultsRequest" /> class.
         /// </summary>
         /// <param name="CustomSeparator">CustomSeparator.</param>
         /// <param name="ExportFormat">ExportFormat.</param>
@@ -93,7 +93,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="SearchText">SearchText.</param>
         /// <param name="Sorting">Sorting.</param>
         /// <param name="PromptValues">PromptValues.</param>
-        public SearchesExportSearchResultsRequest(string CustomSeparator = default, EnumExportFormat? ExportFormat = default(EnumExportFormat?), string ExportTitle = default, string Association = default, string AssociationName = default, string BusObId = default, string CustomGridDefId = default, string DateTimeFormatting = default, string FieldId = default, List<string> Fields = default(List<string>), List<SearchesFilterInfo> Filters = default(List<SearchesFilterInfo>), bool? IncludeAllFields = default(bool?), bool? IncludeSchema = default(bool?), int? PageNumber = default(int?), int? PageSize = default(int?), string Scope = default, string ScopeOwner = default, string SearchId = default, string SearchName = default, string SearchText = default, List<SearchesSortInfo> Sorting = default(List<SearchesSortInfo>), List<PromptValue> PromptValues = default(List<PromptValue>))
+        public ExportSearchResultsRequest(string CustomSeparator = default, EnumExportFormat? ExportFormat = default(EnumExportFormat?), string ExportTitle = default, string Association = default, string AssociationName = default, string BusObId = default, string CustomGridDefId = default, string DateTimeFormatting = default, string FieldId = default, List<string> Fields = default(List<string>), List<FilterInfo> Filters = default(List<FilterInfo>), bool? IncludeAllFields = default(bool?), bool? IncludeSchema = default(bool?), int? PageNumber = default(int?), int? PageSize = default(int?), string Scope = default, string ScopeOwner = default, string SearchId = default, string SearchName = default, string SearchText = default, List<SortInfo> Sorting = default(List<SortInfo>), List<PromptValue> PromptValues = default(List<PromptValue>))
         {
             this.CustomSeparator = CustomSeparator;
             this.ExportFormat = ExportFormat;
@@ -168,7 +168,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets Filters
         /// </summary>
         [DataMember(Name = "filters", EmitDefaultValue = false)]
-        public List<SearchesFilterInfo> Filters { get; set; }
+        public List<FilterInfo> Filters { get; set; }
         /// <summary>
         /// Gets or Sets IncludeAllFields
         /// </summary>
@@ -218,7 +218,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets Sorting
         /// </summary>
         [DataMember(Name = "sorting", EmitDefaultValue = false)]
-        public List<SearchesSortInfo> Sorting { get; set; }
+        public List<SortInfo> Sorting { get; set; }
         /// <summary>
         /// Gets or Sets PromptValues
         /// </summary>
@@ -275,7 +275,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesExportSearchResultsRequest);
+            return this.Equals(obj as ExportSearchResultsRequest);
         }
 
         /// <summary>
@@ -283,7 +283,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesExportSearchResultsRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesExportSearchResultsRequest? other)
+        public bool Equals(ExportSearchResultsRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

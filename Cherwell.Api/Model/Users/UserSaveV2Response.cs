@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Users
 {
     /// <summary>
-    /// UsersUserSaveV2Response
+    /// UserSaveV2Response
     /// </summary>
     [DataContract]
-    public partial class UsersUserSaveV2Response : IEquatable<UsersUserSaveV2Response>, IValidatableObject
+    public partial class UserSaveV2Response : IEquatable<UserSaveV2Response>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Api.Model.Users
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsersUserSaveV2Response" /> class.
+        /// Initializes a new instance of the <see cref="UserSaveV2Response" /> class.
         /// </summary>
         /// <param name="BusObPublicId">BusObPublicId.</param>
         /// <param name="BusObRecId">BusObRecId.</param>
@@ -323,7 +323,7 @@ namespace Cherwell.Api.Model.Users
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public UsersUserSaveV2Response(string BusObPublicId = default, string BusObRecId = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
+        public UserSaveV2Response(string BusObPublicId = default, string BusObRecId = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
         {
             this.BusObPublicId = BusObPublicId;
             this.BusObRecId = BusObRecId;
@@ -365,7 +365,7 @@ namespace Cherwell.Api.Model.Users
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UsersUserSaveV2Response {\n");
+            sb.Append("class UserSaveV2Response {\n");
             sb.Append("  BusObPublicId: ").Append(BusObPublicId).Append('\n');
             sb.Append("  BusObRecId: ").Append(BusObRecId).Append('\n');
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
@@ -393,15 +393,15 @@ namespace Cherwell.Api.Model.Users
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return Equals(obj as UsersUserSaveV2Response);
+            return Equals(obj as UserSaveV2Response);
         }
 
         /// <summary>
-        /// Returns true if UsersUserSaveV2Response instances are equal
+        /// Returns true if UserSaveV2Response instances are equal
         /// </summary>
-        /// <param name="other">Instance of UsersUserSaveV2Response to be compared</param>
+        /// <param name="other">Instance of UserSaveV2Response to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUserSaveV2Response? other)
+        public bool Equals(UserSaveV2Response? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

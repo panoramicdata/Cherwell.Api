@@ -14,19 +14,19 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Users
 {
     /// <summary>
-    /// UsersUserDeleteResponse
+    /// UserDeleteResponse
     /// </summary>
     [DataContract]
-    public partial class UsersUserDeleteResponse : IEquatable<UsersUserDeleteResponse>, IValidatableObject
+    public partial class UserDeleteResponse : IEquatable<UserDeleteResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsersUserDeleteResponse" /> class.
+        /// Initializes a new instance of the <see cref="UserDeleteResponse" /> class.
         /// </summary>
         /// <param name="Error">Error.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="Users">Users.</param>
-        public UsersUserDeleteResponse(string Error = default, string ErrorCode = default, bool? HasError = default, List<UsersUser> Users = default)
+        public UserDeleteResponse(string Error = default, string ErrorCode = default, bool? HasError = default, List<User> Users = default)
         {
             this.Error = Error;
             this.ErrorCode = ErrorCode;
@@ -53,7 +53,7 @@ namespace Cherwell.Api.Model.Users
         /// Gets or Sets Users
         /// </summary>
         [DataMember(Name = "users", EmitDefaultValue = false)]
-        public List<UsersUser> Users { get; set; }
+        public List<User> Users { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -61,7 +61,7 @@ namespace Cherwell.Api.Model.Users
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UsersUserDeleteResponse {\n");
+            sb.Append("class UserDeleteResponse {\n");
             sb.Append("  Error: ").Append(Error).Append('\n');
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
             sb.Append("  HasError: ").Append(HasError).Append('\n');
@@ -87,15 +87,15 @@ namespace Cherwell.Api.Model.Users
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return Equals(obj as UsersUserDeleteResponse);
+            return Equals(obj as UserDeleteResponse);
         }
 
         /// <summary>
-        /// Returns true if UsersUserDeleteResponse instances are equal
+        /// Returns true if UserDeleteResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of UsersUserDeleteResponse to be compared</param>
+        /// <param name="other">Instance of UserDeleteResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUserDeleteResponse? other)
+        public bool Equals(UserDeleteResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

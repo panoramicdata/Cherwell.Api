@@ -14,17 +14,17 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Users
 {
     /// <summary>
-    /// UsersUserBatchSaveV2Request
+    /// UserBatchSaveV2Request
     /// </summary>
     [DataContract]
-    public partial class UsersUserBatchSaveV2Request : IEquatable<UsersUserBatchSaveV2Request>, IValidatableObject
+    public partial class UserBatchSaveV2Request : IEquatable<UserBatchSaveV2Request>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsersUserBatchSaveV2Request" /> class.
+        /// Initializes a new instance of the <see cref="UserBatchSaveV2Request" /> class.
         /// </summary>
         /// <param name="SaveRequests">SaveRequests.</param>
         /// <param name="StopOnError">StopOnError.</param>
-        public UsersUserBatchSaveV2Request(List<UsersUserSaveV2Request> SaveRequests = default, bool? StopOnError = default)
+        public UserBatchSaveV2Request(List<UserSaveV2Request> SaveRequests = default, bool? StopOnError = default)
         {
             this.SaveRequests = SaveRequests;
             this.StopOnError = StopOnError;
@@ -34,7 +34,7 @@ namespace Cherwell.Api.Model.Users
         /// Gets or Sets SaveRequests
         /// </summary>
         [DataMember(Name = "saveRequests", EmitDefaultValue = false)]
-        public List<UsersUserSaveV2Request> SaveRequests { get; set; }
+        public List<UserSaveV2Request> SaveRequests { get; set; }
         /// <summary>
         /// Gets or Sets StopOnError
         /// </summary>
@@ -47,7 +47,7 @@ namespace Cherwell.Api.Model.Users
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UsersUserBatchSaveV2Request {\n");
+            sb.Append("class UserBatchSaveV2Request {\n");
             sb.Append("  SaveRequests: ").Append(SaveRequests).Append('\n');
             sb.Append("  StopOnError: ").Append(StopOnError).Append('\n');
             sb.Append("}\n");
@@ -71,15 +71,15 @@ namespace Cherwell.Api.Model.Users
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return Equals(obj as UsersUserBatchSaveV2Request);
+            return Equals(obj as UserBatchSaveV2Request);
         }
 
         /// <summary>
-        /// Returns true if UsersUserBatchSaveV2Request instances are equal
+        /// Returns true if UserBatchSaveV2Request instances are equal
         /// </summary>
-        /// <param name="other">Instance of UsersUserBatchSaveV2Request to be compared</param>
+        /// <param name="other">Instance of UserBatchSaveV2Request to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUserBatchSaveV2Request? other)
+        public bool Equals(UserBatchSaveV2Request? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

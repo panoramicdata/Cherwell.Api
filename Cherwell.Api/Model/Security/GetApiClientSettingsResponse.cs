@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Security
 {
     /// <summary>
-    /// SecurityGetApiClientSettingsResponse
+    /// GetApiClientSettingsResponse
     /// </summary>
     [DataContract]
-    public partial class SecurityGetApiClientSettingsResponse : IEquatable<SecurityGetApiClientSettingsResponse>, IValidatableObject
+    public partial class GetApiClientSettingsResponse : IEquatable<GetApiClientSettingsResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Api.Model.Security
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecurityGetApiClientSettingsResponse" /> class.
+        /// Initializes a new instance of the <see cref="GetApiClientSettingsResponse" /> class.
         /// </summary>
         /// <param name="Settings">Settings.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SecurityGetApiClientSettingsResponse(List<SecurityGetApiClientSettingsResponseItem> Settings = default(List<SecurityGetApiClientSettingsResponseItem>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public GetApiClientSettingsResponse(List<GetApiClientSettingsResponseItem> Settings = default(List<GetApiClientSettingsResponseItem>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Settings = Settings;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Api.Model.Security
         /// Gets or Sets Settings
         /// </summary>
         [DataMember(Name = "settings", EmitDefaultValue = false)]
-        public List<SecurityGetApiClientSettingsResponseItem> Settings { get; set; }
+        public List<GetApiClientSettingsResponseItem> Settings { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -385,15 +385,15 @@ namespace Cherwell.Api.Model.Security
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SecurityGetApiClientSettingsResponse);
+            return this.Equals(obj as GetApiClientSettingsResponse);
         }
 
         /// <summary>
-        /// Returns true if SecurityGetApiClientSettingsResponse instances are equal
+        /// Returns true if GetApiClientSettingsResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of SecurityGetApiClientSettingsResponse to be compared</param>
+        /// <param name="other">Instance of GetApiClientSettingsResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecurityGetApiClientSettingsResponse? other)
+        public bool Equals(GetApiClientSettingsResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -17,10 +17,10 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesRelatedBusinessObjectResponse
     /// </summary>
     [DataContract]
-    public partial class SearchesRelatedBusinessObjectResponse : IEquatable<SearchesRelatedBusinessObjectResponse>, IValidatableObject
+    public partial class RelatedBusinessObjectResponse : IEquatable<RelatedBusinessObjectResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesRelatedBusinessObjectResponse" /> class.
+        /// Initializes a new instance of the <see cref="RelatedBusinessObjectResponse" /> class.
         /// </summary>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
@@ -34,7 +34,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="RelatedBusinessObjects">RelatedBusinessObjects.</param>
         /// <param name="RelationshipId">RelationshipId.</param>
         /// <param name="TotalRecords">TotalRecords.</param>
-        public SearchesRelatedBusinessObjectResponse(string ErrorCode = default,
+        public RelatedBusinessObjectResponse(string ErrorCode = default,
             string ErrorMessage = default,
             bool? HasError = default,
             List<Link> Links = default,
@@ -162,7 +162,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesRelatedBusinessObjectResponse);
+            return this.Equals(obj as RelatedBusinessObjectResponse);
         }
 
         /// <summary>
@@ -170,7 +170,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesRelatedBusinessObjectResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesRelatedBusinessObjectResponse? other)
+        public bool Equals(RelatedBusinessObjectResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

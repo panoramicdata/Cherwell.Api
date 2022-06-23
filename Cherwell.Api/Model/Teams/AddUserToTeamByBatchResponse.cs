@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Teams
 {
     /// <summary>
-    /// TeamsAddUserToTeamByBatchResponse
+    /// AddUserToTeamByBatchResponse
     /// </summary>
     [DataContract]
-    public partial class TeamsAddUserToTeamByBatchResponse :  IEquatable<TeamsAddUserToTeamByBatchResponse>, IValidatableObject
+    public partial class AddUserToTeamByBatchResponse :  IEquatable<AddUserToTeamByBatchResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Api.Model.Teams
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TeamsAddUserToTeamByBatchResponse" /> class.
+        /// Initializes a new instance of the <see cref="AddUserToTeamByBatchResponse" /> class.
         /// </summary>
         /// <param name="Responses">Responses.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TeamsAddUserToTeamByBatchResponse(List<TeamsAddUserToTeamResponse> Responses = default(List<TeamsAddUserToTeamResponse>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public AddUserToTeamByBatchResponse(List<AddUserToTeamResponse> Responses = default(List<AddUserToTeamResponse>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Responses = Responses;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Api.Model.Teams
         /// Gets or Sets Responses
         /// </summary>
         [DataMember(Name="responses", EmitDefaultValue=false)]
-        public List<TeamsAddUserToTeamResponse> Responses { get; set; }
+        public List<AddUserToTeamResponse> Responses { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -385,15 +385,15 @@ namespace Cherwell.Api.Model.Teams
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TeamsAddUserToTeamByBatchResponse);
+            return this.Equals(obj as AddUserToTeamByBatchResponse);
         }
 
         /// <summary>
-        /// Returns true if TeamsAddUserToTeamByBatchResponse instances are equal
+        /// Returns true if AddUserToTeamByBatchResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TeamsAddUserToTeamByBatchResponse to be compared</param>
+        /// <param name="other">Instance of AddUserToTeamByBatchResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsAddUserToTeamByBatchResponse? other)
+        public bool Equals(AddUserToTeamByBatchResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Users
 {
     /// <summary>
-    /// UsersUserBatchReadResponse
+    /// UserBatchReadResponse
     /// </summary>
     [DataContract]
-    public partial class UsersUserBatchReadResponse : IEquatable<UsersUserBatchReadResponse>, IValidatableObject
+    public partial class UserBatchReadResponse : IEquatable<UserBatchReadResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Api.Model.Users
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsersUserBatchReadResponse" /> class.
+        /// Initializes a new instance of the <see cref="UserBatchReadResponse" /> class.
         /// </summary>
         /// <param name="Responses">Responses.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public UsersUserBatchReadResponse(List<UsersUserReadV2Response> Responses = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
+        public UserBatchReadResponse(List<UserReadV2Response> Responses = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
         {
             this.Responses = Responses;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Api.Model.Users
         /// Gets or Sets Responses
         /// </summary>
         [DataMember(Name = "responses", EmitDefaultValue = false)]
-        public List<UsersUserReadV2Response> Responses { get; set; }
+        public List<UserReadV2Response> Responses { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -358,7 +358,7 @@ namespace Cherwell.Api.Model.Users
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UsersUserBatchReadResponse {\n");
+            sb.Append("class UserBatchReadResponse {\n");
             sb.Append("  Responses: ").Append(Responses).Append('\n');
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append('\n');
@@ -385,15 +385,15 @@ namespace Cherwell.Api.Model.Users
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return Equals(obj as UsersUserBatchReadResponse);
+            return Equals(obj as UserBatchReadResponse);
         }
 
         /// <summary>
-        /// Returns true if UsersUserBatchReadResponse instances are equal
+        /// Returns true if UserBatchReadResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of UsersUserBatchReadResponse to be compared</param>
+        /// <param name="other">Instance of UserBatchReadResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUserBatchReadResponse? other)
+        public bool Equals(UserBatchReadResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

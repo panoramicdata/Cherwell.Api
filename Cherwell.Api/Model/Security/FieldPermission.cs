@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Security
 {
     /// <summary>
-    /// PermissionSecurityField
+    /// FieldPermissiond
     /// </summary>
     [DataContract]
-    public partial class PermissionSecurityField : IEquatable<PermissionSecurityField>, IValidatableObject
+    public partial class FieldPermissiond : IEquatable<FieldPermissiond>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PermissionSecurityField" /> class.
+        /// Initializes a new instance of the <see cref="FieldPermissiond" /> class.
         /// </summary>
         /// <param name="DepartmentMemberEdit">DepartmentMemberEdit.</param>
         /// <param name="DepartmentMemberView">DepartmentMemberView.</param>
@@ -36,7 +36,7 @@ namespace Cherwell.Api.Model.Security
         /// <param name="TeamManagerOfOwnerView">TeamManagerOfOwnerView.</param>
         /// <param name="TeamView">TeamView.</param>
         /// <param name="View">View.</param>
-        public PermissionSecurityField(bool? DepartmentMemberEdit = default(bool?), bool? DepartmentMemberView = default(bool?), bool? Edit = default(bool?), string FieldId = default, string FieldName = default, bool? ManagerOfOwnerEdit = default(bool?), bool? ManagerOfOwnerView = default(bool?), bool? OwnerEdit = default(bool?), bool? OwnerView = default(bool?), bool? TeamEdit = default(bool?), bool? TeamManagerOfOwnerEdit = default(bool?), bool? TeamManagerOfOwnerView = default(bool?), bool? TeamView = default(bool?), bool? View = default(bool?))
+        public FieldPermissiond(bool? DepartmentMemberEdit = default(bool?), bool? DepartmentMemberView = default(bool?), bool? Edit = default(bool?), string FieldId = default, string FieldName = default, bool? ManagerOfOwnerEdit = default(bool?), bool? ManagerOfOwnerView = default(bool?), bool? OwnerEdit = default(bool?), bool? OwnerView = default(bool?), bool? TeamEdit = default(bool?), bool? TeamManagerOfOwnerEdit = default(bool?), bool? TeamManagerOfOwnerView = default(bool?), bool? TeamView = default(bool?), bool? View = default(bool?))
         {
             this.DepartmentMemberEdit = DepartmentMemberEdit;
             this.DepartmentMemberView = DepartmentMemberView;
@@ -167,15 +167,15 @@ namespace Cherwell.Api.Model.Security
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as PermissionSecurityField);
+            return this.Equals(obj as FieldPermissiond);
         }
 
         /// <summary>
-        /// Returns true if PermissionSecurityField instances are equal
+        /// Returns true if FieldPermissiond instances are equal
         /// </summary>
-        /// <param name="other">Instance of PermissionSecurityField to be compared</param>
+        /// <param name="other">Instance of FieldPermissiond to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PermissionSecurityField? other)
+        public bool Equals(FieldPermissiond? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

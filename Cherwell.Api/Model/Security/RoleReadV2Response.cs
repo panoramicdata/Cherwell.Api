@@ -11,13 +11,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Api.Model
+namespace Cherwell.Api.Model.Security
 {
     /// <summary>
-    /// SecurityRoleReadV2Response
+    /// RoleReadV2Response
     /// </summary>
     [DataContract]
-    public partial class SecurityRoleReadV2Response :  IEquatable<SecurityRoleReadV2Response>, IValidatableObject
+    public partial class RoleReadV2Response :  IEquatable<RoleReadV2Response>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Api.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecurityRoleReadV2Response" /> class.
+        /// Initializes a new instance of the <see cref="RoleReadV2Response" /> class.
         /// </summary>
         /// <param name="Roles">Roles.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SecurityRoleReadV2Response(List<SecurityRole> Roles = default(List<SecurityRole>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public RoleReadV2Response(List<Role> Roles = default(List<Role>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Roles = Roles;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Api.Model
         /// Gets or Sets Roles
         /// </summary>
         [DataMember(Name="roles", EmitDefaultValue=false)]
-        public List<SecurityRole> Roles { get; set; }
+        public List<Role> Roles { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -385,15 +385,15 @@ namespace Cherwell.Api.Model
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SecurityRoleReadV2Response);
+            return this.Equals(obj as RoleReadV2Response);
         }
 
         /// <summary>
-        /// Returns true if SecurityRoleReadV2Response instances are equal
+        /// Returns true if RoleReadV2Response instances are equal
         /// </summary>
-        /// <param name="other">Instance of SecurityRoleReadV2Response to be compared</param>
+        /// <param name="other">Instance of RoleReadV2Response to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecurityRoleReadV2Response? other)
+        public bool Equals(RoleReadV2Response? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

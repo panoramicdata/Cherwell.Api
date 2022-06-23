@@ -11,16 +11,16 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Api.Model
+namespace Cherwell.Api.Model.Security
 {
     /// <summary>
-    /// SecuritySaveApiClientSettingRequest
+    /// SaveApiClientSettingRequest
     /// </summary>
     [DataContract]
-    public partial class SecuritySaveApiClientSettingRequest :  IEquatable<SecuritySaveApiClientSettingRequest>, IValidatableObject
+    public partial class SaveApiClientSettingRequest :  IEquatable<SaveApiClientSettingRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecuritySaveApiClientSettingRequest" /> class.
+        /// Initializes a new instance of the <see cref="SaveApiClientSettingRequest" /> class.
         /// </summary>
         /// <param name="AllowAnonymousAccess">AllowAnonymousAccess.</param>
         /// <param name="ApiAccessIsEnabled">ApiAccessIsEnabled.</param>
@@ -31,7 +31,7 @@ namespace Cherwell.Api.Model
         /// <param name="RefreshTokenLifespanMinutes">RefreshTokenLifespanMinutes.</param>
         /// <param name="StandInKey">StandInKey.</param>
         /// <param name="TokenLifespanMinutes">TokenLifespanMinutes.</param>
-        public SecuritySaveApiClientSettingRequest(bool? AllowAnonymousAccess = default(bool?), bool? ApiAccessIsEnabled = default(bool?), bool? CreateNewClientKey = default(bool?), string Culture = default, string Description = default, string Name = default, int? RefreshTokenLifespanMinutes = default(int?), string StandInKey = default, int? TokenLifespanMinutes = default(int?))
+        public SaveApiClientSettingRequest(bool? AllowAnonymousAccess = default(bool?), bool? ApiAccessIsEnabled = default(bool?), bool? CreateNewClientKey = default(bool?), string Culture = default, string Description = default, string Name = default, int? RefreshTokenLifespanMinutes = default(int?), string StandInKey = default, int? TokenLifespanMinutes = default(int?))
         {
             this.AllowAnonymousAccess = AllowAnonymousAccess;
             this.ApiAccessIsEnabled = ApiAccessIsEnabled;
@@ -127,15 +127,15 @@ namespace Cherwell.Api.Model
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SecuritySaveApiClientSettingRequest);
+            return this.Equals(obj as SaveApiClientSettingRequest);
         }
 
         /// <summary>
-        /// Returns true if SecuritySaveApiClientSettingRequest instances are equal
+        /// Returns true if SaveApiClientSettingRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of SecuritySaveApiClientSettingRequest to be compared</param>
+        /// <param name="other">Instance of SaveApiClientSettingRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecuritySaveApiClientSettingRequest? other)
+        public bool Equals(SaveApiClientSettingRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -17,10 +17,10 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesStoredSearchRequest
     /// </summary>
     [DataContract]
-    public partial class SearchesStoredSearchRequest : IEquatable<SearchesStoredSearchRequest>, IValidatableObject
+    public partial class StoredSearchRequest : IEquatable<StoredSearchRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesStoredSearchRequest" /> class.
+        /// Initializes a new instance of the <see cref="StoredSearchRequest" /> class.
         /// </summary>
         /// <param name="AssociationId">AssociationId.</param>
         /// <param name="AssociationName">AssociationName.</param>
@@ -30,7 +30,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="ScopeOwnerId">ScopeOwnerId.</param>
         /// <param name="SearchId">SearchId.</param>
         /// <param name="SearchName">SearchName.</param>
-        public SearchesStoredSearchRequest(string AssociationId = default, string AssociationName = default, string GridId = default, bool? IncludeSchema = default(bool?), string Scope = default, string ScopeOwnerId = default, string SearchId = default, string SearchName = default)
+        public StoredSearchRequest(string AssociationId = default, string AssociationName = default, string GridId = default, bool? IncludeSchema = default(bool?), string Scope = default, string ScopeOwnerId = default, string SearchId = default, string SearchName = default)
         {
             this.AssociationId = AssociationId;
             this.AssociationName = AssociationName;
@@ -119,7 +119,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesStoredSearchRequest);
+            return this.Equals(obj as StoredSearchRequest);
         }
 
         /// <summary>
@@ -127,7 +127,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesStoredSearchRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesStoredSearchRequest? other)
+        public bool Equals(StoredSearchRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

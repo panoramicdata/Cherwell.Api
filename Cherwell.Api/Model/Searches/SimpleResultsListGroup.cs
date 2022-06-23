@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesSimpleResultsListGroup
     /// </summary>
     [DataContract]
-    public partial class SearchesSimpleResultsListGroup : IEquatable<SearchesSimpleResultsListGroup>, IValidatableObject
+    public partial class SimpleResultsListGroup : IEquatable<SimpleResultsListGroup>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Api.Model.Searches
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesSimpleResultsListGroup" /> class.
+        /// Initializes a new instance of the <see cref="SimpleResultsListGroup" /> class.
         /// </summary>
         /// <param name="IsBusObTarget">IsBusObTarget.</param>
         /// <param name="SimpleResultsListItems">SimpleResultsListItems.</param>
@@ -326,7 +326,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SearchesSimpleResultsListGroup(bool? IsBusObTarget = default(bool?), List<SearchesSimpleResultsListItem> SimpleResultsListItems = default(List<SearchesSimpleResultsListItem>), string SubTitle = default, string TargetId = default, string Title = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public SimpleResultsListGroup(bool? IsBusObTarget = default(bool?), List<SimpleResultsListItem> SimpleResultsListItems = default(List<SimpleResultsListItem>), string SubTitle = default, string TargetId = default, string Title = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.IsBusObTarget = IsBusObTarget;
             this.SimpleResultsListItems = SimpleResultsListItems;
@@ -348,7 +348,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets SimpleResultsListItems
         /// </summary>
         [DataMember(Name = "simpleResultsListItems", EmitDefaultValue = false)]
-        public List<SearchesSimpleResultsListItem> SimpleResultsListItems { get; set; }
+        public List<SimpleResultsListItem> SimpleResultsListItems { get; set; }
         /// <summary>
         /// Gets or Sets SubTitle
         /// </summary>
@@ -417,7 +417,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesSimpleResultsListGroup);
+            return this.Equals(obj as SimpleResultsListGroup);
         }
 
         /// <summary>
@@ -425,7 +425,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesSimpleResultsListGroup to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesSimpleResultsListGroup? other)
+        public bool Equals(SimpleResultsListGroup? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

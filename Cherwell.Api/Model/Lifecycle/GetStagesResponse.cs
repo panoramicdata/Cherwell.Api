@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.Lifecycle
     /// LifecycleGetStagesResponse
     /// </summary>
     [DataContract]
-    public partial class LifecycleGetStagesResponse : IEquatable<LifecycleGetStagesResponse>, IValidatableObject
+    public partial class GetStagesResponse : IEquatable<GetStagesResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Api.Model.Lifecycle
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="LifecycleGetStagesResponse" /> class.
+        /// Initializes a new instance of the <see cref="GetStagesResponse" /> class.
         /// </summary>
         /// <param name="Stages">Stages.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public LifecycleGetStagesResponse(List<LifecycleGetStagesResponseStages> Stages = default(List<LifecycleGetStagesResponseStages>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public GetStagesResponse(List<GetStagesResponseStages> Stages = default(List<GetStagesResponseStages>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Stages = Stages;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Api.Model.Lifecycle
         /// Gets or Sets Stages
         /// </summary>
         [DataMember(Name = "stages", EmitDefaultValue = false)]
-        public List<LifecycleGetStagesResponseStages> Stages { get; set; }
+        public List<GetStagesResponseStages> Stages { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -385,7 +385,7 @@ namespace Cherwell.Api.Model.Lifecycle
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as LifecycleGetStagesResponse);
+            return this.Equals(obj as GetStagesResponse);
         }
 
         /// <summary>
@@ -393,7 +393,7 @@ namespace Cherwell.Api.Model.Lifecycle
         /// </summary>
         /// <param name="other">Instance of LifecycleGetStagesResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(LifecycleGetStagesResponse? other)
+        public bool Equals(GetStagesResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

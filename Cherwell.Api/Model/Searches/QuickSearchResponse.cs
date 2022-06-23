@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesQuickSearchResponse
     /// </summary>
     [DataContract]
-    public partial class SearchesQuickSearchResponse : IEquatable<SearchesQuickSearchResponse>, IValidatableObject
+    public partial class QuickSearchResponse : IEquatable<QuickSearchResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Api.Model.Searches
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesQuickSearchResponse" /> class.
+        /// Initializes a new instance of the <see cref="QuickSearchResponse" /> class.
         /// </summary>
         /// <param name="SearchResultsTable">SearchResultsTable.</param>
         /// <param name="SimpleResultsList">SimpleResultsList.</param>
@@ -323,7 +323,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SearchesQuickSearchResponse(SearchesSearchResultsTableResponse SearchResultsTable = default(SearchesSearchResultsTableResponse), SearchesSimpleResultsList SimpleResultsList = default(SearchesSimpleResultsList), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public QuickSearchResponse(SearchResultsTableResponse SearchResultsTable = default(SearchResultsTableResponse), SimpleResultsList SimpleResultsList = default(SimpleResultsList), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.SearchResultsTable = SearchResultsTable;
             this.SimpleResultsList = SimpleResultsList;
@@ -337,12 +337,12 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets SearchResultsTable
         /// </summary>
         [DataMember(Name = "searchResultsTable", EmitDefaultValue = false)]
-        public SearchesSearchResultsTableResponse SearchResultsTable { get; set; }
+        public SearchResultsTableResponse SearchResultsTable { get; set; }
         /// <summary>
         /// Gets or Sets SimpleResultsList
         /// </summary>
         [DataMember(Name = "simpleResultsList", EmitDefaultValue = false)]
-        public SearchesSimpleResultsList SimpleResultsList { get; set; }
+        public SimpleResultsList SimpleResultsList { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -393,7 +393,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesQuickSearchResponse);
+            return this.Equals(obj as QuickSearchResponse);
         }
 
         /// <summary>
@@ -401,7 +401,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesQuickSearchResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesQuickSearchResponse? other)
+        public bool Equals(QuickSearchResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

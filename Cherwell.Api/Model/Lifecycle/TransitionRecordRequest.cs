@@ -17,13 +17,13 @@ namespace Cherwell.Api.Model.Lifecycle
     /// LifecycleTransitionRecordRequest
     /// </summary>
     [DataContract]
-    public partial class LifecycleTransitionRecordRequest : IEquatable<LifecycleTransitionRecordRequest>, IValidatableObject
+    public partial class TransitionRecordRequest : IEquatable<TransitionRecordRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="LifecycleTransitionRecordRequest" /> class.
+        /// Initializes a new instance of the <see cref="TransitionRecordRequest" /> class.
         /// </summary>
         /// <param name="TransitionOptionId">TransitionOptionId.</param>
-        public LifecycleTransitionRecordRequest(string TransitionOptionId = default)
+        public TransitionRecordRequest(string TransitionOptionId = default)
         {
             this.TransitionOptionId = TransitionOptionId;
         }
@@ -63,7 +63,7 @@ namespace Cherwell.Api.Model.Lifecycle
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as LifecycleTransitionRecordRequest);
+            return this.Equals(obj as TransitionRecordRequest);
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace Cherwell.Api.Model.Lifecycle
         /// </summary>
         /// <param name="other">Instance of LifecycleTransitionRecordRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(LifecycleTransitionRecordRequest? other)
+        public bool Equals(TransitionRecordRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

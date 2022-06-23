@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Security
 {
     /// <summary>
-    /// SecurityGetSecurityGroupBusinessObjectPermissionsResponse
+    /// GetSecurityGroupBusinessObjectPermissionsResponse
     /// </summary>
     [DataContract]
-    public partial class SecurityGetSecurityGroupBusinessObjectPermissionsResponse : IEquatable<SecurityGetSecurityGroupBusinessObjectPermissionsResponse>, IValidatableObject
+    public partial class GetSecurityGroupBusinessObjectPermissionsResponse : IEquatable<GetSecurityGroupBusinessObjectPermissionsResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Api.Model.Security
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecurityGetSecurityGroupBusinessObjectPermissionsResponse" /> class.
+        /// Initializes a new instance of the <see cref="GetSecurityGroupBusinessObjectPermissionsResponse" /> class.
         /// </summary>
         /// <param name="BusinessObjectPermissions">BusinessObjectPermissions.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SecurityGetSecurityGroupBusinessObjectPermissionsResponse(List<PermissionSecurityBusinessObject> BusinessObjectPermissions = default(List<PermissionSecurityBusinessObject>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public GetSecurityGroupBusinessObjectPermissionsResponse(List<BusinessObjectPermission> BusinessObjectPermissions = default(List<BusinessObjectPermission>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.BusinessObjectPermissions = BusinessObjectPermissions;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Api.Model.Security
         /// Gets or Sets BusinessObjectPermissions
         /// </summary>
         [DataMember(Name = "businessObjectPermissions", EmitDefaultValue = false)]
-        public List<PermissionSecurityBusinessObject> BusinessObjectPermissions { get; set; }
+        public List<BusinessObjectPermission> BusinessObjectPermissions { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -385,15 +385,15 @@ namespace Cherwell.Api.Model.Security
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SecurityGetSecurityGroupBusinessObjectPermissionsResponse);
+            return this.Equals(obj as GetSecurityGroupBusinessObjectPermissionsResponse);
         }
 
         /// <summary>
-        /// Returns true if SecurityGetSecurityGroupBusinessObjectPermissionsResponse instances are equal
+        /// Returns true if GetSecurityGroupBusinessObjectPermissionsResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of SecurityGetSecurityGroupBusinessObjectPermissionsResponse to be compared</param>
+        /// <param name="other">Instance of GetSecurityGroupBusinessObjectPermissionsResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecurityGetSecurityGroupBusinessObjectPermissionsResponse? other)
+        public bool Equals(GetSecurityGroupBusinessObjectPermissionsResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Teams
 {
     /// <summary>
-    /// TeamsTeamSaveRequest
+    /// TeamSaveRequest
     /// </summary>
     [DataContract]
-    public partial class TeamsTeamSaveRequest :  IEquatable<TeamsTeamSaveRequest>, IValidatableObject
+    public partial class TeamSaveRequest :  IEquatable<TeamSaveRequest>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets TeamType
@@ -45,7 +45,7 @@ namespace Cherwell.Api.Model.Teams
         [DataMember(Name="teamType", EmitDefaultValue=false)]
         public EnumTeamType? TeamType { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TeamsTeamSaveRequest" /> class.
+        /// Initializes a new instance of the <see cref="TeamSaveRequest" /> class.
         /// </summary>
         /// <param name="Description">Description.</param>
         /// <param name="EmailAlias">EmailAlias.</param>
@@ -53,7 +53,7 @@ namespace Cherwell.Api.Model.Teams
         /// <param name="TeamId">TeamId.</param>
         /// <param name="TeamName">TeamName.</param>
         /// <param name="TeamType">TeamType.</param>
-        public TeamsTeamSaveRequest(string Description = default, string EmailAlias = default, string Image = default, string TeamId = default, string TeamName = default, EnumTeamType? TeamType = default(EnumTeamType?))
+        public TeamSaveRequest(string Description = default, string EmailAlias = default, string Image = default, string TeamId = default, string TeamName = default, EnumTeamType? TeamType = default(EnumTeamType?))
         {
             this.Description = Description;
             this.EmailAlias = EmailAlias;
@@ -123,15 +123,15 @@ namespace Cherwell.Api.Model.Teams
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TeamsTeamSaveRequest);
+            return this.Equals(obj as TeamSaveRequest);
         }
 
         /// <summary>
-        /// Returns true if TeamsTeamSaveRequest instances are equal
+        /// Returns true if TeamSaveRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TeamsTeamSaveRequest to be compared</param>
+        /// <param name="other">Instance of TeamSaveRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsTeamSaveRequest? other)
+        public bool Equals(TeamSaveRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

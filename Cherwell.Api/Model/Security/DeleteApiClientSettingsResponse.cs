@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Security
 {
     /// <summary>
-    /// SecurityDeleteApiClientSettingsResponse
+    /// DeleteApiClientSettingsResponse
     /// </summary>
     [DataContract]
-    public partial class SecurityDeleteApiClientSettingsResponse : IEquatable<SecurityDeleteApiClientSettingsResponse>, IValidatableObject
+    public partial class DeleteApiClientSettingsResponse : IEquatable<DeleteApiClientSettingsResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,13 +315,13 @@ namespace Cherwell.Api.Model.Security
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecurityDeleteApiClientSettingsResponse" /> class.
+        /// Initializes a new instance of the <see cref="DeleteApiClientSettingsResponse" /> class.
         /// </summary>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SecurityDeleteApiClientSettingsResponse(string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public DeleteApiClientSettingsResponse(string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.ErrorCode = ErrorCode;
             this.ErrorMessage = ErrorMessage;
@@ -377,15 +377,15 @@ namespace Cherwell.Api.Model.Security
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SecurityDeleteApiClientSettingsResponse);
+            return this.Equals(obj as DeleteApiClientSettingsResponse);
         }
 
         /// <summary>
-        /// Returns true if SecurityDeleteApiClientSettingsResponse instances are equal
+        /// Returns true if DeleteApiClientSettingsResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of SecurityDeleteApiClientSettingsResponse to be compared</param>
+        /// <param name="other">Instance of DeleteApiClientSettingsResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecurityDeleteApiClientSettingsResponse? other)
+        public bool Equals(DeleteApiClientSettingsResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

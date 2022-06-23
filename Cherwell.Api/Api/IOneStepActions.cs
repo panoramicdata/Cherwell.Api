@@ -107,7 +107,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of OneStepActionsOneStepActionResponse</returns>
         [Get("/api/V1/runonestepaction/standinkey/{standinkey}/busobid/{busobid}/busobrecid/{busobrecid}")]
-        Task<OneStepActionsOneStepActionResponse> OneStepActionsRunOneStepActionByKeyForRecordByRecId([Header("UserAgent")] string userAgent, [AliasAs("standinkey")]string standinkey, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<OneStepActionResponse> OneStepActionsRunOneStepActionByKeyForRecordByRecId([Header("UserAgent")] string userAgent, [AliasAs("standinkey")]string standinkey, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Run a stand alone One-Step Action
@@ -121,7 +121,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of OneStepActionsOneStepActionResponse</returns>
         [Get("/api/V1/runonestepaction/standinkey/{standinkey}")]
-        Task<OneStepActionsOneStepActionResponse> OneStepActionsRunOneStepActionByStandInKey([Header("UserAgent")] string userAgent, [AliasAs("standinkey")]string standinkey, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<OneStepActionResponse> OneStepActionsRunOneStepActionByStandInKey([Header("UserAgent")] string userAgent, [AliasAs("standinkey")]string standinkey, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Run a One-Step Action using a OneStepActionRequest
@@ -135,7 +135,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of OneStepActionsOneStepActionResponse</returns>
         [Post("/api/V1/runonestepaction")]
-        Task<OneStepActionsOneStepActionResponse> OneStepActionsRunOneStepAction([Header("UserAgent")] string userAgent, [Body]OneStepActionsOneStepActionRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<OneStepActionResponse> OneStepActionsRunOneStepAction([Header("UserAgent")] string userAgent, [Body]OneStepActionRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
         #endregion Asynchronous Operations
     }
 }

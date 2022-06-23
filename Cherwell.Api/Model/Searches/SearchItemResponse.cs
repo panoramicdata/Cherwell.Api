@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesSearchItemResponse
     /// </summary>
     [DataContract]
-    public partial class SearchesSearchItemResponse : IEquatable<SearchesSearchItemResponse>, IValidatableObject
+    public partial class SearchItemResponse : IEquatable<SearchItemResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Api.Model.Searches
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesSearchItemResponse" /> class.
+        /// Initializes a new instance of the <see cref="SearchItemResponse" /> class.
         /// </summary>
         /// <param name="Root">Root.</param>
         /// <param name="SupportedAssociations">SupportedAssociations.</param>
@@ -323,7 +323,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SearchesSearchItemResponse(SearchesSearchFolder Root = default(SearchesSearchFolder), List<SearchesAssociation> SupportedAssociations = default(List<SearchesAssociation>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public SearchItemResponse(SearchFolder Root = default(SearchFolder), List<Association> SupportedAssociations = default(List<Association>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Root = Root;
             this.SupportedAssociations = SupportedAssociations;
@@ -337,12 +337,12 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets Root
         /// </summary>
         [DataMember(Name = "root", EmitDefaultValue = false)]
-        public SearchesSearchFolder Root { get; set; }
+        public SearchFolder Root { get; set; }
         /// <summary>
         /// Gets or Sets SupportedAssociations
         /// </summary>
         [DataMember(Name = "supportedAssociations", EmitDefaultValue = false)]
-        public List<SearchesAssociation> SupportedAssociations { get; set; }
+        public List<Association> SupportedAssociations { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -393,7 +393,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesSearchItemResponse);
+            return this.Equals(obj as SearchItemResponse);
         }
 
         /// <summary>
@@ -401,7 +401,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesSearchItemResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesSearchItemResponse? other)
+        public bool Equals(SearchItemResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

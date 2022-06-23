@@ -17,14 +17,14 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesQuickSearchRequest
     /// </summary>
     [DataContract]
-    public partial class SearchesQuickSearchRequest : IEquatable<SearchesQuickSearchRequest>, IValidatableObject
+    public partial class QuickSearchRequest : IEquatable<QuickSearchRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesQuickSearchRequest" /> class.
+        /// Initializes a new instance of the <see cref="QuickSearchRequest" /> class.
         /// </summary>
         /// <param name="BusObIds">BusObIds.</param>
         /// <param name="SearchText">SearchText.</param>
-        public SearchesQuickSearchRequest(List<string> BusObIds = default(List<string>), string SearchText = default)
+        public QuickSearchRequest(List<string> BusObIds = default(List<string>), string SearchText = default)
         {
             this.BusObIds = BusObIds;
             this.SearchText = SearchText;
@@ -71,7 +71,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesQuickSearchRequest);
+            return this.Equals(obj as QuickSearchRequest);
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesQuickSearchRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesQuickSearchRequest? other)
+        public bool Equals(QuickSearchRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

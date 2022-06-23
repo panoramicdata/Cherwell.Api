@@ -14,17 +14,17 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Teams
 {
     /// <summary>
-    /// TeamsTeam
+    /// Team
     /// </summary>
     [DataContract]
-    public partial class TeamsTeam :  IEquatable<TeamsTeam>, IValidatableObject
+    public partial class Team :  IEquatable<Team>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TeamsTeam" /> class.
+        /// Initializes a new instance of the <see cref="Team" /> class.
         /// </summary>
         /// <param name="TeamId">TeamId.</param>
         /// <param name="TeamName">TeamName.</param>
-        public TeamsTeam(string TeamId = default, string TeamName = default)
+        public Team(string TeamId = default, string TeamName = default)
         {
             this.TeamId = TeamId;
             this.TeamName = TeamName;
@@ -71,15 +71,15 @@ namespace Cherwell.Api.Model.Teams
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TeamsTeam);
+            return this.Equals(obj as Team);
         }
 
         /// <summary>
-        /// Returns true if TeamsTeam instances are equal
+        /// Returns true if Team instances are equal
         /// </summary>
-        /// <param name="other">Instance of TeamsTeam to be compared</param>
+        /// <param name="other">Instance of Team to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsTeam? other)
+        public bool Equals(Team? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

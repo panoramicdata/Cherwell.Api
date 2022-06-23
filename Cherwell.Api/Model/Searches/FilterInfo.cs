@@ -17,15 +17,15 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesFilterInfo
     /// </summary>
     [DataContract]
-    public partial class SearchesFilterInfo : IEquatable<SearchesFilterInfo>, IValidatableObject
+    public partial class FilterInfo : IEquatable<FilterInfo>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesFilterInfo" /> class.
+        /// Initializes a new instance of the <see cref="FilterInfo" /> class.
         /// </summary>
         /// <param name="FieldId">FieldId.</param>
         /// <param name="Operator">_Operator.</param>
         /// <param name="Value">Value.</param>
-        public SearchesFilterInfo(string FieldId = default, string Operator = default, string Value = default)
+        public FilterInfo(string FieldId = default, string Operator = default, string Value = default)
         {
             this.FieldId = FieldId;
             this.Operator = Operator;
@@ -79,7 +79,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesFilterInfo);
+            return this.Equals(obj as FilterInfo);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesFilterInfo to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesFilterInfo? other)
+        public bool Equals(FilterInfo? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

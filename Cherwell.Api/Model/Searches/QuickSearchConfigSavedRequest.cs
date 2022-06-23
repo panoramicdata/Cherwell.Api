@@ -17,15 +17,15 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesQuickSearchConfigSavedRequest
     /// </summary>
     [DataContract]
-    public partial class SearchesQuickSearchConfigSavedRequest : IEquatable<SearchesQuickSearchConfigSavedRequest>, IValidatableObject
+    public partial class QuickSearchConfigSavedRequest : IEquatable<QuickSearchConfigSavedRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesQuickSearchConfigSavedRequest" /> class.
+        /// Initializes a new instance of the <see cref="QuickSearchConfigSavedRequest" /> class.
         /// </summary>
         /// <param name="StandIn">StandIn.</param>
         /// <param name="BusObIds">BusObIds.</param>
         /// <param name="IsGeneral">IsGeneral.</param>
-        public SearchesQuickSearchConfigSavedRequest(string StandIn = default, List<string> BusObIds = default(List<string>), bool? IsGeneral = default(bool?))
+        public QuickSearchConfigSavedRequest(string StandIn = default, List<string> BusObIds = default(List<string>), bool? IsGeneral = default(bool?))
         {
             this.StandIn = StandIn;
             this.BusObIds = BusObIds;
@@ -79,7 +79,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesQuickSearchConfigSavedRequest);
+            return this.Equals(obj as QuickSearchConfigSavedRequest);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesQuickSearchConfigSavedRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesQuickSearchConfigSavedRequest? other)
+        public bool Equals(QuickSearchConfigSavedRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

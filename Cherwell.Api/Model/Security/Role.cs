@@ -11,16 +11,16 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Api.Model
+namespace Cherwell.Api.Model.Security
 {
     /// <summary>
-    /// SecurityRole
+    /// Role
     /// </summary>
     [DataContract]
-    public partial class SecurityRole :  IEquatable<SecurityRole>, IValidatableObject
+    public partial class Role :  IEquatable<Role>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecurityRole" /> class.
+        /// Initializes a new instance of the <see cref="Role" /> class.
         /// </summary>
         /// <param name="BrowserClientCustomViewId">BrowserClientCustomViewId.</param>
         /// <param name="BusinessObjectExcludeList">BusinessObjectExcludeList.</param>
@@ -31,7 +31,7 @@ namespace Cherwell.Api.Model
         /// <param name="RoleId">RoleId.</param>
         /// <param name="RoleName">RoleName.</param>
         /// <param name="SmartClientCustomViewId">SmartClientCustomViewId.</param>
-        public SecurityRole(string BrowserClientCustomViewId = default, List<string> BusinessObjectExcludeList = default(List<string>), string Culture = default, string Description = default, string MobileClientCustomViewId = default, string PrimaryBusObId = default, string RoleId = default, string RoleName = default, string SmartClientCustomViewId = default)
+        public Role(string BrowserClientCustomViewId = default, List<string> BusinessObjectExcludeList = default(List<string>), string Culture = default, string Description = default, string MobileClientCustomViewId = default, string PrimaryBusObId = default, string RoleId = default, string RoleName = default, string SmartClientCustomViewId = default)
         {
             this.BrowserClientCustomViewId = BrowserClientCustomViewId;
             this.BusinessObjectExcludeList = BusinessObjectExcludeList;
@@ -127,15 +127,15 @@ namespace Cherwell.Api.Model
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SecurityRole);
+            return this.Equals(obj as Role);
         }
 
         /// <summary>
-        /// Returns true if SecurityRole instances are equal
+        /// Returns true if Role instances are equal
         /// </summary>
-        /// <param name="other">Instance of SecurityRole to be compared</param>
+        /// <param name="other">Instance of Role to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecurityRole? other)
+        public bool Equals(Role? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

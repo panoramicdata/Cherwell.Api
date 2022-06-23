@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesQuickSearchConfigurationResponse
     /// </summary>
     [DataContract]
-    public partial class SearchesQuickSearchConfigurationResponse : IEquatable<SearchesQuickSearchConfigurationResponse>, IValidatableObject
+    public partial class QuickSearchConfigurationResponse : IEquatable<QuickSearchConfigurationResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Api.Model.Searches
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesQuickSearchConfigurationResponse" /> class.
+        /// Initializes a new instance of the <see cref="QuickSearchConfigurationResponse" /> class.
         /// </summary>
         /// <param name="AllowQuickSearch">AllowQuickSearch.</param>
         /// <param name="AllowSpecificSearch">AllowSpecificSearch.</param>
@@ -337,7 +337,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SearchesQuickSearchConfigurationResponse(bool? AllowQuickSearch = default(bool?), bool? AllowSpecificSearch = default(bool?), bool? DefaultToQuickSearch = default(bool?), string DisplayName = default, string GalleryImage = default, List<string> History = default(List<string>), bool? IncludeAvailableInSpecific = default(bool?), bool? IncludeQuickSearchInSpecific = default(bool?), string QuickSearchId = default, List<SearchesQuickSearchItem> QuickSearchItems = default(List<SearchesQuickSearchItem>), string QuickSearchWatermark = default, bool? SortByRelevance = default(bool?), string ResolvedQuickSearchWatermark = default, string Scope = default, string ScopeOwner = default, List<SearchesQuickSearchItem> SpecificSearchItems = default(List<SearchesQuickSearchItem>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public QuickSearchConfigurationResponse(bool? AllowQuickSearch = default(bool?), bool? AllowSpecificSearch = default(bool?), bool? DefaultToQuickSearch = default(bool?), string DisplayName = default, string GalleryImage = default, List<string> History = default(List<string>), bool? IncludeAvailableInSpecific = default(bool?), bool? IncludeQuickSearchInSpecific = default(bool?), string QuickSearchId = default, List<QuickSearchItem> QuickSearchItems = default(List<QuickSearchItem>), string QuickSearchWatermark = default, bool? SortByRelevance = default(bool?), string ResolvedQuickSearchWatermark = default, string Scope = default, string ScopeOwner = default, List<QuickSearchItem> SpecificSearchItems = default(List<QuickSearchItem>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.AllowQuickSearch = AllowQuickSearch;
             this.AllowSpecificSearch = AllowSpecificSearch;
@@ -410,7 +410,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets QuickSearchItems
         /// </summary>
         [DataMember(Name = "quickSearchItems", EmitDefaultValue = false)]
-        public List<SearchesQuickSearchItem> QuickSearchItems { get; set; }
+        public List<QuickSearchItem> QuickSearchItems { get; set; }
         /// <summary>
         /// Gets or Sets QuickSearchWatermark
         /// </summary>
@@ -440,7 +440,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets SpecificSearchItems
         /// </summary>
         [DataMember(Name = "specificSearchItems", EmitDefaultValue = false)]
-        public List<SearchesQuickSearchItem> SpecificSearchItems { get; set; }
+        public List<QuickSearchItem> SpecificSearchItems { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -505,7 +505,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesQuickSearchConfigurationResponse);
+            return this.Equals(obj as QuickSearchConfigurationResponse);
         }
 
         /// <summary>
@@ -513,7 +513,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesQuickSearchConfigurationResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesQuickSearchConfigurationResponse? other)
+        public bool Equals(QuickSearchConfigurationResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

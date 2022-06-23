@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesSearchResultsTableResponse
     /// </summary>
     [DataContract]
-    public partial class SearchesSearchResultsTableResponse : IEquatable<SearchesSearchResultsTableResponse>, IValidatableObject
+    public partial class SearchResultsTableResponse : IEquatable<SearchResultsTableResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Api.Model.Searches
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesSearchResultsTableResponse" /> class.
+        /// Initializes a new instance of the <see cref="SearchResultsTableResponse" /> class.
         /// </summary>
         /// <param name="Columns">Columns.</param>
         /// <param name="Rows">Rows.</param>
@@ -325,7 +325,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SearchesSearchResultsTableResponse(List<SearchesField> Columns = default(List<SearchesField>), List<SearchesSearchResultsRow> Rows = default(List<SearchesSearchResultsRow>), List<SearchesSortInfo> Sorting = default(List<SearchesSortInfo>), long? TotalRows = default(long?), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public SearchResultsTableResponse(List<Field> Columns = default(List<Field>), List<SearchResultsRow> Rows = default(List<SearchResultsRow>), List<SortInfo> Sorting = default(List<SortInfo>), long? TotalRows = default(long?), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Columns = Columns;
             this.Rows = Rows;
@@ -341,17 +341,17 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets Columns
         /// </summary>
         [DataMember(Name = "columns", EmitDefaultValue = false)]
-        public List<SearchesField> Columns { get; set; }
+        public List<Field> Columns { get; set; }
         /// <summary>
         /// Gets or Sets Rows
         /// </summary>
         [DataMember(Name = "rows", EmitDefaultValue = false)]
-        public List<SearchesSearchResultsRow> Rows { get; set; }
+        public List<SearchResultsRow> Rows { get; set; }
         /// <summary>
         /// Gets or Sets Sorting
         /// </summary>
         [DataMember(Name = "sorting", EmitDefaultValue = false)]
-        public List<SearchesSortInfo> Sorting { get; set; }
+        public List<SortInfo> Sorting { get; set; }
         /// <summary>
         /// Gets or Sets TotalRows
         /// </summary>
@@ -409,7 +409,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesSearchResultsTableResponse);
+            return this.Equals(obj as SearchResultsTableResponse);
         }
 
         /// <summary>
@@ -417,7 +417,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesSearchResultsTableResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesSearchResultsTableResponse? other)
+        public bool Equals(SearchResultsTableResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

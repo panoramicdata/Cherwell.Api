@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Security
 {
     /// <summary>
-    /// SecurityRight
+    /// Right
     /// </summary>
     [DataContract]
-    public partial class SecurityRight :  IEquatable<SecurityRight>, IValidatableObject
+    public partial class Right :  IEquatable<Right>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecurityRight" /> class.
+        /// Initializes a new instance of the <see cref="Right" /> class.
         /// </summary>
         /// <param name="Add">Add.</param>
         /// <param name="Allow">Allow.</param>
@@ -38,7 +38,7 @@ namespace Cherwell.Api.Model.Security
         /// <param name="RightName">RightName.</param>
         /// <param name="StandardRightName">StandardRightName.</param>
         /// <param name="ViewRunOpen">ViewRunOpen.</param>
-        public SecurityRight(bool? Add = default(bool?), bool? Allow = default(bool?), string CategoryDescription = default, string CategoryId = default, string CategoryName = default, bool? Delete = default(bool?), bool? Edit = default(bool?), bool? IsYesNoRight = default(bool?), bool? NonScopeOwnerAdd = default(bool?), bool? NonScopeOwnerDelete = default(bool?), bool? NonScopeOwnerEdit = default(bool?), bool? NonScopeOwnerView = default(bool?), string RightId = default, string RightName = default, string StandardRightName = default, bool? ViewRunOpen = default(bool?))
+        public Right(bool? Add = default(bool?), bool? Allow = default(bool?), string CategoryDescription = default, string CategoryId = default, string CategoryName = default, bool? Delete = default(bool?), bool? Edit = default(bool?), bool? IsYesNoRight = default(bool?), bool? NonScopeOwnerAdd = default(bool?), bool? NonScopeOwnerDelete = default(bool?), bool? NonScopeOwnerEdit = default(bool?), bool? NonScopeOwnerView = default(bool?), string RightId = default, string RightName = default, string StandardRightName = default, bool? ViewRunOpen = default(bool?))
         {
             this.Add = Add;
             this.Allow = Allow;
@@ -183,15 +183,15 @@ namespace Cherwell.Api.Model.Security
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SecurityRight);
+            return this.Equals(obj as Right);
         }
 
         /// <summary>
-        /// Returns true if SecurityRight instances are equal
+        /// Returns true if Right instances are equal
         /// </summary>
-        /// <param name="other">Instance of SecurityRight to be compared</param>
+        /// <param name="other">Instance of Right to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecurityRight? other)
+        public bool Equals(Right? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

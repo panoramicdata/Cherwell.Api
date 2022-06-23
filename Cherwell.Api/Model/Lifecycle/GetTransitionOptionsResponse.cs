@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.Lifecycle
     /// LifecycleGetTransitionOptionsResponse
     /// </summary>
     [DataContract]
-    public partial class LifecycleGetTransitionOptionsResponse : IEquatable<LifecycleGetTransitionOptionsResponse>, IValidatableObject
+    public partial class GetTransitionOptionsResponse : IEquatable<GetTransitionOptionsResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Api.Model.Lifecycle
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="LifecycleGetTransitionOptionsResponse" /> class.
+        /// Initializes a new instance of the <see cref="GetTransitionOptionsResponse" /> class.
         /// </summary>
         /// <param name="Transitions">Transitions.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public LifecycleGetTransitionOptionsResponse(List<LifecycleGetTransitionOptionsResponseTransition> Transitions = default(List<LifecycleGetTransitionOptionsResponseTransition>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public GetTransitionOptionsResponse(List<GetTransitionOptionsResponseTransition> Transitions = default(List<GetTransitionOptionsResponseTransition>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Transitions = Transitions;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Api.Model.Lifecycle
         /// Gets or Sets Transitions
         /// </summary>
         [DataMember(Name = "transitions", EmitDefaultValue = false)]
-        public List<LifecycleGetTransitionOptionsResponseTransition> Transitions { get; set; }
+        public List<GetTransitionOptionsResponseTransition> Transitions { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -385,7 +385,7 @@ namespace Cherwell.Api.Model.Lifecycle
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as LifecycleGetTransitionOptionsResponse);
+            return this.Equals(obj as GetTransitionOptionsResponse);
         }
 
         /// <summary>
@@ -393,7 +393,7 @@ namespace Cherwell.Api.Model.Lifecycle
         /// </summary>
         /// <param name="other">Instance of LifecycleGetTransitionOptionsResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(LifecycleGetTransitionOptionsResponse? other)
+        public bool Equals(GetTransitionOptionsResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

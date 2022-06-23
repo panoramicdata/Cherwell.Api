@@ -17,10 +17,10 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesQuickSearchSpecificByIdRequest
     /// </summary>
     [DataContract]
-    public partial class SearchesQuickSearchSpecificByIdRequest : IEquatable<SearchesQuickSearchSpecificByIdRequest>, IValidatableObject
+    public partial class QuickSearchSpecificByIdRequest : IEquatable<QuickSearchSpecificByIdRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesQuickSearchSpecificByIdRequest" /> class.
+        /// Initializes a new instance of the <see cref="QuickSearchSpecificByIdRequest" /> class.
         /// </summary>
         /// <param name="BusObIds">BusObIds.</param>
         /// <param name="StandIn">StandIn.</param>
@@ -36,7 +36,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="SortByRelevance">SortByRelevance.</param>
         /// <param name="SpecificSearchTargetId">SpecificSearchTargetId.</param>
         /// <param name="UseSortBy">UseSortBy.</param>
-        public SearchesQuickSearchSpecificByIdRequest(List<string> BusObIds = default(List<string>), string StandIn = default, bool? Ascending = default(bool?), bool? IsBusObTarget = default(bool?), bool? NonFinalState = default(bool?), bool? SearchAnyWords = default(bool?), bool? SearchAttachments = default(bool?), bool? SearchRelated = default(bool?), string SearchText = default, SearchesChangedLimit SelectedChangedLimit = default(SearchesChangedLimit), string SelectedSortByFieldId = default, bool? SortByRelevance = default(bool?), string SpecificSearchTargetId = default, bool? UseSortBy = default(bool?))
+        public QuickSearchSpecificByIdRequest(List<string> BusObIds = default(List<string>), string StandIn = default, bool? Ascending = default(bool?), bool? IsBusObTarget = default(bool?), bool? NonFinalState = default(bool?), bool? SearchAnyWords = default(bool?), bool? SearchAttachments = default(bool?), bool? SearchRelated = default(bool?), string SearchText = default, ChangedLimit SelectedChangedLimit = default(ChangedLimit), string SelectedSortByFieldId = default, bool? SortByRelevance = default(bool?), string SpecificSearchTargetId = default, bool? UseSortBy = default(bool?))
         {
             this.BusObIds = BusObIds;
             this.StandIn = StandIn;
@@ -103,7 +103,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets SelectedChangedLimit
         /// </summary>
         [DataMember(Name = "selectedChangedLimit", EmitDefaultValue = false)]
-        public SearchesChangedLimit SelectedChangedLimit { get; set; }
+        public ChangedLimit SelectedChangedLimit { get; set; }
         /// <summary>
         /// Gets or Sets SelectedSortByFieldId
         /// </summary>
@@ -167,7 +167,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesQuickSearchSpecificByIdRequest);
+            return this.Equals(obj as QuickSearchSpecificByIdRequest);
         }
 
         /// <summary>
@@ -175,7 +175,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesQuickSearchSpecificByIdRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesQuickSearchSpecificByIdRequest? other)
+        public bool Equals(QuickSearchSpecificByIdRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

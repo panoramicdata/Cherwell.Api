@@ -14,17 +14,17 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Users
 {
     /// <summary>
-    /// UsersUserBatchReadRequest
+    /// UserBatchReadRequest
     /// </summary>
     [DataContract]
-    public partial class UsersUserBatchReadRequest : IEquatable<UsersUserBatchReadRequest>, IValidatableObject
+    public partial class UserBatchReadRequest : IEquatable<UserBatchReadRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsersUserBatchReadRequest" /> class.
+        /// Initializes a new instance of the <see cref="UserBatchReadRequest" /> class.
         /// </summary>
         /// <param name="ReadRequests">ReadRequests.</param>
         /// <param name="StopOnError">StopOnError.</param>
-        public UsersUserBatchReadRequest(List<UsersUserReadRequest> ReadRequests = default, bool? StopOnError = default)
+        public UserBatchReadRequest(List<UserReadRequest> ReadRequests = default, bool? StopOnError = default)
         {
             this.ReadRequests = ReadRequests;
             this.StopOnError = StopOnError;
@@ -34,7 +34,7 @@ namespace Cherwell.Api.Model.Users
         /// Gets or Sets ReadRequests
         /// </summary>
         [DataMember(Name = "readRequests", EmitDefaultValue = false)]
-        public List<UsersUserReadRequest> ReadRequests { get; set; }
+        public List<UserReadRequest> ReadRequests { get; set; }
         /// <summary>
         /// Gets or Sets StopOnError
         /// </summary>
@@ -47,7 +47,7 @@ namespace Cherwell.Api.Model.Users
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UsersUserBatchReadRequest {\n");
+            sb.Append("class UserBatchReadRequest {\n");
             sb.Append("  ReadRequests: ").Append(ReadRequests).Append('\n');
             sb.Append("  StopOnError: ").Append(StopOnError).Append('\n');
             sb.Append("}\n");
@@ -71,15 +71,15 @@ namespace Cherwell.Api.Model.Users
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return Equals(obj as UsersUserBatchReadRequest);
+            return Equals(obj as UserBatchReadRequest);
         }
 
         /// <summary>
-        /// Returns true if UsersUserBatchReadRequest instances are equal
+        /// Returns true if UserBatchReadRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of UsersUserBatchReadRequest to be compared</param>
+        /// <param name="other">Instance of UserBatchReadRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUserBatchReadRequest? other)
+        public bool Equals(UserBatchReadRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

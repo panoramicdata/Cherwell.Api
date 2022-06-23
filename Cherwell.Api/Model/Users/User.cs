@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Users
 {
     /// <summary>
-    /// UsersUser
+    /// User
     /// </summary>
     [DataContract]
-    public partial class UsersUser : IEquatable<UsersUser>, IValidatableObject
+    public partial class User : IEquatable<User>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsersUser" /> class.
+        /// Initializes a new instance of the <see cref="User" /> class.
         /// </summary>
         /// <param name="AccountLocked">AccountLocked.</param>
         /// <param name="CreateDateTime">CreateDateTime.</param>
@@ -39,7 +39,7 @@ namespace Cherwell.Api.Model.Users
         /// <param name="ShortDisplayName">ShortDisplayName.</param>
         /// <param name="UserCannotChangePassword">UserCannotChangePassword.</param>
         /// <param name="UserMustResetPasswordAtNextLogin">UserMustResetPasswordAtNextLogin.</param>
-        public UsersUser(bool? AccountLocked = default, DateTime? CreateDateTime = default, string DisplayName = default, string Error = default, string ErrorCode = default, List<FieldTemplateItem> Fields = default, bool? HasError = default, DateTime? LastPasswordResetDate = default, DateTime? LastResetDateTime = default, bool? LdapRequired = default, bool? PasswordNeverExpires = default, string PublicId = default, string RecordId = default, string SecurityGroupId = default, string ShortDisplayName = default, bool? UserCannotChangePassword = default, bool? UserMustResetPasswordAtNextLogin = default)
+        public User(bool? AccountLocked = default, DateTime? CreateDateTime = default, string DisplayName = default, string Error = default, string ErrorCode = default, List<FieldTemplateItem> Fields = default, bool? HasError = default, DateTime? LastPasswordResetDate = default, DateTime? LastResetDateTime = default, bool? LdapRequired = default, bool? PasswordNeverExpires = default, string PublicId = default, string RecordId = default, string SecurityGroupId = default, string ShortDisplayName = default, bool? UserCannotChangePassword = default, bool? UserMustResetPasswordAtNextLogin = default)
         {
             this.AccountLocked = AccountLocked;
             this.CreateDateTime = CreateDateTime;
@@ -152,7 +152,7 @@ namespace Cherwell.Api.Model.Users
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UsersUser {\n");
+            sb.Append("class User {\n");
             sb.Append("  AccountLocked: ").Append(AccountLocked).Append('\n');
             sb.Append("  CreateDateTime: ").Append(CreateDateTime).Append('\n');
             sb.Append("  DisplayName: ").Append(DisplayName).Append('\n');
@@ -191,15 +191,15 @@ namespace Cherwell.Api.Model.Users
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return Equals(obj as UsersUser);
+            return Equals(obj as User);
         }
 
         /// <summary>
-        /// Returns true if UsersUser instances are equal
+        /// Returns true if User instances are equal
         /// </summary>
-        /// <param name="other">Instance of UsersUser to be compared</param>
+        /// <param name="other">Instance of User to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUser? other)
+        public bool Equals(User? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

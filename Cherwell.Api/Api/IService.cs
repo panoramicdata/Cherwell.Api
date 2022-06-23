@@ -54,9 +54,9 @@ namespace Cherwell.Api
         /// <param name="refresh_token">Specify the refresh token used to grant another access token. (optional)</param>
         /// <param name="auth_mode">Specify the Authentication Mode to use for requesting an access token. (optional)</param>
         /// <param name="site_name">If for portal specify the Site name to use for requesting an access token. (optional)</param>
-        /// <returns>Task of SecurityTokenResponse</returns>
+        /// <returns>Task of TokenResponse</returns>
         [Post("/token")]
-        Task<SecurityTokenResponse> ServiceToken([Header("UserAgent")] string userAgent, string grant_type, string client_id, string client_secret = null, string username = null, string password = null, string refresh_token = null, [AliasAs("auth_mode")]string auth_mode = null, [AliasAs("site_name")]string site_name = null);
+        Task<TokenResponse> ServiceToken([Header("UserAgent")] string userAgent, string grant_type, string client_id, string client_secret = null, string username = null, string password = null, string refresh_token = null, [AliasAs("auth_mode")]string auth_mode = null, [AliasAs("site_name")]string site_name = null);
         #endregion Asynchronous Operations
     }
 }

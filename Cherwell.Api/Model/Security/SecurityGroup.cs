@@ -11,21 +11,21 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Api.Model
+namespace Cherwell.Api.Model.Security
 {
     /// <summary>
-    /// SecuritySecurityGroup
+    /// SecurityGroup
     /// </summary>
     [DataContract]
-    public partial class SecuritySecurityGroup :  IEquatable<SecuritySecurityGroup>, IValidatableObject
+    public partial class SecurityGroup :  IEquatable<SecurityGroup>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecuritySecurityGroup" /> class.
+        /// Initializes a new instance of the <see cref="SecurityGroup" /> class.
         /// </summary>
         /// <param name="Description">Description.</param>
         /// <param name="GroupId">GroupId.</param>
         /// <param name="GroupName">GroupName.</param>
-        public SecuritySecurityGroup(string Description = default, string GroupId = default, string GroupName = default)
+        public SecurityGroup(string Description = default, string GroupId = default, string GroupName = default)
         {
             this.Description = Description;
             this.GroupId = GroupId;
@@ -79,15 +79,15 @@ namespace Cherwell.Api.Model
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SecuritySecurityGroup);
+            return this.Equals(obj as SecurityGroup);
         }
 
         /// <summary>
-        /// Returns true if SecuritySecurityGroup instances are equal
+        /// Returns true if SecurityGroup instances are equal
         /// </summary>
-        /// <param name="other">Instance of SecuritySecurityGroup to be compared</param>
+        /// <param name="other">Instance of SecurityGroup to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecuritySecurityGroup? other)
+        public bool Equals(SecurityGroup? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

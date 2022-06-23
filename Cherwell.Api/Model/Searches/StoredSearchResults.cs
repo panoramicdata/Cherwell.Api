@@ -17,14 +17,14 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesStoredSearchResults
     /// </summary>
     [DataContract]
-    public partial class SearchesStoredSearchResults : IEquatable<SearchesStoredSearchResults>, IValidatableObject
+    public partial class StoredSearchResults : IEquatable<StoredSearchResults>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesStoredSearchResults" /> class.
+        /// Initializes a new instance of the <see cref="StoredSearchResults" /> class.
         /// </summary>
         /// <param name="Columns">Columns.</param>
         /// <param name="Rows">Rows.</param>
-        public SearchesStoredSearchResults(List<SearchesColumnSchema> Columns = default(List<SearchesColumnSchema>), List<List<Object>> Rows = default(List<List<Object>>))
+        public StoredSearchResults(List<ColumnSchema> Columns = default(List<ColumnSchema>), List<List<Object>> Rows = default(List<List<Object>>))
         {
             this.Columns = Columns;
             this.Rows = Rows;
@@ -34,7 +34,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets Columns
         /// </summary>
         [DataMember(Name = "columns", EmitDefaultValue = false)]
-        public List<SearchesColumnSchema> Columns { get; set; }
+        public List<ColumnSchema> Columns { get; set; }
         /// <summary>
         /// Gets or Sets Rows
         /// </summary>
@@ -71,7 +71,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesStoredSearchResults);
+            return this.Equals(obj as StoredSearchResults);
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesStoredSearchResults to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesStoredSearchResults? other)
+        public bool Equals(StoredSearchResults? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

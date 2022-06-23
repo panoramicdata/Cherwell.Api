@@ -17,10 +17,10 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesRelatedBusinessObjectRequest
     /// </summary>
     [DataContract]
-    public partial class SearchesRelatedBusinessObjectRequest : IEquatable<SearchesRelatedBusinessObjectRequest>, IValidatableObject
+    public partial class RelatedBusinessObjectRequest : IEquatable<RelatedBusinessObjectRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesRelatedBusinessObjectRequest" /> class.
+        /// Initializes a new instance of the <see cref="RelatedBusinessObjectRequest" /> class.
         /// </summary>
         /// <param name="AllFields">AllFields.</param>
         /// <param name="CustomGridId">CustomGridId.</param>
@@ -33,7 +33,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="RelationshipId">RelationshipId.</param>
         /// <param name="Sorting">Sorting.</param>
         /// <param name="UseDefaultGrid">UseDefaultGrid.</param>
-        public SearchesRelatedBusinessObjectRequest(bool? AllFields = default(bool?), string CustomGridId = default, List<string> FieldsList = default(List<string>), List<SearchesFilterInfo> Filters = default(List<SearchesFilterInfo>), int? PageNumber = default(int?), int? PageSize = default(int?), string ParentBusObId = default, string ParentBusObRecId = default, string RelationshipId = default, List<SearchesSortInfo> Sorting = default(List<SearchesSortInfo>), bool? UseDefaultGrid = default(bool?))
+        public RelatedBusinessObjectRequest(bool? AllFields = default(bool?), string CustomGridId = default, List<string> FieldsList = default(List<string>), List<FilterInfo> Filters = default(List<FilterInfo>), int? PageNumber = default(int?), int? PageSize = default(int?), string ParentBusObId = default, string ParentBusObRecId = default, string RelationshipId = default, List<SortInfo> Sorting = default(List<SortInfo>), bool? UseDefaultGrid = default(bool?))
         {
             this.AllFields = AllFields;
             this.CustomGridId = CustomGridId;
@@ -67,7 +67,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets Filters
         /// </summary>
         [DataMember(Name = "filters", EmitDefaultValue = false)]
-        public List<SearchesFilterInfo> Filters { get; set; }
+        public List<FilterInfo> Filters { get; set; }
         /// <summary>
         /// Gets or Sets PageNumber
         /// </summary>
@@ -97,7 +97,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets Sorting
         /// </summary>
         [DataMember(Name = "sorting", EmitDefaultValue = false)]
-        public List<SearchesSortInfo> Sorting { get; set; }
+        public List<SortInfo> Sorting { get; set; }
         /// <summary>
         /// Gets or Sets UseDefaultGrid
         /// </summary>
@@ -143,7 +143,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesRelatedBusinessObjectRequest);
+            return this.Equals(obj as RelatedBusinessObjectRequest);
         }
 
         /// <summary>
@@ -151,7 +151,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesRelatedBusinessObjectRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesRelatedBusinessObjectRequest? other)
+        public bool Equals(RelatedBusinessObjectRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

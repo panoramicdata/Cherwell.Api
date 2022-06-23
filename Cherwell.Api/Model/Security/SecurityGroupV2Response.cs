@@ -11,13 +11,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Api.Model
+namespace Cherwell.Api.Model.Security
 {
     /// <summary>
-    /// SecuritySecurityGroupV2Response
+    /// SecurityGroupV2Response
     /// </summary>
     [DataContract]
-    public partial class SecuritySecurityGroupV2Response :  IEquatable<SecuritySecurityGroupV2Response>, IValidatableObject
+    public partial class SecurityGroupV2Response :  IEquatable<SecurityGroupV2Response>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Api.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecuritySecurityGroupV2Response" /> class.
+        /// Initializes a new instance of the <see cref="SecurityGroupV2Response" /> class.
         /// </summary>
         /// <param name="SecurityGroups">SecurityGroups.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SecuritySecurityGroupV2Response(List<SecuritySecurityGroup> SecurityGroups = default(List<SecuritySecurityGroup>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public SecurityGroupV2Response(List<SecurityGroup> SecurityGroups = default(List<SecurityGroup>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.SecurityGroups = SecurityGroups;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Api.Model
         /// Gets or Sets SecurityGroups
         /// </summary>
         [DataMember(Name="securityGroups", EmitDefaultValue=false)]
-        public List<SecuritySecurityGroup> SecurityGroups { get; set; }
+        public List<SecurityGroup> SecurityGroups { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -385,15 +385,15 @@ namespace Cherwell.Api.Model
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SecuritySecurityGroupV2Response);
+            return this.Equals(obj as SecurityGroupV2Response);
         }
 
         /// <summary>
-        /// Returns true if SecuritySecurityGroupV2Response instances are equal
+        /// Returns true if SecurityGroupV2Response instances are equal
         /// </summary>
-        /// <param name="other">Instance of SecuritySecurityGroupV2Response to be compared</param>
+        /// <param name="other">Instance of SecurityGroupV2Response to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecuritySecurityGroupV2Response? other)
+        public bool Equals(SecurityGroupV2Response? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

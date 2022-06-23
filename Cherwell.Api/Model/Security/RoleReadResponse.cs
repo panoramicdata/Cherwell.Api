@@ -11,22 +11,22 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Api.Model
+namespace Cherwell.Api.Model.Security
 {
     /// <summary>
-    /// SecurityRoleReadResponse
+    /// RoleReadResponse
     /// </summary>
     [DataContract]
-    public partial class SecurityRoleReadResponse :  IEquatable<SecurityRoleReadResponse>, IValidatableObject
+    public partial class RoleReadResponse :  IEquatable<RoleReadResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecurityRoleReadResponse" /> class.
+        /// Initializes a new instance of the <see cref="RoleReadResponse" /> class.
         /// </summary>
         /// <param name="Error">Error.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="Roles">Roles.</param>
-        public SecurityRoleReadResponse(string Error = default, string ErrorCode = default, bool? HasError = default(bool?), List<SecurityRole> Roles = default(List<SecurityRole>))
+        public RoleReadResponse(string Error = default, string ErrorCode = default, bool? HasError = default(bool?), List<Role> Roles = default(List<Role>))
         {
             this.Error = Error;
             this.ErrorCode = ErrorCode;
@@ -53,7 +53,7 @@ namespace Cherwell.Api.Model
         /// Gets or Sets Roles
         /// </summary>
         [DataMember(Name="roles", EmitDefaultValue=false)]
-        public List<SecurityRole> Roles { get; set; }
+        public List<Role> Roles { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -87,15 +87,15 @@ namespace Cherwell.Api.Model
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SecurityRoleReadResponse);
+            return this.Equals(obj as RoleReadResponse);
         }
 
         /// <summary>
-        /// Returns true if SecurityRoleReadResponse instances are equal
+        /// Returns true if RoleReadResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of SecurityRoleReadResponse to be compared</param>
+        /// <param name="other">Instance of RoleReadResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecurityRoleReadResponse? other)
+        public bool Equals(RoleReadResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

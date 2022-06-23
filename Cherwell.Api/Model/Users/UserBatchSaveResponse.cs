@@ -14,16 +14,16 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Users
 {
     /// <summary>
-    /// UsersUserBatchSaveResponse
+    /// UserBatchSaveResponse
     /// </summary>
     [DataContract]
-    public partial class UsersUserBatchSaveResponse : IEquatable<UsersUserBatchSaveResponse>, IValidatableObject
+    public partial class UserBatchSaveResponse : IEquatable<UserBatchSaveResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsersUserBatchSaveResponse" /> class.
+        /// Initializes a new instance of the <see cref="UserBatchSaveResponse" /> class.
         /// </summary>
         /// <param name="Responses">Responses.</param>
-        public UsersUserBatchSaveResponse(List<UsersUserSaveResponse> Responses = default)
+        public UserBatchSaveResponse(List<UserSaveResponse> Responses = default)
         {
             this.Responses = Responses;
         }
@@ -32,7 +32,7 @@ namespace Cherwell.Api.Model.Users
         /// Gets or Sets Responses
         /// </summary>
         [DataMember(Name = "responses", EmitDefaultValue = false)]
-        public List<UsersUserSaveResponse> Responses { get; set; }
+        public List<UserSaveResponse> Responses { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -40,7 +40,7 @@ namespace Cherwell.Api.Model.Users
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UsersUserBatchSaveResponse {\n");
+            sb.Append("class UserBatchSaveResponse {\n");
             sb.Append("  Responses: ").Append(Responses).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
@@ -63,15 +63,15 @@ namespace Cherwell.Api.Model.Users
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return Equals(obj as UsersUserBatchSaveResponse);
+            return Equals(obj as UserBatchSaveResponse);
         }
 
         /// <summary>
-        /// Returns true if UsersUserBatchSaveResponse instances are equal
+        /// Returns true if UserBatchSaveResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of UsersUserBatchSaveResponse to be compared</param>
+        /// <param name="other">Instance of UserBatchSaveResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUserBatchSaveResponse? other)
+        public bool Equals(UserBatchSaveResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

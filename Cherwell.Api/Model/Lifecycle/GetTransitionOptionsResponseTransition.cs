@@ -17,16 +17,16 @@ namespace Cherwell.Api.Model.Lifecycle
     /// LifecycleGetTransitionOptionsResponseTransition
     /// </summary>
     [DataContract]
-    public partial class LifecycleGetTransitionOptionsResponseTransition : IEquatable<LifecycleGetTransitionOptionsResponseTransition>, IValidatableObject
+    public partial class GetTransitionOptionsResponseTransition : IEquatable<GetTransitionOptionsResponseTransition>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="LifecycleGetTransitionOptionsResponseTransition" /> class.
+        /// Initializes a new instance of the <see cref="GetTransitionOptionsResponseTransition" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Id">Id.</param>
         /// <param name="IsAvailable">IsAvailable.</param>
         /// <param name="Criteria">Criteria.</param>
-        public LifecycleGetTransitionOptionsResponseTransition(string Name = default, string Id = default, bool? IsAvailable = default(bool?), List<string> Criteria = default(List<string>))
+        public GetTransitionOptionsResponseTransition(string Name = default, string Id = default, bool? IsAvailable = default(bool?), List<string> Criteria = default(List<string>))
         {
             this.Name = Name;
             this.Id = Id;
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.Lifecycle
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as LifecycleGetTransitionOptionsResponseTransition);
+            return this.Equals(obj as GetTransitionOptionsResponseTransition);
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace Cherwell.Api.Model.Lifecycle
         /// </summary>
         /// <param name="other">Instance of LifecycleGetTransitionOptionsResponseTransition to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(LifecycleGetTransitionOptionsResponseTransition? other)
+        public bool Equals(GetTransitionOptionsResponseTransition? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

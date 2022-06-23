@@ -17,14 +17,14 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesSortInfo
     /// </summary>
     [DataContract]
-    public partial class SearchesSortInfo : IEquatable<SearchesSortInfo>, IValidatableObject
+    public partial class SortInfo : IEquatable<SortInfo>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesSortInfo" /> class.
+        /// Initializes a new instance of the <see cref="SortInfo" /> class.
         /// </summary>
         /// <param name="FieldId">FieldId.</param>
         /// <param name="SortDirection">SortDirection.</param>
-        public SearchesSortInfo(string FieldId = default, int? SortDirection = default(int?))
+        public SortInfo(string FieldId = default, int? SortDirection = default(int?))
         {
             this.FieldId = FieldId;
             this.SortDirection = SortDirection;
@@ -71,7 +71,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesSortInfo);
+            return this.Equals(obj as SortInfo);
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesSortInfo to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesSortInfo? other)
+        public bool Equals(SortInfo? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

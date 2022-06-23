@@ -11,21 +11,21 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Api.Model
+namespace Cherwell.Api.Model.Security
 {
     /// <summary>
-    /// SecurityRightCategory
+    /// RightCategory
     /// </summary>
     [DataContract]
-    public partial class SecurityRightCategory :  IEquatable<SecurityRightCategory>, IValidatableObject
+    public partial class RightCategory :  IEquatable<RightCategory>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecurityRightCategory" /> class.
+        /// Initializes a new instance of the <see cref="RightCategory" /> class.
         /// </summary>
         /// <param name="CategoryDescription">CategoryDescription.</param>
         /// <param name="CategoryId">CategoryId.</param>
         /// <param name="CategoryName">CategoryName.</param>
-        public SecurityRightCategory(string CategoryDescription = default, string CategoryId = default, string CategoryName = default)
+        public RightCategory(string CategoryDescription = default, string CategoryId = default, string CategoryName = default)
         {
             this.CategoryDescription = CategoryDescription;
             this.CategoryId = CategoryId;
@@ -79,15 +79,15 @@ namespace Cherwell.Api.Model
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SecurityRightCategory);
+            return this.Equals(obj as RightCategory);
         }
 
         /// <summary>
-        /// Returns true if SecurityRightCategory instances are equal
+        /// Returns true if RightCategory instances are equal
         /// </summary>
-        /// <param name="other">Instance of SecurityRightCategory to be compared</param>
+        /// <param name="other">Instance of RightCategory to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecurityRightCategory? other)
+        public bool Equals(RightCategory? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

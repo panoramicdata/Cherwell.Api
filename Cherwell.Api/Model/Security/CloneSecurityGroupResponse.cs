@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Security
 {
     /// <summary>
-    /// SecurityCloneSecurityGroupResponse
+    /// CloneSecurityGroupResponse
     /// </summary>
     [DataContract]
-    public partial class SecurityCloneSecurityGroupResponse : IEquatable<SecurityCloneSecurityGroupResponse>, IValidatableObject
+    public partial class CloneSecurityGroupResponse : IEquatable<CloneSecurityGroupResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Api.Model.Security
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecurityCloneSecurityGroupResponse" /> class.
+        /// Initializes a new instance of the <see cref="CloneSecurityGroupResponse" /> class.
         /// </summary>
         /// <param name="SecurityGroupId">SecurityGroupId.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SecurityCloneSecurityGroupResponse(string SecurityGroupId = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public CloneSecurityGroupResponse(string SecurityGroupId = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.SecurityGroupId = SecurityGroupId;
             this.ErrorCode = ErrorCode;
@@ -385,15 +385,15 @@ namespace Cherwell.Api.Model.Security
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SecurityCloneSecurityGroupResponse);
+            return this.Equals(obj as CloneSecurityGroupResponse);
         }
 
         /// <summary>
-        /// Returns true if SecurityCloneSecurityGroupResponse instances are equal
+        /// Returns true if CloneSecurityGroupResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of SecurityCloneSecurityGroupResponse to be compared</param>
+        /// <param name="other">Instance of CloneSecurityGroupResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecurityCloneSecurityGroupResponse? other)
+        public bool Equals(CloneSecurityGroupResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

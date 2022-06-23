@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.OneStepActions
     /// OneStepActionsOneStepActionResponse
     /// </summary>
     [DataContract]
-    public partial class OneStepActionsOneStepActionResponse : IEquatable<OneStepActionsOneStepActionResponse>, IValidatableObject
+    public partial class OneStepActionResponse : IEquatable<OneStepActionResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Api.Model.OneStepActions
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="OneStepActionsOneStepActionResponse" /> class.
+        /// Initializes a new instance of the <see cref="OneStepActionResponse" /> class.
         /// </summary>
         /// <param name="Completed">Completed.</param>
         /// <param name="CurrentPrimaryBusObId">CurrentPrimaryBusObId.</param>
@@ -326,7 +326,7 @@ namespace Cherwell.Api.Model.OneStepActions
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public OneStepActionsOneStepActionResponse(bool? Completed = default(bool?), string CurrentPrimaryBusObId = default, string CurrentPrimaryBusObRecId = default, bool? HasNewAccessToken = default(bool?), string NewAccessToken = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public OneStepActionResponse(bool? Completed = default(bool?), string CurrentPrimaryBusObId = default, string CurrentPrimaryBusObRecId = default, bool? HasNewAccessToken = default(bool?), string NewAccessToken = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Completed = Completed;
             this.CurrentPrimaryBusObId = CurrentPrimaryBusObId;
@@ -417,7 +417,7 @@ namespace Cherwell.Api.Model.OneStepActions
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as OneStepActionsOneStepActionResponse);
+            return this.Equals(obj as OneStepActionResponse);
         }
 
         /// <summary>
@@ -425,7 +425,7 @@ namespace Cherwell.Api.Model.OneStepActions
         /// </summary>
         /// <param name="other">Instance of OneStepActionsOneStepActionResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(OneStepActionsOneStepActionResponse? other)
+        public bool Equals(OneStepActionResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Teams
 {
     /// <summary>
-    /// TeamsTeamResponse
+    /// TeamResponse
     /// </summary>
     [DataContract]
-    public partial class TeamsTeamResponse :  IEquatable<TeamsTeamResponse>, IValidatableObject
+    public partial class TeamResponse :  IEquatable<TeamResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets TeamType
@@ -340,7 +340,7 @@ namespace Cherwell.Api.Model.Teams
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TeamsTeamResponse" /> class.
+        /// Initializes a new instance of the <see cref="TeamResponse" /> class.
         /// </summary>
         /// <param name="Description">Description.</param>
         /// <param name="EmailAlias">EmailAlias.</param>
@@ -353,7 +353,7 @@ namespace Cherwell.Api.Model.Teams
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TeamsTeamResponse(string Description = default, string EmailAlias = default, List<FieldTemplateItem> Fields = default(List<FieldTemplateItem>), string Image = default, string Name = default, string TeamId = default, EnumTeamType? TeamType = default(EnumTeamType?), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public TeamResponse(string Description = default, string EmailAlias = default, List<FieldTemplateItem> Fields = default(List<FieldTemplateItem>), string Image = default, string Name = default, string TeamId = default, EnumTeamType? TeamType = default(EnumTeamType?), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Description = Description;
             this.EmailAlias = EmailAlias;
@@ -453,15 +453,15 @@ namespace Cherwell.Api.Model.Teams
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TeamsTeamResponse);
+            return this.Equals(obj as TeamResponse);
         }
 
         /// <summary>
-        /// Returns true if TeamsTeamResponse instances are equal
+        /// Returns true if TeamResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TeamsTeamResponse to be compared</param>
+        /// <param name="other">Instance of TeamResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsTeamResponse? other)
+        public bool Equals(TeamResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

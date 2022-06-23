@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Teams
 {
     /// <summary>
-    /// TeamsAddUserToTeamResponse
+    /// AddUserToTeamResponse
     /// </summary>
     [DataContract]
-    public partial class TeamsAddUserToTeamResponse :  IEquatable<TeamsAddUserToTeamResponse>, IValidatableObject
+    public partial class AddUserToTeamResponse :  IEquatable<AddUserToTeamResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,13 +315,13 @@ namespace Cherwell.Api.Model.Teams
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TeamsAddUserToTeamResponse" /> class.
+        /// Initializes a new instance of the <see cref="AddUserToTeamResponse" /> class.
         /// </summary>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TeamsAddUserToTeamResponse(string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public AddUserToTeamResponse(string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.ErrorCode = ErrorCode;
             this.ErrorMessage = ErrorMessage;
@@ -377,15 +377,15 @@ namespace Cherwell.Api.Model.Teams
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TeamsAddUserToTeamResponse);
+            return this.Equals(obj as AddUserToTeamResponse);
         }
 
         /// <summary>
-        /// Returns true if TeamsAddUserToTeamResponse instances are equal
+        /// Returns true if AddUserToTeamResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TeamsAddUserToTeamResponse to be compared</param>
+        /// <param name="other">Instance of AddUserToTeamResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsAddUserToTeamResponse? other)
+        public bool Equals(AddUserToTeamResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

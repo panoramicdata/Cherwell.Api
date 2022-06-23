@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Teams
 {
     /// <summary>
-    /// TeamsRemoveUserFromTeamResponse
+    /// RemoveUserFromTeamResponse
     /// </summary>
     [DataContract]
-    public partial class TeamsRemoveUserFromTeamResponse :  IEquatable<TeamsRemoveUserFromTeamResponse>, IValidatableObject
+    public partial class RemoveUserFromTeamResponse :  IEquatable<RemoveUserFromTeamResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Api.Model.Teams
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TeamsRemoveUserFromTeamResponse" /> class.
+        /// Initializes a new instance of the <see cref="RemoveUserFromTeamResponse" /> class.
         /// </summary>
         /// <param name="TeamId">TeamId.</param>
         /// <param name="UserRecordId">UserRecordId.</param>
@@ -323,7 +323,7 @@ namespace Cherwell.Api.Model.Teams
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TeamsRemoveUserFromTeamResponse(string TeamId = default, string UserRecordId = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public RemoveUserFromTeamResponse(string TeamId = default, string UserRecordId = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.TeamId = TeamId;
             this.UserRecordId = UserRecordId;
@@ -393,15 +393,15 @@ namespace Cherwell.Api.Model.Teams
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TeamsRemoveUserFromTeamResponse);
+            return this.Equals(obj as RemoveUserFromTeamResponse);
         }
 
         /// <summary>
-        /// Returns true if TeamsRemoveUserFromTeamResponse instances are equal
+        /// Returns true if RemoveUserFromTeamResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TeamsRemoveUserFromTeamResponse to be compared</param>
+        /// <param name="other">Instance of RemoveUserFromTeamResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsRemoveUserFromTeamResponse? other)
+        public bool Equals(RemoveUserFromTeamResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

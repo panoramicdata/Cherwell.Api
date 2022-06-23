@@ -14,17 +14,17 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Users
 {
     /// <summary>
-    /// UsersUserBatchDeleteRequest
+    /// UserBatchDeleteRequest
     /// </summary>
     [DataContract]
-    public partial class UsersUserBatchDeleteRequest : IEquatable<UsersUserBatchDeleteRequest>, IValidatableObject
+    public partial class UserBatchDeleteRequest : IEquatable<UserBatchDeleteRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsersUserBatchDeleteRequest" /> class.
+        /// Initializes a new instance of the <see cref="UserBatchDeleteRequest" /> class.
         /// </summary>
         /// <param name="StopOnError">StopOnError.</param>
         /// <param name="UserRecordIds">UserRecordIds.</param>
-        public UsersUserBatchDeleteRequest(bool? StopOnError = default, List<string> UserRecordIds = default)
+        public UserBatchDeleteRequest(bool? StopOnError = default, List<string> UserRecordIds = default)
         {
             this.StopOnError = StopOnError;
             this.UserRecordIds = UserRecordIds;
@@ -47,7 +47,7 @@ namespace Cherwell.Api.Model.Users
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UsersUserBatchDeleteRequest {\n");
+            sb.Append("class UserBatchDeleteRequest {\n");
             sb.Append("  StopOnError: ").Append(StopOnError).Append('\n');
             sb.Append("  UserRecordIds: ").Append(UserRecordIds).Append('\n');
             sb.Append("}\n");
@@ -71,15 +71,15 @@ namespace Cherwell.Api.Model.Users
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return Equals(obj as UsersUserBatchDeleteRequest);
+            return Equals(obj as UserBatchDeleteRequest);
         }
 
         /// <summary>
-        /// Returns true if UsersUserBatchDeleteRequest instances are equal
+        /// Returns true if UserBatchDeleteRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of UsersUserBatchDeleteRequest to be compared</param>
+        /// <param name="other">Instance of UserBatchDeleteRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUserBatchDeleteRequest? other)
+        public bool Equals(UserBatchDeleteRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -17,10 +17,10 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesField
     /// </summary>
     [DataContract]
-    public partial class SearchesField : IEquatable<SearchesField>, IValidatableObject
+    public partial class Field : IEquatable<Field>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesField" /> class.
+        /// Initializes a new instance of the <see cref="Field" /> class.
         /// </summary>
         /// <param name="Caption">Caption.</param>
         /// <param name="CurrencyCulture">CurrencyCulture.</param>
@@ -45,7 +45,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="SortOrder">SortOrder.</param>
         /// <param name="StorageName">StorageName.</param>
         /// <param name="WholeDigits">WholeDigits.</param>
-        public SearchesField(string Caption = default, string CurrencyCulture = default, string CurrencySymbol = default, int? DecimalDigits = default(int?), bool? DefaultSortOrderAscending = default(bool?), string DisplayName = default, string FieldName = default, string FullFieldId = default, bool? HasDefaultSortField = default(bool?), string FieldId = default, bool? IsBinary = default(bool?), bool? IsCurrency = default(bool?), bool? IsDateTime = default(bool?), bool? IsFilterAllowed = default(bool?), bool? IsLogical = default(bool?), bool? IsNumber = default(bool?), bool? IsShortDate = default(bool?), bool? IsShortTime = default(bool?), bool? IsVisible = default(bool?), bool? Sortable = default(bool?), string SortOrder = default, string StorageName = default, int? WholeDigits = default(int?))
+        public Field(string Caption = default, string CurrencyCulture = default, string CurrencySymbol = default, int? DecimalDigits = default(int?), bool? DefaultSortOrderAscending = default(bool?), string DisplayName = default, string FieldName = default, string FullFieldId = default, bool? HasDefaultSortField = default(bool?), string FieldId = default, bool? IsBinary = default(bool?), bool? IsCurrency = default(bool?), bool? IsDateTime = default(bool?), bool? IsFilterAllowed = default(bool?), bool? IsLogical = default(bool?), bool? IsNumber = default(bool?), bool? IsShortDate = default(bool?), bool? IsShortTime = default(bool?), bool? IsVisible = default(bool?), bool? Sortable = default(bool?), string SortOrder = default, string StorageName = default, int? WholeDigits = default(int?))
         {
             this.Caption = Caption;
             this.CurrencyCulture = CurrencyCulture;
@@ -239,7 +239,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesField);
+            return this.Equals(obj as Field);
         }
 
         /// <summary>
@@ -247,7 +247,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesField to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesField? other)
+        public bool Equals(Field? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

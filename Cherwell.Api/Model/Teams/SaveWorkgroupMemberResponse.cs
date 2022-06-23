@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Teams
 {
     /// <summary>
-    /// TeamsSaveWorkgroupMemberResponse
+    /// SaveWorkgroupMemberResponse
     /// </summary>
     [DataContract]
-    public partial class TeamsSaveWorkgroupMemberResponse :  IEquatable<TeamsSaveWorkgroupMemberResponse>, IValidatableObject
+    public partial class SaveWorkgroupMemberResponse :  IEquatable<SaveWorkgroupMemberResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,13 +315,13 @@ namespace Cherwell.Api.Model.Teams
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TeamsSaveWorkgroupMemberResponse" /> class.
+        /// Initializes a new instance of the <see cref="SaveWorkgroupMemberResponse" /> class.
         /// </summary>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TeamsSaveWorkgroupMemberResponse(string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public SaveWorkgroupMemberResponse(string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.ErrorCode = ErrorCode;
             this.ErrorMessage = ErrorMessage;
@@ -377,15 +377,15 @@ namespace Cherwell.Api.Model.Teams
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TeamsSaveWorkgroupMemberResponse);
+            return this.Equals(obj as SaveWorkgroupMemberResponse);
         }
 
         /// <summary>
-        /// Returns true if TeamsSaveWorkgroupMemberResponse instances are equal
+        /// Returns true if SaveWorkgroupMemberResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TeamsSaveWorkgroupMemberResponse to be compared</param>
+        /// <param name="other">Instance of SaveWorkgroupMemberResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsSaveWorkgroupMemberResponse? other)
+        public bool Equals(SaveWorkgroupMemberResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

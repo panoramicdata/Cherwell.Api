@@ -17,10 +17,10 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesSearchResultsRow
     /// </summary>
     [DataContract]
-    public partial class SearchesSearchResultsRow : IEquatable<SearchesSearchResultsRow>, IValidatableObject
+    public partial class SearchResultsRow : IEquatable<SearchResultsRow>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesSearchResultsRow" /> class.
+        /// Initializes a new instance of the <see cref="SearchResultsRow" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObRecId">BusObRecId.</param>
@@ -28,7 +28,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="PublicId">PublicId.</param>
         /// <param name="RowColor">RowColor.</param>
         /// <param name="SearchResultsFieldValues">SearchResultsFieldValues.</param>
-        public SearchesSearchResultsRow(string BusObId = default, string BusObRecId = default, List<Link> Links = default(List<Link>), string PublicId = default, string RowColor = default, List<FieldTemplateItem> SearchResultsFieldValues = default(List<FieldTemplateItem>))
+        public SearchResultsRow(string BusObId = default, string BusObRecId = default, List<Link> Links = default(List<Link>), string PublicId = default, string RowColor = default, List<FieldTemplateItem> SearchResultsFieldValues = default(List<FieldTemplateItem>))
         {
             this.BusObId = BusObId;
             this.BusObRecId = BusObRecId;
@@ -103,7 +103,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesSearchResultsRow);
+            return this.Equals(obj as SearchResultsRow);
         }
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesSearchResultsRow to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesSearchResultsRow? other)
+        public bool Equals(SearchResultsRow? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

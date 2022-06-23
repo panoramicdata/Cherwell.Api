@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Security
 {
     /// <summary>
-    /// SecurityMobileCredentialsModeResponse
+    /// MobileCredentialsModeResponse
     /// </summary>
     [DataContract]
-    public partial class SecurityMobileCredentialsModeResponse : IEquatable<SecurityMobileCredentialsModeResponse>, IValidatableObject
+    public partial class MobileCredentialsModeResponse : IEquatable<MobileCredentialsModeResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Api.Model.Security
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecurityMobileCredentialsModeResponse" /> class.
+        /// Initializes a new instance of the <see cref="MobileCredentialsModeResponse" /> class.
         /// </summary>
         /// <param name="CredentialsMode">CredentialsMode.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SecurityMobileCredentialsModeResponse(int? CredentialsMode = default(int?), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public MobileCredentialsModeResponse(int? CredentialsMode = default(int?), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.CredentialsMode = CredentialsMode;
             this.ErrorCode = ErrorCode;
@@ -385,15 +385,15 @@ namespace Cherwell.Api.Model.Security
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SecurityMobileCredentialsModeResponse);
+            return this.Equals(obj as MobileCredentialsModeResponse);
         }
 
         /// <summary>
-        /// Returns true if SecurityMobileCredentialsModeResponse instances are equal
+        /// Returns true if MobileCredentialsModeResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of SecurityMobileCredentialsModeResponse to be compared</param>
+        /// <param name="other">Instance of MobileCredentialsModeResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecurityMobileCredentialsModeResponse? other)
+        public bool Equals(MobileCredentialsModeResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

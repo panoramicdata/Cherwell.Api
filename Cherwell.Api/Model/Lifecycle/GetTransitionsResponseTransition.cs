@@ -17,16 +17,16 @@ namespace Cherwell.Api.Model.Lifecycle
     /// LifecycleGetTransitionsResponseTransition
     /// </summary>
     [DataContract]
-    public partial class LifecycleGetTransitionsResponseTransition : IEquatable<LifecycleGetTransitionsResponseTransition>, IValidatableObject
+    public partial class GetTransitionsResponseTransition : IEquatable<GetTransitionsResponseTransition>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="LifecycleGetTransitionsResponseTransition" /> class.
+        /// Initializes a new instance of the <see cref="GetTransitionsResponseTransition" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="Name">Name.</param>
         /// <param name="FromStatusId">FromStatusId.</param>
         /// <param name="ToStatusId">ToStatusId.</param>
-        public LifecycleGetTransitionsResponseTransition(string Id = default, string Name = default, string FromStatusId = default, string ToStatusId = default)
+        public GetTransitionsResponseTransition(string Id = default, string Name = default, string FromStatusId = default, string ToStatusId = default)
         {
             this.Id = Id;
             this.Name = Name;
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.Lifecycle
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as LifecycleGetTransitionsResponseTransition);
+            return this.Equals(obj as GetTransitionsResponseTransition);
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace Cherwell.Api.Model.Lifecycle
         /// </summary>
         /// <param name="other">Instance of LifecycleGetTransitionsResponseTransition to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(LifecycleGetTransitionsResponseTransition? other)
+        public bool Equals(GetTransitionsResponseTransition? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

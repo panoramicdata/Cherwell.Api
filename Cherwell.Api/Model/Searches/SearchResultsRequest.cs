@@ -17,10 +17,10 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesSearchResultsRequest
     /// </summary>
     [DataContract]
-    public partial class SearchesSearchResultsRequest : IEquatable<SearchesSearchResultsRequest>, IValidatableObject
+    public partial class SearchResultsRequest : IEquatable<SearchResultsRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesSearchResultsRequest" /> class.
+        /// Initializes a new instance of the <see cref="SearchResultsRequest" /> class.
         /// </summary>
         /// <param name="Association">Association.</param>
         /// <param name="AssociationName">AssociationName.</param>
@@ -41,7 +41,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="SearchText">SearchText.</param>
         /// <param name="Sorting">Sorting.</param>
         /// <param name="PromptValues">PromptValues.</param>
-        public SearchesSearchResultsRequest(string Association = default, string AssociationName = default, string BusObId = default, string CustomGridDefId = default, string DateTimeFormatting = default, string FieldId = default, List<string> Fields = default(List<string>), List<SearchesFilterInfo> Filters = default(List<SearchesFilterInfo>), bool? IncludeAllFields = default(bool?), bool? IncludeSchema = default(bool?), int? PageNumber = default(int?), int? PageSize = default(int?), string Scope = default, string ScopeOwner = default, string SearchId = default, string SearchName = default, string SearchText = default, List<SearchesSortInfo> Sorting = default(List<SearchesSortInfo>), List<PromptValue> PromptValues = default(List<PromptValue>))
+        public SearchResultsRequest(string Association = default, string AssociationName = default, string BusObId = default, string CustomGridDefId = default, string DateTimeFormatting = default, string FieldId = default, List<string> Fields = default(List<string>), List<FilterInfo> Filters = default(List<FilterInfo>), bool? IncludeAllFields = default(bool?), bool? IncludeSchema = default(bool?), int? PageNumber = default(int?), int? PageSize = default(int?), string Scope = default, string ScopeOwner = default, string SearchId = default, string SearchName = default, string SearchText = default, List<SortInfo> Sorting = default(List<SortInfo>), List<PromptValue> PromptValues = default(List<PromptValue>))
         {
             this.Association = Association;
             this.AssociationName = AssociationName;
@@ -103,7 +103,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets Filters
         /// </summary>
         [DataMember(Name = "filters", EmitDefaultValue = false)]
-        public List<SearchesFilterInfo> Filters { get; set; }
+        public List<FilterInfo> Filters { get; set; }
         /// <summary>
         /// Gets or Sets IncludeAllFields
         /// </summary>
@@ -153,7 +153,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets Sorting
         /// </summary>
         [DataMember(Name = "sorting", EmitDefaultValue = false)]
-        public List<SearchesSortInfo> Sorting { get; set; }
+        public List<SortInfo> Sorting { get; set; }
         /// <summary>
         /// Gets or Sets PromptValues
         /// </summary>
@@ -207,7 +207,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesSearchResultsRequest);
+            return this.Equals(obj as SearchResultsRequest);
         }
 
         /// <summary>
@@ -215,7 +215,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesSearchResultsRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesSearchResultsRequest? other)
+        public bool Equals(SearchResultsRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

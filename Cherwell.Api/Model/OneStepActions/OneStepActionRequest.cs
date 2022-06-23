@@ -17,17 +17,17 @@ namespace Cherwell.Api.Model.OneStepActions
     /// OneStepActionsOneStepActionRequest
     /// </summary>
     [DataContract]
-    public partial class OneStepActionsOneStepActionRequest : IEquatable<OneStepActionsOneStepActionRequest>, IValidatableObject
+    public partial class OneStepActionRequest : IEquatable<OneStepActionRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="OneStepActionsOneStepActionRequest" /> class.
+        /// Initializes a new instance of the <see cref="OneStepActionRequest" /> class.
         /// </summary>
         /// <param name="AcquireLicense">AcquireLicense.</param>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObRecId">BusObRecId.</param>
         /// <param name="OneStepActionStandInKey">OneStepActionStandInKey.</param>
         /// <param name="PromptValues">PromptValues.</param>
-        public OneStepActionsOneStepActionRequest(bool? AcquireLicense = default(bool?), string BusObId = default, string BusObRecId = default, string OneStepActionStandInKey = default, List<SimplePromptValue> PromptValues = default(List<SimplePromptValue>))
+        public OneStepActionRequest(bool? AcquireLicense = default(bool?), string BusObId = default, string BusObRecId = default, string OneStepActionStandInKey = default, List<SimplePromptValue> PromptValues = default(List<SimplePromptValue>))
         {
             this.AcquireLicense = AcquireLicense;
             this.BusObId = BusObId;
@@ -95,7 +95,7 @@ namespace Cherwell.Api.Model.OneStepActions
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as OneStepActionsOneStepActionRequest);
+            return this.Equals(obj as OneStepActionRequest);
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace Cherwell.Api.Model.OneStepActions
         /// </summary>
         /// <param name="other">Instance of OneStepActionsOneStepActionRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(OneStepActionsOneStepActionRequest? other)
+        public bool Equals(OneStepActionRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

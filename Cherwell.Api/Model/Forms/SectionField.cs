@@ -17,10 +17,10 @@ namespace Cherwell.Api.Model.Forms
     /// FormsSectionField
     /// </summary>
     [DataContract]
-    public partial class FormsSectionField : IEquatable<FormsSectionField>, IValidatableObject
+    public partial class SectionField : IEquatable<SectionField>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="FormsSectionField" /> class.
+        /// Initializes a new instance of the <see cref="SectionField" /> class.
         /// </summary>
         /// <param name="Attributes">Attributes.</param>
         /// <param name="FieldId">FieldId.</param>
@@ -28,7 +28,7 @@ namespace Cherwell.Api.Model.Forms
         /// <param name="Label">Label.</param>
         /// <param name="Multiline">Multiline.</param>
         /// <param name="Value">Value.</param>
-        public FormsSectionField(List<Object> Attributes = default(List<Object>), string FieldId = default, string FieldType = default, string Label = default, bool? Multiline = default(bool?), string Value = default)
+        public SectionField(List<Object> Attributes = default(List<Object>), string FieldId = default, string FieldType = default, string Label = default, bool? Multiline = default(bool?), string Value = default)
         {
             this.Attributes = Attributes;
             this.FieldId = FieldId;
@@ -103,7 +103,7 @@ namespace Cherwell.Api.Model.Forms
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as FormsSectionField);
+            return this.Equals(obj as SectionField);
         }
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace Cherwell.Api.Model.Forms
         /// </summary>
         /// <param name="other">Instance of FormsSectionField to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(FormsSectionField? other)
+        public bool Equals(SectionField? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

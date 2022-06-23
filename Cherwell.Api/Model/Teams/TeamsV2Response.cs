@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Teams
 {
     /// <summary>
-    /// TeamsTeamsV2Response
+    /// TeamsV2Response
     /// </summary>
     [DataContract]
-    public partial class TeamsTeamsV2Response :  IEquatable<TeamsTeamsV2Response>, IValidatableObject
+    public partial class TeamsV2Response :  IEquatable<TeamsV2Response>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Api.Model.Teams
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TeamsTeamsV2Response" /> class.
+        /// Initializes a new instance of the <see cref="TeamsV2Response" /> class.
         /// </summary>
         /// <param name="Teams">Teams.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TeamsTeamsV2Response(List<TeamsTeam> Teams = default(List<TeamsTeam>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public TeamsV2Response(List<Team> Teams = default(List<Team>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Teams = Teams;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Api.Model.Teams
         /// Gets or Sets Teams
         /// </summary>
         [DataMember(Name="teams", EmitDefaultValue=false)]
-        public List<TeamsTeam> Teams { get; set; }
+        public List<Team> Teams { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -385,15 +385,15 @@ namespace Cherwell.Api.Model.Teams
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TeamsTeamsV2Response);
+            return this.Equals(obj as TeamsV2Response);
         }
 
         /// <summary>
-        /// Returns true if TeamsTeamsV2Response instances are equal
+        /// Returns true if TeamsV2Response instances are equal
         /// </summary>
-        /// <param name="other">Instance of TeamsTeamsV2Response to be compared</param>
+        /// <param name="other">Instance of TeamsV2Response to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsTeamsV2Response? other)
+        public bool Equals(TeamsV2Response? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

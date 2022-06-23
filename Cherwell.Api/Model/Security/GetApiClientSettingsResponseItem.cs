@@ -14,17 +14,17 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Security
 {
     /// <summary>
-    /// SecurityGetApiClientSettingsResponseItem
+    /// GetApiClientSettingsResponseItem
     /// </summary>
     [DataContract]
-    public partial class SecurityGetApiClientSettingsResponseItem : IEquatable<SecurityGetApiClientSettingsResponseItem>, IValidatableObject
+    public partial class GetApiClientSettingsResponseItem : IEquatable<GetApiClientSettingsResponseItem>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecurityGetApiClientSettingsResponseItem" /> class.
+        /// Initializes a new instance of the <see cref="GetApiClientSettingsResponseItem" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="StandInKey">StandInKey.</param>
-        public SecurityGetApiClientSettingsResponseItem(string Name = default, string StandInKey = default)
+        public GetApiClientSettingsResponseItem(string Name = default, string StandInKey = default)
         {
             this.Name = Name;
             this.StandInKey = StandInKey;
@@ -71,15 +71,15 @@ namespace Cherwell.Api.Model.Security
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SecurityGetApiClientSettingsResponseItem);
+            return this.Equals(obj as GetApiClientSettingsResponseItem);
         }
 
         /// <summary>
-        /// Returns true if SecurityGetApiClientSettingsResponseItem instances are equal
+        /// Returns true if GetApiClientSettingsResponseItem instances are equal
         /// </summary>
-        /// <param name="other">Instance of SecurityGetApiClientSettingsResponseItem to be compared</param>
+        /// <param name="other">Instance of GetApiClientSettingsResponseItem to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecurityGetApiClientSettingsResponseItem? other)
+        public bool Equals(GetApiClientSettingsResponseItem? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

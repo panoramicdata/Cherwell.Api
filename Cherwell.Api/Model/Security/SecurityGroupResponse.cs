@@ -11,19 +11,19 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Api.Model
+namespace Cherwell.Api.Model.Security
 {
     /// <summary>
-    /// SecuritySecurityGroupResponse
+    /// SecurityGroupResponse
     /// </summary>
     [DataContract]
-    public partial class SecuritySecurityGroupResponse :  IEquatable<SecuritySecurityGroupResponse>, IValidatableObject
+    public partial class SecurityGroupResponse :  IEquatable<SecurityGroupResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecuritySecurityGroupResponse" /> class.
+        /// Initializes a new instance of the <see cref="SecurityGroupResponse" /> class.
         /// </summary>
         /// <param name="SecurityGroups">SecurityGroups.</param>
-        public SecuritySecurityGroupResponse(List<SecuritySecurityGroup> SecurityGroups = default(List<SecuritySecurityGroup>))
+        public SecurityGroupResponse(List<SecurityGroup> SecurityGroups = default(List<SecurityGroup>))
         {
             this.SecurityGroups = SecurityGroups;
         }
@@ -32,7 +32,7 @@ namespace Cherwell.Api.Model
         /// Gets or Sets SecurityGroups
         /// </summary>
         [DataMember(Name="securityGroups", EmitDefaultValue=false)]
-        public List<SecuritySecurityGroup> SecurityGroups { get; set; }
+        public List<SecurityGroup> SecurityGroups { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -63,15 +63,15 @@ namespace Cherwell.Api.Model
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SecuritySecurityGroupResponse);
+            return this.Equals(obj as SecurityGroupResponse);
         }
 
         /// <summary>
-        /// Returns true if SecuritySecurityGroupResponse instances are equal
+        /// Returns true if SecurityGroupResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of SecuritySecurityGroupResponse to be compared</param>
+        /// <param name="other">Instance of SecurityGroupResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecuritySecurityGroupResponse? other)
+        public bool Equals(SecurityGroupResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

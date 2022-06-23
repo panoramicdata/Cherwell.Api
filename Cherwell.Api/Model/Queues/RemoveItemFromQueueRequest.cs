@@ -17,16 +17,16 @@ namespace Cherwell.Api.Model.Queues
     /// QueuesRemoveItemFromQueueRequest
     /// </summary>
     [DataContract]
-    public partial class QueuesRemoveItemFromQueueRequest : IEquatable<QueuesRemoveItemFromQueueRequest>, IValidatableObject
+    public partial class RemoveItemFromQueueRequest : IEquatable<RemoveItemFromQueueRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="QueuesRemoveItemFromQueueRequest" /> class.
+        /// Initializes a new instance of the <see cref="RemoveItemFromQueueRequest" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObRecId">BusObRecId.</param>
         /// <param name="HistoryNotes">HistoryNotes.</param>
         /// <param name="QueueStandInKey">QueueStandInKey.</param>
-        public QueuesRemoveItemFromQueueRequest(string BusObId = default, string BusObRecId = default, string HistoryNotes = default, string QueueStandInKey = default)
+        public RemoveItemFromQueueRequest(string BusObId = default, string BusObRecId = default, string HistoryNotes = default, string QueueStandInKey = default)
         {
             this.BusObId = BusObId;
             this.BusObRecId = BusObRecId;
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.Queues
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as QueuesRemoveItemFromQueueRequest);
+            return this.Equals(obj as RemoveItemFromQueueRequest);
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace Cherwell.Api.Model.Queues
         /// </summary>
         /// <param name="other">Instance of QueuesRemoveItemFromQueueRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(QueuesRemoveItemFromQueueRequest? other)
+        public bool Equals(RemoveItemFromQueueRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

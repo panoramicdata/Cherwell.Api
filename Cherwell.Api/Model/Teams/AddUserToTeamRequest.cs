@@ -14,18 +14,18 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Teams
 {
     /// <summary>
-    /// TeamsAddUserToTeamRequest
+    /// AddUserToTeamRequest
     /// </summary>
     [DataContract]
-    public partial class TeamsAddUserToTeamRequest :  IEquatable<TeamsAddUserToTeamRequest>, IValidatableObject
+    public partial class AddUserToTeamRequest :  IEquatable<AddUserToTeamRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TeamsAddUserToTeamRequest" /> class.
+        /// Initializes a new instance of the <see cref="AddUserToTeamRequest" /> class.
         /// </summary>
         /// <param name="TeamId">TeamId.</param>
         /// <param name="UserIsTeamManager">UserIsTeamManager.</param>
         /// <param name="UserRecordId">UserRecordId.</param>
-        public TeamsAddUserToTeamRequest(string TeamId = default, bool? UserIsTeamManager = default, string UserRecordId = default)
+        public AddUserToTeamRequest(string TeamId = default, bool? UserIsTeamManager = default, string UserRecordId = default)
         {
             this.TeamId = TeamId;
             this.UserIsTeamManager = UserIsTeamManager;
@@ -79,15 +79,15 @@ namespace Cherwell.Api.Model.Teams
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TeamsAddUserToTeamRequest);
+            return this.Equals(obj as AddUserToTeamRequest);
         }
 
         /// <summary>
-        /// Returns true if TeamsAddUserToTeamRequest instances are equal
+        /// Returns true if AddUserToTeamRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TeamsAddUserToTeamRequest to be compared</param>
+        /// <param name="other">Instance of AddUserToTeamRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsAddUserToTeamRequest? other)
+        public bool Equals(AddUserToTeamRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

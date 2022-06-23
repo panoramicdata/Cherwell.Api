@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Security
 {
     /// <summary>
-    /// PermissionSecurityBusinessObject
+    /// BusinessObjectPermission
     /// </summary>
     [DataContract]
-    public partial class PermissionSecurityBusinessObject : IEquatable<PermissionSecurityBusinessObject>, IValidatableObject
+    public partial class BusinessObjectPermission : IEquatable<BusinessObjectPermission>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PermissionSecurityBusinessObject" /> class.
+        /// Initializes a new instance of the <see cref="BusinessObjectPermission" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObName">BusObName.</param>
@@ -37,7 +37,7 @@ namespace Cherwell.Api.Model.Security
         /// <param name="TeamManagerOfOwnerView">TeamManagerOfOwnerView.</param>
         /// <param name="TeamView">TeamView.</param>
         /// <param name="View">View.</param>
-        public PermissionSecurityBusinessObject(string BusObId = default, string BusObName = default, bool? DepartmentMemberEdit = default(bool?), bool? DepartmentMemberView = default(bool?), bool? Edit = default(bool?), List<PermissionSecurityField> FieldPermissions = default(List<PermissionSecurityField>), bool? ManagerOfOwnerEdit = default(bool?), bool? ManagerOfOwnerView = default(bool?), bool? OwnerEdit = default(bool?), bool? OwnerView = default(bool?), bool? TeamEdit = default(bool?), bool? TeamManagerOfOwnerEdit = default(bool?), bool? TeamManagerOfOwnerView = default(bool?), bool? TeamView = default(bool?), bool? View = default(bool?))
+        public BusinessObjectPermission(string BusObId = default, string BusObName = default, bool? DepartmentMemberEdit = default(bool?), bool? DepartmentMemberView = default(bool?), bool? Edit = default(bool?), List<FieldPermissiond> FieldPermissions = default(List<FieldPermissiond>), bool? ManagerOfOwnerEdit = default(bool?), bool? ManagerOfOwnerView = default(bool?), bool? OwnerEdit = default(bool?), bool? OwnerView = default(bool?), bool? TeamEdit = default(bool?), bool? TeamManagerOfOwnerEdit = default(bool?), bool? TeamManagerOfOwnerView = default(bool?), bool? TeamView = default(bool?), bool? View = default(bool?))
         {
             this.BusObId = BusObId;
             this.BusObName = BusObName;
@@ -85,7 +85,7 @@ namespace Cherwell.Api.Model.Security
         /// Gets or Sets FieldPermissions
         /// </summary>
         [DataMember(Name = "fieldPermissions", EmitDefaultValue = false)]
-        public List<PermissionSecurityField> FieldPermissions { get; set; }
+        public List<FieldPermissiond> FieldPermissions { get; set; }
         /// <summary>
         /// Gets or Sets ManagerOfOwnerEdit
         /// </summary>
@@ -175,15 +175,15 @@ namespace Cherwell.Api.Model.Security
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as PermissionSecurityBusinessObject);
+            return this.Equals(obj as BusinessObjectPermission);
         }
 
         /// <summary>
-        /// Returns true if PermissionSecurityBusinessObject instances are equal
+        /// Returns true if BusinessObjectPermission instances are equal
         /// </summary>
-        /// <param name="other">Instance of PermissionSecurityBusinessObject to be compared</param>
+        /// <param name="other">Instance of BusinessObjectPermission to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PermissionSecurityBusinessObject? other)
+        public bool Equals(BusinessObjectPermission? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

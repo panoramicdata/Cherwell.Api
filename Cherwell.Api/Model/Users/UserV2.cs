@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Users;
 
 /// <summary>
-/// UsersUserV2
+/// UserV2
 /// </summary>
 [DataContract]
-public partial class UsersUserV2 : IEquatable<UsersUserV2>, IValidatableObject
+public partial class UserV2 : IEquatable<UserV2>, IValidatableObject
 {
     /// <summary>
     /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ public partial class UsersUserV2 : IEquatable<UsersUserV2>, IValidatableObject
     [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
     public EnumHttpStatusCode? HttpStatusCode { get; set; }
     /// <summary>
-    /// Initializes a new instance of the <see cref="UsersUserV2" /> class.
+    /// Initializes a new instance of the <see cref="UserV2" /> class.
     /// </summary>
     /// <param name="AccountLocked">AccountLocked.</param>
     /// <param name="CreateDateTime">CreateDateTime.</param>
@@ -335,7 +335,7 @@ public partial class UsersUserV2 : IEquatable<UsersUserV2>, IValidatableObject
     /// <param name="ErrorMessage">ErrorMessage.</param>
     /// <param name="HasError">HasError.</param>
     /// <param name="HttpStatusCode">HttpStatusCode.</param>
-    public UsersUserV2(bool? AccountLocked = default, DateTime? CreateDateTime = default, string DisplayName = default, List<FieldTemplateItem> Fields = default, DateTime? LastPasswordResetDate = default, DateTime? LastResetDateTime = default, bool? LdapRequired = default, bool? PasswordNeverExpires = default, string PublicId = default, string RecordId = default, string SecurityGroupId = default, string ShortDisplayName = default, bool? UserCannotChangePassword = default, bool? UserMustResetPasswordAtNextLogin = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
+    public UserV2(bool? AccountLocked = default, DateTime? CreateDateTime = default, string DisplayName = default, List<FieldTemplateItem> Fields = default, DateTime? LastPasswordResetDate = default, DateTime? LastResetDateTime = default, bool? LdapRequired = default, bool? PasswordNeverExpires = default, string PublicId = default, string RecordId = default, string SecurityGroupId = default, string ShortDisplayName = default, bool? UserCannotChangePassword = default, bool? UserMustResetPasswordAtNextLogin = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
     {
         this.AccountLocked = AccountLocked;
         this.CreateDateTime = CreateDateTime;
@@ -449,7 +449,7 @@ public partial class UsersUserV2 : IEquatable<UsersUserV2>, IValidatableObject
     public override string ToString()
     {
         var sb = new StringBuilder();
-        sb.Append("class UsersUserV2 {\n");
+        sb.Append("class UserV2 {\n");
         sb.Append("  AccountLocked: ").Append(AccountLocked).Append('\n');
         sb.Append("  CreateDateTime: ").Append(CreateDateTime).Append('\n');
         sb.Append("  DisplayName: ").Append(DisplayName).Append('\n');
@@ -489,15 +489,15 @@ public partial class UsersUserV2 : IEquatable<UsersUserV2>, IValidatableObject
     public override bool Equals(object? obj)
     {
         // credit: http://stackoverflow.com/a/10454552/677735
-        return Equals(obj as UsersUserV2);
+        return Equals(obj as UserV2);
     }
 
     /// <summary>
-    /// Returns true if UsersUserV2 instances are equal
+    /// Returns true if UserV2 instances are equal
     /// </summary>
-    /// <param name="other">Instance of UsersUserV2 to be compared</param>
+    /// <param name="other">Instance of UserV2 to be compared</param>
     /// <returns>Boolean</returns>
-    public bool Equals(UsersUserV2? other)
+    public bool Equals(UserV2? other)
     {
         // credit: http://stackoverflow.com/a/10454552/677735
         if (other == null)

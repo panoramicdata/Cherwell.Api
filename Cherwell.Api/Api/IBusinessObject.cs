@@ -72,7 +72,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SearchesRelatedBusinessObjectResponse</returns>
         [Delete("/api/V1/deleterelatedbusinessobject/parentbusobid/{parentbusobid}/parentbusobrecid/{parentbusobrecid}/relationshipid/{relationshipid}/publicid/{publicid}")]
-        Task<SearchesRelatedBusinessObjectResponse> DeleteRelatedBusinessObjectByPublicId([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("publicid")]string publicid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<RelatedBusinessObjectResponse> DeleteRelatedBusinessObjectByPublicId([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("publicid")]string publicid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Delete a related Business Object by record ID
@@ -89,7 +89,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SearchesRelatedBusinessObjectResponse</returns>
         [Delete("/api/V1/deleterelatedbusinessobject/parentbusobid/{parentbusobid}/parentbusobrecid/{parentbusobrecid}/relationshipid/{relationshipid}/busobrecid/{busobrecid}")]
-        Task<SearchesRelatedBusinessObjectResponse> DeleteRelatedBusinessObjectByRecId([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<RelatedBusinessObjectResponse> DeleteRelatedBusinessObjectByRecId([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get lookup values for fields
@@ -383,7 +383,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SearchesRelatedBusinessObjectResponse</returns>
         [Post("/api/V1/getrelatedbusinessobject")]
-        Task<SearchesRelatedBusinessObjectResponse> GetRelatedBusinessObjectByRequest([Header("UserAgent")] string userAgent, [Body]SearchesRelatedBusinessObjectRequest relatedBusinessObjectRequest, [AliasAs("includelinks")]bool? includelinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<RelatedBusinessObjectResponse> GetRelatedBusinessObjectByRequest([Header("UserAgent")] string userAgent, [Body]RelatedBusinessObjectRequest relatedBusinessObjectRequest, [AliasAs("includelinks")]bool? includelinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get related Business Objects by ID
@@ -404,7 +404,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SearchesRelatedBusinessObjectResponse</returns>
         [Get("/api/V1/getrelatedbusinessobject/parentbusobid/{parentbusobid}/parentbusobrecid/{parentbusobrecid}/relationshipid/{relationshipid}")]
-        Task<SearchesRelatedBusinessObjectResponse> GetRelatedBusinessObject([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("pageNumber")]int? pageNumber = null, [AliasAs("pageSize")]int? pageSize = null, [AliasAs("allfields")]bool? allfields = null, [AliasAs("usedefaultgrid")]bool? usedefaultgrid = null, [AliasAs("includelinks")]bool? includelinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<RelatedBusinessObjectResponse> GetRelatedBusinessObject([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("pageNumber")]int? pageNumber = null, [AliasAs("pageSize")]int? pageSize = null, [AliasAs("allfields")]bool? allfields = null, [AliasAs("usedefaultgrid")]bool? usedefaultgrid = null, [AliasAs("includelinks")]bool? includelinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get related Business Objects custom grid
@@ -424,7 +424,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SearchesRelatedBusinessObjectResponse</returns>
         [Get("/api/V1/getrelatedbusinessobject/parentbusobid/{parentbusobid}/parentbusobrecid/{parentbusobrecid}/relationshipid/{relationshipid}/gridid/{gridid}")]
-        Task<SearchesRelatedBusinessObjectResponse> GetRelatedBusinessObjectWithCustomGrid([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("gridid")]string gridid, [AliasAs("pageNumber")]int? pageNumber = null, [AliasAs("pageSize")]int? pageSize = null, [AliasAs("includelinks")]bool? includelinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<RelatedBusinessObjectResponse> GetRelatedBusinessObjectWithCustomGrid([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("gridid")]string gridid, [AliasAs("pageNumber")]int? pageNumber = null, [AliasAs("pageSize")]int? pageSize = null, [AliasAs("includelinks")]bool? includelinks = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Link related Business Objects
@@ -442,7 +442,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SearchesRelatedBusinessObjectResponse</returns>
         [Get("/api/V1/linkrelatedbusinessobject/parentbusobid/{parentbusobid}/parentbusobrecid/{parentbusobrecid}/relationshipid/{relationshipid}/busobid/{busobid}/busobrecid/{busobrecid}")]
-        Task<SearchesRelatedBusinessObjectResponse> LinkRelatedBusinessObjectByRecId([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<RelatedBusinessObjectResponse> LinkRelatedBusinessObjectByRecId([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Link related Business Objects
@@ -626,7 +626,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SearchesRelatedBusinessObjectResponse</returns>
         [Delete("/api/V1/unlinkrelatedbusinessobject/parentbusobid/{parentbusobid}/parentbusobrecid/{parentbusobrecid}/relationshipid/{relationshipid}/busobid/{busobid}/busobrecid/{busobrecid}")]
-        Task<SearchesRelatedBusinessObjectResponse> UnLinkRelatedBusinessObjectByRecId([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<RelatedBusinessObjectResponse> UnLinkRelatedBusinessObjectByRecId([Header("UserAgent")] string userAgent, [AliasAs("parentbusobid")]string parentbusobid, [AliasAs("parentbusobrecid")]string parentbusobrecid, [AliasAs("relationshipid")]string relationshipid, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Upload an attachment by Business Object ID and public ID

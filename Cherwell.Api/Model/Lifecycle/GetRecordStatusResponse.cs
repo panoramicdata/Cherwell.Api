@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.Lifecycle
     /// LifecycleGetRecordStatusResponse
     /// </summary>
     [DataContract]
-    public partial class LifecycleGetRecordStatusResponse : IEquatable<LifecycleGetRecordStatusResponse>, IValidatableObject
+    public partial class GetRecordStatusResponse : IEquatable<GetRecordStatusResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Api.Model.Lifecycle
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="LifecycleGetRecordStatusResponse" /> class.
+        /// Initializes a new instance of the <see cref="GetRecordStatusResponse" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="Name">Name.</param>
@@ -323,7 +323,7 @@ namespace Cherwell.Api.Model.Lifecycle
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public LifecycleGetRecordStatusResponse(string Id = default, string Name = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public GetRecordStatusResponse(string Id = default, string Name = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Id = Id;
             this.Name = Name;
@@ -393,7 +393,7 @@ namespace Cherwell.Api.Model.Lifecycle
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as LifecycleGetRecordStatusResponse);
+            return this.Equals(obj as GetRecordStatusResponse);
         }
 
         /// <summary>
@@ -401,7 +401,7 @@ namespace Cherwell.Api.Model.Lifecycle
         /// </summary>
         /// <param name="other">Instance of LifecycleGetRecordStatusResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(LifecycleGetRecordStatusResponse? other)
+        public bool Equals(GetRecordStatusResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

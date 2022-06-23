@@ -14,17 +14,17 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Security
 {
     /// <summary>
-    /// SecurityCloneSecurityGroupRequest
+    /// CloneSecurityGroupRequest
     /// </summary>
     [DataContract]
-    public partial class SecurityCloneSecurityGroupRequest : IEquatable<SecurityCloneSecurityGroupRequest>, IValidatableObject
+    public partial class CloneSecurityGroupRequest : IEquatable<CloneSecurityGroupRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecurityCloneSecurityGroupRequest" /> class.
+        /// Initializes a new instance of the <see cref="CloneSecurityGroupRequest" /> class.
         /// </summary>
         /// <param name="SecurityGroupName">SecurityGroupName.</param>
         /// <param name="SourceSecurityGroupNameOrId">SourceSecurityGroupNameOrId.</param>
-        public SecurityCloneSecurityGroupRequest(string SecurityGroupName = default, string SourceSecurityGroupNameOrId = default)
+        public CloneSecurityGroupRequest(string SecurityGroupName = default, string SourceSecurityGroupNameOrId = default)
         {
             this.SecurityGroupName = SecurityGroupName;
             this.SourceSecurityGroupNameOrId = SourceSecurityGroupNameOrId;
@@ -71,15 +71,15 @@ namespace Cherwell.Api.Model.Security
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SecurityCloneSecurityGroupRequest);
+            return this.Equals(obj as CloneSecurityGroupRequest);
         }
 
         /// <summary>
-        /// Returns true if SecurityCloneSecurityGroupRequest instances are equal
+        /// Returns true if CloneSecurityGroupRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of SecurityCloneSecurityGroupRequest to be compared</param>
+        /// <param name="other">Instance of CloneSecurityGroupRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecurityCloneSecurityGroupRequest? other)
+        public bool Equals(CloneSecurityGroupRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -11,13 +11,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Api.Model
+namespace Cherwell.Api.Model.Security
 {
     /// <summary>
-    /// SecuritySecurityRightCategoriesResponse
+    /// SecurityRightCategoriesResponse
     /// </summary>
     [DataContract]
-    public partial class SecuritySecurityRightCategoriesResponse :  IEquatable<SecuritySecurityRightCategoriesResponse>, IValidatableObject
+    public partial class SecurityRightCategoriesResponse :  IEquatable<SecurityRightCategoriesResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Api.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecuritySecurityRightCategoriesResponse" /> class.
+        /// Initializes a new instance of the <see cref="SecurityRightCategoriesResponse" /> class.
         /// </summary>
         /// <param name="RightCategories">RightCategories.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SecuritySecurityRightCategoriesResponse(List<SecurityRightCategory> RightCategories = default(List<SecurityRightCategory>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public SecurityRightCategoriesResponse(List<RightCategory> RightCategories = default(List<RightCategory>), string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.RightCategories = RightCategories;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Api.Model
         /// Gets or Sets RightCategories
         /// </summary>
         [DataMember(Name="rightCategories", EmitDefaultValue=false)]
-        public List<SecurityRightCategory> RightCategories { get; set; }
+        public List<RightCategory> RightCategories { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -385,15 +385,15 @@ namespace Cherwell.Api.Model
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SecuritySecurityRightCategoriesResponse);
+            return this.Equals(obj as SecurityRightCategoriesResponse);
         }
 
         /// <summary>
-        /// Returns true if SecuritySecurityRightCategoriesResponse instances are equal
+        /// Returns true if SecurityRightCategoriesResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of SecuritySecurityRightCategoriesResponse to be compared</param>
+        /// <param name="other">Instance of SecurityRightCategoriesResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecuritySecurityRightCategoriesResponse? other)
+        public bool Equals(SecurityRightCategoriesResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

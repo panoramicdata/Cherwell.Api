@@ -108,7 +108,7 @@ namespace Cherwell.Api
 
 			var tokenResponse = await response
 				.Content
-				.ReadFromJsonAsync<SecurityTokenResponse>(new JsonSerializerOptions(), cancellationToken)
+				.ReadFromJsonAsync<TokenResponse>(new JsonSerializerOptions(), cancellationToken)
 				.ConfigureAwait(false);
 			if (tokenResponse is null)
 			{

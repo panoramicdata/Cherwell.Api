@@ -17,10 +17,10 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesSearchFolder
     /// </summary>
     [DataContract]
-    public partial class SearchesSearchFolder : IEquatable<SearchesSearchFolder>, IValidatableObject
+    public partial class SearchFolder : IEquatable<SearchFolder>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesSearchFolder" /> class.
+        /// Initializes a new instance of the <see cref="SearchFolder" /> class.
         /// </summary>
         /// <param name="Association">Association.</param>
         /// <param name="ChildFolders">ChildFolders.</param>
@@ -32,9 +32,9 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="ParentFolderId">ParentFolderId.</param>
         /// <param name="Scope">Scope.</param>
         /// <param name="ScopeOwner">ScopeOwner.</param>
-        public SearchesSearchFolder(string Association = default,
-            List<SearchesSearchFolder> ChildFolders = default,
-            List<SearchesSearchItem> ChildItems = default, 
+        public SearchFolder(string Association = default,
+            List<SearchFolder> ChildFolders = default,
+            List<SearchItem> ChildItems = default, 
             string FolderId = default, 
             string FolderName = default, 
             List<Link> Links = default, 
@@ -64,12 +64,12 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets ChildFolders
         /// </summary>
         [DataMember(Name = "childFolders", EmitDefaultValue = false)]
-        public List<SearchesSearchFolder> ChildFolders { get; set; }
+        public List<SearchFolder> ChildFolders { get; set; }
         /// <summary>
         /// Gets or Sets ChildItems
         /// </summary>
         [DataMember(Name = "childItems", EmitDefaultValue = false)]
-        public List<SearchesSearchItem> ChildItems { get; set; }
+        public List<SearchItem> ChildItems { get; set; }
         /// <summary>
         /// Gets or Sets FolderId
         /// </summary>
@@ -144,7 +144,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesSearchFolder);
+            return this.Equals(obj as SearchFolder);
         }
 
         /// <summary>
@@ -152,7 +152,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesSearchFolder to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesSearchFolder? other)
+        public bool Equals(SearchFolder? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

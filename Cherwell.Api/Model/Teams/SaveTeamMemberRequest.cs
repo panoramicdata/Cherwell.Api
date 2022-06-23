@@ -14,19 +14,19 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Teams
 {
     /// <summary>
-    /// TeamsSaveTeamMemberRequest
+    /// SaveTeamMemberRequest
     /// </summary>
     [DataContract]
-    public partial class TeamsSaveTeamMemberRequest :  IEquatable<TeamsSaveTeamMemberRequest>, IValidatableObject
+    public partial class SaveTeamMemberRequest :  IEquatable<SaveTeamMemberRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TeamsSaveTeamMemberRequest" /> class.
+        /// Initializes a new instance of the <see cref="SaveTeamMemberRequest" /> class.
         /// </summary>
         /// <param name="IsTeamManager">IsTeamManager.</param>
         /// <param name="SetAsDefaultTeam">SetAsDefaultTeam.</param>
         /// <param name="TeamId">TeamId.</param>
         /// <param name="UserRecId">UserRecId.</param>
-        public TeamsSaveTeamMemberRequest(bool? IsTeamManager = default(bool?), bool? SetAsDefaultTeam = default(bool?), string TeamId = default, string UserRecId = default)
+        public SaveTeamMemberRequest(bool? IsTeamManager = default(bool?), bool? SetAsDefaultTeam = default(bool?), string TeamId = default, string UserRecId = default)
         {
             this.IsTeamManager = IsTeamManager;
             this.SetAsDefaultTeam = SetAsDefaultTeam;
@@ -87,15 +87,15 @@ namespace Cherwell.Api.Model.Teams
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TeamsSaveTeamMemberRequest);
+            return this.Equals(obj as SaveTeamMemberRequest);
         }
 
         /// <summary>
-        /// Returns true if TeamsSaveTeamMemberRequest instances are equal
+        /// Returns true if SaveTeamMemberRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TeamsSaveTeamMemberRequest to be compared</param>
+        /// <param name="other">Instance of SaveTeamMemberRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsSaveTeamMemberRequest? other)
+        public bool Equals(SaveTeamMemberRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

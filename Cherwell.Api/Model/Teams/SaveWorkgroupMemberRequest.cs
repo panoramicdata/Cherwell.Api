@@ -14,18 +14,18 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Teams
 {
     /// <summary>
-    /// TeamsSaveWorkgroupMemberRequest
+    /// SaveWorkgroupMemberRequest
     /// </summary>
     [DataContract]
-    public partial class TeamsSaveWorkgroupMemberRequest :  IEquatable<TeamsSaveWorkgroupMemberRequest>, IValidatableObject
+    public partial class SaveWorkgroupMemberRequest :  IEquatable<SaveWorkgroupMemberRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TeamsSaveWorkgroupMemberRequest" /> class.
+        /// Initializes a new instance of the <see cref="SaveWorkgroupMemberRequest" /> class.
         /// </summary>
         /// <param name="CustomerRecordId">CustomerRecordId.</param>
         /// <param name="WorkgroupId">WorkgroupId.</param>
         /// <param name="CustomerIsWorkgroupManager">CustomerIsWorkgroupManager.</param>
-        public TeamsSaveWorkgroupMemberRequest(string CustomerRecordId = default, string WorkgroupId = default, bool? CustomerIsWorkgroupManager = default(bool?))
+        public SaveWorkgroupMemberRequest(string CustomerRecordId = default, string WorkgroupId = default, bool? CustomerIsWorkgroupManager = default(bool?))
         {
             this.CustomerRecordId = CustomerRecordId;
             this.WorkgroupId = WorkgroupId;
@@ -79,15 +79,15 @@ namespace Cherwell.Api.Model.Teams
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TeamsSaveWorkgroupMemberRequest);
+            return this.Equals(obj as SaveWorkgroupMemberRequest);
         }
 
         /// <summary>
-        /// Returns true if TeamsSaveWorkgroupMemberRequest instances are equal
+        /// Returns true if SaveWorkgroupMemberRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TeamsSaveWorkgroupMemberRequest to be compared</param>
+        /// <param name="other">Instance of SaveWorkgroupMemberRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsSaveWorkgroupMemberRequest? other)
+        public bool Equals(SaveWorkgroupMemberRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

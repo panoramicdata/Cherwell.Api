@@ -17,10 +17,10 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesSearchItem
     /// </summary>
     [DataContract]
-    public partial class SearchesSearchItem : IEquatable<SearchesSearchItem>, IValidatableObject
+    public partial class SearchItem : IEquatable<SearchItem>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesSearchItem" /> class.
+        /// Initializes a new instance of the <see cref="SearchItem" /> class.
         /// </summary>
         /// <param name="Association">Association.</param>
         /// <param name="Links">Links.</param>
@@ -30,7 +30,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="ScopeOwner">ScopeOwner.</param>
         /// <param name="SearchId">SearchId.</param>
         /// <param name="SearchName">SearchName.</param>
-        public SearchesSearchItem(string Association = default, List<Link> Links = default(List<Link>), string LocalizedScopeName = default, string ParentFolderId = default, string Scope = default, string ScopeOwner = default, string SearchId = default, string SearchName = default)
+        public SearchItem(string Association = default, List<Link> Links = default(List<Link>), string LocalizedScopeName = default, string ParentFolderId = default, string Scope = default, string ScopeOwner = default, string SearchId = default, string SearchName = default)
         {
             this.Association = Association;
             this.Links = Links;
@@ -119,7 +119,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesSearchItem);
+            return this.Equals(obj as SearchItem);
         }
 
         /// <summary>
@@ -127,7 +127,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesSearchItem to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesSearchItem? other)
+        public bool Equals(SearchItem? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

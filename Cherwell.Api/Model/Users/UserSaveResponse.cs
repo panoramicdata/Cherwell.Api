@@ -14,20 +14,20 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Users
 {
     /// <summary>
-    /// UsersUserSaveResponse
+    /// UserSaveResponse
     /// </summary>
     [DataContract]
-    public partial class UsersUserSaveResponse : IEquatable<UsersUserSaveResponse>, IValidatableObject
+    public partial class UserSaveResponse : IEquatable<UserSaveResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsersUserSaveResponse" /> class.
+        /// Initializes a new instance of the <see cref="UserSaveResponse" /> class.
         /// </summary>
         /// <param name="BusObPublicId">BusObPublicId.</param>
         /// <param name="BusObRecId">BusObRecId.</param>
         /// <param name="Error">Error.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="HasError">HasError.</param>
-        public UsersUserSaveResponse(string BusObPublicId = default, string BusObRecId = default, string Error = default, string ErrorCode = default, bool? HasError = default)
+        public UserSaveResponse(string BusObPublicId = default, string BusObRecId = default, string Error = default, string ErrorCode = default, bool? HasError = default)
         {
             this.BusObPublicId = BusObPublicId;
             this.BusObRecId = BusObRecId;
@@ -68,7 +68,7 @@ namespace Cherwell.Api.Model.Users
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UsersUserSaveResponse {\n");
+            sb.Append("class UserSaveResponse {\n");
             sb.Append("  BusObPublicId: ").Append(BusObPublicId).Append('\n');
             sb.Append("  BusObRecId: ").Append(BusObRecId).Append('\n');
             sb.Append("  Error: ").Append(Error).Append('\n');
@@ -95,15 +95,15 @@ namespace Cherwell.Api.Model.Users
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return Equals(obj as UsersUserSaveResponse);
+            return Equals(obj as UserSaveResponse);
         }
 
         /// <summary>
-        /// Returns true if UsersUserSaveResponse instances are equal
+        /// Returns true if UserSaveResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of UsersUserSaveResponse to be compared</param>
+        /// <param name="other">Instance of UserSaveResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUserSaveResponse? other)
+        public bool Equals(UserSaveResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

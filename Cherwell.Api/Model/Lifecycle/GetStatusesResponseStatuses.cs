@@ -17,16 +17,16 @@ namespace Cherwell.Api.Model.Lifecycle
     /// LifecycleGetStatusesResponseStatuses
     /// </summary>
     [DataContract]
-    public partial class LifecycleGetStatusesResponseStatuses : IEquatable<LifecycleGetStatusesResponseStatuses>, IValidatableObject
+    public partial class GetStatusesResponseStatuses : IEquatable<GetStatusesResponseStatuses>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="LifecycleGetStatusesResponseStatuses" /> class.
+        /// Initializes a new instance of the <see cref="GetStatusesResponseStatuses" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="IsInitial">IsInitial.</param>
         /// <param name="Name">Name.</param>
         /// <param name="StageId">StageId.</param>
-        public LifecycleGetStatusesResponseStatuses(string Id = default, bool? IsInitial = default(bool?), string Name = default, string StageId = default)
+        public GetStatusesResponseStatuses(string Id = default, bool? IsInitial = default(bool?), string Name = default, string StageId = default)
         {
             this.Id = Id;
             this.IsInitial = IsInitial;
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.Lifecycle
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as LifecycleGetStatusesResponseStatuses);
+            return this.Equals(obj as GetStatusesResponseStatuses);
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace Cherwell.Api.Model.Lifecycle
         /// </summary>
         /// <param name="other">Instance of LifecycleGetStatusesResponseStatuses to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(LifecycleGetStatusesResponseStatuses? other)
+        public bool Equals(GetStatusesResponseStatuses? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

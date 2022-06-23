@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesColumnSchema
     /// </summary>
     [DataContract]
-    public partial class SearchesColumnSchema : IEquatable<SearchesColumnSchema>, IValidatableObject
+    public partial class ColumnSchema : IEquatable<ColumnSchema>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets Type
@@ -81,12 +81,12 @@ namespace Cherwell.Api.Model.Searches
         [DataMember(Name = "type", EmitDefaultValue = false)]
         public EnumType? Type { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesColumnSchema" /> class.
+        /// Initializes a new instance of the <see cref="ColumnSchema" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="FieldId">FieldId.</param>
         /// <param name="Type">Type.</param>
-        public SearchesColumnSchema(string Name = default, string FieldId = default, EnumType? Type = default(EnumType?))
+        public ColumnSchema(string Name = default, string FieldId = default, EnumType? Type = default(EnumType?))
         {
             this.Name = Name;
             this.FieldId = FieldId;
@@ -135,7 +135,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesColumnSchema);
+            return this.Equals(obj as ColumnSchema);
         }
 
         /// <summary>
@@ -143,7 +143,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesColumnSchema to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesColumnSchema? other)
+        public bool Equals(ColumnSchema? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

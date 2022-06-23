@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Users
 {
     /// <summary>
-    /// UsersUserBatchDeleteV2Response
+    /// UserBatchDeleteV2Response
     /// </summary>
     [DataContract]
-    public partial class UsersUserBatchDeleteV2Response : IEquatable<UsersUserBatchDeleteV2Response>, IValidatableObject
+    public partial class UserBatchDeleteV2Response : IEquatable<UserBatchDeleteV2Response>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Api.Model.Users
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsersUserBatchDeleteV2Response" /> class.
+        /// Initializes a new instance of the <see cref="UserBatchDeleteV2Response" /> class.
         /// </summary>
         /// <param name="Responses">Responses.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public UsersUserBatchDeleteV2Response(List<UsersUserDeleteV2Response> Responses = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
+        public UserBatchDeleteV2Response(List<UserDeleteV2Response> Responses = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
         {
             this.Responses = Responses;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Api.Model.Users
         /// Gets or Sets Responses
         /// </summary>
         [DataMember(Name = "responses", EmitDefaultValue = false)]
-        public List<UsersUserDeleteV2Response> Responses { get; set; }
+        public List<UserDeleteV2Response> Responses { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -358,7 +358,7 @@ namespace Cherwell.Api.Model.Users
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UsersUserBatchDeleteV2Response {\n");
+            sb.Append("class UserBatchDeleteV2Response {\n");
             sb.Append("  Responses: ").Append(Responses).Append('\n');
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append('\n');
@@ -385,15 +385,15 @@ namespace Cherwell.Api.Model.Users
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return Equals(obj as UsersUserBatchDeleteV2Response);
+            return Equals(obj as UserBatchDeleteV2Response);
         }
 
         /// <summary>
-        /// Returns true if UsersUserBatchDeleteV2Response instances are equal
+        /// Returns true if UserBatchDeleteV2Response instances are equal
         /// </summary>
-        /// <param name="other">Instance of UsersUserBatchDeleteV2Response to be compared</param>
+        /// <param name="other">Instance of UserBatchDeleteV2Response to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUserBatchDeleteV2Response? other)
+        public bool Equals(UserBatchDeleteV2Response? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

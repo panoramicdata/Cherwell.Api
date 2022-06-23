@@ -14,17 +14,17 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Users
 {
     /// <summary>
-    /// UsersUserReadRequest
+    /// UserReadRequest
     /// </summary>
     [DataContract]
-    public partial class UsersUserReadRequest : IEquatable<UsersUserReadRequest>, IValidatableObject
+    public partial class UserReadRequest : IEquatable<UserReadRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsersUserReadRequest" /> class.
+        /// Initializes a new instance of the <see cref="UserReadRequest" /> class.
         /// </summary>
         /// <param name="LoginId">LoginId.</param>
         /// <param name="PublicId">PublicId.</param>
-        public UsersUserReadRequest(string LoginId = default, string PublicId = default)
+        public UserReadRequest(string LoginId = default, string PublicId = default)
         {
             this.LoginId = LoginId;
             this.PublicId = PublicId;
@@ -47,7 +47,7 @@ namespace Cherwell.Api.Model.Users
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UsersUserReadRequest {\n");
+            sb.Append("class UserReadRequest {\n");
             sb.Append("  LoginId: ").Append(LoginId).Append('\n');
             sb.Append("  PublicId: ").Append(PublicId).Append('\n');
             sb.Append("}\n");
@@ -71,15 +71,15 @@ namespace Cherwell.Api.Model.Users
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return Equals(obj as UsersUserReadRequest);
+            return Equals(obj as UserReadRequest);
         }
 
         /// <summary>
-        /// Returns true if UsersUserReadRequest instances are equal
+        /// Returns true if UserReadRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of UsersUserReadRequest to be compared</param>
+        /// <param name="other">Instance of UserReadRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUserReadRequest? other)
+        public bool Equals(UserReadRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

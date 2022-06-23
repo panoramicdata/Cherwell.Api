@@ -14,16 +14,16 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Users
 {
     /// <summary>
-    /// UsersUserBatchDeleteResponse
+    /// UserBatchDeleteResponse
     /// </summary>
     [DataContract]
-    public partial class UsersUserBatchDeleteResponse : IEquatable<UsersUserBatchDeleteResponse>, IValidatableObject
+    public partial class UserBatchDeleteResponse : IEquatable<UserBatchDeleteResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsersUserBatchDeleteResponse" /> class.
+        /// Initializes a new instance of the <see cref="UserBatchDeleteResponse" /> class.
         /// </summary>
         /// <param name="Responses">Responses.</param>
-        public UsersUserBatchDeleteResponse(List<UsersUserDeleteResponse> Responses = default)
+        public UserBatchDeleteResponse(List<UserDeleteResponse> Responses = default)
         {
             this.Responses = Responses;
         }
@@ -32,7 +32,7 @@ namespace Cherwell.Api.Model.Users
         /// Gets or Sets Responses
         /// </summary>
         [DataMember(Name = "responses", EmitDefaultValue = false)]
-        public List<UsersUserDeleteResponse> Responses { get; set; }
+        public List<UserDeleteResponse> Responses { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -40,7 +40,7 @@ namespace Cherwell.Api.Model.Users
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UsersUserBatchDeleteResponse {\n");
+            sb.Append("class UserBatchDeleteResponse {\n");
             sb.Append("  Responses: ").Append(Responses).Append('\n');
             sb.Append("}\n");
             return sb.ToString();
@@ -63,15 +63,15 @@ namespace Cherwell.Api.Model.Users
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return Equals(obj as UsersUserBatchDeleteResponse);
+            return Equals(obj as UserBatchDeleteResponse);
         }
 
         /// <summary>
-        /// Returns true if UsersUserBatchDeleteResponse instances are equal
+        /// Returns true if UserBatchDeleteResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of UsersUserBatchDeleteResponse to be compared</param>
+        /// <param name="other">Instance of UserBatchDeleteResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUserBatchDeleteResponse? other)
+        public bool Equals(UserBatchDeleteResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

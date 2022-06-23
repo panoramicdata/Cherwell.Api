@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.Queues
     /// QueuesRemoveItemFromQueueResponse
     /// </summary>
     [DataContract]
-    public partial class QueuesRemoveItemFromQueueResponse : IEquatable<QueuesRemoveItemFromQueueResponse>, IValidatableObject
+    public partial class RemoveItemFromQueueResponse : IEquatable<RemoveItemFromQueueResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Api.Model.Queues
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="QueuesRemoveItemFromQueueResponse" /> class.
+        /// Initializes a new instance of the <see cref="RemoveItemFromQueueResponse" /> class.
         /// </summary>
         /// <param name="HistoryRecId">HistoryRecId.</param>
         /// <param name="HistoryText">HistoryText.</param>
@@ -324,7 +324,7 @@ namespace Cherwell.Api.Model.Queues
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public QueuesRemoveItemFromQueueResponse(string HistoryRecId = default, string HistoryText = default, string HistoryTypeId = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public RemoveItemFromQueueResponse(string HistoryRecId = default, string HistoryText = default, string HistoryTypeId = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.HistoryRecId = HistoryRecId;
             this.HistoryText = HistoryText;
@@ -401,7 +401,7 @@ namespace Cherwell.Api.Model.Queues
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as QueuesRemoveItemFromQueueResponse);
+            return this.Equals(obj as RemoveItemFromQueueResponse);
         }
 
         /// <summary>
@@ -409,7 +409,7 @@ namespace Cherwell.Api.Model.Queues
         /// </summary>
         /// <param name="other">Instance of QueuesRemoveItemFromQueueResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(QueuesRemoveItemFromQueueResponse? other)
+        public bool Equals(RemoveItemFromQueueResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

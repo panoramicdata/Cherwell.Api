@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Security
 {
     /// <summary>
-    /// SecurityApiClientSettingResponse
+    /// ApiClientSettingResponse
     /// </summary>
     [DataContract]
-    public partial class SecurityApiClientSettingResponse : IEquatable<SecurityApiClientSettingResponse>, IValidatableObject
+    public partial class ApiClientSettingResponse : IEquatable<ApiClientSettingResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Api.Model.Security
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecurityApiClientSettingResponse" /> class.
+        /// Initializes a new instance of the <see cref="ApiClientSettingResponse" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Description">Description.</param>
@@ -330,7 +330,7 @@ namespace Cherwell.Api.Model.Security
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public SecurityApiClientSettingResponse(string Name = default, string Description = default, string Culture = default, string ClientKey = default, int? TokenLifespanMinutes = default(int?), int? RefreshTokenLifespanMinutes = default(int?), bool? ApiAccessIsEnabled = default(bool?), bool? AllowAnonymousAccess = default(bool?), string StandInKey = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public ApiClientSettingResponse(string Name = default, string Description = default, string Culture = default, string ClientKey = default, int? TokenLifespanMinutes = default(int?), int? RefreshTokenLifespanMinutes = default(int?), bool? ApiAccessIsEnabled = default(bool?), bool? AllowAnonymousAccess = default(bool?), string StandInKey = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Name = Name;
             this.Description = Description;
@@ -449,15 +449,15 @@ namespace Cherwell.Api.Model.Security
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SecurityApiClientSettingResponse);
+            return this.Equals(obj as ApiClientSettingResponse);
         }
 
         /// <summary>
-        /// Returns true if SecurityApiClientSettingResponse instances are equal
+        /// Returns true if ApiClientSettingResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of SecurityApiClientSettingResponse to be compared</param>
+        /// <param name="other">Instance of ApiClientSettingResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecurityApiClientSettingResponse? other)
+        public bool Equals(ApiClientSettingResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

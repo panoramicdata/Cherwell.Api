@@ -17,10 +17,10 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesSimpleResultsListItem
     /// </summary>
     [DataContract]
-    public partial class SearchesSimpleResultsListItem : IEquatable<SearchesSimpleResultsListItem>, IValidatableObject
+    public partial class SimpleResultsListItem : IEquatable<SimpleResultsListItem>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesSimpleResultsListItem" /> class.
+        /// Initializes a new instance of the <see cref="SimpleResultsListItem" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObRecId">BusObRecId.</param>
@@ -33,7 +33,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="SubTitle">SubTitle.</param>
         /// <param name="Text">Text.</param>
         /// <param name="Title">Title.</param>
-        public SearchesSimpleResultsListItem(string BusObId = default, string BusObRecId = default, string DocRepositoryItemId = default, string GalleryImage = default, List<Link> Links = default(List<Link>), string PublicId = default, string Scope = default, string ScopeOwner = default, string SubTitle = default, string Text = default, string Title = default)
+        public SimpleResultsListItem(string BusObId = default, string BusObRecId = default, string DocRepositoryItemId = default, string GalleryImage = default, List<Link> Links = default(List<Link>), string PublicId = default, string Scope = default, string ScopeOwner = default, string SubTitle = default, string Text = default, string Title = default)
         {
             this.BusObId = BusObId;
             this.BusObRecId = BusObRecId;
@@ -143,7 +143,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesSimpleResultsListItem);
+            return this.Equals(obj as SimpleResultsListItem);
         }
 
         /// <summary>
@@ -151,7 +151,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesSimpleResultsListItem to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesSimpleResultsListItem? other)
+        public bool Equals(SimpleResultsListItem? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

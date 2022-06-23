@@ -17,14 +17,14 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesAssociation
     /// </summary>
     [DataContract]
-    public partial class SearchesAssociation : IEquatable<SearchesAssociation>, IValidatableObject
+    public partial class Association : IEquatable<Association>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesAssociation" /> class.
+        /// Initializes a new instance of the <see cref="Association" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObName">BusObName.</param>
-        public SearchesAssociation(string BusObId = default, string BusObName = default)
+        public Association(string BusObId = default, string BusObName = default)
         {
             this.BusObId = BusObId;
             this.BusObName = BusObName;
@@ -71,7 +71,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesAssociation);
+            return this.Equals(obj as Association);
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesAssociation to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesAssociation? other)
+        public bool Equals(Association? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

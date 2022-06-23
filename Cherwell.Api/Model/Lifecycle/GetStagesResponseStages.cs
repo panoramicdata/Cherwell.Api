@@ -17,15 +17,15 @@ namespace Cherwell.Api.Model.Lifecycle
     /// LifecycleGetStagesResponseStages
     /// </summary>
     [DataContract]
-    public partial class LifecycleGetStagesResponseStages : IEquatable<LifecycleGetStagesResponseStages>, IValidatableObject
+    public partial class GetStagesResponseStages : IEquatable<GetStagesResponseStages>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="LifecycleGetStagesResponseStages" /> class.
+        /// Initializes a new instance of the <see cref="GetStagesResponseStages" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="IsFinal">IsFinal.</param>
         /// <param name="Name">Name.</param>
-        public LifecycleGetStagesResponseStages(string Id = default, bool? IsFinal = default(bool?), string Name = default)
+        public GetStagesResponseStages(string Id = default, bool? IsFinal = default(bool?), string Name = default)
         {
             this.Id = Id;
             this.IsFinal = IsFinal;
@@ -79,7 +79,7 @@ namespace Cherwell.Api.Model.Lifecycle
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as LifecycleGetStagesResponseStages);
+            return this.Equals(obj as GetStagesResponseStages);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.Lifecycle
         /// </summary>
         /// <param name="other">Instance of LifecycleGetStagesResponseStages to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(LifecycleGetStagesResponseStages? other)
+        public bool Equals(GetStagesResponseStages? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -14,17 +14,17 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Teams
 {
     /// <summary>
-    /// TeamsAddUserToTeamByBatchRequest
+    /// AddUserToTeamByBatchRequest
     /// </summary>
     [DataContract]
-    public partial class TeamsAddUserToTeamByBatchRequest :  IEquatable<TeamsAddUserToTeamByBatchRequest>, IValidatableObject
+    public partial class AddUserToTeamByBatchRequest :  IEquatable<AddUserToTeamByBatchRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TeamsAddUserToTeamByBatchRequest" /> class.
+        /// Initializes a new instance of the <see cref="AddUserToTeamByBatchRequest" /> class.
         /// </summary>
         /// <param name="AddUserToTeamRequests">AddUserToTeamRequests.</param>
         /// <param name="StopOnError">StopOnError.</param>
-        public TeamsAddUserToTeamByBatchRequest(List<TeamsAddUserToTeamRequest> AddUserToTeamRequests = default(List<TeamsAddUserToTeamRequest>), bool? StopOnError = default(bool?))
+        public AddUserToTeamByBatchRequest(List<AddUserToTeamRequest> AddUserToTeamRequests = default(List<AddUserToTeamRequest>), bool? StopOnError = default(bool?))
         {
             this.AddUserToTeamRequests = AddUserToTeamRequests;
             this.StopOnError = StopOnError;
@@ -34,7 +34,7 @@ namespace Cherwell.Api.Model.Teams
         /// Gets or Sets AddUserToTeamRequests
         /// </summary>
         [DataMember(Name="addUserToTeamRequests", EmitDefaultValue=false)]
-        public List<TeamsAddUserToTeamRequest> AddUserToTeamRequests { get; set; }
+        public List<AddUserToTeamRequest> AddUserToTeamRequests { get; set; }
         /// <summary>
         /// Gets or Sets StopOnError
         /// </summary>
@@ -71,15 +71,15 @@ namespace Cherwell.Api.Model.Teams
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TeamsAddUserToTeamByBatchRequest);
+            return this.Equals(obj as AddUserToTeamByBatchRequest);
         }
 
         /// <summary>
-        /// Returns true if TeamsAddUserToTeamByBatchRequest instances are equal
+        /// Returns true if AddUserToTeamByBatchRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TeamsAddUserToTeamByBatchRequest to be compared</param>
+        /// <param name="other">Instance of AddUserToTeamByBatchRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsAddUserToTeamByBatchRequest? other)
+        public bool Equals(AddUserToTeamByBatchRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

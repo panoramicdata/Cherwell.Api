@@ -11,16 +11,16 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cherwell.Api.Model
+namespace Cherwell.Api.Model.Security
 {
     /// <summary>
-    /// SecurityTokenResponse
+    /// TokenResponse
     /// </summary>
     [DataContract]
-    public partial class SecurityTokenResponse :  IEquatable<SecurityTokenResponse>, IValidatableObject
+    public partial class TokenResponse :  IEquatable<TokenResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecurityTokenResponse" /> class.
+        /// Initializes a new instance of the <see cref="TokenResponse" /> class.
         /// </summary>
         /// <param name="AccessToken">AccessToken.</param>
         /// <param name="AsclientId">AsclientId.</param>
@@ -30,7 +30,7 @@ namespace Cherwell.Api.Model
         /// <param name="RefreshToken">RefreshToken.</param>
         /// <param name="TokenType">TokenType.</param>
         /// <param name="Username">Username.</param>
-        public SecurityTokenResponse(string AccessToken = default, string AsclientId = default, string Expires = default, int? ExpiresIn = default(int?), string Issued = default, string RefreshToken = default, string TokenType = default, string Username = default)
+        public TokenResponse(string AccessToken = default, string AsclientId = default, string Expires = default, int? ExpiresIn = default(int?), string Issued = default, string RefreshToken = default, string TokenType = default, string Username = default)
         {
             this.AccessToken = AccessToken;
             this.AsclientId = AsclientId;
@@ -119,15 +119,15 @@ namespace Cherwell.Api.Model
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SecurityTokenResponse);
+            return this.Equals(obj as TokenResponse);
         }
 
         /// <summary>
-        /// Returns true if SecurityTokenResponse instances are equal
+        /// Returns true if TokenResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of SecurityTokenResponse to be compared</param>
+        /// <param name="other">Instance of TokenResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SecurityTokenResponse? other)
+        public bool Equals(TokenResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

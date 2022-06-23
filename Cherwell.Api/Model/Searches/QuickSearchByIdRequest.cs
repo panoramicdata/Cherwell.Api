@@ -17,16 +17,16 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesQuickSearchByIdRequest
     /// </summary>
     [DataContract]
-    public partial class SearchesQuickSearchByIdRequest : IEquatable<SearchesQuickSearchByIdRequest>, IValidatableObject
+    public partial class QuickSearchByIdRequest : IEquatable<QuickSearchByIdRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesQuickSearchByIdRequest" /> class.
+        /// Initializes a new instance of the <see cref="QuickSearchByIdRequest" /> class.
         /// </summary>
         /// <param name="BusObIds">BusObIds.</param>
         /// <param name="IsGeneral">IsGeneral.</param>
         /// <param name="SearchText">SearchText.</param>
         /// <param name="StandIn">StandIn.</param>
-        public SearchesQuickSearchByIdRequest(List<string> BusObIds = default(List<string>), bool? IsGeneral = default(bool?), string SearchText = default, string StandIn = default)
+        public QuickSearchByIdRequest(List<string> BusObIds = default(List<string>), bool? IsGeneral = default(bool?), string SearchText = default, string StandIn = default)
         {
             this.BusObIds = BusObIds;
             this.IsGeneral = IsGeneral;
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesQuickSearchByIdRequest);
+            return this.Equals(obj as QuickSearchByIdRequest);
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesQuickSearchByIdRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesQuickSearchByIdRequest? other)
+        public bool Equals(QuickSearchByIdRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

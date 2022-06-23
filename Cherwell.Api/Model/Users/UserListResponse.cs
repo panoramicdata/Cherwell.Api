@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Users
 {
     /// <summary>
-    /// UsersUserListResponse
+    /// UserListResponse
     /// </summary>
     [DataContract]
-    public partial class UsersUserListResponse : IEquatable<UsersUserListResponse>, IValidatableObject
+    public partial class UserListResponse : IEquatable<UserListResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,14 +315,14 @@ namespace Cherwell.Api.Model.Users
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsersUserListResponse" /> class.
+        /// Initializes a new instance of the <see cref="UserListResponse" /> class.
         /// </summary>
         /// <param name="Users">Users.</param>
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public UsersUserListResponse(List<UsersUserV2> Users = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
+        public UserListResponse(List<UserV2> Users = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
         {
             this.Users = Users;
             this.ErrorCode = ErrorCode;
@@ -335,7 +335,7 @@ namespace Cherwell.Api.Model.Users
         /// Gets or Sets Users
         /// </summary>
         [DataMember(Name = "users", EmitDefaultValue = false)]
-        public List<UsersUserV2> Users { get; set; }
+        public List<UserV2> Users { get; set; }
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
@@ -358,7 +358,7 @@ namespace Cherwell.Api.Model.Users
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UsersUserListResponse {\n");
+            sb.Append("class UserListResponse {\n");
             sb.Append("  Users: ").Append(Users).Append('\n');
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append('\n');
@@ -385,15 +385,15 @@ namespace Cherwell.Api.Model.Users
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return Equals(obj as UsersUserListResponse);
+            return Equals(obj as UserListResponse);
         }
 
         /// <summary>
-        /// Returns true if UsersUserListResponse instances are equal
+        /// Returns true if UserListResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of UsersUserListResponse to be compared</param>
+        /// <param name="other">Instance of UserListResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUserListResponse? other)
+        public bool Equals(UserListResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

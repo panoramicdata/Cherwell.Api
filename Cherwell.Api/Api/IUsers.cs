@@ -25,7 +25,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of UsersUserBatchDeleteResponse</returns>
         [Post("/api/V1/deleteuserbatch")]
-        Task<UsersUserBatchDeleteResponse> UsersDeleteUserBatch([Header("UserAgent")] string userAgent, [Body]UsersUserBatchDeleteRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<UsersUserBatchDeleteResponse> UsersDeleteUserBatch([Header("UserAgent")] string userAgent, [Body]UserBatchDeleteRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Delete a batch of users
@@ -39,7 +39,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of UsersUserBatchDeleteV2Response</returns>
         [Post("/api/V2/deleteuserbatch")]
-        Task<UsersUserBatchDeleteV2Response> UsersDeleteUserBatchV2([Header("UserAgent")] string userAgent, [Body]UsersUserBatchDeleteRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<UsersUserBatchDeleteV2Response> UsersDeleteUserBatchV2([Header("UserAgent")] string userAgent, [Body]UserBatchDeleteRequest request, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Delete a user by record ID
@@ -108,9 +108,9 @@ namespace Cherwell.Api
         /// <param name="loginid">Specify the user&#39;s login ID.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of UsersUser</returns>
+        /// <returns>Task of User</returns>
         [Get("/api/V1/getuserbyloginid/loginid/{loginid}")]
-        Task<UsersUser> UsersGetUserByLoginId([Header("UserAgent")] string userAgent, [AliasAs("loginid")]string loginid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<User> UsersGetUserByLoginId([Header("UserAgent")] string userAgent, [AliasAs("loginid")]string loginid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get a user by login ID and login ID type
@@ -123,9 +123,9 @@ namespace Cherwell.Api
         /// <param name="loginidtype">Specify the login ID type.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of UsersUser</returns>
+        /// <returns>Task of User</returns>
         [Get("/api/V2/getuserbyloginid")]
-        Task<UsersUser> UsersGetUserByLoginIdV2([Header("UserAgent")] string userAgent, [AliasAs("loginid")]string loginid, [AliasAs("loginidtype")]string loginidtype, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<User> UsersGetUserByLoginIdV2([Header("UserAgent")] string userAgent, [AliasAs("loginid")]string loginid, [AliasAs("loginidtype")]string loginidtype, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get a user by login ID and login ID type

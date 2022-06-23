@@ -14,13 +14,13 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Users
 {
     /// <summary>
-    /// UsersUserSaveRequest
+    /// UserSaveRequest
     /// </summary>
     [DataContract]
-    public partial class UsersUserSaveRequest : IEquatable<UsersUserSaveRequest>, IValidatableObject
+    public partial class UserSaveRequest : IEquatable<UserSaveRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsersUserSaveRequest" /> class.
+        /// Initializes a new instance of the <see cref="UserSaveRequest" /> class.
         /// </summary>
         /// <param name="AccountLocked">AccountLocked.</param>
         /// <param name="BusObId">BusObId.</param>
@@ -40,7 +40,7 @@ namespace Cherwell.Api.Model.Users
         /// <param name="UserInfoFields">UserInfoFields.</param>
         /// <param name="UserMustChangePasswordAtNextLogin">UserMustChangePasswordAtNextLogin.</param>
         /// <param name="WindowsUserId">WindowsUserId.</param>
-        public UsersUserSaveRequest(bool? AccountLocked = default, string BusObId = default, string BusObPublicId = default, string BusObRecId = default, string DisplayName = default, string Error = default, string ErrorCode = default, bool? HasError = default, bool? LdapRequired = default, string LoginId = default, DateTime? NextPasswordResetDate = default, string Password = default, bool? PasswordNeverExpires = default, string SecurityGroupId = default, bool? UserCannotChangePassword = default, List<FieldTemplateItem> UserInfoFields = default, bool? UserMustChangePasswordAtNextLogin = default, string WindowsUserId = default)
+        public UserSaveRequest(bool? AccountLocked = default, string BusObId = default, string BusObPublicId = default, string BusObRecId = default, string DisplayName = default, string Error = default, string ErrorCode = default, bool? HasError = default, bool? LdapRequired = default, string LoginId = default, DateTime? NextPasswordResetDate = default, string Password = default, bool? PasswordNeverExpires = default, string SecurityGroupId = default, bool? UserCannotChangePassword = default, List<FieldTemplateItem> UserInfoFields = default, bool? UserMustChangePasswordAtNextLogin = default, string WindowsUserId = default)
         {
             this.AccountLocked = AccountLocked;
             this.BusObId = BusObId;
@@ -159,7 +159,7 @@ namespace Cherwell.Api.Model.Users
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UsersUserSaveRequest {\n");
+            sb.Append("class UserSaveRequest {\n");
             sb.Append("  AccountLocked: ").Append(AccountLocked).Append('\n');
             sb.Append("  BusObId: ").Append(BusObId).Append('\n');
             sb.Append("  BusObPublicId: ").Append(BusObPublicId).Append('\n');
@@ -199,15 +199,15 @@ namespace Cherwell.Api.Model.Users
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return Equals(obj as UsersUserSaveRequest);
+            return Equals(obj as UserSaveRequest);
         }
 
         /// <summary>
-        /// Returns true if UsersUserSaveRequest instances are equal
+        /// Returns true if UserSaveRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of UsersUserSaveRequest to be compared</param>
+        /// <param name="other">Instance of UserSaveRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersUserSaveRequest? other)
+        public bool Equals(UserSaveRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

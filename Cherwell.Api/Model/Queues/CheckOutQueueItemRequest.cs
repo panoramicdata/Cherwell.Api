@@ -17,16 +17,16 @@ namespace Cherwell.Api.Model.Queues
     /// QueuesCheckOutQueueItemRequest
     /// </summary>
     [DataContract]
-    public partial class QueuesCheckOutQueueItemRequest : IEquatable<QueuesCheckOutQueueItemRequest>, IValidatableObject
+    public partial class CheckOutQueueItemRequest : IEquatable<CheckOutQueueItemRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="QueuesCheckOutQueueItemRequest" /> class.
+        /// Initializes a new instance of the <see cref="CheckOutQueueItemRequest" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObRecId">BusObRecId.</param>
         /// <param name="HistoryNotes">HistoryNotes.</param>
         /// <param name="QueueStandInKey">QueueStandInKey.</param>
-        public QueuesCheckOutQueueItemRequest(string BusObId = default, string BusObRecId = default, string HistoryNotes = default, string QueueStandInKey = default)
+        public CheckOutQueueItemRequest(string BusObId = default, string BusObRecId = default, string HistoryNotes = default, string QueueStandInKey = default)
         {
             this.BusObId = BusObId;
             this.BusObRecId = BusObRecId;
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.Queues
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as QueuesCheckOutQueueItemRequest);
+            return this.Equals(obj as CheckOutQueueItemRequest);
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace Cherwell.Api.Model.Queues
         /// </summary>
         /// <param name="other">Instance of QueuesCheckOutQueueItemRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(QueuesCheckOutQueueItemRequest? other)
+        public bool Equals(CheckOutQueueItemRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

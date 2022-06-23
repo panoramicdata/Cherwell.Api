@@ -17,15 +17,15 @@ namespace Cherwell.Api.Model.Queues
     /// QueuesAddItemToQueueRequest
     /// </summary>
     [DataContract]
-    public partial class QueuesAddItemToQueueRequest : IEquatable<QueuesAddItemToQueueRequest>, IValidatableObject
+    public partial class AddItemToQueueRequest : IEquatable<AddItemToQueueRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="QueuesAddItemToQueueRequest" /> class.
+        /// Initializes a new instance of the <see cref="AddItemToQueueRequest" /> class.
         /// </summary>
         /// <param name="BusObId">BusObId.</param>
         /// <param name="BusObRecId">BusObRecId.</param>
         /// <param name="QueueStandInKey">QueueStandInKey.</param>
-        public QueuesAddItemToQueueRequest(string BusObId = default, string BusObRecId = default, string QueueStandInKey = default)
+        public AddItemToQueueRequest(string BusObId = default, string BusObRecId = default, string QueueStandInKey = default)
         {
             this.BusObId = BusObId;
             this.BusObRecId = BusObRecId;
@@ -79,7 +79,7 @@ namespace Cherwell.Api.Model.Queues
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as QueuesAddItemToQueueRequest);
+            return this.Equals(obj as AddItemToQueueRequest);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.Queues
         /// </summary>
         /// <param name="other">Instance of QueuesAddItemToQueueRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(QueuesAddItemToQueueRequest? other)
+        public bool Equals(AddItemToQueueRequest? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

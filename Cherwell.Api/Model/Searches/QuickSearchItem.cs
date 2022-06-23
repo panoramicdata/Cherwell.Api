@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesQuickSearchItem
     /// </summary>
     [DataContract]
-    public partial class SearchesQuickSearchItem : IEquatable<SearchesQuickSearchItem>, IValidatableObject
+    public partial class QuickSearchItem : IEquatable<QuickSearchItem>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets ChangedOption
@@ -267,7 +267,7 @@ namespace Cherwell.Api.Model.Searches
         [DataMember(Name = "sortByOption", EmitDefaultValue = false)]
         public EnumSortByOption? SortByOption { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesQuickSearchItem" /> class.
+        /// Initializes a new instance of the <see cref="QuickSearchItem" /> class.
         /// </summary>
         /// <param name="Ascending">Ascending.</param>
         /// <param name="ChangedLimits">ChangedLimits.</param>
@@ -286,7 +286,7 @@ namespace Cherwell.Api.Model.Searches
         /// <param name="SortByFields">SortByFields.</param>
         /// <param name="SortByOption">SortByOption.</param>
         /// <param name="WatermarkText">WatermarkText.</param>
-        public SearchesQuickSearchItem(bool? Ascending = default(bool?), List<SearchesChangedLimit> ChangedLimits = default(List<SearchesChangedLimit>), EnumChangedOption? ChangedOption = default(EnumChangedOption?), string DisplayName = default, string GalleryImage = default, bool? HasAnyOptions = default(bool?), EnumNonFinalStateOption? NonFinalStateOption = default(EnumNonFinalStateOption?), EnumSearchAnyWordsOption? SearchAnyWordsOption = default(EnumSearchAnyWordsOption?), EnumSearchAttachmentsOption? SearchAttachmentsOption = default(EnumSearchAttachmentsOption?), EnumSearchRelatedOption? SearchRelatedOption = default(EnumSearchRelatedOption?), string SearchTargetId = default, EnumSearchTargetType? SearchTargetType = default(EnumSearchTargetType?), SearchesChangedLimit SelectedChangedLimit = default(SearchesChangedLimit), string SelectedSortByFieldId = default, Dictionary<string, string> SortByFields = default(Dictionary<string, string>), EnumSortByOption? SortByOption = default(EnumSortByOption?), string WatermarkText = default)
+        public QuickSearchItem(bool? Ascending = default(bool?), List<ChangedLimit> ChangedLimits = default(List<ChangedLimit>), EnumChangedOption? ChangedOption = default(EnumChangedOption?), string DisplayName = default, string GalleryImage = default, bool? HasAnyOptions = default(bool?), EnumNonFinalStateOption? NonFinalStateOption = default(EnumNonFinalStateOption?), EnumSearchAnyWordsOption? SearchAnyWordsOption = default(EnumSearchAnyWordsOption?), EnumSearchAttachmentsOption? SearchAttachmentsOption = default(EnumSearchAttachmentsOption?), EnumSearchRelatedOption? SearchRelatedOption = default(EnumSearchRelatedOption?), string SearchTargetId = default, EnumSearchTargetType? SearchTargetType = default(EnumSearchTargetType?), ChangedLimit SelectedChangedLimit = default(ChangedLimit), string SelectedSortByFieldId = default, Dictionary<string, string> SortByFields = default(Dictionary<string, string>), EnumSortByOption? SortByOption = default(EnumSortByOption?), string WatermarkText = default)
         {
             this.Ascending = Ascending;
             this.ChangedLimits = ChangedLimits;
@@ -316,7 +316,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets ChangedLimits
         /// </summary>
         [DataMember(Name = "changedLimits", EmitDefaultValue = false)]
-        public List<SearchesChangedLimit> ChangedLimits { get; set; }
+        public List<ChangedLimit> ChangedLimits { get; set; }
         /// <summary>
         /// Gets or Sets DisplayName
         /// </summary>
@@ -341,7 +341,7 @@ namespace Cherwell.Api.Model.Searches
         /// Gets or Sets SelectedChangedLimit
         /// </summary>
         [DataMember(Name = "selectedChangedLimit", EmitDefaultValue = false)]
-        public SearchesChangedLimit SelectedChangedLimit { get; set; }
+        public ChangedLimit SelectedChangedLimit { get; set; }
         /// <summary>
         /// Gets or Sets SelectedSortByFieldId
         /// </summary>
@@ -403,7 +403,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesQuickSearchItem);
+            return this.Equals(obj as QuickSearchItem);
         }
 
         /// <summary>
@@ -411,7 +411,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesQuickSearchItem to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesQuickSearchItem? other)
+        public bool Equals(QuickSearchItem? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

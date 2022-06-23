@@ -17,7 +17,7 @@ namespace Cherwell.Api.Model.Forms
     /// FormsMobileFormResponse
     /// </summary>
     [DataContract]
-    public partial class FormsMobileFormResponse : IEquatable<FormsMobileFormResponse>, IValidatableObject
+    public partial class MobileFormResponse : IEquatable<MobileFormResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Api.Model.Forms
         [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="FormsMobileFormResponse" /> class.
+        /// Initializes a new instance of the <see cref="MobileFormResponse" /> class.
         /// </summary>
         /// <param name="Actions">Actions.</param>
         /// <param name="Attachments">Attachments.</param>
@@ -327,7 +327,7 @@ namespace Cherwell.Api.Model.Forms
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public FormsMobileFormResponse(List<Core.Action> Actions = default(List<global::Cherwell.Api.Model.Core.Action>), List<ObjectAttachment> Attachments = default(List<ObjectAttachment>), string GalleryImage = default, Location LocationInformation = default(Location), List<FormsSection> Sections = default(List<FormsSection>), string Title = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public MobileFormResponse(List<Core.Action> Actions = default(List<global::Cherwell.Api.Model.Core.Action>), List<ObjectAttachment> Attachments = default(List<ObjectAttachment>), string GalleryImage = default, Location LocationInformation = default(Location), List<Section> Sections = default(List<Section>), string Title = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.Actions = Actions;
             this.Attachments = Attachments;
@@ -365,7 +365,7 @@ namespace Cherwell.Api.Model.Forms
         /// Gets or Sets Sections
         /// </summary>
         [DataMember(Name = "sections", EmitDefaultValue = false)]
-        public List<FormsSection> Sections { get; set; }
+        public List<Section> Sections { get; set; }
         /// <summary>
         /// Gets or Sets Title
         /// </summary>
@@ -425,7 +425,7 @@ namespace Cherwell.Api.Model.Forms
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as FormsMobileFormResponse);
+            return this.Equals(obj as MobileFormResponse);
         }
 
         /// <summary>
@@ -433,7 +433,7 @@ namespace Cherwell.Api.Model.Forms
         /// </summary>
         /// <param name="other">Instance of FormsMobileFormResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(FormsMobileFormResponse? other)
+        public bool Equals(MobileFormResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

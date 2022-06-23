@@ -17,15 +17,15 @@ namespace Cherwell.Api.Model.Searches
     /// SearchesChangedLimit
     /// </summary>
     [DataContract]
-    public partial class SearchesChangedLimit : IEquatable<SearchesChangedLimit>, IValidatableObject
+    public partial class ChangedLimit : IEquatable<ChangedLimit>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesChangedLimit" /> class.
+        /// Initializes a new instance of the <see cref="ChangedLimit" /> class.
         /// </summary>
         /// <param name="DisplayName">DisplayName.</param>
         /// <param name="Units">Units.</param>
         /// <param name="Value">Value.</param>
-        public SearchesChangedLimit(string DisplayName = default, string Units = default, int? Value = default(int?))
+        public ChangedLimit(string DisplayName = default, string Units = default, int? Value = default(int?))
         {
             this.DisplayName = DisplayName;
             this.Units = Units;
@@ -79,7 +79,7 @@ namespace Cherwell.Api.Model.Searches
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchesChangedLimit);
+            return this.Equals(obj as ChangedLimit);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace Cherwell.Api.Model.Searches
         /// </summary>
         /// <param name="other">Instance of SearchesChangedLimit to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchesChangedLimit? other)
+        public bool Equals(ChangedLimit? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

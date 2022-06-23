@@ -14,10 +14,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Cherwell.Api.Model.Teams
 {
     /// <summary>
-    /// TeamsRemoveCustomerFromWorkgroupResponse
+    /// RemoveCustomerFromWorkgroupResponse
     /// </summary>
     [DataContract]
-    public partial class TeamsRemoveCustomerFromWorkgroupResponse :  IEquatable<TeamsRemoveCustomerFromWorkgroupResponse>, IValidatableObject
+    public partial class RemoveCustomerFromWorkgroupResponse :  IEquatable<RemoveCustomerFromWorkgroupResponse>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -315,7 +315,7 @@ namespace Cherwell.Api.Model.Teams
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public EnumHttpStatusCode? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TeamsRemoveCustomerFromWorkgroupResponse" /> class.
+        /// Initializes a new instance of the <see cref="RemoveCustomerFromWorkgroupResponse" /> class.
         /// </summary>
         /// <param name="WorkgroupId">WorkgroupId.</param>
         /// <param name="CustomerRecordId">CustomerRecordId.</param>
@@ -323,7 +323,7 @@ namespace Cherwell.Api.Model.Teams
         /// <param name="ErrorMessage">ErrorMessage.</param>
         /// <param name="HasError">HasError.</param>
         /// <param name="HttpStatusCode">HttpStatusCode.</param>
-        public TeamsRemoveCustomerFromWorkgroupResponse(string WorkgroupId = default, string CustomerRecordId = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
+        public RemoveCustomerFromWorkgroupResponse(string WorkgroupId = default, string CustomerRecordId = default, string ErrorCode = default, string ErrorMessage = default, bool? HasError = default(bool?), EnumHttpStatusCode? HttpStatusCode = default(EnumHttpStatusCode?))
         {
             this.WorkgroupId = WorkgroupId;
             this.CustomerRecordId = CustomerRecordId;
@@ -393,15 +393,15 @@ namespace Cherwell.Api.Model.Teams
         public override bool Equals(object? obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TeamsRemoveCustomerFromWorkgroupResponse);
+            return this.Equals(obj as RemoveCustomerFromWorkgroupResponse);
         }
 
         /// <summary>
-        /// Returns true if TeamsRemoveCustomerFromWorkgroupResponse instances are equal
+        /// Returns true if RemoveCustomerFromWorkgroupResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TeamsRemoveCustomerFromWorkgroupResponse to be compared</param>
+        /// <param name="other">Instance of RemoveCustomerFromWorkgroupResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TeamsRemoveCustomerFromWorkgroupResponse? other)
+        public bool Equals(RemoveCustomerFromWorkgroupResponse? other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
