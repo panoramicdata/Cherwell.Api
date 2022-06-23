@@ -9,9 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
+		CONTRIBUTING.md = CONTRIBUTING.md
+		global.json = global.json
+		LICENSE = LICENSE
+		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cherwell.Api.Test", "Cherwell.Api.Test\Cherwell.Api.Test.csproj", "{87DD25E3-EEC8-4E44-96AA-4FEF9AF16217}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cherwell.Api.Test", "Cherwell.Api.Test\Cherwell.Api.Test.csproj", "{87DD25E3-EEC8-4E44-96AA-4FEF9AF16217}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

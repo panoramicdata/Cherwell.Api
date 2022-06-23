@@ -1,0 +1,24 @@
+﻿using FluentAssertions;
+using Xunit;
+using Xunit.Abstractions;
+
+namespace Cherwell.Api.Test;
+
+public class ViewsTests : CherwellClientTest
+{
+   public ViewsTests(ITestOutputHelper iTestOutputHelper) : base(iTestOutputHelper)
+   {
+   }
+
+   [Fact]
+   public async void ApiShouldReturnSomething()
+   {
+	  // Get a list of tickets from Cherwell
+	  var views = await TestCherwellClient
+		 .Core
+		 .GetViewsAsync("", "", "")
+		 .ConfigureAwait(false);
+
+	  views.Should().NotBeNull();
+   }
+}
