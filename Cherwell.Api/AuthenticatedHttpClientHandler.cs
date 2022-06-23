@@ -1,8 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using System.Net.Http.Headers;
-using System.Net.Http.Json;
 using System.Security.Authentication;
-using System.Text.Json;
 
 namespace Cherwell.Api;
 
@@ -42,7 +41,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		}
 
 		// Add a user agent to ensure consistent behaviour
-		request.Headers.UserAgent.Add(new ProductInfoHeaderValue(_options.UserAgent));
+		request.Headers.UserAgent.Add(new ProductInfoHeaderValue(_options.UserAgent, "1.0"));
 
 		return await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
 	}
@@ -89,18 +88,23 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			GrantTypes.RefreshToken => "refresh_token",
 			_ => throw new ArgumentOutOfRangeException(nameof(grantType))
 		};
-		var tokenRequest = new TokenRequest()
+
+		var request = new HttpRequestMessage(HttpMethod.Post, $"token?auth_mode={_options.AuthenticationMode}");
+
+		var keyValues = new List<KeyValuePair<string, string>>();
+		keyValues.Add(new KeyValuePair<string, string>("grant_type", grantTypeString));
+		keyValues.Add(new KeyValuePair<string, string>("client_id", _options.ClientId!));
+		keyValues.Add(new KeyValuePair<string, string>("username", _options.UserName!));
+		keyValues.Add(new KeyValuePair<string, string>("password", _options.Password!));
+		if (_refreshToken is not null)
 		{
-			grant_type = grantTypeString,
-			client_id = _options.ClientId,
-			username = _options.UserName,
-			password = _options.Password,
-			refresh_token = _refreshToken,
-			auth_mode = _options.AuthenticationMode
-		};
+			keyValues.Add(new KeyValuePair<string, string>(_refreshToken!, "refresh_token"));
+		}
+		request.Content = new FormUrlEncodedContent(keyValues);
+		request.Content.Headers.ContentType = new MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded") { CharSet = "UTF-8" };
 
 		var response = await _authenticatingClient
-			.PostAsJsonAsync("/token", tokenRequest, cancellationToken)
+			.SendAsync(request, cancellationToken)
 			.ConfigureAwait(false);
 
 		// TODO: Investigate - and better handle - unsuccessful auth requests
@@ -109,10 +113,12 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			throw new AuthenticationException();
 		}
 
-		var tokenResponse = await response
+		var stringResponse = await response
 			.Content
-			.ReadFromJsonAsync<TokenResponse>(new JsonSerializerOptions(), cancellationToken)
+			.ReadAsStringAsync(cancellationToken)
 			.ConfigureAwait(false);
+
+		var tokenResponse = JsonConvert.DeserializeObject<TokenResponse>(stringResponse);
 		if (tokenResponse is null)
 		{
 			// TODO: Move exception text to Resources file
@@ -134,7 +140,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		}
 
 		// TODO: Should we parameterise the version of the API in use?
-		var request = new HttpRequestMessage(HttpMethod.Delete, "/api/V1/logout");
+		var request = new HttpRequestMessage(HttpMethod.Delete, "api/V1/logout");
 		request.Headers.Authorization = new AuthenticationHeaderValue(_authenticationType, _accessToken);
 
 		var response = await _authenticatingClient
