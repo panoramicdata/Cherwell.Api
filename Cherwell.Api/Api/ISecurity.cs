@@ -25,7 +25,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ClientSecuritySettingsResponse</returns>
         [Get("/api/V1/getclientsecuritysettings/applicationtype/{applicationtype}")]
-        Task<ClientSecuritySettingsResponse> SecurityGetClientSecuritySettings([Header("UserAgent")] string userAgent, [AliasAs("applicationtype")]string applicationtype, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<ClientSecuritySettingsResponse> GetClientSecuritySettings([Header("UserAgent")] string userAgent, [AliasAs("applicationtype")]string applicationtype, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all available Roles
@@ -38,7 +38,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of RoleReadResponse</returns>
         [Get("/api/V1/getroles")]
-        Task<RoleReadResponse> SecurityGetRoles([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<RoleReadResponse> GetRoles([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all available Roles
@@ -51,7 +51,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of RoleReadV2Response</returns>
         [Get("/api/V2/getroles")]
-        Task<RoleReadV2Response> SecurityGetRolesV2([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<RoleReadV2Response> GetRolesV2([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get Business Object permissions by Security Group
@@ -66,7 +66,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of List&lt;BusinessObjectPermission&gt;</returns>
         [Get("/api/V1/getsecuritygroupbusinessobjectpermissions/groupid/{groupid}/busobid/{busObId}")]
-        Task<List<BusinessObjectPermission>> SecurityGetSecurityGroupBusinessObjectPermissionsByBusObId([Header("UserAgent")] string userAgent, [AliasAs("groupid")]string groupid, [AliasAs("busObId")]string busObId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<List<BusinessObjectPermission>> GetSecurityGroupBusinessObjectPermissionsByBusObId([Header("UserAgent")] string userAgent, [AliasAs("groupid")]string groupid, [AliasAs("busObId")]string busObId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get Business Object permissions by Security Group
@@ -81,7 +81,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of GetSecurityGroupBusinessObjectPermissionsResponse</returns>
         [Get("/api/V2/getsecuritygroupbusinessobjectpermissions/groupid/{groupid}/busobid/{busObId}")]
-        Task<GetSecurityGroupBusinessObjectPermissionsResponse> SecurityGetSecurityGroupBusinessObjectPermissionsByBusObIdV2([Header("UserAgent")] string userAgent, [AliasAs("groupid")]string groupid, [AliasAs("busObId")]string busObId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<GetSecurityGroupBusinessObjectPermissionsResponse> GetSecurityGroupBusinessObjectPermissionsByBusObIdV2([Header("UserAgent")] string userAgent, [AliasAs("groupid")]string groupid, [AliasAs("busObId")]string busObId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get Business Object permissions by Security Group
@@ -96,7 +96,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of List&lt;BusinessObjectPermission&gt;</returns>
         [Get("/api/V1/getsecuritygroupbusinessobjectpermissions/groupname/{groupname}/busobname/{busobname}")]
-        Task<List<BusinessObjectPermission>> SecurityGetSecurityGroupBusinessObjectPermissionsByBusObName([Header("UserAgent")] string userAgent, [AliasAs("groupname")]string groupname, [AliasAs("busobname")]string busobname, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<List<BusinessObjectPermission>> GetSecurityGroupBusinessObjectPermissionsByBusObName([Header("UserAgent")] string userAgent, [AliasAs("groupname")]string groupname, [AliasAs("busobname")]string busobname, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get Business Object permissions by Security Group
@@ -111,7 +111,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of GetSecurityGroupBusinessObjectPermissionsResponse</returns>
         [Get("/api/V2/getsecuritygroupbusinessobjectpermissions/groupname/{groupname}/busobname/{busobname}")]
-        Task<GetSecurityGroupBusinessObjectPermissionsResponse> SecurityGetSecurityGroupBusinessObjectPermissionsByBusObNameV2([Header("UserAgent")] string userAgent, [AliasAs("groupname")]string groupname, [AliasAs("busobname")]string busobname, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<GetSecurityGroupBusinessObjectPermissionsResponse> GetSecurityGroupBusinessObjectPermissionsByBusObNameV2([Header("UserAgent")] string userAgent, [AliasAs("groupname")]string groupname, [AliasAs("busobname")]string busobname, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get Business Object permission for current user
@@ -125,7 +125,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of List&lt;BusinessObjectPermission&gt;</returns>
         [Get("/api/V1/getsecuritygroupbusinessobjectpermissionsforcurrentuserbybusobid/busobid/{busObId}")]
-        Task<List<BusinessObjectPermission>> SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObId([Header("UserAgent")] string userAgent, [AliasAs("busObId")]string busObId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<List<BusinessObjectPermission>> GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObId([Header("UserAgent")] string userAgent, [AliasAs("busObId")]string busObId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get Business Object permission for current user
@@ -139,7 +139,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of GetSecurityGroupBusinessObjectPermissionsResponse</returns>
         [Get("/api/V2/getsecuritygroupbusinessobjectpermissionsforcurrentuserbybusobid/busobid/{busObId}")]
-        Task<GetSecurityGroupBusinessObjectPermissionsResponse> SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV2([Header("UserAgent")] string userAgent, [AliasAs("busObId")]string busObId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<GetSecurityGroupBusinessObjectPermissionsResponse> GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV2([Header("UserAgent")] string userAgent, [AliasAs("busObId")]string busObId, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get Business Object permissions for current user
@@ -153,7 +153,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of List&lt;BusinessObjectPermission&gt;</returns>
         [Get("/api/V1/getsecuritygroupbusinessobjectpermissionsforcurrentuserbybusobname/busobname/{busobname}")]
-        Task<List<BusinessObjectPermission>> SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObName([Header("UserAgent")] string userAgent, [AliasAs("busobname")]string busobname, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<List<BusinessObjectPermission>> GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObName([Header("UserAgent")] string userAgent, [AliasAs("busobname")]string busobname, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get Business Object permissions for current user
@@ -167,7 +167,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of GetSecurityGroupBusinessObjectPermissionsResponse</returns>
         [Get("/api/V2/getsecuritygroupbusinessobjectpermissionsforcurrentuserbybusobname/busobname/{busobname}")]
-        Task<GetSecurityGroupBusinessObjectPermissionsResponse> SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV2([Header("UserAgent")] string userAgent, [AliasAs("busobname")]string busobname, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<GetSecurityGroupBusinessObjectPermissionsResponse> GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV2([Header("UserAgent")] string userAgent, [AliasAs("busobname")]string busobname, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all Security Group categories
@@ -180,7 +180,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of List&lt;RightCategory&gt;</returns>
         [Get("/api/V1/getsecuritygroupcategories")]
-        Task<List<RightCategory>> SecurityGetSecurityGroupCategories([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<List<RightCategory>> GetSecurityGroupCategories([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all Security Group categories
@@ -193,7 +193,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SecurityRightCategoriesResponse</returns>
         [Get("/api/V2/getsecuritygroupcategories")]
-        Task<SecurityRightCategoriesResponse> SecurityGetSecurityGroupCategoriesV2([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SecurityRightCategoriesResponse> GetSecurityGroupCategoriesV2([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get permissions for a Security Group by category
@@ -208,7 +208,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of List&lt;Right&gt;</returns>
         [Get("/api/V1/getsecuritygrouprights/groupid/{groupid}/categoryid/{categoryid}")]
-        Task<List<Right>> SecurityGetSecurityGroupRightsByGroupIdAndCategoryId([Header("UserAgent")] string userAgent, [AliasAs("groupid")]string groupid, [AliasAs("categoryid")]string categoryid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<List<Right>> GetSecurityGroupRightsByGroupIdAndCategoryId([Header("UserAgent")] string userAgent, [AliasAs("groupid")]string groupid, [AliasAs("categoryid")]string categoryid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get permissions for a Security Group by category
@@ -223,7 +223,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SecurityRightsResponse</returns>
         [Get("/api/V2/getsecuritygrouprights/groupid/{groupid}/categoryid/{categoryid}")]
-        Task<SecurityRightsResponse> SecurityGetSecurityGroupRightsByGroupIdAndCategoryIdV2([Header("UserAgent")] string userAgent, [AliasAs("groupid")]string groupid, [AliasAs("categoryid")]string categoryid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SecurityRightsResponse> GetSecurityGroupRightsByGroupIdAndCategoryIdV2([Header("UserAgent")] string userAgent, [AliasAs("groupid")]string groupid, [AliasAs("categoryid")]string categoryid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get permissions for a Security Group by category
@@ -238,7 +238,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of List&lt;Right&gt;</returns>
         [Get("/api/V1/getsecuritygrouprights/groupname/{groupname}/categoryname/{categoryname}")]
-        Task<List<Right>> SecurityGetSecurityGroupRightsByGroupNameAndCategoryName([Header("UserAgent")] string userAgent, [AliasAs("groupname")]string groupname, [AliasAs("categoryname")]string categoryname, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<List<Right>> GetSecurityGroupRightsByGroupNameAndCategoryName([Header("UserAgent")] string userAgent, [AliasAs("groupname")]string groupname, [AliasAs("categoryname")]string categoryname, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get permissions for a Security Group by category
@@ -253,7 +253,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SecurityRightsResponse</returns>
         [Get("/api/V2/getsecuritygrouprights/groupname/{groupname}/categoryname/{categoryname}")]
-        Task<SecurityRightsResponse> SecurityGetSecurityGroupRightsByGroupNameAndCategoryNameV2([Header("UserAgent")] string userAgent, [AliasAs("groupname")]string groupname, [AliasAs("categoryname")]string categoryname, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SecurityRightsResponse> GetSecurityGroupRightsByGroupNameAndCategoryNameV2([Header("UserAgent")] string userAgent, [AliasAs("groupname")]string groupname, [AliasAs("categoryname")]string categoryname, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get current user&#39;s permissions by Security Group category by ID
@@ -267,7 +267,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of List&lt;Right&gt;</returns>
         [Get("/api/V1/getsecuritygrouprightsforcurrentuserbycategoryid/categoryid/{categoryid}")]
-        Task<List<Right>> SecurityGetSecurityGroupRightsForCurrentUserByCategoryId([Header("UserAgent")] string userAgent, [AliasAs("categoryid")]string categoryid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<List<Right>> GetSecurityGroupRightsForCurrentUserByCategoryId([Header("UserAgent")] string userAgent, [AliasAs("categoryid")]string categoryid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get current user&#39;s permissions by Security Group category by ID
@@ -281,7 +281,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SecurityRightsResponse</returns>
         [Get("/api/V2/getsecuritygrouprightsforcurrentuserbycategoryid/categoryid/{categoryid}")]
-        Task<SecurityRightsResponse> SecurityGetSecurityGroupRightsForCurrentUserByCategoryIdV2([Header("UserAgent")] string userAgent, [AliasAs("categoryid")]string categoryid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SecurityRightsResponse> GetSecurityGroupRightsForCurrentUserByCategoryIdV2([Header("UserAgent")] string userAgent, [AliasAs("categoryid")]string categoryid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get current user&#39;s permissions by Security Group category by name
@@ -295,7 +295,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of List&lt;Right&gt;</returns>
         [Get("/api/V1/getsecuritygrouprightsforcurrentuserbycategoryname/categoryname/{categoryname}")]
-        Task<List<Right>> SecurityGetSecurityGroupRightsForCurrentUserByCategoryName([Header("UserAgent")] string userAgent, [AliasAs("categoryname")]string categoryname, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<List<Right>> GetSecurityGroupRightsForCurrentUserByCategoryName([Header("UserAgent")] string userAgent, [AliasAs("categoryname")]string categoryname, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get current user&#39;s permissions by Security Group category by name
@@ -309,7 +309,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SecurityRightsResponse</returns>
         [Get("/api/V2/getsecuritygrouprightsforcurrentuserbycategoryname/categoryname/{categoryname}")]
-        Task<SecurityRightsResponse> SecurityGetSecurityGroupRightsForCurrentUserByCategoryNameV2([Header("UserAgent")] string userAgent, [AliasAs("categoryname")]string categoryname, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SecurityRightsResponse> GetSecurityGroupRightsForCurrentUserByCategoryNameV2([Header("UserAgent")] string userAgent, [AliasAs("categoryname")]string categoryname, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all available Security Groups
@@ -322,7 +322,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SecurityGroupResponse</returns>
         [Get("/api/V1/getsecuritygroups")]
-        Task<SecurityGroupResponse> SecurityGetSecurityGroups([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SecurityGroupResponse> GetSecurityGroups([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get all available Security Groups
@@ -335,7 +335,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of SecurityGroupV2Response</returns>
         [Get("/api/V2/getsecuritygroups")]
-        Task<SecurityGroupV2Response> SecurityGetSecurityGroupsV2([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<SecurityGroupV2Response> GetSecurityGroupsV2([Header("UserAgent")] string userAgent, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get users in a Security Group
@@ -349,7 +349,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of List&lt;User&gt;</returns>
         [Get("/api/V1/getusersinsecuritygroup/groupid/{groupid}")]
-        Task<List<User>> SecurityGetUsersInSecurityGroup([Header("UserAgent")] string userAgent, [AliasAs("groupid")]string groupid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<List<User>> GetUsersInSecurityGroup([Header("UserAgent")] string userAgent, [AliasAs("groupid")]string groupid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get users in a Security Group
@@ -363,7 +363,7 @@ namespace Cherwell.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of UsersUserReadV2Response</returns>
         [Get("/api/V2/getusersinsecuritygroup/groupid/{groupid}")]
-        Task<UsersUserReadV2Response> SecurityGetUsersInSecurityGroupV2([Header("UserAgent")] string userAgent, [AliasAs("groupid")]string groupid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<UserReadV2Response> GetUsersInSecurityGroupV2([Header("UserAgent")] string userAgent, [AliasAs("groupid")]string groupid, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
         #endregion Asynchronous Operations
     }
 }

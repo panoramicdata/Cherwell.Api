@@ -26,9 +26,9 @@ namespace Cherwell.Api
         /// <param name="formid">Specify the form ID if the default is not desired. (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of FormsMobileFormResponse</returns>
+        /// <returns>Task of MobileFormResponse</returns>
         [Get("/api/V1/getmobileformforbusob/busobid/{busobid}/publicid/{publicid}")]
-        Task<MobileFormResponse> FormsGetMobileFormForBusObByIdAndPublicId([Header("UserAgent")] string userAgent, [AliasAs("busobid")]string busobid, [AliasAs("publicid")]string publicid, [AliasAs("foredit")]bool? foredit = null, [AliasAs("formid")]string formid = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<MobileFormResponse> GetMobileFormForBusObByIdAndPublicId([Header("UserAgent")] string userAgent, [AliasAs("busobid")]string busobid, [AliasAs("publicid")]string publicid, [AliasAs("foredit")]bool? foredit = null, [AliasAs("formid")]string formid = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get mobile form by Business Object ID and Business Object Record ID.
@@ -43,9 +43,9 @@ namespace Cherwell.Api
         /// <param name="formid">Specify the form ID if the default is not desired. (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of FormsMobileFormResponse</returns>
+        /// <returns>Task of MobileFormResponse</returns>
         [Get("/api/V1/getmobileformforbusob/busobid/{busobid}/busobrecid/{busobrecid}")]
-        Task<MobileFormResponse> FormsGetMobileFormForBusObByIdAndRecId([Header("UserAgent")] string userAgent, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("foredit")]bool? foredit = null, [AliasAs("formid")]string formid = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<MobileFormResponse> GetMobileFormForBusObByIdAndRecId([Header("UserAgent")] string userAgent, [AliasAs("busobid")]string busobid, [AliasAs("busobrecid")]string busobrecid, [AliasAs("foredit")]bool? foredit = null, [AliasAs("formid")]string formid = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get mobile form by Business Object name and Public ID
@@ -60,9 +60,9 @@ namespace Cherwell.Api
         /// <param name="formid">Specify the form ID if the default is not desired. (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of FormsMobileFormResponse</returns>
+        /// <returns>Task of MobileFormResponse</returns>
         [Get("/api/V1/getmobileformforbusob/busobname/{busobname}/publicid/{publicid}")]
-        Task<MobileFormResponse> FormsGetMobileFormForBusObByNameAndPublicId([Header("UserAgent")] string userAgent, [AliasAs("busobname")]string busobname, [AliasAs("publicid")]string publicid, [AliasAs("foredit")]bool? foredit = null, [AliasAs("formid")]string formid = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<MobileFormResponse> GetMobileFormForBusObByNameAndPublicId([Header("UserAgent")] string userAgent, [AliasAs("busobname")]string busobname, [AliasAs("publicid")]string publicid, [AliasAs("foredit")]bool? foredit = null, [AliasAs("formid")]string formid = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
 
         /// <summary>
         /// Get mobile form by Business Object name and record ID.
@@ -77,9 +77,9 @@ namespace Cherwell.Api
         /// <param name="formid">Specify the form ID if the default is not desired. (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>Task of FormsMobileFormResponse</returns>
+        /// <returns>Task of MobileFormResponse</returns>
         [Get("/api/V1/getmobileformforbusob/busobname/{busobname}/busobrecid/{busobrecid}")]
-        Task<MobileFormResponse> FormsGetMobileFormForBusObByNameAndRecId([Header("UserAgent")] string userAgent, [AliasAs("busobname")]string busobname, [AliasAs("busobrecid")]string busobrecid, [AliasAs("foredit")]bool? foredit = null, [AliasAs("formid")]string formid = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
+        Task<MobileFormResponse> GetMobileFormForBusObByNameAndRecId([Header("UserAgent")] string userAgent, [AliasAs("busobname")]string busobname, [AliasAs("busobrecid")]string busobrecid, [AliasAs("foredit")]bool? foredit = null, [AliasAs("formid")]string formid = null, [AliasAs("lang")]string lang = null, [AliasAs("locale")]string locale = null);
         #endregion Asynchronous Operations
     }
 }

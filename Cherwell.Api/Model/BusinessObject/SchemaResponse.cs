@@ -467,8 +467,8 @@ namespace Cherwell.Api.Model.BusinessObject
                 (
                     this.BusObId == other.BusObId ||
                     this.BusObId != null &&
-                    this.BusObId.Equals(other.BusObId)
-                ) &&
+					this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
+				) &&
                 (
                     this.FieldDefinitions == other.FieldDefinitions ||
                     this.FieldDefinitions != null &&
