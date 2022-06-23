@@ -24,6 +24,10 @@ namespace Cherwell.Api
 
 			// Validate that all of the necessary configuration has been provided
 			options.Validate();
+			if (string.IsNullOrWhiteSpace(options.UserAgent))
+			{
+				options.UserAgent = "Cherwell.Api";
+			}
 
 			_httpClient = new HttpClient(new AuthenticatedHttpClientHandler(options, _logger))
 			{
