@@ -29,7 +29,12 @@
 		/// <summary>
 		/// The authentication mode in use for connection attempts
 		/// </summary>
-		public string AuthenticationMode { get; internal set; } = "Internal";
+		public string AuthenticationMode { get; set; } = "Internal";
+
+		/// <summary>
+		/// The user agent to be included in requests to the API
+		/// </summary>
+		public string UserAgent { get; set; } = "Cherwell.Api";
 
 		/// <summary>
 		/// Validate that all of the necessary options have been specified
@@ -55,6 +60,11 @@
 			if (string.IsNullOrWhiteSpace(BaseAddress))
 			{
 				throw new ConfigurationException($"Missing {nameof(BaseAddress)}.");
+			}
+
+			if (string.IsNullOrWhiteSpace(AuthenticationMode))
+			{
+				throw new ConfigurationException($"Missing {nameof(AuthenticationMode)}.");
 			}
 		}
 	}

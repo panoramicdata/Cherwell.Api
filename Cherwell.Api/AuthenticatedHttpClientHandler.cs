@@ -41,6 +41,9 @@ namespace Cherwell.Api
 				request.Headers.Authorization = new AuthenticationHeaderValue(_authenticationType, accessToken);
 			}
 
+			// Add a user agent to ensure consistent behaviour
+			request.Headers.UserAgent.Add(new ProductInfoHeaderValue(_options.UserAgent));
+
 			return await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
 		}
 
