@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
 using System.Security.Authentication;
+using System.Text;
 
 namespace Cherwell.Api;
 
@@ -82,6 +83,21 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 	/// <exception cref="AuthenticationException">The authentication attempt was not successful</exception>
 	private async Task GenerateAccessTokenAsync(GrantTypes grantType, CancellationToken cancellationToken)
 	{
+		using var httpClient = new HttpClient()
+		{
+			BaseAddress = new($"{_options.BaseAddress}/token"),
+		};
+
+		if (_options.UserAgent is not null)
+		{
+			httpClient.DefaultRequestHeaders.Add("User-Agent", _options.UserAgent);
+		}
+
+		httpClient.DefaultRequestHeaders.Add(
+			"Authorization",
+			"Basic " + (string?)Convert.ToBase64String(Encoding.UTF8.GetBytes($"{_options.UserName}:{_options.Password}"))
+			);
+
 		var grantTypeString = grantType switch
 		{
 			GrantTypes.Password => "password",
@@ -89,21 +105,27 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			_ => throw new ArgumentOutOfRangeException(nameof(grantType))
 		};
 
-		var request = new HttpRequestMessage(HttpMethod.Post, $"token?auth_mode={_options.AuthenticationMode}");
+		var request = new HttpRequestMessage(HttpMethod.Post, "token");
 
-		var keyValues = new List<KeyValuePair<string, string>>();
-		keyValues.Add(new KeyValuePair<string, string>("grant_type", grantTypeString));
-		keyValues.Add(new KeyValuePair<string, string>("client_id", _options.ClientId!));
-		keyValues.Add(new KeyValuePair<string, string>("username", _options.UserName!));
-		keyValues.Add(new KeyValuePair<string, string>("password", _options.Password!));
+		var keyValues = new List<KeyValuePair<string, string>>
+		{
+			new KeyValuePair<string, string>("grant_type", grantTypeString),
+			new KeyValuePair<string, string>("username", _options.UserName!),
+			new KeyValuePair<string, string>("password", _options.Password!)
+		};
+
 		if (_refreshToken is not null)
 		{
-			keyValues.Add(new KeyValuePair<string, string>(_refreshToken!, "refresh_token"));
+			keyValues.Add(new KeyValuePair<string, string>("refresh_token", _refreshToken!));
 		}
-		request.Content = new FormUrlEncodedContent(keyValues);
-		request.Content.Headers.ContentType = new MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded") { CharSet = "UTF-8" };
 
-		var response = await _authenticatingClient
+		request.Content = new FormUrlEncodedContent(keyValues);
+		request.Content.Headers.ContentType = new MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded")
+		{
+			CharSet = "UTF-8"
+		};
+
+		var response = await httpClient
 			.SendAsync(request, cancellationToken)
 			.ConfigureAwait(false);
 
@@ -124,6 +146,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			// TODO: Move exception text to Resources file
 			throw new AuthenticationException("No body in the response!");
 		}
+
 		_accessToken = tokenResponse.AccessToken;
 		_refreshToken = tokenResponse.RefreshToken;
 		_tokenRefreshRequiredAt = DateTime.Now.AddMinutes((tokenResponse.ExpiresIn ?? 15) - 1);
