@@ -3,6 +3,7 @@
 	"Username": "xxxxxxxxxxxxxxx",
 	"Password": "xxxxxxxxxxxxxxx",
 	"ClientId": "xxxxxxxxxxxxxxx",
-	"BaseAddress": "xxxxxxxxxxxxxxx"
+	"BaseAddress": "xxxxxxxxxxxxxxx",
+	"UserAgent": "MyApp/1.0.0"
   }
 }
