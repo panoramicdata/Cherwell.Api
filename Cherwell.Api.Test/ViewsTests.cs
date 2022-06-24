@@ -11,13 +11,13 @@ public class ViewsTests : CherwellClientTest
 	}
 
 	[Fact]
-   public async void Core_GetViews()
-   {
+	public async void Core_GetViews()
+	{
 		// Get a list of views from Cherwell
 		var views = await TestCherwellClient
-		   .Core
-		   .GetViewsAsync()
-		   .ConfigureAwait(false);
+			.Core
+			.GetViewsAsync()
+			.ConfigureAwait(false);
 
 		views.Should().NotBeNull();
 	}
