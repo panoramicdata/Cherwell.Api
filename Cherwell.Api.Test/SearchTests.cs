@@ -35,7 +35,8 @@ public class GetSearchResultsAdHocTests : CherwellClientTest
 			.Should()
 			.NotBeNull();
 
-		searchResults.BusinessObjects
+		searchResults
+			.BusinessObjects
 			.Should()
 			.NotBeNullOrEmpty();
 	}

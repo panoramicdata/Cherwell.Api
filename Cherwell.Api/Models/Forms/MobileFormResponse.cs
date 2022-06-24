@@ -30,7 +30,7 @@ public partial class MobileFormResponse : IEquatable<MobileFormResponse>, IValid
 	/// <param name="ErrorMessage">ErrorMessage.</param>
 	/// <param name="HasError">HasError.</param>
 	/// <param name="HttpStatusCode">HttpStatusCode.</param>
-	public MobileFormResponse(List<Core.Action> Actions, List<ObjectAttachment> Attachments, string GalleryImage, Location LocationInformation, List<Section> Sections, string Title, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
+	public MobileFormResponse(List<Core.Action> Actions, List<Attachment> Attachments, string GalleryImage, Location LocationInformation, List<Section> Sections, string Title, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
 	{
 		this.Actions = Actions;
 		this.Attachments = Attachments;
@@ -54,7 +54,7 @@ public partial class MobileFormResponse : IEquatable<MobileFormResponse>, IValid
 	/// Attachments
 	/// </summary>
 	[DataMember(Name = "attachments", EmitDefaultValue = false)]
-	public List<ObjectAttachment> Attachments { get; set; }
+	public List<Attachment> Attachments { get; set; }
 
 	/// <summary>
 	/// GalleryImage

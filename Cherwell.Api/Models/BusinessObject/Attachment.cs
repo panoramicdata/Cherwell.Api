@@ -1,16 +1,14 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
-using System.Text;
 
 namespace Cherwell.Api.Models.BusinessObject;
 
 /// <summary>
-/// BusinessObjectAttachment
+/// BusinessObject Attachment
 /// </summary>
 [DataContract]
-public partial class ObjectAttachment : IEquatable<ObjectAttachment>, IValidatableObject
+public partial class Attachment
 {
 	/// <summary>
 	/// AttachmentType
@@ -42,7 +40,7 @@ public partial class ObjectAttachment : IEquatable<ObjectAttachment>, IValidatab
 	/// Scope
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
-	public enum EnumScope
+	public enum AttachmentScope
 	{
 
 		/// <summary>
@@ -134,7 +132,7 @@ public partial class ObjectAttachment : IEquatable<ObjectAttachment>, IValidatab
 	/// Type
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
-	public enum EnumType
+	public enum ObjectType
 	{
 
 		/// <summary>
@@ -202,396 +200,95 @@ public partial class ObjectAttachment : IEquatable<ObjectAttachment>, IValidatab
 	/// Scope
 	/// </summary>
 	[DataMember(Name = "scope", EmitDefaultValue = false)]
-	public EnumScope? Scope { get; set; }
+	public AttachmentScope? Scope { get; set; }
 
 	/// <summary>
 	/// Type
 	/// </summary>
 	[DataMember(Name = "type", EmitDefaultValue = false)]
-	public EnumType? Type { get; set; }
-
-	/// <summary>
-	/// Initializes a new instance of the <see cref="ObjectAttachment" /> class.
-	/// </summary>
-	/// <param name="AttachedBusObId">AttachedBusObId.</param>
-	/// <param name="AttachedBusObRecId">AttachedBusObRecId.</param>
-	/// <param name="AttachmentFileId">AttachmentFileId.</param>
-	/// <param name="AttachmentFileName">AttachmentFileName.</param>
-	/// <param name="AttachmentFileType">AttachmentFileType.</param>
-	/// <param name="AttachmentId">AttachmentId.</param>
-	/// <param name="AttachmentType">AttachmentType.</param>
-	/// <param name="BusObId">BusObId.</param>
-	/// <param name="BusObRecId">BusObRecId.</param>
-	/// <param name="Comment">Comment.</param>
-	/// <param name="Created">Created.</param>
-	/// <param name="DisplayText">DisplayText.</param>
-	/// <param name="Links">Links.</param>
-	/// <param name="Owner">Owner.</param>
-	/// <param name="Scope">Scope.</param>
-	/// <param name="ScopeOwner">ScopeOwner.</param>
-	/// <param name="Type">Type.</param>
-	public ObjectAttachment(string AttachedBusObId, string AttachedBusObRecId, string AttachmentFileId, string AttachmentFileName, string AttachmentFileType, string AttachmentId, EnumAttachmentType? AttachmentType, string BusObId, string BusObRecId, string Comment, DateTime? Created, string DisplayText, List<Link> Links, string Owner, EnumScope? Scope, string ScopeOwner, EnumType? Type)
-	{
-		this.AttachedBusObId = AttachedBusObId;
-		this.AttachedBusObRecId = AttachedBusObRecId;
-		this.AttachmentFileId = AttachmentFileId;
-		this.AttachmentFileName = AttachmentFileName;
-		this.AttachmentFileType = AttachmentFileType;
-		this.AttachmentId = AttachmentId;
-		this.AttachmentType = AttachmentType;
-		this.BusObId = BusObId;
-		this.BusObRecId = BusObRecId;
-		this.Comment = Comment;
-		this.Created = Created;
-		this.DisplayText = DisplayText;
-		this.Links = Links;
-		this.Owner = Owner;
-		this.Scope = Scope;
-		this.ScopeOwner = ScopeOwner;
-		this.Type = Type;
-	}
+	public ObjectType? Type { get; set; }
 
 	/// <summary>
 	/// AttachedBusObId
 	/// </summary>
 	[DataMember(Name = "attachedBusObId", EmitDefaultValue = false)]
-	public string AttachedBusObId { get; set; }
+	public string AttachedBusObId { get; set; } = null!;
 
 	/// <summary>
 	/// AttachedBusObRecId
 	/// </summary>
 	[DataMember(Name = "attachedBusObRecId", EmitDefaultValue = false)]
-	public string AttachedBusObRecId { get; set; }
+	public string AttachedBusObRecId { get; set; } = null!;
 
 	/// <summary>
 	/// AttachmentFileId
 	/// </summary>
 	[DataMember(Name = "attachmentFileId", EmitDefaultValue = false)]
-	public string AttachmentFileId { get; set; }
+	public string AttachmentFileId { get; set; } = null!;
 
 	/// <summary>
 	/// AttachmentFileName
 	/// </summary>
 	[DataMember(Name = "attachmentFileName", EmitDefaultValue = false)]
-	public string AttachmentFileName { get; set; }
+	public string AttachmentFileName { get; set; } = null!;
 
 	/// <summary>
 	/// AttachmentFileType
 	/// </summary>
 	[DataMember(Name = "attachmentFileType", EmitDefaultValue = false)]
-	public string AttachmentFileType { get; set; }
+	public string AttachmentFileType { get; set; } = null!;
 
 	/// <summary>
 	/// AttachmentId
 	/// </summary>
 	[DataMember(Name = "attachmentId", EmitDefaultValue = false)]
-	public string AttachmentId { get; set; }
+	public string AttachmentId { get; set; } = null!;
 
 	/// <summary>
 	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
-	public string BusObId { get; set; }
+	public string BusObId { get; set; } = null!;
 
 	/// <summary>
 	/// BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
-	public string BusObRecId { get; set; }
+	public string BusObRecId { get; set; } = null!;
 
 	/// <summary>
 	/// Comment
 	/// </summary>
 	[DataMember(Name = "comment", EmitDefaultValue = false)]
-	public string Comment { get; set; }
+	public string Comment { get; set; } = null!;
 
 	/// <summary>
 	/// Created
 	/// </summary>
 	[DataMember(Name = "created", EmitDefaultValue = false)]
-	public DateTime? Created { get; set; }
+	public DateTime? Created { get; set; } = null!;
 
 	/// <summary>
 	/// DisplayText
 	/// </summary>
 	[DataMember(Name = "displayText", EmitDefaultValue = false)]
-	public string DisplayText { get; set; }
+	public string DisplayText { get; set; } = null!;
 
 	/// <summary>
 	/// Links
 	/// </summary>
 	[DataMember(Name = "links", EmitDefaultValue = false)]
-	public List<Link> Links { get; set; }
+	public List<Link> Links { get; set; } = null!;
 
 	/// <summary>
 	/// Owner
 	/// </summary>
 	[DataMember(Name = "owner", EmitDefaultValue = false)]
-	public string Owner { get; set; }
+	public string Owner { get; set; } = null!;
 
 	/// <summary>
 	/// ScopeOwner
 	/// </summary>
 	[DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
-	public string ScopeOwner { get; set; }
-
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class BusinessObjectAttachment {\n");
-		sb.Append("  AttachedBusObId: ").Append(AttachedBusObId).Append('\n');
-		sb.Append("  AttachedBusObRecId: ").Append(AttachedBusObRecId).Append('\n');
-		sb.Append("  AttachmentFileId: ").Append(AttachmentFileId).Append('\n');
-		sb.Append("  AttachmentFileName: ").Append(AttachmentFileName).Append('\n');
-		sb.Append("  AttachmentFileType: ").Append(AttachmentFileType).Append('\n');
-		sb.Append("  AttachmentId: ").Append(AttachmentId).Append('\n');
-		sb.Append("  AttachmentType: ").Append(AttachmentType).Append('\n');
-		sb.Append("  BusObId: ").Append(BusObId).Append('\n');
-		sb.Append("  BusObRecId: ").Append(BusObRecId).Append('\n');
-		sb.Append("  Comment: ").Append(Comment).Append('\n');
-		sb.Append("  Created: ").Append(Created).Append('\n');
-		sb.Append("  DisplayText: ").Append(DisplayText).Append('\n');
-		sb.Append("  Links: ").Append(Links).Append('\n');
-		sb.Append("  Owner: ").Append(Owner).Append('\n');
-		sb.Append("  Scope: ").Append(Scope).Append('\n');
-		sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append('\n');
-		sb.Append("  Type: ").Append(Type).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
-	}
-
-	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as ObjectAttachment);
-	}
-
-	/// <summary>
-	/// Returns true if BusinessObjectAttachment instances are equal
-	/// </summary>
-	/// <param name="other">Instance of BusinessObjectAttachment to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(ObjectAttachment? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					AttachedBusObId == other.AttachedBusObId ||
-					AttachedBusObId != null &&
-					AttachedBusObId.Equals(other.AttachedBusObId, StringComparison.Ordinal)
-				) &&
-				(
-					AttachedBusObRecId == other.AttachedBusObRecId ||
-					AttachedBusObRecId != null &&
-					AttachedBusObRecId.Equals(other.AttachedBusObRecId, StringComparison.Ordinal)
-				) &&
-				(
-					AttachmentFileId == other.AttachmentFileId ||
-					AttachmentFileId != null &&
-					AttachmentFileId.Equals(other.AttachmentFileId, StringComparison.Ordinal)
-				) &&
-				(
-					AttachmentFileName == other.AttachmentFileName ||
-					AttachmentFileName != null &&
-					AttachmentFileName.Equals(other.AttachmentFileName, StringComparison.Ordinal)
-				) &&
-				(
-					AttachmentFileType == other.AttachmentFileType ||
-					AttachmentFileType != null &&
-					AttachmentFileType.Equals(other.AttachmentFileType, StringComparison.Ordinal)
-				) &&
-				(
-					AttachmentId == other.AttachmentId ||
-					AttachmentId != null &&
-					AttachmentId.Equals(other.AttachmentId, StringComparison.Ordinal)
-				) &&
-				(
-					AttachmentType == other.AttachmentType ||
-					AttachmentType != null &&
-					AttachmentType.Equals(other.AttachmentType)
-				) &&
-				(
-					BusObId == other.BusObId ||
-					BusObId != null &&
-					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
-				) &&
-				(
-					BusObRecId == other.BusObRecId ||
-					BusObRecId != null &&
-					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
-				) &&
-				(
-					Comment == other.Comment ||
-					Comment != null &&
-					Comment.Equals(other.Comment, StringComparison.Ordinal)
-				) &&
-				(
-					Created == other.Created ||
-					Created != null &&
-					Created.Equals(other.Created)
-				) &&
-				(
-					DisplayText == other.DisplayText ||
-					DisplayText != null &&
-					DisplayText.Equals(other.DisplayText, StringComparison.Ordinal)
-				) &&
-				(
-					Links == other.Links ||
-					Links != null &&
-					Links.SequenceEqual(other.Links)
-				) &&
-				(
-					Owner == other.Owner ||
-					Owner != null &&
-					Owner.Equals(other.Owner, StringComparison.Ordinal)
-				) &&
-				(
-					Scope == other.Scope ||
-					Scope != null &&
-					Scope.Equals(other.Scope)
-				) &&
-				(
-					ScopeOwner == other.ScopeOwner ||
-					ScopeOwner != null &&
-					ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
-				) &&
-				(
-					Type == other.Type ||
-					Type != null &&
-					Type.Equals(other.Type)
-				);
-	}
-
-	/// <summary>
-	/// Gets the hash code
-	/// </summary>
-	/// <returns>Hash code</returns>
-	public override int GetHashCode()
-	{
-		// credit: http://stackoverflow.com/a/263416/677735
-		unchecked // Overflow is fine, just wrap
-		{
-			int hash = 41;
-			// Suitable nullity checks etc, of course :)
-			if (AttachedBusObId != null)
-			{
-				hash = hash * 59 + AttachedBusObId.GetHashCode();
-			}
-
-			if (AttachedBusObRecId != null)
-			{
-				hash = hash * 59 + AttachedBusObRecId.GetHashCode();
-			}
-
-			if (AttachmentFileId != null)
-			{
-				hash = hash * 59 + AttachmentFileId.GetHashCode();
-			}
-
-			if (AttachmentFileName != null)
-			{
-				hash = hash * 59 + AttachmentFileName.GetHashCode();
-			}
-
-			if (AttachmentFileType != null)
-			{
-				hash = hash * 59 + AttachmentFileType.GetHashCode();
-			}
-
-			if (AttachmentId != null)
-			{
-				hash = hash * 59 + AttachmentId.GetHashCode();
-			}
-
-			if (AttachmentType != null)
-			{
-				hash = hash * 59 + AttachmentType.GetHashCode();
-			}
-
-			if (BusObId != null)
-			{
-				hash = hash * 59 + BusObId.GetHashCode();
-			}
-
-			if (BusObRecId != null)
-			{
-				hash = hash * 59 + BusObRecId.GetHashCode();
-			}
-
-			if (Comment != null)
-			{
-				hash = hash * 59 + Comment.GetHashCode();
-			}
-
-			if (Created != null)
-			{
-				hash = hash * 59 + Created.GetHashCode();
-			}
-
-			if (DisplayText != null)
-			{
-				hash = hash * 59 + DisplayText.GetHashCode();
-			}
-
-			if (Links != null)
-			{
-				hash = hash * 59 + Links.GetHashCode();
-			}
-
-			if (Owner != null)
-			{
-				hash = hash * 59 + Owner.GetHashCode();
-			}
-
-			if (Scope != null)
-			{
-				hash = hash * 59 + Scope.GetHashCode();
-			}
-
-			if (ScopeOwner != null)
-			{
-				hash = hash * 59 + ScopeOwner.GetHashCode();
-			}
-
-			if (Type != null)
-			{
-				hash = hash * 59 + Type.GetHashCode();
-			}
-
-			return hash;
-		}
-	}
-
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	public string ScopeOwner { get; set; } = null!;
 }
