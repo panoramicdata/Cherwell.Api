@@ -311,16 +311,20 @@ public partial class AddUserToTeamResponse : IEquatable<AddUserToTeamResponse>, 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="AddUserToTeamResponse" /> class.
 	/// </summary>
-	/// <param name="ErrorCode">ErrorCode.</param>
-	/// <param name="ErrorMessage">ErrorMessage.</param>
-	/// <param name="HasError">HasError.</param>
-	/// <param name="HttpStatusCode">HttpStatusCode.</param>
-	public AddUserToTeamResponse(string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
+	/// <param name="errorCode">ErrorCode.</param>
+	/// <param name="errorMessage">ErrorMessage.</param>
+	/// <param name="hasError">HasError.</param>
+	/// <param name="httpStatusCode">HttpStatusCode.</param>
+	public AddUserToTeamResponse(
+		string errorCode,
+		string errorMessage,
+		bool? hasError,
+		EnumHttpStatusCode? httpStatusCode)
 	{
-		this.ErrorCode = ErrorCode;
-		this.ErrorMessage = ErrorMessage;
-		this.HasError = HasError;
-		this.HttpStatusCode = HttpStatusCode;
+		ErrorCode = errorCode;
+		ErrorMessage = errorMessage;
+		HasError = hasError;
+		HttpStatusCode = httpStatusCode;
 	}
 
 	/// <summary>

@@ -46,7 +46,13 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		// Add a user agent to ensure consistent behaviour
 		if (_options.UserAgent is not null)
 		{
-			request.Headers.UserAgent.Add(new ProductInfoHeaderValue(_options.UserAgent, "1.0"));
+			var userAgentArray = _options.UserAgent.Split('/');
+			if (userAgentArray.Length != 2)
+			{
+				throw new FormatException("UserAgent should be in the form 'SystemName/1.0', where 1.0 is the system version in the form 'Major.Minor'");
+			}
+
+			request.Headers.UserAgent.Add(new ProductInfoHeaderValue(userAgentArray[0], userAgentArray[1]));
 		}
 
 		return await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
