@@ -15,8 +15,6 @@ public interface ICore
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="standinkey">The StandIn key for the gallery image to delete.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of void</returns>
 	[Delete("/api/V1/deletegalleryimage/standinkey/{standinkey}")]
 	Task DeleteGalleryImageByStandInKeyAsync(
@@ -33,8 +31,6 @@ public interface ICore
 	/// <param name="name">Image name and folder location in the Image Manager. Parameter must begin with \&quot;[PlugIn]Images;\&quot; and then a period-separated list of folders. Example: \&quot;[PlugIn]Images;Images.Common.Cherwell.ico\&quot;.</param>
 	/// <param name="width">Specify the width (icons only). (optional)</param>
 	/// <param name="height">Specify the height (icons only). (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of string</returns>
 	[Get("/api/V1/getgalleryimage/name/{name}")]
 	Task<string> GetGalleryImageAsync(
@@ -54,8 +50,6 @@ public interface ICore
 	/// <param name="scopeowner">the scopeowner to get gallery images for.</param>
 	/// <param name="folder">The folder to get gallery images for.</param>
 	/// <param name="links">Flag to include hyperlinks in results. Default is false. (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ManagerData</returns>
 	[Get("/api/V1/getgalleryimages/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
 	Task<ManagerData> GetGalleryImagesFolderAsync(
@@ -75,8 +69,6 @@ public interface ICore
 	/// <param name="scope">The scope to get gallery images for.</param>
 	/// <param name="scopeowner">The scopeowner to get gallery images for.</param>
 	/// <param name="links">Flag to include hyperlinks in results. Default is false. (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ManagerData</returns>
 	[Get("/api/V1/getgalleryimages/scope/{scope}/scopeowner/{scopeowner}")]
 	Task<ManagerData> GetGalleryImagesScopeOwnerAsync(
@@ -94,8 +86,6 @@ public interface ICore
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="scope">The scope to get the images for.</param>
 	/// <param name="links">Flag to include hyperlinks in results. Default is false. (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ManagerData</returns>
 	[Get("/api/V1/getgalleryimages/scope/{scope}")]
 	Task<ManagerData> GetGalleryImagesScopeAsync(
@@ -111,8 +101,6 @@ public interface ICore
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="links">Flag to include hyperlinks in results. Default is false. (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ManagerData</returns>
 	[Get("/api/V1/getgalleryimages")]
 	Task<ManagerData> GetGalleryImagesAsync(
@@ -127,8 +115,6 @@ public interface ICore
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="standInKey">The StandIn key for the Stored Value you would like to retrieve.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of StoredValueResponse</returns>
 	[Get("/api/V1/getstoredvalue/standinkey/{standInKey}")]
 	Task<StoredValueResponse> GetStoredValueAsync(
@@ -146,8 +132,6 @@ public interface ICore
 	/// <param name="scopeowner">The scope owner for which to get stored values.</param>
 	/// <param name="folder">The folder for which to get stored values.</param>
 	/// <param name="links">Flag to include hyperlinks in results. Default is false. (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ManagerData</returns>
 	[Get("/api/V1/storedvalues/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
 	Task<ManagerData> GetStoredValuesFolderAsync(
@@ -167,8 +151,6 @@ public interface ICore
 	/// <param name="scope">The scope for which to get stored values.</param>
 	/// <param name="scopeowner">The scope owner for which to get stored values.</param>
 	/// <param name="links">Flag to include hyperlinks in results. Default is false. (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ManagerData</returns>
 	[Get("/api/V1/storedvalues/scope/{scope}/scopeowner/{scopeowner}")]
 	Task<ManagerData> GetStoredValuesScopeOwnerAsync(
@@ -186,8 +168,6 @@ public interface ICore
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="scope">The scope for which to get stored values.</param>
 	/// <param name="links">Flag to include hyperlinks in results. Default is false. (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ManagerData</returns>
 	[Get("/api/V1/storedvalues/scope/{scope}")]
 	Task<ManagerData> GetStoredValuesScopeAsync(
@@ -203,8 +183,6 @@ public interface ICore
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="links">Flag to include hyperlinks in results. Default is false. (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ManagerData</returns>
 	[Get("/api/V1/storedvalues")]
 	Task<ManagerData> GetStoredValuesAsync(
@@ -218,8 +196,6 @@ public interface ICore
 	/// Operation to get a list of views that are configured in the system.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ViewsResponse</returns>
 	[Get("/api/V1/getviews")]
 	Task<ViewsResponse> GetViewsAsync(
@@ -233,8 +209,6 @@ public interface ICore
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="request">To create a new gallery image leave the StandIn key blank. To update a gallery image provide the StandIn key of the gallery image you want to update. There are three different ImageTypes allowed: Imported, Url, and File. To use the Imported image type, provide the filename in the Name property, with extension, and provide the image data in a Base64 encoded format in the Base64EncodedImageData property. The max file size is 512k. To use the Url image type,  provide the full network share path to the file in the Name property, ie: \&quot;\\\\\\\\\\\\\\\\networkshare\\\\\\somefolder\\\\\\somefile.jpg\&quot;. If the file is not accessible to all users it will not visible to all users. To use the File image type, provide the full path to the file in the Name property, ie: \&quot;C:\\\\\\somefolder\\\\\\somfile.jpg\&quot;. If the file is not accessible to all users it will not visible to all users. When creating or updating an image, Name and ImageType are always required, and if the image type is \&quot;Imported\&quot;, then the Base64EncodedImageData is also required.  scope, scopeowner, and folder can all be updated independently.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SaveGalleryImageResponse</returns>
 	[Post("/api/V1/savegalleryimage")]
 	Task<SaveGalleryImageResponse> SaveGalleryImageAsync(
@@ -252,8 +226,6 @@ public interface ICore
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="request">The stored value to create or update. To update include the StandIn key for the associated stored value. To create, name, scope, type, and value are required.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of StoredValueResponse</returns>
 	[Post("/api/V1/savestoredvalue")]
 	Task<StoredValueResponse> SaveStoredValueAsync(
@@ -268,8 +240,6 @@ public interface ICore
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="culturecode">The culture code to set for the current user.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of string</returns>
 	[Put("/api/V1/setculture/culturecode/{culturecode}")]
 	Task<string> SetCultureAsync(

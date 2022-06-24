@@ -15,8 +15,6 @@ public interface ISecurity
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="applicationtype">The type of CSM application to return security settings for.  Application type is Desktop Client, Browser Client, Browser Portal or Cherwell Mobile.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ClientSecuritySettingsResponse</returns>
 	[Get("/api/V1/getclientsecuritysettings/applicationtype/{applicationtype}")]
 	Task<ClientSecuritySettingsResponse> GetClientSecuritySettingsAsync(
@@ -30,8 +28,6 @@ public interface ISecurity
 	/// Operation to get all available Roles.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of RoleReadResponse</returns>
 	[Get("/api/V1/getroles")]
 	Task<RoleReadResponse> GetRolesAsync(
@@ -44,8 +40,6 @@ public interface ISecurity
 	/// Operation to get all available Roles.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of RoleReadV2Response</returns>
 	[Get("/api/V2/getroles")]
 	Task<RoleReadV2Response> GetRolesV2Async(
@@ -60,8 +54,6 @@ public interface ISecurity
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="groupid">Specify the Security Group ID. </param>
 	/// <param name="busObId">Specify the Business Object ID.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;BusinessObjectPermission&gt;</returns>
 	[Get("/api/V1/getsecuritygroupbusinessobjectpermissions/groupid/{groupid}/busobid/{busObId}")]
 	Task<List<BusinessObjectPermission>> GetSecurityGroupBusinessObjectPermissionsByBusObIdAsync(
@@ -78,8 +70,6 @@ public interface ISecurity
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="groupid">Specify the Security Group ID. </param>
 	/// <param name="busObId">Specify the Business Object ID.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of GetSecurityGroupBusinessObjectPermissionsResponse</returns>
 	[Get("/api/V2/getsecuritygroupbusinessobjectpermissions/groupid/{groupid}/busobid/{busObId}")]
 	Task<GetSecurityGroupBusinessObjectPermissionsResponse> GetSecurityGroupBusinessObjectPermissionsByBusObIdV2Async(
@@ -96,8 +86,6 @@ public interface ISecurity
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="groupname">Specify the Security Group name. </param>
 	/// <param name="busobname">Specify the Business Object name.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;BusinessObjectPermission&gt;</returns>
 	[Get("/api/V1/getsecuritygroupbusinessobjectpermissions/groupname/{groupname}/busobname/{busobname}")]
 	Task<List<BusinessObjectPermission>> GetSecurityGroupBusinessObjectPermissionsByBusObNameAsync(
@@ -114,8 +102,6 @@ public interface ISecurity
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="groupname">Specify the Security Group name. </param>
 	/// <param name="busobname">Specify the Business Object name.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of GetSecurityGroupBusinessObjectPermissionsResponse</returns>
 	[Get("/api/V2/getsecuritygroupbusinessobjectpermissions/groupname/{groupname}/busobname/{busobname}")]
 	Task<GetSecurityGroupBusinessObjectPermissionsResponse> GetSecurityGroupBusinessObjectPermissionsByBusObNameV2Async(
@@ -131,8 +117,6 @@ public interface ISecurity
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="busObId">Specify the Business Object ID.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;BusinessObjectPermission&gt;</returns>
 	[Get("/api/V1/getsecuritygroupbusinessobjectpermissionsforcurrentuserbybusobid/busobid/{busObId}")]
 	Task<List<BusinessObjectPermission>> GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdAsync(
@@ -147,8 +131,6 @@ public interface ISecurity
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="busObId">Specify the Business Object ID.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of GetSecurityGroupBusinessObjectPermissionsResponse</returns>
 	[Get("/api/V2/getsecuritygroupbusinessobjectpermissionsforcurrentuserbybusobid/busobid/{busObId}")]
 	Task<GetSecurityGroupBusinessObjectPermissionsResponse> GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV2Async(
@@ -163,8 +145,6 @@ public interface ISecurity
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="busobname">Specify the Business Object name.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;BusinessObjectPermission&gt;</returns>
 	[Get("/api/V1/getsecuritygroupbusinessobjectpermissionsforcurrentuserbybusobname/busobname/{busobname}")]
 	Task<List<BusinessObjectPermission>> GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameAsync(
@@ -179,8 +159,6 @@ public interface ISecurity
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="busobname">Specify the Business Object name.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of GetSecurityGroupBusinessObjectPermissionsResponse</returns>
 	[Get("/api/V2/getsecuritygroupbusinessobjectpermissionsforcurrentuserbybusobname/busobname/{busobname}")]
 	Task<GetSecurityGroupBusinessObjectPermissionsResponse> GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV2Async(
@@ -194,8 +172,6 @@ public interface ISecurity
 	/// Operation to get IDs and names for all available Security Group categories. 
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;RightCategory&gt;</returns>
 	[Get("/api/V1/getsecuritygroupcategories")]
 	Task<List<RightCategory>> GetSecurityGroupCategoriesAsync(
@@ -208,8 +184,6 @@ public interface ISecurity
 	/// Operation to get IDs and names for all available Security Group categories. 
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SecurityRightCategoriesResponse</returns>
 	[Get("/api/V2/getsecuritygroupcategories")]
 	Task<SecurityRightCategoriesResponse> GetSecurityGroupCategoriesV2Async(
@@ -224,8 +198,6 @@ public interface ISecurity
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="groupid">Specify the Security Group ID</param>
 	/// <param name="categoryid">Specify the Security Group category ID</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;Right&gt;</returns>
 	[Get("/api/V1/getsecuritygrouprights/groupid/{groupid}/categoryid/{categoryid}")]
 	Task<List<Right>> GetSecurityGroupRightsByGroupIdAndCategoryIdAsync(
@@ -242,8 +214,6 @@ public interface ISecurity
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="groupid">Specify the Security Group ID</param>
 	/// <param name="categoryid">Specify the Security Group category ID</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SecurityRightsResponse</returns>
 	[Get("/api/V2/getsecuritygrouprights/groupid/{groupid}/categoryid/{categoryid}")]
 	Task<SecurityRightsResponse> GetSecurityGroupRightsByGroupIdAndCategoryIdV2Async(
@@ -260,8 +230,6 @@ public interface ISecurity
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="groupname">Specify the Security Group name.</param>
 	/// <param name="categoryname">Specify the Security Group category name.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;Right&gt;</returns>
 	[Get("/api/V1/getsecuritygrouprights/groupname/{groupname}/categoryname/{categoryname}")]
 	Task<List<Right>> GetSecurityGroupRightsByGroupNameAndCategoryNameAsync(
@@ -278,8 +246,6 @@ public interface ISecurity
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="groupname">Specify the Security Group name.</param>
 	/// <param name="categoryname">Specify the Security Group category name.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SecurityRightsResponse</returns>
 	[Get("/api/V2/getsecuritygrouprights/groupname/{groupname}/categoryname/{categoryname}")]
 	Task<SecurityRightsResponse> GetSecurityGroupRightsByGroupNameAndCategoryNameV2Async(
@@ -295,8 +261,6 @@ public interface ISecurity
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="categoryid">Specify the Security Group category ID.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;Right&gt;</returns>
 	[Get("/api/V1/getsecuritygrouprightsforcurrentuserbycategoryid/categoryid/{categoryid}")]
 	Task<List<Right>> GetSecurityGroupRightsForCurrentUserByCategoryIdAsync(
@@ -311,8 +275,6 @@ public interface ISecurity
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="categoryid">Specify the Security Group category ID.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SecurityRightsResponse</returns>
 	[Get("/api/V2/getsecuritygrouprightsforcurrentuserbycategoryid/categoryid/{categoryid}")]
 	Task<SecurityRightsResponse> GetSecurityGroupRightsForCurrentUserByCategoryIdV2Async(
@@ -327,8 +289,6 @@ public interface ISecurity
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="categoryname">Specify the Security Group category name.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;Right&gt;</returns>
 	[Get("/api/V1/getsecuritygrouprightsforcurrentuserbycategoryname/categoryname/{categoryname}")]
 	Task<List<Right>> GetSecurityGroupRightsForCurrentUserByCategoryNameAsync(
@@ -343,8 +303,6 @@ public interface ISecurity
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="categoryname">Specify the Security Group category name.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SecurityRightsResponse</returns>
 	[Get("/api/V2/getsecuritygrouprightsforcurrentuserbycategoryname/categoryname/{categoryname}")]
 	Task<SecurityRightsResponse> GetSecurityGroupRightsForCurrentUserByCategoryNameV2Async(
@@ -358,8 +316,6 @@ public interface ISecurity
 	/// Operation to get IDs, names, and descriptions for all available Security Groups.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SecurityGroupResponse</returns>
 	[Get("/api/V1/getsecuritygroups")]
 	Task<SecurityGroupResponse> GetSecurityGroupsAsync(
@@ -372,8 +328,6 @@ public interface ISecurity
 	/// Operation to get IDs, names, and descriptions for all available Security Groups.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SecurityGroupV2Response</returns>
 	[Get("/api/V2/getsecuritygroups")]
 	Task<SecurityGroupV2Response> GetSecurityGroupsV2Async(
@@ -387,8 +341,6 @@ public interface ISecurity
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="groupid">Specify the Security Group ID.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;User&gt;</returns>
 	[Get("/api/V1/getusersinsecuritygroup/groupid/{groupid}")]
 	Task<List<User>> GetUsersInSecurityGroupAsync(
@@ -403,8 +355,6 @@ public interface ISecurity
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="groupid">Specify the Security Group ID.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UsersUserReadV2Response</returns>
 	[Get("/api/V2/getusersinsecuritygroup/groupid/{groupid}")]
 	Task<UserReadV2Response> GetUsersInSecurityGroupV2Async(

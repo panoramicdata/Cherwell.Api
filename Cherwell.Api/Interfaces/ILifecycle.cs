@@ -16,8 +16,6 @@ public interface ILifecycle
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="businessObjectDefinitionId"></param>
 	/// <param name="recordId"></param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of GetRecordStatusResponse</returns>
 	[Get("/api/V1/{businessObjectDefinitionId}/records/{recordId}/stage")]
 	Task<GetRecordStatusResponse> GetRecordStageAsync(
@@ -34,8 +32,6 @@ public interface ILifecycle
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="businessObjectDefinitionId"></param>
 	/// <param name="recordId"></param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of GetRecordStatusResponse</returns>
 	[Get("/api/V1/{businessObjectDefinitionId}/records/{recordId}/status")]
 	Task<GetRecordStatusResponse> GetRecordStatusAsync(
@@ -51,8 +47,6 @@ public interface ILifecycle
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="businessObjectDefinitionId"></param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of GetStagesResponse</returns>
 	[Get("/api/V1/{businessObjectDefinitionId}/lifecycle/stages")]
 	Task<GetStagesResponse> GetStagesAsync(
@@ -67,8 +61,6 @@ public interface ILifecycle
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="businessObjectDefinitionId"></param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of GetStatusesResponse</returns>
 	[Get("/api/V1/{businessObjectDefinitionId}/lifecycle/statuses")]
 	Task<GetStatusesResponse> GetStatusesAsync(
@@ -84,8 +76,6 @@ public interface ILifecycle
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="businessObjectDefinitionId"></param>
 	/// <param name="recordId"></param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of GetTransitionOptionsResponse</returns>
 	[Get("/api/V1/{businessObjectDefinitionId}/records/{recordId}/transitionOptions")]
 	Task<GetTransitionOptionsResponse> GetTransitionOptionsAsync(
@@ -101,8 +91,6 @@ public interface ILifecycle
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="businessObjectDefinitionId"></param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of GetTransitionsResponse</returns>
 	[Get("/api/V1/{businessObjectDefinitionId}/lifecycle/transitions")]
 	Task<GetTransitionsResponse> GetTransitionsAsync(
@@ -119,8 +107,6 @@ public interface ILifecycle
 	/// <param name="businessObjectDefinitionId"></param>
 	/// <param name="recordId"></param>
 	/// <param name="transitionRecordRequest"></param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ResponseBase</returns>
 	[Post("/api/V1/{businessObjectDefinitionId}/records/{recordId}/transitions")]
 	Task<ResponseBase> TransitionRecordAsync(

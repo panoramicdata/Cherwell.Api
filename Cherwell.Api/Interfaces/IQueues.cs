@@ -15,8 +15,6 @@ public interface IQueues
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="request">Request object containing all properties necessary to add an item to a queue. All properties are required. The standin key defines the queue to which we want to add the Business Object.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of AddItemToQueueResponse</returns>
 	[Post("/api/V1/additemtoqueue")]
 	Task<AddItemToQueueResponse> AddItemToQueueAsync(
@@ -31,8 +29,6 @@ public interface IQueues
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="request">The request object for checking in an item to a queue. All properties are required except for historyNotes</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CheckInQueueItemResponse</returns>
 	[Post("/api/V1/checkinqueueitem")]
 	Task<CheckInQueueItemResponse> CheckInQueueItemAsync(
@@ -47,8 +43,6 @@ public interface IQueues
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="request">The request object for checking out an item from a queue. All properties are required except for historyNotes</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CheckOutQueueItemResponse</returns>
 	[Post("/api/V1/checkoutqueueitem")]
 	Task<CheckOutQueueItemResponse> CheckOutQueueItemAsync(
@@ -66,8 +60,6 @@ public interface IQueues
 	/// <param name="scopeowner">The scope owner to get available queues for.</param>
 	/// <param name="folder">The folder to get available queues for.  This has to be the folder ID which can be retrieved by doing a getqueues operation without the folder including links option then the links will have the folder IDs.</param>
 	/// <param name="links">Whether or not to include links. (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ManagerData</returns>
 	[Get("/api/V1/getqueues/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
 	Task<ManagerData> GetQueuesFolderAsync(
@@ -87,8 +79,6 @@ public interface IQueues
 	/// <param name="scope">The scope to get available queues for.</param>
 	/// <param name="scopeowner">The scope owner to get available queues for.</param>
 	/// <param name="links">Whether or not to include links. (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ManagerData</returns>
 	[Get("/api/V1/getqueues/scope/{scope}/scopeowner/{scopeowner}")]
 	Task<ManagerData> GetQueuesScopeOwnerAsync(
@@ -106,8 +96,6 @@ public interface IQueues
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="scope">The scope to get available queues for.</param>
 	/// <param name="links">Whether or not to include links. (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ManagerData</returns>
 	[Get("/api/V1/getqueues/scope/{scope}")]
 	Task<ManagerData> GetQueuesScopeAsync(
@@ -123,8 +111,6 @@ public interface IQueues
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="links">Whether or not to include links. (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ManagerData</returns>
 	[Get("/api/V1/getqueues")]
 	Task<ManagerData> GetQueuesAsync(
@@ -139,8 +125,6 @@ public interface IQueues
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="request">The request object to remove an item from a queue. All properties are required except for historyNotes</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of RemoveItemFromQueueResponse</returns>
 	[Post("/api/V1/removeitemfromqueue")]
 	Task<RemoveItemFromQueueResponse> RemoveItemFromQueueAsync(

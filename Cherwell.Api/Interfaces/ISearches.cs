@@ -15,8 +15,6 @@ public interface ISearches
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="dataRequest">Request containing the Business Object IDs list.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of QuickSearchConfigurationResponse</returns>
 	[Post("/api/V1/getquicksearchconfigurationforbusobs")]
 	Task<QuickSearchConfigurationResponse> GetQuickSearchConfigurationForBusObsAsync(
@@ -30,8 +28,6 @@ public interface ISearches
 	/// Operation to get a Quick Search configuration that you can use to execute a Quick Search based the current user&#39;s Business Object view rights. The configuration  includes supplied Business Object IDs and specific search items with the following options. Use the Option Key to determine if you can change the options.&lt;/br&gt;&lt;/br&gt;ChangedOption&lt;/br&gt; NonFinalStateOption&lt;/br&gt; SearchAnyWordsOption&lt;/br&gt; SearchAttachmentsOption&lt;/br&gt; SearchRelatedOption&lt;/br&gt; SortByOption&lt;/br&gt; &lt;/br&gt;Option Key:&lt;/br&gt; 0 &#x3D; None (Not selected and cannot select.)&lt;/br&gt; 1 &#x3D; Use (Selected and cannot clear.)&lt;/br&gt; 2 &#x3D; Display (Not selected and can select.)&lt;/br&gt; 3 &#x3D; UseAndDisplay (Selected and can clear.)&lt;/br&gt;&lt;/br&gt; SearchTargetType:&lt;/br&gt; 0 &#x3D; BusOb (Business Object)&lt;/br&gt; 1 &#x3D; DocRepository (Document Repository)
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of QuickSearchConfigurationResponse</returns>
 	[Get("/api/V1/getquicksearchconfigurationforbusobswithviewrights")]
 	Task<QuickSearchConfigurationResponse> GetQuickSearchConfigurationForBusObsWithViewRightsAsync(
@@ -46,8 +42,6 @@ public interface ISearches
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="dataRequest">Request object listing Business Object IDs and search text. Leave out the entire Business Object IDs parameter and all configured quick search Business Objects will be searched.</param>
 	/// <param name="includeLinks">Flag to include hyperlinks in results. Default is false.  (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SimpleResultsList</returns>
 	[Post("/api/V1/getquicksearchresults")]
 	Task<SimpleResultsList> GetQuickSearchResultsAsync(
@@ -66,8 +60,6 @@ public interface ISearches
 	/// <param name="includeSchema">Flag to include the schema for the results. (optional)</param>
 	/// <param name="includeLocationFields">Flag to include location Fields in the results. (optional)</param>
 	/// <param name="includeLinks">Flag to include hyperlinks in results. Default is false.  (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SearchResultsTableResponse</returns>
 	[Post("/api/V1/getquicksearchspecificresults")]
 	Task<SearchResultsTableResponse> GetQuickSearchSpecificResultsAsync(
@@ -88,8 +80,6 @@ public interface ISearches
 	/// <param name="includeSchema">Flag to include the schema for the results. (optional)</param>
 	/// <param name="includeLocationFields">Flag to include location Fields in the results. (optional)</param>
 	/// <param name="includeLinks">Flag to include hyperlinks in results. Default is false.  (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of QuickSearchResponse</returns>
 	[Post("/api/V2/getquicksearchspecificresults")]
 	Task<QuickSearchResponse> GetQuickSearchSpecificResultsV2Async(
@@ -111,8 +101,6 @@ public interface ISearches
 	/// <param name="scopeowner">Use to filter results by scope owner ID.</param>
 	/// <param name="folder">Use to filter results by Search Group folder ID.</param>
 	/// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SearchItemResponse</returns>
 	[Get("/api/V1/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
 	Task<SearchItemResponse> GetSearchItemsByAssociationScopeScopeOwnerFolderAsync(
@@ -135,8 +123,6 @@ public interface ISearches
 	/// <param name="scopeowner">Use to filter results by scope owner ID.</param>
 	/// <param name="folder">Use to filter results by Search Group folder ID.</param>
 	/// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CoreManagerData</returns>
 	[Get("/api/V2/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
 	Task<ManagerData> GetSearchItemsByAssociationScopeScopeOwnerFolderV2Async(
@@ -158,8 +144,6 @@ public interface ISearches
 	/// <param name="scope">Use to filter results by scope name or ID.</param>
 	/// <param name="scopeowner">Use to filter results by scope owner ID.</param>
 	/// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SearchItemResponse</returns>
 	[Get("/api/V1/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}")]
 	Task<SearchItemResponse> GetSearchItemsByAssociationScopeScopeOwnerAsync(
@@ -180,8 +164,6 @@ public interface ISearches
 	/// <param name="scope">Use to filter results by scope name or ID.</param>
 	/// <param name="scopeowner">Use to filter results by scope owner ID.</param>
 	/// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CoreManagerData</returns>
 	[Get("/api/V2/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}")]
 	Task<ManagerData> GetSearchItemsByAssociationScopeScopeOwnerV2Async(
@@ -201,8 +183,6 @@ public interface ISearches
 	/// <param name="association">Use to filter results by Business Object association ID.</param>
 	/// <param name="scope">Use to filter results by scope name or ID.</param>
 	/// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SearchItemResponse</returns>
 	[Get("/api/V1/getsearchitems/association/{association}/scope/{scope}")]
 	Task<SearchItemResponse> GetSearchItemsByAssociationScopeAsync(
@@ -221,8 +201,6 @@ public interface ISearches
 	/// <param name="association">Use to filter results by Business Object association ID.</param>
 	/// <param name="scope">Use to filter results by scope name or ID.</param>
 	/// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CoreManagerData</returns>
 	[Get("/api/V2/getsearchitems/association/{association}/scope/{scope}")]
 	Task<ManagerData> GetSearchItemsByAssociationScopeV2Async(
@@ -240,8 +218,6 @@ public interface ISearches
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="association">Use to filter results by Business Object association ID.</param>
 	/// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SearchItemResponse</returns>
 	[Get("/api/V1/getsearchitems/association/{association}")]
 	Task<SearchItemResponse> GetSearchItemsByAssociationAsync(
@@ -258,8 +234,6 @@ public interface ISearches
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="association">Use to filter results by Business Object association ID.</param>
 	/// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CoreManagerData</returns>
 	[Get("/api/V2/getsearchitems/association/{association}")]
 	Task<ManagerData> GetSearchItemsByAssociationV2Async(
@@ -275,8 +249,6 @@ public interface ISearches
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SearchItemResponse</returns>
 	[Get("/api/V1/getsearchitems")]
 	Task<SearchItemResponse> GetSearchItemsAsync(
@@ -291,8 +263,6 @@ public interface ISearches
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CoreManagerData</returns>
 	[Get("/api/V2/getsearchitems")]
 	Task<ManagerData> GetSearchItemsV2Async(
@@ -307,8 +277,6 @@ public interface ISearches
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="dataRequest">Request object to specify search parameters.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SearchResultsResponse</returns>
 	[Post("/api/V1/getsearchresults")]
 	Task<SearchResultsResponse> GetSearchResultsAdHocAsync(
@@ -323,8 +291,6 @@ public interface ISearches
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="searchRequest">Request object to specify search parameters.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of StoredSearchResults</returns>
 	[Post("/api/V2/storedsearches")]
 	Task<StoredSearchResults> GetSearchResultsAsStringByIdV2Async(
@@ -342,8 +308,6 @@ public interface ISearches
 	/// <param name="associationName">Specify the Business Object association Name for the saved search.</param>
 	/// <param name="searchName">Specify the name of the saved search.</param>
 	/// <param name="scopeOwner">Specify the scope owner ID for the saved search. Use (None) when no scope owner exists. (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;Dictionary&lt;string, string&gt;&gt;</returns>
 	[Get("/api/V1/storedsearches/{scope}/{associationName}/{searchName}")]
 	Task<List<Dictionary<string, string>>> GetSearchResultsAsStringByNameAsync(
@@ -364,8 +328,6 @@ public interface ISearches
 	/// <param name="associationName">Specify the Business Object association Name for the saved search.</param>
 	/// <param name="searchName">Specify the name of the saved search.</param>
 	/// <param name="scopeOwner">Specify the scope owner ID for the saved search. Use (None) when no scope owner exists. (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;Dictionary&lt;string, string&gt;&gt;</returns>
 	[Get("/api/V2/storedsearches/{scope}/{associationName}/{searchName}")]
 	Task<List<Dictionary<string, string>>> GetSearchResultsAsStringByNameV2Async(
@@ -391,8 +353,6 @@ public interface ISearches
 	/// <param name="pagesize">Specify the number of rows to return per page. (optional)</param>
 	/// <param name="includeschema">Use to include the table schema of the saved search. If false, results contain the fieldid and field value without field information. Default is false. (optional)</param>
 	/// <param name="resultsAsSimpleResultsList">Indicates if the results should be returned in a simple results list format or a table format. Default is a table format. (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SearchResultsResponse</returns>
 	[Get("/api/V1/getsearchresults/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchid/{searchid}")]
 	Task<SearchResultsResponse> GetSearchResultsByIdAsync(
@@ -423,8 +383,6 @@ public interface ISearches
 	/// <param name="pagesize">Specify the number of rows to return per page. (optional)</param>
 	/// <param name="includeschema">Use to include the table schema of the saved search. If false, results contain the fieldid and field value without field information. Default is false. (optional)</param>
 	/// <param name="resultsAsSimpleResultsList">Indicates if the results should be returned in a simple results list format or a table format. Default is a table format. (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SearchResultsResponse</returns>
 	[Get("/api/V1/getsearchresults/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchname/{searchname}")]
 	Task<SearchResultsResponse> GetSearchResultsByNameAsync(
@@ -447,8 +405,6 @@ public interface ISearches
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="dataRequest">Request object to specify search parameters and export format.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of string</returns>
 	[Post("/api/V1/getsearchresultsexport")]
 	Task<string> GetSearchResultsExportAdHocAsync(
@@ -470,8 +426,6 @@ public interface ISearches
 	/// <param name="searchTerm">Specify search text filter the results. Example: Use \&quot;Service Request\&quot; to filter Incident results to include only service requests. (optional)</param>
 	/// <param name="pagenumber">Specify the page number of the result set to return. (optional)</param>
 	/// <param name="pagesize">Specify the number of rows to return per page. (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of string</returns>
 	[Get("/api/V1/getsearchresultsexport/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchid/{searchid}/exportformat/{exportformat}")]
 	Task<string> GetSearchResultsExportByIdAsync(
@@ -500,8 +454,6 @@ public interface ISearches
 	/// <param name="searchTerm">Specify search text filter the results. Example: Use \&quot;Service Request\&quot; to filter Incident results to include only service requests. (optional)</param>
 	/// <param name="pagenumber">Specify the page number of the result set to return. (optional)</param>
 	/// <param name="pagesize">Specify the number of rows to return per page. (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of string</returns>
 	[Get("/api/V1/getsearchresultsexport/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchname/{searchname}/exportformat/{exportformat}")]
 	Task<string> GetSearchResultsExportByNameAsync(

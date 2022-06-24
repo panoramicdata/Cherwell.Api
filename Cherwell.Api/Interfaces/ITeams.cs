@@ -15,8 +15,6 @@ public interface ITeams
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="request">Request object to specify a list of add user to team request objects.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of AddUserToTeamByBatchResponse</returns>
 	[Post("/api/V1/addusertoteambybatch")]
 	Task<AddUserToTeamByBatchResponse> AddUserToTeamByBatchAsync(
@@ -31,8 +29,6 @@ public interface ITeams
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="dataRequest">Request object to specify user and team values.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of void</returns>
 	[Post("/api/V1/addusertoteam")]
 	Task AddUserToTeamAsync(
@@ -47,8 +43,6 @@ public interface ITeams
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="dataRequest">Request object to specify user and team values.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of AddUserToTeamResponse</returns>
 	[Post("/api/V2/addusertoteam")]
 	Task<AddUserToTeamResponse> AddUserToTeamV2Async(
@@ -63,8 +57,6 @@ public interface ITeams
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="teamid">Specify the Team ID.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of void</returns>
 	[Delete("/api/V1/deleteteam/{teamid}")]
 	Task DeleteTeamAsync(
@@ -79,8 +71,6 @@ public interface ITeams
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="teamid">The Team ID of the Team to get.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of TeamResponse</returns>
 	[Get("/api/V1/getteam/{teamid}")]
 	Task<TeamResponse> GetTeamAsync(
@@ -94,8 +84,6 @@ public interface ITeams
 	/// Operation to get IDs and names for all available Teams.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of TeamsResponse</returns>
 	[Get("/api/V1/getteams")]
 	Task<TeamsResponse> GetTeamsAsync(
@@ -108,8 +96,6 @@ public interface ITeams
 	/// Operation to get IDs and names for all available Teams.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of TeamsV2Response</returns>
 	[Get("/api/V2/getteams")]
 	Task<TeamsV2Response> GetTeamsV2Async(
@@ -123,8 +109,6 @@ public interface ITeams
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="userRecordId">Specify the user record ID.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of TeamsResponse</returns>
 	[Get("/api/V1/getusersteams/userrecordid/{userRecordId}")]
 	Task<TeamsResponse> GetUsersTeamsAsync(
@@ -139,8 +123,6 @@ public interface ITeams
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="userRecordId">Specify the user record ID.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of TeamsV2Response</returns>
 	[Get("/api/V2/getusersteams/userrecordid/{userRecordId}")]
 	Task<TeamsV2Response> GetUsersTeamsV2Async(
@@ -154,8 +136,6 @@ public interface ITeams
 	/// Operation to get IDs and names for all available Workgroups.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of TeamsResponse</returns>
 	[Get("/api/V1/getworkgroups")]
 	Task<TeamsResponse> GetWorkgroupsAsync(
@@ -168,8 +148,6 @@ public interface ITeams
 	/// Operation to get IDs and names for all available Workgroups.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of TeamsV2Response</returns>
 	[Get("/api/V2/getworkgroups")]
 	Task<TeamsV2Response> GetWorkgroupsV2Async(
@@ -184,8 +162,6 @@ public interface ITeams
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="workgroupid">Specify the Workgroup ID.</param>
 	/// <param name="customerrecordid">Specify the Customer record ID.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of RemoveCustomerFromWorkgroupResponse</returns>
 	[Delete("/api/V1/removecustomerfromworkgroup/workgroupid/{workgroupid}/customerrecordid/{customerrecordid}")]
 	Task<RemoveCustomerFromWorkgroupResponse> TeamsRemoveCustomerFromWorkgroupAsync(
@@ -202,8 +178,6 @@ public interface ITeams
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="teamId">Specify the internal ID of the Team.</param>
 	/// <param name="userrecordid">Specify the record ID of the User to remove.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of void</returns>
 	[Delete("/api/V1/removeuserfromteam/teamid/{teamId}/userrecordid/{userrecordid}")]
 	Task RemoveUserFromTeamAsync(
@@ -220,8 +194,6 @@ public interface ITeams
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="teamId">Specify the internal ID of the Team.</param>
 	/// <param name="userrecordid">Specify the record ID of the User to remove.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of RemoveUserFromTeamResponse</returns>
 	[Delete("/api/V2/removeuserfromteam/teamid/{teamId}/userrecordid/{userrecordid}")]
 	Task<RemoveUserFromTeamResponse> RemoveUserFromTeamV2Async(
@@ -237,8 +209,6 @@ public interface ITeams
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="request">The request object to add or update a Team Member. User recID specifies the User to add or update. TeamId specifies the Team to update. IsTeamManager specifies whether the User is a Team Manager, and SetAsDefaultTeam specifies whether to set this Team as the User&#39;s default team. UserRecId, TeamId, and IsTeamManager are required.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SaveTeamMemberResponse</returns>
 	[Post("/api/V1/saveteammember")]
 	Task<SaveTeamMemberResponse> SaveTeamMemberAsync(
@@ -253,8 +223,6 @@ public interface ITeams
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="request">Request object to create Teams or Workgroups. To create a Team, use teamType and teamName. To update a team, use teamID. Team type values must be User or CustomerWorkgroup. The teamType cannot be changed for existing Teams or Workgroups.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of TeamSaveResponse</returns>
 	[Post("/api/V1/saveteam")]
 	Task<TeamSaveResponse> SaveTeamAsync(
@@ -269,8 +237,6 @@ public interface ITeams
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="request">The request object to add or update a Workgroup Member. CustomerRecordId specifies the Customer to add or update. WorkgroupId specifies the Workgroup to update. CustomerIsWorkgroupManager specifies whether the Customer is a Workgroup Manager.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SaveWorkgroupMemberResponse</returns>
 	[Post("/api/V1/saveworkgroupmember")]
 	Task<SaveWorkgroupMemberResponse> SaveWorkgroupMemberAsync(

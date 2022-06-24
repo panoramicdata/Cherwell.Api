@@ -15,8 +15,6 @@ public interface IUsers
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="request">Request object listing record IDs for users to be deleted and an error flag.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserBatchDeleteResponse</returns>
 	[Post("/api/V1/deleteuserbatch")]
 	Task<UserBatchDeleteResponse> DeleteUserBatchAsync(
@@ -31,8 +29,6 @@ public interface IUsers
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="request">Request object listing record IDs for users to be deleted and an error flag.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserBatchDeleteV2Response</returns>
 	[Post("/api/V2/deleteuserbatch")]
 	Task<UserBatchDeleteV2Response> DeleteUserBatchV2Async(
@@ -47,8 +43,6 @@ public interface IUsers
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="userrecordid">Specify the record ID of the user you want to delete</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserDeleteResponse</returns>
 	[Delete("/api/V1/deleteuser/userrecordid/{userrecordid}")]
 	Task<UserDeleteResponse> DeleteUserAsync(
@@ -63,8 +57,6 @@ public interface IUsers
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="userrecordid">Specify the record ID of the user you want to delete</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserDeleteV2Response</returns>
 	[Delete("/api/V2/deleteuser/userrecordid/{userrecordid}")]
 	Task<UserDeleteV2Response> DeleteUserV2Async(
@@ -80,8 +72,6 @@ public interface IUsers
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="loginidfilter">Specify the login ID filter to apply to the users list.</param>
 	/// <param name="stoponerror">Specify whether the operation is interrupted if retrieving any user causes an error. (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserListResponse</returns>
 	[Get("/api/V1/getlistofusers")]
 	Task<UserListResponse> GetListOfUsersAsync(
@@ -97,8 +87,6 @@ public interface IUsers
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="request">Request object that lists user record IDs or public IDs of users and an error flag.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserBatchReadResponse</returns>
 	[Post("/api/V1/getuserbatch")]
 	Task<UserBatchReadResponse> GetUserBatchAsync(
@@ -113,8 +101,6 @@ public interface IUsers
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="loginid">Specify the user&#39;s login ID.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of User</returns>
 	[Get("/api/V1/getuserbyloginid/loginid/{loginid}")]
 	Task<User> GetUserByLoginIdAsync(
@@ -130,8 +116,6 @@ public interface IUsers
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="loginid">Specify the user&#39;s login ID.</param>
 	/// <param name="loginidtype">Specify the login ID type.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of User</returns>
 	[Get("/api/V2/getuserbyloginid")]
 	Task<User> GetUserByLoginIdV2Async(
@@ -148,8 +132,6 @@ public interface IUsers
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="loginid">Specify the user&#39;s login ID.</param>
 	/// <param name="loginidtype">Specify the login ID type.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserV2</returns>
 	[Get("/api/V3/getuserbyloginid")]
 	Task<UserV2> GetUserByLoginIdV3Async(
@@ -165,8 +147,6 @@ public interface IUsers
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="publicid">Specify the user&#39;s public ID.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserReadResponse</returns>
 	[Get("/api/V1/getuserbypublicid/publicid/{publicid}")]
 	Task<UserReadResponse> GetUserByPublicIdAsync(
@@ -181,8 +161,6 @@ public interface IUsers
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="publicid">Specify the user&#39;s public ID.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserReadV2Response</returns>
 	[Get("/api/V2/getuserbypublicid/publicid/{publicid}")]
 	Task<UserReadV2Response> GetUserByPublicIdV2Async(
@@ -197,8 +175,6 @@ public interface IUsers
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="recid">Specify the user&#39;s record ID</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserV2</returns>
 	[Get("/api/V1/getuserbyrecid/recid/{recid}")]
 	Task<UserV2> GetUserByRecIdAsync(
@@ -213,8 +189,6 @@ public interface IUsers
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="request">Request object listing user record IDs and an error flag.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserBatchSaveResponse</returns>
 	[Post("/api/V1/saveuserbatch")]
 	Task<UserBatchSaveResponse> SaveUserBatchAsync(
@@ -229,8 +203,6 @@ public interface IUsers
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="request">Request object listing user record IDs and an error flag.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserBatchSaveV2Response</returns>
 	[Post("/api/V2/saveuserbatch")]
 	Task<UserBatchSaveV2Response> SaveUserBatchV2Async(
@@ -245,8 +217,6 @@ public interface IUsers
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="request">Request object to specify user parameters and Fields with values to be created or updated. The loginId and either the Business Object record ID or Public ID are required.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserSaveResponse</returns>
 	[Post("/api/V1/saveuser")]
 	Task<UserSaveResponse> SaveUserAsync(
@@ -261,8 +231,6 @@ public interface IUsers
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="request">Request object to specify user parameters and Fields with values to be created or updated. The loginId and either the Business Object record ID or Public ID are required.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserSaveV2Response</returns>
 	[Post("/api/V2/saveuser")]
 	Task<UserSaveV2Response> SaveUserV2Async(

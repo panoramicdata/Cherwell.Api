@@ -14,8 +14,6 @@ public interface IService
 	/// Operation to get information about the REST API and CSM.  The response is latest REST API operation version, CSM version, and CSM system date and time.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CoreServiceInfoResponse</returns>
 	[Get("/api/V1/serviceinfo")]
 	Task<ServiceInfoResponse> GetServiceInfoAsync(
@@ -28,8 +26,6 @@ public interface IService
 	/// Operation that logs out the user referenced in the authentication token.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of void</returns>
 	[Delete("/api/V1/logout")]
 	Task LogoutUserAsync(

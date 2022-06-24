@@ -18,8 +18,6 @@ public interface IForms
 	/// <param name="publicid">Specify the Business Object Public ID.</param>
 	/// <param name="foredit">Flag to get the edit mode version of a form. (optional)</param>
 	/// <param name="formid">Specify the form ID if the default is not desired. (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of MobileFormResponse</returns>
 	[Get("/api/V1/getmobileformforbusob/busobid/{busobid}/publicid/{publicid}")]
 	Task<MobileFormResponse> GetMobileFormForBusObByIdAndPublicIdAsync(
@@ -40,8 +38,6 @@ public interface IForms
 	/// <param name="busobrecid">Specify the Business Object Record ID.</param>
 	/// <param name="foredit">Flag to get the edit mode version of a form. (optional)</param>
 	/// <param name="formid">Specify the form ID if the default is not desired. (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of MobileFormResponse</returns>
 	[Get("/api/V1/getmobileformforbusob/busobid/{busobid}/busobrecid/{busobrecid}")]
 	Task<MobileFormResponse> GetMobileFormForBusObByIdAndRecIdAsync(
@@ -62,8 +58,6 @@ public interface IForms
 	/// <param name="publicid">Specify the Business Object public ID.</param>
 	/// <param name="foredit">Flag to get the edit mode version of a form. (optional)</param>
 	/// <param name="formid">Specify the form ID if the default is not desired. (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of MobileFormResponse</returns>
 	[Get("/api/V1/getmobileformforbusob/busobname/{busobname}/publicid/{publicid}")]
 	Task<MobileFormResponse> GetMobileFormForBusObByNameAndPublicIdAsync(
@@ -84,8 +78,6 @@ public interface IForms
 	/// <param name="busobrecid">Specify the Business Object record ID.</param>
 	/// <param name="foredit">Flag to get the edit mode version of a form. (optional)</param>
 	/// <param name="formid">Specify the form ID if the default is not desired. (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of MobileFormResponse</returns>
 	[Get("/api/V1/getmobileformforbusob/busobname/{busobname}/busobrecid/{busobrecid}")]
 	Task<MobileFormResponse> GetMobileFormForBusObByNameAndRecIdAsync(

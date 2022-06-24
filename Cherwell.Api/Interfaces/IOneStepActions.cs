@@ -19,8 +19,6 @@ public interface IOneStepActions
 	/// <param name="scopeowner">Scope owner to get One-Step Actions for</param>
 	/// <param name="folder">Folder to get One-Step Actions from</param>
 	/// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CoreManagerData</returns>
 	[Get("/api/V1/getonestepactions/association/{association}/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
 	Task<ManagerData> GetOneStepActionsByAssociationScopeScopeOwnerFolderAsync(
@@ -42,8 +40,6 @@ public interface IOneStepActions
 	/// <param name="scope">Scope to get One-Step Actions for</param>
 	/// <param name="scopeowner">Scope owner to get One-Step Actions for</param>
 	/// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CoreManagerData</returns>
 	[Get("/api/V1/getonestepactions/association/{association}/scope/{scope}/scopeowner/{scopeowner}")]
 	Task<ManagerData> GetOneStepActionsByAssociationScopeScopeOwnerAsync(
@@ -63,8 +59,6 @@ public interface IOneStepActions
 	/// <param name="association">Business Object association to get One-Step Actions for</param>
 	/// <param name="scope">Scope to get One-Step Actions for</param>
 	/// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CoreManagerData</returns>
 	[Get("/api/V1/getonestepactions/association/{association}/scope/{scope}")]
 	Task<ManagerData> GetOneStepActionsByAssociationScopeAsync(
@@ -82,8 +76,6 @@ public interface IOneStepActions
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="association">Business Object association to get One-Step Actions for</param>
 	/// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CoreManagerData</returns>
 	[Get("/api/V1/getonestepactions/association/{association}")]
 	Task<ManagerData> GetOneStepActionsByAssociationAsync(
@@ -99,8 +91,6 @@ public interface IOneStepActions
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="links">Flag to include hyperlinks in results. Default is false.  (optional)</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CoreManagerData</returns>
 	[Get("/api/V1/getonestepactions")]
 	Task<ManagerData> GetOneStepActionsAsync(
@@ -117,8 +107,6 @@ public interface IOneStepActions
 	/// <param name="standinkey">The key to find the One-Step Action to run</param>
 	/// <param name="busobid">Specify the Business Object ID.</param>
 	/// <param name="busobrecid">Specify the Business Object record ID.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of OneStepActionResponse</returns>
 	[Get("/api/V1/runonestepaction/standinkey/{standinkey}/busobid/{busobid}/busobrecid/{busobrecid}")]
 	Task<OneStepActionResponse> RunOneStepActionByKeyForRecordByRecIdAsync(
@@ -135,8 +123,6 @@ public interface IOneStepActions
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="standinkey">The key to find the One-Step Action to run</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of OneStepActionResponse</returns>
 	[Get("/api/V1/runonestepaction/standinkey/{standinkey}")]
 	Task<OneStepActionResponse> RunOneStepActionByStandInKeyAsync(
@@ -151,8 +137,6 @@ public interface IOneStepActions
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="request">Request object containing all the properties need to start a One-Step Action.</param>
-	/// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of OneStepActionResponse</returns>
 	[Post("/api/V1/runonestepaction")]
 	Task<OneStepActionResponse> RunOneStepActionAsync(
