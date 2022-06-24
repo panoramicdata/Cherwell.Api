@@ -213,9 +213,6 @@ public interface ICore
 	[Post("/api/V1/savegalleryimage")]
 	Task<SaveGalleryImageResponse> SaveGalleryImageAsync(
 		[Body] SaveGalleryImageRequest request,
-		[AliasAs("lang")] string?
-		lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken);
 
 	/// <summary>

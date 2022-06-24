@@ -48,8 +48,14 @@ public interface IService
 	/// <param name="site_name">If for portal specify the Site name to use for requesting an access token. (optional)</param>
 	/// <returns>Task of TokenResponse</returns>
 	[Post("/token")]
-	Task<TokenResponse> TokenAsync(string grantType, string clientId, string clientSecret, string username, string password, string refreshToken,
+	Task<TokenResponse> TokenAsync(
+		string grantType,
+		string clientId,
+		string clientSecret,
+		string username,
+		string password,
+		string refreshToken,
 		[AliasAs("auth_mode")] string authMode,
-		[AliasAs("site_name")] string? siteName = null,
+		[AliasAs("site_name")] string? siteName,
 		CancellationToken cancellationToken);
 }
