@@ -330,24 +330,24 @@ public partial class UserV2 : IEquatable<UserV2>, IValidatableObject
 	/// <param name="httpStatusCode">HttpStatusCode.</param>
 	public UserV2(bool? accountLocked, DateTime? createDateTime, string displayName, List<FieldTemplateItem> fields, DateTime? lastPasswordResetDate, DateTime? lastResetDateTime, bool? ldapRequired, bool? passwordNeverExpires, string publicId, string recordId, string securityGroupId, string shortdisplayName, bool? userCannotChangePassword, bool? userMustResetPasswordAtNextLogin, string errorCode, string errorMessage, bool? hasError, EnumhttpStatusCode? httpStatusCode)
 	{
-		this.AccountLocked = accountLocked;
-		this.CreateDateTime = createDateTime;
-		this.DisplayName = displayName;
-		this.Fields = fields;
-		this.LastPasswordResetDate = lastPasswordResetDate;
-		this.LastResetDateTime = lastResetDateTime;
-		this.LdapRequired = ldapRequired;
-		this.PasswordNeverExpires = passwordNeverExpires;
-		this.PublicId = publicId;
-		this.RecordId = recordId;
-		this.SecurityGroupId = securityGroupId;
-		this.ShortdisplayName = shortdisplayName;
-		this.UserCannotChangePassword = userCannotChangePassword;
-		this.UserMustResetPasswordAtNextLogin = userMustResetPasswordAtNextLogin;
-		this.ErrorCode = errorCode;
-		this.ErrorMessage = errorMessage;
-		this.HasError = hasError;
-		this.HttpStatusCode = httpStatusCode;
+		AccountLocked = accountLocked;
+		CreateDateTime = createDateTime;
+		DisplayName = displayName;
+		Fields = fields;
+		LastPasswordResetDate = lastPasswordResetDate;
+		LastResetDateTime = lastResetDateTime;
+		LdapRequired = ldapRequired;
+		PasswordNeverExpires = passwordNeverExpires;
+		PublicId = publicId;
+		RecordId = recordId;
+		SecurityGroupId = securityGroupId;
+		ShortdisplayName = shortdisplayName;
+		UserCannotChangePassword = userCannotChangePassword;
+		UserMustResetPasswordAtNextLogin = userMustResetPasswordAtNextLogin;
+		ErrorCode = errorCode;
+		ErrorMessage = errorMessage;
+		HasError = hasError;
+		HttpStatusCode = httpStatusCode;
 	}
 
 	/// <summary>

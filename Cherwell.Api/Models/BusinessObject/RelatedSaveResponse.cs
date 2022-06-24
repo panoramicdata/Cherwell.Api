@@ -442,7 +442,7 @@ public partial class RelatedSaveResponse : IEquatable<RelatedSaveResponse>, IVal
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as RelatedSaveResponse);
+		return Equals(obj as RelatedSaveResponse);
 	}
 
 	/// <summary>
@@ -460,69 +460,69 @@ public partial class RelatedSaveResponse : IEquatable<RelatedSaveResponse>, IVal
 
 		return
 				(
-					this.ParentBusObId == other.ParentBusObId ||
-					this.ParentBusObId != null &&
-					this.ParentBusObId.Equals(other.ParentBusObId, StringComparison.Ordinal)
+					ParentBusObId == other.ParentBusObId ||
+					ParentBusObId != null &&
+					ParentBusObId.Equals(other.ParentBusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.ParentBusObPublicId == other.ParentBusObPublicId ||
-					this.ParentBusObPublicId != null &&
-					this.ParentBusObPublicId.Equals(other.ParentBusObPublicId, StringComparison.Ordinal)
+					ParentBusObPublicId == other.ParentBusObPublicId ||
+					ParentBusObPublicId != null &&
+					ParentBusObPublicId.Equals(other.ParentBusObPublicId, StringComparison.Ordinal)
 				) &&
 				(
-					this.ParentBusObRecId == other.ParentBusObRecId ||
-					this.ParentBusObRecId != null &&
-					this.ParentBusObRecId.Equals(other.ParentBusObRecId, StringComparison.Ordinal)
+					ParentBusObRecId == other.ParentBusObRecId ||
+					ParentBusObRecId != null &&
+					ParentBusObRecId.Equals(other.ParentBusObRecId, StringComparison.Ordinal)
 				) &&
 				(
-					this.RelationshipId == other.RelationshipId ||
-					this.RelationshipId != null &&
-					this.RelationshipId.Equals(other.RelationshipId, StringComparison.Ordinal)
+					RelationshipId == other.RelationshipId ||
+					RelationshipId != null &&
+					RelationshipId.Equals(other.RelationshipId, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObPublicId == other.BusObPublicId ||
-					this.BusObPublicId != null &&
-					this.BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
+					BusObPublicId == other.BusObPublicId ||
+					BusObPublicId != null &&
+					BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObRecId == other.BusObRecId ||
-					this.BusObRecId != null &&
-					this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
+					BusObRecId == other.BusObRecId ||
+					BusObRecId != null &&
+					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
 				) &&
 				(
-					this.CacheKey == other.CacheKey ||
-					this.CacheKey != null &&
-					this.CacheKey.Equals(other.CacheKey, StringComparison.Ordinal)
+					CacheKey == other.CacheKey ||
+					CacheKey != null &&
+					CacheKey.Equals(other.CacheKey, StringComparison.Ordinal)
 				) &&
 				(
-					this.FieldValidationErrors == other.FieldValidationErrors ||
-					this.FieldValidationErrors != null &&
-					this.FieldValidationErrors.SequenceEqual(other.FieldValidationErrors)
+					FieldValidationErrors == other.FieldValidationErrors ||
+					FieldValidationErrors != null &&
+					FieldValidationErrors.SequenceEqual(other.FieldValidationErrors)
 				) &&
 				(
-					this.NotificationTriggers == other.NotificationTriggers ||
-					this.NotificationTriggers != null &&
-					this.NotificationTriggers.SequenceEqual(other.NotificationTriggers)
+					NotificationTriggers == other.NotificationTriggers ||
+					NotificationTriggers != null &&
+					NotificationTriggers.SequenceEqual(other.NotificationTriggers)
 				) &&
 				(
-					this.ErrorCode == other.ErrorCode ||
-					this.ErrorCode != null &&
-					this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
+					ErrorCode == other.ErrorCode ||
+					ErrorCode != null &&
+					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
 				) &&
 				(
-					this.ErrorMessage == other.ErrorMessage ||
-					this.ErrorMessage != null &&
-					this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
+					ErrorMessage == other.ErrorMessage ||
+					ErrorMessage != null &&
+					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
 				) &&
 				(
-					this.HasError == other.HasError ||
-					this.HasError != null &&
-					this.HasError.Equals(other.HasError)
+					HasError == other.HasError ||
+					HasError != null &&
+					HasError.Equals(other.HasError)
 				) &&
 				(
-					this.HttpStatusCode == other.HttpStatusCode ||
-					this.HttpStatusCode != null &&
-					this.HttpStatusCode.Equals(other.HttpStatusCode)
+					HttpStatusCode == other.HttpStatusCode ||
+					HttpStatusCode != null &&
+					HttpStatusCode.Equals(other.HttpStatusCode)
 				);
 	}
 
@@ -537,69 +537,69 @@ public partial class RelatedSaveResponse : IEquatable<RelatedSaveResponse>, IVal
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.ParentBusObId != null)
+			if (ParentBusObId != null)
 			{
-				hash = hash * 59 + this.ParentBusObId.GetHashCode();
+				hash = hash * 59 + ParentBusObId.GetHashCode();
 			}
 
-			if (this.ParentBusObPublicId != null)
+			if (ParentBusObPublicId != null)
 			{
-				hash = hash * 59 + this.ParentBusObPublicId.GetHashCode();
+				hash = hash * 59 + ParentBusObPublicId.GetHashCode();
 			}
 
-			if (this.ParentBusObRecId != null)
+			if (ParentBusObRecId != null)
 			{
-				hash = hash * 59 + this.ParentBusObRecId.GetHashCode();
+				hash = hash * 59 + ParentBusObRecId.GetHashCode();
 			}
 
-			if (this.RelationshipId != null)
+			if (RelationshipId != null)
 			{
-				hash = hash * 59 + this.RelationshipId.GetHashCode();
+				hash = hash * 59 + RelationshipId.GetHashCode();
 			}
 
-			if (this.BusObPublicId != null)
+			if (BusObPublicId != null)
 			{
-				hash = hash * 59 + this.BusObPublicId.GetHashCode();
+				hash = hash * 59 + BusObPublicId.GetHashCode();
 			}
 
-			if (this.BusObRecId != null)
+			if (BusObRecId != null)
 			{
-				hash = hash * 59 + this.BusObRecId.GetHashCode();
+				hash = hash * 59 + BusObRecId.GetHashCode();
 			}
 
-			if (this.CacheKey != null)
+			if (CacheKey != null)
 			{
-				hash = hash * 59 + this.CacheKey.GetHashCode();
+				hash = hash * 59 + CacheKey.GetHashCode();
 			}
 
-			if (this.FieldValidationErrors != null)
+			if (FieldValidationErrors != null)
 			{
-				hash = hash * 59 + this.FieldValidationErrors.GetHashCode();
+				hash = hash * 59 + FieldValidationErrors.GetHashCode();
 			}
 
-			if (this.NotificationTriggers != null)
+			if (NotificationTriggers != null)
 			{
-				hash = hash * 59 + this.NotificationTriggers.GetHashCode();
+				hash = hash * 59 + NotificationTriggers.GetHashCode();
 			}
 
-			if (this.ErrorCode != null)
+			if (ErrorCode != null)
 			{
-				hash = hash * 59 + this.ErrorCode.GetHashCode();
+				hash = hash * 59 + ErrorCode.GetHashCode();
 			}
 
-			if (this.ErrorMessage != null)
+			if (ErrorMessage != null)
 			{
-				hash = hash * 59 + this.ErrorMessage.GetHashCode();
+				hash = hash * 59 + ErrorMessage.GetHashCode();
 			}
 
-			if (this.HasError != null)
+			if (HasError != null)
 			{
-				hash = hash * 59 + this.HasError.GetHashCode();
+				hash = hash * 59 + HasError.GetHashCode();
 			}
 
-			if (this.HttpStatusCode != null)
+			if (HttpStatusCode != null)
 			{
-				hash = hash * 59 + this.HttpStatusCode.GetHashCode();
+				hash = hash * 59 + HttpStatusCode.GetHashCode();
 			}
 
 			return hash;

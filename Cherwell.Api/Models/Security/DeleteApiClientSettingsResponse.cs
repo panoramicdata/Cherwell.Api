@@ -370,7 +370,7 @@ public partial class DeleteApiClientSettingsResponse : IEquatable<DeleteApiClien
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as DeleteApiClientSettingsResponse);
+		return Equals(obj as DeleteApiClientSettingsResponse);
 	}
 
 	/// <summary>
@@ -388,24 +388,24 @@ public partial class DeleteApiClientSettingsResponse : IEquatable<DeleteApiClien
 
 		return
 				(
-					this.ErrorCode == other.ErrorCode ||
-					this.ErrorCode != null &&
-					this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
+					ErrorCode == other.ErrorCode ||
+					ErrorCode != null &&
+					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
 				) &&
 				(
-					this.ErrorMessage == other.ErrorMessage ||
-					this.ErrorMessage != null &&
-					this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
+					ErrorMessage == other.ErrorMessage ||
+					ErrorMessage != null &&
+					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
 				) &&
 				(
-					this.HasError == other.HasError ||
-					this.HasError != null &&
-					this.HasError.Equals(other.HasError)
+					HasError == other.HasError ||
+					HasError != null &&
+					HasError.Equals(other.HasError)
 				) &&
 				(
-					this.HttpStatusCode == other.HttpStatusCode ||
-					this.HttpStatusCode != null &&
-					this.HttpStatusCode.Equals(other.HttpStatusCode)
+					HttpStatusCode == other.HttpStatusCode ||
+					HttpStatusCode != null &&
+					HttpStatusCode.Equals(other.HttpStatusCode)
 				);
 	}
 
@@ -420,24 +420,24 @@ public partial class DeleteApiClientSettingsResponse : IEquatable<DeleteApiClien
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.ErrorCode != null)
+			if (ErrorCode != null)
 			{
-				hash = hash * 59 + this.ErrorCode.GetHashCode();
+				hash = hash * 59 + ErrorCode.GetHashCode();
 			}
 
-			if (this.ErrorMessage != null)
+			if (ErrorMessage != null)
 			{
-				hash = hash * 59 + this.ErrorMessage.GetHashCode();
+				hash = hash * 59 + ErrorMessage.GetHashCode();
 			}
 
-			if (this.HasError != null)
+			if (HasError != null)
 			{
-				hash = hash * 59 + this.HasError.GetHashCode();
+				hash = hash * 59 + HasError.GetHashCode();
 			}
 
-			if (this.HttpStatusCode != null)
+			if (HttpStatusCode != null)
 			{
-				hash = hash * 59 + this.HttpStatusCode.GetHashCode();
+				hash = hash * 59 + HttpStatusCode.GetHashCode();
 			}
 
 			return hash;

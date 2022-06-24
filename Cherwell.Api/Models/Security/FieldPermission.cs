@@ -159,7 +159,7 @@ public partial class FieldPermissiond : IEquatable<FieldPermissiond>, IValidatab
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as FieldPermissiond);
+		return Equals(obj as FieldPermissiond);
 	}
 
 	/// <summary>
@@ -177,74 +177,74 @@ public partial class FieldPermissiond : IEquatable<FieldPermissiond>, IValidatab
 
 		return
 				(
-					this.DepartmentMemberEdit == other.DepartmentMemberEdit ||
-					this.DepartmentMemberEdit != null &&
-					this.DepartmentMemberEdit.Equals(other.DepartmentMemberEdit)
+					DepartmentMemberEdit == other.DepartmentMemberEdit ||
+					DepartmentMemberEdit != null &&
+					DepartmentMemberEdit.Equals(other.DepartmentMemberEdit)
 				) &&
 				(
-					this.DepartmentMemberView == other.DepartmentMemberView ||
-					this.DepartmentMemberView != null &&
-					this.DepartmentMemberView.Equals(other.DepartmentMemberView)
+					DepartmentMemberView == other.DepartmentMemberView ||
+					DepartmentMemberView != null &&
+					DepartmentMemberView.Equals(other.DepartmentMemberView)
 				) &&
 				(
-					this.Edit == other.Edit ||
-					this.Edit != null &&
-					this.Edit.Equals(other.Edit)
+					Edit == other.Edit ||
+					Edit != null &&
+					Edit.Equals(other.Edit)
 				) &&
 				(
-					this.FieldId == other.FieldId ||
-					this.FieldId != null &&
-					this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
+					FieldId == other.FieldId ||
+					FieldId != null &&
+					FieldId.Equals(other.FieldId, StringComparison.Ordinal)
 				) &&
 				(
-					this.FieldName == other.FieldName ||
-					this.FieldName != null &&
-					this.FieldName.Equals(other.FieldName, StringComparison.Ordinal)
+					FieldName == other.FieldName ||
+					FieldName != null &&
+					FieldName.Equals(other.FieldName, StringComparison.Ordinal)
 				) &&
 				(
-					this.ManagerOfOwnerEdit == other.ManagerOfOwnerEdit ||
-					this.ManagerOfOwnerEdit != null &&
-					this.ManagerOfOwnerEdit.Equals(other.ManagerOfOwnerEdit)
+					ManagerOfOwnerEdit == other.ManagerOfOwnerEdit ||
+					ManagerOfOwnerEdit != null &&
+					ManagerOfOwnerEdit.Equals(other.ManagerOfOwnerEdit)
 				) &&
 				(
-					this.ManagerOfOwnerView == other.ManagerOfOwnerView ||
-					this.ManagerOfOwnerView != null &&
-					this.ManagerOfOwnerView.Equals(other.ManagerOfOwnerView)
+					ManagerOfOwnerView == other.ManagerOfOwnerView ||
+					ManagerOfOwnerView != null &&
+					ManagerOfOwnerView.Equals(other.ManagerOfOwnerView)
 				) &&
 				(
-					this.OwnerEdit == other.OwnerEdit ||
-					this.OwnerEdit != null &&
-					this.OwnerEdit.Equals(other.OwnerEdit)
+					OwnerEdit == other.OwnerEdit ||
+					OwnerEdit != null &&
+					OwnerEdit.Equals(other.OwnerEdit)
 				) &&
 				(
-					this.OwnerView == other.OwnerView ||
-					this.OwnerView != null &&
-					this.OwnerView.Equals(other.OwnerView)
+					OwnerView == other.OwnerView ||
+					OwnerView != null &&
+					OwnerView.Equals(other.OwnerView)
 				) &&
 				(
-					this.TeamEdit == other.TeamEdit ||
-					this.TeamEdit != null &&
-					this.TeamEdit.Equals(other.TeamEdit)
+					TeamEdit == other.TeamEdit ||
+					TeamEdit != null &&
+					TeamEdit.Equals(other.TeamEdit)
 				) &&
 				(
-					this.TeamManagerOfOwnerEdit == other.TeamManagerOfOwnerEdit ||
-					this.TeamManagerOfOwnerEdit != null &&
-					this.TeamManagerOfOwnerEdit.Equals(other.TeamManagerOfOwnerEdit)
+					TeamManagerOfOwnerEdit == other.TeamManagerOfOwnerEdit ||
+					TeamManagerOfOwnerEdit != null &&
+					TeamManagerOfOwnerEdit.Equals(other.TeamManagerOfOwnerEdit)
 				) &&
 				(
-					this.TeamManagerOfOwnerView == other.TeamManagerOfOwnerView ||
-					this.TeamManagerOfOwnerView != null &&
-					this.TeamManagerOfOwnerView.Equals(other.TeamManagerOfOwnerView)
+					TeamManagerOfOwnerView == other.TeamManagerOfOwnerView ||
+					TeamManagerOfOwnerView != null &&
+					TeamManagerOfOwnerView.Equals(other.TeamManagerOfOwnerView)
 				) &&
 				(
-					this.TeamView == other.TeamView ||
-					this.TeamView != null &&
-					this.TeamView.Equals(other.TeamView)
+					TeamView == other.TeamView ||
+					TeamView != null &&
+					TeamView.Equals(other.TeamView)
 				) &&
 				(
-					this.View == other.View ||
-					this.View != null &&
-					this.View.Equals(other.View)
+					View == other.View ||
+					View != null &&
+					View.Equals(other.View)
 				);
 	}
 
@@ -259,74 +259,74 @@ public partial class FieldPermissiond : IEquatable<FieldPermissiond>, IValidatab
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.DepartmentMemberEdit != null)
+			if (DepartmentMemberEdit != null)
 			{
-				hash = hash * 59 + this.DepartmentMemberEdit.GetHashCode();
+				hash = hash * 59 + DepartmentMemberEdit.GetHashCode();
 			}
 
-			if (this.DepartmentMemberView != null)
+			if (DepartmentMemberView != null)
 			{
-				hash = hash * 59 + this.DepartmentMemberView.GetHashCode();
+				hash = hash * 59 + DepartmentMemberView.GetHashCode();
 			}
 
-			if (this.Edit != null)
+			if (Edit != null)
 			{
-				hash = hash * 59 + this.Edit.GetHashCode();
+				hash = hash * 59 + Edit.GetHashCode();
 			}
 
-			if (this.FieldId != null)
+			if (FieldId != null)
 			{
-				hash = hash * 59 + this.FieldId.GetHashCode();
+				hash = hash * 59 + FieldId.GetHashCode();
 			}
 
-			if (this.FieldName != null)
+			if (FieldName != null)
 			{
-				hash = hash * 59 + this.FieldName.GetHashCode();
+				hash = hash * 59 + FieldName.GetHashCode();
 			}
 
-			if (this.ManagerOfOwnerEdit != null)
+			if (ManagerOfOwnerEdit != null)
 			{
-				hash = hash * 59 + this.ManagerOfOwnerEdit.GetHashCode();
+				hash = hash * 59 + ManagerOfOwnerEdit.GetHashCode();
 			}
 
-			if (this.ManagerOfOwnerView != null)
+			if (ManagerOfOwnerView != null)
 			{
-				hash = hash * 59 + this.ManagerOfOwnerView.GetHashCode();
+				hash = hash * 59 + ManagerOfOwnerView.GetHashCode();
 			}
 
-			if (this.OwnerEdit != null)
+			if (OwnerEdit != null)
 			{
-				hash = hash * 59 + this.OwnerEdit.GetHashCode();
+				hash = hash * 59 + OwnerEdit.GetHashCode();
 			}
 
-			if (this.OwnerView != null)
+			if (OwnerView != null)
 			{
-				hash = hash * 59 + this.OwnerView.GetHashCode();
+				hash = hash * 59 + OwnerView.GetHashCode();
 			}
 
-			if (this.TeamEdit != null)
+			if (TeamEdit != null)
 			{
-				hash = hash * 59 + this.TeamEdit.GetHashCode();
+				hash = hash * 59 + TeamEdit.GetHashCode();
 			}
 
-			if (this.TeamManagerOfOwnerEdit != null)
+			if (TeamManagerOfOwnerEdit != null)
 			{
-				hash = hash * 59 + this.TeamManagerOfOwnerEdit.GetHashCode();
+				hash = hash * 59 + TeamManagerOfOwnerEdit.GetHashCode();
 			}
 
-			if (this.TeamManagerOfOwnerView != null)
+			if (TeamManagerOfOwnerView != null)
 			{
-				hash = hash * 59 + this.TeamManagerOfOwnerView.GetHashCode();
+				hash = hash * 59 + TeamManagerOfOwnerView.GetHashCode();
 			}
 
-			if (this.TeamView != null)
+			if (TeamView != null)
 			{
-				hash = hash * 59 + this.TeamView.GetHashCode();
+				hash = hash * 59 + TeamView.GetHashCode();
 			}
 
-			if (this.View != null)
+			if (View != null)
 			{
-				hash = hash * 59 + this.View.GetHashCode();
+				hash = hash * 59 + View.GetHashCode();
 			}
 
 			return hash;

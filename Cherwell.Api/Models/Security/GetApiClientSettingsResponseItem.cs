@@ -63,7 +63,7 @@ public partial class GetApiClientSettingsResponseItem : IEquatable<GetApiClientS
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as GetApiClientSettingsResponseItem);
+		return Equals(obj as GetApiClientSettingsResponseItem);
 	}
 
 	/// <summary>
@@ -81,14 +81,14 @@ public partial class GetApiClientSettingsResponseItem : IEquatable<GetApiClientS
 
 		return
 				(
-					this.Name == other.Name ||
-					this.Name != null &&
-					this.Name.Equals(other.Name, StringComparison.Ordinal)
+					Name == other.Name ||
+					Name != null &&
+					Name.Equals(other.Name, StringComparison.Ordinal)
 				) &&
 				(
-					this.StandInKey == other.StandInKey ||
-					this.StandInKey != null &&
-					this.StandInKey.Equals(other.StandInKey, StringComparison.Ordinal)
+					StandInKey == other.StandInKey ||
+					StandInKey != null &&
+					StandInKey.Equals(other.StandInKey, StringComparison.Ordinal)
 				);
 	}
 
@@ -103,14 +103,14 @@ public partial class GetApiClientSettingsResponseItem : IEquatable<GetApiClientS
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Name != null)
+			if (Name != null)
 			{
-				hash = hash * 59 + this.Name.GetHashCode();
+				hash = hash * 59 + Name.GetHashCode();
 			}
 
-			if (this.StandInKey != null)
+			if (StandInKey != null)
 			{
-				hash = hash * 59 + this.StandInKey.GetHashCode();
+				hash = hash * 59 + StandInKey.GetHashCode();
 			}
 
 			return hash;

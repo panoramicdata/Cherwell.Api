@@ -326,14 +326,14 @@ public partial class SchemaResponse : IEquatable<SchemaResponse>, IValidatableOb
 	public SchemaResponse(string BusObId, List<FieldDefinition> fieldDefinitions, string firstRecIdField, List<GridDefinition> GridDefinitions, string Name, string RecIdFields, List<BusinessObjectRelationship> Relationships, string StateFieldId, string states, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
 	{
 		this.BusObId = BusObId;
-		this.FieldDefinitions = fieldDefinitions;
-		this.FirstRecIdField = firstRecIdField;
+		FieldDefinitions = fieldDefinitions;
+		FirstRecIdField = firstRecIdField;
 		this.GridDefinitions = GridDefinitions;
 		this.Name = Name;
 		this.RecIdFields = RecIdFields;
 		this.Relationships = Relationships;
 		this.StateFieldId = StateFieldId;
-		this.States = states;
+		States = states;
 		this.ErrorCode = ErrorCode;
 		this.ErrorMessage = ErrorMessage;
 		this.HasError = HasError;
@@ -442,7 +442,7 @@ public partial class SchemaResponse : IEquatable<SchemaResponse>, IValidatableOb
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as SchemaResponse);
+		return Equals(obj as SchemaResponse);
 	}
 
 	/// <summary>
@@ -460,69 +460,69 @@ public partial class SchemaResponse : IEquatable<SchemaResponse>, IValidatableOb
 
 		return
 				(
-					this.BusObId == other.BusObId ||
-					this.BusObId != null &&
-				this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
+					BusObId == other.BusObId ||
+					BusObId != null &&
+				BusObId.Equals(other.BusObId, StringComparison.Ordinal)
 			) &&
 				(
-					this.FieldDefinitions == other.FieldDefinitions ||
-					this.FieldDefinitions != null &&
-					this.FieldDefinitions.SequenceEqual(other.FieldDefinitions)
+					FieldDefinitions == other.FieldDefinitions ||
+					FieldDefinitions != null &&
+					FieldDefinitions.SequenceEqual(other.FieldDefinitions)
 				) &&
 				(
-					this.FirstRecIdField == other.FirstRecIdField ||
-					this.FirstRecIdField != null &&
-					this.FirstRecIdField.Equals(other.FirstRecIdField, StringComparison.Ordinal)
+					FirstRecIdField == other.FirstRecIdField ||
+					FirstRecIdField != null &&
+					FirstRecIdField.Equals(other.FirstRecIdField, StringComparison.Ordinal)
 				) &&
 				(
-					this.GridDefinitions == other.GridDefinitions ||
-					this.GridDefinitions != null &&
-					this.GridDefinitions.SequenceEqual(other.GridDefinitions)
+					GridDefinitions == other.GridDefinitions ||
+					GridDefinitions != null &&
+					GridDefinitions.SequenceEqual(other.GridDefinitions)
 				) &&
 				(
-					this.Name == other.Name ||
-					this.Name != null &&
-					this.Name.Equals(other.Name, StringComparison.Ordinal)
+					Name == other.Name ||
+					Name != null &&
+					Name.Equals(other.Name, StringComparison.Ordinal)
 				) &&
 				(
-					this.RecIdFields == other.RecIdFields ||
-					this.RecIdFields != null &&
-					this.RecIdFields.Equals(other.RecIdFields, StringComparison.Ordinal)
+					RecIdFields == other.RecIdFields ||
+					RecIdFields != null &&
+					RecIdFields.Equals(other.RecIdFields, StringComparison.Ordinal)
 				) &&
 				(
-					this.Relationships == other.Relationships ||
-					this.Relationships != null &&
-					this.Relationships.SequenceEqual(other.Relationships)
+					Relationships == other.Relationships ||
+					Relationships != null &&
+					Relationships.SequenceEqual(other.Relationships)
 				) &&
 				(
-					this.StateFieldId == other.StateFieldId ||
-					this.StateFieldId != null &&
-					this.StateFieldId.Equals(other.StateFieldId, StringComparison.Ordinal)
+					StateFieldId == other.StateFieldId ||
+					StateFieldId != null &&
+					StateFieldId.Equals(other.StateFieldId, StringComparison.Ordinal)
 				) &&
 				(
-					this.States == other.States ||
-					this.States != null &&
-					this.States.Equals(other.States, StringComparison.Ordinal)
+					States == other.States ||
+					States != null &&
+					States.Equals(other.States, StringComparison.Ordinal)
 				) &&
 				(
-					this.ErrorCode == other.ErrorCode ||
-					this.ErrorCode != null &&
-					this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
+					ErrorCode == other.ErrorCode ||
+					ErrorCode != null &&
+					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
 				) &&
 				(
-					this.ErrorMessage == other.ErrorMessage ||
-					this.ErrorMessage != null &&
-					this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
+					ErrorMessage == other.ErrorMessage ||
+					ErrorMessage != null &&
+					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
 				) &&
 				(
-					this.HasError == other.HasError ||
-					this.HasError != null &&
-					this.HasError.Equals(other.HasError)
+					HasError == other.HasError ||
+					HasError != null &&
+					HasError.Equals(other.HasError)
 				) &&
 				(
-					this.HttpStatusCode == other.HttpStatusCode ||
-					this.HttpStatusCode != null &&
-					this.HttpStatusCode.Equals(other.HttpStatusCode)
+					HttpStatusCode == other.HttpStatusCode ||
+					HttpStatusCode != null &&
+					HttpStatusCode.Equals(other.HttpStatusCode)
 				);
 	}
 
@@ -537,69 +537,69 @@ public partial class SchemaResponse : IEquatable<SchemaResponse>, IValidatableOb
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.BusObId != null)
+			if (BusObId != null)
 			{
-				hash = hash * 59 + this.BusObId.GetHashCode();
+				hash = hash * 59 + BusObId.GetHashCode();
 			}
 
-			if (this.FieldDefinitions != null)
+			if (FieldDefinitions != null)
 			{
-				hash = hash * 59 + this.FieldDefinitions.GetHashCode();
+				hash = hash * 59 + FieldDefinitions.GetHashCode();
 			}
 
-			if (this.FirstRecIdField != null)
+			if (FirstRecIdField != null)
 			{
-				hash = hash * 59 + this.FirstRecIdField.GetHashCode();
+				hash = hash * 59 + FirstRecIdField.GetHashCode();
 			}
 
-			if (this.GridDefinitions != null)
+			if (GridDefinitions != null)
 			{
-				hash = hash * 59 + this.GridDefinitions.GetHashCode();
+				hash = hash * 59 + GridDefinitions.GetHashCode();
 			}
 
-			if (this.Name != null)
+			if (Name != null)
 			{
-				hash = hash * 59 + this.Name.GetHashCode();
+				hash = hash * 59 + Name.GetHashCode();
 			}
 
-			if (this.RecIdFields != null)
+			if (RecIdFields != null)
 			{
-				hash = hash * 59 + this.RecIdFields.GetHashCode();
+				hash = hash * 59 + RecIdFields.GetHashCode();
 			}
 
-			if (this.Relationships != null)
+			if (Relationships != null)
 			{
-				hash = hash * 59 + this.Relationships.GetHashCode();
+				hash = hash * 59 + Relationships.GetHashCode();
 			}
 
-			if (this.StateFieldId != null)
+			if (StateFieldId != null)
 			{
-				hash = hash * 59 + this.StateFieldId.GetHashCode();
+				hash = hash * 59 + StateFieldId.GetHashCode();
 			}
 
-			if (this.States != null)
+			if (States != null)
 			{
-				hash = hash * 59 + this.States.GetHashCode();
+				hash = hash * 59 + States.GetHashCode();
 			}
 
-			if (this.ErrorCode != null)
+			if (ErrorCode != null)
 			{
-				hash = hash * 59 + this.ErrorCode.GetHashCode();
+				hash = hash * 59 + ErrorCode.GetHashCode();
 			}
 
-			if (this.ErrorMessage != null)
+			if (ErrorMessage != null)
 			{
-				hash = hash * 59 + this.ErrorMessage.GetHashCode();
+				hash = hash * 59 + ErrorMessage.GetHashCode();
 			}
 
-			if (this.HasError != null)
+			if (HasError != null)
 			{
-				hash = hash * 59 + this.HasError.GetHashCode();
+				hash = hash * 59 + HasError.GetHashCode();
 			}
 
-			if (this.HttpStatusCode != null)
+			if (HttpStatusCode != null)
 			{
-				hash = hash * 59 + this.HttpStatusCode.GetHashCode();
+				hash = hash * 59 + HttpStatusCode.GetHashCode();
 			}
 
 			return hash;

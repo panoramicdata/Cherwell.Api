@@ -119,7 +119,7 @@ public partial class Role : IEquatable<Role>, IValidatableObject
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as Role);
+		return Equals(obj as Role);
 	}
 
 	/// <summary>
@@ -137,49 +137,49 @@ public partial class Role : IEquatable<Role>, IValidatableObject
 
 		return
 				(
-					this.BrowserClientCustomViewId == other.BrowserClientCustomViewId ||
-					this.BrowserClientCustomViewId != null &&
-					this.BrowserClientCustomViewId.Equals(other.BrowserClientCustomViewId, StringComparison.Ordinal)
+					BrowserClientCustomViewId == other.BrowserClientCustomViewId ||
+					BrowserClientCustomViewId != null &&
+					BrowserClientCustomViewId.Equals(other.BrowserClientCustomViewId, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusinessObjectExcludeList == other.BusinessObjectExcludeList ||
-					this.BusinessObjectExcludeList != null &&
-					this.BusinessObjectExcludeList.SequenceEqual(other.BusinessObjectExcludeList)
+					BusinessObjectExcludeList == other.BusinessObjectExcludeList ||
+					BusinessObjectExcludeList != null &&
+					BusinessObjectExcludeList.SequenceEqual(other.BusinessObjectExcludeList)
 				) &&
 				(
-					this.Culture == other.Culture ||
-					this.Culture != null &&
-					this.Culture.Equals(other.Culture, StringComparison.Ordinal)
+					Culture == other.Culture ||
+					Culture != null &&
+					Culture.Equals(other.Culture, StringComparison.Ordinal)
 				) &&
 				(
-					this.Description == other.Description ||
-					this.Description != null &&
-					this.Description.Equals(other.Description, StringComparison.Ordinal)
+					Description == other.Description ||
+					Description != null &&
+					Description.Equals(other.Description, StringComparison.Ordinal)
 				) &&
 				(
-					this.MobileClientCustomViewId == other.MobileClientCustomViewId ||
-					this.MobileClientCustomViewId != null &&
-					this.MobileClientCustomViewId.Equals(other.MobileClientCustomViewId, StringComparison.Ordinal)
+					MobileClientCustomViewId == other.MobileClientCustomViewId ||
+					MobileClientCustomViewId != null &&
+					MobileClientCustomViewId.Equals(other.MobileClientCustomViewId, StringComparison.Ordinal)
 				) &&
 				(
-					this.PrimaryBusObId == other.PrimaryBusObId ||
-					this.PrimaryBusObId != null &&
-					this.PrimaryBusObId.Equals(other.PrimaryBusObId, StringComparison.Ordinal)
+					PrimaryBusObId == other.PrimaryBusObId ||
+					PrimaryBusObId != null &&
+					PrimaryBusObId.Equals(other.PrimaryBusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.RoleId == other.RoleId ||
-					this.RoleId != null &&
-					this.RoleId.Equals(other.RoleId, StringComparison.Ordinal)
+					RoleId == other.RoleId ||
+					RoleId != null &&
+					RoleId.Equals(other.RoleId, StringComparison.Ordinal)
 				) &&
 				(
-					this.RoleName == other.RoleName ||
-					this.RoleName != null &&
-					this.RoleName.Equals(other.RoleName, StringComparison.Ordinal)
+					RoleName == other.RoleName ||
+					RoleName != null &&
+					RoleName.Equals(other.RoleName, StringComparison.Ordinal)
 				) &&
 				(
-					this.SmartClientCustomViewId == other.SmartClientCustomViewId ||
-					this.SmartClientCustomViewId != null &&
-					this.SmartClientCustomViewId.Equals(other.SmartClientCustomViewId, StringComparison.Ordinal)
+					SmartClientCustomViewId == other.SmartClientCustomViewId ||
+					SmartClientCustomViewId != null &&
+					SmartClientCustomViewId.Equals(other.SmartClientCustomViewId, StringComparison.Ordinal)
 				);
 	}
 
@@ -194,49 +194,49 @@ public partial class Role : IEquatable<Role>, IValidatableObject
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.BrowserClientCustomViewId != null)
+			if (BrowserClientCustomViewId != null)
 			{
-				hash = hash * 59 + this.BrowserClientCustomViewId.GetHashCode();
+				hash = hash * 59 + BrowserClientCustomViewId.GetHashCode();
 			}
 
-			if (this.BusinessObjectExcludeList != null)
+			if (BusinessObjectExcludeList != null)
 			{
-				hash = hash * 59 + this.BusinessObjectExcludeList.GetHashCode();
+				hash = hash * 59 + BusinessObjectExcludeList.GetHashCode();
 			}
 
-			if (this.Culture != null)
+			if (Culture != null)
 			{
-				hash = hash * 59 + this.Culture.GetHashCode();
+				hash = hash * 59 + Culture.GetHashCode();
 			}
 
-			if (this.Description != null)
+			if (Description != null)
 			{
-				hash = hash * 59 + this.Description.GetHashCode();
+				hash = hash * 59 + Description.GetHashCode();
 			}
 
-			if (this.MobileClientCustomViewId != null)
+			if (MobileClientCustomViewId != null)
 			{
-				hash = hash * 59 + this.MobileClientCustomViewId.GetHashCode();
+				hash = hash * 59 + MobileClientCustomViewId.GetHashCode();
 			}
 
-			if (this.PrimaryBusObId != null)
+			if (PrimaryBusObId != null)
 			{
-				hash = hash * 59 + this.PrimaryBusObId.GetHashCode();
+				hash = hash * 59 + PrimaryBusObId.GetHashCode();
 			}
 
-			if (this.RoleId != null)
+			if (RoleId != null)
 			{
-				hash = hash * 59 + this.RoleId.GetHashCode();
+				hash = hash * 59 + RoleId.GetHashCode();
 			}
 
-			if (this.RoleName != null)
+			if (RoleName != null)
 			{
-				hash = hash * 59 + this.RoleName.GetHashCode();
+				hash = hash * 59 + RoleName.GetHashCode();
 			}
 
-			if (this.SmartClientCustomViewId != null)
+			if (SmartClientCustomViewId != null)
 			{
-				hash = hash * 59 + this.SmartClientCustomViewId.GetHashCode();
+				hash = hash * 59 + SmartClientCustomViewId.GetHashCode();
 			}
 
 			return hash;

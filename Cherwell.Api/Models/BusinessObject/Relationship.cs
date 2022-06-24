@@ -95,7 +95,7 @@ public partial class BusinessObjectRelationship : IEquatable<BusinessObjectRelat
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as BusinessObjectRelationship);
+		return Equals(obj as BusinessObjectRelationship);
 	}
 
 	/// <summary>
@@ -113,34 +113,34 @@ public partial class BusinessObjectRelationship : IEquatable<BusinessObjectRelat
 
 		return
 				(
-					this.Cardinality == other.Cardinality ||
-					this.Cardinality != null &&
-					this.Cardinality.Equals(other.Cardinality, StringComparison.Ordinal)
+					Cardinality == other.Cardinality ||
+					Cardinality != null &&
+					Cardinality.Equals(other.Cardinality, StringComparison.Ordinal)
 				) &&
 				(
-					this.Description == other.Description ||
-					this.Description != null &&
-					this.Description.Equals(other.Description, StringComparison.Ordinal)
+					Description == other.Description ||
+					Description != null &&
+					Description.Equals(other.Description, StringComparison.Ordinal)
 				) &&
 				(
-					this.DisplayName == other.DisplayName ||
-					this.DisplayName != null &&
-					this.DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
+					DisplayName == other.DisplayName ||
+					DisplayName != null &&
+					DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
 				) &&
 				(
-					this.FieldDefinitions == other.FieldDefinitions ||
-					this.FieldDefinitions != null &&
-					this.FieldDefinitions.SequenceEqual(other.FieldDefinitions)
+					FieldDefinitions == other.FieldDefinitions ||
+					FieldDefinitions != null &&
+					FieldDefinitions.SequenceEqual(other.FieldDefinitions)
 				) &&
 				(
-					this.RelationshipId == other.RelationshipId ||
-					this.RelationshipId != null &&
-					this.RelationshipId.Equals(other.RelationshipId, StringComparison.Ordinal)
+					RelationshipId == other.RelationshipId ||
+					RelationshipId != null &&
+					RelationshipId.Equals(other.RelationshipId, StringComparison.Ordinal)
 				) &&
 				(
-					this.Target == other.Target ||
-					this.Target != null &&
-					this.Target.Equals(other.Target, StringComparison.Ordinal)
+					Target == other.Target ||
+					Target != null &&
+					Target.Equals(other.Target, StringComparison.Ordinal)
 				);
 	}
 
@@ -155,34 +155,34 @@ public partial class BusinessObjectRelationship : IEquatable<BusinessObjectRelat
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Cardinality != null)
+			if (Cardinality != null)
 			{
-				hash = hash * 59 + this.Cardinality.GetHashCode();
+				hash = hash * 59 + Cardinality.GetHashCode();
 			}
 
-			if (this.Description != null)
+			if (Description != null)
 			{
-				hash = hash * 59 + this.Description.GetHashCode();
+				hash = hash * 59 + Description.GetHashCode();
 			}
 
-			if (this.DisplayName != null)
+			if (DisplayName != null)
 			{
-				hash = hash * 59 + this.DisplayName.GetHashCode();
+				hash = hash * 59 + DisplayName.GetHashCode();
 			}
 
-			if (this.FieldDefinitions != null)
+			if (FieldDefinitions != null)
 			{
-				hash = hash * 59 + this.FieldDefinitions.GetHashCode();
+				hash = hash * 59 + FieldDefinitions.GetHashCode();
 			}
 
-			if (this.RelationshipId != null)
+			if (RelationshipId != null)
 			{
-				hash = hash * 59 + this.RelationshipId.GetHashCode();
+				hash = hash * 59 + RelationshipId.GetHashCode();
 			}
 
-			if (this.Target != null)
+			if (Target != null)
 			{
-				hash = hash * 59 + this.Target.GetHashCode();
+				hash = hash * 59 + Target.GetHashCode();
 			}
 
 			return hash;

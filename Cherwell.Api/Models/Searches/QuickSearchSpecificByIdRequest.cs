@@ -159,7 +159,7 @@ public partial class QuickSearchSpecificByIdRequest : IEquatable<QuickSearchSpec
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as QuickSearchSpecificByIdRequest);
+		return Equals(obj as QuickSearchSpecificByIdRequest);
 	}
 
 	/// <summary>
@@ -177,74 +177,74 @@ public partial class QuickSearchSpecificByIdRequest : IEquatable<QuickSearchSpec
 
 		return
 				(
-					this.BusObIds == other.BusObIds ||
-					this.BusObIds != null &&
-					this.BusObIds.SequenceEqual(other.BusObIds)
+					BusObIds == other.BusObIds ||
+					BusObIds != null &&
+					BusObIds.SequenceEqual(other.BusObIds)
 				) &&
 				(
-					this.StandIn == other.StandIn ||
-					this.StandIn != null &&
-					this.StandIn.Equals(other.StandIn, StringComparison.Ordinal)
+					StandIn == other.StandIn ||
+					StandIn != null &&
+					StandIn.Equals(other.StandIn, StringComparison.Ordinal)
 				) &&
 				(
-					this.Ascending == other.Ascending ||
-					this.Ascending != null &&
-					this.Ascending.Equals(other.Ascending)
+					Ascending == other.Ascending ||
+					Ascending != null &&
+					Ascending.Equals(other.Ascending)
 				) &&
 				(
-					this.IsBusObTarget == other.IsBusObTarget ||
-					this.IsBusObTarget != null &&
-					this.IsBusObTarget.Equals(other.IsBusObTarget)
+					IsBusObTarget == other.IsBusObTarget ||
+					IsBusObTarget != null &&
+					IsBusObTarget.Equals(other.IsBusObTarget)
 				) &&
 				(
-					this.NonFinalState == other.NonFinalState ||
-					this.NonFinalState != null &&
-					this.NonFinalState.Equals(other.NonFinalState)
+					NonFinalState == other.NonFinalState ||
+					NonFinalState != null &&
+					NonFinalState.Equals(other.NonFinalState)
 				) &&
 				(
-					this.SearchAnyWords == other.SearchAnyWords ||
-					this.SearchAnyWords != null &&
-					this.SearchAnyWords.Equals(other.SearchAnyWords)
+					SearchAnyWords == other.SearchAnyWords ||
+					SearchAnyWords != null &&
+					SearchAnyWords.Equals(other.SearchAnyWords)
 				) &&
 				(
-					this.SearchAttachments == other.SearchAttachments ||
-					this.SearchAttachments != null &&
-					this.SearchAttachments.Equals(other.SearchAttachments)
+					SearchAttachments == other.SearchAttachments ||
+					SearchAttachments != null &&
+					SearchAttachments.Equals(other.SearchAttachments)
 				) &&
 				(
-					this.SearchRelated == other.SearchRelated ||
-					this.SearchRelated != null &&
-					this.SearchRelated.Equals(other.SearchRelated)
+					SearchRelated == other.SearchRelated ||
+					SearchRelated != null &&
+					SearchRelated.Equals(other.SearchRelated)
 				) &&
 				(
-					this.SearchText == other.SearchText ||
-					this.SearchText != null &&
-					this.SearchText.Equals(other.SearchText, StringComparison.Ordinal)
+					SearchText == other.SearchText ||
+					SearchText != null &&
+					SearchText.Equals(other.SearchText, StringComparison.Ordinal)
 				) &&
 				(
-					this.SelectedChangedLimit == other.SelectedChangedLimit ||
-					this.SelectedChangedLimit != null &&
-					this.SelectedChangedLimit.Equals(other.SelectedChangedLimit)
+					SelectedChangedLimit == other.SelectedChangedLimit ||
+					SelectedChangedLimit != null &&
+					SelectedChangedLimit.Equals(other.SelectedChangedLimit)
 				) &&
 				(
-					this.SelectedSortByFieldId == other.SelectedSortByFieldId ||
-					this.SelectedSortByFieldId != null &&
-					this.SelectedSortByFieldId.Equals(other.SelectedSortByFieldId, StringComparison.Ordinal)
+					SelectedSortByFieldId == other.SelectedSortByFieldId ||
+					SelectedSortByFieldId != null &&
+					SelectedSortByFieldId.Equals(other.SelectedSortByFieldId, StringComparison.Ordinal)
 				) &&
 				(
-					this.SortByRelevance == other.SortByRelevance ||
-					this.SortByRelevance != null &&
-					this.SortByRelevance.Equals(other.SortByRelevance)
+					SortByRelevance == other.SortByRelevance ||
+					SortByRelevance != null &&
+					SortByRelevance.Equals(other.SortByRelevance)
 				) &&
 				(
-					this.SpecificSearchTargetId == other.SpecificSearchTargetId ||
-					this.SpecificSearchTargetId != null &&
-					this.SpecificSearchTargetId.Equals(other.SpecificSearchTargetId, StringComparison.Ordinal)
+					SpecificSearchTargetId == other.SpecificSearchTargetId ||
+					SpecificSearchTargetId != null &&
+					SpecificSearchTargetId.Equals(other.SpecificSearchTargetId, StringComparison.Ordinal)
 				) &&
 				(
-					this.UseSortBy == other.UseSortBy ||
-					this.UseSortBy != null &&
-					this.UseSortBy.Equals(other.UseSortBy)
+					UseSortBy == other.UseSortBy ||
+					UseSortBy != null &&
+					UseSortBy.Equals(other.UseSortBy)
 				);
 	}
 
@@ -259,74 +259,74 @@ public partial class QuickSearchSpecificByIdRequest : IEquatable<QuickSearchSpec
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.BusObIds != null)
+			if (BusObIds != null)
 			{
-				hash = hash * 59 + this.BusObIds.GetHashCode();
+				hash = hash * 59 + BusObIds.GetHashCode();
 			}
 
-			if (this.StandIn != null)
+			if (StandIn != null)
 			{
-				hash = hash * 59 + this.StandIn.GetHashCode();
+				hash = hash * 59 + StandIn.GetHashCode();
 			}
 
-			if (this.Ascending != null)
+			if (Ascending != null)
 			{
-				hash = hash * 59 + this.Ascending.GetHashCode();
+				hash = hash * 59 + Ascending.GetHashCode();
 			}
 
-			if (this.IsBusObTarget != null)
+			if (IsBusObTarget != null)
 			{
-				hash = hash * 59 + this.IsBusObTarget.GetHashCode();
+				hash = hash * 59 + IsBusObTarget.GetHashCode();
 			}
 
-			if (this.NonFinalState != null)
+			if (NonFinalState != null)
 			{
-				hash = hash * 59 + this.NonFinalState.GetHashCode();
+				hash = hash * 59 + NonFinalState.GetHashCode();
 			}
 
-			if (this.SearchAnyWords != null)
+			if (SearchAnyWords != null)
 			{
-				hash = hash * 59 + this.SearchAnyWords.GetHashCode();
+				hash = hash * 59 + SearchAnyWords.GetHashCode();
 			}
 
-			if (this.SearchAttachments != null)
+			if (SearchAttachments != null)
 			{
-				hash = hash * 59 + this.SearchAttachments.GetHashCode();
+				hash = hash * 59 + SearchAttachments.GetHashCode();
 			}
 
-			if (this.SearchRelated != null)
+			if (SearchRelated != null)
 			{
-				hash = hash * 59 + this.SearchRelated.GetHashCode();
+				hash = hash * 59 + SearchRelated.GetHashCode();
 			}
 
-			if (this.SearchText != null)
+			if (SearchText != null)
 			{
-				hash = hash * 59 + this.SearchText.GetHashCode();
+				hash = hash * 59 + SearchText.GetHashCode();
 			}
 
-			if (this.SelectedChangedLimit != null)
+			if (SelectedChangedLimit != null)
 			{
-				hash = hash * 59 + this.SelectedChangedLimit.GetHashCode();
+				hash = hash * 59 + SelectedChangedLimit.GetHashCode();
 			}
 
-			if (this.SelectedSortByFieldId != null)
+			if (SelectedSortByFieldId != null)
 			{
-				hash = hash * 59 + this.SelectedSortByFieldId.GetHashCode();
+				hash = hash * 59 + SelectedSortByFieldId.GetHashCode();
 			}
 
-			if (this.SortByRelevance != null)
+			if (SortByRelevance != null)
 			{
-				hash = hash * 59 + this.SortByRelevance.GetHashCode();
+				hash = hash * 59 + SortByRelevance.GetHashCode();
 			}
 
-			if (this.SpecificSearchTargetId != null)
+			if (SpecificSearchTargetId != null)
 			{
-				hash = hash * 59 + this.SpecificSearchTargetId.GetHashCode();
+				hash = hash * 59 + SpecificSearchTargetId.GetHashCode();
 			}
 
-			if (this.UseSortBy != null)
+			if (UseSortBy != null)
 			{
-				hash = hash * 59 + this.UseSortBy.GetHashCode();
+				hash = hash * 59 + UseSortBy.GetHashCode();
 			}
 
 			return hash;

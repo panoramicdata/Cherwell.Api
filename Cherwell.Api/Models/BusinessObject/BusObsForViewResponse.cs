@@ -55,7 +55,7 @@ public partial class BusObsForViewResponse : IEquatable<BusObsForViewResponse>, 
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as BusObsForViewResponse);
+		return Equals(obj as BusObsForViewResponse);
 	}
 
 	/// <summary>
@@ -73,9 +73,9 @@ public partial class BusObsForViewResponse : IEquatable<BusObsForViewResponse>, 
 
 		return
 				(
-					this.Summaries == other.Summaries ||
-					this.Summaries != null &&
-					this.Summaries.SequenceEqual(other.Summaries)
+					Summaries == other.Summaries ||
+					Summaries != null &&
+					Summaries.SequenceEqual(other.Summaries)
 				);
 	}
 
@@ -90,9 +90,9 @@ public partial class BusObsForViewResponse : IEquatable<BusObsForViewResponse>, 
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Summaries != null)
+			if (Summaries != null)
 			{
-				hash = hash * 59 + this.Summaries.GetHashCode();
+				hash = hash * 59 + Summaries.GetHashCode();
 			}
 
 			return hash;

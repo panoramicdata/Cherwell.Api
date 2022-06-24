@@ -55,7 +55,7 @@ public partial class BatchDeleteResponse : IEquatable<BatchDeleteResponse>, IVal
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as BatchDeleteResponse);
+		return Equals(obj as BatchDeleteResponse);
 	}
 
 	/// <summary>
@@ -73,9 +73,9 @@ public partial class BatchDeleteResponse : IEquatable<BatchDeleteResponse>, IVal
 
 		return
 				(
-					this.Responses == other.Responses ||
-					this.Responses != null &&
-					this.Responses.SequenceEqual(other.Responses)
+					Responses == other.Responses ||
+					Responses != null &&
+					Responses.SequenceEqual(other.Responses)
 				);
 	}
 
@@ -90,9 +90,9 @@ public partial class BatchDeleteResponse : IEquatable<BatchDeleteResponse>, IVal
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Responses != null)
+			if (Responses != null)
 			{
-				hash = hash * 59 + this.Responses.GetHashCode();
+				hash = hash * 59 + Responses.GetHashCode();
 			}
 
 			return hash;

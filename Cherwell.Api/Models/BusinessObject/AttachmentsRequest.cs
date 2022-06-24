@@ -202,7 +202,7 @@ public partial class AttachmentsRequest : IEquatable<AttachmentsRequest>, IValid
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as AttachmentsRequest);
+		return Equals(obj as AttachmentsRequest);
 	}
 
 	/// <summary>
@@ -220,44 +220,44 @@ public partial class AttachmentsRequest : IEquatable<AttachmentsRequest>, IValid
 
 		return
 				(
-					this.AttachmentId == other.AttachmentId ||
-					this.AttachmentId != null &&
-					this.AttachmentId.Equals(other.AttachmentId, StringComparison.Ordinal)
+					AttachmentId == other.AttachmentId ||
+					AttachmentId != null &&
+					AttachmentId.Equals(other.AttachmentId, StringComparison.Ordinal)
 				) &&
 				(
-					this.AttachmentTypes == other.AttachmentTypes ||
-					this.AttachmentTypes != null &&
-					this.AttachmentTypes.SequenceEqual(other.AttachmentTypes)
+					AttachmentTypes == other.AttachmentTypes ||
+					AttachmentTypes != null &&
+					AttachmentTypes.SequenceEqual(other.AttachmentTypes)
 				) &&
 				(
-					this.BusObId == other.BusObId ||
-					this.BusObId != null &&
-					this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
+					BusObId == other.BusObId ||
+					BusObId != null &&
+					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObName == other.BusObName ||
-					this.BusObName != null &&
-					this.BusObName.Equals(other.BusObName, StringComparison.Ordinal)
+					BusObName == other.BusObName ||
+					BusObName != null &&
+					BusObName.Equals(other.BusObName, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObPublicId == other.BusObPublicId ||
-					this.BusObPublicId != null &&
-					this.BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
+					BusObPublicId == other.BusObPublicId ||
+					BusObPublicId != null &&
+					BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObRecId == other.BusObRecId ||
-					this.BusObRecId != null &&
-					this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
+					BusObRecId == other.BusObRecId ||
+					BusObRecId != null &&
+					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
 				) &&
 				(
-					this.IncludeLinks == other.IncludeLinks ||
-					this.IncludeLinks != null &&
-					this.IncludeLinks.Equals(other.IncludeLinks)
+					IncludeLinks == other.IncludeLinks ||
+					IncludeLinks != null &&
+					IncludeLinks.Equals(other.IncludeLinks)
 				) &&
 				(
-					this.Types == other.Types ||
-					this.Types != null &&
-					this.Types.SequenceEqual(other.Types)
+					Types == other.Types ||
+					Types != null &&
+					Types.SequenceEqual(other.Types)
 				);
 	}
 
@@ -272,44 +272,44 @@ public partial class AttachmentsRequest : IEquatable<AttachmentsRequest>, IValid
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.AttachmentId != null)
+			if (AttachmentId != null)
 			{
-				hash = hash * 59 + this.AttachmentId.GetHashCode();
+				hash = hash * 59 + AttachmentId.GetHashCode();
 			}
 
-			if (this.AttachmentTypes != null)
+			if (AttachmentTypes != null)
 			{
-				hash = hash * 59 + this.AttachmentTypes.GetHashCode();
+				hash = hash * 59 + AttachmentTypes.GetHashCode();
 			}
 
-			if (this.BusObId != null)
+			if (BusObId != null)
 			{
-				hash = hash * 59 + this.BusObId.GetHashCode();
+				hash = hash * 59 + BusObId.GetHashCode();
 			}
 
-			if (this.BusObName != null)
+			if (BusObName != null)
 			{
-				hash = hash * 59 + this.BusObName.GetHashCode();
+				hash = hash * 59 + BusObName.GetHashCode();
 			}
 
-			if (this.BusObPublicId != null)
+			if (BusObPublicId != null)
 			{
-				hash = hash * 59 + this.BusObPublicId.GetHashCode();
+				hash = hash * 59 + BusObPublicId.GetHashCode();
 			}
 
-			if (this.BusObRecId != null)
+			if (BusObRecId != null)
 			{
-				hash = hash * 59 + this.BusObRecId.GetHashCode();
+				hash = hash * 59 + BusObRecId.GetHashCode();
 			}
 
-			if (this.IncludeLinks != null)
+			if (IncludeLinks != null)
 			{
-				hash = hash * 59 + this.IncludeLinks.GetHashCode();
+				hash = hash * 59 + IncludeLinks.GetHashCode();
 			}
 
-			if (this.Types != null)
+			if (Types != null)
 			{
-				hash = hash * 59 + this.Types.GetHashCode();
+				hash = hash * 59 + Types.GetHashCode();
 			}
 
 			return hash;

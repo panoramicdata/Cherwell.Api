@@ -79,7 +79,7 @@ public partial class GetStatusesResponseStatuses : IEquatable<GetStatusesRespons
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as GetStatusesResponseStatuses);
+		return Equals(obj as GetStatusesResponseStatuses);
 	}
 
 	/// <summary>
@@ -97,24 +97,24 @@ public partial class GetStatusesResponseStatuses : IEquatable<GetStatusesRespons
 
 		return
 				(
-					this.Id == other.Id ||
-					this.Id != null &&
-					this.Id.Equals(other.Id, StringComparison.Ordinal)
+					Id == other.Id ||
+					Id != null &&
+					Id.Equals(other.Id, StringComparison.Ordinal)
 				) &&
 				(
-					this.IsInitial == other.IsInitial ||
-					this.IsInitial != null &&
-					this.IsInitial.Equals(other.IsInitial)
+					IsInitial == other.IsInitial ||
+					IsInitial != null &&
+					IsInitial.Equals(other.IsInitial)
 				) &&
 				(
-					this.Name == other.Name ||
-					this.Name != null &&
-					this.Name.Equals(other.Name, StringComparison.Ordinal)
+					Name == other.Name ||
+					Name != null &&
+					Name.Equals(other.Name, StringComparison.Ordinal)
 				) &&
 				(
-					this.StageId == other.StageId ||
-					this.StageId != null &&
-					this.StageId.Equals(other.StageId, StringComparison.Ordinal)
+					StageId == other.StageId ||
+					StageId != null &&
+					StageId.Equals(other.StageId, StringComparison.Ordinal)
 				);
 	}
 
@@ -129,24 +129,24 @@ public partial class GetStatusesResponseStatuses : IEquatable<GetStatusesRespons
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Id != null)
+			if (Id != null)
 			{
-				hash = hash * 59 + this.Id.GetHashCode();
+				hash = hash * 59 + Id.GetHashCode();
 			}
 
-			if (this.IsInitial != null)
+			if (IsInitial != null)
 			{
-				hash = hash * 59 + this.IsInitial.GetHashCode();
+				hash = hash * 59 + IsInitial.GetHashCode();
 			}
 
-			if (this.Name != null)
+			if (Name != null)
 			{
-				hash = hash * 59 + this.Name.GetHashCode();
+				hash = hash * 59 + Name.GetHashCode();
 			}
 
-			if (this.StageId != null)
+			if (StageId != null)
 			{
-				hash = hash * 59 + this.StageId.GetHashCode();
+				hash = hash * 59 + StageId.GetHashCode();
 			}
 
 			return hash;

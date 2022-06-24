@@ -79,7 +79,7 @@ public partial class QuickSearchByIdRequest : IEquatable<QuickSearchByIdRequest>
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as QuickSearchByIdRequest);
+		return Equals(obj as QuickSearchByIdRequest);
 	}
 
 	/// <summary>
@@ -97,24 +97,24 @@ public partial class QuickSearchByIdRequest : IEquatable<QuickSearchByIdRequest>
 
 		return
 				(
-					this.BusObIds == other.BusObIds ||
-					this.BusObIds != null &&
-					this.BusObIds.SequenceEqual(other.BusObIds)
+					BusObIds == other.BusObIds ||
+					BusObIds != null &&
+					BusObIds.SequenceEqual(other.BusObIds)
 				) &&
 				(
-					this.IsGeneral == other.IsGeneral ||
-					this.IsGeneral != null &&
-					this.IsGeneral.Equals(other.IsGeneral)
+					IsGeneral == other.IsGeneral ||
+					IsGeneral != null &&
+					IsGeneral.Equals(other.IsGeneral)
 				) &&
 				(
-					this.SearchText == other.SearchText ||
-					this.SearchText != null &&
-					this.SearchText.Equals(other.SearchText, StringComparison.Ordinal)
+					SearchText == other.SearchText ||
+					SearchText != null &&
+					SearchText.Equals(other.SearchText, StringComparison.Ordinal)
 				) &&
 				(
-					this.StandIn == other.StandIn ||
-					this.StandIn != null &&
-					this.StandIn.Equals(other.StandIn, StringComparison.Ordinal)
+					StandIn == other.StandIn ||
+					StandIn != null &&
+					StandIn.Equals(other.StandIn, StringComparison.Ordinal)
 				);
 	}
 
@@ -129,24 +129,24 @@ public partial class QuickSearchByIdRequest : IEquatable<QuickSearchByIdRequest>
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.BusObIds != null)
+			if (BusObIds != null)
 			{
-				hash = hash * 59 + this.BusObIds.GetHashCode();
+				hash = hash * 59 + BusObIds.GetHashCode();
 			}
 
-			if (this.IsGeneral != null)
+			if (IsGeneral != null)
 			{
-				hash = hash * 59 + this.IsGeneral.GetHashCode();
+				hash = hash * 59 + IsGeneral.GetHashCode();
 			}
 
-			if (this.SearchText != null)
+			if (SearchText != null)
 			{
-				hash = hash * 59 + this.SearchText.GetHashCode();
+				hash = hash * 59 + SearchText.GetHashCode();
 			}
 
-			if (this.StandIn != null)
+			if (StandIn != null)
 			{
-				hash = hash * 59 + this.StandIn.GetHashCode();
+				hash = hash * 59 + StandIn.GetHashCode();
 			}
 
 			return hash;

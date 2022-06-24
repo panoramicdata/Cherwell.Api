@@ -71,7 +71,7 @@ public partial class SimplePromptValue : IEquatable<SimplePromptValue>, IValidat
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as SimplePromptValue);
+		return Equals(obj as SimplePromptValue);
 	}
 
 	/// <summary>
@@ -89,19 +89,19 @@ public partial class SimplePromptValue : IEquatable<SimplePromptValue>, IValidat
 
 		return
 				(
-					this.PromptDefId == other.PromptDefId ||
-					this.PromptDefId != null &&
-					this.PromptDefId.Equals(other.PromptDefId, StringComparison.Ordinal)
+					PromptDefId == other.PromptDefId ||
+					PromptDefId != null &&
+					PromptDefId.Equals(other.PromptDefId, StringComparison.Ordinal)
 				) &&
 				(
-					this.PromptName == other.PromptName ||
-					this.PromptName != null &&
-					this.PromptName.Equals(other.PromptName, StringComparison.Ordinal)
+					PromptName == other.PromptName ||
+					PromptName != null &&
+					PromptName.Equals(other.PromptName, StringComparison.Ordinal)
 				) &&
 				(
-					this.Value == other.Value ||
-					this.Value != null &&
-					this.Value.Equals(other.Value, StringComparison.Ordinal)
+					Value == other.Value ||
+					Value != null &&
+					Value.Equals(other.Value, StringComparison.Ordinal)
 				);
 	}
 
@@ -116,19 +116,19 @@ public partial class SimplePromptValue : IEquatable<SimplePromptValue>, IValidat
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.PromptDefId != null)
+			if (PromptDefId != null)
 			{
-				hash = hash * 59 + this.PromptDefId.GetHashCode();
+				hash = hash * 59 + PromptDefId.GetHashCode();
 			}
 
-			if (this.PromptName != null)
+			if (PromptName != null)
 			{
-				hash = hash * 59 + this.PromptName.GetHashCode();
+				hash = hash * 59 + PromptName.GetHashCode();
 			}
 
-			if (this.Value != null)
+			if (Value != null)
 			{
-				hash = hash * 59 + this.Value.GetHashCode();
+				hash = hash * 59 + Value.GetHashCode();
 			}
 
 			return hash;

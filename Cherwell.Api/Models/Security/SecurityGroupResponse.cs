@@ -55,7 +55,7 @@ public partial class SecurityGroupResponse : IEquatable<SecurityGroupResponse>, 
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as SecurityGroupResponse);
+		return Equals(obj as SecurityGroupResponse);
 	}
 
 	/// <summary>
@@ -73,9 +73,9 @@ public partial class SecurityGroupResponse : IEquatable<SecurityGroupResponse>, 
 
 		return
 				(
-					this.SecurityGroups == other.SecurityGroups ||
-					this.SecurityGroups != null &&
-					this.SecurityGroups.SequenceEqual(other.SecurityGroups)
+					SecurityGroups == other.SecurityGroups ||
+					SecurityGroups != null &&
+					SecurityGroups.SequenceEqual(other.SecurityGroups)
 				);
 	}
 
@@ -90,9 +90,9 @@ public partial class SecurityGroupResponse : IEquatable<SecurityGroupResponse>, 
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.SecurityGroups != null)
+			if (SecurityGroups != null)
 			{
-				hash = hash * 59 + this.SecurityGroups.GetHashCode();
+				hash = hash * 59 + SecurityGroups.GetHashCode();
 			}
 
 			return hash;

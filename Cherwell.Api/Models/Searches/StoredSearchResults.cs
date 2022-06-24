@@ -16,7 +16,7 @@ public partial class StoredSearchResults : IEquatable<StoredSearchResults>, IVal
 	/// </summary>
 	/// <param name="Columns">Columns.</param>
 	/// <param name="Rows">Rows.</param>
-	public StoredSearchResults(List<ColumnSchema> Columns, List<List<Object>> Rows)
+	public StoredSearchResults(List<ColumnSchema> Columns, List<List<object>> Rows)
 	{
 		this.Columns = Columns;
 		this.Rows = Rows;
@@ -31,7 +31,7 @@ public partial class StoredSearchResults : IEquatable<StoredSearchResults>, IVal
 	/// Gets or Sets Rows
 	/// </summary>
 	[DataMember(Name = "rows", EmitDefaultValue = false)]
-	public List<List<Object>> Rows { get; set; }
+	public List<List<object>> Rows { get; set; }
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>
@@ -63,7 +63,7 @@ public partial class StoredSearchResults : IEquatable<StoredSearchResults>, IVal
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as StoredSearchResults);
+		return Equals(obj as StoredSearchResults);
 	}
 
 	/// <summary>
@@ -81,14 +81,14 @@ public partial class StoredSearchResults : IEquatable<StoredSearchResults>, IVal
 
 		return
 				(
-					this.Columns == other.Columns ||
-					this.Columns != null &&
-					this.Columns.SequenceEqual(other.Columns)
+					Columns == other.Columns ||
+					Columns != null &&
+					Columns.SequenceEqual(other.Columns)
 				) &&
 				(
-					this.Rows == other.Rows ||
-					this.Rows != null &&
-					this.Rows.SequenceEqual(other.Rows)
+					Rows == other.Rows ||
+					Rows != null &&
+					Rows.SequenceEqual(other.Rows)
 				);
 	}
 
@@ -103,14 +103,14 @@ public partial class StoredSearchResults : IEquatable<StoredSearchResults>, IVal
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Columns != null)
+			if (Columns != null)
 			{
-				hash = hash * 59 + this.Columns.GetHashCode();
+				hash = hash * 59 + Columns.GetHashCode();
 			}
 
-			if (this.Rows != null)
+			if (Rows != null)
 			{
-				hash = hash * 59 + this.Rows.GetHashCode();
+				hash = hash * 59 + Rows.GetHashCode();
 			}
 
 			return hash;

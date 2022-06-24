@@ -71,7 +71,7 @@ public partial class FilterInfo : IEquatable<FilterInfo>, IValidatableObject
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as FilterInfo);
+		return Equals(obj as FilterInfo);
 	}
 
 	/// <summary>
@@ -89,19 +89,19 @@ public partial class FilterInfo : IEquatable<FilterInfo>, IValidatableObject
 
 		return
 				(
-					this.FieldId == other.FieldId ||
-					this.FieldId != null &&
-					this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
+					FieldId == other.FieldId ||
+					FieldId != null &&
+					FieldId.Equals(other.FieldId, StringComparison.Ordinal)
 				) &&
 				(
-					this.Operator == other.Operator ||
-					this.Operator != null &&
-					this.Operator.Equals(other.Operator, StringComparison.Ordinal)
+					Operator == other.Operator ||
+					Operator != null &&
+					Operator.Equals(other.Operator, StringComparison.Ordinal)
 				) &&
 				(
-					this.Value == other.Value ||
-					this.Value != null &&
-					this.Value.Equals(other.Value, StringComparison.Ordinal)
+					Value == other.Value ||
+					Value != null &&
+					Value.Equals(other.Value, StringComparison.Ordinal)
 				);
 	}
 
@@ -116,19 +116,19 @@ public partial class FilterInfo : IEquatable<FilterInfo>, IValidatableObject
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.FieldId != null)
+			if (FieldId != null)
 			{
-				hash = hash * 59 + this.FieldId.GetHashCode();
+				hash = hash * 59 + FieldId.GetHashCode();
 			}
 
-			if (this.Operator != null)
+			if (Operator != null)
 			{
-				hash = hash * 59 + this.Operator.GetHashCode();
+				hash = hash * 59 + Operator.GetHashCode();
 			}
 
-			if (this.Value != null)
+			if (Value != null)
 			{
-				hash = hash * 59 + this.Value.GetHashCode();
+				hash = hash * 59 + Value.GetHashCode();
 			}
 
 			return hash;

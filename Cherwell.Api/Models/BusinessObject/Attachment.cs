@@ -364,7 +364,7 @@ public partial class ObjectAttachment : IEquatable<ObjectAttachment>, IValidatab
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as ObjectAttachment);
+		return Equals(obj as ObjectAttachment);
 	}
 
 	/// <summary>
@@ -382,89 +382,89 @@ public partial class ObjectAttachment : IEquatable<ObjectAttachment>, IValidatab
 
 		return
 				(
-					this.AttachedBusObId == other.AttachedBusObId ||
-					this.AttachedBusObId != null &&
-					this.AttachedBusObId.Equals(other.AttachedBusObId, StringComparison.Ordinal)
+					AttachedBusObId == other.AttachedBusObId ||
+					AttachedBusObId != null &&
+					AttachedBusObId.Equals(other.AttachedBusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.AttachedBusObRecId == other.AttachedBusObRecId ||
-					this.AttachedBusObRecId != null &&
-					this.AttachedBusObRecId.Equals(other.AttachedBusObRecId, StringComparison.Ordinal)
+					AttachedBusObRecId == other.AttachedBusObRecId ||
+					AttachedBusObRecId != null &&
+					AttachedBusObRecId.Equals(other.AttachedBusObRecId, StringComparison.Ordinal)
 				) &&
 				(
-					this.AttachmentFileId == other.AttachmentFileId ||
-					this.AttachmentFileId != null &&
-					this.AttachmentFileId.Equals(other.AttachmentFileId, StringComparison.Ordinal)
+					AttachmentFileId == other.AttachmentFileId ||
+					AttachmentFileId != null &&
+					AttachmentFileId.Equals(other.AttachmentFileId, StringComparison.Ordinal)
 				) &&
 				(
-					this.AttachmentFileName == other.AttachmentFileName ||
-					this.AttachmentFileName != null &&
-					this.AttachmentFileName.Equals(other.AttachmentFileName, StringComparison.Ordinal)
+					AttachmentFileName == other.AttachmentFileName ||
+					AttachmentFileName != null &&
+					AttachmentFileName.Equals(other.AttachmentFileName, StringComparison.Ordinal)
 				) &&
 				(
-					this.AttachmentFileType == other.AttachmentFileType ||
-					this.AttachmentFileType != null &&
-					this.AttachmentFileType.Equals(other.AttachmentFileType, StringComparison.Ordinal)
+					AttachmentFileType == other.AttachmentFileType ||
+					AttachmentFileType != null &&
+					AttachmentFileType.Equals(other.AttachmentFileType, StringComparison.Ordinal)
 				) &&
 				(
-					this.AttachmentId == other.AttachmentId ||
-					this.AttachmentId != null &&
-					this.AttachmentId.Equals(other.AttachmentId, StringComparison.Ordinal)
+					AttachmentId == other.AttachmentId ||
+					AttachmentId != null &&
+					AttachmentId.Equals(other.AttachmentId, StringComparison.Ordinal)
 				) &&
 				(
-					this.AttachmentType == other.AttachmentType ||
-					this.AttachmentType != null &&
-					this.AttachmentType.Equals(other.AttachmentType)
+					AttachmentType == other.AttachmentType ||
+					AttachmentType != null &&
+					AttachmentType.Equals(other.AttachmentType)
 				) &&
 				(
-					this.BusObId == other.BusObId ||
-					this.BusObId != null &&
-					this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
+					BusObId == other.BusObId ||
+					BusObId != null &&
+					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObRecId == other.BusObRecId ||
-					this.BusObRecId != null &&
-					this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
+					BusObRecId == other.BusObRecId ||
+					BusObRecId != null &&
+					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
 				) &&
 				(
-					this.Comment == other.Comment ||
-					this.Comment != null &&
-					this.Comment.Equals(other.Comment, StringComparison.Ordinal)
+					Comment == other.Comment ||
+					Comment != null &&
+					Comment.Equals(other.Comment, StringComparison.Ordinal)
 				) &&
 				(
-					this.Created == other.Created ||
-					this.Created != null &&
-					this.Created.Equals(other.Created)
+					Created == other.Created ||
+					Created != null &&
+					Created.Equals(other.Created)
 				) &&
 				(
-					this.DisplayText == other.DisplayText ||
-					this.DisplayText != null &&
-					this.DisplayText.Equals(other.DisplayText, StringComparison.Ordinal)
+					DisplayText == other.DisplayText ||
+					DisplayText != null &&
+					DisplayText.Equals(other.DisplayText, StringComparison.Ordinal)
 				) &&
 				(
-					this.Links == other.Links ||
-					this.Links != null &&
-					this.Links.SequenceEqual(other.Links)
+					Links == other.Links ||
+					Links != null &&
+					Links.SequenceEqual(other.Links)
 				) &&
 				(
-					this.Owner == other.Owner ||
-					this.Owner != null &&
-					this.Owner.Equals(other.Owner, StringComparison.Ordinal)
+					Owner == other.Owner ||
+					Owner != null &&
+					Owner.Equals(other.Owner, StringComparison.Ordinal)
 				) &&
 				(
-					this.Scope == other.Scope ||
-					this.Scope != null &&
-					this.Scope.Equals(other.Scope)
+					Scope == other.Scope ||
+					Scope != null &&
+					Scope.Equals(other.Scope)
 				) &&
 				(
-					this.ScopeOwner == other.ScopeOwner ||
-					this.ScopeOwner != null &&
-					this.ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
+					ScopeOwner == other.ScopeOwner ||
+					ScopeOwner != null &&
+					ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
 				) &&
 				(
-					this.Type == other.Type ||
-					this.Type != null &&
-					this.Type.Equals(other.Type)
+					Type == other.Type ||
+					Type != null &&
+					Type.Equals(other.Type)
 				);
 	}
 
@@ -479,89 +479,89 @@ public partial class ObjectAttachment : IEquatable<ObjectAttachment>, IValidatab
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.AttachedBusObId != null)
+			if (AttachedBusObId != null)
 			{
-				hash = hash * 59 + this.AttachedBusObId.GetHashCode();
+				hash = hash * 59 + AttachedBusObId.GetHashCode();
 			}
 
-			if (this.AttachedBusObRecId != null)
+			if (AttachedBusObRecId != null)
 			{
-				hash = hash * 59 + this.AttachedBusObRecId.GetHashCode();
+				hash = hash * 59 + AttachedBusObRecId.GetHashCode();
 			}
 
-			if (this.AttachmentFileId != null)
+			if (AttachmentFileId != null)
 			{
-				hash = hash * 59 + this.AttachmentFileId.GetHashCode();
+				hash = hash * 59 + AttachmentFileId.GetHashCode();
 			}
 
-			if (this.AttachmentFileName != null)
+			if (AttachmentFileName != null)
 			{
-				hash = hash * 59 + this.AttachmentFileName.GetHashCode();
+				hash = hash * 59 + AttachmentFileName.GetHashCode();
 			}
 
-			if (this.AttachmentFileType != null)
+			if (AttachmentFileType != null)
 			{
-				hash = hash * 59 + this.AttachmentFileType.GetHashCode();
+				hash = hash * 59 + AttachmentFileType.GetHashCode();
 			}
 
-			if (this.AttachmentId != null)
+			if (AttachmentId != null)
 			{
-				hash = hash * 59 + this.AttachmentId.GetHashCode();
+				hash = hash * 59 + AttachmentId.GetHashCode();
 			}
 
-			if (this.AttachmentType != null)
+			if (AttachmentType != null)
 			{
-				hash = hash * 59 + this.AttachmentType.GetHashCode();
+				hash = hash * 59 + AttachmentType.GetHashCode();
 			}
 
-			if (this.BusObId != null)
+			if (BusObId != null)
 			{
-				hash = hash * 59 + this.BusObId.GetHashCode();
+				hash = hash * 59 + BusObId.GetHashCode();
 			}
 
-			if (this.BusObRecId != null)
+			if (BusObRecId != null)
 			{
-				hash = hash * 59 + this.BusObRecId.GetHashCode();
+				hash = hash * 59 + BusObRecId.GetHashCode();
 			}
 
-			if (this.Comment != null)
+			if (Comment != null)
 			{
-				hash = hash * 59 + this.Comment.GetHashCode();
+				hash = hash * 59 + Comment.GetHashCode();
 			}
 
-			if (this.Created != null)
+			if (Created != null)
 			{
-				hash = hash * 59 + this.Created.GetHashCode();
+				hash = hash * 59 + Created.GetHashCode();
 			}
 
-			if (this.DisplayText != null)
+			if (DisplayText != null)
 			{
-				hash = hash * 59 + this.DisplayText.GetHashCode();
+				hash = hash * 59 + DisplayText.GetHashCode();
 			}
 
-			if (this.Links != null)
+			if (Links != null)
 			{
-				hash = hash * 59 + this.Links.GetHashCode();
+				hash = hash * 59 + Links.GetHashCode();
 			}
 
-			if (this.Owner != null)
+			if (Owner != null)
 			{
-				hash = hash * 59 + this.Owner.GetHashCode();
+				hash = hash * 59 + Owner.GetHashCode();
 			}
 
-			if (this.Scope != null)
+			if (Scope != null)
 			{
-				hash = hash * 59 + this.Scope.GetHashCode();
+				hash = hash * 59 + Scope.GetHashCode();
 			}
 
-			if (this.ScopeOwner != null)
+			if (ScopeOwner != null)
 			{
-				hash = hash * 59 + this.ScopeOwner.GetHashCode();
+				hash = hash * 59 + ScopeOwner.GetHashCode();
 			}
 
-			if (this.Type != null)
+			if (Type != null)
 			{
-				hash = hash * 59 + this.Type.GetHashCode();
+				hash = hash * 59 + Type.GetHashCode();
 			}
 
 			return hash;

@@ -135,7 +135,7 @@ public partial class RelatedBusinessObjectRequest : IEquatable<RelatedBusinessOb
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as RelatedBusinessObjectRequest);
+		return Equals(obj as RelatedBusinessObjectRequest);
 	}
 
 	/// <summary>
@@ -153,59 +153,59 @@ public partial class RelatedBusinessObjectRequest : IEquatable<RelatedBusinessOb
 
 		return
 				(
-					this.AllFields == other.AllFields ||
-					this.AllFields != null &&
-					this.AllFields.Equals(other.AllFields)
+					AllFields == other.AllFields ||
+					AllFields != null &&
+					AllFields.Equals(other.AllFields)
 				) &&
 				(
-					this.CustomGridId == other.CustomGridId ||
-					this.CustomGridId != null &&
-					this.CustomGridId.Equals(other.CustomGridId, StringComparison.Ordinal)
+					CustomGridId == other.CustomGridId ||
+					CustomGridId != null &&
+					CustomGridId.Equals(other.CustomGridId, StringComparison.Ordinal)
 				) &&
 				(
-					this.FieldsList == other.FieldsList ||
-					this.FieldsList != null &&
-					this.FieldsList.SequenceEqual(other.FieldsList)
+					FieldsList == other.FieldsList ||
+					FieldsList != null &&
+					FieldsList.SequenceEqual(other.FieldsList)
 				) &&
 				(
-					this.Filters == other.Filters ||
-					this.Filters != null &&
-					this.Filters.SequenceEqual(other.Filters)
+					Filters == other.Filters ||
+					Filters != null &&
+					Filters.SequenceEqual(other.Filters)
 				) &&
 				(
-					this.PageNumber == other.PageNumber ||
-					this.PageNumber != null &&
-					this.PageNumber.Equals(other.PageNumber)
+					PageNumber == other.PageNumber ||
+					PageNumber != null &&
+					PageNumber.Equals(other.PageNumber)
 				) &&
 				(
-					this.PageSize == other.PageSize ||
-					this.PageSize != null &&
-					this.PageSize.Equals(other.PageSize)
+					PageSize == other.PageSize ||
+					PageSize != null &&
+					PageSize.Equals(other.PageSize)
 				) &&
 				(
-					this.ParentBusObId == other.ParentBusObId ||
-					this.ParentBusObId != null &&
-					this.ParentBusObId.Equals(other.ParentBusObId, StringComparison.Ordinal)
+					ParentBusObId == other.ParentBusObId ||
+					ParentBusObId != null &&
+					ParentBusObId.Equals(other.ParentBusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.ParentBusObRecId == other.ParentBusObRecId ||
-					this.ParentBusObRecId != null &&
-					this.ParentBusObRecId.Equals(other.ParentBusObRecId, StringComparison.Ordinal)
+					ParentBusObRecId == other.ParentBusObRecId ||
+					ParentBusObRecId != null &&
+					ParentBusObRecId.Equals(other.ParentBusObRecId, StringComparison.Ordinal)
 				) &&
 				(
-					this.RelationshipId == other.RelationshipId ||
-					this.RelationshipId != null &&
-					this.RelationshipId.Equals(other.RelationshipId, StringComparison.Ordinal)
+					RelationshipId == other.RelationshipId ||
+					RelationshipId != null &&
+					RelationshipId.Equals(other.RelationshipId, StringComparison.Ordinal)
 				) &&
 				(
-					this.Sorting == other.Sorting ||
-					this.Sorting != null &&
-					this.Sorting.SequenceEqual(other.Sorting)
+					Sorting == other.Sorting ||
+					Sorting != null &&
+					Sorting.SequenceEqual(other.Sorting)
 				) &&
 				(
-					this.UseDefaultGrid == other.UseDefaultGrid ||
-					this.UseDefaultGrid != null &&
-					this.UseDefaultGrid.Equals(other.UseDefaultGrid)
+					UseDefaultGrid == other.UseDefaultGrid ||
+					UseDefaultGrid != null &&
+					UseDefaultGrid.Equals(other.UseDefaultGrid)
 				);
 	}
 
@@ -220,59 +220,59 @@ public partial class RelatedBusinessObjectRequest : IEquatable<RelatedBusinessOb
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.AllFields != null)
+			if (AllFields != null)
 			{
-				hash = hash * 59 + this.AllFields.GetHashCode();
+				hash = hash * 59 + AllFields.GetHashCode();
 			}
 
-			if (this.CustomGridId != null)
+			if (CustomGridId != null)
 			{
-				hash = hash * 59 + this.CustomGridId.GetHashCode();
+				hash = hash * 59 + CustomGridId.GetHashCode();
 			}
 
-			if (this.FieldsList != null)
+			if (FieldsList != null)
 			{
-				hash = hash * 59 + this.FieldsList.GetHashCode();
+				hash = hash * 59 + FieldsList.GetHashCode();
 			}
 
-			if (this.Filters != null)
+			if (Filters != null)
 			{
-				hash = hash * 59 + this.Filters.GetHashCode();
+				hash = hash * 59 + Filters.GetHashCode();
 			}
 
-			if (this.PageNumber != null)
+			if (PageNumber != null)
 			{
-				hash = hash * 59 + this.PageNumber.GetHashCode();
+				hash = hash * 59 + PageNumber.GetHashCode();
 			}
 
-			if (this.PageSize != null)
+			if (PageSize != null)
 			{
-				hash = hash * 59 + this.PageSize.GetHashCode();
+				hash = hash * 59 + PageSize.GetHashCode();
 			}
 
-			if (this.ParentBusObId != null)
+			if (ParentBusObId != null)
 			{
-				hash = hash * 59 + this.ParentBusObId.GetHashCode();
+				hash = hash * 59 + ParentBusObId.GetHashCode();
 			}
 
-			if (this.ParentBusObRecId != null)
+			if (ParentBusObRecId != null)
 			{
-				hash = hash * 59 + this.ParentBusObRecId.GetHashCode();
+				hash = hash * 59 + ParentBusObRecId.GetHashCode();
 			}
 
-			if (this.RelationshipId != null)
+			if (RelationshipId != null)
 			{
-				hash = hash * 59 + this.RelationshipId.GetHashCode();
+				hash = hash * 59 + RelationshipId.GetHashCode();
 			}
 
-			if (this.Sorting != null)
+			if (Sorting != null)
 			{
-				hash = hash * 59 + this.Sorting.GetHashCode();
+				hash = hash * 59 + Sorting.GetHashCode();
 			}
 
-			if (this.UseDefaultGrid != null)
+			if (UseDefaultGrid != null)
 			{
-				hash = hash * 59 + this.UseDefaultGrid.GetHashCode();
+				hash = hash * 59 + UseDefaultGrid.GetHashCode();
 			}
 
 			return hash;

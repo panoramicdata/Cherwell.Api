@@ -63,7 +63,7 @@ public partial class BatchSaveRequest : IEquatable<BatchSaveRequest>, IValidatab
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as BatchSaveRequest);
+		return Equals(obj as BatchSaveRequest);
 	}
 
 	/// <summary>
@@ -81,14 +81,14 @@ public partial class BatchSaveRequest : IEquatable<BatchSaveRequest>, IValidatab
 
 		return
 				(
-					this.SaveRequests == other.SaveRequests ||
-					this.SaveRequests != null &&
-					this.SaveRequests.SequenceEqual(other.SaveRequests)
+					SaveRequests == other.SaveRequests ||
+					SaveRequests != null &&
+					SaveRequests.SequenceEqual(other.SaveRequests)
 				) &&
 				(
-					this.StopOnError == other.StopOnError ||
-					this.StopOnError != null &&
-					this.StopOnError.Equals(other.StopOnError)
+					StopOnError == other.StopOnError ||
+					StopOnError != null &&
+					StopOnError.Equals(other.StopOnError)
 				);
 	}
 
@@ -103,14 +103,14 @@ public partial class BatchSaveRequest : IEquatable<BatchSaveRequest>, IValidatab
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.SaveRequests != null)
+			if (SaveRequests != null)
 			{
-				hash = hash * 59 + this.SaveRequests.GetHashCode();
+				hash = hash * 59 + SaveRequests.GetHashCode();
 			}
 
-			if (this.StopOnError != null)
+			if (StopOnError != null)
 			{
-				hash = hash * 59 + this.StopOnError.GetHashCode();
+				hash = hash * 59 + StopOnError.GetHashCode();
 			}
 
 			return hash;

@@ -174,7 +174,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			.ConfigureAwait(false);
 		if (!response.IsSuccessStatusCode)
 		{
-			_logger.LogWarning(Resources.FailedToLogOut);
+			_logger.LogWarning("Could not log out: {Message}", Resources.FailedToLogOut);
 #if DEBUG
 			throw new AuthenticationException();
 #endif

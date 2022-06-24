@@ -79,7 +79,7 @@ public partial class NotificationTrigger : IEquatable<NotificationTrigger>, IVal
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as NotificationTrigger);
+		return Equals(obj as NotificationTrigger);
 	}
 
 	/// <summary>
@@ -97,24 +97,24 @@ public partial class NotificationTrigger : IEquatable<NotificationTrigger>, IVal
 
 		return
 				(
-					this.SourceType == other.SourceType ||
-					this.SourceType != null &&
-					this.SourceType.Equals(other.SourceType, StringComparison.Ordinal)
+					SourceType == other.SourceType ||
+					SourceType != null &&
+					SourceType.Equals(other.SourceType, StringComparison.Ordinal)
 				) &&
 				(
-					this.SourceId == other.SourceId ||
-					this.SourceId != null &&
-					this.SourceId.Equals(other.SourceId, StringComparison.Ordinal)
+					SourceId == other.SourceId ||
+					SourceId != null &&
+					SourceId.Equals(other.SourceId, StringComparison.Ordinal)
 				) &&
 				(
-					this.SourceChange == other.SourceChange ||
-					this.SourceChange != null &&
-					this.SourceChange.Equals(other.SourceChange, StringComparison.Ordinal)
+					SourceChange == other.SourceChange ||
+					SourceChange != null &&
+					SourceChange.Equals(other.SourceChange, StringComparison.Ordinal)
 				) &&
 				(
-					this.Key == other.Key ||
-					this.Key != null &&
-					this.Key.Equals(other.Key, StringComparison.Ordinal)
+					Key == other.Key ||
+					Key != null &&
+					Key.Equals(other.Key, StringComparison.Ordinal)
 				);
 	}
 
@@ -129,24 +129,24 @@ public partial class NotificationTrigger : IEquatable<NotificationTrigger>, IVal
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.SourceType != null)
+			if (SourceType != null)
 			{
-				hash = hash * 59 + this.SourceType.GetHashCode();
+				hash = hash * 59 + SourceType.GetHashCode();
 			}
 
-			if (this.SourceId != null)
+			if (SourceId != null)
 			{
-				hash = hash * 59 + this.SourceId.GetHashCode();
+				hash = hash * 59 + SourceId.GetHashCode();
 			}
 
-			if (this.SourceChange != null)
+			if (SourceChange != null)
 			{
-				hash = hash * 59 + this.SourceChange.GetHashCode();
+				hash = hash * 59 + SourceChange.GetHashCode();
 			}
 
-			if (this.Key != null)
+			if (Key != null)
 			{
-				hash = hash * 59 + this.Key.GetHashCode();
+				hash = hash * 59 + Key.GetHashCode();
 			}
 
 			return hash;

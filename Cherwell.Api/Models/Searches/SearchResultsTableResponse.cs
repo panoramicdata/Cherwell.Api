@@ -402,7 +402,7 @@ public partial class SearchResultsTableResponse : IEquatable<SearchResultsTableR
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as SearchResultsTableResponse);
+		return Equals(obj as SearchResultsTableResponse);
 	}
 
 	/// <summary>
@@ -420,44 +420,44 @@ public partial class SearchResultsTableResponse : IEquatable<SearchResultsTableR
 
 		return
 				(
-					this.Columns == other.Columns ||
-					this.Columns != null &&
-					this.Columns.SequenceEqual(other.Columns)
+					Columns == other.Columns ||
+					Columns != null &&
+					Columns.SequenceEqual(other.Columns)
 				) &&
 				(
-					this.Rows == other.Rows ||
-					this.Rows != null &&
-					this.Rows.SequenceEqual(other.Rows)
+					Rows == other.Rows ||
+					Rows != null &&
+					Rows.SequenceEqual(other.Rows)
 				) &&
 				(
-					this.Sorting == other.Sorting ||
-					this.Sorting != null &&
-					this.Sorting.SequenceEqual(other.Sorting)
+					Sorting == other.Sorting ||
+					Sorting != null &&
+					Sorting.SequenceEqual(other.Sorting)
 				) &&
 				(
-					this.TotalRows == other.TotalRows ||
-					this.TotalRows != null &&
-					this.TotalRows.Equals(other.TotalRows)
+					TotalRows == other.TotalRows ||
+					TotalRows != null &&
+					TotalRows.Equals(other.TotalRows)
 				) &&
 				(
-					this.ErrorCode == other.ErrorCode ||
-					this.ErrorCode != null &&
-					this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
+					ErrorCode == other.ErrorCode ||
+					ErrorCode != null &&
+					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
 				) &&
 				(
-					this.ErrorMessage == other.ErrorMessage ||
-					this.ErrorMessage != null &&
-					this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
+					ErrorMessage == other.ErrorMessage ||
+					ErrorMessage != null &&
+					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
 				) &&
 				(
-					this.HasError == other.HasError ||
-					this.HasError != null &&
-					this.HasError.Equals(other.HasError)
+					HasError == other.HasError ||
+					HasError != null &&
+					HasError.Equals(other.HasError)
 				) &&
 				(
-					this.HttpStatusCode == other.HttpStatusCode ||
-					this.HttpStatusCode != null &&
-					this.HttpStatusCode.Equals(other.HttpStatusCode)
+					HttpStatusCode == other.HttpStatusCode ||
+					HttpStatusCode != null &&
+					HttpStatusCode.Equals(other.HttpStatusCode)
 				);
 	}
 
@@ -472,44 +472,44 @@ public partial class SearchResultsTableResponse : IEquatable<SearchResultsTableR
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Columns != null)
+			if (Columns != null)
 			{
-				hash = hash * 59 + this.Columns.GetHashCode();
+				hash = hash * 59 + Columns.GetHashCode();
 			}
 
-			if (this.Rows != null)
+			if (Rows != null)
 			{
-				hash = hash * 59 + this.Rows.GetHashCode();
+				hash = hash * 59 + Rows.GetHashCode();
 			}
 
-			if (this.Sorting != null)
+			if (Sorting != null)
 			{
-				hash = hash * 59 + this.Sorting.GetHashCode();
+				hash = hash * 59 + Sorting.GetHashCode();
 			}
 
-			if (this.TotalRows != null)
+			if (TotalRows != null)
 			{
-				hash = hash * 59 + this.TotalRows.GetHashCode();
+				hash = hash * 59 + TotalRows.GetHashCode();
 			}
 
-			if (this.ErrorCode != null)
+			if (ErrorCode != null)
 			{
-				hash = hash * 59 + this.ErrorCode.GetHashCode();
+				hash = hash * 59 + ErrorCode.GetHashCode();
 			}
 
-			if (this.ErrorMessage != null)
+			if (ErrorMessage != null)
 			{
-				hash = hash * 59 + this.ErrorMessage.GetHashCode();
+				hash = hash * 59 + ErrorMessage.GetHashCode();
 			}
 
-			if (this.HasError != null)
+			if (HasError != null)
 			{
-				hash = hash * 59 + this.HasError.GetHashCode();
+				hash = hash * 59 + HasError.GetHashCode();
 			}
 
-			if (this.HttpStatusCode != null)
+			if (HttpStatusCode != null)
 			{
-				hash = hash * 59 + this.HttpStatusCode.GetHashCode();
+				hash = hash * 59 + HttpStatusCode.GetHashCode();
 			}
 
 			return hash;

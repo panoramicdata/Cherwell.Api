@@ -87,7 +87,7 @@ public partial class TemplateRequest : IEquatable<TemplateRequest>, IValidatable
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as TemplateRequest);
+		return Equals(obj as TemplateRequest);
 	}
 
 	/// <summary>
@@ -105,29 +105,29 @@ public partial class TemplateRequest : IEquatable<TemplateRequest>, IValidatable
 
 		return
 				(
-					this.BusObId == other.BusObId ||
-					this.BusObId != null &&
-					this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
+					BusObId == other.BusObId ||
+					BusObId != null &&
+					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.FieldNames == other.FieldNames ||
-					this.FieldNames != null &&
-					this.FieldNames.SequenceEqual(other.FieldNames)
+					FieldNames == other.FieldNames ||
+					FieldNames != null &&
+					FieldNames.SequenceEqual(other.FieldNames)
 				) &&
 				(
-					this.FieldIds == other.FieldIds ||
-					this.FieldIds != null &&
-					this.FieldIds.SequenceEqual(other.FieldIds)
+					FieldIds == other.FieldIds ||
+					FieldIds != null &&
+					FieldIds.SequenceEqual(other.FieldIds)
 				) &&
 				(
-					this.IncludeAll == other.IncludeAll ||
-					this.IncludeAll != null &&
-					this.IncludeAll.Equals(other.IncludeAll)
+					IncludeAll == other.IncludeAll ||
+					IncludeAll != null &&
+					IncludeAll.Equals(other.IncludeAll)
 				) &&
 				(
-					this.IncludeRequired == other.IncludeRequired ||
-					this.IncludeRequired != null &&
-					this.IncludeRequired.Equals(other.IncludeRequired)
+					IncludeRequired == other.IncludeRequired ||
+					IncludeRequired != null &&
+					IncludeRequired.Equals(other.IncludeRequired)
 				);
 	}
 
@@ -142,29 +142,29 @@ public partial class TemplateRequest : IEquatable<TemplateRequest>, IValidatable
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.BusObId != null)
+			if (BusObId != null)
 			{
-				hash = hash * 59 + this.BusObId.GetHashCode();
+				hash = hash * 59 + BusObId.GetHashCode();
 			}
 
-			if (this.FieldNames != null)
+			if (FieldNames != null)
 			{
-				hash = hash * 59 + this.FieldNames.GetHashCode();
+				hash = hash * 59 + FieldNames.GetHashCode();
 			}
 
-			if (this.FieldIds != null)
+			if (FieldIds != null)
 			{
-				hash = hash * 59 + this.FieldIds.GetHashCode();
+				hash = hash * 59 + FieldIds.GetHashCode();
 			}
 
-			if (this.IncludeAll != null)
+			if (IncludeAll != null)
 			{
-				hash = hash * 59 + this.IncludeAll.GetHashCode();
+				hash = hash * 59 + IncludeAll.GetHashCode();
 			}
 
-			if (this.IncludeRequired != null)
+			if (IncludeRequired != null)
 			{
-				hash = hash * 59 + this.IncludeRequired.GetHashCode();
+				hash = hash * 59 + IncludeRequired.GetHashCode();
 			}
 
 			return hash;

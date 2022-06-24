@@ -87,7 +87,7 @@ public partial class Location : IEquatable<Location>, IValidatableObject
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as Location);
+		return Equals(obj as Location);
 	}
 
 	/// <summary>
@@ -105,29 +105,29 @@ public partial class Location : IEquatable<Location>, IValidatableObject
 
 		return
 				(
-					this.Altitude == other.Altitude ||
-					this.Altitude != null &&
-					this.Altitude.Equals(other.Altitude)
+					Altitude == other.Altitude ||
+					Altitude != null &&
+					Altitude.Equals(other.Altitude)
 				) &&
 				(
-					this.BusObId == other.BusObId ||
-					this.BusObId != null &&
-					this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
+					BusObId == other.BusObId ||
+					BusObId != null &&
+					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObRecId == other.BusObRecId ||
-					this.BusObRecId != null &&
-					this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
+					BusObRecId == other.BusObRecId ||
+					BusObRecId != null &&
+					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
 				) &&
 				(
-					this.Latitude == other.Latitude ||
-					this.Latitude != null &&
-					this.Latitude.Equals(other.Latitude)
+					Latitude == other.Latitude ||
+					Latitude != null &&
+					Latitude.Equals(other.Latitude)
 				) &&
 				(
-					this.Longitude == other.Longitude ||
-					this.Longitude != null &&
-					this.Longitude.Equals(other.Longitude)
+					Longitude == other.Longitude ||
+					Longitude != null &&
+					Longitude.Equals(other.Longitude)
 				);
 	}
 
@@ -142,29 +142,29 @@ public partial class Location : IEquatable<Location>, IValidatableObject
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Altitude != null)
+			if (Altitude != null)
 			{
-				hash = hash * 59 + this.Altitude.GetHashCode();
+				hash = hash * 59 + Altitude.GetHashCode();
 			}
 
-			if (this.BusObId != null)
+			if (BusObId != null)
 			{
-				hash = hash * 59 + this.BusObId.GetHashCode();
+				hash = hash * 59 + BusObId.GetHashCode();
 			}
 
-			if (this.BusObRecId != null)
+			if (BusObRecId != null)
 			{
-				hash = hash * 59 + this.BusObRecId.GetHashCode();
+				hash = hash * 59 + BusObRecId.GetHashCode();
 			}
 
-			if (this.Latitude != null)
+			if (Latitude != null)
 			{
-				hash = hash * 59 + this.Latitude.GetHashCode();
+				hash = hash * 59 + Latitude.GetHashCode();
 			}
 
-			if (this.Longitude != null)
+			if (Longitude != null)
 			{
-				hash = hash * 59 + this.Longitude.GetHashCode();
+				hash = hash * 59 + Longitude.GetHashCode();
 			}
 
 			return hash;

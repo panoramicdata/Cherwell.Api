@@ -111,7 +111,7 @@ public partial class PromptValue : IEquatable<PromptValue>, IValidatableObject
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as PromptValue);
+		return Equals(obj as PromptValue);
 	}
 
 	/// <summary>
@@ -129,44 +129,44 @@ public partial class PromptValue : IEquatable<PromptValue>, IValidatableObject
 
 		return
 				(
-					this.BusObId == other.BusObId ||
-					this.BusObId != null &&
-					this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
+					BusObId == other.BusObId ||
+					BusObId != null &&
+					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.CollectionStoreEntireRow == other.CollectionStoreEntireRow ||
-					this.CollectionStoreEntireRow != null &&
-					this.CollectionStoreEntireRow.Equals(other.CollectionStoreEntireRow, StringComparison.Ordinal)
+					CollectionStoreEntireRow == other.CollectionStoreEntireRow ||
+					CollectionStoreEntireRow != null &&
+					CollectionStoreEntireRow.Equals(other.CollectionStoreEntireRow, StringComparison.Ordinal)
 				) &&
 				(
-					this.CollectionValueField == other.CollectionValueField ||
-					this.CollectionValueField != null &&
-					this.CollectionValueField.Equals(other.CollectionValueField, StringComparison.Ordinal)
+					CollectionValueField == other.CollectionValueField ||
+					CollectionValueField != null &&
+					CollectionValueField.Equals(other.CollectionValueField, StringComparison.Ordinal)
 				) &&
 				(
-					this.FieldId == other.FieldId ||
-					this.FieldId != null &&
-					this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
+					FieldId == other.FieldId ||
+					FieldId != null &&
+					FieldId.Equals(other.FieldId, StringComparison.Ordinal)
 				) &&
 				(
-					this.ListReturnFieldId == other.ListReturnFieldId ||
-					this.ListReturnFieldId != null &&
-					this.ListReturnFieldId.Equals(other.ListReturnFieldId, StringComparison.Ordinal)
+					ListReturnFieldId == other.ListReturnFieldId ||
+					ListReturnFieldId != null &&
+					ListReturnFieldId.Equals(other.ListReturnFieldId, StringComparison.Ordinal)
 				) &&
 				(
-					this.PromptId == other.PromptId ||
-					this.PromptId != null &&
-					this.PromptId.Equals(other.PromptId, StringComparison.Ordinal)
+					PromptId == other.PromptId ||
+					PromptId != null &&
+					PromptId.Equals(other.PromptId, StringComparison.Ordinal)
 				) &&
 				(
-					this.Value == other.Value ||
-					this.Value != null &&
-					this.Value.Equals(other.Value)
+					Value == other.Value ||
+					Value != null &&
+					Value.Equals(other.Value)
 				) &&
 				(
-					this.ValueIsRecId == other.ValueIsRecId ||
-					this.ValueIsRecId != null &&
-					this.ValueIsRecId.Equals(other.ValueIsRecId)
+					ValueIsRecId == other.ValueIsRecId ||
+					ValueIsRecId != null &&
+					ValueIsRecId.Equals(other.ValueIsRecId)
 				);
 	}
 
@@ -181,44 +181,44 @@ public partial class PromptValue : IEquatable<PromptValue>, IValidatableObject
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.BusObId != null)
+			if (BusObId != null)
 			{
-				hash = hash * 59 + this.BusObId.GetHashCode();
+				hash = hash * 59 + BusObId.GetHashCode();
 			}
 
-			if (this.CollectionStoreEntireRow != null)
+			if (CollectionStoreEntireRow != null)
 			{
-				hash = hash * 59 + this.CollectionStoreEntireRow.GetHashCode();
+				hash = hash * 59 + CollectionStoreEntireRow.GetHashCode();
 			}
 
-			if (this.CollectionValueField != null)
+			if (CollectionValueField != null)
 			{
-				hash = hash * 59 + this.CollectionValueField.GetHashCode();
+				hash = hash * 59 + CollectionValueField.GetHashCode();
 			}
 
-			if (this.FieldId != null)
+			if (FieldId != null)
 			{
-				hash = hash * 59 + this.FieldId.GetHashCode();
+				hash = hash * 59 + FieldId.GetHashCode();
 			}
 
-			if (this.ListReturnFieldId != null)
+			if (ListReturnFieldId != null)
 			{
-				hash = hash * 59 + this.ListReturnFieldId.GetHashCode();
+				hash = hash * 59 + ListReturnFieldId.GetHashCode();
 			}
 
-			if (this.PromptId != null)
+			if (PromptId != null)
 			{
-				hash = hash * 59 + this.PromptId.GetHashCode();
+				hash = hash * 59 + PromptId.GetHashCode();
 			}
 
-			if (this.Value != null)
+			if (Value != null)
 			{
-				hash = hash * 59 + this.Value.GetHashCode();
+				hash = hash * 59 + Value.GetHashCode();
 			}
 
-			if (this.ValueIsRecId != null)
+			if (ValueIsRecId != null)
 			{
-				hash = hash * 59 + this.ValueIsRecId.GetHashCode();
+				hash = hash * 59 + ValueIsRecId.GetHashCode();
 			}
 
 			return hash;

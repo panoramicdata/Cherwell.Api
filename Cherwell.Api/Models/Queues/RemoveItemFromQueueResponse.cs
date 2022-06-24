@@ -394,7 +394,7 @@ public partial class RemoveItemFromQueueResponse : IEquatable<RemoveItemFromQueu
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as RemoveItemFromQueueResponse);
+		return Equals(obj as RemoveItemFromQueueResponse);
 	}
 
 	/// <summary>
@@ -412,39 +412,39 @@ public partial class RemoveItemFromQueueResponse : IEquatable<RemoveItemFromQueu
 
 		return
 				(
-					this.HistoryRecId == other.HistoryRecId ||
-					this.HistoryRecId != null &&
-					this.HistoryRecId.Equals(other.HistoryRecId, StringComparison.Ordinal)
+					HistoryRecId == other.HistoryRecId ||
+					HistoryRecId != null &&
+					HistoryRecId.Equals(other.HistoryRecId, StringComparison.Ordinal)
 				) &&
 				(
-					this.HistoryText == other.HistoryText ||
-					this.HistoryText != null &&
-					this.HistoryText.Equals(other.HistoryText, StringComparison.Ordinal)
+					HistoryText == other.HistoryText ||
+					HistoryText != null &&
+					HistoryText.Equals(other.HistoryText, StringComparison.Ordinal)
 				) &&
 				(
-					this.HistoryTypeId == other.HistoryTypeId ||
-					this.HistoryTypeId != null &&
-					this.HistoryTypeId.Equals(other.HistoryTypeId, StringComparison.Ordinal)
+					HistoryTypeId == other.HistoryTypeId ||
+					HistoryTypeId != null &&
+					HistoryTypeId.Equals(other.HistoryTypeId, StringComparison.Ordinal)
 				) &&
 				(
-					this.ErrorCode == other.ErrorCode ||
-					this.ErrorCode != null &&
-					this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
+					ErrorCode == other.ErrorCode ||
+					ErrorCode != null &&
+					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
 				) &&
 				(
-					this.ErrorMessage == other.ErrorMessage ||
-					this.ErrorMessage != null &&
-					this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
+					ErrorMessage == other.ErrorMessage ||
+					ErrorMessage != null &&
+					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
 				) &&
 				(
-					this.HasError == other.HasError ||
-					this.HasError != null &&
-					this.HasError.Equals(other.HasError)
+					HasError == other.HasError ||
+					HasError != null &&
+					HasError.Equals(other.HasError)
 				) &&
 				(
-					this.HttpStatusCode == other.HttpStatusCode ||
-					this.HttpStatusCode != null &&
-					this.HttpStatusCode.Equals(other.HttpStatusCode)
+					HttpStatusCode == other.HttpStatusCode ||
+					HttpStatusCode != null &&
+					HttpStatusCode.Equals(other.HttpStatusCode)
 				);
 	}
 
@@ -459,39 +459,39 @@ public partial class RemoveItemFromQueueResponse : IEquatable<RemoveItemFromQueu
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.HistoryRecId != null)
+			if (HistoryRecId != null)
 			{
-				hash = hash * 59 + this.HistoryRecId.GetHashCode();
+				hash = hash * 59 + HistoryRecId.GetHashCode();
 			}
 
-			if (this.HistoryText != null)
+			if (HistoryText != null)
 			{
-				hash = hash * 59 + this.HistoryText.GetHashCode();
+				hash = hash * 59 + HistoryText.GetHashCode();
 			}
 
-			if (this.HistoryTypeId != null)
+			if (HistoryTypeId != null)
 			{
-				hash = hash * 59 + this.HistoryTypeId.GetHashCode();
+				hash = hash * 59 + HistoryTypeId.GetHashCode();
 			}
 
-			if (this.ErrorCode != null)
+			if (ErrorCode != null)
 			{
-				hash = hash * 59 + this.ErrorCode.GetHashCode();
+				hash = hash * 59 + ErrorCode.GetHashCode();
 			}
 
-			if (this.ErrorMessage != null)
+			if (ErrorMessage != null)
 			{
-				hash = hash * 59 + this.ErrorMessage.GetHashCode();
+				hash = hash * 59 + ErrorMessage.GetHashCode();
 			}
 
-			if (this.HasError != null)
+			if (HasError != null)
 			{
-				hash = hash * 59 + this.HasError.GetHashCode();
+				hash = hash * 59 + HasError.GetHashCode();
 			}
 
-			if (this.HttpStatusCode != null)
+			if (HttpStatusCode != null)
 			{
-				hash = hash * 59 + this.HttpStatusCode.GetHashCode();
+				hash = hash * 59 + HttpStatusCode.GetHashCode();
 			}
 
 			return hash;

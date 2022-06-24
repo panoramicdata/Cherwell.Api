@@ -71,7 +71,7 @@ public partial class RightCategory : IEquatable<RightCategory>, IValidatableObje
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as RightCategory);
+		return Equals(obj as RightCategory);
 	}
 
 	/// <summary>
@@ -89,19 +89,19 @@ public partial class RightCategory : IEquatable<RightCategory>, IValidatableObje
 
 		return
 				(
-					this.CategoryDescription == other.CategoryDescription ||
-					this.CategoryDescription != null &&
-					this.CategoryDescription.Equals(other.CategoryDescription, StringComparison.Ordinal)
+					CategoryDescription == other.CategoryDescription ||
+					CategoryDescription != null &&
+					CategoryDescription.Equals(other.CategoryDescription, StringComparison.Ordinal)
 				) &&
 				(
-					this.CategoryId == other.CategoryId ||
-					this.CategoryId != null &&
-					this.CategoryId.Equals(other.CategoryId, StringComparison.Ordinal)
+					CategoryId == other.CategoryId ||
+					CategoryId != null &&
+					CategoryId.Equals(other.CategoryId, StringComparison.Ordinal)
 				) &&
 				(
-					this.CategoryName == other.CategoryName ||
-					this.CategoryName != null &&
-					this.CategoryName.Equals(other.CategoryName, StringComparison.Ordinal)
+					CategoryName == other.CategoryName ||
+					CategoryName != null &&
+					CategoryName.Equals(other.CategoryName, StringComparison.Ordinal)
 				);
 	}
 
@@ -116,19 +116,19 @@ public partial class RightCategory : IEquatable<RightCategory>, IValidatableObje
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.CategoryDescription != null)
+			if (CategoryDescription != null)
 			{
-				hash = hash * 59 + this.CategoryDescription.GetHashCode();
+				hash = hash * 59 + CategoryDescription.GetHashCode();
 			}
 
-			if (this.CategoryId != null)
+			if (CategoryId != null)
 			{
-				hash = hash * 59 + this.CategoryId.GetHashCode();
+				hash = hash * 59 + CategoryId.GetHashCode();
 			}
 
-			if (this.CategoryName != null)
+			if (CategoryName != null)
 			{
-				hash = hash * 59 + this.CategoryName.GetHashCode();
+				hash = hash * 59 + CategoryName.GetHashCode();
 			}
 
 			return hash;

@@ -63,7 +63,7 @@ public partial class BatchDeleteRequest : IEquatable<BatchDeleteRequest>, IValid
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as BatchDeleteRequest);
+		return Equals(obj as BatchDeleteRequest);
 	}
 
 	/// <summary>
@@ -81,14 +81,14 @@ public partial class BatchDeleteRequest : IEquatable<BatchDeleteRequest>, IValid
 
 		return
 				(
-					this.DeleteRequests == other.DeleteRequests ||
-					this.DeleteRequests != null &&
-					this.DeleteRequests.SequenceEqual(other.DeleteRequests)
+					DeleteRequests == other.DeleteRequests ||
+					DeleteRequests != null &&
+					DeleteRequests.SequenceEqual(other.DeleteRequests)
 				) &&
 				(
-					this.StopOnError == other.StopOnError ||
-					this.StopOnError != null &&
-					this.StopOnError.Equals(other.StopOnError)
+					StopOnError == other.StopOnError ||
+					StopOnError != null &&
+					StopOnError.Equals(other.StopOnError)
 				);
 	}
 
@@ -103,14 +103,14 @@ public partial class BatchDeleteRequest : IEquatable<BatchDeleteRequest>, IValid
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.DeleteRequests != null)
+			if (DeleteRequests != null)
 			{
-				hash = hash * 59 + this.DeleteRequests.GetHashCode();
+				hash = hash * 59 + DeleteRequests.GetHashCode();
 			}
 
-			if (this.StopOnError != null)
+			if (StopOnError != null)
 			{
-				hash = hash * 59 + this.StopOnError.GetHashCode();
+				hash = hash * 59 + StopOnError.GetHashCode();
 			}
 
 			return hash;

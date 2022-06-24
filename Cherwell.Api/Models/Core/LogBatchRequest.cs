@@ -55,7 +55,7 @@ public partial class LogBatchRequest : IEquatable<LogBatchRequest>, IValidatable
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as LogBatchRequest);
+		return Equals(obj as LogBatchRequest);
 	}
 
 	/// <summary>
@@ -73,9 +73,9 @@ public partial class LogBatchRequest : IEquatable<LogBatchRequest>, IValidatable
 
 		return
 				(
-					this.LogRequests == other.LogRequests ||
-					this.LogRequests != null &&
-					this.LogRequests.SequenceEqual(other.LogRequests)
+					LogRequests == other.LogRequests ||
+					LogRequests != null &&
+					LogRequests.SequenceEqual(other.LogRequests)
 				);
 	}
 
@@ -90,9 +90,9 @@ public partial class LogBatchRequest : IEquatable<LogBatchRequest>, IValidatable
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.LogRequests != null)
+			if (LogRequests != null)
 			{
-				hash = hash * 59 + this.LogRequests.GetHashCode();
+				hash = hash * 59 + LogRequests.GetHashCode();
 			}
 
 			return hash;

@@ -330,7 +330,7 @@ public partial class Prompt : IEquatable<Prompt>, IValidatableObject
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as Prompt);
+		return Equals(obj as Prompt);
 	}
 
 	/// <summary>
@@ -348,99 +348,99 @@ public partial class Prompt : IEquatable<Prompt>, IValidatableObject
 
 		return
 				(
-					this.AllowValuesOnly == other.AllowValuesOnly ||
-					this.AllowValuesOnly != null &&
-					this.AllowValuesOnly.Equals(other.AllowValuesOnly)
+					AllowValuesOnly == other.AllowValuesOnly ||
+					AllowValuesOnly != null &&
+					AllowValuesOnly.Equals(other.AllowValuesOnly)
 				) &&
 				(
-					this.BusObId == other.BusObId ||
-					this.BusObId != null &&
-					this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
+					BusObId == other.BusObId ||
+					BusObId != null &&
+					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.CollectionStoreEntireRow == other.CollectionStoreEntireRow ||
-					this.CollectionStoreEntireRow != null &&
-					this.CollectionStoreEntireRow.Equals(other.CollectionStoreEntireRow, StringComparison.Ordinal)
+					CollectionStoreEntireRow == other.CollectionStoreEntireRow ||
+					CollectionStoreEntireRow != null &&
+					CollectionStoreEntireRow.Equals(other.CollectionStoreEntireRow, StringComparison.Ordinal)
 				) &&
 				(
-					this.CollectionValueField == other.CollectionValueField ||
-					this.CollectionValueField != null &&
-					this.CollectionValueField.Equals(other.CollectionValueField, StringComparison.Ordinal)
+					CollectionValueField == other.CollectionValueField ||
+					CollectionValueField != null &&
+					CollectionValueField.Equals(other.CollectionValueField, StringComparison.Ordinal)
 				) &&
 				(
-					this.ConstraintXml == other.ConstraintXml ||
-					this.ConstraintXml != null &&
-					this.ConstraintXml.Equals(other.ConstraintXml, StringComparison.Ordinal)
+					ConstraintXml == other.ConstraintXml ||
+					ConstraintXml != null &&
+					ConstraintXml.Equals(other.ConstraintXml, StringComparison.Ordinal)
 				) &&
 				(
-					this.Contents == other.Contents ||
-					this.Contents != null &&
-					this.Contents.Equals(other.Contents, StringComparison.Ordinal)
+					Contents == other.Contents ||
+					Contents != null &&
+					Contents.Equals(other.Contents, StringComparison.Ordinal)
 				) &&
 				(
-					this.Default == other.Default ||
-					this.Default != null &&
-					this.Default.Equals(other.Default, StringComparison.Ordinal)
+					Default == other.Default ||
+					Default != null &&
+					Default.Equals(other.Default, StringComparison.Ordinal)
 				) &&
 				(
-					this.FieldId == other.FieldId ||
-					this.FieldId != null &&
-					this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
+					FieldId == other.FieldId ||
+					FieldId != null &&
+					FieldId.Equals(other.FieldId, StringComparison.Ordinal)
 				) &&
 				(
-					this.IsDateRange == other.IsDateRange ||
-					this.IsDateRange != null &&
-					this.IsDateRange.Equals(other.IsDateRange)
+					IsDateRange == other.IsDateRange ||
+					IsDateRange != null &&
+					IsDateRange.Equals(other.IsDateRange)
 				) &&
 				(
-					this.ListDisplayOption == other.ListDisplayOption ||
-					this.ListDisplayOption != null &&
-					this.ListDisplayOption.Equals(other.ListDisplayOption)
+					ListDisplayOption == other.ListDisplayOption ||
+					ListDisplayOption != null &&
+					ListDisplayOption.Equals(other.ListDisplayOption)
 				) &&
 				(
-					this.ListReturnFieldId == other.ListReturnFieldId ||
-					this.ListReturnFieldId != null &&
-					this.ListReturnFieldId.Equals(other.ListReturnFieldId, StringComparison.Ordinal)
+					ListReturnFieldId == other.ListReturnFieldId ||
+					ListReturnFieldId != null &&
+					ListReturnFieldId.Equals(other.ListReturnFieldId, StringComparison.Ordinal)
 				) &&
 				(
-					this.MultiLine == other.MultiLine ||
-					this.MultiLine != null &&
-					this.MultiLine.Equals(other.MultiLine)
+					MultiLine == other.MultiLine ||
+					MultiLine != null &&
+					MultiLine.Equals(other.MultiLine)
 				) &&
 				(
-					this.PromptId == other.PromptId ||
-					this.PromptId != null &&
-					this.PromptId.Equals(other.PromptId, StringComparison.Ordinal)
+					PromptId == other.PromptId ||
+					PromptId != null &&
+					PromptId.Equals(other.PromptId, StringComparison.Ordinal)
 				) &&
 				(
-					this.PromptType == other.PromptType ||
-					this.PromptType != null &&
-					this.PromptType.Equals(other.PromptType)
+					PromptType == other.PromptType ||
+					PromptType != null &&
+					PromptType.Equals(other.PromptType)
 				) &&
 				(
-					this.PromptTypeName == other.PromptTypeName ||
-					this.PromptTypeName != null &&
-					this.PromptTypeName.Equals(other.PromptTypeName, StringComparison.Ordinal)
+					PromptTypeName == other.PromptTypeName ||
+					PromptTypeName != null &&
+					PromptTypeName.Equals(other.PromptTypeName, StringComparison.Ordinal)
 				) &&
 				(
-					this.Required == other.Required ||
-					this.Required != null &&
-					this.Required.Equals(other.Required)
+					Required == other.Required ||
+					Required != null &&
+					Required.Equals(other.Required)
 				) &&
 				(
-					this.Text == other.Text ||
-					this.Text != null &&
-					this.Text.Equals(other.Text, StringComparison.Ordinal)
+					Text == other.Text ||
+					Text != null &&
+					Text.Equals(other.Text, StringComparison.Ordinal)
 				) &&
 				(
-					this.Value == other.Value ||
-					this.Value != null &&
-					this.Value.Equals(other.Value)
+					Value == other.Value ||
+					Value != null &&
+					Value.Equals(other.Value)
 				) &&
 				(
-					this.Values == other.Values ||
-					this.Values != null &&
-					this.Values.SequenceEqual(other.Values)
+					Values == other.Values ||
+					Values != null &&
+					Values.SequenceEqual(other.Values)
 				);
 	}
 
@@ -455,99 +455,99 @@ public partial class Prompt : IEquatable<Prompt>, IValidatableObject
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.AllowValuesOnly != null)
+			if (AllowValuesOnly != null)
 			{
-				hash = hash * 59 + this.AllowValuesOnly.GetHashCode();
+				hash = hash * 59 + AllowValuesOnly.GetHashCode();
 			}
 
-			if (this.BusObId != null)
+			if (BusObId != null)
 			{
-				hash = hash * 59 + this.BusObId.GetHashCode();
+				hash = hash * 59 + BusObId.GetHashCode();
 			}
 
-			if (this.CollectionStoreEntireRow != null)
+			if (CollectionStoreEntireRow != null)
 			{
-				hash = hash * 59 + this.CollectionStoreEntireRow.GetHashCode();
+				hash = hash * 59 + CollectionStoreEntireRow.GetHashCode();
 			}
 
-			if (this.CollectionValueField != null)
+			if (CollectionValueField != null)
 			{
-				hash = hash * 59 + this.CollectionValueField.GetHashCode();
+				hash = hash * 59 + CollectionValueField.GetHashCode();
 			}
 
-			if (this.ConstraintXml != null)
+			if (ConstraintXml != null)
 			{
-				hash = hash * 59 + this.ConstraintXml.GetHashCode();
+				hash = hash * 59 + ConstraintXml.GetHashCode();
 			}
 
-			if (this.Contents != null)
+			if (Contents != null)
 			{
-				hash = hash * 59 + this.Contents.GetHashCode();
+				hash = hash * 59 + Contents.GetHashCode();
 			}
 
-			if (this.Default != null)
+			if (Default != null)
 			{
-				hash = hash * 59 + this.Default.GetHashCode();
+				hash = hash * 59 + Default.GetHashCode();
 			}
 
-			if (this.FieldId != null)
+			if (FieldId != null)
 			{
-				hash = hash * 59 + this.FieldId.GetHashCode();
+				hash = hash * 59 + FieldId.GetHashCode();
 			}
 
-			if (this.IsDateRange != null)
+			if (IsDateRange != null)
 			{
-				hash = hash * 59 + this.IsDateRange.GetHashCode();
+				hash = hash * 59 + IsDateRange.GetHashCode();
 			}
 
-			if (this.ListDisplayOption != null)
+			if (ListDisplayOption != null)
 			{
-				hash = hash * 59 + this.ListDisplayOption.GetHashCode();
+				hash = hash * 59 + ListDisplayOption.GetHashCode();
 			}
 
-			if (this.ListReturnFieldId != null)
+			if (ListReturnFieldId != null)
 			{
-				hash = hash * 59 + this.ListReturnFieldId.GetHashCode();
+				hash = hash * 59 + ListReturnFieldId.GetHashCode();
 			}
 
-			if (this.MultiLine != null)
+			if (MultiLine != null)
 			{
-				hash = hash * 59 + this.MultiLine.GetHashCode();
+				hash = hash * 59 + MultiLine.GetHashCode();
 			}
 
-			if (this.PromptId != null)
+			if (PromptId != null)
 			{
-				hash = hash * 59 + this.PromptId.GetHashCode();
+				hash = hash * 59 + PromptId.GetHashCode();
 			}
 
-			if (this.PromptType != null)
+			if (PromptType != null)
 			{
-				hash = hash * 59 + this.PromptType.GetHashCode();
+				hash = hash * 59 + PromptType.GetHashCode();
 			}
 
-			if (this.PromptTypeName != null)
+			if (PromptTypeName != null)
 			{
-				hash = hash * 59 + this.PromptTypeName.GetHashCode();
+				hash = hash * 59 + PromptTypeName.GetHashCode();
 			}
 
-			if (this.Required != null)
+			if (Required != null)
 			{
-				hash = hash * 59 + this.Required.GetHashCode();
+				hash = hash * 59 + Required.GetHashCode();
 			}
 
-			if (this.Text != null)
+			if (Text != null)
 			{
-				hash = hash * 59 + this.Text.GetHashCode();
+				hash = hash * 59 + Text.GetHashCode();
 			}
 
-			if (this.Value != null)
+			if (Value != null)
 			{
-				hash = hash * 59 + this.Value.GetHashCode();
+				hash = hash * 59 + Value.GetHashCode();
 			}
 
-			if (this.Values != null)
+			if (Values != null)
 			{
-				hash = hash * 59 + this.Values.GetHashCode();
+				hash = hash * 59 + Values.GetHashCode();
 			}
 
 			return hash;

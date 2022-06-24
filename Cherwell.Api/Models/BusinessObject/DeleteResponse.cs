@@ -394,7 +394,7 @@ public partial class DeleteResponse : IEquatable<DeleteResponse>, IValidatableOb
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as DeleteResponse);
+		return Equals(obj as DeleteResponse);
 	}
 
 	/// <summary>
@@ -412,39 +412,39 @@ public partial class DeleteResponse : IEquatable<DeleteResponse>, IValidatableOb
 
 		return
 				(
-					this.BusObId == other.BusObId ||
-					this.BusObId != null &&
-					this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
+					BusObId == other.BusObId ||
+					BusObId != null &&
+					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObPublicId == other.BusObPublicId ||
-					this.BusObPublicId != null &&
-					this.BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
+					BusObPublicId == other.BusObPublicId ||
+					BusObPublicId != null &&
+					BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObRecId == other.BusObRecId ||
-					this.BusObRecId != null &&
-					this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
+					BusObRecId == other.BusObRecId ||
+					BusObRecId != null &&
+					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
 				) &&
 				(
-					this.ErrorCode == other.ErrorCode ||
-					this.ErrorCode != null &&
-					this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
+					ErrorCode == other.ErrorCode ||
+					ErrorCode != null &&
+					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
 				) &&
 				(
-					this.ErrorMessage == other.ErrorMessage ||
-					this.ErrorMessage != null &&
-					this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
+					ErrorMessage == other.ErrorMessage ||
+					ErrorMessage != null &&
+					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
 				) &&
 				(
-					this.HasError == other.HasError ||
-					this.HasError != null &&
-					this.HasError.Equals(other.HasError)
+					HasError == other.HasError ||
+					HasError != null &&
+					HasError.Equals(other.HasError)
 				) &&
 				(
-					this.HttpStatusCode == other.HttpStatusCode ||
-					this.HttpStatusCode != null &&
-					this.HttpStatusCode.Equals(other.HttpStatusCode)
+					HttpStatusCode == other.HttpStatusCode ||
+					HttpStatusCode != null &&
+					HttpStatusCode.Equals(other.HttpStatusCode)
 				);
 	}
 
@@ -459,39 +459,39 @@ public partial class DeleteResponse : IEquatable<DeleteResponse>, IValidatableOb
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.BusObId != null)
+			if (BusObId != null)
 			{
-				hash = hash * 59 + this.BusObId.GetHashCode();
+				hash = hash * 59 + BusObId.GetHashCode();
 			}
 
-			if (this.BusObPublicId != null)
+			if (BusObPublicId != null)
 			{
-				hash = hash * 59 + this.BusObPublicId.GetHashCode();
+				hash = hash * 59 + BusObPublicId.GetHashCode();
 			}
 
-			if (this.BusObRecId != null)
+			if (BusObRecId != null)
 			{
-				hash = hash * 59 + this.BusObRecId.GetHashCode();
+				hash = hash * 59 + BusObRecId.GetHashCode();
 			}
 
-			if (this.ErrorCode != null)
+			if (ErrorCode != null)
 			{
-				hash = hash * 59 + this.ErrorCode.GetHashCode();
+				hash = hash * 59 + ErrorCode.GetHashCode();
 			}
 
-			if (this.ErrorMessage != null)
+			if (ErrorMessage != null)
 			{
-				hash = hash * 59 + this.ErrorMessage.GetHashCode();
+				hash = hash * 59 + ErrorMessage.GetHashCode();
 			}
 
-			if (this.HasError != null)
+			if (HasError != null)
 			{
-				hash = hash * 59 + this.HasError.GetHashCode();
+				hash = hash * 59 + HasError.GetHashCode();
 			}
 
-			if (this.HttpStatusCode != null)
+			if (HttpStatusCode != null)
 			{
-				hash = hash * 59 + this.HttpStatusCode.GetHashCode();
+				hash = hash * 59 + HttpStatusCode.GetHashCode();
 			}
 
 			return hash;

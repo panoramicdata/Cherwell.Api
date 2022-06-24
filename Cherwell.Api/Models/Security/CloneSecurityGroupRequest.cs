@@ -63,7 +63,7 @@ public partial class CloneSecurityGroupRequest : IEquatable<CloneSecurityGroupRe
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as CloneSecurityGroupRequest);
+		return Equals(obj as CloneSecurityGroupRequest);
 	}
 
 	/// <summary>
@@ -81,14 +81,14 @@ public partial class CloneSecurityGroupRequest : IEquatable<CloneSecurityGroupRe
 
 		return
 				(
-					this.SecurityGroupName == other.SecurityGroupName ||
-					this.SecurityGroupName != null &&
-					this.SecurityGroupName.Equals(other.SecurityGroupName, StringComparison.Ordinal)
+					SecurityGroupName == other.SecurityGroupName ||
+					SecurityGroupName != null &&
+					SecurityGroupName.Equals(other.SecurityGroupName, StringComparison.Ordinal)
 				) &&
 				(
-					this.SourceSecurityGroupNameOrId == other.SourceSecurityGroupNameOrId ||
-					this.SourceSecurityGroupNameOrId != null &&
-					this.SourceSecurityGroupNameOrId.Equals(other.SourceSecurityGroupNameOrId, StringComparison.Ordinal)
+					SourceSecurityGroupNameOrId == other.SourceSecurityGroupNameOrId ||
+					SourceSecurityGroupNameOrId != null &&
+					SourceSecurityGroupNameOrId.Equals(other.SourceSecurityGroupNameOrId, StringComparison.Ordinal)
 				);
 	}
 
@@ -103,14 +103,14 @@ public partial class CloneSecurityGroupRequest : IEquatable<CloneSecurityGroupRe
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.SecurityGroupName != null)
+			if (SecurityGroupName != null)
 			{
-				hash = hash * 59 + this.SecurityGroupName.GetHashCode();
+				hash = hash * 59 + SecurityGroupName.GetHashCode();
 			}
 
-			if (this.SourceSecurityGroupNameOrId != null)
+			if (SourceSecurityGroupNameOrId != null)
 			{
-				hash = hash * 59 + this.SourceSecurityGroupNameOrId.GetHashCode();
+				hash = hash * 59 + SourceSecurityGroupNameOrId.GetHashCode();
 			}
 
 			return hash;

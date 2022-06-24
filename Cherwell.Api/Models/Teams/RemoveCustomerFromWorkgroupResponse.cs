@@ -386,7 +386,7 @@ public partial class RemoveCustomerFromWorkgroupResponse : IEquatable<RemoveCust
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as RemoveCustomerFromWorkgroupResponse);
+		return Equals(obj as RemoveCustomerFromWorkgroupResponse);
 	}
 
 	/// <summary>
@@ -404,34 +404,34 @@ public partial class RemoveCustomerFromWorkgroupResponse : IEquatable<RemoveCust
 
 		return
 				(
-					this.WorkgroupId == other.WorkgroupId ||
-					this.WorkgroupId != null &&
-					this.WorkgroupId.Equals(other.WorkgroupId, StringComparison.Ordinal)
+					WorkgroupId == other.WorkgroupId ||
+					WorkgroupId != null &&
+					WorkgroupId.Equals(other.WorkgroupId, StringComparison.Ordinal)
 				) &&
 				(
-					this.CustomerRecordId == other.CustomerRecordId ||
-					this.CustomerRecordId != null &&
-					this.CustomerRecordId.Equals(other.CustomerRecordId, StringComparison.Ordinal)
+					CustomerRecordId == other.CustomerRecordId ||
+					CustomerRecordId != null &&
+					CustomerRecordId.Equals(other.CustomerRecordId, StringComparison.Ordinal)
 				) &&
 				(
-					this.ErrorCode == other.ErrorCode ||
-					this.ErrorCode != null &&
-					this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
+					ErrorCode == other.ErrorCode ||
+					ErrorCode != null &&
+					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
 				) &&
 				(
-					this.ErrorMessage == other.ErrorMessage ||
-					this.ErrorMessage != null &&
-					this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
+					ErrorMessage == other.ErrorMessage ||
+					ErrorMessage != null &&
+					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
 				) &&
 				(
-					this.HasError == other.HasError ||
-					this.HasError != null &&
-					this.HasError.Equals(other.HasError)
+					HasError == other.HasError ||
+					HasError != null &&
+					HasError.Equals(other.HasError)
 				) &&
 				(
-					this.HttpStatusCode == other.HttpStatusCode ||
-					this.HttpStatusCode != null &&
-					this.HttpStatusCode.Equals(other.HttpStatusCode)
+					HttpStatusCode == other.HttpStatusCode ||
+					HttpStatusCode != null &&
+					HttpStatusCode.Equals(other.HttpStatusCode)
 				);
 	}
 
@@ -446,34 +446,34 @@ public partial class RemoveCustomerFromWorkgroupResponse : IEquatable<RemoveCust
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.WorkgroupId != null)
+			if (WorkgroupId != null)
 			{
-				hash = hash * 59 + this.WorkgroupId.GetHashCode();
+				hash = hash * 59 + WorkgroupId.GetHashCode();
 			}
 
-			if (this.CustomerRecordId != null)
+			if (CustomerRecordId != null)
 			{
-				hash = hash * 59 + this.CustomerRecordId.GetHashCode();
+				hash = hash * 59 + CustomerRecordId.GetHashCode();
 			}
 
-			if (this.ErrorCode != null)
+			if (ErrorCode != null)
 			{
-				hash = hash * 59 + this.ErrorCode.GetHashCode();
+				hash = hash * 59 + ErrorCode.GetHashCode();
 			}
 
-			if (this.ErrorMessage != null)
+			if (ErrorMessage != null)
 			{
-				hash = hash * 59 + this.ErrorMessage.GetHashCode();
+				hash = hash * 59 + ErrorMessage.GetHashCode();
 			}
 
-			if (this.HasError != null)
+			if (HasError != null)
 			{
-				hash = hash * 59 + this.HasError.GetHashCode();
+				hash = hash * 59 + HasError.GetHashCode();
 			}
 
-			if (this.HttpStatusCode != null)
+			if (HttpStatusCode != null)
 			{
-				hash = hash * 59 + this.HttpStatusCode.GetHashCode();
+				hash = hash * 59 + HttpStatusCode.GetHashCode();
 			}
 
 			return hash;

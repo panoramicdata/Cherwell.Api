@@ -504,7 +504,7 @@ public partial class StoredValueResponse : IEquatable<StoredValueResponse>, IVal
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as StoredValueResponse);
+		return Equals(obj as StoredValueResponse);
 	}
 
 	/// <summary>
@@ -522,69 +522,69 @@ public partial class StoredValueResponse : IEquatable<StoredValueResponse>, IVal
 
 		return
 				(
-					this.Description == other.Description ||
-					this.Description != null &&
-					this.Description.Equals(other.Description, StringComparison.Ordinal)
+					Description == other.Description ||
+					Description != null &&
+					Description.Equals(other.Description, StringComparison.Ordinal)
 				) &&
 				(
-					this.Folder == other.Folder ||
-					this.Folder != null &&
-					this.Folder.Equals(other.Folder, StringComparison.Ordinal)
+					Folder == other.Folder ||
+					Folder != null &&
+					Folder.Equals(other.Folder, StringComparison.Ordinal)
 				) &&
 				(
-					this.Id == other.Id ||
-					this.Id != null &&
-					this.Id.Equals(other.Id, StringComparison.Ordinal)
+					Id == other.Id ||
+					Id != null &&
+					Id.Equals(other.Id, StringComparison.Ordinal)
 				) &&
 				(
-					this.Name == other.Name ||
-					this.Name != null &&
-					this.Name.Equals(other.Name, StringComparison.Ordinal)
+					Name == other.Name ||
+					Name != null &&
+					Name.Equals(other.Name, StringComparison.Ordinal)
 				) &&
 				(
-					this.Scope == other.Scope ||
-					this.Scope != null &&
-					this.Scope.Equals(other.Scope, StringComparison.Ordinal)
+					Scope == other.Scope ||
+					Scope != null &&
+					Scope.Equals(other.Scope, StringComparison.Ordinal)
 				) &&
 				(
-					this.ScopeOwner == other.ScopeOwner ||
-					this.ScopeOwner != null &&
-					this.ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
+					ScopeOwner == other.ScopeOwner ||
+					ScopeOwner != null &&
+					ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
 				) &&
 				(
-					this.StandInKey == other.StandInKey ||
-					this.StandInKey != null &&
-					this.StandInKey.Equals(other.StandInKey, StringComparison.Ordinal)
+					StandInKey == other.StandInKey ||
+					StandInKey != null &&
+					StandInKey.Equals(other.StandInKey, StringComparison.Ordinal)
 				) &&
 				(
-					this.StoredValueType == other.StoredValueType ||
-					this.StoredValueType != null &&
-					this.StoredValueType.Equals(other.StoredValueType)
+					StoredValueType == other.StoredValueType ||
+					StoredValueType != null &&
+					StoredValueType.Equals(other.StoredValueType)
 				) &&
 				(
-					this.Value == other.Value ||
-					this.Value != null &&
-					this.Value.Equals(other.Value, StringComparison.Ordinal)
+					Value == other.Value ||
+					Value != null &&
+					Value.Equals(other.Value, StringComparison.Ordinal)
 				) &&
 				(
-					this.ErrorCode == other.ErrorCode ||
-					this.ErrorCode != null &&
-					this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
+					ErrorCode == other.ErrorCode ||
+					ErrorCode != null &&
+					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
 				) &&
 				(
-					this.ErrorMessage == other.ErrorMessage ||
-					this.ErrorMessage != null &&
-					this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
+					ErrorMessage == other.ErrorMessage ||
+					ErrorMessage != null &&
+					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
 				) &&
 				(
-					this.HasError == other.HasError ||
-					this.HasError != null &&
-					this.HasError.Equals(other.HasError)
+					HasError == other.HasError ||
+					HasError != null &&
+					HasError.Equals(other.HasError)
 				) &&
 				(
-					this.HttpStatusCode == other.HttpStatusCode ||
-					this.HttpStatusCode != null &&
-					this.HttpStatusCode.Equals(other.HttpStatusCode)
+					HttpStatusCode == other.HttpStatusCode ||
+					HttpStatusCode != null &&
+					HttpStatusCode.Equals(other.HttpStatusCode)
 				);
 	}
 
@@ -599,69 +599,69 @@ public partial class StoredValueResponse : IEquatable<StoredValueResponse>, IVal
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Description != null)
+			if (Description != null)
 			{
-				hash = hash * 59 + this.Description.GetHashCode();
+				hash = hash * 59 + Description.GetHashCode();
 			}
 
-			if (this.Folder != null)
+			if (Folder != null)
 			{
-				hash = hash * 59 + this.Folder.GetHashCode();
+				hash = hash * 59 + Folder.GetHashCode();
 			}
 
-			if (this.Id != null)
+			if (Id != null)
 			{
-				hash = hash * 59 + this.Id.GetHashCode();
+				hash = hash * 59 + Id.GetHashCode();
 			}
 
-			if (this.Name != null)
+			if (Name != null)
 			{
-				hash = hash * 59 + this.Name.GetHashCode();
+				hash = hash * 59 + Name.GetHashCode();
 			}
 
-			if (this.Scope != null)
+			if (Scope != null)
 			{
-				hash = hash * 59 + this.Scope.GetHashCode();
+				hash = hash * 59 + Scope.GetHashCode();
 			}
 
-			if (this.ScopeOwner != null)
+			if (ScopeOwner != null)
 			{
-				hash = hash * 59 + this.ScopeOwner.GetHashCode();
+				hash = hash * 59 + ScopeOwner.GetHashCode();
 			}
 
-			if (this.StandInKey != null)
+			if (StandInKey != null)
 			{
-				hash = hash * 59 + this.StandInKey.GetHashCode();
+				hash = hash * 59 + StandInKey.GetHashCode();
 			}
 
-			if (this.StoredValueType != null)
+			if (StoredValueType != null)
 			{
-				hash = hash * 59 + this.StoredValueType.GetHashCode();
+				hash = hash * 59 + StoredValueType.GetHashCode();
 			}
 
-			if (this.Value != null)
+			if (Value != null)
 			{
-				hash = hash * 59 + this.Value.GetHashCode();
+				hash = hash * 59 + Value.GetHashCode();
 			}
 
-			if (this.ErrorCode != null)
+			if (ErrorCode != null)
 			{
-				hash = hash * 59 + this.ErrorCode.GetHashCode();
+				hash = hash * 59 + ErrorCode.GetHashCode();
 			}
 
-			if (this.ErrorMessage != null)
+			if (ErrorMessage != null)
 			{
-				hash = hash * 59 + this.ErrorMessage.GetHashCode();
+				hash = hash * 59 + ErrorMessage.GetHashCode();
 			}
 
-			if (this.HasError != null)
+			if (HasError != null)
 			{
-				hash = hash * 59 + this.HasError.GetHashCode();
+				hash = hash * 59 + HasError.GetHashCode();
 			}
 
-			if (this.HttpStatusCode != null)
+			if (HttpStatusCode != null)
 			{
-				hash = hash * 59 + this.HttpStatusCode.GetHashCode();
+				hash = hash * 59 + HttpStatusCode.GetHashCode();
 			}
 
 			return hash;

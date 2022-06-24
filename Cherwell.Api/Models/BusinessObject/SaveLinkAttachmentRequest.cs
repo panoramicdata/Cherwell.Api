@@ -111,7 +111,7 @@ public partial class SaveLinkAttachmentRequest : IEquatable<SaveLinkAttachmentRe
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as SaveLinkAttachmentRequest);
+		return Equals(obj as SaveLinkAttachmentRequest);
 	}
 
 	/// <summary>
@@ -129,44 +129,44 @@ public partial class SaveLinkAttachmentRequest : IEquatable<SaveLinkAttachmentRe
 
 		return
 				(
-					this.BusObId == other.BusObId ||
-					this.BusObId != null &&
-					this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
+					BusObId == other.BusObId ||
+					BusObId != null &&
+					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObName == other.BusObName ||
-					this.BusObName != null &&
-					this.BusObName.Equals(other.BusObName, StringComparison.Ordinal)
+					BusObName == other.BusObName ||
+					BusObName != null &&
+					BusObName.Equals(other.BusObName, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObPublicId == other.BusObPublicId ||
-					this.BusObPublicId != null &&
-					this.BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
+					BusObPublicId == other.BusObPublicId ||
+					BusObPublicId != null &&
+					BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObRecId == other.BusObRecId ||
-					this.BusObRecId != null &&
-					this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
+					BusObRecId == other.BusObRecId ||
+					BusObRecId != null &&
+					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
 				) &&
 				(
-					this.Comment == other.Comment ||
-					this.Comment != null &&
-					this.Comment.Equals(other.Comment, StringComparison.Ordinal)
+					Comment == other.Comment ||
+					Comment != null &&
+					Comment.Equals(other.Comment, StringComparison.Ordinal)
 				) &&
 				(
-					this.DisplayText == other.DisplayText ||
-					this.DisplayText != null &&
-					this.DisplayText.Equals(other.DisplayText, StringComparison.Ordinal)
+					DisplayText == other.DisplayText ||
+					DisplayText != null &&
+					DisplayText.Equals(other.DisplayText, StringComparison.Ordinal)
 				) &&
 				(
-					this.IncludeLinks == other.IncludeLinks ||
-					this.IncludeLinks != null &&
-					this.IncludeLinks.Equals(other.IncludeLinks)
+					IncludeLinks == other.IncludeLinks ||
+					IncludeLinks != null &&
+					IncludeLinks.Equals(other.IncludeLinks)
 				) &&
 				(
-					this.UncFilePath == other.UncFilePath ||
-					this.UncFilePath != null &&
-					this.UncFilePath.Equals(other.UncFilePath, StringComparison.Ordinal)
+					UncFilePath == other.UncFilePath ||
+					UncFilePath != null &&
+					UncFilePath.Equals(other.UncFilePath, StringComparison.Ordinal)
 				);
 	}
 
@@ -181,44 +181,44 @@ public partial class SaveLinkAttachmentRequest : IEquatable<SaveLinkAttachmentRe
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.BusObId != null)
+			if (BusObId != null)
 			{
-				hash = hash * 59 + this.BusObId.GetHashCode();
+				hash = hash * 59 + BusObId.GetHashCode();
 			}
 
-			if (this.BusObName != null)
+			if (BusObName != null)
 			{
-				hash = hash * 59 + this.BusObName.GetHashCode();
+				hash = hash * 59 + BusObName.GetHashCode();
 			}
 
-			if (this.BusObPublicId != null)
+			if (BusObPublicId != null)
 			{
-				hash = hash * 59 + this.BusObPublicId.GetHashCode();
+				hash = hash * 59 + BusObPublicId.GetHashCode();
 			}
 
-			if (this.BusObRecId != null)
+			if (BusObRecId != null)
 			{
-				hash = hash * 59 + this.BusObRecId.GetHashCode();
+				hash = hash * 59 + BusObRecId.GetHashCode();
 			}
 
-			if (this.Comment != null)
+			if (Comment != null)
 			{
-				hash = hash * 59 + this.Comment.GetHashCode();
+				hash = hash * 59 + Comment.GetHashCode();
 			}
 
-			if (this.DisplayText != null)
+			if (DisplayText != null)
 			{
-				hash = hash * 59 + this.DisplayText.GetHashCode();
+				hash = hash * 59 + DisplayText.GetHashCode();
 			}
 
-			if (this.IncludeLinks != null)
+			if (IncludeLinks != null)
 			{
-				hash = hash * 59 + this.IncludeLinks.GetHashCode();
+				hash = hash * 59 + IncludeLinks.GetHashCode();
 			}
 
-			if (this.UncFilePath != null)
+			if (UncFilePath != null)
 			{
-				hash = hash * 59 + this.UncFilePath.GetHashCode();
+				hash = hash * 59 + UncFilePath.GetHashCode();
 			}
 
 			return hash;

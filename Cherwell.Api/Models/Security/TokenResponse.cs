@@ -119,7 +119,7 @@ public partial class TokenResponse : IEquatable<TokenResponse>, IValidatableObje
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as TokenResponse);
+		return Equals(obj as TokenResponse);
 	}
 
 	/// <summary>
@@ -137,44 +137,44 @@ public partial class TokenResponse : IEquatable<TokenResponse>, IValidatableObje
 
 		return
 				(
-					this.AccessToken == other.AccessToken ||
-					this.AccessToken != null &&
-					this.AccessToken.Equals(other.AccessToken, StringComparison.Ordinal)
+					AccessToken == other.AccessToken ||
+					AccessToken != null &&
+					AccessToken.Equals(other.AccessToken, StringComparison.Ordinal)
 				) &&
 				(
-					this.AsclientId == other.AsclientId ||
-					this.AsclientId != null &&
-					this.AsclientId.Equals(other.AsclientId, StringComparison.Ordinal)
+					AsclientId == other.AsclientId ||
+					AsclientId != null &&
+					AsclientId.Equals(other.AsclientId, StringComparison.Ordinal)
 				) &&
 				(
-					this.Expires == other.Expires ||
-					this.Expires != null &&
-					this.Expires.Equals(other.Expires, StringComparison.Ordinal)
+					Expires == other.Expires ||
+					Expires != null &&
+					Expires.Equals(other.Expires, StringComparison.Ordinal)
 				) &&
 				(
-					this.ExpiresIn == other.ExpiresIn ||
-					this.ExpiresIn != null &&
-					this.ExpiresIn.Equals(other.ExpiresIn)
+					ExpiresIn == other.ExpiresIn ||
+					ExpiresIn != null &&
+					ExpiresIn.Equals(other.ExpiresIn)
 				) &&
 				(
-					this.Issued == other.Issued ||
-					this.Issued != null &&
-					this.Issued.Equals(other.Issued, StringComparison.Ordinal)
+					Issued == other.Issued ||
+					Issued != null &&
+					Issued.Equals(other.Issued, StringComparison.Ordinal)
 				) &&
 				(
-					this.RefreshToken == other.RefreshToken ||
-					this.RefreshToken != null &&
-					this.RefreshToken.Equals(other.RefreshToken, StringComparison.Ordinal)
+					RefreshToken == other.RefreshToken ||
+					RefreshToken != null &&
+					RefreshToken.Equals(other.RefreshToken, StringComparison.Ordinal)
 				) &&
 				(
-					this.TokenType == other.TokenType ||
-					this.TokenType != null &&
-					this.TokenType.Equals(other.TokenType, StringComparison.Ordinal)
+					TokenType == other.TokenType ||
+					TokenType != null &&
+					TokenType.Equals(other.TokenType, StringComparison.Ordinal)
 				) &&
 				(
-					this.Username == other.Username ||
-					this.Username != null &&
-					this.Username.Equals(other.Username, StringComparison.Ordinal)
+					Username == other.Username ||
+					Username != null &&
+					Username.Equals(other.Username, StringComparison.Ordinal)
 				);
 	}
 
@@ -189,44 +189,44 @@ public partial class TokenResponse : IEquatable<TokenResponse>, IValidatableObje
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.AccessToken != null)
+			if (AccessToken != null)
 			{
-				hash = hash * 59 + this.AccessToken.GetHashCode();
+				hash = hash * 59 + AccessToken.GetHashCode();
 			}
 
-			if (this.AsclientId != null)
+			if (AsclientId != null)
 			{
-				hash = hash * 59 + this.AsclientId.GetHashCode();
+				hash = hash * 59 + AsclientId.GetHashCode();
 			}
 
-			if (this.Expires != null)
+			if (Expires != null)
 			{
-				hash = hash * 59 + this.Expires.GetHashCode();
+				hash = hash * 59 + Expires.GetHashCode();
 			}
 
-			if (this.ExpiresIn != null)
+			if (ExpiresIn != null)
 			{
-				hash = hash * 59 + this.ExpiresIn.GetHashCode();
+				hash = hash * 59 + ExpiresIn.GetHashCode();
 			}
 
-			if (this.Issued != null)
+			if (Issued != null)
 			{
-				hash = hash * 59 + this.Issued.GetHashCode();
+				hash = hash * 59 + Issued.GetHashCode();
 			}
 
-			if (this.RefreshToken != null)
+			if (RefreshToken != null)
 			{
-				hash = hash * 59 + this.RefreshToken.GetHashCode();
+				hash = hash * 59 + RefreshToken.GetHashCode();
 			}
 
-			if (this.TokenType != null)
+			if (TokenType != null)
 			{
-				hash = hash * 59 + this.TokenType.GetHashCode();
+				hash = hash * 59 + TokenType.GetHashCode();
 			}
 
-			if (this.Username != null)
+			if (Username != null)
 			{
-				hash = hash * 59 + this.Username.GetHashCode();
+				hash = hash * 59 + Username.GetHashCode();
 			}
 
 			return hash;

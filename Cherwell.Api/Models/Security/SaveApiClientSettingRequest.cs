@@ -119,7 +119,7 @@ public partial class SaveApiClientSettingRequest : IEquatable<SaveApiClientSetti
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as SaveApiClientSettingRequest);
+		return Equals(obj as SaveApiClientSettingRequest);
 	}
 
 	/// <summary>
@@ -137,49 +137,49 @@ public partial class SaveApiClientSettingRequest : IEquatable<SaveApiClientSetti
 
 		return
 				(
-					this.AllowAnonymousAccess == other.AllowAnonymousAccess ||
-					this.AllowAnonymousAccess != null &&
-					this.AllowAnonymousAccess.Equals(other.AllowAnonymousAccess)
+					AllowAnonymousAccess == other.AllowAnonymousAccess ||
+					AllowAnonymousAccess != null &&
+					AllowAnonymousAccess.Equals(other.AllowAnonymousAccess)
 				) &&
 				(
-					this.ApiAccessIsEnabled == other.ApiAccessIsEnabled ||
-					this.ApiAccessIsEnabled != null &&
-					this.ApiAccessIsEnabled.Equals(other.ApiAccessIsEnabled)
+					ApiAccessIsEnabled == other.ApiAccessIsEnabled ||
+					ApiAccessIsEnabled != null &&
+					ApiAccessIsEnabled.Equals(other.ApiAccessIsEnabled)
 				) &&
 				(
-					this.CreateNewClientKey == other.CreateNewClientKey ||
-					this.CreateNewClientKey != null &&
-					this.CreateNewClientKey.Equals(other.CreateNewClientKey)
+					CreateNewClientKey == other.CreateNewClientKey ||
+					CreateNewClientKey != null &&
+					CreateNewClientKey.Equals(other.CreateNewClientKey)
 				) &&
 				(
-					this.Culture == other.Culture ||
-					this.Culture != null &&
-					this.Culture.Equals(other.Culture, StringComparison.Ordinal)
+					Culture == other.Culture ||
+					Culture != null &&
+					Culture.Equals(other.Culture, StringComparison.Ordinal)
 				) &&
 				(
-					this.Description == other.Description ||
-					this.Description != null &&
-					this.Description.Equals(other.Description, StringComparison.Ordinal)
+					Description == other.Description ||
+					Description != null &&
+					Description.Equals(other.Description, StringComparison.Ordinal)
 				) &&
 				(
-					this.Name == other.Name ||
-					this.Name != null &&
-					this.Name.Equals(other.Name, StringComparison.Ordinal)
+					Name == other.Name ||
+					Name != null &&
+					Name.Equals(other.Name, StringComparison.Ordinal)
 				) &&
 				(
-					this.RefreshTokenLifespanMinutes == other.RefreshTokenLifespanMinutes ||
-					this.RefreshTokenLifespanMinutes != null &&
-					this.RefreshTokenLifespanMinutes.Equals(other.RefreshTokenLifespanMinutes)
+					RefreshTokenLifespanMinutes == other.RefreshTokenLifespanMinutes ||
+					RefreshTokenLifespanMinutes != null &&
+					RefreshTokenLifespanMinutes.Equals(other.RefreshTokenLifespanMinutes)
 				) &&
 				(
-					this.StandInKey == other.StandInKey ||
-					this.StandInKey != null &&
-					this.StandInKey.Equals(other.StandInKey, StringComparison.Ordinal)
+					StandInKey == other.StandInKey ||
+					StandInKey != null &&
+					StandInKey.Equals(other.StandInKey, StringComparison.Ordinal)
 				) &&
 				(
-					this.TokenLifespanMinutes == other.TokenLifespanMinutes ||
-					this.TokenLifespanMinutes != null &&
-					this.TokenLifespanMinutes.Equals(other.TokenLifespanMinutes)
+					TokenLifespanMinutes == other.TokenLifespanMinutes ||
+					TokenLifespanMinutes != null &&
+					TokenLifespanMinutes.Equals(other.TokenLifespanMinutes)
 				);
 	}
 
@@ -194,49 +194,49 @@ public partial class SaveApiClientSettingRequest : IEquatable<SaveApiClientSetti
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.AllowAnonymousAccess != null)
+			if (AllowAnonymousAccess != null)
 			{
-				hash = hash * 59 + this.AllowAnonymousAccess.GetHashCode();
+				hash = hash * 59 + AllowAnonymousAccess.GetHashCode();
 			}
 
-			if (this.ApiAccessIsEnabled != null)
+			if (ApiAccessIsEnabled != null)
 			{
-				hash = hash * 59 + this.ApiAccessIsEnabled.GetHashCode();
+				hash = hash * 59 + ApiAccessIsEnabled.GetHashCode();
 			}
 
-			if (this.CreateNewClientKey != null)
+			if (CreateNewClientKey != null)
 			{
-				hash = hash * 59 + this.CreateNewClientKey.GetHashCode();
+				hash = hash * 59 + CreateNewClientKey.GetHashCode();
 			}
 
-			if (this.Culture != null)
+			if (Culture != null)
 			{
-				hash = hash * 59 + this.Culture.GetHashCode();
+				hash = hash * 59 + Culture.GetHashCode();
 			}
 
-			if (this.Description != null)
+			if (Description != null)
 			{
-				hash = hash * 59 + this.Description.GetHashCode();
+				hash = hash * 59 + Description.GetHashCode();
 			}
 
-			if (this.Name != null)
+			if (Name != null)
 			{
-				hash = hash * 59 + this.Name.GetHashCode();
+				hash = hash * 59 + Name.GetHashCode();
 			}
 
-			if (this.RefreshTokenLifespanMinutes != null)
+			if (RefreshTokenLifespanMinutes != null)
 			{
-				hash = hash * 59 + this.RefreshTokenLifespanMinutes.GetHashCode();
+				hash = hash * 59 + RefreshTokenLifespanMinutes.GetHashCode();
 			}
 
-			if (this.StandInKey != null)
+			if (StandInKey != null)
 			{
-				hash = hash * 59 + this.StandInKey.GetHashCode();
+				hash = hash * 59 + StandInKey.GetHashCode();
 			}
 
-			if (this.TokenLifespanMinutes != null)
+			if (TokenLifespanMinutes != null)
 			{
-				hash = hash * 59 + this.TokenLifespanMinutes.GetHashCode();
+				hash = hash * 59 + TokenLifespanMinutes.GetHashCode();
 			}
 
 			return hash;

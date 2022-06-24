@@ -418,7 +418,7 @@ public partial class MobileFormResponse : IEquatable<MobileFormResponse>, IValid
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as MobileFormResponse);
+		return Equals(obj as MobileFormResponse);
 	}
 
 	/// <summary>
@@ -436,54 +436,54 @@ public partial class MobileFormResponse : IEquatable<MobileFormResponse>, IValid
 
 		return
 				(
-					this.Actions == other.Actions ||
-					this.Actions != null &&
-					this.Actions.SequenceEqual(other.Actions)
+					Actions == other.Actions ||
+					Actions != null &&
+					Actions.SequenceEqual(other.Actions)
 				) &&
 				(
-					this.Attachments == other.Attachments ||
-					this.Attachments != null &&
-					this.Attachments.SequenceEqual(other.Attachments)
+					Attachments == other.Attachments ||
+					Attachments != null &&
+					Attachments.SequenceEqual(other.Attachments)
 				) &&
 				(
-					this.GalleryImage == other.GalleryImage ||
-					this.GalleryImage != null &&
-					this.GalleryImage.Equals(other.GalleryImage, StringComparison.Ordinal)
+					GalleryImage == other.GalleryImage ||
+					GalleryImage != null &&
+					GalleryImage.Equals(other.GalleryImage, StringComparison.Ordinal)
 				) &&
 				(
-					this.LocationInformation == other.LocationInformation ||
-					this.LocationInformation != null &&
-					this.LocationInformation.Equals(other.LocationInformation)
+					LocationInformation == other.LocationInformation ||
+					LocationInformation != null &&
+					LocationInformation.Equals(other.LocationInformation)
 				) &&
 				(
-					this.Sections == other.Sections ||
-					this.Sections != null &&
-					this.Sections.SequenceEqual(other.Sections)
+					Sections == other.Sections ||
+					Sections != null &&
+					Sections.SequenceEqual(other.Sections)
 				) &&
 				(
-					this.Title == other.Title ||
-					this.Title != null &&
-					this.Title.Equals(other.Title, StringComparison.Ordinal)
+					Title == other.Title ||
+					Title != null &&
+					Title.Equals(other.Title, StringComparison.Ordinal)
 				) &&
 				(
-					this.ErrorCode == other.ErrorCode ||
-					this.ErrorCode != null &&
-					this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
+					ErrorCode == other.ErrorCode ||
+					ErrorCode != null &&
+					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
 				) &&
 				(
-					this.ErrorMessage == other.ErrorMessage ||
-					this.ErrorMessage != null &&
-					this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
+					ErrorMessage == other.ErrorMessage ||
+					ErrorMessage != null &&
+					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
 				) &&
 				(
-					this.HasError == other.HasError ||
-					this.HasError != null &&
-					this.HasError.Equals(other.HasError)
+					HasError == other.HasError ||
+					HasError != null &&
+					HasError.Equals(other.HasError)
 				) &&
 				(
-					this.HttpStatusCode == other.HttpStatusCode ||
-					this.HttpStatusCode != null &&
-					this.HttpStatusCode.Equals(other.HttpStatusCode)
+					HttpStatusCode == other.HttpStatusCode ||
+					HttpStatusCode != null &&
+					HttpStatusCode.Equals(other.HttpStatusCode)
 				);
 	}
 
@@ -498,54 +498,54 @@ public partial class MobileFormResponse : IEquatable<MobileFormResponse>, IValid
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Actions != null)
+			if (Actions != null)
 			{
-				hash = hash * 59 + this.Actions.GetHashCode();
+				hash = hash * 59 + Actions.GetHashCode();
 			}
 
-			if (this.Attachments != null)
+			if (Attachments != null)
 			{
-				hash = hash * 59 + this.Attachments.GetHashCode();
+				hash = hash * 59 + Attachments.GetHashCode();
 			}
 
-			if (this.GalleryImage != null)
+			if (GalleryImage != null)
 			{
-				hash = hash * 59 + this.GalleryImage.GetHashCode();
+				hash = hash * 59 + GalleryImage.GetHashCode();
 			}
 
-			if (this.LocationInformation != null)
+			if (LocationInformation != null)
 			{
-				hash = hash * 59 + this.LocationInformation.GetHashCode();
+				hash = hash * 59 + LocationInformation.GetHashCode();
 			}
 
-			if (this.Sections != null)
+			if (Sections != null)
 			{
-				hash = hash * 59 + this.Sections.GetHashCode();
+				hash = hash * 59 + Sections.GetHashCode();
 			}
 
-			if (this.Title != null)
+			if (Title != null)
 			{
-				hash = hash * 59 + this.Title.GetHashCode();
+				hash = hash * 59 + Title.GetHashCode();
 			}
 
-			if (this.ErrorCode != null)
+			if (ErrorCode != null)
 			{
-				hash = hash * 59 + this.ErrorCode.GetHashCode();
+				hash = hash * 59 + ErrorCode.GetHashCode();
 			}
 
-			if (this.ErrorMessage != null)
+			if (ErrorMessage != null)
 			{
-				hash = hash * 59 + this.ErrorMessage.GetHashCode();
+				hash = hash * 59 + ErrorMessage.GetHashCode();
 			}
 
-			if (this.HasError != null)
+			if (HasError != null)
 			{
-				hash = hash * 59 + this.HasError.GetHashCode();
+				hash = hash * 59 + HasError.GetHashCode();
 			}
 
-			if (this.HttpStatusCode != null)
+			if (HttpStatusCode != null)
 			{
-				hash = hash * 59 + this.HttpStatusCode.GetHashCode();
+				hash = hash * 59 + HttpStatusCode.GetHashCode();
 			}
 
 			return hash;

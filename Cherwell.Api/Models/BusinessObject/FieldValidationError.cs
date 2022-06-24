@@ -71,7 +71,7 @@ public partial class FieldValidationError : IEquatable<FieldValidationError>, IV
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as FieldValidationError);
+		return Equals(obj as FieldValidationError);
 	}
 
 	/// <summary>
@@ -89,19 +89,19 @@ public partial class FieldValidationError : IEquatable<FieldValidationError>, IV
 
 		return
 				(
-					this.Error == other.Error ||
-					this.Error != null &&
-					this.Error.Equals(other.Error, StringComparison.Ordinal)
+					Error == other.Error ||
+					Error != null &&
+					Error.Equals(other.Error, StringComparison.Ordinal)
 				) &&
 				(
-					this.ErrorCode == other.ErrorCode ||
-					this.ErrorCode != null &&
-					this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
+					ErrorCode == other.ErrorCode ||
+					ErrorCode != null &&
+					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
 				) &&
 				(
-					this.FieldId == other.FieldId ||
-					this.FieldId != null &&
-					this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
+					FieldId == other.FieldId ||
+					FieldId != null &&
+					FieldId.Equals(other.FieldId, StringComparison.Ordinal)
 				);
 	}
 
@@ -116,19 +116,19 @@ public partial class FieldValidationError : IEquatable<FieldValidationError>, IV
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Error != null)
+			if (Error != null)
 			{
-				hash = hash * 59 + this.Error.GetHashCode();
+				hash = hash * 59 + Error.GetHashCode();
 			}
 
-			if (this.ErrorCode != null)
+			if (ErrorCode != null)
 			{
-				hash = hash * 59 + this.ErrorCode.GetHashCode();
+				hash = hash * 59 + ErrorCode.GetHashCode();
 			}
 
-			if (this.FieldId != null)
+			if (FieldId != null)
 			{
-				hash = hash * 59 + this.FieldId.GetHashCode();
+				hash = hash * 59 + FieldId.GetHashCode();
 			}
 
 			return hash;

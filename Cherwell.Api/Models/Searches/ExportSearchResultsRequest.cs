@@ -268,7 +268,7 @@ public partial class ExportSearchResultsRequest : IEquatable<ExportSearchResults
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as ExportSearchResultsRequest);
+		return Equals(obj as ExportSearchResultsRequest);
 	}
 
 	/// <summary>
@@ -286,114 +286,114 @@ public partial class ExportSearchResultsRequest : IEquatable<ExportSearchResults
 
 		return
 				(
-					this.CustomSeparator == other.CustomSeparator ||
-					this.CustomSeparator != null &&
-					this.CustomSeparator.Equals(other.CustomSeparator, StringComparison.Ordinal)
+					CustomSeparator == other.CustomSeparator ||
+					CustomSeparator != null &&
+					CustomSeparator.Equals(other.CustomSeparator, StringComparison.Ordinal)
 				) &&
 				(
-					this.ExportFormat == other.ExportFormat ||
-					this.ExportFormat != null &&
-					this.ExportFormat.Equals(other.ExportFormat)
+					ExportFormat == other.ExportFormat ||
+					ExportFormat != null &&
+					ExportFormat.Equals(other.ExportFormat)
 				) &&
 				(
-					this.ExportTitle == other.ExportTitle ||
-					this.ExportTitle != null &&
-					this.ExportTitle.Equals(other.ExportTitle, StringComparison.Ordinal)
+					ExportTitle == other.ExportTitle ||
+					ExportTitle != null &&
+					ExportTitle.Equals(other.ExportTitle, StringComparison.Ordinal)
 				) &&
 				(
-					this.Association == other.Association ||
-					this.Association != null &&
-					this.Association.Equals(other.Association, StringComparison.Ordinal)
+					Association == other.Association ||
+					Association != null &&
+					Association.Equals(other.Association, StringComparison.Ordinal)
 				) &&
 				(
-					this.AssociationName == other.AssociationName ||
-					this.AssociationName != null &&
-					this.AssociationName.Equals(other.AssociationName, StringComparison.Ordinal)
+					AssociationName == other.AssociationName ||
+					AssociationName != null &&
+					AssociationName.Equals(other.AssociationName, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObId == other.BusObId ||
-					this.BusObId != null &&
-					this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
+					BusObId == other.BusObId ||
+					BusObId != null &&
+					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.CustomGridDefId == other.CustomGridDefId ||
-					this.CustomGridDefId != null &&
-					this.CustomGridDefId.Equals(other.CustomGridDefId, StringComparison.Ordinal)
+					CustomGridDefId == other.CustomGridDefId ||
+					CustomGridDefId != null &&
+					CustomGridDefId.Equals(other.CustomGridDefId, StringComparison.Ordinal)
 				) &&
 				(
-					this.DateTimeFormatting == other.DateTimeFormatting ||
-					this.DateTimeFormatting != null &&
-					this.DateTimeFormatting.Equals(other.DateTimeFormatting, StringComparison.Ordinal)
+					DateTimeFormatting == other.DateTimeFormatting ||
+					DateTimeFormatting != null &&
+					DateTimeFormatting.Equals(other.DateTimeFormatting, StringComparison.Ordinal)
 				) &&
 				(
-					this.FieldId == other.FieldId ||
-					this.FieldId != null &&
-					this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
+					FieldId == other.FieldId ||
+					FieldId != null &&
+					FieldId.Equals(other.FieldId, StringComparison.Ordinal)
 				) &&
 				(
-					this.Fields == other.Fields ||
-					this.Fields != null &&
-					this.Fields.SequenceEqual(other.Fields)
+					Fields == other.Fields ||
+					Fields != null &&
+					Fields.SequenceEqual(other.Fields)
 				) &&
 				(
-					this.Filters == other.Filters ||
-					this.Filters != null &&
-					this.Filters.SequenceEqual(other.Filters)
+					Filters == other.Filters ||
+					Filters != null &&
+					Filters.SequenceEqual(other.Filters)
 				) &&
 				(
-					this.IncludeAllFields == other.IncludeAllFields ||
-					this.IncludeAllFields != null &&
-					this.IncludeAllFields.Equals(other.IncludeAllFields)
+					IncludeAllFields == other.IncludeAllFields ||
+					IncludeAllFields != null &&
+					IncludeAllFields.Equals(other.IncludeAllFields)
 				) &&
 				(
-					this.IncludeSchema == other.IncludeSchema ||
-					this.IncludeSchema != null &&
-					this.IncludeSchema.Equals(other.IncludeSchema)
+					IncludeSchema == other.IncludeSchema ||
+					IncludeSchema != null &&
+					IncludeSchema.Equals(other.IncludeSchema)
 				) &&
 				(
-					this.PageNumber == other.PageNumber ||
-					this.PageNumber != null &&
-					this.PageNumber.Equals(other.PageNumber)
+					PageNumber == other.PageNumber ||
+					PageNumber != null &&
+					PageNumber.Equals(other.PageNumber)
 				) &&
 				(
-					this.PageSize == other.PageSize ||
-					this.PageSize != null &&
-					this.PageSize.Equals(other.PageSize)
+					PageSize == other.PageSize ||
+					PageSize != null &&
+					PageSize.Equals(other.PageSize)
 				) &&
 				(
-					this.Scope == other.Scope ||
-					this.Scope != null &&
-					this.Scope.Equals(other.Scope, StringComparison.Ordinal)
+					Scope == other.Scope ||
+					Scope != null &&
+					Scope.Equals(other.Scope, StringComparison.Ordinal)
 				) &&
 				(
-					this.ScopeOwner == other.ScopeOwner ||
-					this.ScopeOwner != null &&
-					this.ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
+					ScopeOwner == other.ScopeOwner ||
+					ScopeOwner != null &&
+					ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
 				) &&
 				(
-					this.SearchId == other.SearchId ||
-					this.SearchId != null &&
-					this.SearchId.Equals(other.SearchId, StringComparison.Ordinal)
+					SearchId == other.SearchId ||
+					SearchId != null &&
+					SearchId.Equals(other.SearchId, StringComparison.Ordinal)
 				) &&
 				(
-					this.SearchName == other.SearchName ||
-					this.SearchName != null &&
-					this.SearchName.Equals(other.SearchName, StringComparison.Ordinal)
+					SearchName == other.SearchName ||
+					SearchName != null &&
+					SearchName.Equals(other.SearchName, StringComparison.Ordinal)
 				) &&
 				(
-					this.SearchText == other.SearchText ||
-					this.SearchText != null &&
-					this.SearchText.Equals(other.SearchText, StringComparison.Ordinal)
+					SearchText == other.SearchText ||
+					SearchText != null &&
+					SearchText.Equals(other.SearchText, StringComparison.Ordinal)
 				) &&
 				(
-					this.Sorting == other.Sorting ||
-					this.Sorting != null &&
-					this.Sorting.SequenceEqual(other.Sorting)
+					Sorting == other.Sorting ||
+					Sorting != null &&
+					Sorting.SequenceEqual(other.Sorting)
 				) &&
 				(
-					this.PromptValues == other.PromptValues ||
-					this.PromptValues != null &&
-					this.PromptValues.SequenceEqual(other.PromptValues)
+					PromptValues == other.PromptValues ||
+					PromptValues != null &&
+					PromptValues.SequenceEqual(other.PromptValues)
 				);
 	}
 
@@ -408,114 +408,114 @@ public partial class ExportSearchResultsRequest : IEquatable<ExportSearchResults
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.CustomSeparator != null)
+			if (CustomSeparator != null)
 			{
-				hash = hash * 59 + this.CustomSeparator.GetHashCode();
+				hash = hash * 59 + CustomSeparator.GetHashCode();
 			}
 
-			if (this.ExportFormat != null)
+			if (ExportFormat != null)
 			{
-				hash = hash * 59 + this.ExportFormat.GetHashCode();
+				hash = hash * 59 + ExportFormat.GetHashCode();
 			}
 
-			if (this.ExportTitle != null)
+			if (ExportTitle != null)
 			{
-				hash = hash * 59 + this.ExportTitle.GetHashCode();
+				hash = hash * 59 + ExportTitle.GetHashCode();
 			}
 
-			if (this.Association != null)
+			if (Association != null)
 			{
-				hash = hash * 59 + this.Association.GetHashCode();
+				hash = hash * 59 + Association.GetHashCode();
 			}
 
-			if (this.AssociationName != null)
+			if (AssociationName != null)
 			{
-				hash = hash * 59 + this.AssociationName.GetHashCode();
+				hash = hash * 59 + AssociationName.GetHashCode();
 			}
 
-			if (this.BusObId != null)
+			if (BusObId != null)
 			{
-				hash = hash * 59 + this.BusObId.GetHashCode();
+				hash = hash * 59 + BusObId.GetHashCode();
 			}
 
-			if (this.CustomGridDefId != null)
+			if (CustomGridDefId != null)
 			{
-				hash = hash * 59 + this.CustomGridDefId.GetHashCode();
+				hash = hash * 59 + CustomGridDefId.GetHashCode();
 			}
 
-			if (this.DateTimeFormatting != null)
+			if (DateTimeFormatting != null)
 			{
-				hash = hash * 59 + this.DateTimeFormatting.GetHashCode();
+				hash = hash * 59 + DateTimeFormatting.GetHashCode();
 			}
 
-			if (this.FieldId != null)
+			if (FieldId != null)
 			{
-				hash = hash * 59 + this.FieldId.GetHashCode();
+				hash = hash * 59 + FieldId.GetHashCode();
 			}
 
-			if (this.Fields != null)
+			if (Fields != null)
 			{
-				hash = hash * 59 + this.Fields.GetHashCode();
+				hash = hash * 59 + Fields.GetHashCode();
 			}
 
-			if (this.Filters != null)
+			if (Filters != null)
 			{
-				hash = hash * 59 + this.Filters.GetHashCode();
+				hash = hash * 59 + Filters.GetHashCode();
 			}
 
-			if (this.IncludeAllFields != null)
+			if (IncludeAllFields != null)
 			{
-				hash = hash * 59 + this.IncludeAllFields.GetHashCode();
+				hash = hash * 59 + IncludeAllFields.GetHashCode();
 			}
 
-			if (this.IncludeSchema != null)
+			if (IncludeSchema != null)
 			{
-				hash = hash * 59 + this.IncludeSchema.GetHashCode();
+				hash = hash * 59 + IncludeSchema.GetHashCode();
 			}
 
-			if (this.PageNumber != null)
+			if (PageNumber != null)
 			{
-				hash = hash * 59 + this.PageNumber.GetHashCode();
+				hash = hash * 59 + PageNumber.GetHashCode();
 			}
 
-			if (this.PageSize != null)
+			if (PageSize != null)
 			{
-				hash = hash * 59 + this.PageSize.GetHashCode();
+				hash = hash * 59 + PageSize.GetHashCode();
 			}
 
-			if (this.Scope != null)
+			if (Scope != null)
 			{
-				hash = hash * 59 + this.Scope.GetHashCode();
+				hash = hash * 59 + Scope.GetHashCode();
 			}
 
-			if (this.ScopeOwner != null)
+			if (ScopeOwner != null)
 			{
-				hash = hash * 59 + this.ScopeOwner.GetHashCode();
+				hash = hash * 59 + ScopeOwner.GetHashCode();
 			}
 
-			if (this.SearchId != null)
+			if (SearchId != null)
 			{
-				hash = hash * 59 + this.SearchId.GetHashCode();
+				hash = hash * 59 + SearchId.GetHashCode();
 			}
 
-			if (this.SearchName != null)
+			if (SearchName != null)
 			{
-				hash = hash * 59 + this.SearchName.GetHashCode();
+				hash = hash * 59 + SearchName.GetHashCode();
 			}
 
-			if (this.SearchText != null)
+			if (SearchText != null)
 			{
-				hash = hash * 59 + this.SearchText.GetHashCode();
+				hash = hash * 59 + SearchText.GetHashCode();
 			}
 
-			if (this.Sorting != null)
+			if (Sorting != null)
 			{
-				hash = hash * 59 + this.Sorting.GetHashCode();
+				hash = hash * 59 + Sorting.GetHashCode();
 			}
 
-			if (this.PromptValues != null)
+			if (PromptValues != null)
 			{
-				hash = hash * 59 + this.PromptValues.GetHashCode();
+				hash = hash * 59 + PromptValues.GetHashCode();
 			}
 
 			return hash;

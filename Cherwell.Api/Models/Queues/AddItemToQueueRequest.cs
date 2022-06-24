@@ -71,7 +71,7 @@ public partial class AddItemToQueueRequest : IEquatable<AddItemToQueueRequest>, 
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as AddItemToQueueRequest);
+		return Equals(obj as AddItemToQueueRequest);
 	}
 
 	/// <summary>
@@ -89,19 +89,19 @@ public partial class AddItemToQueueRequest : IEquatable<AddItemToQueueRequest>, 
 
 		return
 				(
-					this.BusObId == other.BusObId ||
-					this.BusObId != null &&
-					this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
+					BusObId == other.BusObId ||
+					BusObId != null &&
+					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObRecId == other.BusObRecId ||
-					this.BusObRecId != null &&
-					this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
+					BusObRecId == other.BusObRecId ||
+					BusObRecId != null &&
+					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
 				) &&
 				(
-					this.QueueStandInKey == other.QueueStandInKey ||
-					this.QueueStandInKey != null &&
-					this.QueueStandInKey.Equals(other.QueueStandInKey, StringComparison.Ordinal)
+					QueueStandInKey == other.QueueStandInKey ||
+					QueueStandInKey != null &&
+					QueueStandInKey.Equals(other.QueueStandInKey, StringComparison.Ordinal)
 				);
 	}
 
@@ -116,19 +116,19 @@ public partial class AddItemToQueueRequest : IEquatable<AddItemToQueueRequest>, 
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.BusObId != null)
+			if (BusObId != null)
 			{
-				hash = hash * 59 + this.BusObId.GetHashCode();
+				hash = hash * 59 + BusObId.GetHashCode();
 			}
 
-			if (this.BusObRecId != null)
+			if (BusObRecId != null)
 			{
-				hash = hash * 59 + this.BusObRecId.GetHashCode();
+				hash = hash * 59 + BusObRecId.GetHashCode();
 			}
 
-			if (this.QueueStandInKey != null)
+			if (QueueStandInKey != null)
 			{
-				hash = hash * 59 + this.QueueStandInKey.GetHashCode();
+				hash = hash * 59 + QueueStandInKey.GetHashCode();
 			}
 
 			return hash;

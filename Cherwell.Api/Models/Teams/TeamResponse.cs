@@ -446,7 +446,7 @@ public partial class TeamResponse : IEquatable<TeamResponse>, IValidatableObject
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as TeamResponse);
+		return Equals(obj as TeamResponse);
 	}
 
 	/// <summary>
@@ -464,59 +464,59 @@ public partial class TeamResponse : IEquatable<TeamResponse>, IValidatableObject
 
 		return
 				(
-					this.Description == other.Description ||
-					this.Description != null &&
-					this.Description.Equals(other.Description, StringComparison.Ordinal)
+					Description == other.Description ||
+					Description != null &&
+					Description.Equals(other.Description, StringComparison.Ordinal)
 				) &&
 				(
-					this.EmailAlias == other.EmailAlias ||
-					this.EmailAlias != null &&
-					this.EmailAlias.Equals(other.EmailAlias, StringComparison.Ordinal)
+					EmailAlias == other.EmailAlias ||
+					EmailAlias != null &&
+					EmailAlias.Equals(other.EmailAlias, StringComparison.Ordinal)
 				) &&
 				(
-					this.Fields == other.Fields ||
-					this.Fields != null &&
-					this.Fields.SequenceEqual(other.Fields)
+					Fields == other.Fields ||
+					Fields != null &&
+					Fields.SequenceEqual(other.Fields)
 				) &&
 				(
-					this.Image == other.Image ||
-					this.Image != null &&
-					this.Image.Equals(other.Image, StringComparison.Ordinal)
+					Image == other.Image ||
+					Image != null &&
+					Image.Equals(other.Image, StringComparison.Ordinal)
 				) &&
 				(
-					this.Name == other.Name ||
-					this.Name != null &&
-					this.Name.Equals(other.Name, StringComparison.Ordinal)
+					Name == other.Name ||
+					Name != null &&
+					Name.Equals(other.Name, StringComparison.Ordinal)
 				) &&
 				(
-					this.TeamId == other.TeamId ||
-					this.TeamId != null &&
-					this.TeamId.Equals(other.TeamId, StringComparison.Ordinal)
+					TeamId == other.TeamId ||
+					TeamId != null &&
+					TeamId.Equals(other.TeamId, StringComparison.Ordinal)
 				) &&
 				(
-					this.TeamType == other.TeamType ||
-					this.TeamType != null &&
-					this.TeamType.Equals(other.TeamType)
+					TeamType == other.TeamType ||
+					TeamType != null &&
+					TeamType.Equals(other.TeamType)
 				) &&
 				(
-					this.ErrorCode == other.ErrorCode ||
-					this.ErrorCode != null &&
-					this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
+					ErrorCode == other.ErrorCode ||
+					ErrorCode != null &&
+					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
 				) &&
 				(
-					this.ErrorMessage == other.ErrorMessage ||
-					this.ErrorMessage != null &&
-					this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
+					ErrorMessage == other.ErrorMessage ||
+					ErrorMessage != null &&
+					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
 				) &&
 				(
-					this.HasError == other.HasError ||
-					this.HasError != null &&
-					this.HasError.Equals(other.HasError)
+					HasError == other.HasError ||
+					HasError != null &&
+					HasError.Equals(other.HasError)
 				) &&
 				(
-					this.HttpStatusCode == other.HttpStatusCode ||
-					this.HttpStatusCode != null &&
-					this.HttpStatusCode.Equals(other.HttpStatusCode)
+					HttpStatusCode == other.HttpStatusCode ||
+					HttpStatusCode != null &&
+					HttpStatusCode.Equals(other.HttpStatusCode)
 				);
 	}
 
@@ -531,59 +531,59 @@ public partial class TeamResponse : IEquatable<TeamResponse>, IValidatableObject
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Description != null)
+			if (Description != null)
 			{
-				hash = hash * 59 + this.Description.GetHashCode();
+				hash = hash * 59 + Description.GetHashCode();
 			}
 
-			if (this.EmailAlias != null)
+			if (EmailAlias != null)
 			{
-				hash = hash * 59 + this.EmailAlias.GetHashCode();
+				hash = hash * 59 + EmailAlias.GetHashCode();
 			}
 
-			if (this.Fields != null)
+			if (Fields != null)
 			{
-				hash = hash * 59 + this.Fields.GetHashCode();
+				hash = hash * 59 + Fields.GetHashCode();
 			}
 
-			if (this.Image != null)
+			if (Image != null)
 			{
-				hash = hash * 59 + this.Image.GetHashCode();
+				hash = hash * 59 + Image.GetHashCode();
 			}
 
-			if (this.Name != null)
+			if (Name != null)
 			{
-				hash = hash * 59 + this.Name.GetHashCode();
+				hash = hash * 59 + Name.GetHashCode();
 			}
 
-			if (this.TeamId != null)
+			if (TeamId != null)
 			{
-				hash = hash * 59 + this.TeamId.GetHashCode();
+				hash = hash * 59 + TeamId.GetHashCode();
 			}
 
-			if (this.TeamType != null)
+			if (TeamType != null)
 			{
-				hash = hash * 59 + this.TeamType.GetHashCode();
+				hash = hash * 59 + TeamType.GetHashCode();
 			}
 
-			if (this.ErrorCode != null)
+			if (ErrorCode != null)
 			{
-				hash = hash * 59 + this.ErrorCode.GetHashCode();
+				hash = hash * 59 + ErrorCode.GetHashCode();
 			}
 
-			if (this.ErrorMessage != null)
+			if (ErrorMessage != null)
 			{
-				hash = hash * 59 + this.ErrorMessage.GetHashCode();
+				hash = hash * 59 + ErrorMessage.GetHashCode();
 			}
 
-			if (this.HasError != null)
+			if (HasError != null)
 			{
-				hash = hash * 59 + this.HasError.GetHashCode();
+				hash = hash * 59 + HasError.GetHashCode();
 			}
 
-			if (this.HttpStatusCode != null)
+			if (HttpStatusCode != null)
 			{
-				hash = hash * 59 + this.HttpStatusCode.GetHashCode();
+				hash = hash * 59 + HttpStatusCode.GetHashCode();
 			}
 
 			return hash;

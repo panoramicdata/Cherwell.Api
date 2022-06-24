@@ -71,7 +71,7 @@ public partial class View : IEquatable<View>, IValidatableObject
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as View);
+		return Equals(obj as View);
 	}
 
 	/// <summary>
@@ -89,19 +89,19 @@ public partial class View : IEquatable<View>, IValidatableObject
 
 		return
 				(
-					this.Name == other.Name ||
-					this.Name != null &&
-					this.Name.Equals(other.Name, StringComparison.Ordinal)
+					Name == other.Name ||
+					Name != null &&
+					Name.Equals(other.Name, StringComparison.Ordinal)
 				) &&
 				(
-					this.ViewId == other.ViewId ||
-					this.ViewId != null &&
-					this.ViewId.Equals(other.ViewId, StringComparison.Ordinal)
+					ViewId == other.ViewId ||
+					ViewId != null &&
+					ViewId.Equals(other.ViewId, StringComparison.Ordinal)
 				) &&
 				(
-					this.Image == other.Image ||
-					this.Image != null &&
-					this.Image.Equals(other.Image, StringComparison.Ordinal)
+					Image == other.Image ||
+					Image != null &&
+					Image.Equals(other.Image, StringComparison.Ordinal)
 				);
 	}
 
@@ -116,19 +116,19 @@ public partial class View : IEquatable<View>, IValidatableObject
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Name != null)
+			if (Name != null)
 			{
-				hash = hash * 59 + this.Name.GetHashCode();
+				hash = hash * 59 + Name.GetHashCode();
 			}
 
-			if (this.ViewId != null)
+			if (ViewId != null)
 			{
-				hash = hash * 59 + this.ViewId.GetHashCode();
+				hash = hash * 59 + ViewId.GetHashCode();
 			}
 
-			if (this.Image != null)
+			if (Image != null)
 			{
-				hash = hash * 59 + this.Image.GetHashCode();
+				hash = hash * 59 + Image.GetHashCode();
 			}
 
 			return hash;

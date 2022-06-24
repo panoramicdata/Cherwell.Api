@@ -130,7 +130,7 @@ public partial class SaveRequest : IEquatable<SaveRequest>, IValidatableObject
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as SaveRequest);
+		return Equals(obj as SaveRequest);
 	}
 
 	/// <summary>
@@ -148,39 +148,39 @@ public partial class SaveRequest : IEquatable<SaveRequest>, IValidatableObject
 
 		return
 				(
-					this.BusObId == other.BusObId ||
-					this.BusObId != null &&
-					this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
+					BusObId == other.BusObId ||
+					BusObId != null &&
+					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObPublicId == other.BusObPublicId ||
-					this.BusObPublicId != null &&
-					this.BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
+					BusObPublicId == other.BusObPublicId ||
+					BusObPublicId != null &&
+					BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObRecId == other.BusObRecId ||
-					this.BusObRecId != null &&
-					this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
+					BusObRecId == other.BusObRecId ||
+					BusObRecId != null &&
+					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
 				) &&
 				(
-					this.CacheKey == other.CacheKey ||
-					this.CacheKey != null &&
-					this.CacheKey.Equals(other.CacheKey, StringComparison.Ordinal)
+					CacheKey == other.CacheKey ||
+					CacheKey != null &&
+					CacheKey.Equals(other.CacheKey, StringComparison.Ordinal)
 				) &&
 				(
-					this.CacheScope == other.CacheScope ||
-					this.CacheScope != null &&
-					this.CacheScope.Equals(other.CacheScope)
+					CacheScope == other.CacheScope ||
+					CacheScope != null &&
+					CacheScope.Equals(other.CacheScope)
 				) &&
 				(
-					this.Fields == other.Fields ||
-					this.Fields != null &&
-					this.Fields.SequenceEqual(other.Fields)
+					Fields == other.Fields ||
+					Fields != null &&
+					Fields.SequenceEqual(other.Fields)
 				) &&
 				(
-					this.Persist == other.Persist ||
-					this.Persist != null &&
-					this.Persist.Equals(other.Persist)
+					Persist == other.Persist ||
+					Persist != null &&
+					Persist.Equals(other.Persist)
 				);
 	}
 
@@ -195,39 +195,39 @@ public partial class SaveRequest : IEquatable<SaveRequest>, IValidatableObject
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.BusObId != null)
+			if (BusObId != null)
 			{
-				hash = hash * 59 + this.BusObId.GetHashCode();
+				hash = hash * 59 + BusObId.GetHashCode();
 			}
 
-			if (this.BusObPublicId != null)
+			if (BusObPublicId != null)
 			{
-				hash = hash * 59 + this.BusObPublicId.GetHashCode();
+				hash = hash * 59 + BusObPublicId.GetHashCode();
 			}
 
-			if (this.BusObRecId != null)
+			if (BusObRecId != null)
 			{
-				hash = hash * 59 + this.BusObRecId.GetHashCode();
+				hash = hash * 59 + BusObRecId.GetHashCode();
 			}
 
-			if (this.CacheKey != null)
+			if (CacheKey != null)
 			{
-				hash = hash * 59 + this.CacheKey.GetHashCode();
+				hash = hash * 59 + CacheKey.GetHashCode();
 			}
 
-			if (this.CacheScope != null)
+			if (CacheScope != null)
 			{
-				hash = hash * 59 + this.CacheScope.GetHashCode();
+				hash = hash * 59 + CacheScope.GetHashCode();
 			}
 
-			if (this.Fields != null)
+			if (Fields != null)
 			{
-				hash = hash * 59 + this.Fields.GetHashCode();
+				hash = hash * 59 + Fields.GetHashCode();
 			}
 
-			if (this.Persist != null)
+			if (Persist != null)
 			{
-				hash = hash * 59 + this.Persist.GetHashCode();
+				hash = hash * 59 + Persist.GetHashCode();
 			}
 
 			return hash;

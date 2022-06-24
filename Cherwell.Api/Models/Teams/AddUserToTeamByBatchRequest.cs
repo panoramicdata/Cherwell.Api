@@ -63,7 +63,7 @@ public partial class AddUserToTeamByBatchRequest : IEquatable<AddUserToTeamByBat
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as AddUserToTeamByBatchRequest);
+		return Equals(obj as AddUserToTeamByBatchRequest);
 	}
 
 	/// <summary>
@@ -81,14 +81,14 @@ public partial class AddUserToTeamByBatchRequest : IEquatable<AddUserToTeamByBat
 
 		return
 				(
-					this.AddUserToTeamRequests == other.AddUserToTeamRequests ||
-					this.AddUserToTeamRequests != null &&
-					this.AddUserToTeamRequests.SequenceEqual(other.AddUserToTeamRequests)
+					AddUserToTeamRequests == other.AddUserToTeamRequests ||
+					AddUserToTeamRequests != null &&
+					AddUserToTeamRequests.SequenceEqual(other.AddUserToTeamRequests)
 				) &&
 				(
-					this.StopOnError == other.StopOnError ||
-					this.StopOnError != null &&
-					this.StopOnError.Equals(other.StopOnError)
+					StopOnError == other.StopOnError ||
+					StopOnError != null &&
+					StopOnError.Equals(other.StopOnError)
 				);
 	}
 
@@ -103,14 +103,14 @@ public partial class AddUserToTeamByBatchRequest : IEquatable<AddUserToTeamByBat
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.AddUserToTeamRequests != null)
+			if (AddUserToTeamRequests != null)
 			{
-				hash = hash * 59 + this.AddUserToTeamRequests.GetHashCode();
+				hash = hash * 59 + AddUserToTeamRequests.GetHashCode();
 			}
 
-			if (this.StopOnError != null)
+			if (StopOnError != null)
 			{
-				hash = hash * 59 + this.StopOnError.GetHashCode();
+				hash = hash * 59 + StopOnError.GetHashCode();
 			}
 
 			return hash;

@@ -128,7 +128,7 @@ public partial class ColumnSchema : IEquatable<ColumnSchema>, IValidatableObject
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as ColumnSchema);
+		return Equals(obj as ColumnSchema);
 	}
 
 	/// <summary>
@@ -146,19 +146,19 @@ public partial class ColumnSchema : IEquatable<ColumnSchema>, IValidatableObject
 
 		return
 				(
-					this.Name == other.Name ||
-					this.Name != null &&
-					this.Name.Equals(other.Name, StringComparison.Ordinal)
+					Name == other.Name ||
+					Name != null &&
+					Name.Equals(other.Name, StringComparison.Ordinal)
 				) &&
 				(
-					this.FieldId == other.FieldId ||
-					this.FieldId != null &&
-					this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
+					FieldId == other.FieldId ||
+					FieldId != null &&
+					FieldId.Equals(other.FieldId, StringComparison.Ordinal)
 				) &&
 				(
-					this.Type == other.Type ||
-					this.Type != null &&
-					this.Type.Equals(other.Type)
+					Type == other.Type ||
+					Type != null &&
+					Type.Equals(other.Type)
 				);
 	}
 
@@ -173,19 +173,19 @@ public partial class ColumnSchema : IEquatable<ColumnSchema>, IValidatableObject
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Name != null)
+			if (Name != null)
 			{
-				hash = hash * 59 + this.Name.GetHashCode();
+				hash = hash * 59 + Name.GetHashCode();
 			}
 
-			if (this.FieldId != null)
+			if (FieldId != null)
 			{
-				hash = hash * 59 + this.FieldId.GetHashCode();
+				hash = hash * 59 + FieldId.GetHashCode();
 			}
 
-			if (this.Type != null)
+			if (Type != null)
 			{
-				hash = hash * 59 + this.Type.GetHashCode();
+				hash = hash * 59 + Type.GetHashCode();
 			}
 
 			return hash;

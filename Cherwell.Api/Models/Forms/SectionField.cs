@@ -14,52 +14,64 @@ public partial class SectionField : IEquatable<SectionField>, IValidatableObject
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SectionField" /> class.
 	/// </summary>
-	/// <param name="Attributes">Attributes.</param>
-	/// <param name="FieldId">FieldId.</param>
-	/// <param name="FieldType">FieldType.</param>
-	/// <param name="Label">Label.</param>
-	/// <param name="Multiline">Multiline.</param>
-	/// <param name="Value">Value.</param>
-	public SectionField(List<Object> Attributes, string FieldId, string FieldType, string Label, bool? Multiline, string Value)
+	/// <param name="attributes">Attributes.</param>
+	/// <param name="fieldId">FieldId.</param>
+	/// <param name="fieldType">FieldType.</param>
+	/// <param name="label">Label.</param>
+	/// <param name="multiline">Multiline.</param>
+	/// <param name="value">Value.</param>
+	public SectionField(
+		List<object> attributes,
+		string fieldId,
+		string fieldType,
+		string label,
+		bool? multiline,
+		string value)
 	{
-		this.Attributes = Attributes;
-		this.FieldId = FieldId;
-		this.FieldType = FieldType;
-		this.Label = Label;
-		this.Multiline = Multiline;
-		this.Value = Value;
+		Attributes = attributes;
+		FieldId = fieldId;
+		FieldType = fieldType;
+		Label = label;
+		Multiline = multiline;
+		Value = value;
 	}
 
 	/// <summary>
 	/// Gets or Sets Attributes
 	/// </summary>
 	[DataMember(Name = "attributes", EmitDefaultValue = false)]
-	public List<Object> Attributes { get; set; }
+	public List<object> Attributes { get; set; }
+
 	/// <summary>
 	/// Gets or Sets FieldId
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
 	public string FieldId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets FieldType
 	/// </summary>
 	[DataMember(Name = "fieldType", EmitDefaultValue = false)]
 	public string FieldType { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Label
 	/// </summary>
 	[DataMember(Name = "label", EmitDefaultValue = false)]
 	public string Label { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Multiline
 	/// </summary>
 	[DataMember(Name = "multiline", EmitDefaultValue = false)]
 	public bool? Multiline { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Value
 	/// </summary>
 	[DataMember(Name = "value", EmitDefaultValue = false)]
 	public string Value { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>
@@ -95,7 +107,7 @@ public partial class SectionField : IEquatable<SectionField>, IValidatableObject
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as SectionField);
+		return Equals(obj as SectionField);
 	}
 
 	/// <summary>
@@ -113,34 +125,34 @@ public partial class SectionField : IEquatable<SectionField>, IValidatableObject
 
 		return
 				(
-					this.Attributes == other.Attributes ||
-					this.Attributes != null &&
-					this.Attributes.SequenceEqual(other.Attributes)
+					Attributes == other.Attributes ||
+					Attributes != null &&
+					Attributes.SequenceEqual(other.Attributes)
 				) &&
 				(
-					this.FieldId == other.FieldId ||
-					this.FieldId != null &&
-					this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
+					FieldId == other.FieldId ||
+					FieldId != null &&
+					FieldId.Equals(other.FieldId, StringComparison.Ordinal)
 				) &&
 				(
-					this.FieldType == other.FieldType ||
-					this.FieldType != null &&
-					this.FieldType.Equals(other.FieldType, StringComparison.Ordinal)
+					FieldType == other.FieldType ||
+					FieldType != null &&
+					FieldType.Equals(other.FieldType, StringComparison.Ordinal)
 				) &&
 				(
-					this.Label == other.Label ||
-					this.Label != null &&
-					this.Label.Equals(other.Label, StringComparison.Ordinal)
+					Label == other.Label ||
+					Label != null &&
+					Label.Equals(other.Label, StringComparison.Ordinal)
 				) &&
 				(
-					this.Multiline == other.Multiline ||
-					this.Multiline != null &&
-					this.Multiline.Equals(other.Multiline)
+					Multiline == other.Multiline ||
+					Multiline != null &&
+					Multiline.Equals(other.Multiline)
 				) &&
 				(
-					this.Value == other.Value ||
-					this.Value != null &&
-					this.Value.Equals(other.Value, StringComparison.Ordinal)
+					Value == other.Value ||
+					Value != null &&
+					Value.Equals(other.Value, StringComparison.Ordinal)
 				);
 	}
 
@@ -155,34 +167,34 @@ public partial class SectionField : IEquatable<SectionField>, IValidatableObject
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Attributes != null)
+			if (Attributes != null)
 			{
-				hash = hash * 59 + this.Attributes.GetHashCode();
+				hash = hash * 59 + Attributes.GetHashCode();
 			}
 
-			if (this.FieldId != null)
+			if (FieldId != null)
 			{
-				hash = hash * 59 + this.FieldId.GetHashCode();
+				hash = hash * 59 + FieldId.GetHashCode();
 			}
 
-			if (this.FieldType != null)
+			if (FieldType != null)
 			{
-				hash = hash * 59 + this.FieldType.GetHashCode();
+				hash = hash * 59 + FieldType.GetHashCode();
 			}
 
-			if (this.Label != null)
+			if (Label != null)
 			{
-				hash = hash * 59 + this.Label.GetHashCode();
+				hash = hash * 59 + Label.GetHashCode();
 			}
 
-			if (this.Multiline != null)
+			if (Multiline != null)
 			{
-				hash = hash * 59 + this.Multiline.GetHashCode();
+				hash = hash * 59 + Multiline.GetHashCode();
 			}
 
-			if (this.Value != null)
+			if (Value != null)
 			{
-				hash = hash * 59 + this.Value.GetHashCode();
+				hash = hash * 59 + Value.GetHashCode();
 			}
 
 			return hash;

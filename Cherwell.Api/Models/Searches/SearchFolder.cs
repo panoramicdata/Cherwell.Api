@@ -136,7 +136,7 @@ public partial class SearchFolder : IEquatable<SearchFolder>, IValidatableObject
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as SearchFolder);
+		return Equals(obj as SearchFolder);
 	}
 
 	/// <summary>
@@ -154,54 +154,54 @@ public partial class SearchFolder : IEquatable<SearchFolder>, IValidatableObject
 
 		return
 				(
-					this.Association == other.Association ||
-					this.Association != null &&
-					this.Association.Equals(other.Association, StringComparison.Ordinal)
+					Association == other.Association ||
+					Association != null &&
+					Association.Equals(other.Association, StringComparison.Ordinal)
 				) &&
 				(
-					this.ChildFolders == other.ChildFolders ||
-					this.ChildFolders != null &&
-					this.ChildFolders.SequenceEqual(other.ChildFolders)
+					ChildFolders == other.ChildFolders ||
+					ChildFolders != null &&
+					ChildFolders.SequenceEqual(other.ChildFolders)
 				) &&
 				(
-					this.ChildItems == other.ChildItems ||
-					this.ChildItems != null &&
-					this.ChildItems.SequenceEqual(other.ChildItems)
+					ChildItems == other.ChildItems ||
+					ChildItems != null &&
+					ChildItems.SequenceEqual(other.ChildItems)
 				) &&
 				(
-					this.FolderId == other.FolderId ||
-					this.FolderId != null &&
-					this.FolderId.Equals(other.FolderId, StringComparison.Ordinal)
+					FolderId == other.FolderId ||
+					FolderId != null &&
+					FolderId.Equals(other.FolderId, StringComparison.Ordinal)
 				) &&
 				(
-					this.FolderName == other.FolderName ||
-					this.FolderName != null &&
-					this.FolderName.Equals(other.FolderName, StringComparison.Ordinal)
+					FolderName == other.FolderName ||
+					FolderName != null &&
+					FolderName.Equals(other.FolderName, StringComparison.Ordinal)
 				) &&
 				(
-					this.Links == other.Links ||
-					this.Links != null &&
-					this.Links.SequenceEqual(other.Links)
+					Links == other.Links ||
+					Links != null &&
+					Links.SequenceEqual(other.Links)
 				) &&
 				(
-					this.LocalizedScopeName == other.LocalizedScopeName ||
-					this.LocalizedScopeName != null &&
-					this.LocalizedScopeName.Equals(other.LocalizedScopeName, StringComparison.Ordinal)
+					LocalizedScopeName == other.LocalizedScopeName ||
+					LocalizedScopeName != null &&
+					LocalizedScopeName.Equals(other.LocalizedScopeName, StringComparison.Ordinal)
 				) &&
 				(
-					this.ParentFolderId == other.ParentFolderId ||
-					this.ParentFolderId != null &&
-					this.ParentFolderId.Equals(other.ParentFolderId, StringComparison.Ordinal)
+					ParentFolderId == other.ParentFolderId ||
+					ParentFolderId != null &&
+					ParentFolderId.Equals(other.ParentFolderId, StringComparison.Ordinal)
 				) &&
 				(
-					this.Scope == other.Scope ||
-					this.Scope != null &&
-					this.Scope.Equals(other.Scope, StringComparison.Ordinal)
+					Scope == other.Scope ||
+					Scope != null &&
+					Scope.Equals(other.Scope, StringComparison.Ordinal)
 				) &&
 				(
-					this.ScopeOwner == other.ScopeOwner ||
-					this.ScopeOwner != null &&
-					this.ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
+					ScopeOwner == other.ScopeOwner ||
+					ScopeOwner != null &&
+					ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
 				);
 	}
 
@@ -216,54 +216,54 @@ public partial class SearchFolder : IEquatable<SearchFolder>, IValidatableObject
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Association != null)
+			if (Association != null)
 			{
-				hash = hash * 59 + this.Association.GetHashCode();
+				hash = hash * 59 + Association.GetHashCode();
 			}
 
-			if (this.ChildFolders != null)
+			if (ChildFolders != null)
 			{
-				hash = hash * 59 + this.ChildFolders.GetHashCode();
+				hash = hash * 59 + ChildFolders.GetHashCode();
 			}
 
-			if (this.ChildItems != null)
+			if (ChildItems != null)
 			{
-				hash = hash * 59 + this.ChildItems.GetHashCode();
+				hash = hash * 59 + ChildItems.GetHashCode();
 			}
 
-			if (this.FolderId != null)
+			if (FolderId != null)
 			{
-				hash = hash * 59 + this.FolderId.GetHashCode();
+				hash = hash * 59 + FolderId.GetHashCode();
 			}
 
-			if (this.FolderName != null)
+			if (FolderName != null)
 			{
-				hash = hash * 59 + this.FolderName.GetHashCode();
+				hash = hash * 59 + FolderName.GetHashCode();
 			}
 
-			if (this.Links != null)
+			if (Links != null)
 			{
-				hash = hash * 59 + this.Links.GetHashCode();
+				hash = hash * 59 + Links.GetHashCode();
 			}
 
-			if (this.LocalizedScopeName != null)
+			if (LocalizedScopeName != null)
 			{
-				hash = hash * 59 + this.LocalizedScopeName.GetHashCode();
+				hash = hash * 59 + LocalizedScopeName.GetHashCode();
 			}
 
-			if (this.ParentFolderId != null)
+			if (ParentFolderId != null)
 			{
-				hash = hash * 59 + this.ParentFolderId.GetHashCode();
+				hash = hash * 59 + ParentFolderId.GetHashCode();
 			}
 
-			if (this.Scope != null)
+			if (Scope != null)
 			{
-				hash = hash * 59 + this.Scope.GetHashCode();
+				hash = hash * 59 + Scope.GetHashCode();
 			}
 
-			if (this.ScopeOwner != null)
+			if (ScopeOwner != null)
 			{
-				hash = hash * 59 + this.ScopeOwner.GetHashCode();
+				hash = hash * 59 + ScopeOwner.GetHashCode();
 			}
 
 			return hash;

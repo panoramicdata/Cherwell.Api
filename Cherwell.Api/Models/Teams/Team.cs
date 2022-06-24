@@ -63,7 +63,7 @@ public partial class Team : IEquatable<Team>, IValidatableObject
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as Team);
+		return Equals(obj as Team);
 	}
 
 	/// <summary>
@@ -81,14 +81,14 @@ public partial class Team : IEquatable<Team>, IValidatableObject
 
 		return
 				(
-					this.TeamId == other.TeamId ||
-					this.TeamId != null &&
-					this.TeamId.Equals(other.TeamId, StringComparison.Ordinal)
+					TeamId == other.TeamId ||
+					TeamId != null &&
+					TeamId.Equals(other.TeamId, StringComparison.Ordinal)
 				) &&
 				(
-					this.TeamName == other.TeamName ||
-					this.TeamName != null &&
-					this.TeamName.Equals(other.TeamName, StringComparison.Ordinal)
+					TeamName == other.TeamName ||
+					TeamName != null &&
+					TeamName.Equals(other.TeamName, StringComparison.Ordinal)
 				);
 	}
 
@@ -103,14 +103,14 @@ public partial class Team : IEquatable<Team>, IValidatableObject
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.TeamId != null)
+			if (TeamId != null)
 			{
-				hash = hash * 59 + this.TeamId.GetHashCode();
+				hash = hash * 59 + TeamId.GetHashCode();
 			}
 
-			if (this.TeamName != null)
+			if (TeamName != null)
 			{
-				hash = hash * 59 + this.TeamName.GetHashCode();
+				hash = hash * 59 + TeamName.GetHashCode();
 			}
 
 			return hash;

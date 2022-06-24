@@ -55,7 +55,7 @@ public partial class TransitionRecordRequest : IEquatable<TransitionRecordReques
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as TransitionRecordRequest);
+		return Equals(obj as TransitionRecordRequest);
 	}
 
 	/// <summary>
@@ -73,9 +73,9 @@ public partial class TransitionRecordRequest : IEquatable<TransitionRecordReques
 
 		return
 				(
-					this.TransitionOptionId == other.TransitionOptionId ||
-					this.TransitionOptionId != null &&
-					this.TransitionOptionId.Equals(other.TransitionOptionId, StringComparison.Ordinal)
+					TransitionOptionId == other.TransitionOptionId ||
+					TransitionOptionId != null &&
+					TransitionOptionId.Equals(other.TransitionOptionId, StringComparison.Ordinal)
 				);
 	}
 
@@ -90,9 +90,9 @@ public partial class TransitionRecordRequest : IEquatable<TransitionRecordReques
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.TransitionOptionId != null)
+			if (TransitionOptionId != null)
 			{
-				hash = hash * 59 + this.TransitionOptionId.GetHashCode();
+				hash = hash * 59 + TransitionOptionId.GetHashCode();
 			}
 
 			return hash;

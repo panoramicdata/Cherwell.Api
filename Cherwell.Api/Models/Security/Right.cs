@@ -175,7 +175,7 @@ public partial class Right : IEquatable<Right>, IValidatableObject
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as Right);
+		return Equals(obj as Right);
 	}
 
 	/// <summary>
@@ -193,84 +193,84 @@ public partial class Right : IEquatable<Right>, IValidatableObject
 
 		return
 				(
-					this.Add == other.Add ||
-					this.Add != null &&
-					this.Add.Equals(other.Add)
+					Add == other.Add ||
+					Add != null &&
+					Add.Equals(other.Add)
 				) &&
 				(
-					this.Allow == other.Allow ||
-					this.Allow != null &&
-					this.Allow.Equals(other.Allow)
+					Allow == other.Allow ||
+					Allow != null &&
+					Allow.Equals(other.Allow)
 				) &&
 				(
-					this.CategoryDescription == other.CategoryDescription ||
-					this.CategoryDescription != null &&
-					this.CategoryDescription.Equals(other.CategoryDescription, StringComparison.Ordinal)
+					CategoryDescription == other.CategoryDescription ||
+					CategoryDescription != null &&
+					CategoryDescription.Equals(other.CategoryDescription, StringComparison.Ordinal)
 				) &&
 				(
-					this.CategoryId == other.CategoryId ||
-					this.CategoryId != null &&
-					this.CategoryId.Equals(other.CategoryId, StringComparison.Ordinal)
+					CategoryId == other.CategoryId ||
+					CategoryId != null &&
+					CategoryId.Equals(other.CategoryId, StringComparison.Ordinal)
 				) &&
 				(
-					this.CategoryName == other.CategoryName ||
-					this.CategoryName != null &&
-					this.CategoryName.Equals(other.CategoryName, StringComparison.Ordinal)
+					CategoryName == other.CategoryName ||
+					CategoryName != null &&
+					CategoryName.Equals(other.CategoryName, StringComparison.Ordinal)
 				) &&
 				(
-					this.Delete == other.Delete ||
-					this.Delete != null &&
-					this.Delete.Equals(other.Delete)
+					Delete == other.Delete ||
+					Delete != null &&
+					Delete.Equals(other.Delete)
 				) &&
 				(
-					this.Edit == other.Edit ||
-					this.Edit != null &&
-					this.Edit.Equals(other.Edit)
+					Edit == other.Edit ||
+					Edit != null &&
+					Edit.Equals(other.Edit)
 				) &&
 				(
-					this.IsYesNoRight == other.IsYesNoRight ||
-					this.IsYesNoRight != null &&
-					this.IsYesNoRight.Equals(other.IsYesNoRight)
+					IsYesNoRight == other.IsYesNoRight ||
+					IsYesNoRight != null &&
+					IsYesNoRight.Equals(other.IsYesNoRight)
 				) &&
 				(
-					this.NonScopeOwnerAdd == other.NonScopeOwnerAdd ||
-					this.NonScopeOwnerAdd != null &&
-					this.NonScopeOwnerAdd.Equals(other.NonScopeOwnerAdd)
+					NonScopeOwnerAdd == other.NonScopeOwnerAdd ||
+					NonScopeOwnerAdd != null &&
+					NonScopeOwnerAdd.Equals(other.NonScopeOwnerAdd)
 				) &&
 				(
-					this.NonScopeOwnerDelete == other.NonScopeOwnerDelete ||
-					this.NonScopeOwnerDelete != null &&
-					this.NonScopeOwnerDelete.Equals(other.NonScopeOwnerDelete)
+					NonScopeOwnerDelete == other.NonScopeOwnerDelete ||
+					NonScopeOwnerDelete != null &&
+					NonScopeOwnerDelete.Equals(other.NonScopeOwnerDelete)
 				) &&
 				(
-					this.NonScopeOwnerEdit == other.NonScopeOwnerEdit ||
-					this.NonScopeOwnerEdit != null &&
-					this.NonScopeOwnerEdit.Equals(other.NonScopeOwnerEdit)
+					NonScopeOwnerEdit == other.NonScopeOwnerEdit ||
+					NonScopeOwnerEdit != null &&
+					NonScopeOwnerEdit.Equals(other.NonScopeOwnerEdit)
 				) &&
 				(
-					this.NonScopeOwnerView == other.NonScopeOwnerView ||
-					this.NonScopeOwnerView != null &&
-					this.NonScopeOwnerView.Equals(other.NonScopeOwnerView)
+					NonScopeOwnerView == other.NonScopeOwnerView ||
+					NonScopeOwnerView != null &&
+					NonScopeOwnerView.Equals(other.NonScopeOwnerView)
 				) &&
 				(
-					this.RightId == other.RightId ||
-					this.RightId != null &&
-					this.RightId.Equals(other.RightId, StringComparison.Ordinal)
+					RightId == other.RightId ||
+					RightId != null &&
+					RightId.Equals(other.RightId, StringComparison.Ordinal)
 				) &&
 				(
-					this.RightName == other.RightName ||
-					this.RightName != null &&
-					this.RightName.Equals(other.RightName, StringComparison.Ordinal)
+					RightName == other.RightName ||
+					RightName != null &&
+					RightName.Equals(other.RightName, StringComparison.Ordinal)
 				) &&
 				(
-					this.StandardRightName == other.StandardRightName ||
-					this.StandardRightName != null &&
-					this.StandardRightName.Equals(other.StandardRightName, StringComparison.Ordinal)
+					StandardRightName == other.StandardRightName ||
+					StandardRightName != null &&
+					StandardRightName.Equals(other.StandardRightName, StringComparison.Ordinal)
 				) &&
 				(
-					this.ViewRunOpen == other.ViewRunOpen ||
-					this.ViewRunOpen != null &&
-					this.ViewRunOpen.Equals(other.ViewRunOpen)
+					ViewRunOpen == other.ViewRunOpen ||
+					ViewRunOpen != null &&
+					ViewRunOpen.Equals(other.ViewRunOpen)
 				);
 	}
 
@@ -285,84 +285,84 @@ public partial class Right : IEquatable<Right>, IValidatableObject
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Add != null)
+			if (Add != null)
 			{
-				hash = hash * 59 + this.Add.GetHashCode();
+				hash = hash * 59 + Add.GetHashCode();
 			}
 
-			if (this.Allow != null)
+			if (Allow != null)
 			{
-				hash = hash * 59 + this.Allow.GetHashCode();
+				hash = hash * 59 + Allow.GetHashCode();
 			}
 
-			if (this.CategoryDescription != null)
+			if (CategoryDescription != null)
 			{
-				hash = hash * 59 + this.CategoryDescription.GetHashCode();
+				hash = hash * 59 + CategoryDescription.GetHashCode();
 			}
 
-			if (this.CategoryId != null)
+			if (CategoryId != null)
 			{
-				hash = hash * 59 + this.CategoryId.GetHashCode();
+				hash = hash * 59 + CategoryId.GetHashCode();
 			}
 
-			if (this.CategoryName != null)
+			if (CategoryName != null)
 			{
-				hash = hash * 59 + this.CategoryName.GetHashCode();
+				hash = hash * 59 + CategoryName.GetHashCode();
 			}
 
-			if (this.Delete != null)
+			if (Delete != null)
 			{
-				hash = hash * 59 + this.Delete.GetHashCode();
+				hash = hash * 59 + Delete.GetHashCode();
 			}
 
-			if (this.Edit != null)
+			if (Edit != null)
 			{
-				hash = hash * 59 + this.Edit.GetHashCode();
+				hash = hash * 59 + Edit.GetHashCode();
 			}
 
-			if (this.IsYesNoRight != null)
+			if (IsYesNoRight != null)
 			{
-				hash = hash * 59 + this.IsYesNoRight.GetHashCode();
+				hash = hash * 59 + IsYesNoRight.GetHashCode();
 			}
 
-			if (this.NonScopeOwnerAdd != null)
+			if (NonScopeOwnerAdd != null)
 			{
-				hash = hash * 59 + this.NonScopeOwnerAdd.GetHashCode();
+				hash = hash * 59 + NonScopeOwnerAdd.GetHashCode();
 			}
 
-			if (this.NonScopeOwnerDelete != null)
+			if (NonScopeOwnerDelete != null)
 			{
-				hash = hash * 59 + this.NonScopeOwnerDelete.GetHashCode();
+				hash = hash * 59 + NonScopeOwnerDelete.GetHashCode();
 			}
 
-			if (this.NonScopeOwnerEdit != null)
+			if (NonScopeOwnerEdit != null)
 			{
-				hash = hash * 59 + this.NonScopeOwnerEdit.GetHashCode();
+				hash = hash * 59 + NonScopeOwnerEdit.GetHashCode();
 			}
 
-			if (this.NonScopeOwnerView != null)
+			if (NonScopeOwnerView != null)
 			{
-				hash = hash * 59 + this.NonScopeOwnerView.GetHashCode();
+				hash = hash * 59 + NonScopeOwnerView.GetHashCode();
 			}
 
-			if (this.RightId != null)
+			if (RightId != null)
 			{
-				hash = hash * 59 + this.RightId.GetHashCode();
+				hash = hash * 59 + RightId.GetHashCode();
 			}
 
-			if (this.RightName != null)
+			if (RightName != null)
 			{
-				hash = hash * 59 + this.RightName.GetHashCode();
+				hash = hash * 59 + RightName.GetHashCode();
 			}
 
-			if (this.StandardRightName != null)
+			if (StandardRightName != null)
 			{
-				hash = hash * 59 + this.StandardRightName.GetHashCode();
+				hash = hash * 59 + StandardRightName.GetHashCode();
 			}
 
-			if (this.ViewRunOpen != null)
+			if (ViewRunOpen != null)
 			{
-				hash = hash * 59 + this.ViewRunOpen.GetHashCode();
+				hash = hash * 59 + ViewRunOpen.GetHashCode();
 			}
 
 			return hash;

@@ -33,23 +33,23 @@ public partial class User : IEquatable<User>, IValidatableObject
 	/// <param name="userMustResetPasswordAtNextLogin">UserMustResetPasswordAtNextLogin.</param>
 	public User(bool? accountLocked, DateTime? createDateTime, string displayName, string error, string errorCode, List<FieldTemplateItem> fields, bool? hasError, DateTime? lastPasswordResetDate, DateTime? lastResetDateTime, bool? ldapRequired, bool? passwordNeverExpires, string publicId, string recordId, string securityGroupId, string shortDisplayName, bool? userCannotChangePassword, bool? userMustResetPasswordAtNextLogin)
 	{
-		this.AccountLocked = accountLocked;
-		this.CreateDateTime = createDateTime;
-		this.DisplayName = displayName;
-		this.Error = error;
-		this.ErrorCode = errorCode;
-		this.Fields = fields;
-		this.HasError = hasError;
-		this.LastPasswordResetDate = lastPasswordResetDate;
-		this.LastResetDateTime = lastResetDateTime;
-		this.LdapRequired = ldapRequired;
-		this.PasswordNeverExpires = passwordNeverExpires;
-		this.PublicId = publicId;
-		this.RecordId = recordId;
-		this.SecurityGroupId = securityGroupId;
-		this.ShortDisplayName = shortDisplayName;
-		this.UserCannotChangePassword = userCannotChangePassword;
-		this.UserMustResetPasswordAtNextLogin = userMustResetPasswordAtNextLogin;
+		AccountLocked = accountLocked;
+		CreateDateTime = createDateTime;
+		DisplayName = displayName;
+		Error = error;
+		ErrorCode = errorCode;
+		Fields = fields;
+		HasError = hasError;
+		LastPasswordResetDate = lastPasswordResetDate;
+		LastResetDateTime = lastResetDateTime;
+		LdapRequired = ldapRequired;
+		PasswordNeverExpires = passwordNeverExpires;
+		PublicId = publicId;
+		RecordId = recordId;
+		SecurityGroupId = securityGroupId;
+		ShortDisplayName = shortDisplayName;
+		UserCannotChangePassword = userCannotChangePassword;
+		UserMustResetPasswordAtNextLogin = userMustResetPasswordAtNextLogin;
 	}
 
 	/// <summary>

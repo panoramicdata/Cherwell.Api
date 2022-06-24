@@ -71,7 +71,7 @@ public partial class SaveWorkgroupMemberRequest : IEquatable<SaveWorkgroupMember
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as SaveWorkgroupMemberRequest);
+		return Equals(obj as SaveWorkgroupMemberRequest);
 	}
 
 	/// <summary>
@@ -89,19 +89,19 @@ public partial class SaveWorkgroupMemberRequest : IEquatable<SaveWorkgroupMember
 
 		return
 				(
-					this.CustomerRecordId == other.CustomerRecordId ||
-					this.CustomerRecordId != null &&
-					this.CustomerRecordId.Equals(other.CustomerRecordId, StringComparison.Ordinal)
+					CustomerRecordId == other.CustomerRecordId ||
+					CustomerRecordId != null &&
+					CustomerRecordId.Equals(other.CustomerRecordId, StringComparison.Ordinal)
 				) &&
 				(
-					this.WorkgroupId == other.WorkgroupId ||
-					this.WorkgroupId != null &&
-					this.WorkgroupId.Equals(other.WorkgroupId, StringComparison.Ordinal)
+					WorkgroupId == other.WorkgroupId ||
+					WorkgroupId != null &&
+					WorkgroupId.Equals(other.WorkgroupId, StringComparison.Ordinal)
 				) &&
 				(
-					this.CustomerIsWorkgroupManager == other.CustomerIsWorkgroupManager ||
-					this.CustomerIsWorkgroupManager != null &&
-					this.CustomerIsWorkgroupManager.Equals(other.CustomerIsWorkgroupManager)
+					CustomerIsWorkgroupManager == other.CustomerIsWorkgroupManager ||
+					CustomerIsWorkgroupManager != null &&
+					CustomerIsWorkgroupManager.Equals(other.CustomerIsWorkgroupManager)
 				);
 	}
 
@@ -116,19 +116,19 @@ public partial class SaveWorkgroupMemberRequest : IEquatable<SaveWorkgroupMember
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.CustomerRecordId != null)
+			if (CustomerRecordId != null)
 			{
-				hash = hash * 59 + this.CustomerRecordId.GetHashCode();
+				hash = hash * 59 + CustomerRecordId.GetHashCode();
 			}
 
-			if (this.WorkgroupId != null)
+			if (WorkgroupId != null)
 			{
-				hash = hash * 59 + this.WorkgroupId.GetHashCode();
+				hash = hash * 59 + WorkgroupId.GetHashCode();
 			}
 
-			if (this.CustomerIsWorkgroupManager != null)
+			if (CustomerIsWorkgroupManager != null)
 			{
-				hash = hash * 59 + this.CustomerIsWorkgroupManager.GetHashCode();
+				hash = hash * 59 + CustomerIsWorkgroupManager.GetHashCode();
 			}
 
 			return hash;

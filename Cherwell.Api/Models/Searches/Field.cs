@@ -231,7 +231,7 @@ public partial class Field : IEquatable<Field>, IValidatableObject
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as Field);
+		return Equals(obj as Field);
 	}
 
 	/// <summary>
@@ -249,119 +249,119 @@ public partial class Field : IEquatable<Field>, IValidatableObject
 
 		return
 				(
-					this.Caption == other.Caption ||
-					this.Caption != null &&
-					this.Caption.Equals(other.Caption, StringComparison.Ordinal)
+					Caption == other.Caption ||
+					Caption != null &&
+					Caption.Equals(other.Caption, StringComparison.Ordinal)
 				) &&
 				(
-					this.CurrencyCulture == other.CurrencyCulture ||
-					this.CurrencyCulture != null &&
-					this.CurrencyCulture.Equals(other.CurrencyCulture, StringComparison.Ordinal)
+					CurrencyCulture == other.CurrencyCulture ||
+					CurrencyCulture != null &&
+					CurrencyCulture.Equals(other.CurrencyCulture, StringComparison.Ordinal)
 				) &&
 				(
-					this.CurrencySymbol == other.CurrencySymbol ||
-					this.CurrencySymbol != null &&
-					this.CurrencySymbol.Equals(other.CurrencySymbol, StringComparison.Ordinal)
+					CurrencySymbol == other.CurrencySymbol ||
+					CurrencySymbol != null &&
+					CurrencySymbol.Equals(other.CurrencySymbol, StringComparison.Ordinal)
 				) &&
 				(
-					this.DecimalDigits == other.DecimalDigits ||
-					this.DecimalDigits != null &&
-					this.DecimalDigits.Equals(other.DecimalDigits)
+					DecimalDigits == other.DecimalDigits ||
+					DecimalDigits != null &&
+					DecimalDigits.Equals(other.DecimalDigits)
 				) &&
 				(
-					this.DefaultSortOrderAscending == other.DefaultSortOrderAscending ||
-					this.DefaultSortOrderAscending != null &&
-					this.DefaultSortOrderAscending.Equals(other.DefaultSortOrderAscending)
+					DefaultSortOrderAscending == other.DefaultSortOrderAscending ||
+					DefaultSortOrderAscending != null &&
+					DefaultSortOrderAscending.Equals(other.DefaultSortOrderAscending)
 				) &&
 				(
-					this.DisplayName == other.DisplayName ||
-					this.DisplayName != null &&
-					this.DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
+					DisplayName == other.DisplayName ||
+					DisplayName != null &&
+					DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
 				) &&
 				(
-					this.FieldName == other.FieldName ||
-					this.FieldName != null &&
-					this.FieldName.Equals(other.FieldName, StringComparison.Ordinal)
+					FieldName == other.FieldName ||
+					FieldName != null &&
+					FieldName.Equals(other.FieldName, StringComparison.Ordinal)
 				) &&
 				(
-					this.FullFieldId == other.FullFieldId ||
-					this.FullFieldId != null &&
-					this.FullFieldId.Equals(other.FullFieldId, StringComparison.Ordinal)
+					FullFieldId == other.FullFieldId ||
+					FullFieldId != null &&
+					FullFieldId.Equals(other.FullFieldId, StringComparison.Ordinal)
 				) &&
 				(
-					this.HasDefaultSortField == other.HasDefaultSortField ||
-					this.HasDefaultSortField != null &&
-					this.HasDefaultSortField.Equals(other.HasDefaultSortField)
+					HasDefaultSortField == other.HasDefaultSortField ||
+					HasDefaultSortField != null &&
+					HasDefaultSortField.Equals(other.HasDefaultSortField)
 				) &&
 				(
-					this.FieldId == other.FieldId ||
-					this.FieldId != null &&
-					this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
+					FieldId == other.FieldId ||
+					FieldId != null &&
+					FieldId.Equals(other.FieldId, StringComparison.Ordinal)
 				) &&
 				(
-					this.IsBinary == other.IsBinary ||
-					this.IsBinary != null &&
-					this.IsBinary.Equals(other.IsBinary)
+					IsBinary == other.IsBinary ||
+					IsBinary != null &&
+					IsBinary.Equals(other.IsBinary)
 				) &&
 				(
-					this.IsCurrency == other.IsCurrency ||
-					this.IsCurrency != null &&
-					this.IsCurrency.Equals(other.IsCurrency)
+					IsCurrency == other.IsCurrency ||
+					IsCurrency != null &&
+					IsCurrency.Equals(other.IsCurrency)
 				) &&
 				(
-					this.IsDateTime == other.IsDateTime ||
-					this.IsDateTime != null &&
-					this.IsDateTime.Equals(other.IsDateTime)
+					IsDateTime == other.IsDateTime ||
+					IsDateTime != null &&
+					IsDateTime.Equals(other.IsDateTime)
 				) &&
 				(
-					this.IsFilterAllowed == other.IsFilterAllowed ||
-					this.IsFilterAllowed != null &&
-					this.IsFilterAllowed.Equals(other.IsFilterAllowed)
+					IsFilterAllowed == other.IsFilterAllowed ||
+					IsFilterAllowed != null &&
+					IsFilterAllowed.Equals(other.IsFilterAllowed)
 				) &&
 				(
-					this.IsLogical == other.IsLogical ||
-					this.IsLogical != null &&
-					this.IsLogical.Equals(other.IsLogical)
+					IsLogical == other.IsLogical ||
+					IsLogical != null &&
+					IsLogical.Equals(other.IsLogical)
 				) &&
 				(
-					this.IsNumber == other.IsNumber ||
-					this.IsNumber != null &&
-					this.IsNumber.Equals(other.IsNumber)
+					IsNumber == other.IsNumber ||
+					IsNumber != null &&
+					IsNumber.Equals(other.IsNumber)
 				) &&
 				(
-					this.IsShortDate == other.IsShortDate ||
-					this.IsShortDate != null &&
-					this.IsShortDate.Equals(other.IsShortDate)
+					IsShortDate == other.IsShortDate ||
+					IsShortDate != null &&
+					IsShortDate.Equals(other.IsShortDate)
 				) &&
 				(
-					this.IsShortTime == other.IsShortTime ||
-					this.IsShortTime != null &&
-					this.IsShortTime.Equals(other.IsShortTime)
+					IsShortTime == other.IsShortTime ||
+					IsShortTime != null &&
+					IsShortTime.Equals(other.IsShortTime)
 				) &&
 				(
-					this.IsVisible == other.IsVisible ||
-					this.IsVisible != null &&
-					this.IsVisible.Equals(other.IsVisible)
+					IsVisible == other.IsVisible ||
+					IsVisible != null &&
+					IsVisible.Equals(other.IsVisible)
 				) &&
 				(
-					this.Sortable == other.Sortable ||
-					this.Sortable != null &&
-					this.Sortable.Equals(other.Sortable)
+					Sortable == other.Sortable ||
+					Sortable != null &&
+					Sortable.Equals(other.Sortable)
 				) &&
 				(
-					this.SortOrder == other.SortOrder ||
-					this.SortOrder != null &&
-					this.SortOrder.Equals(other.SortOrder, StringComparison.Ordinal)
+					SortOrder == other.SortOrder ||
+					SortOrder != null &&
+					SortOrder.Equals(other.SortOrder, StringComparison.Ordinal)
 				) &&
 				(
-					this.StorageName == other.StorageName ||
-					this.StorageName != null &&
-					this.StorageName.Equals(other.StorageName, StringComparison.Ordinal)
+					StorageName == other.StorageName ||
+					StorageName != null &&
+					StorageName.Equals(other.StorageName, StringComparison.Ordinal)
 				) &&
 				(
-					this.WholeDigits == other.WholeDigits ||
-					this.WholeDigits != null &&
-					this.WholeDigits.Equals(other.WholeDigits)
+					WholeDigits == other.WholeDigits ||
+					WholeDigits != null &&
+					WholeDigits.Equals(other.WholeDigits)
 				);
 	}
 
@@ -376,119 +376,119 @@ public partial class Field : IEquatable<Field>, IValidatableObject
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Caption != null)
+			if (Caption != null)
 			{
-				hash = hash * 59 + this.Caption.GetHashCode();
+				hash = hash * 59 + Caption.GetHashCode();
 			}
 
-			if (this.CurrencyCulture != null)
+			if (CurrencyCulture != null)
 			{
-				hash = hash * 59 + this.CurrencyCulture.GetHashCode();
+				hash = hash * 59 + CurrencyCulture.GetHashCode();
 			}
 
-			if (this.CurrencySymbol != null)
+			if (CurrencySymbol != null)
 			{
-				hash = hash * 59 + this.CurrencySymbol.GetHashCode();
+				hash = hash * 59 + CurrencySymbol.GetHashCode();
 			}
 
-			if (this.DecimalDigits != null)
+			if (DecimalDigits != null)
 			{
-				hash = hash * 59 + this.DecimalDigits.GetHashCode();
+				hash = hash * 59 + DecimalDigits.GetHashCode();
 			}
 
-			if (this.DefaultSortOrderAscending != null)
+			if (DefaultSortOrderAscending != null)
 			{
-				hash = hash * 59 + this.DefaultSortOrderAscending.GetHashCode();
+				hash = hash * 59 + DefaultSortOrderAscending.GetHashCode();
 			}
 
-			if (this.DisplayName != null)
+			if (DisplayName != null)
 			{
-				hash = hash * 59 + this.DisplayName.GetHashCode();
+				hash = hash * 59 + DisplayName.GetHashCode();
 			}
 
-			if (this.FieldName != null)
+			if (FieldName != null)
 			{
-				hash = hash * 59 + this.FieldName.GetHashCode();
+				hash = hash * 59 + FieldName.GetHashCode();
 			}
 
-			if (this.FullFieldId != null)
+			if (FullFieldId != null)
 			{
-				hash = hash * 59 + this.FullFieldId.GetHashCode();
+				hash = hash * 59 + FullFieldId.GetHashCode();
 			}
 
-			if (this.HasDefaultSortField != null)
+			if (HasDefaultSortField != null)
 			{
-				hash = hash * 59 + this.HasDefaultSortField.GetHashCode();
+				hash = hash * 59 + HasDefaultSortField.GetHashCode();
 			}
 
-			if (this.FieldId != null)
+			if (FieldId != null)
 			{
-				hash = hash * 59 + this.FieldId.GetHashCode();
+				hash = hash * 59 + FieldId.GetHashCode();
 			}
 
-			if (this.IsBinary != null)
+			if (IsBinary != null)
 			{
-				hash = hash * 59 + this.IsBinary.GetHashCode();
+				hash = hash * 59 + IsBinary.GetHashCode();
 			}
 
-			if (this.IsCurrency != null)
+			if (IsCurrency != null)
 			{
-				hash = hash * 59 + this.IsCurrency.GetHashCode();
+				hash = hash * 59 + IsCurrency.GetHashCode();
 			}
 
-			if (this.IsDateTime != null)
+			if (IsDateTime != null)
 			{
-				hash = hash * 59 + this.IsDateTime.GetHashCode();
+				hash = hash * 59 + IsDateTime.GetHashCode();
 			}
 
-			if (this.IsFilterAllowed != null)
+			if (IsFilterAllowed != null)
 			{
-				hash = hash * 59 + this.IsFilterAllowed.GetHashCode();
+				hash = hash * 59 + IsFilterAllowed.GetHashCode();
 			}
 
-			if (this.IsLogical != null)
+			if (IsLogical != null)
 			{
-				hash = hash * 59 + this.IsLogical.GetHashCode();
+				hash = hash * 59 + IsLogical.GetHashCode();
 			}
 
-			if (this.IsNumber != null)
+			if (IsNumber != null)
 			{
-				hash = hash * 59 + this.IsNumber.GetHashCode();
+				hash = hash * 59 + IsNumber.GetHashCode();
 			}
 
-			if (this.IsShortDate != null)
+			if (IsShortDate != null)
 			{
-				hash = hash * 59 + this.IsShortDate.GetHashCode();
+				hash = hash * 59 + IsShortDate.GetHashCode();
 			}
 
-			if (this.IsShortTime != null)
+			if (IsShortTime != null)
 			{
-				hash = hash * 59 + this.IsShortTime.GetHashCode();
+				hash = hash * 59 + IsShortTime.GetHashCode();
 			}
 
-			if (this.IsVisible != null)
+			if (IsVisible != null)
 			{
-				hash = hash * 59 + this.IsVisible.GetHashCode();
+				hash = hash * 59 + IsVisible.GetHashCode();
 			}
 
-			if (this.Sortable != null)
+			if (Sortable != null)
 			{
-				hash = hash * 59 + this.Sortable.GetHashCode();
+				hash = hash * 59 + Sortable.GetHashCode();
 			}
 
-			if (this.SortOrder != null)
+			if (SortOrder != null)
 			{
-				hash = hash * 59 + this.SortOrder.GetHashCode();
+				hash = hash * 59 + SortOrder.GetHashCode();
 			}
 
-			if (this.StorageName != null)
+			if (StorageName != null)
 			{
-				hash = hash * 59 + this.StorageName.GetHashCode();
+				hash = hash * 59 + StorageName.GetHashCode();
 			}
 
-			if (this.WholeDigits != null)
+			if (WholeDigits != null)
 			{
-				hash = hash * 59 + this.WholeDigits.GetHashCode();
+				hash = hash * 59 + WholeDigits.GetHashCode();
 			}
 
 			return hash;

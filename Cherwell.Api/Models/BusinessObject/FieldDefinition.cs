@@ -207,7 +207,7 @@ public partial class FieldDefinition : IEquatable<FieldDefinition>, IValidatable
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as FieldDefinition);
+		return Equals(obj as FieldDefinition);
 	}
 
 	/// <summary>
@@ -225,104 +225,104 @@ public partial class FieldDefinition : IEquatable<FieldDefinition>, IValidatable
 
 		return
 				(
-					this.AutoFill == other.AutoFill ||
-					this.AutoFill != null &&
-					this.AutoFill.Equals(other.AutoFill)
+					AutoFill == other.AutoFill ||
+					AutoFill != null &&
+					AutoFill.Equals(other.AutoFill)
 				) &&
 				(
-					this.Calculated == other.Calculated ||
-					this.Calculated != null &&
-					this.Calculated.Equals(other.Calculated)
+					Calculated == other.Calculated ||
+					Calculated != null &&
+					Calculated.Equals(other.Calculated)
 				) &&
 				(
-					this.Category == other.Category ||
-					this.Category != null &&
-					this.Category.Equals(other.Category, StringComparison.Ordinal)
+					Category == other.Category ||
+					Category != null &&
+					Category.Equals(other.Category, StringComparison.Ordinal)
 				) &&
 				(
-					this.DecimalDigits == other.DecimalDigits ||
-					this.DecimalDigits != null &&
-					this.DecimalDigits.Equals(other.DecimalDigits)
+					DecimalDigits == other.DecimalDigits ||
+					DecimalDigits != null &&
+					DecimalDigits.Equals(other.DecimalDigits)
 				) &&
 				(
-					this.Description == other.Description ||
-					this.Description != null &&
-					this.Description.Equals(other.Description, StringComparison.Ordinal)
+					Description == other.Description ||
+					Description != null &&
+					Description.Equals(other.Description, StringComparison.Ordinal)
 				) &&
 				(
-					this.Details == other.Details ||
-					this.Details != null &&
-					this.Details.Equals(other.Details, StringComparison.Ordinal)
+					Details == other.Details ||
+					Details != null &&
+					Details.Equals(other.Details, StringComparison.Ordinal)
 				) &&
 				(
-					this.DisplayName == other.DisplayName ||
-					this.DisplayName != null &&
-					this.DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
+					DisplayName == other.DisplayName ||
+					DisplayName != null &&
+					DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
 				) &&
 				(
-					this.Enabled == other.Enabled ||
-					this.Enabled != null &&
-					this.Enabled.Equals(other.Enabled)
+					Enabled == other.Enabled ||
+					Enabled != null &&
+					Enabled.Equals(other.Enabled)
 				) &&
 				(
-					this.FieldId == other.FieldId ||
-					this.FieldId != null &&
-					this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
+					FieldId == other.FieldId ||
+					FieldId != null &&
+					FieldId.Equals(other.FieldId, StringComparison.Ordinal)
 				) &&
 				(
-					this.HasDate == other.HasDate ||
-					this.HasDate != null &&
-					this.HasDate.Equals(other.HasDate)
+					HasDate == other.HasDate ||
+					HasDate != null &&
+					HasDate.Equals(other.HasDate)
 				) &&
 				(
-					this.HasTime == other.HasTime ||
-					this.HasTime != null &&
-					this.HasTime.Equals(other.HasTime)
+					HasTime == other.HasTime ||
+					HasTime != null &&
+					HasTime.Equals(other.HasTime)
 				) &&
 				(
-					this.IsFullTextSearchable == other.IsFullTextSearchable ||
-					this.IsFullTextSearchable != null &&
-					this.IsFullTextSearchable.Equals(other.IsFullTextSearchable)
+					IsFullTextSearchable == other.IsFullTextSearchable ||
+					IsFullTextSearchable != null &&
+					IsFullTextSearchable.Equals(other.IsFullTextSearchable)
 				) &&
 				(
-					this.MaximumSize == other.MaximumSize ||
-					this.MaximumSize != null &&
-					this.MaximumSize.Equals(other.MaximumSize, StringComparison.Ordinal)
+					MaximumSize == other.MaximumSize ||
+					MaximumSize != null &&
+					MaximumSize.Equals(other.MaximumSize, StringComparison.Ordinal)
 				) &&
 				(
-					this.Name == other.Name ||
-					this.Name != null &&
-					this.Name.Equals(other.Name, StringComparison.Ordinal)
+					Name == other.Name ||
+					Name != null &&
+					Name.Equals(other.Name, StringComparison.Ordinal)
 				) &&
 				(
-					this.ReadOnly == other.ReadOnly ||
-					this.ReadOnly != null &&
-					this.ReadOnly.Equals(other.ReadOnly)
+					ReadOnly == other.ReadOnly ||
+					ReadOnly != null &&
+					ReadOnly.Equals(other.ReadOnly)
 				) &&
 				(
-					this.Required == other.Required ||
-					this.Required != null &&
-					this.Required.Equals(other.Required)
+					Required == other.Required ||
+					Required != null &&
+					Required.Equals(other.Required)
 				) &&
 				(
-					this.Type == other.Type ||
-					this.Type != null &&
-					this.Type.Equals(other.Type, StringComparison.Ordinal)
+					Type == other.Type ||
+					Type != null &&
+					Type.Equals(other.Type, StringComparison.Ordinal)
 				) &&
 				(
-					this.TypeLocalized == other.TypeLocalized ||
-					this.TypeLocalized != null &&
-					this.TypeLocalized.Equals(other.TypeLocalized, StringComparison.Ordinal)
+					TypeLocalized == other.TypeLocalized ||
+					TypeLocalized != null &&
+					TypeLocalized.Equals(other.TypeLocalized, StringComparison.Ordinal)
 				) &&
 				(
-					this.Validated == other.Validated ||
-					this.Validated != null &&
-					this.Validated.Equals(other.Validated)
+					Validated == other.Validated ||
+					Validated != null &&
+					Validated.Equals(other.Validated)
 				) &&
 				(
-					this.WholeDigits == other.WholeDigits ||
-					this.WholeDigits != null &&
-					this.WholeDigits.Equals(other.WholeDigits)
+					WholeDigits == other.WholeDigits ||
+					WholeDigits != null &&
+					WholeDigits.Equals(other.WholeDigits)
 				);
 	}
 
@@ -337,104 +337,104 @@ public partial class FieldDefinition : IEquatable<FieldDefinition>, IValidatable
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.AutoFill != null)
+			if (AutoFill != null)
 			{
-				hash = hash * 59 + this.AutoFill.GetHashCode();
+				hash = hash * 59 + AutoFill.GetHashCode();
 			}
 
-			if (this.Calculated != null)
+			if (Calculated != null)
 			{
-				hash = hash * 59 + this.Calculated.GetHashCode();
+				hash = hash * 59 + Calculated.GetHashCode();
 			}
 
-			if (this.Category != null)
+			if (Category != null)
 			{
-				hash = hash * 59 + this.Category.GetHashCode();
+				hash = hash * 59 + Category.GetHashCode();
 			}
 
-			if (this.DecimalDigits != null)
+			if (DecimalDigits != null)
 			{
-				hash = hash * 59 + this.DecimalDigits.GetHashCode();
+				hash = hash * 59 + DecimalDigits.GetHashCode();
 			}
 
-			if (this.Description != null)
+			if (Description != null)
 			{
-				hash = hash * 59 + this.Description.GetHashCode();
+				hash = hash * 59 + Description.GetHashCode();
 			}
 
-			if (this.Details != null)
+			if (Details != null)
 			{
-				hash = hash * 59 + this.Details.GetHashCode();
+				hash = hash * 59 + Details.GetHashCode();
 			}
 
-			if (this.DisplayName != null)
+			if (DisplayName != null)
 			{
-				hash = hash * 59 + this.DisplayName.GetHashCode();
+				hash = hash * 59 + DisplayName.GetHashCode();
 			}
 
-			if (this.Enabled != null)
+			if (Enabled != null)
 			{
-				hash = hash * 59 + this.Enabled.GetHashCode();
+				hash = hash * 59 + Enabled.GetHashCode();
 			}
 
-			if (this.FieldId != null)
+			if (FieldId != null)
 			{
-				hash = hash * 59 + this.FieldId.GetHashCode();
+				hash = hash * 59 + FieldId.GetHashCode();
 			}
 
-			if (this.HasDate != null)
+			if (HasDate != null)
 			{
-				hash = hash * 59 + this.HasDate.GetHashCode();
+				hash = hash * 59 + HasDate.GetHashCode();
 			}
 
-			if (this.HasTime != null)
+			if (HasTime != null)
 			{
-				hash = hash * 59 + this.HasTime.GetHashCode();
+				hash = hash * 59 + HasTime.GetHashCode();
 			}
 
-			if (this.IsFullTextSearchable != null)
+			if (IsFullTextSearchable != null)
 			{
-				hash = hash * 59 + this.IsFullTextSearchable.GetHashCode();
+				hash = hash * 59 + IsFullTextSearchable.GetHashCode();
 			}
 
-			if (this.MaximumSize != null)
+			if (MaximumSize != null)
 			{
-				hash = hash * 59 + this.MaximumSize.GetHashCode();
+				hash = hash * 59 + MaximumSize.GetHashCode();
 			}
 
-			if (this.Name != null)
+			if (Name != null)
 			{
-				hash = hash * 59 + this.Name.GetHashCode();
+				hash = hash * 59 + Name.GetHashCode();
 			}
 
-			if (this.ReadOnly != null)
+			if (ReadOnly != null)
 			{
-				hash = hash * 59 + this.ReadOnly.GetHashCode();
+				hash = hash * 59 + ReadOnly.GetHashCode();
 			}
 
-			if (this.Required != null)
+			if (Required != null)
 			{
-				hash = hash * 59 + this.Required.GetHashCode();
+				hash = hash * 59 + Required.GetHashCode();
 			}
 
-			if (this.Type != null)
+			if (Type != null)
 			{
-				hash = hash * 59 + this.Type.GetHashCode();
+				hash = hash * 59 + Type.GetHashCode();
 			}
 
-			if (this.TypeLocalized != null)
+			if (TypeLocalized != null)
 			{
-				hash = hash * 59 + this.TypeLocalized.GetHashCode();
+				hash = hash * 59 + TypeLocalized.GetHashCode();
 			}
 
-			if (this.Validated != null)
+			if (Validated != null)
 			{
-				hash = hash * 59 + this.Validated.GetHashCode();
+				hash = hash * 59 + Validated.GetHashCode();
 			}
 
-			if (this.WholeDigits != null)
+			if (WholeDigits != null)
 			{
-				hash = hash * 59 + this.WholeDigits.GetHashCode();
+				hash = hash * 59 + WholeDigits.GetHashCode();
 			}
 
 			return hash;

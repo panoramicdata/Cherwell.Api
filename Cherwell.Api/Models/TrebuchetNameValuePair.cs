@@ -111,7 +111,7 @@ public partial class TrebuchetNameValuePair : IEquatable<TrebuchetNameValuePair>
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as TrebuchetNameValuePair);
+		return Equals(obj as TrebuchetNameValuePair);
 	}
 
 	/// <summary>
@@ -129,44 +129,44 @@ public partial class TrebuchetNameValuePair : IEquatable<TrebuchetNameValuePair>
 
 		return
 				(
-					this.Name == other.Name ||
-					this.Name != null &&
-					this.Name.Equals(other.Name, StringComparison.Ordinal)
+					Name == other.Name ||
+					Name != null &&
+					Name.Equals(other.Name, StringComparison.Ordinal)
 				) &&
 				(
-					this.ValueObject == other.ValueObject ||
-					this.ValueObject != null &&
-					this.ValueObject.Equals(other.ValueObject)
+					ValueObject == other.ValueObject ||
+					ValueObject != null &&
+					ValueObject.Equals(other.ValueObject)
 				) &&
 				(
-					this.ValueString == other.ValueString ||
-					this.ValueString != null &&
-					this.ValueString.Equals(other.ValueString, StringComparison.Ordinal)
+					ValueString == other.ValueString ||
+					ValueString != null &&
+					ValueString.Equals(other.ValueString, StringComparison.Ordinal)
 				) &&
 				(
-					this.Category == other.Category ||
-					this.Category != null &&
-					this.Category.Equals(other.Category, StringComparison.Ordinal)
+					Category == other.Category ||
+					Category != null &&
+					Category.Equals(other.Category, StringComparison.Ordinal)
 				) &&
 				(
-					this.Description == other.Description ||
-					this.Description != null &&
-					this.Description.Equals(other.Description, StringComparison.Ordinal)
+					Description == other.Description ||
+					Description != null &&
+					Description.Equals(other.Description, StringComparison.Ordinal)
 				) &&
 				(
-					this.DisplayShowsValue == other.DisplayShowsValue ||
-					this.DisplayShowsValue != null &&
-					this.DisplayShowsValue.Equals(other.DisplayShowsValue)
+					DisplayShowsValue == other.DisplayShowsValue ||
+					DisplayShowsValue != null &&
+					DisplayShowsValue.Equals(other.DisplayShowsValue)
 				) &&
 				(
-					this.SpecialUseFlag == other.SpecialUseFlag ||
-					this.SpecialUseFlag != null &&
-					this.SpecialUseFlag.Equals(other.SpecialUseFlag)
+					SpecialUseFlag == other.SpecialUseFlag ||
+					SpecialUseFlag != null &&
+					SpecialUseFlag.Equals(other.SpecialUseFlag)
 				) &&
 				(
-					this.DisplayString == other.DisplayString ||
-					this.DisplayString != null &&
-					this.DisplayString.Equals(other.DisplayString, StringComparison.Ordinal)
+					DisplayString == other.DisplayString ||
+					DisplayString != null &&
+					DisplayString.Equals(other.DisplayString, StringComparison.Ordinal)
 				);
 	}
 
@@ -181,44 +181,44 @@ public partial class TrebuchetNameValuePair : IEquatable<TrebuchetNameValuePair>
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Name != null)
+			if (Name != null)
 			{
-				hash = hash * 59 + this.Name.GetHashCode();
+				hash = hash * 59 + Name.GetHashCode();
 			}
 
-			if (this.ValueObject != null)
+			if (ValueObject != null)
 			{
-				hash = hash * 59 + this.ValueObject.GetHashCode();
+				hash = hash * 59 + ValueObject.GetHashCode();
 			}
 
-			if (this.ValueString != null)
+			if (ValueString != null)
 			{
-				hash = hash * 59 + this.ValueString.GetHashCode();
+				hash = hash * 59 + ValueString.GetHashCode();
 			}
 
-			if (this.Category != null)
+			if (Category != null)
 			{
-				hash = hash * 59 + this.Category.GetHashCode();
+				hash = hash * 59 + Category.GetHashCode();
 			}
 
-			if (this.Description != null)
+			if (Description != null)
 			{
-				hash = hash * 59 + this.Description.GetHashCode();
+				hash = hash * 59 + Description.GetHashCode();
 			}
 
-			if (this.DisplayShowsValue != null)
+			if (DisplayShowsValue != null)
 			{
-				hash = hash * 59 + this.DisplayShowsValue.GetHashCode();
+				hash = hash * 59 + DisplayShowsValue.GetHashCode();
 			}
 
-			if (this.SpecialUseFlag != null)
+			if (SpecialUseFlag != null)
 			{
-				hash = hash * 59 + this.SpecialUseFlag.GetHashCode();
+				hash = hash * 59 + SpecialUseFlag.GetHashCode();
 			}
 
-			if (this.DisplayString != null)
+			if (DisplayString != null)
 			{
-				hash = hash * 59 + this.DisplayString.GetHashCode();
+				hash = hash * 59 + DisplayString.GetHashCode();
 			}
 
 			return hash;

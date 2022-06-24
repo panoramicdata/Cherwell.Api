@@ -71,7 +71,7 @@ public partial class GridDefinition : IEquatable<GridDefinition>, IValidatableOb
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as GridDefinition);
+		return Equals(obj as GridDefinition);
 	}
 
 	/// <summary>
@@ -89,19 +89,19 @@ public partial class GridDefinition : IEquatable<GridDefinition>, IValidatableOb
 
 		return
 				(
-					this.GridId == other.GridId ||
-					this.GridId != null &&
-					this.GridId.Equals(other.GridId, StringComparison.Ordinal)
+					GridId == other.GridId ||
+					GridId != null &&
+					GridId.Equals(other.GridId, StringComparison.Ordinal)
 				) &&
 				(
-					this.Name == other.Name ||
-					this.Name != null &&
-					this.Name.Equals(other.Name, StringComparison.Ordinal)
+					Name == other.Name ||
+					Name != null &&
+					Name.Equals(other.Name, StringComparison.Ordinal)
 				) &&
 				(
-					this.DisplayName == other.DisplayName ||
-					this.DisplayName != null &&
-					this.DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
+					DisplayName == other.DisplayName ||
+					DisplayName != null &&
+					DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
 				);
 	}
 
@@ -116,19 +116,19 @@ public partial class GridDefinition : IEquatable<GridDefinition>, IValidatableOb
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.GridId != null)
+			if (GridId != null)
 			{
-				hash = hash * 59 + this.GridId.GetHashCode();
+				hash = hash * 59 + GridId.GetHashCode();
 			}
 
-			if (this.Name != null)
+			if (Name != null)
 			{
-				hash = hash * 59 + this.Name.GetHashCode();
+				hash = hash * 59 + Name.GetHashCode();
 			}
 
-			if (this.DisplayName != null)
+			if (DisplayName != null)
 			{
-				hash = hash * 59 + this.DisplayName.GetHashCode();
+				hash = hash * 59 + DisplayName.GetHashCode();
 			}
 
 			return hash;

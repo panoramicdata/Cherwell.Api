@@ -135,7 +135,7 @@ public partial class SimpleResultsListItem : IEquatable<SimpleResultsListItem>, 
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as SimpleResultsListItem);
+		return Equals(obj as SimpleResultsListItem);
 	}
 
 	/// <summary>
@@ -153,59 +153,59 @@ public partial class SimpleResultsListItem : IEquatable<SimpleResultsListItem>, 
 
 		return
 				(
-					this.BusObId == other.BusObId ||
-					this.BusObId != null &&
-					this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
+					BusObId == other.BusObId ||
+					BusObId != null &&
+					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObRecId == other.BusObRecId ||
-					this.BusObRecId != null &&
-					this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
+					BusObRecId == other.BusObRecId ||
+					BusObRecId != null &&
+					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
 				) &&
 				(
-					this.DocRepositoryItemId == other.DocRepositoryItemId ||
-					this.DocRepositoryItemId != null &&
-					this.DocRepositoryItemId.Equals(other.DocRepositoryItemId, StringComparison.Ordinal)
+					DocRepositoryItemId == other.DocRepositoryItemId ||
+					DocRepositoryItemId != null &&
+					DocRepositoryItemId.Equals(other.DocRepositoryItemId, StringComparison.Ordinal)
 				) &&
 				(
-					this.GalleryImage == other.GalleryImage ||
-					this.GalleryImage != null &&
-					this.GalleryImage.Equals(other.GalleryImage, StringComparison.Ordinal)
+					GalleryImage == other.GalleryImage ||
+					GalleryImage != null &&
+					GalleryImage.Equals(other.GalleryImage, StringComparison.Ordinal)
 				) &&
 				(
-					this.Links == other.Links ||
-					this.Links != null &&
-					this.Links.SequenceEqual(other.Links)
+					Links == other.Links ||
+					Links != null &&
+					Links.SequenceEqual(other.Links)
 				) &&
 				(
-					this.PublicId == other.PublicId ||
-					this.PublicId != null &&
-					this.PublicId.Equals(other.PublicId, StringComparison.Ordinal)
+					PublicId == other.PublicId ||
+					PublicId != null &&
+					PublicId.Equals(other.PublicId, StringComparison.Ordinal)
 				) &&
 				(
-					this.Scope == other.Scope ||
-					this.Scope != null &&
-					this.Scope.Equals(other.Scope, StringComparison.Ordinal)
+					Scope == other.Scope ||
+					Scope != null &&
+					Scope.Equals(other.Scope, StringComparison.Ordinal)
 				) &&
 				(
-					this.ScopeOwner == other.ScopeOwner ||
-					this.ScopeOwner != null &&
-					this.ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
+					ScopeOwner == other.ScopeOwner ||
+					ScopeOwner != null &&
+					ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
 				) &&
 				(
-					this.SubTitle == other.SubTitle ||
-					this.SubTitle != null &&
-					this.SubTitle.Equals(other.SubTitle, StringComparison.Ordinal)
+					SubTitle == other.SubTitle ||
+					SubTitle != null &&
+					SubTitle.Equals(other.SubTitle, StringComparison.Ordinal)
 				) &&
 				(
-					this.Text == other.Text ||
-					this.Text != null &&
-					this.Text.Equals(other.Text, StringComparison.Ordinal)
+					Text == other.Text ||
+					Text != null &&
+					Text.Equals(other.Text, StringComparison.Ordinal)
 				) &&
 				(
-					this.Title == other.Title ||
-					this.Title != null &&
-					this.Title.Equals(other.Title, StringComparison.Ordinal)
+					Title == other.Title ||
+					Title != null &&
+					Title.Equals(other.Title, StringComparison.Ordinal)
 				);
 	}
 
@@ -220,59 +220,59 @@ public partial class SimpleResultsListItem : IEquatable<SimpleResultsListItem>, 
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.BusObId != null)
+			if (BusObId != null)
 			{
-				hash = hash * 59 + this.BusObId.GetHashCode();
+				hash = hash * 59 + BusObId.GetHashCode();
 			}
 
-			if (this.BusObRecId != null)
+			if (BusObRecId != null)
 			{
-				hash = hash * 59 + this.BusObRecId.GetHashCode();
+				hash = hash * 59 + BusObRecId.GetHashCode();
 			}
 
-			if (this.DocRepositoryItemId != null)
+			if (DocRepositoryItemId != null)
 			{
-				hash = hash * 59 + this.DocRepositoryItemId.GetHashCode();
+				hash = hash * 59 + DocRepositoryItemId.GetHashCode();
 			}
 
-			if (this.GalleryImage != null)
+			if (GalleryImage != null)
 			{
-				hash = hash * 59 + this.GalleryImage.GetHashCode();
+				hash = hash * 59 + GalleryImage.GetHashCode();
 			}
 
-			if (this.Links != null)
+			if (Links != null)
 			{
-				hash = hash * 59 + this.Links.GetHashCode();
+				hash = hash * 59 + Links.GetHashCode();
 			}
 
-			if (this.PublicId != null)
+			if (PublicId != null)
 			{
-				hash = hash * 59 + this.PublicId.GetHashCode();
+				hash = hash * 59 + PublicId.GetHashCode();
 			}
 
-			if (this.Scope != null)
+			if (Scope != null)
 			{
-				hash = hash * 59 + this.Scope.GetHashCode();
+				hash = hash * 59 + Scope.GetHashCode();
 			}
 
-			if (this.ScopeOwner != null)
+			if (ScopeOwner != null)
 			{
-				hash = hash * 59 + this.ScopeOwner.GetHashCode();
+				hash = hash * 59 + ScopeOwner.GetHashCode();
 			}
 
-			if (this.SubTitle != null)
+			if (SubTitle != null)
 			{
-				hash = hash * 59 + this.SubTitle.GetHashCode();
+				hash = hash * 59 + SubTitle.GetHashCode();
 			}
 
-			if (this.Text != null)
+			if (Text != null)
 			{
-				hash = hash * 59 + this.Text.GetHashCode();
+				hash = hash * 59 + Text.GetHashCode();
 			}
 
-			if (this.Title != null)
+			if (Title != null)
 			{
-				hash = hash * 59 + this.Title.GetHashCode();
+				hash = hash * 59 + Title.GetHashCode();
 			}
 
 			return hash;

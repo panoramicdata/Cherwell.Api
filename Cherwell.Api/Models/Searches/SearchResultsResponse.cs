@@ -434,7 +434,7 @@ public partial class SearchResultsResponse : IEquatable<SearchResultsResponse>, 
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as SearchResultsResponse);
+		return Equals(obj as SearchResultsResponse);
 	}
 
 	/// <summary>
@@ -452,64 +452,64 @@ public partial class SearchResultsResponse : IEquatable<SearchResultsResponse>, 
 
 		return
 				(
-					this.BusinessObjects == other.BusinessObjects ||
-					this.BusinessObjects != null &&
-					this.BusinessObjects.SequenceEqual(other.BusinessObjects)
+					BusinessObjects == other.BusinessObjects ||
+					BusinessObjects != null &&
+					BusinessObjects.SequenceEqual(other.BusinessObjects)
 				) &&
 				(
-					this.HasPrompts == other.HasPrompts ||
-					this.HasPrompts != null &&
-					this.HasPrompts.Equals(other.HasPrompts)
+					HasPrompts == other.HasPrompts ||
+					HasPrompts != null &&
+					HasPrompts.Equals(other.HasPrompts)
 				) &&
 				(
-					this.Links == other.Links ||
-					this.Links != null &&
-					this.Links.SequenceEqual(other.Links)
+					Links == other.Links ||
+					Links != null &&
+					Links.SequenceEqual(other.Links)
 				) &&
 				(
-					this.Prompts == other.Prompts ||
-					this.Prompts != null &&
-					this.Prompts.SequenceEqual(other.Prompts)
+					Prompts == other.Prompts ||
+					Prompts != null &&
+					Prompts.SequenceEqual(other.Prompts)
 				) &&
 				(
-					this.SearchResultsFields == other.SearchResultsFields ||
-					this.SearchResultsFields != null &&
-					this.SearchResultsFields.SequenceEqual(other.SearchResultsFields)
+					SearchResultsFields == other.SearchResultsFields ||
+					SearchResultsFields != null &&
+					SearchResultsFields.SequenceEqual(other.SearchResultsFields)
 				) &&
 				(
-					this.SimpleResults == other.SimpleResults ||
-					this.SimpleResults != null &&
-					this.SimpleResults.Equals(other.SimpleResults)
+					SimpleResults == other.SimpleResults ||
+					SimpleResults != null &&
+					SimpleResults.Equals(other.SimpleResults)
 				) &&
 				(
-					this.TotalRows == other.TotalRows ||
-					this.TotalRows != null &&
-					this.TotalRows.Equals(other.TotalRows)
+					TotalRows == other.TotalRows ||
+					TotalRows != null &&
+					TotalRows.Equals(other.TotalRows)
 				) &&
 				(
-					this.HasMoreRecords == other.HasMoreRecords ||
-					this.HasMoreRecords != null &&
-					this.HasMoreRecords.Equals(other.HasMoreRecords)
+					HasMoreRecords == other.HasMoreRecords ||
+					HasMoreRecords != null &&
+					HasMoreRecords.Equals(other.HasMoreRecords)
 				) &&
 				(
-					this.ErrorCode == other.ErrorCode ||
-					this.ErrorCode != null &&
-					this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
+					ErrorCode == other.ErrorCode ||
+					ErrorCode != null &&
+					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
 				) &&
 				(
-					this.ErrorMessage == other.ErrorMessage ||
-					this.ErrorMessage != null &&
-					this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
+					ErrorMessage == other.ErrorMessage ||
+					ErrorMessage != null &&
+					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
 				) &&
 				(
-					this.HasError == other.HasError ||
-					this.HasError != null &&
-					this.HasError.Equals(other.HasError)
+					HasError == other.HasError ||
+					HasError != null &&
+					HasError.Equals(other.HasError)
 				) &&
 				(
-					this.HttpStatusCode == other.HttpStatusCode ||
-					this.HttpStatusCode != null &&
-					this.HttpStatusCode.Equals(other.HttpStatusCode)
+					HttpStatusCode == other.HttpStatusCode ||
+					HttpStatusCode != null &&
+					HttpStatusCode.Equals(other.HttpStatusCode)
 				);
 	}
 
@@ -524,64 +524,64 @@ public partial class SearchResultsResponse : IEquatable<SearchResultsResponse>, 
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.BusinessObjects != null)
+			if (BusinessObjects != null)
 			{
-				hash = hash * 59 + this.BusinessObjects.GetHashCode();
+				hash = hash * 59 + BusinessObjects.GetHashCode();
 			}
 
-			if (this.HasPrompts != null)
+			if (HasPrompts != null)
 			{
-				hash = hash * 59 + this.HasPrompts.GetHashCode();
+				hash = hash * 59 + HasPrompts.GetHashCode();
 			}
 
-			if (this.Links != null)
+			if (Links != null)
 			{
-				hash = hash * 59 + this.Links.GetHashCode();
+				hash = hash * 59 + Links.GetHashCode();
 			}
 
-			if (this.Prompts != null)
+			if (Prompts != null)
 			{
-				hash = hash * 59 + this.Prompts.GetHashCode();
+				hash = hash * 59 + Prompts.GetHashCode();
 			}
 
-			if (this.SearchResultsFields != null)
+			if (SearchResultsFields != null)
 			{
-				hash = hash * 59 + this.SearchResultsFields.GetHashCode();
+				hash = hash * 59 + SearchResultsFields.GetHashCode();
 			}
 
-			if (this.SimpleResults != null)
+			if (SimpleResults != null)
 			{
-				hash = hash * 59 + this.SimpleResults.GetHashCode();
+				hash = hash * 59 + SimpleResults.GetHashCode();
 			}
 
-			if (this.TotalRows != null)
+			if (TotalRows != null)
 			{
-				hash = hash * 59 + this.TotalRows.GetHashCode();
+				hash = hash * 59 + TotalRows.GetHashCode();
 			}
 
-			if (this.HasMoreRecords != null)
+			if (HasMoreRecords != null)
 			{
-				hash = hash * 59 + this.HasMoreRecords.GetHashCode();
+				hash = hash * 59 + HasMoreRecords.GetHashCode();
 			}
 
-			if (this.ErrorCode != null)
+			if (ErrorCode != null)
 			{
-				hash = hash * 59 + this.ErrorCode.GetHashCode();
+				hash = hash * 59 + ErrorCode.GetHashCode();
 			}
 
-			if (this.ErrorMessage != null)
+			if (ErrorMessage != null)
 			{
-				hash = hash * 59 + this.ErrorMessage.GetHashCode();
+				hash = hash * 59 + ErrorMessage.GetHashCode();
 			}
 
-			if (this.HasError != null)
+			if (HasError != null)
 			{
-				hash = hash * 59 + this.HasError.GetHashCode();
+				hash = hash * 59 + HasError.GetHashCode();
 			}
 
-			if (this.HttpStatusCode != null)
+			if (HttpStatusCode != null)
 			{
-				hash = hash * 59 + this.HttpStatusCode.GetHashCode();
+				hash = hash * 59 + HttpStatusCode.GetHashCode();
 			}
 
 			return hash;

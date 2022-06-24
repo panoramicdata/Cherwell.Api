@@ -79,7 +79,7 @@ public partial class GetTransitionOptionsResponseTransition : IEquatable<GetTran
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as GetTransitionOptionsResponseTransition);
+		return Equals(obj as GetTransitionOptionsResponseTransition);
 	}
 
 	/// <summary>
@@ -97,24 +97,24 @@ public partial class GetTransitionOptionsResponseTransition : IEquatable<GetTran
 
 		return
 				(
-					this.Name == other.Name ||
-					this.Name != null &&
-					this.Name.Equals(other.Name, StringComparison.Ordinal)
+					Name == other.Name ||
+					Name != null &&
+					Name.Equals(other.Name, StringComparison.Ordinal)
 				) &&
 				(
-					this.Id == other.Id ||
-					this.Id != null &&
-					this.Id.Equals(other.Id, StringComparison.Ordinal)
+					Id == other.Id ||
+					Id != null &&
+					Id.Equals(other.Id, StringComparison.Ordinal)
 				) &&
 				(
-					this.IsAvailable == other.IsAvailable ||
-					this.IsAvailable != null &&
-					this.IsAvailable.Equals(other.IsAvailable)
+					IsAvailable == other.IsAvailable ||
+					IsAvailable != null &&
+					IsAvailable.Equals(other.IsAvailable)
 				) &&
 				(
-					this.Criteria == other.Criteria ||
-					this.Criteria != null &&
-					this.Criteria.SequenceEqual(other.Criteria)
+					Criteria == other.Criteria ||
+					Criteria != null &&
+					Criteria.SequenceEqual(other.Criteria)
 				);
 	}
 
@@ -129,24 +129,24 @@ public partial class GetTransitionOptionsResponseTransition : IEquatable<GetTran
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Name != null)
+			if (Name != null)
 			{
-				hash = hash * 59 + this.Name.GetHashCode();
+				hash = hash * 59 + Name.GetHashCode();
 			}
 
-			if (this.Id != null)
+			if (Id != null)
 			{
-				hash = hash * 59 + this.Id.GetHashCode();
+				hash = hash * 59 + Id.GetHashCode();
 			}
 
-			if (this.IsAvailable != null)
+			if (IsAvailable != null)
 			{
-				hash = hash * 59 + this.IsAvailable.GetHashCode();
+				hash = hash * 59 + IsAvailable.GetHashCode();
 			}
 
-			if (this.Criteria != null)
+			if (Criteria != null)
 			{
-				hash = hash * 59 + this.Criteria.GetHashCode();
+				hash = hash * 59 + Criteria.GetHashCode();
 			}
 
 			return hash;

@@ -63,7 +63,7 @@ public partial class Link : IEquatable<Link>, IValidatableObject
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as Link);
+		return Equals(obj as Link);
 	}
 
 	/// <summary>
@@ -81,14 +81,14 @@ public partial class Link : IEquatable<Link>, IValidatableObject
 
 		return
 				(
-					this.Name == other.Name ||
-					this.Name != null &&
-					this.Name.Equals(other.Name, StringComparison.Ordinal)
+					Name == other.Name ||
+					Name != null &&
+					Name.Equals(other.Name, StringComparison.Ordinal)
 				) &&
 				(
-					this.Url == other.Url ||
-					this.Url != null &&
-					this.Url.Equals(other.Url, StringComparison.Ordinal)
+					Url == other.Url ||
+					Url != null &&
+					Url.Equals(other.Url, StringComparison.Ordinal)
 				);
 	}
 
@@ -103,14 +103,14 @@ public partial class Link : IEquatable<Link>, IValidatableObject
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Name != null)
+			if (Name != null)
 			{
-				hash = hash * 59 + this.Name.GetHashCode();
+				hash = hash * 59 + Name.GetHashCode();
 			}
 
-			if (this.Url != null)
+			if (Url != null)
 			{
-				hash = hash * 59 + this.Url.GetHashCode();
+				hash = hash * 59 + Url.GetHashCode();
 			}
 
 			return hash;

@@ -127,7 +127,7 @@ public partial class ViewSummary : IEquatable<ViewSummary>, IValidatableObject
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as ViewSummary);
+		return Equals(obj as ViewSummary);
 	}
 
 	/// <summary>
@@ -145,54 +145,54 @@ public partial class ViewSummary : IEquatable<ViewSummary>, IValidatableObject
 
 		return
 				(
-					this.GroupSummaries == other.GroupSummaries ||
-					this.GroupSummaries != null &&
-					this.GroupSummaries.SequenceEqual(other.GroupSummaries)
+					GroupSummaries == other.GroupSummaries ||
+					GroupSummaries != null &&
+					GroupSummaries.SequenceEqual(other.GroupSummaries)
 				) &&
 				(
-					this.Image == other.Image ||
-					this.Image != null &&
-					this.Image.Equals(other.Image, StringComparison.Ordinal)
+					Image == other.Image ||
+					Image != null &&
+					Image.Equals(other.Image, StringComparison.Ordinal)
 				) &&
 				(
-					this.IsPartOfView == other.IsPartOfView ||
-					this.IsPartOfView != null &&
-					this.IsPartOfView.Equals(other.IsPartOfView)
+					IsPartOfView == other.IsPartOfView ||
+					IsPartOfView != null &&
+					IsPartOfView.Equals(other.IsPartOfView)
 				) &&
 				(
-					this.BusObId == other.BusObId ||
-					this.BusObId != null &&
-					this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
+					BusObId == other.BusObId ||
+					BusObId != null &&
+					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.DisplayName == other.DisplayName ||
-					this.DisplayName != null &&
-					this.DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
+					DisplayName == other.DisplayName ||
+					DisplayName != null &&
+					DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
 				) &&
 				(
-					this.Group == other.Group ||
-					this.Group != null &&
-					this.Group.Equals(other.Group)
+					Group == other.Group ||
+					Group != null &&
+					Group.Equals(other.Group)
 				) &&
 				(
-					this.Lookup == other.Lookup ||
-					this.Lookup != null &&
-					this.Lookup.Equals(other.Lookup)
+					Lookup == other.Lookup ||
+					Lookup != null &&
+					Lookup.Equals(other.Lookup)
 				) &&
 				(
-					this.Major == other.Major ||
-					this.Major != null &&
-					this.Major.Equals(other.Major)
+					Major == other.Major ||
+					Major != null &&
+					Major.Equals(other.Major)
 				) &&
 				(
-					this.Name == other.Name ||
-					this.Name != null &&
-					this.Name.Equals(other.Name, StringComparison.Ordinal)
+					Name == other.Name ||
+					Name != null &&
+					Name.Equals(other.Name, StringComparison.Ordinal)
 				) &&
 				(
-					this.Supporting == other.Supporting ||
-					this.Supporting != null &&
-					this.Supporting.Equals(other.Supporting)
+					Supporting == other.Supporting ||
+					Supporting != null &&
+					Supporting.Equals(other.Supporting)
 				);
 	}
 
@@ -207,54 +207,54 @@ public partial class ViewSummary : IEquatable<ViewSummary>, IValidatableObject
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.GroupSummaries != null)
+			if (GroupSummaries != null)
 			{
-				hash = hash * 59 + this.GroupSummaries.GetHashCode();
+				hash = hash * 59 + GroupSummaries.GetHashCode();
 			}
 
-			if (this.Image != null)
+			if (Image != null)
 			{
-				hash = hash * 59 + this.Image.GetHashCode();
+				hash = hash * 59 + Image.GetHashCode();
 			}
 
-			if (this.IsPartOfView != null)
+			if (IsPartOfView != null)
 			{
-				hash = hash * 59 + this.IsPartOfView.GetHashCode();
+				hash = hash * 59 + IsPartOfView.GetHashCode();
 			}
 
-			if (this.BusObId != null)
+			if (BusObId != null)
 			{
-				hash = hash * 59 + this.BusObId.GetHashCode();
+				hash = hash * 59 + BusObId.GetHashCode();
 			}
 
-			if (this.DisplayName != null)
+			if (DisplayName != null)
 			{
-				hash = hash * 59 + this.DisplayName.GetHashCode();
+				hash = hash * 59 + DisplayName.GetHashCode();
 			}
 
-			if (this.Group != null)
+			if (Group != null)
 			{
-				hash = hash * 59 + this.Group.GetHashCode();
+				hash = hash * 59 + Group.GetHashCode();
 			}
 
-			if (this.Lookup != null)
+			if (Lookup != null)
 			{
-				hash = hash * 59 + this.Lookup.GetHashCode();
+				hash = hash * 59 + Lookup.GetHashCode();
 			}
 
-			if (this.Major != null)
+			if (Major != null)
 			{
-				hash = hash * 59 + this.Major.GetHashCode();
+				hash = hash * 59 + Major.GetHashCode();
 			}
 
-			if (this.Name != null)
+			if (Name != null)
 			{
-				hash = hash * 59 + this.Name.GetHashCode();
+				hash = hash * 59 + Name.GetHashCode();
 			}
 
-			if (this.Supporting != null)
+			if (Supporting != null)
 			{
-				hash = hash * 59 + this.Supporting.GetHashCode();
+				hash = hash * 59 + Supporting.GetHashCode();
 			}
 
 			return hash;

@@ -55,7 +55,7 @@ public partial class QuickSearchConfigurationRequest : IEquatable<QuickSearchCon
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as QuickSearchConfigurationRequest);
+		return Equals(obj as QuickSearchConfigurationRequest);
 	}
 
 	/// <summary>
@@ -73,9 +73,9 @@ public partial class QuickSearchConfigurationRequest : IEquatable<QuickSearchCon
 
 		return
 				(
-					this.BusObIds == other.BusObIds ||
-					this.BusObIds != null &&
-					this.BusObIds.SequenceEqual(other.BusObIds)
+					BusObIds == other.BusObIds ||
+					BusObIds != null &&
+					BusObIds.SequenceEqual(other.BusObIds)
 				);
 	}
 
@@ -90,9 +90,9 @@ public partial class QuickSearchConfigurationRequest : IEquatable<QuickSearchCon
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.BusObIds != null)
+			if (BusObIds != null)
 			{
-				hash = hash * 59 + this.BusObIds.GetHashCode();
+				hash = hash * 59 + BusObIds.GetHashCode();
 			}
 
 			return hash;

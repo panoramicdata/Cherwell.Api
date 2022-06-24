@@ -87,7 +87,7 @@ public partial class OneStepActionRequest : IEquatable<OneStepActionRequest>, IV
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as OneStepActionRequest);
+		return Equals(obj as OneStepActionRequest);
 	}
 
 	/// <summary>
@@ -105,29 +105,29 @@ public partial class OneStepActionRequest : IEquatable<OneStepActionRequest>, IV
 
 		return
 				(
-					this.AcquireLicense == other.AcquireLicense ||
-					this.AcquireLicense != null &&
-					this.AcquireLicense.Equals(other.AcquireLicense)
+					AcquireLicense == other.AcquireLicense ||
+					AcquireLicense != null &&
+					AcquireLicense.Equals(other.AcquireLicense)
 				) &&
 				(
-					this.BusObId == other.BusObId ||
-					this.BusObId != null &&
-					this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
+					BusObId == other.BusObId ||
+					BusObId != null &&
+					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObRecId == other.BusObRecId ||
-					this.BusObRecId != null &&
-					this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
+					BusObRecId == other.BusObRecId ||
+					BusObRecId != null &&
+					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
 				) &&
 				(
-					this.OneStepActionStandInKey == other.OneStepActionStandInKey ||
-					this.OneStepActionStandInKey != null &&
-					this.OneStepActionStandInKey.Equals(other.OneStepActionStandInKey, StringComparison.Ordinal)
+					OneStepActionStandInKey == other.OneStepActionStandInKey ||
+					OneStepActionStandInKey != null &&
+					OneStepActionStandInKey.Equals(other.OneStepActionStandInKey, StringComparison.Ordinal)
 				) &&
 				(
-					this.PromptValues == other.PromptValues ||
-					this.PromptValues != null &&
-					this.PromptValues.SequenceEqual(other.PromptValues)
+					PromptValues == other.PromptValues ||
+					PromptValues != null &&
+					PromptValues.SequenceEqual(other.PromptValues)
 				);
 	}
 
@@ -142,29 +142,29 @@ public partial class OneStepActionRequest : IEquatable<OneStepActionRequest>, IV
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.AcquireLicense != null)
+			if (AcquireLicense != null)
 			{
-				hash = hash * 59 + this.AcquireLicense.GetHashCode();
+				hash = hash * 59 + AcquireLicense.GetHashCode();
 			}
 
-			if (this.BusObId != null)
+			if (BusObId != null)
 			{
-				hash = hash * 59 + this.BusObId.GetHashCode();
+				hash = hash * 59 + BusObId.GetHashCode();
 			}
 
-			if (this.BusObRecId != null)
+			if (BusObRecId != null)
 			{
-				hash = hash * 59 + this.BusObRecId.GetHashCode();
+				hash = hash * 59 + BusObRecId.GetHashCode();
 			}
 
-			if (this.OneStepActionStandInKey != null)
+			if (OneStepActionStandInKey != null)
 			{
-				hash = hash * 59 + this.OneStepActionStandInKey.GetHashCode();
+				hash = hash * 59 + OneStepActionStandInKey.GetHashCode();
 			}
 
-			if (this.PromptValues != null)
+			if (PromptValues != null)
 			{
-				hash = hash * 59 + this.PromptValues.GetHashCode();
+				hash = hash * 59 + PromptValues.GetHashCode();
 			}
 
 			return hash;

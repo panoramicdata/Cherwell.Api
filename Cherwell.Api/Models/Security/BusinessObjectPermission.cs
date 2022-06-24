@@ -14,38 +14,53 @@ public partial class BusinessObjectPermission : IEquatable<BusinessObjectPermiss
 	/// <summary>
 	/// Initializes a new instance of the <see cref="BusinessObjectPermission" /> class.
 	/// </summary>
-	/// <param name="BusObId">BusObId.</param>
-	/// <param name="BusObName">BusObName.</param>
-	/// <param name="DepartmentMemberEdit">DepartmentMemberEdit.</param>
-	/// <param name="DepartmentMemberView">DepartmentMemberView.</param>
-	/// <param name="Edit">Edit.</param>
-	/// <param name="FieldPermissions">FieldPermissions.</param>
-	/// <param name="ManagerOfOwnerEdit">ManagerOfOwnerEdit.</param>
-	/// <param name="ManagerOfOwnerView">ManagerOfOwnerView.</param>
-	/// <param name="OwnerEdit">OwnerEdit.</param>
-	/// <param name="OwnerView">OwnerView.</param>
-	/// <param name="TeamEdit">TeamEdit.</param>
-	/// <param name="TeamManagerOfOwnerEdit">TeamManagerOfOwnerEdit.</param>
-	/// <param name="TeamManagerOfOwnerView">TeamManagerOfOwnerView.</param>
-	/// <param name="TeamView">TeamView.</param>
-	/// <param name="View">View.</param>
-	public BusinessObjectPermission(string BusObId, string BusObName, bool? DepartmentMemberEdit, bool? DepartmentMemberView, bool? Edit, List<FieldPermissiond> FieldPermissions, bool? ManagerOfOwnerEdit, bool? ManagerOfOwnerView, bool? OwnerEdit, bool? OwnerView, bool? TeamEdit, bool? TeamManagerOfOwnerEdit, bool? TeamManagerOfOwnerView, bool? TeamView, bool? View)
+	/// <param name="busObId">BusObId.</param>
+	/// <param name="busObName">BusObName.</param>
+	/// <param name="departmentMemberEdit">DepartmentMemberEdit.</param>
+	/// <param name="departmentMemberView">DepartmentMemberView.</param>
+	/// <param name="edit">Edit.</param>
+	/// <param name="fieldPermissions">FieldPermissions.</param>
+	/// <param name="managerOfOwnerEdit">ManagerOfOwnerEdit.</param>
+	/// <param name="managerOfOwnerView">ManagerOfOwnerView.</param>
+	/// <param name="ownerEdit">OwnerEdit.</param>
+	/// <param name="ownerView">OwnerView.</param>
+	/// <param name="teamEdit">TeamEdit.</param>
+	/// <param name="teamManagerOfOwnerEdit">TeamManagerOfOwnerEdit.</param>
+	/// <param name="teamManagerOfOwnerView">TeamManagerOfOwnerView.</param>
+	/// <param name="teamView">TeamView.</param>
+	/// <param name="view">View.</param>
+	public BusinessObjectPermission(
+		string busObId,
+		string busObName,
+		bool? departmentMemberEdit,
+		bool? departmentMemberView,
+		bool? edit,
+		List<FieldPermissiond> fieldPermissions,
+		bool? managerOfOwnerEdit,
+		bool? managerOfOwnerView,
+		bool? ownerEdit,
+		bool? ownerView,
+		bool? teamEdit,
+		bool? teamManagerOfOwnerEdit,
+		bool? teamManagerOfOwnerView,
+		bool? teamView,
+		bool? view)
 	{
-		this.BusObId = BusObId;
-		this.BusObName = BusObName;
-		this.DepartmentMemberEdit = DepartmentMemberEdit;
-		this.DepartmentMemberView = DepartmentMemberView;
-		this.Edit = Edit;
-		this.FieldPermissions = FieldPermissions;
-		this.ManagerOfOwnerEdit = ManagerOfOwnerEdit;
-		this.ManagerOfOwnerView = ManagerOfOwnerView;
-		this.OwnerEdit = OwnerEdit;
-		this.OwnerView = OwnerView;
-		this.TeamEdit = TeamEdit;
-		this.TeamManagerOfOwnerEdit = TeamManagerOfOwnerEdit;
-		this.TeamManagerOfOwnerView = TeamManagerOfOwnerView;
-		this.TeamView = TeamView;
-		this.View = View;
+		BusObId = busObId;
+		BusObName = busObName;
+		DepartmentMemberEdit = departmentMemberEdit;
+		DepartmentMemberView = departmentMemberView;
+		Edit = edit;
+		FieldPermissions = fieldPermissions;
+		ManagerOfOwnerEdit = managerOfOwnerEdit;
+		ManagerOfOwnerView = managerOfOwnerView;
+		OwnerEdit = ownerEdit;
+		OwnerView = ownerView;
+		TeamEdit = teamEdit;
+		TeamManagerOfOwnerEdit = teamManagerOfOwnerEdit;
+		TeamManagerOfOwnerView = teamManagerOfOwnerView;
+		TeamView = teamView;
+		View = view;
 	}
 
 	/// <summary>
@@ -53,11 +68,13 @@ public partial class BusinessObjectPermission : IEquatable<BusinessObjectPermiss
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObName
 	/// </summary>
 	[DataMember(Name = "busObName", EmitDefaultValue = false)]
 	public string BusObName { get; set; }
+
 	/// <summary>
 	/// Gets or Sets DepartmentMemberEdit
 	/// </summary>
@@ -66,63 +83,76 @@ public partial class BusinessObjectPermission : IEquatable<BusinessObjectPermiss
 	/// <summary>
 	/// Gets or Sets DepartmentMemberView
 	/// </summary>
+
 	[DataMember(Name = "departmentMemberView", EmitDefaultValue = false)]
 	public bool? DepartmentMemberView { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Edit
 	/// </summary>
 	[DataMember(Name = "edit", EmitDefaultValue = false)]
 	public bool? Edit { get; set; }
+
 	/// <summary>
 	/// Gets or Sets FieldPermissions
 	/// </summary>
 	[DataMember(Name = "fieldPermissions", EmitDefaultValue = false)]
 	public List<FieldPermissiond> FieldPermissions { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ManagerOfOwnerEdit
 	/// </summary>
 	[DataMember(Name = "managerOfOwnerEdit", EmitDefaultValue = false)]
 	public bool? ManagerOfOwnerEdit { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ManagerOfOwnerView
 	/// </summary>
 	[DataMember(Name = "managerOfOwnerView", EmitDefaultValue = false)]
 	public bool? ManagerOfOwnerView { get; set; }
+
 	/// <summary>
 	/// Gets or Sets OwnerEdit
 	/// </summary>
 	[DataMember(Name = "ownerEdit", EmitDefaultValue = false)]
 	public bool? OwnerEdit { get; set; }
+
 	/// <summary>
 	/// Gets or Sets OwnerView
 	/// </summary>
 	[DataMember(Name = "ownerView", EmitDefaultValue = false)]
 	public bool? OwnerView { get; set; }
+
 	/// <summary>
 	/// Gets or Sets TeamEdit
 	/// </summary>
 	[DataMember(Name = "teamEdit", EmitDefaultValue = false)]
 	public bool? TeamEdit { get; set; }
+
 	/// <summary>
 	/// Gets or Sets TeamManagerOfOwnerEdit
 	/// </summary>
 	[DataMember(Name = "teamManagerOfOwnerEdit", EmitDefaultValue = false)]
 	public bool? TeamManagerOfOwnerEdit { get; set; }
+
 	/// <summary>
 	/// Gets or Sets TeamManagerOfOwnerView
 	/// </summary>
 	[DataMember(Name = "teamManagerOfOwnerView", EmitDefaultValue = false)]
 	public bool? TeamManagerOfOwnerView { get; set; }
+
 	/// <summary>
 	/// Gets or Sets TeamView
 	/// </summary>
 	[DataMember(Name = "teamView", EmitDefaultValue = false)]
 	public bool? TeamView { get; set; }
+
 	/// <summary>
 	/// Gets or Sets View
 	/// </summary>
 	[DataMember(Name = "view", EmitDefaultValue = false)]
 	public bool? View { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>
@@ -167,7 +197,7 @@ public partial class BusinessObjectPermission : IEquatable<BusinessObjectPermiss
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as BusinessObjectPermission);
+		return Equals(obj as BusinessObjectPermission);
 	}
 
 	/// <summary>
@@ -185,79 +215,79 @@ public partial class BusinessObjectPermission : IEquatable<BusinessObjectPermiss
 
 		return
 				(
-					this.BusObId == other.BusObId ||
-					this.BusObId != null &&
-					this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
+					BusObId == other.BusObId ||
+					BusObId != null &&
+					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObName == other.BusObName ||
-					this.BusObName != null &&
-					this.BusObName.Equals(other.BusObName, StringComparison.Ordinal)
+					BusObName == other.BusObName ||
+					BusObName != null &&
+					BusObName.Equals(other.BusObName, StringComparison.Ordinal)
 				) &&
 				(
-					this.DepartmentMemberEdit == other.DepartmentMemberEdit ||
-					this.DepartmentMemberEdit != null &&
-					this.DepartmentMemberEdit.Equals(other.DepartmentMemberEdit)
+					DepartmentMemberEdit == other.DepartmentMemberEdit ||
+					DepartmentMemberEdit != null &&
+					DepartmentMemberEdit.Equals(other.DepartmentMemberEdit)
 				) &&
 				(
-					this.DepartmentMemberView == other.DepartmentMemberView ||
-					this.DepartmentMemberView != null &&
-					this.DepartmentMemberView.Equals(other.DepartmentMemberView)
+					DepartmentMemberView == other.DepartmentMemberView ||
+					DepartmentMemberView != null &&
+					DepartmentMemberView.Equals(other.DepartmentMemberView)
 				) &&
 				(
-					this.Edit == other.Edit ||
-					this.Edit != null &&
-					this.Edit.Equals(other.Edit)
+					Edit == other.Edit ||
+					Edit != null &&
+					Edit.Equals(other.Edit)
 				) &&
 				(
-					this.FieldPermissions == other.FieldPermissions ||
-					this.FieldPermissions != null &&
-					this.FieldPermissions.SequenceEqual(other.FieldPermissions)
+					FieldPermissions == other.FieldPermissions ||
+					FieldPermissions != null &&
+					FieldPermissions.SequenceEqual(other.FieldPermissions)
 				) &&
 				(
-					this.ManagerOfOwnerEdit == other.ManagerOfOwnerEdit ||
-					this.ManagerOfOwnerEdit != null &&
-					this.ManagerOfOwnerEdit.Equals(other.ManagerOfOwnerEdit)
+					ManagerOfOwnerEdit == other.ManagerOfOwnerEdit ||
+					ManagerOfOwnerEdit != null &&
+					ManagerOfOwnerEdit.Equals(other.ManagerOfOwnerEdit)
 				) &&
 				(
-					this.ManagerOfOwnerView == other.ManagerOfOwnerView ||
-					this.ManagerOfOwnerView != null &&
-					this.ManagerOfOwnerView.Equals(other.ManagerOfOwnerView)
+					ManagerOfOwnerView == other.ManagerOfOwnerView ||
+					ManagerOfOwnerView != null &&
+					ManagerOfOwnerView.Equals(other.ManagerOfOwnerView)
 				) &&
 				(
-					this.OwnerEdit == other.OwnerEdit ||
-					this.OwnerEdit != null &&
-					this.OwnerEdit.Equals(other.OwnerEdit)
+					OwnerEdit == other.OwnerEdit ||
+					OwnerEdit != null &&
+					OwnerEdit.Equals(other.OwnerEdit)
 				) &&
 				(
-					this.OwnerView == other.OwnerView ||
-					this.OwnerView != null &&
-					this.OwnerView.Equals(other.OwnerView)
+					OwnerView == other.OwnerView ||
+					OwnerView != null &&
+					OwnerView.Equals(other.OwnerView)
 				) &&
 				(
-					this.TeamEdit == other.TeamEdit ||
-					this.TeamEdit != null &&
-					this.TeamEdit.Equals(other.TeamEdit)
+					TeamEdit == other.TeamEdit ||
+					TeamEdit != null &&
+					TeamEdit.Equals(other.TeamEdit)
 				) &&
 				(
-					this.TeamManagerOfOwnerEdit == other.TeamManagerOfOwnerEdit ||
-					this.TeamManagerOfOwnerEdit != null &&
-					this.TeamManagerOfOwnerEdit.Equals(other.TeamManagerOfOwnerEdit)
+					TeamManagerOfOwnerEdit == other.TeamManagerOfOwnerEdit ||
+					TeamManagerOfOwnerEdit != null &&
+					TeamManagerOfOwnerEdit.Equals(other.TeamManagerOfOwnerEdit)
 				) &&
 				(
-					this.TeamManagerOfOwnerView == other.TeamManagerOfOwnerView ||
-					this.TeamManagerOfOwnerView != null &&
-					this.TeamManagerOfOwnerView.Equals(other.TeamManagerOfOwnerView)
+					TeamManagerOfOwnerView == other.TeamManagerOfOwnerView ||
+					TeamManagerOfOwnerView != null &&
+					TeamManagerOfOwnerView.Equals(other.TeamManagerOfOwnerView)
 				) &&
 				(
-					this.TeamView == other.TeamView ||
-					this.TeamView != null &&
-					this.TeamView.Equals(other.TeamView)
+					TeamView == other.TeamView ||
+					TeamView != null &&
+					TeamView.Equals(other.TeamView)
 				) &&
 				(
-					this.View == other.View ||
-					this.View != null &&
-					this.View.Equals(other.View)
+					View == other.View ||
+					View != null &&
+					View.Equals(other.View)
 				);
 	}
 
@@ -272,79 +302,79 @@ public partial class BusinessObjectPermission : IEquatable<BusinessObjectPermiss
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.BusObId != null)
+			if (BusObId != null)
 			{
-				hash = hash * 59 + this.BusObId.GetHashCode();
+				hash = hash * 59 + BusObId.GetHashCode();
 			}
 
-			if (this.BusObName != null)
+			if (BusObName != null)
 			{
-				hash = hash * 59 + this.BusObName.GetHashCode();
+				hash = hash * 59 + BusObName.GetHashCode();
 			}
 
-			if (this.DepartmentMemberEdit != null)
+			if (DepartmentMemberEdit != null)
 			{
-				hash = hash * 59 + this.DepartmentMemberEdit.GetHashCode();
+				hash = hash * 59 + DepartmentMemberEdit.GetHashCode();
 			}
 
-			if (this.DepartmentMemberView != null)
+			if (DepartmentMemberView != null)
 			{
-				hash = hash * 59 + this.DepartmentMemberView.GetHashCode();
+				hash = hash * 59 + DepartmentMemberView.GetHashCode();
 			}
 
-			if (this.Edit != null)
+			if (Edit != null)
 			{
-				hash = hash * 59 + this.Edit.GetHashCode();
+				hash = hash * 59 + Edit.GetHashCode();
 			}
 
-			if (this.FieldPermissions != null)
+			if (FieldPermissions != null)
 			{
-				hash = hash * 59 + this.FieldPermissions.GetHashCode();
+				hash = hash * 59 + FieldPermissions.GetHashCode();
 			}
 
-			if (this.ManagerOfOwnerEdit != null)
+			if (ManagerOfOwnerEdit != null)
 			{
-				hash = hash * 59 + this.ManagerOfOwnerEdit.GetHashCode();
+				hash = hash * 59 + ManagerOfOwnerEdit.GetHashCode();
 			}
 
-			if (this.ManagerOfOwnerView != null)
+			if (ManagerOfOwnerView != null)
 			{
-				hash = hash * 59 + this.ManagerOfOwnerView.GetHashCode();
+				hash = hash * 59 + ManagerOfOwnerView.GetHashCode();
 			}
 
-			if (this.OwnerEdit != null)
+			if (OwnerEdit != null)
 			{
-				hash = hash * 59 + this.OwnerEdit.GetHashCode();
+				hash = hash * 59 + OwnerEdit.GetHashCode();
 			}
 
-			if (this.OwnerView != null)
+			if (OwnerView != null)
 			{
-				hash = hash * 59 + this.OwnerView.GetHashCode();
+				hash = hash * 59 + OwnerView.GetHashCode();
 			}
 
-			if (this.TeamEdit != null)
+			if (TeamEdit != null)
 			{
-				hash = hash * 59 + this.TeamEdit.GetHashCode();
+				hash = hash * 59 + TeamEdit.GetHashCode();
 			}
 
-			if (this.TeamManagerOfOwnerEdit != null)
+			if (TeamManagerOfOwnerEdit != null)
 			{
-				hash = hash * 59 + this.TeamManagerOfOwnerEdit.GetHashCode();
+				hash = hash * 59 + TeamManagerOfOwnerEdit.GetHashCode();
 			}
 
-			if (this.TeamManagerOfOwnerView != null)
+			if (TeamManagerOfOwnerView != null)
 			{
-				hash = hash * 59 + this.TeamManagerOfOwnerView.GetHashCode();
+				hash = hash * 59 + TeamManagerOfOwnerView.GetHashCode();
 			}
 
-			if (this.TeamView != null)
+			if (TeamView != null)
 			{
-				hash = hash * 59 + this.TeamView.GetHashCode();
+				hash = hash * 59 + TeamView.GetHashCode();
 			}
 
-			if (this.View != null)
+			if (View != null)
 			{
-				hash = hash * 59 + this.View.GetHashCode();
+				hash = hash * 59 + View.GetHashCode();
 			}
 
 			return hash;

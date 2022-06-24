@@ -71,7 +71,7 @@ public partial class AddUserToTeamRequest : IEquatable<AddUserToTeamRequest>, IV
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as AddUserToTeamRequest);
+		return Equals(obj as AddUserToTeamRequest);
 	}
 
 	/// <summary>
@@ -89,19 +89,19 @@ public partial class AddUserToTeamRequest : IEquatable<AddUserToTeamRequest>, IV
 
 		return
 				(
-					this.TeamId == other.TeamId ||
-					this.TeamId != null &&
-					this.TeamId.Equals(other.TeamId, StringComparison.Ordinal)
+					TeamId == other.TeamId ||
+					TeamId != null &&
+					TeamId.Equals(other.TeamId, StringComparison.Ordinal)
 				) &&
 				(
-					this.UserIsTeamManager == other.UserIsTeamManager ||
-					this.UserIsTeamManager != null &&
-					this.UserIsTeamManager.Equals(other.UserIsTeamManager)
+					UserIsTeamManager == other.UserIsTeamManager ||
+					UserIsTeamManager != null &&
+					UserIsTeamManager.Equals(other.UserIsTeamManager)
 				) &&
 				(
-					this.UserRecordId == other.UserRecordId ||
-					this.UserRecordId != null &&
-					this.UserRecordId.Equals(other.UserRecordId, StringComparison.Ordinal)
+					UserRecordId == other.UserRecordId ||
+					UserRecordId != null &&
+					UserRecordId.Equals(other.UserRecordId, StringComparison.Ordinal)
 				);
 	}
 
@@ -116,19 +116,19 @@ public partial class AddUserToTeamRequest : IEquatable<AddUserToTeamRequest>, IV
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.TeamId != null)
+			if (TeamId != null)
 			{
-				hash = hash * 59 + this.TeamId.GetHashCode();
+				hash = hash * 59 + TeamId.GetHashCode();
 			}
 
-			if (this.UserIsTeamManager != null)
+			if (UserIsTeamManager != null)
 			{
-				hash = hash * 59 + this.UserIsTeamManager.GetHashCode();
+				hash = hash * 59 + UserIsTeamManager.GetHashCode();
 			}
 
-			if (this.UserRecordId != null)
+			if (UserRecordId != null)
 			{
-				hash = hash * 59 + this.UserRecordId.GetHashCode();
+				hash = hash * 59 + UserRecordId.GetHashCode();
 			}
 
 			return hash;

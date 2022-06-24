@@ -63,7 +63,7 @@ public partial class QuickSearchRequest : IEquatable<QuickSearchRequest>, IValid
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as QuickSearchRequest);
+		return Equals(obj as QuickSearchRequest);
 	}
 
 	/// <summary>
@@ -81,14 +81,14 @@ public partial class QuickSearchRequest : IEquatable<QuickSearchRequest>, IValid
 
 		return
 				(
-					this.BusObIds == other.BusObIds ||
-					this.BusObIds != null &&
-					this.BusObIds.SequenceEqual(other.BusObIds)
+					BusObIds == other.BusObIds ||
+					BusObIds != null &&
+					BusObIds.SequenceEqual(other.BusObIds)
 				) &&
 				(
-					this.SearchText == other.SearchText ||
-					this.SearchText != null &&
-					this.SearchText.Equals(other.SearchText, StringComparison.Ordinal)
+					SearchText == other.SearchText ||
+					SearchText != null &&
+					SearchText.Equals(other.SearchText, StringComparison.Ordinal)
 				);
 	}
 
@@ -103,14 +103,14 @@ public partial class QuickSearchRequest : IEquatable<QuickSearchRequest>, IValid
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.BusObIds != null)
+			if (BusObIds != null)
 			{
-				hash = hash * 59 + this.BusObIds.GetHashCode();
+				hash = hash * 59 + BusObIds.GetHashCode();
 			}
 
-			if (this.SearchText != null)
+			if (SearchText != null)
 			{
-				hash = hash * 59 + this.SearchText.GetHashCode();
+				hash = hash * 59 + SearchText.GetHashCode();
 			}
 
 			return hash;

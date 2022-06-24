@@ -95,7 +95,7 @@ public partial class FieldValuesLookupRequest : IEquatable<FieldValuesLookupRequ
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as FieldValuesLookupRequest);
+		return Equals(obj as FieldValuesLookupRequest);
 	}
 
 	/// <summary>
@@ -113,34 +113,34 @@ public partial class FieldValuesLookupRequest : IEquatable<FieldValuesLookupRequ
 
 		return
 				(
-					this.BusbPublicId == other.BusbPublicId ||
-					this.BusbPublicId != null &&
-					this.BusbPublicId.Equals(other.BusbPublicId, StringComparison.Ordinal)
+					BusbPublicId == other.BusbPublicId ||
+					BusbPublicId != null &&
+					BusbPublicId.Equals(other.BusbPublicId, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObId == other.BusObId ||
-					this.BusObId != null &&
-					this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
+					BusObId == other.BusObId ||
+					BusObId != null &&
+					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObRecId == other.BusObRecId ||
-					this.BusObRecId != null &&
-					this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
+					BusObRecId == other.BusObRecId ||
+					BusObRecId != null &&
+					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
 				) &&
 				(
-					this.FieldId == other.FieldId ||
-					this.FieldId != null &&
-					this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
+					FieldId == other.FieldId ||
+					FieldId != null &&
+					FieldId.Equals(other.FieldId, StringComparison.Ordinal)
 				) &&
 				(
-					this.FieldName == other.FieldName ||
-					this.FieldName != null &&
-					this.FieldName.Equals(other.FieldName, StringComparison.Ordinal)
+					FieldName == other.FieldName ||
+					FieldName != null &&
+					FieldName.Equals(other.FieldName, StringComparison.Ordinal)
 				) &&
 				(
-					this.Fields == other.Fields ||
-					this.Fields != null &&
-					this.Fields.SequenceEqual(other.Fields)
+					Fields == other.Fields ||
+					Fields != null &&
+					Fields.SequenceEqual(other.Fields)
 				);
 	}
 
@@ -155,34 +155,34 @@ public partial class FieldValuesLookupRequest : IEquatable<FieldValuesLookupRequ
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.BusbPublicId != null)
+			if (BusbPublicId != null)
 			{
-				hash = hash * 59 + this.BusbPublicId.GetHashCode();
+				hash = hash * 59 + BusbPublicId.GetHashCode();
 			}
 
-			if (this.BusObId != null)
+			if (BusObId != null)
 			{
-				hash = hash * 59 + this.BusObId.GetHashCode();
+				hash = hash * 59 + BusObId.GetHashCode();
 			}
 
-			if (this.BusObRecId != null)
+			if (BusObRecId != null)
 			{
-				hash = hash * 59 + this.BusObRecId.GetHashCode();
+				hash = hash * 59 + BusObRecId.GetHashCode();
 			}
 
-			if (this.FieldId != null)
+			if (FieldId != null)
 			{
-				hash = hash * 59 + this.FieldId.GetHashCode();
+				hash = hash * 59 + FieldId.GetHashCode();
 			}
 
-			if (this.FieldName != null)
+			if (FieldName != null)
 			{
-				hash = hash * 59 + this.FieldName.GetHashCode();
+				hash = hash * 59 + FieldName.GetHashCode();
 			}
 
-			if (this.Fields != null)
+			if (Fields != null)
 			{
-				hash = hash * 59 + this.Fields.GetHashCode();
+				hash = hash * 59 + Fields.GetHashCode();
 			}
 
 			return hash;

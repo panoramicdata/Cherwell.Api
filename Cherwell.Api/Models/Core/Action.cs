@@ -324,7 +324,7 @@ public partial class Action : IEquatable<Action>, IValidatableObject
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as Action);
+		return Equals(obj as Action);
 	}
 
 	/// <summary>
@@ -342,79 +342,79 @@ public partial class Action : IEquatable<Action>, IValidatableObject
 
 		return
 				(
-					this.ActionCommand == other.ActionCommand ||
-					this.ActionCommand != null &&
-					this.ActionCommand.Equals(other.ActionCommand, StringComparison.Ordinal)
+					ActionCommand == other.ActionCommand ||
+					ActionCommand != null &&
+					ActionCommand.Equals(other.ActionCommand, StringComparison.Ordinal)
 				) &&
 				(
-					this.ActionType == other.ActionType ||
-					this.ActionType != null &&
-					this.ActionType.Equals(other.ActionType)
+					ActionType == other.ActionType ||
+					ActionType != null &&
+					ActionType.Equals(other.ActionType)
 				) &&
 				(
-					this.AlwaysTextAndImage == other.AlwaysTextAndImage ||
-					this.AlwaysTextAndImage != null &&
-					this.AlwaysTextAndImage.Equals(other.AlwaysTextAndImage)
+					AlwaysTextAndImage == other.AlwaysTextAndImage ||
+					AlwaysTextAndImage != null &&
+					AlwaysTextAndImage.Equals(other.AlwaysTextAndImage)
 				) &&
 				(
-					this.BeginGroup == other.BeginGroup ||
-					this.BeginGroup != null &&
-					this.BeginGroup.Equals(other.BeginGroup)
+					BeginGroup == other.BeginGroup ||
+					BeginGroup != null &&
+					BeginGroup.Equals(other.BeginGroup)
 				) &&
 				(
-					this.ChildActions == other.ChildActions ||
-					this.ChildActions != null &&
-					this.ChildActions.SequenceEqual(other.ChildActions)
+					ChildActions == other.ChildActions ||
+					ChildActions != null &&
+					ChildActions.SequenceEqual(other.ChildActions)
 				) &&
 				(
-					this.Dependencies == other.Dependencies ||
-					this.Dependencies != null &&
-					this.Dependencies.SequenceEqual(other.Dependencies)
+					Dependencies == other.Dependencies ||
+					Dependencies != null &&
+					Dependencies.SequenceEqual(other.Dependencies)
 				) &&
 				(
-					this.DisplayText == other.DisplayText ||
-					this.DisplayText != null &&
-					this.DisplayText.Equals(other.DisplayText, StringComparison.Ordinal)
+					DisplayText == other.DisplayText ||
+					DisplayText != null &&
+					DisplayText.Equals(other.DisplayText, StringComparison.Ordinal)
 				) &&
 				(
-					this.Enabled == other.Enabled ||
-					this.Enabled != null &&
-					this.Enabled.Equals(other.Enabled)
+					Enabled == other.Enabled ||
+					Enabled != null &&
+					Enabled.Equals(other.Enabled)
 				) &&
 				(
-					this.GalleryImage == other.GalleryImage ||
-					this.GalleryImage != null &&
-					this.GalleryImage.Equals(other.GalleryImage, StringComparison.Ordinal)
+					GalleryImage == other.GalleryImage ||
+					GalleryImage != null &&
+					GalleryImage.Equals(other.GalleryImage, StringComparison.Ordinal)
 				) &&
 				(
-					this.HelpText == other.HelpText ||
-					this.HelpText != null &&
-					this.HelpText.Equals(other.HelpText, StringComparison.Ordinal)
+					HelpText == other.HelpText ||
+					HelpText != null &&
+					HelpText.Equals(other.HelpText, StringComparison.Ordinal)
 				) &&
 				(
-					this.LoginEnabledMode == other.LoginEnabledMode ||
-					this.LoginEnabledMode != null &&
-					this.LoginEnabledMode.Equals(other.LoginEnabledMode)
+					LoginEnabledMode == other.LoginEnabledMode ||
+					LoginEnabledMode != null &&
+					LoginEnabledMode.Equals(other.LoginEnabledMode)
 				) &&
 				(
-					this.LoginVisibilityMode == other.LoginVisibilityMode ||
-					this.LoginVisibilityMode != null &&
-					this.LoginVisibilityMode.Equals(other.LoginVisibilityMode)
+					LoginVisibilityMode == other.LoginVisibilityMode ||
+					LoginVisibilityMode != null &&
+					LoginVisibilityMode.Equals(other.LoginVisibilityMode)
 				) &&
 				(
-					this.Name == other.Name ||
-					this.Name != null &&
-					this.Name.Equals(other.Name, StringComparison.Ordinal)
+					Name == other.Name ||
+					Name != null &&
+					Name.Equals(other.Name, StringComparison.Ordinal)
 				) &&
 				(
-					this.Parameters == other.Parameters ||
-					this.Parameters != null &&
-					this.Parameters.SequenceEqual(other.Parameters)
+					Parameters == other.Parameters ||
+					Parameters != null &&
+					Parameters.SequenceEqual(other.Parameters)
 				) &&
 				(
-					this.Visible == other.Visible ||
-					this.Visible != null &&
-					this.Visible.Equals(other.Visible)
+					Visible == other.Visible ||
+					Visible != null &&
+					Visible.Equals(other.Visible)
 				);
 	}
 
@@ -429,79 +429,79 @@ public partial class Action : IEquatable<Action>, IValidatableObject
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.ActionCommand != null)
+			if (ActionCommand != null)
 			{
-				hash = hash * 59 + this.ActionCommand.GetHashCode();
+				hash = hash * 59 + ActionCommand.GetHashCode();
 			}
 
-			if (this.ActionType != null)
+			if (ActionType != null)
 			{
-				hash = hash * 59 + this.ActionType.GetHashCode();
+				hash = hash * 59 + ActionType.GetHashCode();
 			}
 
-			if (this.AlwaysTextAndImage != null)
+			if (AlwaysTextAndImage != null)
 			{
-				hash = hash * 59 + this.AlwaysTextAndImage.GetHashCode();
+				hash = hash * 59 + AlwaysTextAndImage.GetHashCode();
 			}
 
-			if (this.BeginGroup != null)
+			if (BeginGroup != null)
 			{
-				hash = hash * 59 + this.BeginGroup.GetHashCode();
+				hash = hash * 59 + BeginGroup.GetHashCode();
 			}
 
-			if (this.ChildActions != null)
+			if (ChildActions != null)
 			{
-				hash = hash * 59 + this.ChildActions.GetHashCode();
+				hash = hash * 59 + ChildActions.GetHashCode();
 			}
 
-			if (this.Dependencies != null)
+			if (Dependencies != null)
 			{
-				hash = hash * 59 + this.Dependencies.GetHashCode();
+				hash = hash * 59 + Dependencies.GetHashCode();
 			}
 
-			if (this.DisplayText != null)
+			if (DisplayText != null)
 			{
-				hash = hash * 59 + this.DisplayText.GetHashCode();
+				hash = hash * 59 + DisplayText.GetHashCode();
 			}
 
-			if (this.Enabled != null)
+			if (Enabled != null)
 			{
-				hash = hash * 59 + this.Enabled.GetHashCode();
+				hash = hash * 59 + Enabled.GetHashCode();
 			}
 
-			if (this.GalleryImage != null)
+			if (GalleryImage != null)
 			{
-				hash = hash * 59 + this.GalleryImage.GetHashCode();
+				hash = hash * 59 + GalleryImage.GetHashCode();
 			}
 
-			if (this.HelpText != null)
+			if (HelpText != null)
 			{
-				hash = hash * 59 + this.HelpText.GetHashCode();
+				hash = hash * 59 + HelpText.GetHashCode();
 			}
 
-			if (this.LoginEnabledMode != null)
+			if (LoginEnabledMode != null)
 			{
-				hash = hash * 59 + this.LoginEnabledMode.GetHashCode();
+				hash = hash * 59 + LoginEnabledMode.GetHashCode();
 			}
 
-			if (this.LoginVisibilityMode != null)
+			if (LoginVisibilityMode != null)
 			{
-				hash = hash * 59 + this.LoginVisibilityMode.GetHashCode();
+				hash = hash * 59 + LoginVisibilityMode.GetHashCode();
 			}
 
-			if (this.Name != null)
+			if (Name != null)
 			{
-				hash = hash * 59 + this.Name.GetHashCode();
+				hash = hash * 59 + Name.GetHashCode();
 			}
 
-			if (this.Parameters != null)
+			if (Parameters != null)
 			{
-				hash = hash * 59 + this.Parameters.GetHashCode();
+				hash = hash * 59 + Parameters.GetHashCode();
 			}
 
-			if (this.Visible != null)
+			if (Visible != null)
 			{
-				hash = hash * 59 + this.Visible.GetHashCode();
+				hash = hash * 59 + Visible.GetHashCode();
 			}
 
 			return hash;

@@ -79,7 +79,7 @@ public partial class SaveTeamMemberRequest : IEquatable<SaveTeamMemberRequest>, 
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as SaveTeamMemberRequest);
+		return Equals(obj as SaveTeamMemberRequest);
 	}
 
 	/// <summary>
@@ -97,24 +97,24 @@ public partial class SaveTeamMemberRequest : IEquatable<SaveTeamMemberRequest>, 
 
 		return
 				(
-					this.IsTeamManager == other.IsTeamManager ||
-					this.IsTeamManager != null &&
-					this.IsTeamManager.Equals(other.IsTeamManager)
+					IsTeamManager == other.IsTeamManager ||
+					IsTeamManager != null &&
+					IsTeamManager.Equals(other.IsTeamManager)
 				) &&
 				(
-					this.SetAsDefaultTeam == other.SetAsDefaultTeam ||
-					this.SetAsDefaultTeam != null &&
-					this.SetAsDefaultTeam.Equals(other.SetAsDefaultTeam)
+					SetAsDefaultTeam == other.SetAsDefaultTeam ||
+					SetAsDefaultTeam != null &&
+					SetAsDefaultTeam.Equals(other.SetAsDefaultTeam)
 				) &&
 				(
-					this.TeamId == other.TeamId ||
-					this.TeamId != null &&
-					this.TeamId.Equals(other.TeamId, StringComparison.Ordinal)
+					TeamId == other.TeamId ||
+					TeamId != null &&
+					TeamId.Equals(other.TeamId, StringComparison.Ordinal)
 				) &&
 				(
-					this.UserRecId == other.UserRecId ||
-					this.UserRecId != null &&
-					this.UserRecId.Equals(other.UserRecId, StringComparison.Ordinal)
+					UserRecId == other.UserRecId ||
+					UserRecId != null &&
+					UserRecId.Equals(other.UserRecId, StringComparison.Ordinal)
 				);
 	}
 
@@ -129,24 +129,24 @@ public partial class SaveTeamMemberRequest : IEquatable<SaveTeamMemberRequest>, 
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.IsTeamManager != null)
+			if (IsTeamManager != null)
 			{
-				hash = hash * 59 + this.IsTeamManager.GetHashCode();
+				hash = hash * 59 + IsTeamManager.GetHashCode();
 			}
 
-			if (this.SetAsDefaultTeam != null)
+			if (SetAsDefaultTeam != null)
 			{
-				hash = hash * 59 + this.SetAsDefaultTeam.GetHashCode();
+				hash = hash * 59 + SetAsDefaultTeam.GetHashCode();
 			}
 
-			if (this.TeamId != null)
+			if (TeamId != null)
 			{
-				hash = hash * 59 + this.TeamId.GetHashCode();
+				hash = hash * 59 + TeamId.GetHashCode();
 			}
 
-			if (this.UserRecId != null)
+			if (UserRecId != null)
 			{
-				hash = hash * 59 + this.UserRecId.GetHashCode();
+				hash = hash * 59 + UserRecId.GetHashCode();
 			}
 
 			return hash;

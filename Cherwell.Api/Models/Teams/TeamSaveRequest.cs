@@ -116,7 +116,7 @@ public partial class TeamSaveRequest : IEquatable<TeamSaveRequest>, IValidatable
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as TeamSaveRequest);
+		return Equals(obj as TeamSaveRequest);
 	}
 
 	/// <summary>
@@ -134,34 +134,34 @@ public partial class TeamSaveRequest : IEquatable<TeamSaveRequest>, IValidatable
 
 		return
 				(
-					this.Description == other.Description ||
-					this.Description != null &&
-					this.Description.Equals(other.Description, StringComparison.Ordinal)
+					Description == other.Description ||
+					Description != null &&
+					Description.Equals(other.Description, StringComparison.Ordinal)
 				) &&
 				(
-					this.EmailAlias == other.EmailAlias ||
-					this.EmailAlias != null &&
-					this.EmailAlias.Equals(other.EmailAlias, StringComparison.Ordinal)
+					EmailAlias == other.EmailAlias ||
+					EmailAlias != null &&
+					EmailAlias.Equals(other.EmailAlias, StringComparison.Ordinal)
 				) &&
 				(
-					this.Image == other.Image ||
-					this.Image != null &&
-					this.Image.Equals(other.Image, StringComparison.Ordinal)
+					Image == other.Image ||
+					Image != null &&
+					Image.Equals(other.Image, StringComparison.Ordinal)
 				) &&
 				(
-					this.TeamId == other.TeamId ||
-					this.TeamId != null &&
-					this.TeamId.Equals(other.TeamId, StringComparison.Ordinal)
+					TeamId == other.TeamId ||
+					TeamId != null &&
+					TeamId.Equals(other.TeamId, StringComparison.Ordinal)
 				) &&
 				(
-					this.TeamName == other.TeamName ||
-					this.TeamName != null &&
-					this.TeamName.Equals(other.TeamName, StringComparison.Ordinal)
+					TeamName == other.TeamName ||
+					TeamName != null &&
+					TeamName.Equals(other.TeamName, StringComparison.Ordinal)
 				) &&
 				(
-					this.TeamType == other.TeamType ||
-					this.TeamType != null &&
-					this.TeamType.Equals(other.TeamType)
+					TeamType == other.TeamType ||
+					TeamType != null &&
+					TeamType.Equals(other.TeamType)
 				);
 	}
 
@@ -176,34 +176,34 @@ public partial class TeamSaveRequest : IEquatable<TeamSaveRequest>, IValidatable
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Description != null)
+			if (Description != null)
 			{
-				hash = hash * 59 + this.Description.GetHashCode();
+				hash = hash * 59 + Description.GetHashCode();
 			}
 
-			if (this.EmailAlias != null)
+			if (EmailAlias != null)
 			{
-				hash = hash * 59 + this.EmailAlias.GetHashCode();
+				hash = hash * 59 + EmailAlias.GetHashCode();
 			}
 
-			if (this.Image != null)
+			if (Image != null)
 			{
-				hash = hash * 59 + this.Image.GetHashCode();
+				hash = hash * 59 + Image.GetHashCode();
 			}
 
-			if (this.TeamId != null)
+			if (TeamId != null)
 			{
-				hash = hash * 59 + this.TeamId.GetHashCode();
+				hash = hash * 59 + TeamId.GetHashCode();
 			}
 
-			if (this.TeamName != null)
+			if (TeamName != null)
 			{
-				hash = hash * 59 + this.TeamName.GetHashCode();
+				hash = hash * 59 + TeamName.GetHashCode();
 			}
 
-			if (this.TeamType != null)
+			if (TeamType != null)
 			{
-				hash = hash * 59 + this.TeamType.GetHashCode();
+				hash = hash * 59 + TeamType.GetHashCode();
 			}
 
 			return hash;

@@ -154,7 +154,7 @@ public partial class RelatedBusinessObjectResponse : IEquatable<RelatedBusinessO
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as RelatedBusinessObjectResponse);
+		return Equals(obj as RelatedBusinessObjectResponse);
 	}
 
 	/// <summary>
@@ -172,64 +172,64 @@ public partial class RelatedBusinessObjectResponse : IEquatable<RelatedBusinessO
 
 		return
 				(
-					this.ErrorCode == other.ErrorCode ||
-					this.ErrorCode != null &&
-					this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
+					ErrorCode == other.ErrorCode ||
+					ErrorCode != null &&
+					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
 				) &&
 				(
-					this.ErrorMessage == other.ErrorMessage ||
-					this.ErrorMessage != null &&
-					this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
+					ErrorMessage == other.ErrorMessage ||
+					ErrorMessage != null &&
+					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
 				) &&
 				(
-					this.HasError == other.HasError ||
-					this.HasError != null &&
-					this.HasError.Equals(other.HasError)
+					HasError == other.HasError ||
+					HasError != null &&
+					HasError.Equals(other.HasError)
 				) &&
 				(
-					this.Links == other.Links ||
-					this.Links != null &&
-					this.Links.SequenceEqual(other.Links)
+					Links == other.Links ||
+					Links != null &&
+					Links.SequenceEqual(other.Links)
 				) &&
 				(
-					this.PageNumber == other.PageNumber ||
-					this.PageNumber != null &&
-					this.PageNumber.Equals(other.PageNumber)
+					PageNumber == other.PageNumber ||
+					PageNumber != null &&
+					PageNumber.Equals(other.PageNumber)
 				) &&
 				(
-					this.PageSize == other.PageSize ||
-					this.PageSize != null &&
-					this.PageSize.Equals(other.PageSize)
+					PageSize == other.PageSize ||
+					PageSize != null &&
+					PageSize.Equals(other.PageSize)
 				) &&
 				(
-					this.ParentBusObId == other.ParentBusObId ||
-					this.ParentBusObId != null &&
-					this.ParentBusObId.Equals(other.ParentBusObId, StringComparison.Ordinal)
+					ParentBusObId == other.ParentBusObId ||
+					ParentBusObId != null &&
+					ParentBusObId.Equals(other.ParentBusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.ParentBusObPublicId == other.ParentBusObPublicId ||
-					this.ParentBusObPublicId != null &&
-					this.ParentBusObPublicId.Equals(other.ParentBusObPublicId, StringComparison.Ordinal)
+					ParentBusObPublicId == other.ParentBusObPublicId ||
+					ParentBusObPublicId != null &&
+					ParentBusObPublicId.Equals(other.ParentBusObPublicId, StringComparison.Ordinal)
 				) &&
 				(
-					this.ParentBusObRecId == other.ParentBusObRecId ||
-					this.ParentBusObRecId != null &&
-					this.ParentBusObRecId.Equals(other.ParentBusObRecId, StringComparison.Ordinal)
+					ParentBusObRecId == other.ParentBusObRecId ||
+					ParentBusObRecId != null &&
+					ParentBusObRecId.Equals(other.ParentBusObRecId, StringComparison.Ordinal)
 				) &&
 				(
-					this.RelatedBusinessObjects == other.RelatedBusinessObjects ||
-					this.RelatedBusinessObjects != null &&
-					this.RelatedBusinessObjects.SequenceEqual(other.RelatedBusinessObjects)
+					RelatedBusinessObjects == other.RelatedBusinessObjects ||
+					RelatedBusinessObjects != null &&
+					RelatedBusinessObjects.SequenceEqual(other.RelatedBusinessObjects)
 				) &&
 				(
-					this.RelationshipId == other.RelationshipId ||
-					this.RelationshipId != null &&
-					this.RelationshipId.Equals(other.RelationshipId, StringComparison.Ordinal)
+					RelationshipId == other.RelationshipId ||
+					RelationshipId != null &&
+					RelationshipId.Equals(other.RelationshipId, StringComparison.Ordinal)
 				) &&
 				(
-					this.TotalRecords == other.TotalRecords ||
-					this.TotalRecords != null &&
-					this.TotalRecords.Equals(other.TotalRecords)
+					TotalRecords == other.TotalRecords ||
+					TotalRecords != null &&
+					TotalRecords.Equals(other.TotalRecords)
 				);
 	}
 
@@ -244,64 +244,64 @@ public partial class RelatedBusinessObjectResponse : IEquatable<RelatedBusinessO
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.ErrorCode != null)
+			if (ErrorCode != null)
 			{
-				hash = hash * 59 + this.ErrorCode.GetHashCode();
+				hash = hash * 59 + ErrorCode.GetHashCode();
 			}
 
-			if (this.ErrorMessage != null)
+			if (ErrorMessage != null)
 			{
-				hash = hash * 59 + this.ErrorMessage.GetHashCode();
+				hash = hash * 59 + ErrorMessage.GetHashCode();
 			}
 
-			if (this.HasError != null)
+			if (HasError != null)
 			{
-				hash = hash * 59 + this.HasError.GetHashCode();
+				hash = hash * 59 + HasError.GetHashCode();
 			}
 
-			if (this.Links != null)
+			if (Links != null)
 			{
-				hash = hash * 59 + this.Links.GetHashCode();
+				hash = hash * 59 + Links.GetHashCode();
 			}
 
-			if (this.PageNumber != null)
+			if (PageNumber != null)
 			{
-				hash = hash * 59 + this.PageNumber.GetHashCode();
+				hash = hash * 59 + PageNumber.GetHashCode();
 			}
 
-			if (this.PageSize != null)
+			if (PageSize != null)
 			{
-				hash = hash * 59 + this.PageSize.GetHashCode();
+				hash = hash * 59 + PageSize.GetHashCode();
 			}
 
-			if (this.ParentBusObId != null)
+			if (ParentBusObId != null)
 			{
-				hash = hash * 59 + this.ParentBusObId.GetHashCode();
+				hash = hash * 59 + ParentBusObId.GetHashCode();
 			}
 
-			if (this.ParentBusObPublicId != null)
+			if (ParentBusObPublicId != null)
 			{
-				hash = hash * 59 + this.ParentBusObPublicId.GetHashCode();
+				hash = hash * 59 + ParentBusObPublicId.GetHashCode();
 			}
 
-			if (this.ParentBusObRecId != null)
+			if (ParentBusObRecId != null)
 			{
-				hash = hash * 59 + this.ParentBusObRecId.GetHashCode();
+				hash = hash * 59 + ParentBusObRecId.GetHashCode();
 			}
 
-			if (this.RelatedBusinessObjects != null)
+			if (RelatedBusinessObjects != null)
 			{
-				hash = hash * 59 + this.RelatedBusinessObjects.GetHashCode();
+				hash = hash * 59 + RelatedBusinessObjects.GetHashCode();
 			}
 
-			if (this.RelationshipId != null)
+			if (RelationshipId != null)
 			{
-				hash = hash * 59 + this.RelationshipId.GetHashCode();
+				hash = hash * 59 + RelationshipId.GetHashCode();
 			}
 
-			if (this.TotalRecords != null)
+			if (TotalRecords != null)
 			{
-				hash = hash * 59 + this.TotalRecords.GetHashCode();
+				hash = hash * 59 + TotalRecords.GetHashCode();
 			}
 
 			return hash;

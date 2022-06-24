@@ -63,7 +63,7 @@ public partial class SortInfo : IEquatable<SortInfo>, IValidatableObject
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as SortInfo);
+		return Equals(obj as SortInfo);
 	}
 
 	/// <summary>
@@ -81,14 +81,14 @@ public partial class SortInfo : IEquatable<SortInfo>, IValidatableObject
 
 		return
 				(
-					this.FieldId == other.FieldId ||
-					this.FieldId != null &&
-					this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
+					FieldId == other.FieldId ||
+					FieldId != null &&
+					FieldId.Equals(other.FieldId, StringComparison.Ordinal)
 				) &&
 				(
-					this.SortDirection == other.SortDirection ||
-					this.SortDirection != null &&
-					this.SortDirection.Equals(other.SortDirection)
+					SortDirection == other.SortDirection ||
+					SortDirection != null &&
+					SortDirection.Equals(other.SortDirection)
 				);
 	}
 
@@ -103,14 +103,14 @@ public partial class SortInfo : IEquatable<SortInfo>, IValidatableObject
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.FieldId != null)
+			if (FieldId != null)
 			{
-				hash = hash * 59 + this.FieldId.GetHashCode();
+				hash = hash * 59 + FieldId.GetHashCode();
 			}
 
-			if (this.SortDirection != null)
+			if (SortDirection != null)
 			{
-				hash = hash * 59 + this.SortDirection.GetHashCode();
+				hash = hash * 59 + SortDirection.GetHashCode();
 			}
 
 			return hash;

@@ -95,7 +95,7 @@ public partial class SearchResultsRow : IEquatable<SearchResultsRow>, IValidatab
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as SearchResultsRow);
+		return Equals(obj as SearchResultsRow);
 	}
 
 	/// <summary>
@@ -113,34 +113,34 @@ public partial class SearchResultsRow : IEquatable<SearchResultsRow>, IValidatab
 
 		return
 				(
-					this.BusObId == other.BusObId ||
-					this.BusObId != null &&
-					this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
+					BusObId == other.BusObId ||
+					BusObId != null &&
+					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObRecId == other.BusObRecId ||
-					this.BusObRecId != null &&
-					this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
+					BusObRecId == other.BusObRecId ||
+					BusObRecId != null &&
+					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
 				) &&
 				(
-					this.Links == other.Links ||
-					this.Links != null &&
-					this.Links.SequenceEqual(other.Links)
+					Links == other.Links ||
+					Links != null &&
+					Links.SequenceEqual(other.Links)
 				) &&
 				(
-					this.PublicId == other.PublicId ||
-					this.PublicId != null &&
-					this.PublicId.Equals(other.PublicId, StringComparison.Ordinal)
+					PublicId == other.PublicId ||
+					PublicId != null &&
+					PublicId.Equals(other.PublicId, StringComparison.Ordinal)
 				) &&
 				(
-					this.RowColor == other.RowColor ||
-					this.RowColor != null &&
-					this.RowColor.Equals(other.RowColor, StringComparison.Ordinal)
+					RowColor == other.RowColor ||
+					RowColor != null &&
+					RowColor.Equals(other.RowColor, StringComparison.Ordinal)
 				) &&
 				(
-					this.SearchResultsFieldValues == other.SearchResultsFieldValues ||
-					this.SearchResultsFieldValues != null &&
-					this.SearchResultsFieldValues.SequenceEqual(other.SearchResultsFieldValues)
+					SearchResultsFieldValues == other.SearchResultsFieldValues ||
+					SearchResultsFieldValues != null &&
+					SearchResultsFieldValues.SequenceEqual(other.SearchResultsFieldValues)
 				);
 	}
 
@@ -155,34 +155,34 @@ public partial class SearchResultsRow : IEquatable<SearchResultsRow>, IValidatab
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.BusObId != null)
+			if (BusObId != null)
 			{
-				hash = hash * 59 + this.BusObId.GetHashCode();
+				hash = hash * 59 + BusObId.GetHashCode();
 			}
 
-			if (this.BusObRecId != null)
+			if (BusObRecId != null)
 			{
-				hash = hash * 59 + this.BusObRecId.GetHashCode();
+				hash = hash * 59 + BusObRecId.GetHashCode();
 			}
 
-			if (this.Links != null)
+			if (Links != null)
 			{
-				hash = hash * 59 + this.Links.GetHashCode();
+				hash = hash * 59 + Links.GetHashCode();
 			}
 
-			if (this.PublicId != null)
+			if (PublicId != null)
 			{
-				hash = hash * 59 + this.PublicId.GetHashCode();
+				hash = hash * 59 + PublicId.GetHashCode();
 			}
 
-			if (this.RowColor != null)
+			if (RowColor != null)
 			{
-				hash = hash * 59 + this.RowColor.GetHashCode();
+				hash = hash * 59 + RowColor.GetHashCode();
 			}
 
-			if (this.SearchResultsFieldValues != null)
+			if (SearchResultsFieldValues != null)
 			{
-				hash = hash * 59 + this.SearchResultsFieldValues.GetHashCode();
+				hash = hash * 59 + SearchResultsFieldValues.GetHashCode();
 			}
 
 			return hash;

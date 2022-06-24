@@ -83,7 +83,7 @@ public partial class ClientSecuritySettingsResponse : IEquatable<ClientSecurityS
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as ClientSecuritySettingsResponse);
+		return Equals(obj as ClientSecuritySettingsResponse);
 	}
 
 	/// <summary>
@@ -101,24 +101,24 @@ public partial class ClientSecuritySettingsResponse : IEquatable<ClientSecurityS
 
 		return
 				(
-					this.InternalLoginAllowed == other.InternalLoginAllowed ||
-					this.InternalLoginAllowed != null &&
-					this.InternalLoginAllowed.Equals(other.InternalLoginAllowed)
+					InternalLoginAllowed == other.InternalLoginAllowed ||
+					InternalLoginAllowed != null &&
+					InternalLoginAllowed.Equals(other.InternalLoginAllowed)
 				) &&
 				(
-					this.LdapLoginAllowed == other.LdapLoginAllowed ||
-					this.LdapLoginAllowed != null &&
-					this.LdapLoginAllowed.Equals(other.LdapLoginAllowed)
+					LdapLoginAllowed == other.LdapLoginAllowed ||
+					LdapLoginAllowed != null &&
+					LdapLoginAllowed.Equals(other.LdapLoginAllowed)
 				) &&
 				(
-					this.SamlLoginAllowed == other.SamlLoginAllowed ||
-					this.SamlLoginAllowed != null &&
-					this.SamlLoginAllowed.Equals(other.SamlLoginAllowed)
+					SamlLoginAllowed == other.SamlLoginAllowed ||
+					SamlLoginAllowed != null &&
+					SamlLoginAllowed.Equals(other.SamlLoginAllowed)
 				) &&
 				(
-					this.WindowsLoginAllowed == other.WindowsLoginAllowed ||
-					this.WindowsLoginAllowed != null &&
-					this.WindowsLoginAllowed.Equals(other.WindowsLoginAllowed)
+					WindowsLoginAllowed == other.WindowsLoginAllowed ||
+					WindowsLoginAllowed != null &&
+					WindowsLoginAllowed.Equals(other.WindowsLoginAllowed)
 				);
 	}
 
@@ -133,24 +133,24 @@ public partial class ClientSecuritySettingsResponse : IEquatable<ClientSecurityS
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.InternalLoginAllowed != null)
+			if (InternalLoginAllowed != null)
 			{
-				hash = hash * 59 + this.InternalLoginAllowed.GetHashCode();
+				hash = hash * 59 + InternalLoginAllowed.GetHashCode();
 			}
 
-			if (this.LdapLoginAllowed != null)
+			if (LdapLoginAllowed != null)
 			{
-				hash = hash * 59 + this.LdapLoginAllowed.GetHashCode();
+				hash = hash * 59 + LdapLoginAllowed.GetHashCode();
 			}
 
-			if (this.SamlLoginAllowed != null)
+			if (SamlLoginAllowed != null)
 			{
-				hash = hash * 59 + this.SamlLoginAllowed.GetHashCode();
+				hash = hash * 59 + SamlLoginAllowed.GetHashCode();
 			}
 
-			if (this.WindowsLoginAllowed != null)
+			if (WindowsLoginAllowed != null)
 			{
-				hash = hash * 59 + this.WindowsLoginAllowed.GetHashCode();
+				hash = hash * 59 + WindowsLoginAllowed.GetHashCode();
 			}
 
 			return hash;

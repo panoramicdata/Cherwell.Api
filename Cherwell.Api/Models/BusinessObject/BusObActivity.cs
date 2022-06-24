@@ -143,7 +143,7 @@ public partial class BusObActivity : IEquatable<BusObActivity>, IValidatableObje
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as BusObActivity);
+		return Equals(obj as BusObActivity);
 	}
 
 	/// <summary>
@@ -161,64 +161,64 @@ public partial class BusObActivity : IEquatable<BusObActivity>, IValidatableObje
 
 		return
 				(
-					this.Id == other.Id ||
-					this.Id != null &&
-					this.Id.Equals(other.Id, StringComparison.Ordinal)
+					Id == other.Id ||
+					Id != null &&
+					Id.Equals(other.Id, StringComparison.Ordinal)
 				) &&
 				(
-					this.ParentBusObDefId == other.ParentBusObDefId ||
-					this.ParentBusObDefId != null &&
-					this.ParentBusObDefId.Equals(other.ParentBusObDefId, StringComparison.Ordinal)
+					ParentBusObDefId == other.ParentBusObDefId ||
+					ParentBusObDefId != null &&
+					ParentBusObDefId.Equals(other.ParentBusObDefId, StringComparison.Ordinal)
 				) &&
 				(
-					this.ParentBusObRecId == other.ParentBusObRecId ||
-					this.ParentBusObRecId != null &&
-					this.ParentBusObRecId.Equals(other.ParentBusObRecId, StringComparison.Ordinal)
+					ParentBusObRecId == other.ParentBusObRecId ||
+					ParentBusObRecId != null &&
+					ParentBusObRecId.Equals(other.ParentBusObRecId, StringComparison.Ordinal)
 				) &&
 				(
-					this.HistoryBusObDefId == other.HistoryBusObDefId ||
-					this.HistoryBusObDefId != null &&
-					this.HistoryBusObDefId.Equals(other.HistoryBusObDefId, StringComparison.Ordinal)
+					HistoryBusObDefId == other.HistoryBusObDefId ||
+					HistoryBusObDefId != null &&
+					HistoryBusObDefId.Equals(other.HistoryBusObDefId, StringComparison.Ordinal)
 				) &&
 				(
-					this.HistoryBusObRecId == other.HistoryBusObRecId ||
-					this.HistoryBusObRecId != null &&
-					this.HistoryBusObRecId.Equals(other.HistoryBusObRecId, StringComparison.Ordinal)
+					HistoryBusObRecId == other.HistoryBusObRecId ||
+					HistoryBusObRecId != null &&
+					HistoryBusObRecId.Equals(other.HistoryBusObRecId, StringComparison.Ordinal)
 				) &&
 				(
-					this.Type == other.Type ||
-					this.Type != null &&
-					this.Type.Equals(other.Type, StringComparison.Ordinal)
+					Type == other.Type ||
+					Type != null &&
+					Type.Equals(other.Type, StringComparison.Ordinal)
 				) &&
 				(
-					this.Title == other.Title ||
-					this.Title != null &&
-					this.Title.Equals(other.Title, StringComparison.Ordinal)
+					Title == other.Title ||
+					Title != null &&
+					Title.Equals(other.Title, StringComparison.Ordinal)
 				) &&
 				(
-					this.Body == other.Body ||
-					this.Body != null &&
-					this.Body.Equals(other.Body, StringComparison.Ordinal)
+					Body == other.Body ||
+					Body != null &&
+					Body.Equals(other.Body, StringComparison.Ordinal)
 				) &&
 				(
-					this.CreatedBy == other.CreatedBy ||
-					this.CreatedBy != null &&
-					this.CreatedBy.Equals(other.CreatedBy, StringComparison.Ordinal)
+					CreatedBy == other.CreatedBy ||
+					CreatedBy != null &&
+					CreatedBy.Equals(other.CreatedBy, StringComparison.Ordinal)
 				) &&
 				(
-					this.Created == other.Created ||
-					this.Created != null &&
-					this.Created.Equals(other.Created)
+					Created == other.Created ||
+					Created != null &&
+					Created.Equals(other.Created)
 				) &&
 				(
-					this.Modified == other.Modified ||
-					this.Modified != null &&
-					this.Modified.Equals(other.Modified)
+					Modified == other.Modified ||
+					Modified != null &&
+					Modified.Equals(other.Modified)
 				) &&
 				(
-					this.ModifiedBy == other.ModifiedBy ||
-					this.ModifiedBy != null &&
-					this.ModifiedBy.Equals(other.ModifiedBy, StringComparison.Ordinal)
+					ModifiedBy == other.ModifiedBy ||
+					ModifiedBy != null &&
+					ModifiedBy.Equals(other.ModifiedBy, StringComparison.Ordinal)
 				);
 	}
 
@@ -233,64 +233,64 @@ public partial class BusObActivity : IEquatable<BusObActivity>, IValidatableObje
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Id != null)
+			if (Id != null)
 			{
-				hash = hash * 59 + this.Id.GetHashCode();
+				hash = hash * 59 + Id.GetHashCode();
 			}
 
-			if (this.ParentBusObDefId != null)
+			if (ParentBusObDefId != null)
 			{
-				hash = hash * 59 + this.ParentBusObDefId.GetHashCode();
+				hash = hash * 59 + ParentBusObDefId.GetHashCode();
 			}
 
-			if (this.ParentBusObRecId != null)
+			if (ParentBusObRecId != null)
 			{
-				hash = hash * 59 + this.ParentBusObRecId.GetHashCode();
+				hash = hash * 59 + ParentBusObRecId.GetHashCode();
 			}
 
-			if (this.HistoryBusObDefId != null)
+			if (HistoryBusObDefId != null)
 			{
-				hash = hash * 59 + this.HistoryBusObDefId.GetHashCode();
+				hash = hash * 59 + HistoryBusObDefId.GetHashCode();
 			}
 
-			if (this.HistoryBusObRecId != null)
+			if (HistoryBusObRecId != null)
 			{
-				hash = hash * 59 + this.HistoryBusObRecId.GetHashCode();
+				hash = hash * 59 + HistoryBusObRecId.GetHashCode();
 			}
 
-			if (this.Type != null)
+			if (Type != null)
 			{
-				hash = hash * 59 + this.Type.GetHashCode();
+				hash = hash * 59 + Type.GetHashCode();
 			}
 
-			if (this.Title != null)
+			if (Title != null)
 			{
-				hash = hash * 59 + this.Title.GetHashCode();
+				hash = hash * 59 + Title.GetHashCode();
 			}
 
-			if (this.Body != null)
+			if (Body != null)
 			{
-				hash = hash * 59 + this.Body.GetHashCode();
+				hash = hash * 59 + Body.GetHashCode();
 			}
 
-			if (this.CreatedBy != null)
+			if (CreatedBy != null)
 			{
-				hash = hash * 59 + this.CreatedBy.GetHashCode();
+				hash = hash * 59 + CreatedBy.GetHashCode();
 			}
 
-			if (this.Created != null)
+			if (Created != null)
 			{
-				hash = hash * 59 + this.Created.GetHashCode();
+				hash = hash * 59 + Created.GetHashCode();
 			}
 
-			if (this.Modified != null)
+			if (Modified != null)
 			{
-				hash = hash * 59 + this.Modified.GetHashCode();
+				hash = hash * 59 + Modified.GetHashCode();
 			}
 
-			if (this.ModifiedBy != null)
+			if (ModifiedBy != null)
 			{
-				hash = hash * 59 + this.ModifiedBy.GetHashCode();
+				hash = hash * 59 + ModifiedBy.GetHashCode();
 			}
 
 			return hash;

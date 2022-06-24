@@ -71,7 +71,7 @@ public partial class GetStagesResponseStages : IEquatable<GetStagesResponseStage
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as GetStagesResponseStages);
+		return Equals(obj as GetStagesResponseStages);
 	}
 
 	/// <summary>
@@ -89,19 +89,19 @@ public partial class GetStagesResponseStages : IEquatable<GetStagesResponseStage
 
 		return
 				(
-					this.Id == other.Id ||
-					this.Id != null &&
-					this.Id.Equals(other.Id, StringComparison.Ordinal)
+					Id == other.Id ||
+					Id != null &&
+					Id.Equals(other.Id, StringComparison.Ordinal)
 				) &&
 				(
-					this.IsFinal == other.IsFinal ||
-					this.IsFinal != null &&
-					this.IsFinal.Equals(other.IsFinal)
+					IsFinal == other.IsFinal ||
+					IsFinal != null &&
+					IsFinal.Equals(other.IsFinal)
 				) &&
 				(
-					this.Name == other.Name ||
-					this.Name != null &&
-					this.Name.Equals(other.Name, StringComparison.Ordinal)
+					Name == other.Name ||
+					Name != null &&
+					Name.Equals(other.Name, StringComparison.Ordinal)
 				);
 	}
 
@@ -116,19 +116,19 @@ public partial class GetStagesResponseStages : IEquatable<GetStagesResponseStage
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Id != null)
+			if (Id != null)
 			{
-				hash = hash * 59 + this.Id.GetHashCode();
+				hash = hash * 59 + Id.GetHashCode();
 			}
 
-			if (this.IsFinal != null)
+			if (IsFinal != null)
 			{
-				hash = hash * 59 + this.IsFinal.GetHashCode();
+				hash = hash * 59 + IsFinal.GetHashCode();
 			}
 
-			if (this.Name != null)
+			if (Name != null)
 			{
-				hash = hash * 59 + this.Name.GetHashCode();
+				hash = hash * 59 + Name.GetHashCode();
 			}
 
 			return hash;

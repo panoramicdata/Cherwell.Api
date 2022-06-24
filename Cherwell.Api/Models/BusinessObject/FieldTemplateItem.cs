@@ -103,7 +103,7 @@ public partial class FieldTemplateItem : IEquatable<FieldTemplateItem>, IValidat
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as FieldTemplateItem);
+		return Equals(obj as FieldTemplateItem);
 	}
 
 	/// <summary>
@@ -121,39 +121,39 @@ public partial class FieldTemplateItem : IEquatable<FieldTemplateItem>, IValidat
 
 		return
 				(
-					this.Dirty == other.Dirty ||
-					this.Dirty != null &&
-					this.Dirty.Equals(other.Dirty)
+					Dirty == other.Dirty ||
+					Dirty != null &&
+					Dirty.Equals(other.Dirty)
 				) &&
 				(
-					this.DisplayName == other.DisplayName ||
-					this.DisplayName != null &&
-					this.DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
+					DisplayName == other.DisplayName ||
+					DisplayName != null &&
+					DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
 				) &&
 				(
-					this.FieldId == other.FieldId ||
-					this.FieldId != null &&
-					this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
+					FieldId == other.FieldId ||
+					FieldId != null &&
+					FieldId.Equals(other.FieldId, StringComparison.Ordinal)
 				) &&
 				(
-					this.FullFieldId == other.FullFieldId ||
-					this.FullFieldId != null &&
-					this.FullFieldId.Equals(other.FullFieldId, StringComparison.Ordinal)
+					FullFieldId == other.FullFieldId ||
+					FullFieldId != null &&
+					FullFieldId.Equals(other.FullFieldId, StringComparison.Ordinal)
 				) &&
 				(
-					this.Html == other.Html ||
-					this.Html != null &&
-					this.Html.Equals(other.Html, StringComparison.Ordinal)
+					Html == other.Html ||
+					Html != null &&
+					Html.Equals(other.Html, StringComparison.Ordinal)
 				) &&
 				(
-					this.Name == other.Name ||
-					this.Name != null &&
-					this.Name.Equals(other.Name, StringComparison.Ordinal)
+					Name == other.Name ||
+					Name != null &&
+					Name.Equals(other.Name, StringComparison.Ordinal)
 				) &&
 				(
-					this.Value == other.Value ||
-					this.Value != null &&
-					this.Value.Equals(other.Value, StringComparison.Ordinal)
+					Value == other.Value ||
+					Value != null &&
+					Value.Equals(other.Value, StringComparison.Ordinal)
 				);
 	}
 
@@ -168,39 +168,39 @@ public partial class FieldTemplateItem : IEquatable<FieldTemplateItem>, IValidat
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Dirty != null)
+			if (Dirty != null)
 			{
-				hash = hash * 59 + this.Dirty.GetHashCode();
+				hash = hash * 59 + Dirty.GetHashCode();
 			}
 
-			if (this.DisplayName != null)
+			if (DisplayName != null)
 			{
-				hash = hash * 59 + this.DisplayName.GetHashCode();
+				hash = hash * 59 + DisplayName.GetHashCode();
 			}
 
-			if (this.FieldId != null)
+			if (FieldId != null)
 			{
-				hash = hash * 59 + this.FieldId.GetHashCode();
+				hash = hash * 59 + FieldId.GetHashCode();
 			}
 
-			if (this.FullFieldId != null)
+			if (FullFieldId != null)
 			{
-				hash = hash * 59 + this.FullFieldId.GetHashCode();
+				hash = hash * 59 + FullFieldId.GetHashCode();
 			}
 
-			if (this.Html != null)
+			if (Html != null)
 			{
-				hash = hash * 59 + this.Html.GetHashCode();
+				hash = hash * 59 + Html.GetHashCode();
 			}
 
-			if (this.Name != null)
+			if (Name != null)
 			{
-				hash = hash * 59 + this.Name.GetHashCode();
+				hash = hash * 59 + Name.GetHashCode();
 			}
 
-			if (this.Value != null)
+			if (Value != null)
 			{
-				hash = hash * 59 + this.Value.GetHashCode();
+				hash = hash * 59 + Value.GetHashCode();
 			}
 
 			return hash;

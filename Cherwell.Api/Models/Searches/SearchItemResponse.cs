@@ -386,7 +386,7 @@ public partial class SearchItemResponse : IEquatable<SearchItemResponse>, IValid
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as SearchItemResponse);
+		return Equals(obj as SearchItemResponse);
 	}
 
 	/// <summary>
@@ -404,34 +404,34 @@ public partial class SearchItemResponse : IEquatable<SearchItemResponse>, IValid
 
 		return
 				(
-					this.Root == other.Root ||
-					this.Root != null &&
-					this.Root.Equals(other.Root)
+					Root == other.Root ||
+					Root != null &&
+					Root.Equals(other.Root)
 				) &&
 				(
-					this.SupportedAssociations == other.SupportedAssociations ||
-					this.SupportedAssociations != null &&
-					this.SupportedAssociations.SequenceEqual(other.SupportedAssociations)
+					SupportedAssociations == other.SupportedAssociations ||
+					SupportedAssociations != null &&
+					SupportedAssociations.SequenceEqual(other.SupportedAssociations)
 				) &&
 				(
-					this.ErrorCode == other.ErrorCode ||
-					this.ErrorCode != null &&
-					this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
+					ErrorCode == other.ErrorCode ||
+					ErrorCode != null &&
+					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
 				) &&
 				(
-					this.ErrorMessage == other.ErrorMessage ||
-					this.ErrorMessage != null &&
-					this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
+					ErrorMessage == other.ErrorMessage ||
+					ErrorMessage != null &&
+					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
 				) &&
 				(
-					this.HasError == other.HasError ||
-					this.HasError != null &&
-					this.HasError.Equals(other.HasError)
+					HasError == other.HasError ||
+					HasError != null &&
+					HasError.Equals(other.HasError)
 				) &&
 				(
-					this.HttpStatusCode == other.HttpStatusCode ||
-					this.HttpStatusCode != null &&
-					this.HttpStatusCode.Equals(other.HttpStatusCode)
+					HttpStatusCode == other.HttpStatusCode ||
+					HttpStatusCode != null &&
+					HttpStatusCode.Equals(other.HttpStatusCode)
 				);
 	}
 
@@ -446,34 +446,34 @@ public partial class SearchItemResponse : IEquatable<SearchItemResponse>, IValid
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Root != null)
+			if (Root != null)
 			{
-				hash = hash * 59 + this.Root.GetHashCode();
+				hash = hash * 59 + Root.GetHashCode();
 			}
 
-			if (this.SupportedAssociations != null)
+			if (SupportedAssociations != null)
 			{
-				hash = hash * 59 + this.SupportedAssociations.GetHashCode();
+				hash = hash * 59 + SupportedAssociations.GetHashCode();
 			}
 
-			if (this.ErrorCode != null)
+			if (ErrorCode != null)
 			{
-				hash = hash * 59 + this.ErrorCode.GetHashCode();
+				hash = hash * 59 + ErrorCode.GetHashCode();
 			}
 
-			if (this.ErrorMessage != null)
+			if (ErrorMessage != null)
 			{
-				hash = hash * 59 + this.ErrorMessage.GetHashCode();
+				hash = hash * 59 + ErrorMessage.GetHashCode();
 			}
 
-			if (this.HasError != null)
+			if (HasError != null)
 			{
-				hash = hash * 59 + this.HasError.GetHashCode();
+				hash = hash * 59 + HasError.GetHashCode();
 			}
 
-			if (this.HttpStatusCode != null)
+			if (HttpStatusCode != null)
 			{
-				hash = hash * 59 + this.HttpStatusCode.GetHashCode();
+				hash = hash * 59 + HttpStatusCode.GetHashCode();
 			}
 
 			return hash;

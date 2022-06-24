@@ -111,7 +111,7 @@ public partial class StoredSearchRequest : IEquatable<StoredSearchRequest>, IVal
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as StoredSearchRequest);
+		return Equals(obj as StoredSearchRequest);
 	}
 
 	/// <summary>
@@ -129,44 +129,44 @@ public partial class StoredSearchRequest : IEquatable<StoredSearchRequest>, IVal
 
 		return
 				(
-					this.AssociationId == other.AssociationId ||
-					this.AssociationId != null &&
-					this.AssociationId.Equals(other.AssociationId, StringComparison.Ordinal)
+					AssociationId == other.AssociationId ||
+					AssociationId != null &&
+					AssociationId.Equals(other.AssociationId, StringComparison.Ordinal)
 				) &&
 				(
-					this.AssociationName == other.AssociationName ||
-					this.AssociationName != null &&
-					this.AssociationName.Equals(other.AssociationName, StringComparison.Ordinal)
+					AssociationName == other.AssociationName ||
+					AssociationName != null &&
+					AssociationName.Equals(other.AssociationName, StringComparison.Ordinal)
 				) &&
 				(
-					this.GridId == other.GridId ||
-					this.GridId != null &&
-					this.GridId.Equals(other.GridId, StringComparison.Ordinal)
+					GridId == other.GridId ||
+					GridId != null &&
+					GridId.Equals(other.GridId, StringComparison.Ordinal)
 				) &&
 				(
-					this.IncludeSchema == other.IncludeSchema ||
-					this.IncludeSchema != null &&
-					this.IncludeSchema.Equals(other.IncludeSchema)
+					IncludeSchema == other.IncludeSchema ||
+					IncludeSchema != null &&
+					IncludeSchema.Equals(other.IncludeSchema)
 				) &&
 				(
-					this.Scope == other.Scope ||
-					this.Scope != null &&
-					this.Scope.Equals(other.Scope, StringComparison.Ordinal)
+					Scope == other.Scope ||
+					Scope != null &&
+					Scope.Equals(other.Scope, StringComparison.Ordinal)
 				) &&
 				(
-					this.ScopeOwnerId == other.ScopeOwnerId ||
-					this.ScopeOwnerId != null &&
-					this.ScopeOwnerId.Equals(other.ScopeOwnerId, StringComparison.Ordinal)
+					ScopeOwnerId == other.ScopeOwnerId ||
+					ScopeOwnerId != null &&
+					ScopeOwnerId.Equals(other.ScopeOwnerId, StringComparison.Ordinal)
 				) &&
 				(
-					this.SearchId == other.SearchId ||
-					this.SearchId != null &&
-					this.SearchId.Equals(other.SearchId, StringComparison.Ordinal)
+					SearchId == other.SearchId ||
+					SearchId != null &&
+					SearchId.Equals(other.SearchId, StringComparison.Ordinal)
 				) &&
 				(
-					this.SearchName == other.SearchName ||
-					this.SearchName != null &&
-					this.SearchName.Equals(other.SearchName, StringComparison.Ordinal)
+					SearchName == other.SearchName ||
+					SearchName != null &&
+					SearchName.Equals(other.SearchName, StringComparison.Ordinal)
 				);
 	}
 
@@ -181,44 +181,44 @@ public partial class StoredSearchRequest : IEquatable<StoredSearchRequest>, IVal
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.AssociationId != null)
+			if (AssociationId != null)
 			{
-				hash = hash * 59 + this.AssociationId.GetHashCode();
+				hash = hash * 59 + AssociationId.GetHashCode();
 			}
 
-			if (this.AssociationName != null)
+			if (AssociationName != null)
 			{
-				hash = hash * 59 + this.AssociationName.GetHashCode();
+				hash = hash * 59 + AssociationName.GetHashCode();
 			}
 
-			if (this.GridId != null)
+			if (GridId != null)
 			{
-				hash = hash * 59 + this.GridId.GetHashCode();
+				hash = hash * 59 + GridId.GetHashCode();
 			}
 
-			if (this.IncludeSchema != null)
+			if (IncludeSchema != null)
 			{
-				hash = hash * 59 + this.IncludeSchema.GetHashCode();
+				hash = hash * 59 + IncludeSchema.GetHashCode();
 			}
 
-			if (this.Scope != null)
+			if (Scope != null)
 			{
-				hash = hash * 59 + this.Scope.GetHashCode();
+				hash = hash * 59 + Scope.GetHashCode();
 			}
 
-			if (this.ScopeOwnerId != null)
+			if (ScopeOwnerId != null)
 			{
-				hash = hash * 59 + this.ScopeOwnerId.GetHashCode();
+				hash = hash * 59 + ScopeOwnerId.GetHashCode();
 			}
 
-			if (this.SearchId != null)
+			if (SearchId != null)
 			{
-				hash = hash * 59 + this.SearchId.GetHashCode();
+				hash = hash * 59 + SearchId.GetHashCode();
 			}
 
-			if (this.SearchName != null)
+			if (SearchName != null)
 			{
-				hash = hash * 59 + this.SearchName.GetHashCode();
+				hash = hash * 59 + SearchName.GetHashCode();
 			}
 
 			return hash;

@@ -71,7 +71,7 @@ public partial class SecurityGroup : IEquatable<SecurityGroup>, IValidatableObje
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as SecurityGroup);
+		return Equals(obj as SecurityGroup);
 	}
 
 	/// <summary>
@@ -89,19 +89,19 @@ public partial class SecurityGroup : IEquatable<SecurityGroup>, IValidatableObje
 
 		return
 				(
-					this.Description == other.Description ||
-					this.Description != null &&
-					this.Description.Equals(other.Description, StringComparison.Ordinal)
+					Description == other.Description ||
+					Description != null &&
+					Description.Equals(other.Description, StringComparison.Ordinal)
 				) &&
 				(
-					this.GroupId == other.GroupId ||
-					this.GroupId != null &&
-					this.GroupId.Equals(other.GroupId, StringComparison.Ordinal)
+					GroupId == other.GroupId ||
+					GroupId != null &&
+					GroupId.Equals(other.GroupId, StringComparison.Ordinal)
 				) &&
 				(
-					this.GroupName == other.GroupName ||
-					this.GroupName != null &&
-					this.GroupName.Equals(other.GroupName, StringComparison.Ordinal)
+					GroupName == other.GroupName ||
+					GroupName != null &&
+					GroupName.Equals(other.GroupName, StringComparison.Ordinal)
 				);
 	}
 
@@ -116,19 +116,19 @@ public partial class SecurityGroup : IEquatable<SecurityGroup>, IValidatableObje
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Description != null)
+			if (Description != null)
 			{
-				hash = hash * 59 + this.Description.GetHashCode();
+				hash = hash * 59 + Description.GetHashCode();
 			}
 
-			if (this.GroupId != null)
+			if (GroupId != null)
 			{
-				hash = hash * 59 + this.GroupId.GetHashCode();
+				hash = hash * 59 + GroupId.GetHashCode();
 			}
 
-			if (this.GroupName != null)
+			if (GroupName != null)
 			{
-				hash = hash * 59 + this.GroupName.GetHashCode();
+				hash = hash * 59 + GroupName.GetHashCode();
 			}
 
 			return hash;

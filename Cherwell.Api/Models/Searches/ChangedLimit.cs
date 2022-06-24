@@ -71,7 +71,7 @@ public partial class ChangedLimit : IEquatable<ChangedLimit>, IValidatableObject
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as ChangedLimit);
+		return Equals(obj as ChangedLimit);
 	}
 
 	/// <summary>
@@ -89,19 +89,19 @@ public partial class ChangedLimit : IEquatable<ChangedLimit>, IValidatableObject
 
 		return
 				(
-					this.DisplayName == other.DisplayName ||
-					this.DisplayName != null &&
-					this.DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
+					DisplayName == other.DisplayName ||
+					DisplayName != null &&
+					DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
 				) &&
 				(
-					this.Units == other.Units ||
-					this.Units != null &&
-					this.Units.Equals(other.Units, StringComparison.Ordinal)
+					Units == other.Units ||
+					Units != null &&
+					Units.Equals(other.Units, StringComparison.Ordinal)
 				) &&
 				(
-					this.Value == other.Value ||
-					this.Value != null &&
-					this.Value.Equals(other.Value)
+					Value == other.Value ||
+					Value != null &&
+					Value.Equals(other.Value)
 				);
 	}
 
@@ -116,19 +116,19 @@ public partial class ChangedLimit : IEquatable<ChangedLimit>, IValidatableObject
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.DisplayName != null)
+			if (DisplayName != null)
 			{
-				hash = hash * 59 + this.DisplayName.GetHashCode();
+				hash = hash * 59 + DisplayName.GetHashCode();
 			}
 
-			if (this.Units != null)
+			if (Units != null)
 			{
-				hash = hash * 59 + this.Units.GetHashCode();
+				hash = hash * 59 + Units.GetHashCode();
 			}
 
-			if (this.Value != null)
+			if (Value != null)
 			{
-				hash = hash * 59 + this.Value.GetHashCode();
+				hash = hash * 59 + Value.GetHashCode();
 			}
 
 			return hash;

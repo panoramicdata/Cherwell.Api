@@ -79,7 +79,7 @@ public partial class CheckInQueueItemRequest : IEquatable<CheckInQueueItemReques
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as CheckInQueueItemRequest);
+		return Equals(obj as CheckInQueueItemRequest);
 	}
 
 	/// <summary>
@@ -97,24 +97,24 @@ public partial class CheckInQueueItemRequest : IEquatable<CheckInQueueItemReques
 
 		return
 				(
-					this.BusObId == other.BusObId ||
-					this.BusObId != null &&
-					this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
+					BusObId == other.BusObId ||
+					BusObId != null &&
+					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObRecId == other.BusObRecId ||
-					this.BusObRecId != null &&
-					this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
+					BusObRecId == other.BusObRecId ||
+					BusObRecId != null &&
+					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
 				) &&
 				(
-					this.HistoryNotes == other.HistoryNotes ||
-					this.HistoryNotes != null &&
-					this.HistoryNotes.Equals(other.HistoryNotes, StringComparison.Ordinal)
+					HistoryNotes == other.HistoryNotes ||
+					HistoryNotes != null &&
+					HistoryNotes.Equals(other.HistoryNotes, StringComparison.Ordinal)
 				) &&
 				(
-					this.QueueStandInKey == other.QueueStandInKey ||
-					this.QueueStandInKey != null &&
-					this.QueueStandInKey.Equals(other.QueueStandInKey, StringComparison.Ordinal)
+					QueueStandInKey == other.QueueStandInKey ||
+					QueueStandInKey != null &&
+					QueueStandInKey.Equals(other.QueueStandInKey, StringComparison.Ordinal)
 				);
 	}
 
@@ -129,24 +129,24 @@ public partial class CheckInQueueItemRequest : IEquatable<CheckInQueueItemReques
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.BusObId != null)
+			if (BusObId != null)
 			{
-				hash = hash * 59 + this.BusObId.GetHashCode();
+				hash = hash * 59 + BusObId.GetHashCode();
 			}
 
-			if (this.BusObRecId != null)
+			if (BusObRecId != null)
 			{
-				hash = hash * 59 + this.BusObRecId.GetHashCode();
+				hash = hash * 59 + BusObRecId.GetHashCode();
 			}
 
-			if (this.HistoryNotes != null)
+			if (HistoryNotes != null)
 			{
-				hash = hash * 59 + this.HistoryNotes.GetHashCode();
+				hash = hash * 59 + HistoryNotes.GetHashCode();
 			}
 
-			if (this.QueueStandInKey != null)
+			if (QueueStandInKey != null)
 			{
-				hash = hash * 59 + this.QueueStandInKey.GetHashCode();
+				hash = hash * 59 + QueueStandInKey.GetHashCode();
 			}
 
 			return hash;

@@ -63,7 +63,7 @@ public partial class Association : IEquatable<Association>, IValidatableObject
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as Association);
+		return Equals(obj as Association);
 	}
 
 	/// <summary>
@@ -81,14 +81,14 @@ public partial class Association : IEquatable<Association>, IValidatableObject
 
 		return
 				(
-					this.BusObId == other.BusObId ||
-					this.BusObId != null &&
-					this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
+					BusObId == other.BusObId ||
+					BusObId != null &&
+					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObName == other.BusObName ||
-					this.BusObName != null &&
-					this.BusObName.Equals(other.BusObName, StringComparison.Ordinal)
+					BusObName == other.BusObName ||
+					BusObName != null &&
+					BusObName.Equals(other.BusObName, StringComparison.Ordinal)
 				);
 	}
 
@@ -103,14 +103,14 @@ public partial class Association : IEquatable<Association>, IValidatableObject
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.BusObId != null)
+			if (BusObId != null)
 			{
-				hash = hash * 59 + this.BusObId.GetHashCode();
+				hash = hash * 59 + BusObId.GetHashCode();
 			}
 
-			if (this.BusObName != null)
+			if (BusObName != null)
 			{
-				hash = hash * 59 + this.BusObName.GetHashCode();
+				hash = hash * 59 + BusObName.GetHashCode();
 			}
 
 			return hash;

@@ -55,7 +55,7 @@ public partial class BatchReadResponse : IEquatable<BatchReadResponse>, IValidat
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as BatchReadResponse);
+		return Equals(obj as BatchReadResponse);
 	}
 
 	/// <summary>
@@ -73,9 +73,9 @@ public partial class BatchReadResponse : IEquatable<BatchReadResponse>, IValidat
 
 		return
 				(
-					this.Responses == other.Responses ||
-					this.Responses != null &&
-					this.Responses.SequenceEqual(other.Responses)
+					Responses == other.Responses ||
+					Responses != null &&
+					Responses.SequenceEqual(other.Responses)
 				);
 	}
 
@@ -90,9 +90,9 @@ public partial class BatchReadResponse : IEquatable<BatchReadResponse>, IValidat
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Responses != null)
+			if (Responses != null)
 			{
-				hash = hash * 59 + this.Responses.GetHashCode();
+				hash = hash * 59 + Responses.GetHashCode();
 			}
 
 			return hash;

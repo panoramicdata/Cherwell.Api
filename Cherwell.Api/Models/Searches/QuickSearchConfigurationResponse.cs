@@ -498,7 +498,7 @@ public partial class QuickSearchConfigurationResponse : IEquatable<QuickSearchCo
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as QuickSearchConfigurationResponse);
+		return Equals(obj as QuickSearchConfigurationResponse);
 	}
 
 	/// <summary>
@@ -516,104 +516,104 @@ public partial class QuickSearchConfigurationResponse : IEquatable<QuickSearchCo
 
 		return
 				(
-					this.AllowQuickSearch == other.AllowQuickSearch ||
-					this.AllowQuickSearch != null &&
-					this.AllowQuickSearch.Equals(other.AllowQuickSearch)
+					AllowQuickSearch == other.AllowQuickSearch ||
+					AllowQuickSearch != null &&
+					AllowQuickSearch.Equals(other.AllowQuickSearch)
 				) &&
 				(
-					this.AllowSpecificSearch == other.AllowSpecificSearch ||
-					this.AllowSpecificSearch != null &&
-					this.AllowSpecificSearch.Equals(other.AllowSpecificSearch)
+					AllowSpecificSearch == other.AllowSpecificSearch ||
+					AllowSpecificSearch != null &&
+					AllowSpecificSearch.Equals(other.AllowSpecificSearch)
 				) &&
 				(
-					this.DefaultToQuickSearch == other.DefaultToQuickSearch ||
-					this.DefaultToQuickSearch != null &&
-					this.DefaultToQuickSearch.Equals(other.DefaultToQuickSearch)
+					DefaultToQuickSearch == other.DefaultToQuickSearch ||
+					DefaultToQuickSearch != null &&
+					DefaultToQuickSearch.Equals(other.DefaultToQuickSearch)
 				) &&
 				(
-					this.DisplayName == other.DisplayName ||
-					this.DisplayName != null &&
-					this.DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
+					DisplayName == other.DisplayName ||
+					DisplayName != null &&
+					DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
 				) &&
 				(
-					this.GalleryImage == other.GalleryImage ||
-					this.GalleryImage != null &&
-					this.GalleryImage.Equals(other.GalleryImage, StringComparison.Ordinal)
+					GalleryImage == other.GalleryImage ||
+					GalleryImage != null &&
+					GalleryImage.Equals(other.GalleryImage, StringComparison.Ordinal)
 				) &&
 				(
-					this.History == other.History ||
-					this.History != null &&
-					this.History.SequenceEqual(other.History)
+					History == other.History ||
+					History != null &&
+					History.SequenceEqual(other.History)
 				) &&
 				(
-					this.IncludeAvailableInSpecific == other.IncludeAvailableInSpecific ||
-					this.IncludeAvailableInSpecific != null &&
-					this.IncludeAvailableInSpecific.Equals(other.IncludeAvailableInSpecific)
+					IncludeAvailableInSpecific == other.IncludeAvailableInSpecific ||
+					IncludeAvailableInSpecific != null &&
+					IncludeAvailableInSpecific.Equals(other.IncludeAvailableInSpecific)
 				) &&
 				(
-					this.IncludeQuickSearchInSpecific == other.IncludeQuickSearchInSpecific ||
-					this.IncludeQuickSearchInSpecific != null &&
-					this.IncludeQuickSearchInSpecific.Equals(other.IncludeQuickSearchInSpecific)
+					IncludeQuickSearchInSpecific == other.IncludeQuickSearchInSpecific ||
+					IncludeQuickSearchInSpecific != null &&
+					IncludeQuickSearchInSpecific.Equals(other.IncludeQuickSearchInSpecific)
 				) &&
 				(
-					this.QuickSearchId == other.QuickSearchId ||
-					this.QuickSearchId != null &&
-					this.QuickSearchId.Equals(other.QuickSearchId, StringComparison.Ordinal)
+					QuickSearchId == other.QuickSearchId ||
+					QuickSearchId != null &&
+					QuickSearchId.Equals(other.QuickSearchId, StringComparison.Ordinal)
 				) &&
 				(
-					this.QuickSearchItems == other.QuickSearchItems ||
-					this.QuickSearchItems != null &&
-					this.QuickSearchItems.SequenceEqual(other.QuickSearchItems)
+					QuickSearchItems == other.QuickSearchItems ||
+					QuickSearchItems != null &&
+					QuickSearchItems.SequenceEqual(other.QuickSearchItems)
 				) &&
 				(
-					this.QuickSearchWatermark == other.QuickSearchWatermark ||
-					this.QuickSearchWatermark != null &&
-					this.QuickSearchWatermark.Equals(other.QuickSearchWatermark, StringComparison.Ordinal)
+					QuickSearchWatermark == other.QuickSearchWatermark ||
+					QuickSearchWatermark != null &&
+					QuickSearchWatermark.Equals(other.QuickSearchWatermark, StringComparison.Ordinal)
 				) &&
 				(
-					this.SortByRelevance == other.SortByRelevance ||
-					this.SortByRelevance != null &&
-					this.SortByRelevance.Equals(other.SortByRelevance)
+					SortByRelevance == other.SortByRelevance ||
+					SortByRelevance != null &&
+					SortByRelevance.Equals(other.SortByRelevance)
 				) &&
 				(
-					this.ResolvedQuickSearchWatermark == other.ResolvedQuickSearchWatermark ||
-					this.ResolvedQuickSearchWatermark != null &&
-					this.ResolvedQuickSearchWatermark.Equals(other.ResolvedQuickSearchWatermark, StringComparison.Ordinal)
+					ResolvedQuickSearchWatermark == other.ResolvedQuickSearchWatermark ||
+					ResolvedQuickSearchWatermark != null &&
+					ResolvedQuickSearchWatermark.Equals(other.ResolvedQuickSearchWatermark, StringComparison.Ordinal)
 				) &&
 				(
-					this.Scope == other.Scope ||
-					this.Scope != null &&
-					this.Scope.Equals(other.Scope, StringComparison.Ordinal)
+					Scope == other.Scope ||
+					Scope != null &&
+					Scope.Equals(other.Scope, StringComparison.Ordinal)
 				) &&
 				(
-					this.ScopeOwner == other.ScopeOwner ||
-					this.ScopeOwner != null &&
-					this.ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
+					ScopeOwner == other.ScopeOwner ||
+					ScopeOwner != null &&
+					ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
 				) &&
 				(
-					this.SpecificSearchItems == other.SpecificSearchItems ||
-					this.SpecificSearchItems != null &&
-					this.SpecificSearchItems.SequenceEqual(other.SpecificSearchItems)
+					SpecificSearchItems == other.SpecificSearchItems ||
+					SpecificSearchItems != null &&
+					SpecificSearchItems.SequenceEqual(other.SpecificSearchItems)
 				) &&
 				(
-					this.ErrorCode == other.ErrorCode ||
-					this.ErrorCode != null &&
-					this.ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
+					ErrorCode == other.ErrorCode ||
+					ErrorCode != null &&
+					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
 				) &&
 				(
-					this.ErrorMessage == other.ErrorMessage ||
-					this.ErrorMessage != null &&
-					this.ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
+					ErrorMessage == other.ErrorMessage ||
+					ErrorMessage != null &&
+					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
 				) &&
 				(
-					this.HasError == other.HasError ||
-					this.HasError != null &&
-					this.HasError.Equals(other.HasError)
+					HasError == other.HasError ||
+					HasError != null &&
+					HasError.Equals(other.HasError)
 				) &&
 				(
-					this.HttpStatusCode == other.HttpStatusCode ||
-					this.HttpStatusCode != null &&
-					this.HttpStatusCode.Equals(other.HttpStatusCode)
+					HttpStatusCode == other.HttpStatusCode ||
+					HttpStatusCode != null &&
+					HttpStatusCode.Equals(other.HttpStatusCode)
 				);
 	}
 
@@ -628,104 +628,104 @@ public partial class QuickSearchConfigurationResponse : IEquatable<QuickSearchCo
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.AllowQuickSearch != null)
+			if (AllowQuickSearch != null)
 			{
-				hash = hash * 59 + this.AllowQuickSearch.GetHashCode();
+				hash = hash * 59 + AllowQuickSearch.GetHashCode();
 			}
 
-			if (this.AllowSpecificSearch != null)
+			if (AllowSpecificSearch != null)
 			{
-				hash = hash * 59 + this.AllowSpecificSearch.GetHashCode();
+				hash = hash * 59 + AllowSpecificSearch.GetHashCode();
 			}
 
-			if (this.DefaultToQuickSearch != null)
+			if (DefaultToQuickSearch != null)
 			{
-				hash = hash * 59 + this.DefaultToQuickSearch.GetHashCode();
+				hash = hash * 59 + DefaultToQuickSearch.GetHashCode();
 			}
 
-			if (this.DisplayName != null)
+			if (DisplayName != null)
 			{
-				hash = hash * 59 + this.DisplayName.GetHashCode();
+				hash = hash * 59 + DisplayName.GetHashCode();
 			}
 
-			if (this.GalleryImage != null)
+			if (GalleryImage != null)
 			{
-				hash = hash * 59 + this.GalleryImage.GetHashCode();
+				hash = hash * 59 + GalleryImage.GetHashCode();
 			}
 
-			if (this.History != null)
+			if (History != null)
 			{
-				hash = hash * 59 + this.History.GetHashCode();
+				hash = hash * 59 + History.GetHashCode();
 			}
 
-			if (this.IncludeAvailableInSpecific != null)
+			if (IncludeAvailableInSpecific != null)
 			{
-				hash = hash * 59 + this.IncludeAvailableInSpecific.GetHashCode();
+				hash = hash * 59 + IncludeAvailableInSpecific.GetHashCode();
 			}
 
-			if (this.IncludeQuickSearchInSpecific != null)
+			if (IncludeQuickSearchInSpecific != null)
 			{
-				hash = hash * 59 + this.IncludeQuickSearchInSpecific.GetHashCode();
+				hash = hash * 59 + IncludeQuickSearchInSpecific.GetHashCode();
 			}
 
-			if (this.QuickSearchId != null)
+			if (QuickSearchId != null)
 			{
-				hash = hash * 59 + this.QuickSearchId.GetHashCode();
+				hash = hash * 59 + QuickSearchId.GetHashCode();
 			}
 
-			if (this.QuickSearchItems != null)
+			if (QuickSearchItems != null)
 			{
-				hash = hash * 59 + this.QuickSearchItems.GetHashCode();
+				hash = hash * 59 + QuickSearchItems.GetHashCode();
 			}
 
-			if (this.QuickSearchWatermark != null)
+			if (QuickSearchWatermark != null)
 			{
-				hash = hash * 59 + this.QuickSearchWatermark.GetHashCode();
+				hash = hash * 59 + QuickSearchWatermark.GetHashCode();
 			}
 
-			if (this.SortByRelevance != null)
+			if (SortByRelevance != null)
 			{
-				hash = hash * 59 + this.SortByRelevance.GetHashCode();
+				hash = hash * 59 + SortByRelevance.GetHashCode();
 			}
 
-			if (this.ResolvedQuickSearchWatermark != null)
+			if (ResolvedQuickSearchWatermark != null)
 			{
-				hash = hash * 59 + this.ResolvedQuickSearchWatermark.GetHashCode();
+				hash = hash * 59 + ResolvedQuickSearchWatermark.GetHashCode();
 			}
 
-			if (this.Scope != null)
+			if (Scope != null)
 			{
-				hash = hash * 59 + this.Scope.GetHashCode();
+				hash = hash * 59 + Scope.GetHashCode();
 			}
 
-			if (this.ScopeOwner != null)
+			if (ScopeOwner != null)
 			{
-				hash = hash * 59 + this.ScopeOwner.GetHashCode();
+				hash = hash * 59 + ScopeOwner.GetHashCode();
 			}
 
-			if (this.SpecificSearchItems != null)
+			if (SpecificSearchItems != null)
 			{
-				hash = hash * 59 + this.SpecificSearchItems.GetHashCode();
+				hash = hash * 59 + SpecificSearchItems.GetHashCode();
 			}
 
-			if (this.ErrorCode != null)
+			if (ErrorCode != null)
 			{
-				hash = hash * 59 + this.ErrorCode.GetHashCode();
+				hash = hash * 59 + ErrorCode.GetHashCode();
 			}
 
-			if (this.ErrorMessage != null)
+			if (ErrorMessage != null)
 			{
-				hash = hash * 59 + this.ErrorMessage.GetHashCode();
+				hash = hash * 59 + ErrorMessage.GetHashCode();
 			}
 
-			if (this.HasError != null)
+			if (HasError != null)
 			{
-				hash = hash * 59 + this.HasError.GetHashCode();
+				hash = hash * 59 + HasError.GetHashCode();
 			}
 
-			if (this.HttpStatusCode != null)
+			if (HttpStatusCode != null)
 			{
-				hash = hash * 59 + this.HttpStatusCode.GetHashCode();
+				hash = hash * 59 + HttpStatusCode.GetHashCode();
 			}
 
 			return hash;

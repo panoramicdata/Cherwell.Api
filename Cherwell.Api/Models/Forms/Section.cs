@@ -95,7 +95,7 @@ public partial class Section : IEquatable<Section>, IValidatableObject
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as Section);
+		return Equals(obj as Section);
 	}
 
 	/// <summary>
@@ -113,34 +113,34 @@ public partial class Section : IEquatable<Section>, IValidatableObject
 
 		return
 				(
-					this.SectionFields == other.SectionFields ||
-					this.SectionFields != null &&
-					this.SectionFields.SequenceEqual(other.SectionFields)
+					SectionFields == other.SectionFields ||
+					SectionFields != null &&
+					SectionFields.SequenceEqual(other.SectionFields)
 				) &&
 				(
-					this.GalleryImage == other.GalleryImage ||
-					this.GalleryImage != null &&
-					this.GalleryImage.Equals(other.GalleryImage, StringComparison.Ordinal)
+					GalleryImage == other.GalleryImage ||
+					GalleryImage != null &&
+					GalleryImage.Equals(other.GalleryImage, StringComparison.Ordinal)
 				) &&
 				(
-					this.Title == other.Title ||
-					this.Title != null &&
-					this.Title.Equals(other.Title, StringComparison.Ordinal)
+					Title == other.Title ||
+					Title != null &&
+					Title.Equals(other.Title, StringComparison.Ordinal)
 				) &&
 				(
-					this.RelationshipId == other.RelationshipId ||
-					this.RelationshipId != null &&
-					this.RelationshipId.Equals(other.RelationshipId, StringComparison.Ordinal)
+					RelationshipId == other.RelationshipId ||
+					RelationshipId != null &&
+					RelationshipId.Equals(other.RelationshipId, StringComparison.Ordinal)
 				) &&
 				(
-					this.TargetBusObId == other.TargetBusObId ||
-					this.TargetBusObId != null &&
-					this.TargetBusObId.Equals(other.TargetBusObId, StringComparison.Ordinal)
+					TargetBusObId == other.TargetBusObId ||
+					TargetBusObId != null &&
+					TargetBusObId.Equals(other.TargetBusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.TargetBusObRecId == other.TargetBusObRecId ||
-					this.TargetBusObRecId != null &&
-					this.TargetBusObRecId.Equals(other.TargetBusObRecId, StringComparison.Ordinal)
+					TargetBusObRecId == other.TargetBusObRecId ||
+					TargetBusObRecId != null &&
+					TargetBusObRecId.Equals(other.TargetBusObRecId, StringComparison.Ordinal)
 				);
 	}
 
@@ -155,34 +155,34 @@ public partial class Section : IEquatable<Section>, IValidatableObject
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.SectionFields != null)
+			if (SectionFields != null)
 			{
-				hash = hash * 59 + this.SectionFields.GetHashCode();
+				hash = hash * 59 + SectionFields.GetHashCode();
 			}
 
-			if (this.GalleryImage != null)
+			if (GalleryImage != null)
 			{
-				hash = hash * 59 + this.GalleryImage.GetHashCode();
+				hash = hash * 59 + GalleryImage.GetHashCode();
 			}
 
-			if (this.Title != null)
+			if (Title != null)
 			{
-				hash = hash * 59 + this.Title.GetHashCode();
+				hash = hash * 59 + Title.GetHashCode();
 			}
 
-			if (this.RelationshipId != null)
+			if (RelationshipId != null)
 			{
-				hash = hash * 59 + this.RelationshipId.GetHashCode();
+				hash = hash * 59 + RelationshipId.GetHashCode();
 			}
 
-			if (this.TargetBusObId != null)
+			if (TargetBusObId != null)
 			{
-				hash = hash * 59 + this.TargetBusObId.GetHashCode();
+				hash = hash * 59 + TargetBusObId.GetHashCode();
 			}
 
-			if (this.TargetBusObRecId != null)
+			if (TargetBusObRecId != null)
 			{
-				hash = hash * 59 + this.TargetBusObRecId.GetHashCode();
+				hash = hash * 59 + TargetBusObRecId.GetHashCode();
 			}
 
 			return hash;

@@ -95,7 +95,7 @@ public partial class ServiceInfoResponse : IEquatable<ServiceInfoResponse>, IVal
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as ServiceInfoResponse);
+		return Equals(obj as ServiceInfoResponse);
 	}
 
 	/// <summary>
@@ -113,34 +113,34 @@ public partial class ServiceInfoResponse : IEquatable<ServiceInfoResponse>, IVal
 
 		return
 				(
-					this.ApiVersion == other.ApiVersion ||
-					this.ApiVersion != null &&
-					this.ApiVersion.Equals(other.ApiVersion, StringComparison.Ordinal)
+					ApiVersion == other.ApiVersion ||
+					ApiVersion != null &&
+					ApiVersion.Equals(other.ApiVersion, StringComparison.Ordinal)
 				) &&
 				(
-					this.CsmCulture == other.CsmCulture ||
-					this.CsmCulture != null &&
-					this.CsmCulture.Equals(other.CsmCulture, StringComparison.Ordinal)
+					CsmCulture == other.CsmCulture ||
+					CsmCulture != null &&
+					CsmCulture.Equals(other.CsmCulture, StringComparison.Ordinal)
 				) &&
 				(
-					this.CsmVersion == other.CsmVersion ||
-					this.CsmVersion != null &&
-					this.CsmVersion.Equals(other.CsmVersion, StringComparison.Ordinal)
+					CsmVersion == other.CsmVersion ||
+					CsmVersion != null &&
+					CsmVersion.Equals(other.CsmVersion, StringComparison.Ordinal)
 				) &&
 				(
-					this.SystemDateTime == other.SystemDateTime ||
-					this.SystemDateTime != null &&
-					this.SystemDateTime.Equals(other.SystemDateTime)
+					SystemDateTime == other.SystemDateTime ||
+					SystemDateTime != null &&
+					SystemDateTime.Equals(other.SystemDateTime)
 				) &&
 				(
-					this.TimeZone == other.TimeZone ||
-					this.TimeZone != null &&
-					this.TimeZone.Equals(other.TimeZone)
+					TimeZone == other.TimeZone ||
+					TimeZone != null &&
+					TimeZone.Equals(other.TimeZone)
 				) &&
 				(
-					this.SystemUtcOffset == other.SystemUtcOffset ||
-					this.SystemUtcOffset != null &&
-					this.SystemUtcOffset.Equals(other.SystemUtcOffset, StringComparison.Ordinal)
+					SystemUtcOffset == other.SystemUtcOffset ||
+					SystemUtcOffset != null &&
+					SystemUtcOffset.Equals(other.SystemUtcOffset, StringComparison.Ordinal)
 				);
 	}
 
@@ -155,34 +155,34 @@ public partial class ServiceInfoResponse : IEquatable<ServiceInfoResponse>, IVal
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.ApiVersion != null)
+			if (ApiVersion != null)
 			{
-				hash = hash * 59 + this.ApiVersion.GetHashCode();
+				hash = hash * 59 + ApiVersion.GetHashCode();
 			}
 
-			if (this.CsmCulture != null)
+			if (CsmCulture != null)
 			{
-				hash = hash * 59 + this.CsmCulture.GetHashCode();
+				hash = hash * 59 + CsmCulture.GetHashCode();
 			}
 
-			if (this.CsmVersion != null)
+			if (CsmVersion != null)
 			{
-				hash = hash * 59 + this.CsmVersion.GetHashCode();
+				hash = hash * 59 + CsmVersion.GetHashCode();
 			}
 
-			if (this.SystemDateTime != null)
+			if (SystemDateTime != null)
 			{
-				hash = hash * 59 + this.SystemDateTime.GetHashCode();
+				hash = hash * 59 + SystemDateTime.GetHashCode();
 			}
 
-			if (this.TimeZone != null)
+			if (TimeZone != null)
 			{
-				hash = hash * 59 + this.TimeZone.GetHashCode();
+				hash = hash * 59 + TimeZone.GetHashCode();
 			}
 
-			if (this.SystemUtcOffset != null)
+			if (SystemUtcOffset != null)
 			{
-				hash = hash * 59 + this.SystemUtcOffset.GetHashCode();
+				hash = hash * 59 + SystemUtcOffset.GetHashCode();
 			}
 
 			return hash;

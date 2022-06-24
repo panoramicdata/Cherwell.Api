@@ -127,7 +127,7 @@ public partial class SaveBusObAttachmentRequest : IEquatable<SaveBusObAttachment
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as SaveBusObAttachmentRequest);
+		return Equals(obj as SaveBusObAttachmentRequest);
 	}
 
 	/// <summary>
@@ -145,54 +145,54 @@ public partial class SaveBusObAttachmentRequest : IEquatable<SaveBusObAttachment
 
 		return
 				(
-					this.AttachBusObId == other.AttachBusObId ||
-					this.AttachBusObId != null &&
-					this.AttachBusObId.Equals(other.AttachBusObId, StringComparison.Ordinal)
+					AttachBusObId == other.AttachBusObId ||
+					AttachBusObId != null &&
+					AttachBusObId.Equals(other.AttachBusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.AttachBusObName == other.AttachBusObName ||
-					this.AttachBusObName != null &&
-					this.AttachBusObName.Equals(other.AttachBusObName, StringComparison.Ordinal)
+					AttachBusObName == other.AttachBusObName ||
+					AttachBusObName != null &&
+					AttachBusObName.Equals(other.AttachBusObName, StringComparison.Ordinal)
 				) &&
 				(
-					this.AttachBusObPublicId == other.AttachBusObPublicId ||
-					this.AttachBusObPublicId != null &&
-					this.AttachBusObPublicId.Equals(other.AttachBusObPublicId, StringComparison.Ordinal)
+					AttachBusObPublicId == other.AttachBusObPublicId ||
+					AttachBusObPublicId != null &&
+					AttachBusObPublicId.Equals(other.AttachBusObPublicId, StringComparison.Ordinal)
 				) &&
 				(
-					this.AttachBusObRecId == other.AttachBusObRecId ||
-					this.AttachBusObRecId != null &&
-					this.AttachBusObRecId.Equals(other.AttachBusObRecId, StringComparison.Ordinal)
+					AttachBusObRecId == other.AttachBusObRecId ||
+					AttachBusObRecId != null &&
+					AttachBusObRecId.Equals(other.AttachBusObRecId, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObId == other.BusObId ||
-					this.BusObId != null &&
-					this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
+					BusObId == other.BusObId ||
+					BusObId != null &&
+					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObName == other.BusObName ||
-					this.BusObName != null &&
-					this.BusObName.Equals(other.BusObName, StringComparison.Ordinal)
+					BusObName == other.BusObName ||
+					BusObName != null &&
+					BusObName.Equals(other.BusObName, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObPublicId == other.BusObPublicId ||
-					this.BusObPublicId != null &&
-					this.BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
+					BusObPublicId == other.BusObPublicId ||
+					BusObPublicId != null &&
+					BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
 				) &&
 				(
-					this.BusObRecId == other.BusObRecId ||
-					this.BusObRecId != null &&
-					this.BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
+					BusObRecId == other.BusObRecId ||
+					BusObRecId != null &&
+					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
 				) &&
 				(
-					this.Comment == other.Comment ||
-					this.Comment != null &&
-					this.Comment.Equals(other.Comment, StringComparison.Ordinal)
+					Comment == other.Comment ||
+					Comment != null &&
+					Comment.Equals(other.Comment, StringComparison.Ordinal)
 				) &&
 				(
-					this.IncludeLinks == other.IncludeLinks ||
-					this.IncludeLinks != null &&
-					this.IncludeLinks.Equals(other.IncludeLinks)
+					IncludeLinks == other.IncludeLinks ||
+					IncludeLinks != null &&
+					IncludeLinks.Equals(other.IncludeLinks)
 				);
 	}
 
@@ -207,54 +207,54 @@ public partial class SaveBusObAttachmentRequest : IEquatable<SaveBusObAttachment
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.AttachBusObId != null)
+			if (AttachBusObId != null)
 			{
-				hash = hash * 59 + this.AttachBusObId.GetHashCode();
+				hash = hash * 59 + AttachBusObId.GetHashCode();
 			}
 
-			if (this.AttachBusObName != null)
+			if (AttachBusObName != null)
 			{
-				hash = hash * 59 + this.AttachBusObName.GetHashCode();
+				hash = hash * 59 + AttachBusObName.GetHashCode();
 			}
 
-			if (this.AttachBusObPublicId != null)
+			if (AttachBusObPublicId != null)
 			{
-				hash = hash * 59 + this.AttachBusObPublicId.GetHashCode();
+				hash = hash * 59 + AttachBusObPublicId.GetHashCode();
 			}
 
-			if (this.AttachBusObRecId != null)
+			if (AttachBusObRecId != null)
 			{
-				hash = hash * 59 + this.AttachBusObRecId.GetHashCode();
+				hash = hash * 59 + AttachBusObRecId.GetHashCode();
 			}
 
-			if (this.BusObId != null)
+			if (BusObId != null)
 			{
-				hash = hash * 59 + this.BusObId.GetHashCode();
+				hash = hash * 59 + BusObId.GetHashCode();
 			}
 
-			if (this.BusObName != null)
+			if (BusObName != null)
 			{
-				hash = hash * 59 + this.BusObName.GetHashCode();
+				hash = hash * 59 + BusObName.GetHashCode();
 			}
 
-			if (this.BusObPublicId != null)
+			if (BusObPublicId != null)
 			{
-				hash = hash * 59 + this.BusObPublicId.GetHashCode();
+				hash = hash * 59 + BusObPublicId.GetHashCode();
 			}
 
-			if (this.BusObRecId != null)
+			if (BusObRecId != null)
 			{
-				hash = hash * 59 + this.BusObRecId.GetHashCode();
+				hash = hash * 59 + BusObRecId.GetHashCode();
 			}
 
-			if (this.Comment != null)
+			if (Comment != null)
 			{
-				hash = hash * 59 + this.Comment.GetHashCode();
+				hash = hash * 59 + Comment.GetHashCode();
 			}
 
-			if (this.IncludeLinks != null)
+			if (IncludeLinks != null)
 			{
-				hash = hash * 59 + this.IncludeLinks.GetHashCode();
+				hash = hash * 59 + IncludeLinks.GetHashCode();
 			}
 
 			return hash;

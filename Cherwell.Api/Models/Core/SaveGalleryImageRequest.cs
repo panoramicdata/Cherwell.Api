@@ -138,7 +138,7 @@ public partial class SaveGalleryImageRequest : IEquatable<SaveGalleryImageReques
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as SaveGalleryImageRequest);
+		return Equals(obj as SaveGalleryImageRequest);
 	}
 
 	/// <summary>
@@ -156,44 +156,44 @@ public partial class SaveGalleryImageRequest : IEquatable<SaveGalleryImageReques
 
 		return
 				(
-					this.Base64EncodedImageData == other.Base64EncodedImageData ||
-					this.Base64EncodedImageData != null &&
-					this.Base64EncodedImageData.Equals(other.Base64EncodedImageData, StringComparison.Ordinal)
+					Base64EncodedImageData == other.Base64EncodedImageData ||
+					Base64EncodedImageData != null &&
+					Base64EncodedImageData.Equals(other.Base64EncodedImageData, StringComparison.Ordinal)
 				) &&
 				(
-					this.Description == other.Description ||
-					this.Description != null &&
-					this.Description.Equals(other.Description, StringComparison.Ordinal)
+					Description == other.Description ||
+					Description != null &&
+					Description.Equals(other.Description, StringComparison.Ordinal)
 				) &&
 				(
-					this.Folder == other.Folder ||
-					this.Folder != null &&
-					this.Folder.Equals(other.Folder, StringComparison.Ordinal)
+					Folder == other.Folder ||
+					Folder != null &&
+					Folder.Equals(other.Folder, StringComparison.Ordinal)
 				) &&
 				(
-					this.ImageType == other.ImageType ||
-					this.ImageType != null &&
-					this.ImageType.Equals(other.ImageType)
+					ImageType == other.ImageType ||
+					ImageType != null &&
+					ImageType.Equals(other.ImageType)
 				) &&
 				(
-					this.Name == other.Name ||
-					this.Name != null &&
-					this.Name.Equals(other.Name, StringComparison.Ordinal)
+					Name == other.Name ||
+					Name != null &&
+					Name.Equals(other.Name, StringComparison.Ordinal)
 				) &&
 				(
-					this.Scope == other.Scope ||
-					this.Scope != null &&
-					this.Scope.Equals(other.Scope, StringComparison.Ordinal)
+					Scope == other.Scope ||
+					Scope != null &&
+					Scope.Equals(other.Scope, StringComparison.Ordinal)
 				) &&
 				(
-					this.ScopeOwner == other.ScopeOwner ||
-					this.ScopeOwner != null &&
-					this.ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
+					ScopeOwner == other.ScopeOwner ||
+					ScopeOwner != null &&
+					ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
 				) &&
 				(
-					this.StandInKey == other.StandInKey ||
-					this.StandInKey != null &&
-					this.StandInKey.Equals(other.StandInKey, StringComparison.Ordinal)
+					StandInKey == other.StandInKey ||
+					StandInKey != null &&
+					StandInKey.Equals(other.StandInKey, StringComparison.Ordinal)
 				);
 	}
 
@@ -208,44 +208,44 @@ public partial class SaveGalleryImageRequest : IEquatable<SaveGalleryImageReques
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Base64EncodedImageData != null)
+			if (Base64EncodedImageData != null)
 			{
-				hash = hash * 59 + this.Base64EncodedImageData.GetHashCode();
+				hash = hash * 59 + Base64EncodedImageData.GetHashCode();
 			}
 
-			if (this.Description != null)
+			if (Description != null)
 			{
-				hash = hash * 59 + this.Description.GetHashCode();
+				hash = hash * 59 + Description.GetHashCode();
 			}
 
-			if (this.Folder != null)
+			if (Folder != null)
 			{
-				hash = hash * 59 + this.Folder.GetHashCode();
+				hash = hash * 59 + Folder.GetHashCode();
 			}
 
-			if (this.ImageType != null)
+			if (ImageType != null)
 			{
-				hash = hash * 59 + this.ImageType.GetHashCode();
+				hash = hash * 59 + ImageType.GetHashCode();
 			}
 
-			if (this.Name != null)
+			if (Name != null)
 			{
-				hash = hash * 59 + this.Name.GetHashCode();
+				hash = hash * 59 + Name.GetHashCode();
 			}
 
-			if (this.Scope != null)
+			if (Scope != null)
 			{
-				hash = hash * 59 + this.Scope.GetHashCode();
+				hash = hash * 59 + Scope.GetHashCode();
 			}
 
-			if (this.ScopeOwner != null)
+			if (ScopeOwner != null)
 			{
-				hash = hash * 59 + this.ScopeOwner.GetHashCode();
+				hash = hash * 59 + ScopeOwner.GetHashCode();
 			}
 
-			if (this.StandInKey != null)
+			if (StandInKey != null)
 			{
-				hash = hash * 59 + this.StandInKey.GetHashCode();
+				hash = hash * 59 + StandInKey.GetHashCode();
 			}
 
 			return hash;

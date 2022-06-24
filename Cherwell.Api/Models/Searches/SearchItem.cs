@@ -111,7 +111,7 @@ public partial class SearchItem : IEquatable<SearchItem>, IValidatableObject
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as SearchItem);
+		return Equals(obj as SearchItem);
 	}
 
 	/// <summary>
@@ -129,44 +129,44 @@ public partial class SearchItem : IEquatable<SearchItem>, IValidatableObject
 
 		return
 				(
-					this.Association == other.Association ||
-					this.Association != null &&
-					this.Association.Equals(other.Association, StringComparison.Ordinal)
+					Association == other.Association ||
+					Association != null &&
+					Association.Equals(other.Association, StringComparison.Ordinal)
 				) &&
 				(
-					this.Links == other.Links ||
-					this.Links != null &&
-					this.Links.SequenceEqual(other.Links)
+					Links == other.Links ||
+					Links != null &&
+					Links.SequenceEqual(other.Links)
 				) &&
 				(
-					this.LocalizedScopeName == other.LocalizedScopeName ||
-					this.LocalizedScopeName != null &&
-					this.LocalizedScopeName.Equals(other.LocalizedScopeName, StringComparison.Ordinal)
+					LocalizedScopeName == other.LocalizedScopeName ||
+					LocalizedScopeName != null &&
+					LocalizedScopeName.Equals(other.LocalizedScopeName, StringComparison.Ordinal)
 				) &&
 				(
-					this.ParentFolderId == other.ParentFolderId ||
-					this.ParentFolderId != null &&
-					this.ParentFolderId.Equals(other.ParentFolderId, StringComparison.Ordinal)
+					ParentFolderId == other.ParentFolderId ||
+					ParentFolderId != null &&
+					ParentFolderId.Equals(other.ParentFolderId, StringComparison.Ordinal)
 				) &&
 				(
-					this.Scope == other.Scope ||
-					this.Scope != null &&
-					this.Scope.Equals(other.Scope, StringComparison.Ordinal)
+					Scope == other.Scope ||
+					Scope != null &&
+					Scope.Equals(other.Scope, StringComparison.Ordinal)
 				) &&
 				(
-					this.ScopeOwner == other.ScopeOwner ||
-					this.ScopeOwner != null &&
-					this.ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
+					ScopeOwner == other.ScopeOwner ||
+					ScopeOwner != null &&
+					ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
 				) &&
 				(
-					this.SearchId == other.SearchId ||
-					this.SearchId != null &&
-					this.SearchId.Equals(other.SearchId, StringComparison.Ordinal)
+					SearchId == other.SearchId ||
+					SearchId != null &&
+					SearchId.Equals(other.SearchId, StringComparison.Ordinal)
 				) &&
 				(
-					this.SearchName == other.SearchName ||
-					this.SearchName != null &&
-					this.SearchName.Equals(other.SearchName, StringComparison.Ordinal)
+					SearchName == other.SearchName ||
+					SearchName != null &&
+					SearchName.Equals(other.SearchName, StringComparison.Ordinal)
 				);
 	}
 
@@ -181,44 +181,44 @@ public partial class SearchItem : IEquatable<SearchItem>, IValidatableObject
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.Association != null)
+			if (Association != null)
 			{
-				hash = hash * 59 + this.Association.GetHashCode();
+				hash = hash * 59 + Association.GetHashCode();
 			}
 
-			if (this.Links != null)
+			if (Links != null)
 			{
-				hash = hash * 59 + this.Links.GetHashCode();
+				hash = hash * 59 + Links.GetHashCode();
 			}
 
-			if (this.LocalizedScopeName != null)
+			if (LocalizedScopeName != null)
 			{
-				hash = hash * 59 + this.LocalizedScopeName.GetHashCode();
+				hash = hash * 59 + LocalizedScopeName.GetHashCode();
 			}
 
-			if (this.ParentFolderId != null)
+			if (ParentFolderId != null)
 			{
-				hash = hash * 59 + this.ParentFolderId.GetHashCode();
+				hash = hash * 59 + ParentFolderId.GetHashCode();
 			}
 
-			if (this.Scope != null)
+			if (Scope != null)
 			{
-				hash = hash * 59 + this.Scope.GetHashCode();
+				hash = hash * 59 + Scope.GetHashCode();
 			}
 
-			if (this.ScopeOwner != null)
+			if (ScopeOwner != null)
 			{
-				hash = hash * 59 + this.ScopeOwner.GetHashCode();
+				hash = hash * 59 + ScopeOwner.GetHashCode();
 			}
 
-			if (this.SearchId != null)
+			if (SearchId != null)
 			{
-				hash = hash * 59 + this.SearchId.GetHashCode();
+				hash = hash * 59 + SearchId.GetHashCode();
 			}
 
-			if (this.SearchName != null)
+			if (SearchName != null)
 			{
-				hash = hash * 59 + this.SearchName.GetHashCode();
+				hash = hash * 59 + SearchName.GetHashCode();
 			}
 
 			return hash;

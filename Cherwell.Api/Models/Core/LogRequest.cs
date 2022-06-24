@@ -67,7 +67,7 @@ public partial class LogRequest : IEquatable<LogRequest>, IValidatableObject
 	/// <param name="keyValueproperties">keyValueproperties.</param>
 	/// <param name="Level">Level.</param>
 	/// <param name="Message">Message.</param>
-	public LogRequest(List<Object> keyValueproperties, EnumLevel? Level, string Message)
+	public LogRequest(List<object> keyValueproperties, EnumLevel? Level, string Message)
 	{
 		this.keyValueproperties = keyValueproperties;
 		this.Level = Level;
@@ -78,7 +78,7 @@ public partial class LogRequest : IEquatable<LogRequest>, IValidatableObject
 	/// Gets or Sets keyValueproperties
 	/// </summary>
 	[DataMember(Name = "keyValueproperties", EmitDefaultValue = false)]
-	public List<Object> keyValueproperties { get; set; }
+	public List<object> keyValueproperties { get; set; }
 	/// <summary>
 	/// Gets or Sets Message
 	/// </summary>
@@ -116,7 +116,7 @@ public partial class LogRequest : IEquatable<LogRequest>, IValidatableObject
 	public override bool Equals(object? obj)
 	{
 		// credit: http://stackoverflow.com/a/10454552/677735
-		return this.Equals(obj as LogRequest);
+		return Equals(obj as LogRequest);
 	}
 
 	/// <summary>
@@ -134,19 +134,19 @@ public partial class LogRequest : IEquatable<LogRequest>, IValidatableObject
 
 		return
 				(
-					this.keyValueproperties == other.keyValueproperties ||
-					this.keyValueproperties != null &&
-					this.keyValueproperties.SequenceEqual(other.keyValueproperties)
+					keyValueproperties == other.keyValueproperties ||
+					keyValueproperties != null &&
+					keyValueproperties.SequenceEqual(other.keyValueproperties)
 				) &&
 				(
-					this.Level == other.Level ||
-					this.Level != null &&
-					this.Level.Equals(other.Level)
+					Level == other.Level ||
+					Level != null &&
+					Level.Equals(other.Level)
 				) &&
 				(
-					this.Message == other.Message ||
-					this.Message != null &&
-					this.Message.Equals(other.Message, StringComparison.Ordinal)
+					Message == other.Message ||
+					Message != null &&
+					Message.Equals(other.Message, StringComparison.Ordinal)
 				);
 	}
 
@@ -161,19 +161,19 @@ public partial class LogRequest : IEquatable<LogRequest>, IValidatableObject
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (this.keyValueproperties != null)
+			if (keyValueproperties != null)
 			{
-				hash = hash * 59 + this.keyValueproperties.GetHashCode();
+				hash = hash * 59 + keyValueproperties.GetHashCode();
 			}
 
-			if (this.Level != null)
+			if (Level != null)
 			{
-				hash = hash * 59 + this.Level.GetHashCode();
+				hash = hash * 59 + Level.GetHashCode();
 			}
 
-			if (this.Message != null)
+			if (Message != null)
 			{
-				hash = hash * 59 + this.Message.GetHashCode();
+				hash = hash * 59 + Message.GetHashCode();
 			}
 
 			return hash;
