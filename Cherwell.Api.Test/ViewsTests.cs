@@ -1,5 +1,5 @@
-﻿using FluentAssertions;
-using Refit;
+﻿using Cherwell.Api.Exceptions;
+using FluentAssertions;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -22,7 +22,12 @@ public class ViewsTests : CherwellClientTest
 			.ConfigureAwait(false);
 		}))
 		.Should()
-		.ThrowAsync<ApiException>()
-		.WithMessage("Response status code does not indicate success: 403 (Forbidden).");
+		.ThrowAsync<CherwellApiException>()
+		.WithMessage(Message.Forbidden)
+		.Where(e =>
+			e.Response != null && e.Response.ErrorCode == ErrorCode.Forbidden
+			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.Forbidden
+			&& e.Response.HasError == true
+		);
 	}
 }

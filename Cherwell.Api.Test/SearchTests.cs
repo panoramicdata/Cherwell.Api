@@ -1,4 +1,5 @@
-﻿using Cherwell.Api.Models.Searches;
+﻿using Cherwell.Api.Exceptions;
+using Cherwell.Api.Models.Searches;
 using FluentAssertions;
 using Xunit;
 using Xunit.Abstractions;
@@ -39,5 +40,27 @@ public class GetSearchResultsAdHocTests : CherwellClientTest
 			.BusinessObjects
 			.Should()
 			.NotBeNullOrEmpty();
+	}
+
+	[Fact]
+	public async void WideSearch_Fails()
+	{
+		await ((Func<Task>)(async () =>
+		{
+			var views = await TestCherwellClient
+			.Searches
+			.GetSearchResultsAdHocAsync(
+				new SearchResultsRequest(),
+				default)
+			.ConfigureAwait(false);
+		}))
+		.Should()
+		.ThrowAsync<CherwellApiException>()
+		.WithMessage(Message.NotFound)
+		.Where(e =>
+			e.Response != null && e.Response.ErrorCode == ErrorCode.NotFound
+			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.InternalServerError
+			&& e.Response.HasError == true
+		);
 	}
 }

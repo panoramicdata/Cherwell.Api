@@ -2,13 +2,13 @@
 
 namespace Cherwell.Api.Models;
 
-public abstract class Response
+public class Response
 {
 	/// <summary>
 	/// HttpStatusCode
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-	public EnumHttpStatusCode? HttpStatusCode { get; set; }
+	public EnumHttpStatusCode HttpStatusCode { get; set; }
 
 	/// <summary>
 	/// ErrorCode
@@ -26,5 +26,5 @@ public abstract class Response
 	/// HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
-	public bool? HasError { get; set; }
+	public bool HasError { get; set; }
 }

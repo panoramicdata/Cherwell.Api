@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace Cherwell.Api;
+namespace Cherwell.Api.Exceptions;
 
 [Serializable]
 public class ConfigurationException : Exception

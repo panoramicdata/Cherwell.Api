@@ -1,4 +1,7 @@
-﻿namespace Cherwell.Api.Test.Config;
+﻿using Cherwell.Api.Exceptions;
+
+namespace Cherwell.Api.Test.Config;
+
 internal class Configuration
 {
 	public CherwellClientOptions? CherwellClientOptions { get; set; }

@@ -1,4 +1,5 @@
-﻿using Cherwell.Api.Test.Config;
+﻿using Cherwell.Api.Exceptions;
+using Cherwell.Api.Test.Config;
 using Divergic.Logging.Xunit;
 using Newtonsoft.Json;
 using Xunit.Abstractions;

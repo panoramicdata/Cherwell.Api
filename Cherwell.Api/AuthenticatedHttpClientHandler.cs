@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Cherwell.Api.Exceptions;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Net.Http.Headers;
@@ -74,7 +75,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		}
 
 		// Make the HTTP call
-		var response = await base
+		var httpResponse = await base
 			.SendAsync(request, cancellationToken)
 			.ConfigureAwait(false);
 
@@ -82,9 +83,9 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		// extract the content is expensive
 		if (_logger.IsEnabled(LogLevel.Debug))
 		{
-			var headers = string.Join("\n", response.Headers.Select(h => $"{h.Key}: {string.Join(", ", h.Value.Select(v => v))}"));
-			var body = response.Content is not null
-				? await response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false)
+			var headers = string.Join("\n", httpResponse.Headers.Select(h => $"{h.Key}: {string.Join(", ", h.Value.Select(v => v))}"));
+			var body = httpResponse.Content is not null
+				? await httpResponse.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false)
 				: string.Empty;
 			var jObject = JsonConvert.DeserializeObject<JObject>(body);
 			if (jObject is not null)
@@ -93,13 +94,39 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			}
 
 			_logger.LogDebug(
-				"{RequestId}: RESPONSE: \nHeaders:{Headers}\nBody: {Body}",
+				"{RequestId}: RESPONSE: {StatusCode}\nHeaders:{Headers}\nBody: {Body}",
 				requestId,
+				httpResponse.StatusCode,
 				headers,
 				body);
 		}
 
-		return response;
+		// Was the request successful?
+		if (!httpResponse.IsSuccessStatusCode)
+		{
+			// No.
+
+			// Is this a Cherwell Response?
+			var body = httpResponse.Content is not null
+				? await httpResponse.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false)
+				: string.Empty;
+			var response = JsonConvert.DeserializeObject<Response>(body);
+			if (response is not null)
+			{
+				// Yes.
+
+				// Update the status cde if not set
+				if (response.HttpStatusCode == EnumHttpStatusCode.None)
+				{
+					response.HttpStatusCode = (EnumHttpStatusCode)httpResponse.StatusCode;
+				}
+
+				// Throw a CherwellApiException before Refit can get hold of it.
+				throw new CherwellApiException(response);
+			}
+		}
+
+		return httpResponse;
 	}
 
 	/// <summary>

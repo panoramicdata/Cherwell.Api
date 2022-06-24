@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Cherwell.Api.Exceptions;
+using Microsoft.Extensions.Logging;
 
 namespace Cherwell.Api;
 
