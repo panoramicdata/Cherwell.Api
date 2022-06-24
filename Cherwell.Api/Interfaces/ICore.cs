@@ -7,8 +7,6 @@ namespace Cherwell.Api.Interfaces;
 /// </summary>
 public interface ICore
 {
-	#region Asynchronous Operations
-
 	/// <summary>
 	/// Delete a gallery image
 	/// </summary>
@@ -188,7 +186,10 @@ public interface ICore
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ViewsResponse</returns>
 	[Get("/api/V1/getviews")]
-	Task<ViewsResponse> GetViewsAsync([AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ViewsResponse> GetViewsAsync(
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Create or update a gallery image
@@ -202,7 +203,12 @@ public interface ICore
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SaveGalleryImageResponse</returns>
 	[Post("/api/V1/savegalleryimage")]
-	Task<SaveGalleryImageResponse> SaveGalleryImageAsync([Body] SaveGalleryImageRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<SaveGalleryImageResponse> SaveGalleryImageAsync(
+		[Body] SaveGalleryImageRequest request,
+		[AliasAs("lang")] string?
+		lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Create or update a stored value
@@ -216,7 +222,11 @@ public interface ICore
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of StoredValueResponse</returns>
 	[Post("/api/V1/savestoredvalue")]
-	Task<StoredValueResponse> SaveStoredValueAsync([Body] SaveStoredValueRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<StoredValueResponse> SaveStoredValueAsync(
+		[Body] SaveStoredValueRequest request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Set the culture for the current user
@@ -230,6 +240,9 @@ public interface ICore
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of string</returns>
 	[Put("/api/V1/setculture/culturecode/{culturecode}")]
-	Task<string> SetCultureAsync([AliasAs("culturecode")] string culturecode, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
-	#endregion Asynchronous Operations
+	Task<string> SetCultureAsync(
+		[AliasAs("culturecode")] string culturecode,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 }

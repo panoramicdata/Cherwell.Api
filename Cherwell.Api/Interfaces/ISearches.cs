@@ -7,8 +7,6 @@ namespace Cherwell.Api.Interfaces;
 /// </summary>
 public interface ISearches
 {
-	#region Asynchronous Operations
-
 	/// <summary>
 	/// Get a Quick Search from a list of Business Object IDs
 	/// </summary>
@@ -406,5 +404,4 @@ public interface ISearches
 	/// <returns>Task of string</returns>
 	[Get("/api/V1/getsearchresultsexport/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchname/{searchname}/exportformat/{exportformat}")]
 	Task<string> GetSearchResultsExportByNameAsync([AliasAs("association")] string association, [AliasAs("scope")] string scope, [AliasAs("scopeowner")] string scopeowner, [AliasAs("searchname")] string searchname, [AliasAs("exportformat")] string exportformat, [AliasAs("searchTerm")] string searchTerm, [AliasAs("pagenumber")] int? pagenumber, [AliasAs("pagesize")] int? pagesize, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
-	#endregion Asynchronous Operations
 }

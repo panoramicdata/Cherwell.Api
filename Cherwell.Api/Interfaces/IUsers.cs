@@ -7,8 +7,6 @@ namespace Cherwell.Api.Interfaces;
 /// </summary>
 public interface IUsers
 {
-	#region Asynchronous Operations
-
 	/// <summary>
 	/// Delete a batch of users
 	/// </summary>
@@ -235,5 +233,4 @@ public interface IUsers
 	/// <returns>Task of UserSaveV2Response</returns>
 	[Post("/api/V2/saveuser")]
 	Task<UserSaveV2Response> SaveUserV2Async([Body] UserSaveV2Request request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
-	#endregion Asynchronous Operations
 }

@@ -7,8 +7,6 @@ namespace Cherwell.Api.Interfaces;
 /// </summary>
 public interface IApproval
 {
-	#region Asynchronous Operations
-
 	/// <summary>
 	/// Action an Approval
 	/// </summary>
@@ -63,5 +61,4 @@ public interface IApproval
 	/// <returns>Task ofGetApprovalsResponse</returns>
 	[Get("/api/V1/getmypendingapprovals")]
 	Task<GetApprovalsResponse> GetMyPendingApprovalsAsync([AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
-	#endregion Asynchronous Operations
 }

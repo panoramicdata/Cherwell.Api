@@ -7,8 +7,6 @@ namespace Cherwell.Api.Interfaces;
 /// </summary>
 public interface IQueues
 {
-	#region Asynchronous Operations
-
 	/// <summary>
 	/// Add a Business Object to a queue
 	/// </summary>
@@ -126,5 +124,4 @@ public interface IQueues
 	/// <returns>Task of RemoveItemFromQueueResponse</returns>
 	[Post("/api/V1/removeitemfromqueue")]
 	Task<RemoveItemFromQueueResponse> RemoveItemFromQueueAsync([Body] RemoveItemFromQueueRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
-	#endregion Asynchronous Operations
 }

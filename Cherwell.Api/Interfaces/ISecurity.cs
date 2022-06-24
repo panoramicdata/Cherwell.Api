@@ -7,8 +7,6 @@ namespace Cherwell.Api.Interfaces;
 /// </summary>
 public interface ISecurity
 {
-	#region Asynchronous Operations
-
 	/// <summary>
 	/// Get client security settings
 	/// </summary>
@@ -360,5 +358,4 @@ public interface ISecurity
 	/// <returns>Task of UsersUserReadV2Response</returns>
 	[Get("/api/V2/getusersinsecuritygroup/groupid/{groupid}")]
 	Task<UserReadV2Response> GetUsersInSecurityGroupV2Async([AliasAs("groupid")] string groupid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
-	#endregion Asynchronous Operations
 }

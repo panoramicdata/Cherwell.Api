@@ -7,8 +7,6 @@ namespace Cherwell.Api.Interfaces;
 /// </summary>
 public interface IService
 {
-	#region Asynchronous Operations
-
 	/// <summary>
 	/// Get information about the REST Api and CSM
 	/// </summary>
@@ -53,5 +51,4 @@ public interface IService
 	/// <returns>Task of TokenResponse</returns>
 	[Post("/token")]
 	Task<TokenResponse> TokenAsync(string grantType, string clientId, string clientSecret, string username, string password, string refreshToken, [AliasAs("auth_mode")] string authMode, [AliasAs("site_name")] string? siteName = null, CancellationToken cancellationToken = default);
-	#endregion Asynchronous Operations
 }

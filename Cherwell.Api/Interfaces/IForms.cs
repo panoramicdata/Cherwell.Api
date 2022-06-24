@@ -7,8 +7,6 @@ namespace Cherwell.Api.Interfaces;
 /// </summary>
 public interface IForms
 {
-	#region Asynchronous Operations
-
 	/// <summary>
 	/// Get mobile form by BusObId and Public ID
 	/// </summary>
@@ -76,5 +74,4 @@ public interface IForms
 	/// <returns>Task of MobileFormResponse</returns>
 	[Get("/api/V1/getmobileformforbusob/busobname/{busobname}/busobrecid/{busobrecid}")]
 	Task<MobileFormResponse> GetMobileFormForBusObByNameAndRecIdAsync([AliasAs("busobname")] string busobname, [AliasAs("busobrecid")] string busobrecid, [AliasAs("foredit")] bool? foredit, [AliasAs("formid")] string formid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
-	#endregion Asynchronous Operations
 }

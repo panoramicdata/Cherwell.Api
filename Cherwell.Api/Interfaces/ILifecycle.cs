@@ -7,8 +7,6 @@ namespace Cherwell.Api.Interfaces;
 /// </summary>
 public interface ILifecycle
 {
-	#region Asynchronous Operations
-
 	/// <summary>
 	/// Get current lifecycle stage for record
 	/// </summary>
@@ -111,5 +109,4 @@ public interface ILifecycle
 	/// <returns>Task of ResponseBase</returns>
 	[Post("/api/V1/{businessObjectDefinitionId}/records/{recordId}/transitions")]
 	Task<ResponseBase> TransitionRecordAsync([AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId, [AliasAs("recordId")] string recordId, [Body] TransitionRecordRequest transitionRecordRequest, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
-	#endregion Asynchronous Operations
 }

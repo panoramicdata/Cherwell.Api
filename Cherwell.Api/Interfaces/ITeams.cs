@@ -7,8 +7,6 @@ namespace Cherwell.Api.Interfaces;
 /// </summary>
 public interface ITeams
 {
-	#region Asynchronous Operations
-
 	/// <summary>
 	/// Add users to a team by batch
 	/// </summary>
@@ -245,5 +243,4 @@ public interface ITeams
 	/// <returns>Task of SaveWorkgroupMemberResponse</returns>
 	[Post("/api/V1/saveworkgroupmember")]
 	Task<SaveWorkgroupMemberResponse> SaveWorkgroupMemberAsync([Body] SaveWorkgroupMemberRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
-	#endregion Asynchronous Operations
 }

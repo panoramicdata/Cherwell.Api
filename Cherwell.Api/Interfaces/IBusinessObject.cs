@@ -7,8 +7,6 @@ namespace Cherwell.Api.Interfaces;
 /// </summary>
 public interface IBusinessObject
 {
-	#region Asynchronous Operations
-
 	/// <summary>
 	/// Delete Business Objects in a batch
 	/// </summary>
@@ -707,5 +705,4 @@ public interface IBusinessObject
 	/// <returns>Task of string</returns>
 	[Post("/api/V1/uploadbusinessobjectattachment/filename/{filename}/busobname/{busobname}/busobrecid/{busobrecid}/offset/{offset}/totalsize/{totalsize}")]
 	Task<string> UploadBusinessObjectAttachmentByNameAndRecIdAsync([Body] byte[] body, [AliasAs("filename")] string filename, [AliasAs("busobname")] string busobname, [AliasAs("busobrecid")] string busobrecid, [AliasAs("offset")] int? offset, [AliasAs("totalsize")] int? totalsize, [AliasAs("attachmentid")] string attachmentid, [AliasAs("displaytext")] string displaytext, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
-	#endregion Asynchronous Operations
 }

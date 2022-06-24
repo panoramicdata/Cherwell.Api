@@ -7,8 +7,6 @@ namespace Cherwell.Api.Interfaces;
 /// </summary>
 public interface IOneStepActions
 {
-	#region Asynchronous Operations
-
 	/// <summary>
 	/// Get One-Step Actions by Folder
 	/// </summary>
@@ -132,5 +130,4 @@ public interface IOneStepActions
 	/// <returns>Task of OneStepActionResponse</returns>
 	[Post("/api/V1/runonestepaction")]
 	Task<OneStepActionResponse> RunOneStepActionAsync([Body] OneStepActionRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
-	#endregion Asynchronous Operations
 }
