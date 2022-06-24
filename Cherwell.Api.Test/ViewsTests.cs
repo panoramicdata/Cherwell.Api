@@ -1,4 +1,5 @@
 ﻿using FluentAssertions;
+using Refit;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -13,12 +14,15 @@ public class ViewsTests : CherwellClientTest
 	[Fact]
 	public async void Core_GetViews()
 	{
-		// Get a list of views from Cherwell
-		var views = await TestCherwellClient
+		await ((Func<Task>)(async () =>
+		{
+			var views = await TestCherwellClient
 			.Core
 			.GetViewsAsync(default)
 			.ConfigureAwait(false);
-
-		views.Should().NotBeNull();
+		}))
+		.Should()
+		.ThrowAsync<ApiException>()
+		.WithMessage("Response status code does not indicate success: 403 (Forbidden).");
 	}
 }

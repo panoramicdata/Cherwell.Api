@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Net.Http.Headers;
 using System.Security.Authentication;
 using System.Text;
@@ -36,17 +37,69 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 	protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request,
 		CancellationToken cancellationToken)
 	{
-		// See if the request has an authorize header
+		// Generate a unique request id
+		var requestId = Guid.NewGuid();
+
+		// Does the request has an authorize header?
 		var auth = request.Headers.Authorization;
 		if (auth is null)
 		{
+			// No.  Add one.
 			var accessToken = await GetAccessTokenAsync(cancellationToken);
 			request.Headers.Authorization = new AuthenticationHeaderValue(_authenticationType, accessToken);
 		}
+		// The request now has an authorize header
 
-		return await base
+		// Check the logging level as the operation to
+		// extract the content is expensive
+		if (_logger.IsEnabled(LogLevel.Debug))
+		{
+			var url = request.RequestUri!.ToString();
+			var headers = string.Join("\n", request.Headers.Select(h => $"{h.Key}: {string.Join(", ", h.Value.Select(v => v))}"));
+			var body = request.Content is not null
+				? await request.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false)
+				: string.Empty;
+			var jObject = JsonConvert.DeserializeObject<JObject>(body);
+			if (jObject is not null)
+			{
+				body = JsonConvert.SerializeObject(jObject, Formatting.Indented);
+			}
+
+			_logger.LogDebug(
+				"{RequestId}: REQUEST: Url:{Url}\nHeaders:{Headers}\nBody: {Body}",
+				requestId,
+				url,
+				headers,
+				body);
+		}
+
+		// Make the HTTP call
+		var response = await base
 			.SendAsync(request, cancellationToken)
 			.ConfigureAwait(false);
+
+		// Check the logging level as the operation to
+		// extract the content is expensive
+		if (_logger.IsEnabled(LogLevel.Debug))
+		{
+			var headers = string.Join("\n", response.Headers.Select(h => $"{h.Key}: {string.Join(", ", h.Value.Select(v => v))}"));
+			var body = response.Content is not null
+				? await response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false)
+				: string.Empty;
+			var jObject = JsonConvert.DeserializeObject<JObject>(body);
+			if (jObject is not null)
+			{
+				body = JsonConvert.SerializeObject(jObject, Formatting.Indented);
+			}
+
+			_logger.LogDebug(
+				"{RequestId}: RESPONSE: \nHeaders:{Headers}\nBody: {Body}",
+				requestId,
+				headers,
+				body);
+		}
+
+		return response;
 	}
 
 	/// <summary>
