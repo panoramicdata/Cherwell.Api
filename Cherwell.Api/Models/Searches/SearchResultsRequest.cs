@@ -1,338 +1,330 @@
-using System;
-using System.Linq;
-using System.IO;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Runtime.Serialization;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text;
 
 namespace Cherwell.Api.Models.Searches;
 
-    /// <summary>
-    /// SearchesSearchResultsRequest
-    /// </summary>
-    [DataContract]
-    public partial class SearchResultsRequest : IEquatable<SearchResultsRequest>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SearchResultsRequest" /> class.
-        /// </summary>
-        /// <param name="Association">Association.</param>
-        /// <param name="AssociationName">AssociationName.</param>
-        /// <param name="BusObId">BusObId.</param>
-        /// <param name="CustomGridDefId">CustomGridDefId.</param>
-        /// <param name="DateTimeFormatting">DateTimeFormatting.</param>
-        /// <param name="FieldId">FieldId.</param>
-        /// <param name="Fields">Fields.</param>
-        /// <param name="Filters">Filters.</param>
-        /// <param name="IncludeAllFields">IncludeAllFields.</param>
-        /// <param name="IncludeSchema">IncludeSchema.</param>
-        /// <param name="PageNumber">PageNumber.</param>
-        /// <param name="PageSize">PageSize.</param>
-        /// <param name="Scope">Scope.</param>
-        /// <param name="ScopeOwner">ScopeOwner.</param>
-        /// <param name="SearchId">SearchId.</param>
-        /// <param name="SearchName">SearchName.</param>
-        /// <param name="SearchText">SearchText.</param>
-        /// <param name="Sorting">Sorting.</param>
-        /// <param name="PromptValues">PromptValues.</param>
-        public SearchResultsRequest(string Association, string AssociationName, string BusObId, string CustomGridDefId, string DateTimeFormatting, string FieldId, List<string> Fields, List<FilterInfo> Filters, bool? IncludeAllFields, bool? IncludeSchema, int? PageNumber, int? PageSize, string Scope, string ScopeOwner, string SearchId, string SearchName, string SearchText, List<SortInfo> Sorting, List<PromptValue> PromptValues)
-        {
-            this.Association = Association;
-            this.AssociationName = AssociationName;
-            this.BusObId = BusObId;
-            this.CustomGridDefId = CustomGridDefId;
-            this.DateTimeFormatting = DateTimeFormatting;
-            this.FieldId = FieldId;
-            this.Fields = Fields;
-            this.Filters = Filters;
-            this.IncludeAllFields = IncludeAllFields;
-            this.IncludeSchema = IncludeSchema;
-            this.PageNumber = PageNumber;
-            this.PageSize = PageSize;
-            this.Scope = Scope;
-            this.ScopeOwner = ScopeOwner;
-            this.SearchId = SearchId;
-            this.SearchName = SearchName;
-            this.SearchText = SearchText;
-            this.Sorting = Sorting;
-            this.PromptValues = PromptValues;
-        }
+/// <summary>
+/// SearchesSearchResultsRequest
+/// </summary>
+[DataContract]
+public partial class SearchResultsRequest : IEquatable<SearchResultsRequest>, IValidatableObject
+{
+	/// <summary>
+	/// Initializes a new instance of the <see cref="SearchResultsRequest" /> class.
+	/// </summary>
+	/// <param name="Association">Association.</param>
+	/// <param name="AssociationName">AssociationName.</param>
+	/// <param name="BusObId">BusObId.</param>
+	/// <param name="CustomGridDefId">CustomGridDefId.</param>
+	/// <param name="DateTimeFormatting">DateTimeFormatting.</param>
+	/// <param name="FieldId">FieldId.</param>
+	/// <param name="Fields">Fields.</param>
+	/// <param name="Filters">Filters.</param>
+	/// <param name="IncludeAllFields">IncludeAllFields.</param>
+	/// <param name="IncludeSchema">IncludeSchema.</param>
+	/// <param name="PageNumber">PageNumber.</param>
+	/// <param name="PageSize">PageSize.</param>
+	/// <param name="Scope">Scope.</param>
+	/// <param name="ScopeOwner">ScopeOwner.</param>
+	/// <param name="SearchId">SearchId.</param>
+	/// <param name="SearchName">SearchName.</param>
+	/// <param name="SearchText">SearchText.</param>
+	/// <param name="Sorting">Sorting.</param>
+	/// <param name="PromptValues">PromptValues.</param>
+	public SearchResultsRequest(string Association, string AssociationName, string BusObId, string CustomGridDefId, string DateTimeFormatting, string FieldId, List<string> Fields, List<FilterInfo> Filters, bool? IncludeAllFields, bool? IncludeSchema, int? PageNumber, int? PageSize, string Scope, string ScopeOwner, string SearchId, string SearchName, string SearchText, List<SortInfo> Sorting, List<PromptValue> PromptValues)
+	{
+		this.Association = Association;
+		this.AssociationName = AssociationName;
+		this.BusObId = BusObId;
+		this.CustomGridDefId = CustomGridDefId;
+		this.DateTimeFormatting = DateTimeFormatting;
+		this.FieldId = FieldId;
+		this.Fields = Fields;
+		this.Filters = Filters;
+		this.IncludeAllFields = IncludeAllFields;
+		this.IncludeSchema = IncludeSchema;
+		this.PageNumber = PageNumber;
+		this.PageSize = PageSize;
+		this.Scope = Scope;
+		this.ScopeOwner = ScopeOwner;
+		this.SearchId = SearchId;
+		this.SearchName = SearchName;
+		this.SearchText = SearchText;
+		this.Sorting = Sorting;
+		this.PromptValues = PromptValues;
+	}
 
-        /// <summary>
-        /// Gets or Sets Association
-        /// </summary>
-        [DataMember(Name = "association", EmitDefaultValue = false)]
-        public string Association { get; set; }
-        /// <summary>
-        /// Gets or Sets AssociationName
-        /// </summary>
-        [DataMember(Name = "associationName", EmitDefaultValue = false)]
-        public string AssociationName { get; set; }
-        /// <summary>
-        /// Gets or Sets BusObId
-        /// </summary>
-        [DataMember(Name = "busObId", EmitDefaultValue = false)]
-        public string BusObId { get; set; }
-        /// <summary>
-        /// Gets or Sets CustomGridDefId
-        /// </summary>
-        [DataMember(Name = "customGridDefId", EmitDefaultValue = false)]
-        public string CustomGridDefId { get; set; }
-        /// <summary>
-        /// Gets or Sets DateTimeFormatting
-        /// </summary>
-        [DataMember(Name = "dateTimeFormatting", EmitDefaultValue = false)]
-        public string DateTimeFormatting { get; set; }
-        /// <summary>
-        /// Gets or Sets FieldId
-        /// </summary>
-        [DataMember(Name = "fieldId", EmitDefaultValue = false)]
-        public string FieldId { get; set; }
-        /// <summary>
-        /// Gets or Sets Fields
-        /// </summary>
-        [DataMember(Name = "fields", EmitDefaultValue = false)]
-        public List<string> Fields { get; set; }
-        /// <summary>
-        /// Gets or Sets Filters
-        /// </summary>
-        [DataMember(Name = "filters", EmitDefaultValue = false)]
-        public List<FilterInfo> Filters { get; set; }
-        /// <summary>
-        /// Gets or Sets IncludeAllFields
-        /// </summary>
-        [DataMember(Name = "includeAllFields", EmitDefaultValue = false)]
-        public bool? IncludeAllFields { get; set; }
-        /// <summary>
-        /// Gets or Sets IncludeSchema
-        /// </summary>
-        [DataMember(Name = "includeSchema", EmitDefaultValue = false)]
-        public bool? IncludeSchema { get; set; }
-        /// <summary>
-        /// Gets or Sets PageNumber
-        /// </summary>
-        [DataMember(Name = "pageNumber", EmitDefaultValue = false)]
-        public int? PageNumber { get; set; }
-        /// <summary>
-        /// Gets or Sets PageSize
-        /// </summary>
-        [DataMember(Name = "pageSize", EmitDefaultValue = false)]
-        public int? PageSize { get; set; }
-        /// <summary>
-        /// Gets or Sets Scope
-        /// </summary>
-        [DataMember(Name = "scope", EmitDefaultValue = false)]
-        public string Scope { get; set; }
-        /// <summary>
-        /// Gets or Sets ScopeOwner
-        /// </summary>
-        [DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
-        public string ScopeOwner { get; set; }
-        /// <summary>
-        /// Gets or Sets SearchId
-        /// </summary>
-        [DataMember(Name = "searchId", EmitDefaultValue = false)]
-        public string SearchId { get; set; }
-        /// <summary>
-        /// Gets or Sets SearchName
-        /// </summary>
-        [DataMember(Name = "searchName", EmitDefaultValue = false)]
-        public string SearchName { get; set; }
-        /// <summary>
-        /// Gets or Sets SearchText
-        /// </summary>
-        [DataMember(Name = "searchText", EmitDefaultValue = false)]
-        public string SearchText { get; set; }
-        /// <summary>
-        /// Gets or Sets Sorting
-        /// </summary>
-        [DataMember(Name = "sorting", EmitDefaultValue = false)]
-        public List<SortInfo> Sorting { get; set; }
-        /// <summary>
-        /// Gets or Sets PromptValues
-        /// </summary>
-        [DataMember(Name = "promptValues", EmitDefaultValue = false)]
-        public List<PromptValue> PromptValues { get; set; }
-        /// <summary>
-        /// Returns the string presentation of the object
-        /// </summary>
-        /// <returns>String presentation of the object</returns>
-        public override string ToString()
-        {
-            var sb = new StringBuilder();
-            sb.Append("class SearchesSearchResultsRequest {\n");
-            sb.Append("  Association: ").Append(Association).Append('\n');
-            sb.Append("  AssociationName: ").Append(AssociationName).Append('\n');
-            sb.Append("  BusObId: ").Append(BusObId).Append('\n');
-            sb.Append("  CustomGridDefId: ").Append(CustomGridDefId).Append('\n');
-            sb.Append("  DateTimeFormatting: ").Append(DateTimeFormatting).Append('\n');
-            sb.Append("  FieldId: ").Append(FieldId).Append('\n');
-            sb.Append("  Fields: ").Append(Fields).Append('\n');
-            sb.Append("  Filters: ").Append(Filters).Append('\n');
-            sb.Append("  IncludeAllFields: ").Append(IncludeAllFields).Append('\n');
-            sb.Append("  IncludeSchema: ").Append(IncludeSchema).Append('\n');
-            sb.Append("  PageNumber: ").Append(PageNumber).Append('\n');
-            sb.Append("  PageSize: ").Append(PageSize).Append('\n');
-            sb.Append("  Scope: ").Append(Scope).Append('\n');
-            sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append('\n');
-            sb.Append("  SearchId: ").Append(SearchId).Append('\n');
-            sb.Append("  SearchName: ").Append(SearchName).Append('\n');
-            sb.Append("  SearchText: ").Append(SearchText).Append('\n');
-            sb.Append("  Sorting: ").Append(Sorting).Append('\n');
-            sb.Append("  PromptValues: ").Append(PromptValues).Append('\n');
-            sb.Append("}\n");
-            return sb.ToString();
-        }
+	/// <summary>
+	/// Gets or Sets Association
+	/// </summary>
+	[DataMember(Name = "association", EmitDefaultValue = false)]
+	public string Association { get; set; }
+	/// <summary>
+	/// Gets or Sets AssociationName
+	/// </summary>
+	[DataMember(Name = "associationName", EmitDefaultValue = false)]
+	public string AssociationName { get; set; }
+	/// <summary>
+	/// Gets or Sets BusObId
+	/// </summary>
+	[DataMember(Name = "busObId", EmitDefaultValue = false)]
+	public string BusObId { get; set; }
+	/// <summary>
+	/// Gets or Sets CustomGridDefId
+	/// </summary>
+	[DataMember(Name = "customGridDefId", EmitDefaultValue = false)]
+	public string CustomGridDefId { get; set; }
+	/// <summary>
+	/// Gets or Sets DateTimeFormatting
+	/// </summary>
+	[DataMember(Name = "dateTimeFormatting", EmitDefaultValue = false)]
+	public string DateTimeFormatting { get; set; }
+	/// <summary>
+	/// Gets or Sets FieldId
+	/// </summary>
+	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
+	public string FieldId { get; set; }
+	/// <summary>
+	/// Gets or Sets Fields
+	/// </summary>
+	[DataMember(Name = "fields", EmitDefaultValue = false)]
+	public List<string> Fields { get; set; }
+	/// <summary>
+	/// Gets or Sets Filters
+	/// </summary>
+	[DataMember(Name = "filters", EmitDefaultValue = false)]
+	public List<FilterInfo> Filters { get; set; }
+	/// <summary>
+	/// Gets or Sets IncludeAllFields
+	/// </summary>
+	[DataMember(Name = "includeAllFields", EmitDefaultValue = false)]
+	public bool? IncludeAllFields { get; set; }
+	/// <summary>
+	/// Gets or Sets IncludeSchema
+	/// </summary>
+	[DataMember(Name = "includeSchema", EmitDefaultValue = false)]
+	public bool? IncludeSchema { get; set; }
+	/// <summary>
+	/// Gets or Sets PageNumber
+	/// </summary>
+	[DataMember(Name = "pageNumber", EmitDefaultValue = false)]
+	public int? PageNumber { get; set; }
+	/// <summary>
+	/// Gets or Sets PageSize
+	/// </summary>
+	[DataMember(Name = "pageSize", EmitDefaultValue = false)]
+	public int? PageSize { get; set; }
+	/// <summary>
+	/// Gets or Sets Scope
+	/// </summary>
+	[DataMember(Name = "scope", EmitDefaultValue = false)]
+	public string Scope { get; set; }
+	/// <summary>
+	/// Gets or Sets ScopeOwner
+	/// </summary>
+	[DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
+	public string ScopeOwner { get; set; }
+	/// <summary>
+	/// Gets or Sets SearchId
+	/// </summary>
+	[DataMember(Name = "searchId", EmitDefaultValue = false)]
+	public string SearchId { get; set; }
+	/// <summary>
+	/// Gets or Sets SearchName
+	/// </summary>
+	[DataMember(Name = "searchName", EmitDefaultValue = false)]
+	public string SearchName { get; set; }
+	/// <summary>
+	/// Gets or Sets SearchText
+	/// </summary>
+	[DataMember(Name = "searchText", EmitDefaultValue = false)]
+	public string SearchText { get; set; }
+	/// <summary>
+	/// Gets or Sets Sorting
+	/// </summary>
+	[DataMember(Name = "sorting", EmitDefaultValue = false)]
+	public List<SortInfo> Sorting { get; set; }
+	/// <summary>
+	/// Gets or Sets PromptValues
+	/// </summary>
+	[DataMember(Name = "promptValues", EmitDefaultValue = false)]
+	public List<PromptValue> PromptValues { get; set; }
+	/// <summary>
+	/// Returns the string presentation of the object
+	/// </summary>
+	/// <returns>String presentation of the object</returns>
+	public override string ToString()
+	{
+		var sb = new StringBuilder();
+		sb.Append("class SearchesSearchResultsRequest {\n");
+		sb.Append("  Association: ").Append(Association).Append('\n');
+		sb.Append("  AssociationName: ").Append(AssociationName).Append('\n');
+		sb.Append("  BusObId: ").Append(BusObId).Append('\n');
+		sb.Append("  CustomGridDefId: ").Append(CustomGridDefId).Append('\n');
+		sb.Append("  DateTimeFormatting: ").Append(DateTimeFormatting).Append('\n');
+		sb.Append("  FieldId: ").Append(FieldId).Append('\n');
+		sb.Append("  Fields: ").Append(Fields).Append('\n');
+		sb.Append("  Filters: ").Append(Filters).Append('\n');
+		sb.Append("  IncludeAllFields: ").Append(IncludeAllFields).Append('\n');
+		sb.Append("  IncludeSchema: ").Append(IncludeSchema).Append('\n');
+		sb.Append("  PageNumber: ").Append(PageNumber).Append('\n');
+		sb.Append("  PageSize: ").Append(PageSize).Append('\n');
+		sb.Append("  Scope: ").Append(Scope).Append('\n');
+		sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append('\n');
+		sb.Append("  SearchId: ").Append(SearchId).Append('\n');
+		sb.Append("  SearchName: ").Append(SearchName).Append('\n');
+		sb.Append("  SearchText: ").Append(SearchText).Append('\n');
+		sb.Append("  Sorting: ").Append(Sorting).Append('\n');
+		sb.Append("  PromptValues: ").Append(PromptValues).Append('\n');
+		sb.Append("}\n");
+		return sb.ToString();
+	}
 
-        /// <summary>
-        /// Returns the JSON string presentation of the object
-        /// </summary>
-        /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
-        {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
-        }
+	/// <summary>
+	/// Returns the JSON string presentation of the object
+	/// </summary>
+	/// <returns>JSON string presentation of the object</returns>
+	public string ToJson()
+	{
+		return JsonConvert.SerializeObject(this, Formatting.Indented);
+	}
 
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="obj">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object? obj)
-        {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchResultsRequest);
-        }
+	/// <summary>
+	/// Returns true if objects are equal
+	/// </summary>
+	/// <param name="obj">Object to be compared</param>
+	/// <returns>Boolean</returns>
+	public override bool Equals(object? obj)
+	{
+		// credit: http://stackoverflow.com/a/10454552/677735
+		return this.Equals(obj as SearchResultsRequest);
+	}
 
-        /// <summary>
-        /// Returns true if SearchesSearchResultsRequest instances are equal
-        /// </summary>
-        /// <param name="other">Instance of SearchesSearchResultsRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SearchResultsRequest? other)
-        {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+	/// <summary>
+	/// Returns true if SearchesSearchResultsRequest instances are equal
+	/// </summary>
+	/// <param name="other">Instance of SearchesSearchResultsRequest to be compared</param>
+	/// <returns>Boolean</returns>
+	public bool Equals(SearchResultsRequest? other)
+	{
+		// credit: http://stackoverflow.com/a/10454552/677735
+		if (other == null)
 		{
 			return false;
 		}
 
 		return
-                (
-                    this.Association == other.Association ||
-                    this.Association != null &&
-                    this.Association.Equals(other.Association, StringComparison.Ordinal)
-                ) &&
-                (
-                    this.AssociationName == other.AssociationName ||
-                    this.AssociationName != null &&
-                    this.AssociationName.Equals(other.AssociationName, StringComparison.Ordinal)
-                ) &&
-                (
-                    this.BusObId == other.BusObId ||
-                    this.BusObId != null &&
-                    this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
-                ) &&
-                (
-                    this.CustomGridDefId == other.CustomGridDefId ||
-                    this.CustomGridDefId != null &&
-                    this.CustomGridDefId.Equals(other.CustomGridDefId, StringComparison.Ordinal)
-                ) &&
-                (
-                    this.DateTimeFormatting == other.DateTimeFormatting ||
-                    this.DateTimeFormatting != null &&
-                    this.DateTimeFormatting.Equals(other.DateTimeFormatting, StringComparison.Ordinal)
-                ) &&
-                (
-                    this.FieldId == other.FieldId ||
-                    this.FieldId != null &&
-                    this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
-                ) &&
-                (
-                    this.Fields == other.Fields ||
-                    this.Fields != null &&
-                    this.Fields.SequenceEqual(other.Fields)
-                ) &&
-                (
-                    this.Filters == other.Filters ||
-                    this.Filters != null &&
-                    this.Filters.SequenceEqual(other.Filters)
-                ) &&
-                (
-                    this.IncludeAllFields == other.IncludeAllFields ||
-                    this.IncludeAllFields != null &&
-                    this.IncludeAllFields.Equals(other.IncludeAllFields)
-                ) &&
-                (
-                    this.IncludeSchema == other.IncludeSchema ||
-                    this.IncludeSchema != null &&
-                    this.IncludeSchema.Equals(other.IncludeSchema)
-                ) &&
-                (
-                    this.PageNumber == other.PageNumber ||
-                    this.PageNumber != null &&
-                    this.PageNumber.Equals(other.PageNumber)
-                ) &&
-                (
-                    this.PageSize == other.PageSize ||
-                    this.PageSize != null &&
-                    this.PageSize.Equals(other.PageSize)
-                ) &&
-                (
-                    this.Scope == other.Scope ||
-                    this.Scope != null &&
-                    this.Scope.Equals(other.Scope, StringComparison.Ordinal)
-                ) &&
-                (
-                    this.ScopeOwner == other.ScopeOwner ||
-                    this.ScopeOwner != null &&
-                    this.ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
-                ) &&
-                (
-                    this.SearchId == other.SearchId ||
-                    this.SearchId != null &&
-                    this.SearchId.Equals(other.SearchId, StringComparison.Ordinal)
-                ) &&
-                (
-                    this.SearchName == other.SearchName ||
-                    this.SearchName != null &&
-                    this.SearchName.Equals(other.SearchName, StringComparison.Ordinal)
-                ) &&
-                (
-                    this.SearchText == other.SearchText ||
-                    this.SearchText != null &&
-                    this.SearchText.Equals(other.SearchText, StringComparison.Ordinal)
-                ) &&
-                (
-                    this.Sorting == other.Sorting ||
-                    this.Sorting != null &&
-                    this.Sorting.SequenceEqual(other.Sorting)
-                ) &&
-                (
-                    this.PromptValues == other.PromptValues ||
-                    this.PromptValues != null &&
-                    this.PromptValues.SequenceEqual(other.PromptValues)
-                );
-        }
+				(
+					this.Association == other.Association ||
+					this.Association != null &&
+					this.Association.Equals(other.Association, StringComparison.Ordinal)
+				) &&
+				(
+					this.AssociationName == other.AssociationName ||
+					this.AssociationName != null &&
+					this.AssociationName.Equals(other.AssociationName, StringComparison.Ordinal)
+				) &&
+				(
+					this.BusObId == other.BusObId ||
+					this.BusObId != null &&
+					this.BusObId.Equals(other.BusObId, StringComparison.Ordinal)
+				) &&
+				(
+					this.CustomGridDefId == other.CustomGridDefId ||
+					this.CustomGridDefId != null &&
+					this.CustomGridDefId.Equals(other.CustomGridDefId, StringComparison.Ordinal)
+				) &&
+				(
+					this.DateTimeFormatting == other.DateTimeFormatting ||
+					this.DateTimeFormatting != null &&
+					this.DateTimeFormatting.Equals(other.DateTimeFormatting, StringComparison.Ordinal)
+				) &&
+				(
+					this.FieldId == other.FieldId ||
+					this.FieldId != null &&
+					this.FieldId.Equals(other.FieldId, StringComparison.Ordinal)
+				) &&
+				(
+					this.Fields == other.Fields ||
+					this.Fields != null &&
+					this.Fields.SequenceEqual(other.Fields)
+				) &&
+				(
+					this.Filters == other.Filters ||
+					this.Filters != null &&
+					this.Filters.SequenceEqual(other.Filters)
+				) &&
+				(
+					this.IncludeAllFields == other.IncludeAllFields ||
+					this.IncludeAllFields != null &&
+					this.IncludeAllFields.Equals(other.IncludeAllFields)
+				) &&
+				(
+					this.IncludeSchema == other.IncludeSchema ||
+					this.IncludeSchema != null &&
+					this.IncludeSchema.Equals(other.IncludeSchema)
+				) &&
+				(
+					this.PageNumber == other.PageNumber ||
+					this.PageNumber != null &&
+					this.PageNumber.Equals(other.PageNumber)
+				) &&
+				(
+					this.PageSize == other.PageSize ||
+					this.PageSize != null &&
+					this.PageSize.Equals(other.PageSize)
+				) &&
+				(
+					this.Scope == other.Scope ||
+					this.Scope != null &&
+					this.Scope.Equals(other.Scope, StringComparison.Ordinal)
+				) &&
+				(
+					this.ScopeOwner == other.ScopeOwner ||
+					this.ScopeOwner != null &&
+					this.ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
+				) &&
+				(
+					this.SearchId == other.SearchId ||
+					this.SearchId != null &&
+					this.SearchId.Equals(other.SearchId, StringComparison.Ordinal)
+				) &&
+				(
+					this.SearchName == other.SearchName ||
+					this.SearchName != null &&
+					this.SearchName.Equals(other.SearchName, StringComparison.Ordinal)
+				) &&
+				(
+					this.SearchText == other.SearchText ||
+					this.SearchText != null &&
+					this.SearchText.Equals(other.SearchText, StringComparison.Ordinal)
+				) &&
+				(
+					this.Sorting == other.Sorting ||
+					this.Sorting != null &&
+					this.Sorting.SequenceEqual(other.Sorting)
+				) &&
+				(
+					this.PromptValues == other.PromptValues ||
+					this.PromptValues != null &&
+					this.PromptValues.SequenceEqual(other.PromptValues)
+				);
+	}
 
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            // credit: http://stackoverflow.com/a/263416/677735
-            unchecked // Overflow is fine, just wrap
-            {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
-                if (this.Association != null)
+	/// <summary>
+	/// Gets the hash code
+	/// </summary>
+	/// <returns>Hash code</returns>
+	public override int GetHashCode()
+	{
+		// credit: http://stackoverflow.com/a/263416/677735
+		unchecked // Overflow is fine, just wrap
+		{
+			int hash = 41;
+			// Suitable nullity checks etc, of course :)
+			if (this.Association != null)
 			{
 				hash = hash * 59 + this.Association.GetHashCode();
 			}
@@ -428,16 +420,16 @@ namespace Cherwell.Api.Models.Searches;
 			}
 
 			return hash;
-            }
-        }
+		}
+	}
 
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
-    }
+	/// <summary>
+	/// To validate all properties of the instance
+	/// </summary>
+	/// <param name="validationContext">Validation context</param>
+	/// <returns>Validation Result</returns>
+	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+	{
+		yield break;
+	}
+}

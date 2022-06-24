@@ -1,234 +1,226 @@
-using System;
-using System.Linq;
-using System.IO;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Runtime.Serialization;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text;
 
 namespace Cherwell.Api.Models.Searches;
 
-    /// <summary>
-    /// SearchesRelatedBusinessObjectRequest
-    /// </summary>
-    [DataContract]
-    public partial class RelatedBusinessObjectRequest : IEquatable<RelatedBusinessObjectRequest>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RelatedBusinessObjectRequest" /> class.
-        /// </summary>
-        /// <param name="AllFields">AllFields.</param>
-        /// <param name="CustomGridId">CustomGridId.</param>
-        /// <param name="FieldsList">FieldsList.</param>
-        /// <param name="Filters">Filters.</param>
-        /// <param name="PageNumber">PageNumber.</param>
-        /// <param name="PageSize">PageSize.</param>
-        /// <param name="ParentBusObId">ParentBusObId.</param>
-        /// <param name="ParentBusObRecId">ParentBusObRecId.</param>
-        /// <param name="RelationshipId">RelationshipId.</param>
-        /// <param name="Sorting">Sorting.</param>
-        /// <param name="UseDefaultGrid">UseDefaultGrid.</param>
-        public RelatedBusinessObjectRequest(bool? AllFields, string CustomGridId, List<string> FieldsList, List<FilterInfo> Filters, int? PageNumber, int? PageSize, string ParentBusObId, string ParentBusObRecId, string RelationshipId, List<SortInfo> Sorting, bool? UseDefaultGrid)
-        {
-            this.AllFields = AllFields;
-            this.CustomGridId = CustomGridId;
-            this.FieldsList = FieldsList;
-            this.Filters = Filters;
-            this.PageNumber = PageNumber;
-            this.PageSize = PageSize;
-            this.ParentBusObId = ParentBusObId;
-            this.ParentBusObRecId = ParentBusObRecId;
-            this.RelationshipId = RelationshipId;
-            this.Sorting = Sorting;
-            this.UseDefaultGrid = UseDefaultGrid;
-        }
+/// <summary>
+/// SearchesRelatedBusinessObjectRequest
+/// </summary>
+[DataContract]
+public partial class RelatedBusinessObjectRequest : IEquatable<RelatedBusinessObjectRequest>, IValidatableObject
+{
+	/// <summary>
+	/// Initializes a new instance of the <see cref="RelatedBusinessObjectRequest" /> class.
+	/// </summary>
+	/// <param name="AllFields">AllFields.</param>
+	/// <param name="CustomGridId">CustomGridId.</param>
+	/// <param name="FieldsList">FieldsList.</param>
+	/// <param name="Filters">Filters.</param>
+	/// <param name="PageNumber">PageNumber.</param>
+	/// <param name="PageSize">PageSize.</param>
+	/// <param name="ParentBusObId">ParentBusObId.</param>
+	/// <param name="ParentBusObRecId">ParentBusObRecId.</param>
+	/// <param name="RelationshipId">RelationshipId.</param>
+	/// <param name="Sorting">Sorting.</param>
+	/// <param name="UseDefaultGrid">UseDefaultGrid.</param>
+	public RelatedBusinessObjectRequest(bool? AllFields, string CustomGridId, List<string> FieldsList, List<FilterInfo> Filters, int? PageNumber, int? PageSize, string ParentBusObId, string ParentBusObRecId, string RelationshipId, List<SortInfo> Sorting, bool? UseDefaultGrid)
+	{
+		this.AllFields = AllFields;
+		this.CustomGridId = CustomGridId;
+		this.FieldsList = FieldsList;
+		this.Filters = Filters;
+		this.PageNumber = PageNumber;
+		this.PageSize = PageSize;
+		this.ParentBusObId = ParentBusObId;
+		this.ParentBusObRecId = ParentBusObRecId;
+		this.RelationshipId = RelationshipId;
+		this.Sorting = Sorting;
+		this.UseDefaultGrid = UseDefaultGrid;
+	}
 
-        /// <summary>
-        /// Gets or Sets AllFields
-        /// </summary>
-        [DataMember(Name = "allFields", EmitDefaultValue = false)]
-        public bool? AllFields { get; set; }
-        /// <summary>
-        /// Gets or Sets CustomGridId
-        /// </summary>
-        [DataMember(Name = "customGridId", EmitDefaultValue = false)]
-        public string CustomGridId { get; set; }
-        /// <summary>
-        /// Gets or Sets FieldsList
-        /// </summary>
-        [DataMember(Name = "fieldsList", EmitDefaultValue = false)]
-        public List<string> FieldsList { get; set; }
-        /// <summary>
-        /// Gets or Sets Filters
-        /// </summary>
-        [DataMember(Name = "filters", EmitDefaultValue = false)]
-        public List<FilterInfo> Filters { get; set; }
-        /// <summary>
-        /// Gets or Sets PageNumber
-        /// </summary>
-        [DataMember(Name = "pageNumber", EmitDefaultValue = false)]
-        public int? PageNumber { get; set; }
-        /// <summary>
-        /// Gets or Sets PageSize
-        /// </summary>
-        [DataMember(Name = "pageSize", EmitDefaultValue = false)]
-        public int? PageSize { get; set; }
-        /// <summary>
-        /// Gets or Sets ParentBusObId
-        /// </summary>
-        [DataMember(Name = "parentBusObId", EmitDefaultValue = false)]
-        public string ParentBusObId { get; set; }
-        /// <summary>
-        /// Gets or Sets ParentBusObRecId
-        /// </summary>
-        [DataMember(Name = "parentBusObRecId", EmitDefaultValue = false)]
-        public string ParentBusObRecId { get; set; }
-        /// <summary>
-        /// Gets or Sets RelationshipId
-        /// </summary>
-        [DataMember(Name = "relationshipId", EmitDefaultValue = false)]
-        public string RelationshipId { get; set; }
-        /// <summary>
-        /// Gets or Sets Sorting
-        /// </summary>
-        [DataMember(Name = "sorting", EmitDefaultValue = false)]
-        public List<SortInfo> Sorting { get; set; }
-        /// <summary>
-        /// Gets or Sets UseDefaultGrid
-        /// </summary>
-        [DataMember(Name = "useDefaultGrid", EmitDefaultValue = false)]
-        public bool? UseDefaultGrid { get; set; }
-        /// <summary>
-        /// Returns the string presentation of the object
-        /// </summary>
-        /// <returns>String presentation of the object</returns>
-        public override string ToString()
-        {
-            var sb = new StringBuilder();
-            sb.Append("class SearchesRelatedBusinessObjectRequest {\n");
-            sb.Append("  AllFields: ").Append(AllFields).Append('\n');
-            sb.Append("  CustomGridId: ").Append(CustomGridId).Append('\n');
-            sb.Append("  FieldsList: ").Append(FieldsList).Append('\n');
-            sb.Append("  Filters: ").Append(Filters).Append('\n');
-            sb.Append("  PageNumber: ").Append(PageNumber).Append('\n');
-            sb.Append("  PageSize: ").Append(PageSize).Append('\n');
-            sb.Append("  ParentBusObId: ").Append(ParentBusObId).Append('\n');
-            sb.Append("  ParentBusObRecId: ").Append(ParentBusObRecId).Append('\n');
-            sb.Append("  RelationshipId: ").Append(RelationshipId).Append('\n');
-            sb.Append("  Sorting: ").Append(Sorting).Append('\n');
-            sb.Append("  UseDefaultGrid: ").Append(UseDefaultGrid).Append('\n');
-            sb.Append("}\n");
-            return sb.ToString();
-        }
+	/// <summary>
+	/// Gets or Sets AllFields
+	/// </summary>
+	[DataMember(Name = "allFields", EmitDefaultValue = false)]
+	public bool? AllFields { get; set; }
+	/// <summary>
+	/// Gets or Sets CustomGridId
+	/// </summary>
+	[DataMember(Name = "customGridId", EmitDefaultValue = false)]
+	public string CustomGridId { get; set; }
+	/// <summary>
+	/// Gets or Sets FieldsList
+	/// </summary>
+	[DataMember(Name = "fieldsList", EmitDefaultValue = false)]
+	public List<string> FieldsList { get; set; }
+	/// <summary>
+	/// Gets or Sets Filters
+	/// </summary>
+	[DataMember(Name = "filters", EmitDefaultValue = false)]
+	public List<FilterInfo> Filters { get; set; }
+	/// <summary>
+	/// Gets or Sets PageNumber
+	/// </summary>
+	[DataMember(Name = "pageNumber", EmitDefaultValue = false)]
+	public int? PageNumber { get; set; }
+	/// <summary>
+	/// Gets or Sets PageSize
+	/// </summary>
+	[DataMember(Name = "pageSize", EmitDefaultValue = false)]
+	public int? PageSize { get; set; }
+	/// <summary>
+	/// Gets or Sets ParentBusObId
+	/// </summary>
+	[DataMember(Name = "parentBusObId", EmitDefaultValue = false)]
+	public string ParentBusObId { get; set; }
+	/// <summary>
+	/// Gets or Sets ParentBusObRecId
+	/// </summary>
+	[DataMember(Name = "parentBusObRecId", EmitDefaultValue = false)]
+	public string ParentBusObRecId { get; set; }
+	/// <summary>
+	/// Gets or Sets RelationshipId
+	/// </summary>
+	[DataMember(Name = "relationshipId", EmitDefaultValue = false)]
+	public string RelationshipId { get; set; }
+	/// <summary>
+	/// Gets or Sets Sorting
+	/// </summary>
+	[DataMember(Name = "sorting", EmitDefaultValue = false)]
+	public List<SortInfo> Sorting { get; set; }
+	/// <summary>
+	/// Gets or Sets UseDefaultGrid
+	/// </summary>
+	[DataMember(Name = "useDefaultGrid", EmitDefaultValue = false)]
+	public bool? UseDefaultGrid { get; set; }
+	/// <summary>
+	/// Returns the string presentation of the object
+	/// </summary>
+	/// <returns>String presentation of the object</returns>
+	public override string ToString()
+	{
+		var sb = new StringBuilder();
+		sb.Append("class SearchesRelatedBusinessObjectRequest {\n");
+		sb.Append("  AllFields: ").Append(AllFields).Append('\n');
+		sb.Append("  CustomGridId: ").Append(CustomGridId).Append('\n');
+		sb.Append("  FieldsList: ").Append(FieldsList).Append('\n');
+		sb.Append("  Filters: ").Append(Filters).Append('\n');
+		sb.Append("  PageNumber: ").Append(PageNumber).Append('\n');
+		sb.Append("  PageSize: ").Append(PageSize).Append('\n');
+		sb.Append("  ParentBusObId: ").Append(ParentBusObId).Append('\n');
+		sb.Append("  ParentBusObRecId: ").Append(ParentBusObRecId).Append('\n');
+		sb.Append("  RelationshipId: ").Append(RelationshipId).Append('\n');
+		sb.Append("  Sorting: ").Append(Sorting).Append('\n');
+		sb.Append("  UseDefaultGrid: ").Append(UseDefaultGrid).Append('\n');
+		sb.Append("}\n");
+		return sb.ToString();
+	}
 
-        /// <summary>
-        /// Returns the JSON string presentation of the object
-        /// </summary>
-        /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
-        {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
-        }
+	/// <summary>
+	/// Returns the JSON string presentation of the object
+	/// </summary>
+	/// <returns>JSON string presentation of the object</returns>
+	public string ToJson()
+	{
+		return JsonConvert.SerializeObject(this, Formatting.Indented);
+	}
 
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="obj">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object? obj)
-        {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as RelatedBusinessObjectRequest);
-        }
+	/// <summary>
+	/// Returns true if objects are equal
+	/// </summary>
+	/// <param name="obj">Object to be compared</param>
+	/// <returns>Boolean</returns>
+	public override bool Equals(object? obj)
+	{
+		// credit: http://stackoverflow.com/a/10454552/677735
+		return this.Equals(obj as RelatedBusinessObjectRequest);
+	}
 
-        /// <summary>
-        /// Returns true if SearchesRelatedBusinessObjectRequest instances are equal
-        /// </summary>
-        /// <param name="other">Instance of SearchesRelatedBusinessObjectRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(RelatedBusinessObjectRequest? other)
-        {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+	/// <summary>
+	/// Returns true if SearchesRelatedBusinessObjectRequest instances are equal
+	/// </summary>
+	/// <param name="other">Instance of SearchesRelatedBusinessObjectRequest to be compared</param>
+	/// <returns>Boolean</returns>
+	public bool Equals(RelatedBusinessObjectRequest? other)
+	{
+		// credit: http://stackoverflow.com/a/10454552/677735
+		if (other == null)
 		{
 			return false;
 		}
 
 		return
-                (
-                    this.AllFields == other.AllFields ||
-                    this.AllFields != null &&
-                    this.AllFields.Equals(other.AllFields)
-                ) &&
-                (
-                    this.CustomGridId == other.CustomGridId ||
-                    this.CustomGridId != null &&
-                    this.CustomGridId.Equals(other.CustomGridId, StringComparison.Ordinal)
-                ) &&
-                (
-                    this.FieldsList == other.FieldsList ||
-                    this.FieldsList != null &&
-                    this.FieldsList.SequenceEqual(other.FieldsList)
-                ) &&
-                (
-                    this.Filters == other.Filters ||
-                    this.Filters != null &&
-                    this.Filters.SequenceEqual(other.Filters)
-                ) &&
-                (
-                    this.PageNumber == other.PageNumber ||
-                    this.PageNumber != null &&
-                    this.PageNumber.Equals(other.PageNumber)
-                ) &&
-                (
-                    this.PageSize == other.PageSize ||
-                    this.PageSize != null &&
-                    this.PageSize.Equals(other.PageSize)
-                ) &&
-                (
-                    this.ParentBusObId == other.ParentBusObId ||
-                    this.ParentBusObId != null &&
-                    this.ParentBusObId.Equals(other.ParentBusObId, StringComparison.Ordinal)
-                ) &&
-                (
-                    this.ParentBusObRecId == other.ParentBusObRecId ||
-                    this.ParentBusObRecId != null &&
-                    this.ParentBusObRecId.Equals(other.ParentBusObRecId, StringComparison.Ordinal)
-                ) &&
-                (
-                    this.RelationshipId == other.RelationshipId ||
-                    this.RelationshipId != null &&
-                    this.RelationshipId.Equals(other.RelationshipId, StringComparison.Ordinal)
-                ) &&
-                (
-                    this.Sorting == other.Sorting ||
-                    this.Sorting != null &&
-                    this.Sorting.SequenceEqual(other.Sorting)
-                ) &&
-                (
-                    this.UseDefaultGrid == other.UseDefaultGrid ||
-                    this.UseDefaultGrid != null &&
-                    this.UseDefaultGrid.Equals(other.UseDefaultGrid)
-                );
-        }
+				(
+					this.AllFields == other.AllFields ||
+					this.AllFields != null &&
+					this.AllFields.Equals(other.AllFields)
+				) &&
+				(
+					this.CustomGridId == other.CustomGridId ||
+					this.CustomGridId != null &&
+					this.CustomGridId.Equals(other.CustomGridId, StringComparison.Ordinal)
+				) &&
+				(
+					this.FieldsList == other.FieldsList ||
+					this.FieldsList != null &&
+					this.FieldsList.SequenceEqual(other.FieldsList)
+				) &&
+				(
+					this.Filters == other.Filters ||
+					this.Filters != null &&
+					this.Filters.SequenceEqual(other.Filters)
+				) &&
+				(
+					this.PageNumber == other.PageNumber ||
+					this.PageNumber != null &&
+					this.PageNumber.Equals(other.PageNumber)
+				) &&
+				(
+					this.PageSize == other.PageSize ||
+					this.PageSize != null &&
+					this.PageSize.Equals(other.PageSize)
+				) &&
+				(
+					this.ParentBusObId == other.ParentBusObId ||
+					this.ParentBusObId != null &&
+					this.ParentBusObId.Equals(other.ParentBusObId, StringComparison.Ordinal)
+				) &&
+				(
+					this.ParentBusObRecId == other.ParentBusObRecId ||
+					this.ParentBusObRecId != null &&
+					this.ParentBusObRecId.Equals(other.ParentBusObRecId, StringComparison.Ordinal)
+				) &&
+				(
+					this.RelationshipId == other.RelationshipId ||
+					this.RelationshipId != null &&
+					this.RelationshipId.Equals(other.RelationshipId, StringComparison.Ordinal)
+				) &&
+				(
+					this.Sorting == other.Sorting ||
+					this.Sorting != null &&
+					this.Sorting.SequenceEqual(other.Sorting)
+				) &&
+				(
+					this.UseDefaultGrid == other.UseDefaultGrid ||
+					this.UseDefaultGrid != null &&
+					this.UseDefaultGrid.Equals(other.UseDefaultGrid)
+				);
+	}
 
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            // credit: http://stackoverflow.com/a/263416/677735
-            unchecked // Overflow is fine, just wrap
-            {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
-                if (this.AllFields != null)
+	/// <summary>
+	/// Gets the hash code
+	/// </summary>
+	/// <returns>Hash code</returns>
+	public override int GetHashCode()
+	{
+		// credit: http://stackoverflow.com/a/263416/677735
+		unchecked // Overflow is fine, just wrap
+		{
+			int hash = 41;
+			// Suitable nullity checks etc, of course :)
+			if (this.AllFields != null)
 			{
 				hash = hash * 59 + this.AllFields.GetHashCode();
 			}
@@ -284,16 +276,16 @@ namespace Cherwell.Api.Models.Searches;
 			}
 
 			return hash;
-            }
-        }
+		}
+	}
 
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
-    }
+	/// <summary>
+	/// To validate all properties of the instance
+	/// </summary>
+	/// <param name="validationContext">Validation context</param>
+	/// <returns>Validation Result</returns>
+	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+	{
+		yield break;
+	}
+}

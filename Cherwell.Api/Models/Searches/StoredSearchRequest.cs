@@ -1,195 +1,187 @@
-using System;
-using System.Linq;
-using System.IO;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Runtime.Serialization;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text;
 
 namespace Cherwell.Api.Models.Searches;
 
-    /// <summary>
-    /// SearchesStoredSearchRequest
-    /// </summary>
-    [DataContract]
-    public partial class StoredSearchRequest : IEquatable<StoredSearchRequest>, IValidatableObject
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="StoredSearchRequest" /> class.
-        /// </summary>
-        /// <param name="AssociationId">AssociationId.</param>
-        /// <param name="AssociationName">AssociationName.</param>
-        /// <param name="GridId">GridId.</param>
-        /// <param name="IncludeSchema">IncludeSchema.</param>
-        /// <param name="Scope">Scope.</param>
-        /// <param name="ScopeOwnerId">ScopeOwnerId.</param>
-        /// <param name="SearchId">SearchId.</param>
-        /// <param name="SearchName">SearchName.</param>
-        public StoredSearchRequest(string AssociationId, string AssociationName, string GridId, bool? IncludeSchema, string Scope, string ScopeOwnerId, string SearchId, string SearchName)
-        {
-            this.AssociationId = AssociationId;
-            this.AssociationName = AssociationName;
-            this.GridId = GridId;
-            this.IncludeSchema = IncludeSchema;
-            this.Scope = Scope;
-            this.ScopeOwnerId = ScopeOwnerId;
-            this.SearchId = SearchId;
-            this.SearchName = SearchName;
-        }
+/// <summary>
+/// SearchesStoredSearchRequest
+/// </summary>
+[DataContract]
+public partial class StoredSearchRequest : IEquatable<StoredSearchRequest>, IValidatableObject
+{
+	/// <summary>
+	/// Initializes a new instance of the <see cref="StoredSearchRequest" /> class.
+	/// </summary>
+	/// <param name="AssociationId">AssociationId.</param>
+	/// <param name="AssociationName">AssociationName.</param>
+	/// <param name="GridId">GridId.</param>
+	/// <param name="IncludeSchema">IncludeSchema.</param>
+	/// <param name="Scope">Scope.</param>
+	/// <param name="ScopeOwnerId">ScopeOwnerId.</param>
+	/// <param name="SearchId">SearchId.</param>
+	/// <param name="SearchName">SearchName.</param>
+	public StoredSearchRequest(string AssociationId, string AssociationName, string GridId, bool? IncludeSchema, string Scope, string ScopeOwnerId, string SearchId, string SearchName)
+	{
+		this.AssociationId = AssociationId;
+		this.AssociationName = AssociationName;
+		this.GridId = GridId;
+		this.IncludeSchema = IncludeSchema;
+		this.Scope = Scope;
+		this.ScopeOwnerId = ScopeOwnerId;
+		this.SearchId = SearchId;
+		this.SearchName = SearchName;
+	}
 
-        /// <summary>
-        /// Gets or Sets AssociationId
-        /// </summary>
-        [DataMember(Name = "associationId", EmitDefaultValue = false)]
-        public string AssociationId { get; set; }
-        /// <summary>
-        /// Gets or Sets AssociationName
-        /// </summary>
-        [DataMember(Name = "associationName", EmitDefaultValue = false)]
-        public string AssociationName { get; set; }
-        /// <summary>
-        /// Gets or Sets GridId
-        /// </summary>
-        [DataMember(Name = "gridId", EmitDefaultValue = false)]
-        public string GridId { get; set; }
-        /// <summary>
-        /// Gets or Sets IncludeSchema
-        /// </summary>
-        [DataMember(Name = "includeSchema", EmitDefaultValue = false)]
-        public bool? IncludeSchema { get; set; }
-        /// <summary>
-        /// Gets or Sets Scope
-        /// </summary>
-        [DataMember(Name = "scope", EmitDefaultValue = false)]
-        public string Scope { get; set; }
-        /// <summary>
-        /// Gets or Sets ScopeOwnerId
-        /// </summary>
-        [DataMember(Name = "scopeOwnerId", EmitDefaultValue = false)]
-        public string ScopeOwnerId { get; set; }
-        /// <summary>
-        /// Gets or Sets SearchId
-        /// </summary>
-        [DataMember(Name = "searchId", EmitDefaultValue = false)]
-        public string SearchId { get; set; }
-        /// <summary>
-        /// Gets or Sets SearchName
-        /// </summary>
-        [DataMember(Name = "searchName", EmitDefaultValue = false)]
-        public string SearchName { get; set; }
-        /// <summary>
-        /// Returns the string presentation of the object
-        /// </summary>
-        /// <returns>String presentation of the object</returns>
-        public override string ToString()
-        {
-            var sb = new StringBuilder();
-            sb.Append("class SearchesStoredSearchRequest {\n");
-            sb.Append("  AssociationId: ").Append(AssociationId).Append('\n');
-            sb.Append("  AssociationName: ").Append(AssociationName).Append('\n');
-            sb.Append("  GridId: ").Append(GridId).Append('\n');
-            sb.Append("  IncludeSchema: ").Append(IncludeSchema).Append('\n');
-            sb.Append("  Scope: ").Append(Scope).Append('\n');
-            sb.Append("  ScopeOwnerId: ").Append(ScopeOwnerId).Append('\n');
-            sb.Append("  SearchId: ").Append(SearchId).Append('\n');
-            sb.Append("  SearchName: ").Append(SearchName).Append('\n');
-            sb.Append("}\n");
-            return sb.ToString();
-        }
+	/// <summary>
+	/// Gets or Sets AssociationId
+	/// </summary>
+	[DataMember(Name = "associationId", EmitDefaultValue = false)]
+	public string AssociationId { get; set; }
+	/// <summary>
+	/// Gets or Sets AssociationName
+	/// </summary>
+	[DataMember(Name = "associationName", EmitDefaultValue = false)]
+	public string AssociationName { get; set; }
+	/// <summary>
+	/// Gets or Sets GridId
+	/// </summary>
+	[DataMember(Name = "gridId", EmitDefaultValue = false)]
+	public string GridId { get; set; }
+	/// <summary>
+	/// Gets or Sets IncludeSchema
+	/// </summary>
+	[DataMember(Name = "includeSchema", EmitDefaultValue = false)]
+	public bool? IncludeSchema { get; set; }
+	/// <summary>
+	/// Gets or Sets Scope
+	/// </summary>
+	[DataMember(Name = "scope", EmitDefaultValue = false)]
+	public string Scope { get; set; }
+	/// <summary>
+	/// Gets or Sets ScopeOwnerId
+	/// </summary>
+	[DataMember(Name = "scopeOwnerId", EmitDefaultValue = false)]
+	public string ScopeOwnerId { get; set; }
+	/// <summary>
+	/// Gets or Sets SearchId
+	/// </summary>
+	[DataMember(Name = "searchId", EmitDefaultValue = false)]
+	public string SearchId { get; set; }
+	/// <summary>
+	/// Gets or Sets SearchName
+	/// </summary>
+	[DataMember(Name = "searchName", EmitDefaultValue = false)]
+	public string SearchName { get; set; }
+	/// <summary>
+	/// Returns the string presentation of the object
+	/// </summary>
+	/// <returns>String presentation of the object</returns>
+	public override string ToString()
+	{
+		var sb = new StringBuilder();
+		sb.Append("class SearchesStoredSearchRequest {\n");
+		sb.Append("  AssociationId: ").Append(AssociationId).Append('\n');
+		sb.Append("  AssociationName: ").Append(AssociationName).Append('\n');
+		sb.Append("  GridId: ").Append(GridId).Append('\n');
+		sb.Append("  IncludeSchema: ").Append(IncludeSchema).Append('\n');
+		sb.Append("  Scope: ").Append(Scope).Append('\n');
+		sb.Append("  ScopeOwnerId: ").Append(ScopeOwnerId).Append('\n');
+		sb.Append("  SearchId: ").Append(SearchId).Append('\n');
+		sb.Append("  SearchName: ").Append(SearchName).Append('\n');
+		sb.Append("}\n");
+		return sb.ToString();
+	}
 
-        /// <summary>
-        /// Returns the JSON string presentation of the object
-        /// </summary>
-        /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
-        {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
-        }
+	/// <summary>
+	/// Returns the JSON string presentation of the object
+	/// </summary>
+	/// <returns>JSON string presentation of the object</returns>
+	public string ToJson()
+	{
+		return JsonConvert.SerializeObject(this, Formatting.Indented);
+	}
 
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="obj">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object? obj)
-        {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as StoredSearchRequest);
-        }
+	/// <summary>
+	/// Returns true if objects are equal
+	/// </summary>
+	/// <param name="obj">Object to be compared</param>
+	/// <returns>Boolean</returns>
+	public override bool Equals(object? obj)
+	{
+		// credit: http://stackoverflow.com/a/10454552/677735
+		return this.Equals(obj as StoredSearchRequest);
+	}
 
-        /// <summary>
-        /// Returns true if SearchesStoredSearchRequest instances are equal
-        /// </summary>
-        /// <param name="other">Instance of SearchesStoredSearchRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(StoredSearchRequest? other)
-        {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+	/// <summary>
+	/// Returns true if SearchesStoredSearchRequest instances are equal
+	/// </summary>
+	/// <param name="other">Instance of SearchesStoredSearchRequest to be compared</param>
+	/// <returns>Boolean</returns>
+	public bool Equals(StoredSearchRequest? other)
+	{
+		// credit: http://stackoverflow.com/a/10454552/677735
+		if (other == null)
 		{
 			return false;
 		}
 
 		return
-                (
-                    this.AssociationId == other.AssociationId ||
-                    this.AssociationId != null &&
-                    this.AssociationId.Equals(other.AssociationId, StringComparison.Ordinal)
-                ) &&
-                (
-                    this.AssociationName == other.AssociationName ||
-                    this.AssociationName != null &&
-                    this.AssociationName.Equals(other.AssociationName, StringComparison.Ordinal)
-                ) &&
-                (
-                    this.GridId == other.GridId ||
-                    this.GridId != null &&
-                    this.GridId.Equals(other.GridId, StringComparison.Ordinal)
-                ) &&
-                (
-                    this.IncludeSchema == other.IncludeSchema ||
-                    this.IncludeSchema != null &&
-                    this.IncludeSchema.Equals(other.IncludeSchema)
-                ) &&
-                (
-                    this.Scope == other.Scope ||
-                    this.Scope != null &&
-                    this.Scope.Equals(other.Scope, StringComparison.Ordinal)
-                ) &&
-                (
-                    this.ScopeOwnerId == other.ScopeOwnerId ||
-                    this.ScopeOwnerId != null &&
-                    this.ScopeOwnerId.Equals(other.ScopeOwnerId, StringComparison.Ordinal)
-                ) &&
-                (
-                    this.SearchId == other.SearchId ||
-                    this.SearchId != null &&
-                    this.SearchId.Equals(other.SearchId, StringComparison.Ordinal)
-                ) &&
-                (
-                    this.SearchName == other.SearchName ||
-                    this.SearchName != null &&
-                    this.SearchName.Equals(other.SearchName, StringComparison.Ordinal)
-                );
-        }
+				(
+					this.AssociationId == other.AssociationId ||
+					this.AssociationId != null &&
+					this.AssociationId.Equals(other.AssociationId, StringComparison.Ordinal)
+				) &&
+				(
+					this.AssociationName == other.AssociationName ||
+					this.AssociationName != null &&
+					this.AssociationName.Equals(other.AssociationName, StringComparison.Ordinal)
+				) &&
+				(
+					this.GridId == other.GridId ||
+					this.GridId != null &&
+					this.GridId.Equals(other.GridId, StringComparison.Ordinal)
+				) &&
+				(
+					this.IncludeSchema == other.IncludeSchema ||
+					this.IncludeSchema != null &&
+					this.IncludeSchema.Equals(other.IncludeSchema)
+				) &&
+				(
+					this.Scope == other.Scope ||
+					this.Scope != null &&
+					this.Scope.Equals(other.Scope, StringComparison.Ordinal)
+				) &&
+				(
+					this.ScopeOwnerId == other.ScopeOwnerId ||
+					this.ScopeOwnerId != null &&
+					this.ScopeOwnerId.Equals(other.ScopeOwnerId, StringComparison.Ordinal)
+				) &&
+				(
+					this.SearchId == other.SearchId ||
+					this.SearchId != null &&
+					this.SearchId.Equals(other.SearchId, StringComparison.Ordinal)
+				) &&
+				(
+					this.SearchName == other.SearchName ||
+					this.SearchName != null &&
+					this.SearchName.Equals(other.SearchName, StringComparison.Ordinal)
+				);
+	}
 
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            // credit: http://stackoverflow.com/a/263416/677735
-            unchecked // Overflow is fine, just wrap
-            {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
-                if (this.AssociationId != null)
+	/// <summary>
+	/// Gets the hash code
+	/// </summary>
+	/// <returns>Hash code</returns>
+	public override int GetHashCode()
+	{
+		// credit: http://stackoverflow.com/a/263416/677735
+		unchecked // Overflow is fine, just wrap
+		{
+			int hash = 41;
+			// Suitable nullity checks etc, of course :)
+			if (this.AssociationId != null)
 			{
 				hash = hash * 59 + this.AssociationId.GetHashCode();
 			}
@@ -230,16 +222,16 @@ namespace Cherwell.Api.Models.Searches;
 			}
 
 			return hash;
-            }
-        }
+		}
+	}
 
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
-    }
+	/// <summary>
+	/// To validate all properties of the instance
+	/// </summary>
+	/// <param name="validationContext">Validation context</param>
+	/// <returns>Validation Result</returns>
+	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+	{
+		yield break;
+	}
+}
