@@ -42,7 +42,10 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		}
 
 		// Add a user agent to ensure consistent behaviour
-		request.Headers.UserAgent.Add(new ProductInfoHeaderValue(_options.UserAgent, "1.0"));
+		if (_options.UserAgent is not null)
+		{
+			request.Headers.UserAgent.Add(new ProductInfoHeaderValue(_options.UserAgent, "1.0"));
+		}
 
 		return await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
 	}
@@ -93,10 +96,8 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			httpClient.DefaultRequestHeaders.Add("User-Agent", _options.UserAgent);
 		}
 
-		httpClient.DefaultRequestHeaders.Add(
-			"Authorization",
-			"Basic " + (string?)Convert.ToBase64String(Encoding.UTF8.GetBytes($"{_options.UserName}:{_options.Password}"))
-			);
+		var base64String = (string?)Convert.ToBase64String(Encoding.UTF8.GetBytes($"{_options.ClientId}:"));
+		httpClient.DefaultRequestHeaders.Add("Authorization", $"Basic {base64String}");
 
 		var grantTypeString = grantType switch
 		{
