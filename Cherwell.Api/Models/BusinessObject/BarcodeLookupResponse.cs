@@ -310,20 +310,26 @@ public partial class BarcodeLookupResponse : IEquatable<BarcodeLookupResponse>, 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="BarcodeLookupResponse" /> class.
 	/// </summary>
-	/// <param name="BusObId">BusObId.</param>
-	/// <param name="BusObRecId">BusObRecId.</param>
-	/// <param name="ErrorCode">ErrorCode.</param>
-	/// <param name="ErrorMessage">ErrorMessage.</param>
-	/// <param name="HasError">HasError.</param>
+	/// <param name="busObId">BusObId.</param>
+	/// <param name="busObRecId">BusObRecId.</param>
+	/// <param name="errorCode">ErrorCode.</param>
+	/// <param name="errorMessage">ErrorMessage.</param>
+	/// <param name="hasError">HasError.</param>
 	/// <param name="HttpStatusCode">HttpStatusCode.</param>
-	public BarcodeLookupResponse(string BusObId, string BusObRecId, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
+	public BarcodeLookupResponse(
+		string busObId,
+		string busObRecId,
+		string errorCode,
+		string errorMessage,
+		bool? hasError,
+		EnumHttpStatusCode? httpStatusCode)
 	{
-		this.BusObId = BusObId;
-		this.BusObRecId = BusObRecId;
-		this.ErrorCode = ErrorCode;
-		this.ErrorMessage = ErrorMessage;
-		this.HasError = HasError;
-		this.HttpStatusCode = HttpStatusCode;
+		BusObId = busObId;
+		BusObRecId = busObRecId;
+		ErrorCode = errorCode;
+		ErrorMessage = errorMessage;
+		HasError = hasError;
+		HttpStatusCode = httpStatusCode;
 	}
 
 	/// <summary>

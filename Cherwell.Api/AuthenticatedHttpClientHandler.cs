@@ -20,8 +20,10 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 	{
 		_options = options;
 		_logger = logger;
-		_authenticatingClient = new HttpClient();
-		_authenticatingClient.BaseAddress = new Uri(options.BaseAddress!);
+		_authenticatingClient = new HttpClient
+		{
+			BaseAddress = new Uri(options.BaseAddress!)
+		};
 	}
 
 	/// <summary>

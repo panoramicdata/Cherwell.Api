@@ -14,16 +14,20 @@ public partial class UserReadResponse : IEquatable<UserReadResponse>, IValidatab
 	/// <summary>
 	/// Initializes a new instance of the <see cref="UserReadResponse" /> class.
 	/// </summary>
-	/// <param name="Error">Error.</param>
-	/// <param name="ErrorCode">ErrorCode.</param>
-	/// <param name="HasError">HasError.</param>
-	/// <param name="Users">Users.</param>
-	public UserReadResponse(string Error, string ErrorCode, bool? HasError, List<User> Users)
+	/// <param name="error">Error.</param>
+	/// <param name="errorCode">ErrorCode.</param>
+	/// <param name="hasError">HasError.</param>
+	/// <param name="users">Users.</param>
+	public UserReadResponse(
+		string error,
+		string errorCode,
+		bool? hasError,
+		List<User> users)
 	{
-		this.Error = Error;
-		this.ErrorCode = ErrorCode;
-		this.HasError = HasError;
-		this.Users = Users;
+		Error = error;
+		ErrorCode = errorCode;
+		HasError = hasError;
+		Users = users;
 	}
 
 	/// <summary>
@@ -31,21 +35,25 @@ public partial class UserReadResponse : IEquatable<UserReadResponse>, IValidatab
 	/// </summary>
 	[DataMember(Name = "error", EmitDefaultValue = false)]
 	public string Error { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Users
 	/// </summary>
 	[DataMember(Name = "users", EmitDefaultValue = false)]
 	public List<User> Users { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

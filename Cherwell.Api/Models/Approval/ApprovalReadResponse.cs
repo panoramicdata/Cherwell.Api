@@ -312,18 +312,24 @@ public partial class ApprovalReadResponse : IEquatable<ApprovalReadResponse>, IV
 	/// </summary>
 	/// <param name="properties">properties.</param>
 	/// <param name="links">Links.</param>
-	/// <param name="ErrorCode">ErrorCode.</param>
-	/// <param name="ErrorMessage">ErrorMessage.</param>
-	/// <param name="HasError">HasError.</param>
-	/// <param name="HttpStatusCode">HttpStatusCode.</param>
-	public ApprovalReadResponse(Dictionary<string, object> properties, List<Link> links, string ErrorCode, string ErrorMessage, bool? HasError = default, EnumHttpStatusCode? HttpStatusCode = default)
+	/// <param name="errorCode">ErrorCode.</param>
+	/// <param name="errorMessage">ErrorMessage.</param>
+	/// <param name="hasError">HasError.</param>
+	/// <param name="httpStatusCode">HttpStatusCode.</param>
+	public ApprovalReadResponse(
+		Dictionary<string, object> properties,
+		List<Link> links,
+		string errorCode,
+		string errorMessage,
+		bool? hasError = default,
+		EnumHttpStatusCode? httpStatusCode = default)
 	{
-		this.Properties = properties;
-		this.Links = links;
-		this.ErrorCode = ErrorCode;
-		this.ErrorMessage = ErrorMessage;
-		this.HasError = HasError;
-		this.HttpStatusCode = HttpStatusCode;
+		Properties = properties;
+		Links = links;
+		ErrorCode = errorCode;
+		ErrorMessage = errorMessage;
+		HasError = hasError;
+		HttpStatusCode = httpStatusCode;
 	}
 
 	/// <summary>
