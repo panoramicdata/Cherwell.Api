@@ -20,7 +20,12 @@ public interface ILifecycle
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of GetRecordStatusResponse</returns>
 	[Get("/api/V1/{businessObjectDefinitionId}/records/{recordId}/stage")]
-	Task<GetRecordStatusResponse> GetRecordStageAsync([AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId, [AliasAs("recordId")] string recordId, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<GetRecordStatusResponse> GetRecordStageAsync(
+		[AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId,
+		[AliasAs("recordId")] string recordId,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get current lifecycle status for record
@@ -35,7 +40,12 @@ public interface ILifecycle
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of GetRecordStatusResponse</returns>
 	[Get("/api/V1/{businessObjectDefinitionId}/records/{recordId}/status")]
-	Task<GetRecordStatusResponse> GetRecordStatusAsync([AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId, [AliasAs("recordId")] string recordId, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<GetRecordStatusResponse> GetRecordStatusAsync(
+		[AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId,
+		[AliasAs("recordId")] string recordId,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get lifecycle stages
@@ -49,7 +59,11 @@ public interface ILifecycle
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of GetStagesResponse</returns>
 	[Get("/api/V1/{businessObjectDefinitionId}/lifecycle/stages")]
-	Task<GetStagesResponse> GetStagesAsync([AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<GetStagesResponse> GetStagesAsync(
+		[AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get lifecycle statuses
@@ -63,7 +77,11 @@ public interface ILifecycle
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of GetStatusesResponse</returns>
 	[Get("/api/V1/{businessObjectDefinitionId}/lifecycle/statuses")]
-	Task<GetStatusesResponse> GetStatusesAsync([AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<GetStatusesResponse> GetStatusesAsync(
+		[AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get lifecycle transition options for record
@@ -78,7 +96,12 @@ public interface ILifecycle
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of GetTransitionOptionsResponse</returns>
 	[Get("/api/V1/{businessObjectDefinitionId}/records/{recordId}/transitionOptions")]
-	Task<GetTransitionOptionsResponse> GetTransitionOptionsAsync([AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId, [AliasAs("recordId")] string recordId, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<GetTransitionOptionsResponse> GetTransitionOptionsAsync(
+		[AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId,
+		[AliasAs("recordId")] string recordId,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get lifecycle transitions
@@ -92,7 +115,11 @@ public interface ILifecycle
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of GetTransitionsResponse</returns>
 	[Get("/api/V1/{businessObjectDefinitionId}/lifecycle/transitions")]
-	Task<GetTransitionsResponse> GetTransitionsAsync([AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<GetTransitionsResponse> GetTransitionsAsync(
+		[AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Transition a business object record
@@ -108,5 +135,11 @@ public interface ILifecycle
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ResponseBase</returns>
 	[Post("/api/V1/{businessObjectDefinitionId}/records/{recordId}/transitions")]
-	Task<ResponseBase> TransitionRecordAsync([AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId, [AliasAs("recordId")] string recordId, [Body] TransitionRecordRequest transitionRecordRequest, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ResponseBase> TransitionRecordAsync(
+		[AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId,
+		[AliasAs("recordId")] string recordId,
+		[Body] TransitionRecordRequest transitionRecordRequest,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 }

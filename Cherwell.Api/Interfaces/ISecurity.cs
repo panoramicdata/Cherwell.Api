@@ -19,7 +19,11 @@ public interface ISecurity
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ClientSecuritySettingsResponse</returns>
 	[Get("/api/V1/getclientsecuritysettings/applicationtype/{applicationtype}")]
-	Task<ClientSecuritySettingsResponse> GetClientSecuritySettingsAsync([AliasAs("applicationtype")] string applicationtype, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ClientSecuritySettingsResponse> GetClientSecuritySettingsAsync(
+		[AliasAs("applicationtype")] string applicationtype,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get all available Roles
@@ -32,7 +36,10 @@ public interface ISecurity
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of RoleReadResponse</returns>
 	[Get("/api/V1/getroles")]
-	Task<RoleReadResponse> GetRolesAsync([AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<RoleReadResponse> GetRolesAsync(
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get all available Roles
@@ -45,7 +52,10 @@ public interface ISecurity
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of RoleReadV2Response</returns>
 	[Get("/api/V2/getroles")]
-	Task<RoleReadV2Response> GetRolesV2Async([AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<RoleReadV2Response> GetRolesV2Async(
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get Business Object permissions by Security Group
@@ -60,7 +70,12 @@ public interface ISecurity
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;BusinessObjectPermission&gt;</returns>
 	[Get("/api/V1/getsecuritygroupbusinessobjectpermissions/groupid/{groupid}/busobid/{busObId}")]
-	Task<List<BusinessObjectPermission>> GetSecurityGroupBusinessObjectPermissionsByBusObIdAsync([AliasAs("groupid")] string groupid, [AliasAs("busObId")] string busObId, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<List<BusinessObjectPermission>> GetSecurityGroupBusinessObjectPermissionsByBusObIdAsync(
+		[AliasAs("groupid")] string groupid,
+		[AliasAs("busObId")] string busObId,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get Business Object permissions by Security Group
@@ -75,7 +90,12 @@ public interface ISecurity
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of GetSecurityGroupBusinessObjectPermissionsResponse</returns>
 	[Get("/api/V2/getsecuritygroupbusinessobjectpermissions/groupid/{groupid}/busobid/{busObId}")]
-	Task<GetSecurityGroupBusinessObjectPermissionsResponse> GetSecurityGroupBusinessObjectPermissionsByBusObIdV2Async([AliasAs("groupid")] string groupid, [AliasAs("busObId")] string busObId, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<GetSecurityGroupBusinessObjectPermissionsResponse> GetSecurityGroupBusinessObjectPermissionsByBusObIdV2Async(
+		[AliasAs("groupid")] string groupid,
+		[AliasAs("busObId")] string busObId,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get Business Object permissions by Security Group
@@ -90,7 +110,12 @@ public interface ISecurity
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;BusinessObjectPermission&gt;</returns>
 	[Get("/api/V1/getsecuritygroupbusinessobjectpermissions/groupname/{groupname}/busobname/{busobname}")]
-	Task<List<BusinessObjectPermission>> GetSecurityGroupBusinessObjectPermissionsByBusObNameAsync([AliasAs("groupname")] string groupname, [AliasAs("busobname")] string busobname, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<List<BusinessObjectPermission>> GetSecurityGroupBusinessObjectPermissionsByBusObNameAsync(
+		[AliasAs("groupname")] string groupname,
+		[AliasAs("busobname")] string busobname,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get Business Object permissions by Security Group
@@ -105,7 +130,12 @@ public interface ISecurity
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of GetSecurityGroupBusinessObjectPermissionsResponse</returns>
 	[Get("/api/V2/getsecuritygroupbusinessobjectpermissions/groupname/{groupname}/busobname/{busobname}")]
-	Task<GetSecurityGroupBusinessObjectPermissionsResponse> GetSecurityGroupBusinessObjectPermissionsByBusObNameV2Async([AliasAs("groupname")] string groupname, [AliasAs("busobname")] string busobname, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<GetSecurityGroupBusinessObjectPermissionsResponse> GetSecurityGroupBusinessObjectPermissionsByBusObNameV2Async(
+		[AliasAs("groupname")] string groupname,
+		[AliasAs("busobname")] string busobname,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get Business Object permission for current user
@@ -119,7 +149,11 @@ public interface ISecurity
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;BusinessObjectPermission&gt;</returns>
 	[Get("/api/V1/getsecuritygroupbusinessobjectpermissionsforcurrentuserbybusobid/busobid/{busObId}")]
-	Task<List<BusinessObjectPermission>> GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdAsync([AliasAs("busObId")] string busObId, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<List<BusinessObjectPermission>> GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdAsync(
+		[AliasAs("busObId")] string busObId,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get Business Object permission for current user
@@ -133,7 +167,11 @@ public interface ISecurity
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of GetSecurityGroupBusinessObjectPermissionsResponse</returns>
 	[Get("/api/V2/getsecuritygroupbusinessobjectpermissionsforcurrentuserbybusobid/busobid/{busObId}")]
-	Task<GetSecurityGroupBusinessObjectPermissionsResponse> GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV2Async([AliasAs("busObId")] string busObId, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<GetSecurityGroupBusinessObjectPermissionsResponse> GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV2Async(
+		[AliasAs("busObId")] string busObId,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get Business Object permissions for current user
@@ -147,7 +185,11 @@ public interface ISecurity
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;BusinessObjectPermission&gt;</returns>
 	[Get("/api/V1/getsecuritygroupbusinessobjectpermissionsforcurrentuserbybusobname/busobname/{busobname}")]
-	Task<List<BusinessObjectPermission>> GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameAsync([AliasAs("busobname")] string busobname, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<List<BusinessObjectPermission>> GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameAsync(
+		[AliasAs("busobname")] string busobname,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get Business Object permissions for current user
@@ -161,7 +203,11 @@ public interface ISecurity
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of GetSecurityGroupBusinessObjectPermissionsResponse</returns>
 	[Get("/api/V2/getsecuritygroupbusinessobjectpermissionsforcurrentuserbybusobname/busobname/{busobname}")]
-	Task<GetSecurityGroupBusinessObjectPermissionsResponse> GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV2Async([AliasAs("busobname")] string busobname, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<GetSecurityGroupBusinessObjectPermissionsResponse> GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV2Async(
+		[AliasAs("busobname")] string busobname,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get all Security Group categories
@@ -174,7 +220,10 @@ public interface ISecurity
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;RightCategory&gt;</returns>
 	[Get("/api/V1/getsecuritygroupcategories")]
-	Task<List<RightCategory>> GetSecurityGroupCategoriesAsync([AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<List<RightCategory>> GetSecurityGroupCategoriesAsync(
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get all Security Group categories
@@ -187,7 +236,10 @@ public interface ISecurity
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SecurityRightCategoriesResponse</returns>
 	[Get("/api/V2/getsecuritygroupcategories")]
-	Task<SecurityRightCategoriesResponse> GetSecurityGroupCategoriesV2Async([AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<SecurityRightCategoriesResponse> GetSecurityGroupCategoriesV2Async(
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get permissions for a Security Group by category
@@ -202,7 +254,12 @@ public interface ISecurity
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;Right&gt;</returns>
 	[Get("/api/V1/getsecuritygrouprights/groupid/{groupid}/categoryid/{categoryid}")]
-	Task<List<Right>> GetSecurityGroupRightsByGroupIdAndCategoryIdAsync([AliasAs("groupid")] string groupid, [AliasAs("categoryid")] string categoryid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<List<Right>> GetSecurityGroupRightsByGroupIdAndCategoryIdAsync(
+		[AliasAs("groupid")] string groupid,
+		[AliasAs("categoryid")] string categoryid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get permissions for a Security Group by category
@@ -217,7 +274,12 @@ public interface ISecurity
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SecurityRightsResponse</returns>
 	[Get("/api/V2/getsecuritygrouprights/groupid/{groupid}/categoryid/{categoryid}")]
-	Task<SecurityRightsResponse> GetSecurityGroupRightsByGroupIdAndCategoryIdV2Async([AliasAs("groupid")] string groupid, [AliasAs("categoryid")] string categoryid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<SecurityRightsResponse> GetSecurityGroupRightsByGroupIdAndCategoryIdV2Async(
+		[AliasAs("groupid")] string groupid,
+		[AliasAs("categoryid")] string categoryid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get permissions for a Security Group by category
@@ -232,7 +294,12 @@ public interface ISecurity
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;Right&gt;</returns>
 	[Get("/api/V1/getsecuritygrouprights/groupname/{groupname}/categoryname/{categoryname}")]
-	Task<List<Right>> GetSecurityGroupRightsByGroupNameAndCategoryNameAsync([AliasAs("groupname")] string groupname, [AliasAs("categoryname")] string categoryname, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<List<Right>> GetSecurityGroupRightsByGroupNameAndCategoryNameAsync(
+		[AliasAs("groupname")] string groupname,
+		[AliasAs("categoryname")] string categoryname,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get permissions for a Security Group by category
@@ -247,7 +314,12 @@ public interface ISecurity
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SecurityRightsResponse</returns>
 	[Get("/api/V2/getsecuritygrouprights/groupname/{groupname}/categoryname/{categoryname}")]
-	Task<SecurityRightsResponse> GetSecurityGroupRightsByGroupNameAndCategoryNameV2Async([AliasAs("groupname")] string groupname, [AliasAs("categoryname")] string categoryname, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<SecurityRightsResponse> GetSecurityGroupRightsByGroupNameAndCategoryNameV2Async(
+		[AliasAs("groupname")] string groupname,
+		[AliasAs("categoryname")] string categoryname,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get current user&#39;s permissions by Security Group category by ID
@@ -261,7 +333,11 @@ public interface ISecurity
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;Right&gt;</returns>
 	[Get("/api/V1/getsecuritygrouprightsforcurrentuserbycategoryid/categoryid/{categoryid}")]
-	Task<List<Right>> GetSecurityGroupRightsForCurrentUserByCategoryIdAsync([AliasAs("categoryid")] string categoryid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<List<Right>> GetSecurityGroupRightsForCurrentUserByCategoryIdAsync(
+		[AliasAs("categoryid")] string categoryid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get current user&#39;s permissions by Security Group category by ID
@@ -275,7 +351,11 @@ public interface ISecurity
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SecurityRightsResponse</returns>
 	[Get("/api/V2/getsecuritygrouprightsforcurrentuserbycategoryid/categoryid/{categoryid}")]
-	Task<SecurityRightsResponse> GetSecurityGroupRightsForCurrentUserByCategoryIdV2Async([AliasAs("categoryid")] string categoryid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<SecurityRightsResponse> GetSecurityGroupRightsForCurrentUserByCategoryIdV2Async(
+		[AliasAs("categoryid")] string categoryid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get current user&#39;s permissions by Security Group category by name
@@ -289,7 +369,11 @@ public interface ISecurity
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;Right&gt;</returns>
 	[Get("/api/V1/getsecuritygrouprightsforcurrentuserbycategoryname/categoryname/{categoryname}")]
-	Task<List<Right>> GetSecurityGroupRightsForCurrentUserByCategoryNameAsync([AliasAs("categoryname")] string categoryname, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<List<Right>> GetSecurityGroupRightsForCurrentUserByCategoryNameAsync(
+		[AliasAs("categoryname")] string categoryname,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get current user&#39;s permissions by Security Group category by name
@@ -303,7 +387,11 @@ public interface ISecurity
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SecurityRightsResponse</returns>
 	[Get("/api/V2/getsecuritygrouprightsforcurrentuserbycategoryname/categoryname/{categoryname}")]
-	Task<SecurityRightsResponse> GetSecurityGroupRightsForCurrentUserByCategoryNameV2Async([AliasAs("categoryname")] string categoryname, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<SecurityRightsResponse> GetSecurityGroupRightsForCurrentUserByCategoryNameV2Async(
+		[AliasAs("categoryname")] string categoryname,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get all available Security Groups
@@ -316,7 +404,10 @@ public interface ISecurity
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SecurityGroupResponse</returns>
 	[Get("/api/V1/getsecuritygroups")]
-	Task<SecurityGroupResponse> GetSecurityGroupsAsync([AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<SecurityGroupResponse> GetSecurityGroupsAsync(
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get all available Security Groups
@@ -329,7 +420,10 @@ public interface ISecurity
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SecurityGroupV2Response</returns>
 	[Get("/api/V2/getsecuritygroups")]
-	Task<SecurityGroupV2Response> GetSecurityGroupsV2Async([AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<SecurityGroupV2Response> GetSecurityGroupsV2Async(
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get users in a Security Group
@@ -343,7 +437,11 @@ public interface ISecurity
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;User&gt;</returns>
 	[Get("/api/V1/getusersinsecuritygroup/groupid/{groupid}")]
-	Task<List<User>> GetUsersInSecurityGroupAsync([AliasAs("groupid")] string groupid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<List<User>> GetUsersInSecurityGroupAsync(
+		[AliasAs("groupid")] string groupid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get users in a Security Group
@@ -357,5 +455,9 @@ public interface ISecurity
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UsersUserReadV2Response</returns>
 	[Get("/api/V2/getusersinsecuritygroup/groupid/{groupid}")]
-	Task<UserReadV2Response> GetUsersInSecurityGroupV2Async([AliasAs("groupid")] string groupid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<UserReadV2Response> GetUsersInSecurityGroupV2Async(
+		[AliasAs("groupid")] string groupid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 }

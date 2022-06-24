@@ -19,7 +19,11 @@ public interface IQueues
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of AddItemToQueueResponse</returns>
 	[Post("/api/V1/additemtoqueue")]
-	Task<AddItemToQueueResponse> AddItemToQueueAsync([Body] AddItemToQueueRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<AddItemToQueueResponse> AddItemToQueueAsync(
+		[Body] AddItemToQueueRequest request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Check a Business Object in to a queue
@@ -33,7 +37,11 @@ public interface IQueues
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CheckInQueueItemResponse</returns>
 	[Post("/api/V1/checkinqueueitem")]
-	Task<CheckInQueueItemResponse> CheckInQueueItemAsync([Body] CheckInQueueItemRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<CheckInQueueItemResponse> CheckInQueueItemAsync(
+		[Body] CheckInQueueItemRequest request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Check a Business Object out of a queue
@@ -47,7 +55,11 @@ public interface IQueues
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CheckOutQueueItemResponse</returns>
 	[Post("/api/V1/checkoutqueueitem")]
-	Task<CheckOutQueueItemResponse> CheckOutQueueItemAsync([Body] CheckOutQueueItemRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<CheckOutQueueItemResponse> CheckOutQueueItemAsync(
+		[Body] CheckOutQueueItemRequest request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get available queues.
@@ -64,7 +76,14 @@ public interface IQueues
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ManagerData</returns>
 	[Get("/api/V1/getqueues/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
-	Task<ManagerData> GetQueuesFolderAsync([AliasAs("scope")] string scope, [AliasAs("scopeowner")] string scopeowner, [AliasAs("folder")] string folder, [AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ManagerData> GetQueuesFolderAsync(
+		[AliasAs("scope")] string scope,
+		[AliasAs("scopeowner")] string scopeowner,
+		[AliasAs("folder")] string folder,
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get available queues.
@@ -80,7 +99,13 @@ public interface IQueues
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ManagerData</returns>
 	[Get("/api/V1/getqueues/scope/{scope}/scopeowner/{scopeowner}")]
-	Task<ManagerData> GetQueuesScopeOwnerAsync([AliasAs("scope")] string scope, [AliasAs("scopeowner")] string scopeowner, [AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ManagerData> GetQueuesScopeOwnerAsync(
+		[AliasAs("scope")] string scope,
+		[AliasAs("scopeowner")] string scopeowner,
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get available queues.
@@ -95,7 +120,12 @@ public interface IQueues
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ManagerData</returns>
 	[Get("/api/V1/getqueues/scope/{scope}")]
-	Task<ManagerData> GetQueuesScopeAsync([AliasAs("scope")] string scope, [AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ManagerData> GetQueuesScopeAsync(
+		[AliasAs("scope")] string scope,
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get available queues.
@@ -109,7 +139,11 @@ public interface IQueues
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ManagerData</returns>
 	[Get("/api/V1/getqueues")]
-	Task<ManagerData> GetQueuesAsync([AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ManagerData> GetQueuesAsync(
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Remove an item from a queue
@@ -123,5 +157,9 @@ public interface IQueues
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of RemoveItemFromQueueResponse</returns>
 	[Post("/api/V1/removeitemfromqueue")]
-	Task<RemoveItemFromQueueResponse> RemoveItemFromQueueAsync([Body] RemoveItemFromQueueRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<RemoveItemFromQueueResponse> RemoveItemFromQueueAsync(
+		[Body] RemoveItemFromQueueRequest request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 }

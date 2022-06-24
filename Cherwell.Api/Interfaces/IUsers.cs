@@ -19,7 +19,11 @@ public interface IUsers
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserBatchDeleteResponse</returns>
 	[Post("/api/V1/deleteuserbatch")]
-	Task<UserBatchDeleteResponse> DeleteUserBatchAsync([Body] UserBatchDeleteRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<UserBatchDeleteResponse> DeleteUserBatchAsync(
+		[Body] UserBatchDeleteRequest request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Delete a batch of users
@@ -33,7 +37,11 @@ public interface IUsers
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserBatchDeleteV2Response</returns>
 	[Post("/api/V2/deleteuserbatch")]
-	Task<UserBatchDeleteV2Response> DeleteUserBatchV2Async([Body] UserBatchDeleteRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<UserBatchDeleteV2Response> DeleteUserBatchV2Async(
+		[Body] UserBatchDeleteRequest request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Delete a user by record ID
@@ -47,7 +55,11 @@ public interface IUsers
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserDeleteResponse</returns>
 	[Delete("/api/V1/deleteuser/userrecordid/{userrecordid}")]
-	Task<UserDeleteResponse> DeleteUserAsync([AliasAs("userrecordid")] string userrecordid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<UserDeleteResponse> DeleteUserAsync(
+		[AliasAs("userrecordid")] string userrecordid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Delete a user by record ID
@@ -61,7 +73,11 @@ public interface IUsers
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserDeleteV2Response</returns>
 	[Delete("/api/V2/deleteuser/userrecordid/{userrecordid}")]
-	Task<UserDeleteV2Response> DeleteUserV2Async([AliasAs("userrecordid")] string userrecordid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<UserDeleteV2Response> DeleteUserV2Async(
+		[AliasAs("userrecordid")] string userrecordid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get a list of all system users.
@@ -76,7 +92,12 @@ public interface IUsers
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserListResponse</returns>
 	[Get("/api/V1/getlistofusers")]
-	Task<UserListResponse> GetListOfUsersAsync([AliasAs("loginidfilter")] string loginidfilter, [AliasAs("stoponerror")] bool? stoponerror, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<UserListResponse> GetListOfUsersAsync(
+		[AliasAs("loginidfilter")] string loginidfilter,
+		[AliasAs("stoponerror")] bool? stoponerror,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get user information in a batch
@@ -90,7 +111,11 @@ public interface IUsers
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserBatchReadResponse</returns>
 	[Post("/api/V1/getuserbatch")]
-	Task<UserBatchReadResponse> GetUserBatchAsync([Body] UserBatchReadRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<UserBatchReadResponse> GetUserBatchAsync(
+		[Body] UserBatchReadRequest request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get a user by login ID
@@ -104,7 +129,11 @@ public interface IUsers
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of User</returns>
 	[Get("/api/V1/getuserbyloginid/loginid/{loginid}")]
-	Task<User> GetUserByLoginIdAsync([AliasAs("loginid")] string loginid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<User> GetUserByLoginIdAsync(
+		[AliasAs("loginid")] string loginid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get a user by login ID and login ID type
@@ -119,7 +148,12 @@ public interface IUsers
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of User</returns>
 	[Get("/api/V2/getuserbyloginid")]
-	Task<User> GetUserByLoginIdV2Async([AliasAs("loginid")] string loginid, [AliasAs("loginidtype")] string loginidtype, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<User> GetUserByLoginIdV2Async(
+		[AliasAs("loginid")] string loginid,
+		[AliasAs("loginidtype")] string loginidtype,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get a user by login ID and login ID type
@@ -134,7 +168,12 @@ public interface IUsers
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserV2</returns>
 	[Get("/api/V3/getuserbyloginid")]
-	Task<UserV2> GetUserByLoginIdV3Async([AliasAs("loginid")] string loginid, [AliasAs("loginidtype")] string loginidtype, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<UserV2> GetUserByLoginIdV3Async(
+		[AliasAs("loginid")] string loginid,
+		[AliasAs("loginidtype")] string loginidtype,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get a user by public ID
@@ -148,7 +187,11 @@ public interface IUsers
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserReadResponse</returns>
 	[Get("/api/V1/getuserbypublicid/publicid/{publicid}")]
-	Task<UserReadResponse> GetUserByPublicIdAsync([AliasAs("publicid")] string publicid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<UserReadResponse> GetUserByPublicIdAsync(
+		[AliasAs("publicid")] string publicid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get a user by public ID
@@ -162,7 +205,11 @@ public interface IUsers
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserReadV2Response</returns>
 	[Get("/api/V2/getuserbypublicid/publicid/{publicid}")]
-	Task<UserReadV2Response> GetUserByPublicIdV2Async([AliasAs("publicid")] string publicid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<UserReadV2Response> GetUserByPublicIdV2Async(
+		[AliasAs("publicid")] string publicid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get a user by record ID
@@ -176,7 +223,11 @@ public interface IUsers
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserV2</returns>
 	[Get("/api/V1/getuserbyrecid/recid/{recid}")]
-	Task<UserV2> GetUserByRecIdAsync([AliasAs("recid")] string recid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<UserV2> GetUserByRecIdAsync(
+		[AliasAs("recid")] string recid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Create or update users in a batch
@@ -190,7 +241,11 @@ public interface IUsers
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserBatchSaveResponse</returns>
 	[Post("/api/V1/saveuserbatch")]
-	Task<UserBatchSaveResponse> SaveUserBatchAsync([Body] UserBatchSaveRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<UserBatchSaveResponse> SaveUserBatchAsync(
+		[Body] UserBatchSaveRequest request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Create or update users in a batch
@@ -204,7 +259,11 @@ public interface IUsers
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserBatchSaveV2Response</returns>
 	[Post("/api/V2/saveuserbatch")]
-	Task<UserBatchSaveV2Response> SaveUserBatchV2Async([Body] UserBatchSaveV2Request request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<UserBatchSaveV2Response> SaveUserBatchV2Async(
+		[Body] UserBatchSaveV2Request request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Create or update a user
@@ -218,7 +277,11 @@ public interface IUsers
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserSaveResponse</returns>
 	[Post("/api/V1/saveuser")]
-	Task<UserSaveResponse> SaveUserAsync([Body] UserSaveRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<UserSaveResponse> SaveUserAsync(
+		[Body] UserSaveRequest request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Create or update a user
@@ -232,5 +295,9 @@ public interface IUsers
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of UserSaveV2Response</returns>
 	[Post("/api/V2/saveuser")]
-	Task<UserSaveV2Response> SaveUserV2Async([Body] UserSaveV2Request request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<UserSaveV2Response> SaveUserV2Async(
+		[Body] UserSaveV2Request request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 }

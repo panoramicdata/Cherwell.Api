@@ -19,7 +19,11 @@ public interface ITeams
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of AddUserToTeamByBatchResponse</returns>
 	[Post("/api/V1/addusertoteambybatch")]
-	Task<AddUserToTeamByBatchResponse> AddUserToTeamByBatchAsync([Body] AddUserToTeamByBatchRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<AddUserToTeamByBatchResponse> AddUserToTeamByBatchAsync(
+		[Body] AddUserToTeamByBatchRequest request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Add a user to a team
@@ -33,7 +37,11 @@ public interface ITeams
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of void</returns>
 	[Post("/api/V1/addusertoteam")]
-	Task AddUserToTeamAsync([Body] AddUserToTeamRequest dataRequest, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task AddUserToTeamAsync(
+		[Body] AddUserToTeamRequest dataRequest,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Add a user to a team
@@ -47,7 +55,11 @@ public interface ITeams
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of AddUserToTeamResponse</returns>
 	[Post("/api/V2/addusertoteam")]
-	Task<AddUserToTeamResponse> AddUserToTeamV2Async([Body] AddUserToTeamRequest dataRequest, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<AddUserToTeamResponse> AddUserToTeamV2Async(
+		[Body] AddUserToTeamRequest dataRequest,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Delete a Team
@@ -61,7 +73,11 @@ public interface ITeams
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of void</returns>
 	[Delete("/api/V1/deleteteam/{teamid}")]
-	Task DeleteTeamAsync([AliasAs("teamid")] string teamid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task DeleteTeamAsync(
+		[AliasAs("teamid")] string teamid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get a team by its TeamId
@@ -75,7 +91,11 @@ public interface ITeams
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of TeamResponse</returns>
 	[Get("/api/V1/getteam/{teamid}")]
-	Task<TeamResponse> GetTeamAsync([AliasAs("teamid")] string teamid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<TeamResponse> GetTeamAsync(
+		[AliasAs("teamid")] string teamid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get all available Teams
@@ -88,7 +108,10 @@ public interface ITeams
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of TeamsResponse</returns>
 	[Get("/api/V1/getteams")]
-	Task<TeamsResponse> GetTeamsAsync([AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<TeamsResponse> GetTeamsAsync(
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get all available Teams
@@ -101,7 +124,10 @@ public interface ITeams
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of TeamsV2Response</returns>
 	[Get("/api/V2/getteams")]
-	Task<TeamsV2Response> GetTeamsV2Async([AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<TeamsV2Response> GetTeamsV2Async(
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get Team assignments for a user
@@ -115,7 +141,11 @@ public interface ITeams
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of TeamsResponse</returns>
 	[Get("/api/V1/getusersteams/userrecordid/{userRecordId}")]
-	Task<TeamsResponse> GetUsersTeamsAsync([AliasAs("userRecordId")] string userRecordId, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<TeamsResponse> GetUsersTeamsAsync(
+		[AliasAs("userRecordId")] string userRecordId,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get Team assignments for a user
@@ -129,7 +159,11 @@ public interface ITeams
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of TeamsV2Response</returns>
 	[Get("/api/V2/getusersteams/userrecordid/{userRecordId}")]
-	Task<TeamsV2Response> GetUsersTeamsV2Async([AliasAs("userRecordId")] string userRecordId, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<TeamsV2Response> GetUsersTeamsV2Async(
+		[AliasAs("userRecordId")] string userRecordId,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get all available Workgroups
@@ -142,7 +176,10 @@ public interface ITeams
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of TeamsResponse</returns>
 	[Get("/api/V1/getworkgroups")]
-	Task<TeamsResponse> GetWorkgroupsAsync([AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<TeamsResponse> GetWorkgroupsAsync(
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get all available Workgroups
@@ -155,7 +192,10 @@ public interface ITeams
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of TeamsV2Response</returns>
 	[Get("/api/V2/getworkgroups")]
-	Task<TeamsV2Response> GetWorkgroupsV2Async([AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<TeamsV2Response> GetWorkgroupsV2Async(
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Remove a customer from a Workgroup
@@ -170,7 +210,12 @@ public interface ITeams
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of RemoveCustomerFromWorkgroupResponse</returns>
 	[Delete("/api/V1/removecustomerfromworkgroup/workgroupid/{workgroupid}/customerrecordid/{customerrecordid}")]
-	Task<RemoveCustomerFromWorkgroupResponse> TeamsRemoveCustomerFromWorkgroupAsync([AliasAs("workgroupid")] string workgroupid, [AliasAs("customerrecordid")] string customerrecordid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<RemoveCustomerFromWorkgroupResponse> TeamsRemoveCustomerFromWorkgroupAsync(
+		[AliasAs("workgroupid")] string workgroupid,
+		[AliasAs("customerrecordid")] string customerrecordid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Operation to remove a User from a Team.
@@ -185,7 +230,12 @@ public interface ITeams
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of void</returns>
 	[Delete("/api/V1/removeuserfromteam/teamid/{teamId}/userrecordid/{userrecordid}")]
-	Task RemoveUserFromTeamAsync([AliasAs("teamId")] string teamId, [AliasAs("userrecordid")] string userrecordid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task RemoveUserFromTeamAsync(
+		[AliasAs("teamId")] string teamId,
+		[AliasAs("userrecordid")] string userrecordid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Operation to remove a User from a Team.
@@ -200,7 +250,12 @@ public interface ITeams
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of RemoveUserFromTeamResponse</returns>
 	[Delete("/api/V2/removeuserfromteam/teamid/{teamId}/userrecordid/{userrecordid}")]
-	Task<RemoveUserFromTeamResponse> RemoveUserFromTeamV2Async([AliasAs("teamId")] string teamId, [AliasAs("userrecordid")] string userrecordid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<RemoveUserFromTeamResponse> RemoveUserFromTeamV2Async(
+		[AliasAs("teamId")] string teamId,
+		[AliasAs("userrecordid")] string userrecordid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Add or Update a team member
@@ -214,7 +269,11 @@ public interface ITeams
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SaveTeamMemberResponse</returns>
 	[Post("/api/V1/saveteammember")]
-	Task<SaveTeamMemberResponse> SaveTeamMemberAsync([Body] SaveTeamMemberRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<SaveTeamMemberResponse> SaveTeamMemberAsync(
+		[Body] SaveTeamMemberRequest request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Create or update a team
@@ -228,7 +287,11 @@ public interface ITeams
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of TeamSaveResponse</returns>
 	[Post("/api/V1/saveteam")]
-	Task<TeamSaveResponse> SaveTeamAsync([Body] TeamSaveRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<TeamSaveResponse> SaveTeamAsync(
+		[Body] TeamSaveRequest request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Save the membership status of a Workgroup member.
@@ -242,5 +305,9 @@ public interface ITeams
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SaveWorkgroupMemberResponse</returns>
 	[Post("/api/V1/saveworkgroupmember")]
-	Task<SaveWorkgroupMemberResponse> SaveWorkgroupMemberAsync([Body] SaveWorkgroupMemberRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<SaveWorkgroupMemberResponse> SaveWorkgroupMemberAsync(
+		[Body] SaveWorkgroupMemberRequest request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 }

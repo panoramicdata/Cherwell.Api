@@ -22,7 +22,14 @@ public interface IForms
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of MobileFormResponse</returns>
 	[Get("/api/V1/getmobileformforbusob/busobid/{busobid}/publicid/{publicid}")]
-	Task<MobileFormResponse> GetMobileFormForBusObByIdAndPublicIdAsync([AliasAs("busobid")] string busobid, [AliasAs("publicid")] string publicid, [AliasAs("foredit")] bool? foredit, [AliasAs("formid")] string formid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<MobileFormResponse> GetMobileFormForBusObByIdAndPublicIdAsync(
+		[AliasAs("busobid")] string busobid,
+		[AliasAs("publicid")] string publicid,
+		[AliasAs("foredit")] bool? foredit,
+		[AliasAs("formid")] string formid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get mobile form by Business Object ID and Business Object Record ID.
@@ -39,7 +46,14 @@ public interface IForms
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of MobileFormResponse</returns>
 	[Get("/api/V1/getmobileformforbusob/busobid/{busobid}/busobrecid/{busobrecid}")]
-	Task<MobileFormResponse> GetMobileFormForBusObByIdAndRecIdAsync([AliasAs("busobid")] string busobid, [AliasAs("busobrecid")] string busobrecid, [AliasAs("foredit")] bool? foredit, [AliasAs("formid")] string formid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<MobileFormResponse> GetMobileFormForBusObByIdAndRecIdAsync(
+		[AliasAs("busobid")] string busobid,
+		[AliasAs("busobrecid")] string busobrecid,
+		[AliasAs("foredit")] bool? foredit,
+		[AliasAs("formid")] string formid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get mobile form by Business Object name and Public ID
@@ -56,7 +70,14 @@ public interface IForms
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of MobileFormResponse</returns>
 	[Get("/api/V1/getmobileformforbusob/busobname/{busobname}/publicid/{publicid}")]
-	Task<MobileFormResponse> GetMobileFormForBusObByNameAndPublicIdAsync([AliasAs("busobname")] string busobname, [AliasAs("publicid")] string publicid, [AliasAs("foredit")] bool? foredit, [AliasAs("formid")] string formid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<MobileFormResponse> GetMobileFormForBusObByNameAndPublicIdAsync(
+		[AliasAs("busobname")] string busobname,
+		[AliasAs("publicid")] string publicid,
+		[AliasAs("foredit")] bool? foredit,
+		[AliasAs("formid")] string formid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get mobile form by Business Object name and record ID.
@@ -73,5 +94,12 @@ public interface IForms
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of MobileFormResponse</returns>
 	[Get("/api/V1/getmobileformforbusob/busobname/{busobname}/busobrecid/{busobrecid}")]
-	Task<MobileFormResponse> GetMobileFormForBusObByNameAndRecIdAsync([AliasAs("busobname")] string busobname, [AliasAs("busobrecid")] string busobrecid, [AliasAs("foredit")] bool? foredit, [AliasAs("formid")] string formid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<MobileFormResponse> GetMobileFormForBusObByNameAndRecIdAsync(
+		[AliasAs("busobname")] string busobname,
+		[AliasAs("busobrecid")] string busobrecid,
+		[AliasAs("foredit")] bool? foredit,
+		[AliasAs("formid")] string formid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 }

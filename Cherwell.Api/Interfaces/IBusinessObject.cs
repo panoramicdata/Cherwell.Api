@@ -19,7 +19,11 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of BusinessObjectBatchDeleteResponse</returns>
 	[Post("/api/V1/deletebusinessobjectbatch")]
-	Task<BatchDeleteResponse> DeleteBusinessObjectBatchAsync([Body] BatchDeleteRequest request, [AliasAs("lang")] string? lang, [AliasAs("locale")] string? locale, CancellationToken cancellationToken = default);
+	Task<BatchDeleteResponse> DeleteBusinessObjectBatchAsync(
+		[Body] BatchDeleteRequest request,
+		[AliasAs("lang")] string? lang,
+		[AliasAs("locale")] string? locale,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Delete a Business Object by public ID
@@ -34,7 +38,12 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of DeleteResponse</returns>
 	[Delete("/api/V1/deletebusinessobject/busobid/{busobid}/publicid/{publicid}")]
-	Task<DeleteResponse> DeleteBusinessObjectByPublicIdAsync([AliasAs("busobid")] string busobid, [AliasAs("publicid")] string publicid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<DeleteResponse> DeleteBusinessObjectByPublicIdAsync(
+		[AliasAs("busobid")] string busobid,
+		[AliasAs("publicid")] string publicid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Delete a Business Object by record ID
@@ -49,7 +58,12 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of DeleteResponse</returns>
 	[Delete("/api/V1/deletebusinessobject/busobid/{busobid}/busobrecid/{busobrecid}")]
-	Task<DeleteResponse> DeleteBusinessObjectByRecIdAsync([AliasAs("busobid")] string busobid, [AliasAs("busobrecid")] string busobrecid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<DeleteResponse> DeleteBusinessObjectByRecIdAsync(
+		[AliasAs("busobid")] string busobid,
+		[AliasAs("busobrecid")] string busobrecid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Delete a related Business Object by public ID
@@ -66,7 +80,14 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SearchesRelatedBusinessObjectResponse</returns>
 	[Delete("/api/V1/deleterelatedbusinessobject/parentbusobid/{parentbusobid}/parentbusobrecid/{parentbusobrecid}/relationshipid/{relationshipid}/publicid/{publicid}")]
-	Task<RelatedBusinessObjectResponse> DeleteRelatedBusinessObjectByPublicIdAsync([AliasAs("parentbusobid")] string parentbusobid, [AliasAs("parentbusobrecid")] string parentbusobrecid, [AliasAs("relationshipid")] string relationshipid, [AliasAs("publicid")] string publicid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<RelatedBusinessObjectResponse> DeleteRelatedBusinessObjectByPublicIdAsync(
+		[AliasAs("parentbusobid")] string parentbusobid,
+		[AliasAs("parentbusobrecid")] string parentbusobrecid,
+		[AliasAs("relationshipid")] string relationshipid,
+		[AliasAs("publicid")] string publicid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Delete a related Business Object by record ID
@@ -83,7 +104,14 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SearchesRelatedBusinessObjectResponse</returns>
 	[Delete("/api/V1/deleterelatedbusinessobject/parentbusobid/{parentbusobid}/parentbusobrecid/{parentbusobrecid}/relationshipid/{relationshipid}/busobrecid/{busobrecid}")]
-	Task<RelatedBusinessObjectResponse> DeleteRelatedBusinessObjectByRecIdAsync([AliasAs("parentbusobid")] string parentbusobid, [AliasAs("parentbusobrecid")] string parentbusobrecid, [AliasAs("relationshipid")] string relationshipid, [AliasAs("busobrecid")] string busobrecid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<RelatedBusinessObjectResponse> DeleteRelatedBusinessObjectByRecIdAsync(
+		[AliasAs("parentbusobid")] string parentbusobid,
+		[AliasAs("parentbusobrecid")] string parentbusobrecid,
+		[AliasAs("relationshipid")] string relationshipid,
+		[AliasAs("busobrecid")] string busobrecid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get lookup values for Fields
@@ -97,7 +125,11 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of BusinessObjectFieldValuesLookupResponse</returns>
 	[Post("/api/V1/fieldvalueslookup")]
-	Task<FieldValuesLookupResponse> BusinessObjectFieldValuesLookupAsync([Body] FieldValuesLookupRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<FieldValuesLookupResponse> BusinessObjectFieldValuesLookupAsync(
+		[Body] FieldValuesLookupRequest request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Retrieve all activities for a business object
@@ -115,7 +147,15 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;BusinessObjectBusObActivity&gt;</returns>
 	[Get("/api/V1/getactivities/busobid/{busobid}/busobrecid/{busobrecid}/pagesize/{pageSize}")]
-	Task<List<BusObActivity>> GetActivitiesAsync([AliasAs("busobid")] string busobid, [AliasAs("busobrecid")] string busobrecid, [AliasAs("pageSize")] int? pageSize, [AliasAs("pageNumber")] int? pageNumber, [AliasAs("activityType")] string activityType, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<List<BusObActivity>> GetActivitiesAsync(
+		[AliasAs("busobid")] string busobid,
+		[AliasAs("busobrecid")] string busobrecid,
+		[AliasAs("pageSize")] int? pageSize,
+		[AliasAs("pageNumber")] int? pageNumber,
+		[AliasAs("activityType")] string activityType,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get an imported Business Object attachment
@@ -131,7 +171,13 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of byte[]</returns>
 	[Get("/api/V1/getbusinessobjectattachment/attachmentid/{attachmentid}/busobid/{busobid}/busobrecid/{busobrecid}")]
-	Task<byte[]> GetBusinessObjectAttachmentByAttachmentIdAsync([AliasAs("attachmentid")] string attachmentid, [AliasAs("busobid")] string busobid, [AliasAs("busobrecid")] string busobrecid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<byte[]> GetBusinessObjectAttachmentByAttachmentIdAsync(
+		[AliasAs("attachmentid")] string attachmentid,
+		[AliasAs("busobid")] string busobid,
+		[AliasAs("busobrecid")] string busobrecid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get attachments by Business Object public ID
@@ -149,7 +195,15 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of AttachmentsResponse</returns>
 	[Get("/api/V1/getbusinessobjectattachments/busobid/{busobid}/publicid/{publicid}/type/{type}/attachmenttype/{attachmenttype}")]
-	Task<AttachmentsResponse> GetBusinessObjectAttachmentsByIdAndPublicIdAsync([AliasAs("busobid")] string busobid, [AliasAs("publicid")] string publicid, [AliasAs("type")] string type, [AliasAs("attachmenttype")] string attachmenttype, [AliasAs("includelinks")] bool? includelinks, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<AttachmentsResponse> GetBusinessObjectAttachmentsByIdAndPublicIdAsync(
+		[AliasAs("busobid")] string busobid,
+		[AliasAs("publicid")] string publicid,
+		[AliasAs("type")] string type,
+		[AliasAs("attachmenttype")] string attachmenttype,
+		[AliasAs("includelinks")] bool? includelinks,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get attachments by Business Object record ID
@@ -167,7 +221,15 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of AttachmentsResponse</returns>
 	[Get("/api/V1/getbusinessobjectattachments/busobid/{busobid}/busobrecid/{busobrecid}/type/{type}/attachmenttype/{attachmenttype}")]
-	Task<AttachmentsResponse> GetBusinessObjectAttachmentsByIdAndRecIdAsync([AliasAs("busobid")] string busobid, [AliasAs("busobrecid")] string busobrecid, [AliasAs("type")] string type, [AliasAs("attachmenttype")] string attachmenttype, [AliasAs("includelinks")] bool? includelinks, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<AttachmentsResponse> GetBusinessObjectAttachmentsByIdAndRecIdAsync(
+		[AliasAs("busobid")] string busobid,
+		[AliasAs("busobrecid")] string busobrecid,
+		[AliasAs("type")] string type,
+		[AliasAs("attachmenttype")] string attachmenttype,
+		[AliasAs("includelinks")] bool? includelinks,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get attachments by Business Object name and public ID
@@ -185,7 +247,15 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of AttachmentsResponse</returns>
 	[Get("/api/V1/getbusinessobjectattachments/busobname/{busobname}/publicid/{publicid}/type/{type}/attachmenttype/{attachmenttype}")]
-	Task<AttachmentsResponse> GetBusinessObjectAttachmentsByNameAndPublicIdAsync([AliasAs("busobname")] string busobname, [AliasAs("publicid")] string publicid, [AliasAs("type")] string type, [AliasAs("attachmenttype")] string attachmenttype, [AliasAs("includelinks")] bool? includelinks, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<AttachmentsResponse> GetBusinessObjectAttachmentsByNameAndPublicIdAsync(
+		[AliasAs("busobname")] string busobname,
+		[AliasAs("publicid")] string publicid,
+		[AliasAs("type")] string type,
+		[AliasAs("attachmenttype")] string attachmenttype,
+		[AliasAs("includelinks")] bool? includelinks,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get attachments by Business Object name and record ID
@@ -203,7 +273,15 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of AttachmentsResponse</returns>
 	[Get("/api/V1/getbusinessobjectattachments/busobname/{busobname}/busobrecid/{busobrecid}/type/{type}/attachmenttype/{attachmenttype}")]
-	Task<AttachmentsResponse> GetBusinessObjectAttachmentsByNameAndRecIdAsync([AliasAs("busobname")] string busobname, [AliasAs("busobrecid")] string busobrecid, [AliasAs("type")] string type, [AliasAs("attachmenttype")] string attachmenttype, [AliasAs("includelinks")] bool? includelinks, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<AttachmentsResponse> GetBusinessObjectAttachmentsByNameAndRecIdAsync(
+		[AliasAs("busobname")] string busobname,
+		[AliasAs("busobrecid")] string busobrecid,
+		[AliasAs("type")] string type,
+		[AliasAs("attachmenttype")] string attachmenttype,
+		[AliasAs("includelinks")] bool? includelinks,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get Business Object attachments by request object
@@ -217,7 +295,11 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of AttachmentsResponse</returns>
 	[Post("/api/V1/getbusinessobjectattachments")]
-	Task<AttachmentsResponse> GetBusinessObjectAttachmentsAsync([Body] AttachmentsRequest attachmentsRequest, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<AttachmentsResponse> GetBusinessObjectAttachmentsAsync(
+		[Body] AttachmentsRequest attachmentsRequest,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get a batch of Business Object records
@@ -231,7 +313,11 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of BatchReadResponse</returns>
 	[Post("/api/V1/getbusinessobjectbatch")]
-	Task<BatchReadResponse> GetBusinessObjectBatchAsync([Body] BatchReadRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<BatchReadResponse> GetBusinessObjectBatchAsync(
+		[Body] BatchReadRequest request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get a Business Object record
@@ -246,7 +332,12 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ReadResponse</returns>
 	[Get("/api/V1/getbusinessobject/busobid/{busobid}/publicid/{publicid}")]
-	Task<ReadResponse> GetBusinessObjectByPublicIdAsync([AliasAs("busobid")] string busobid, [AliasAs("publicid")] string publicid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ReadResponse> GetBusinessObjectByPublicIdAsync(
+		[AliasAs("busobid")] string busobid,
+		[AliasAs("publicid")] string publicid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get a Business Object record
@@ -261,7 +352,12 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ReadResponse</returns>
 	[Get("/api/V1/getbusinessobject/busobid/{busobid}/busobrecid/{busobrecid}")]
-	Task<ReadResponse> GetBusinessObjectByRecIdAsync([AliasAs("busobid")] string busobid, [AliasAs("busobrecid")] string busobrecid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ReadResponse> GetBusinessObjectByRecIdAsync(
+		[AliasAs("busobid")] string busobid,
+		[AliasAs("busobrecid")] string busobrecid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get a Business Object by its scan code and Business Object ID
@@ -276,7 +372,12 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of BarcodeLookupResponse</returns>
 	[Get("/api/V1/getbusinessobject/scancode/{scanCode}/busobid/{busobid}")]
-	Task<BarcodeLookupResponse> GetBusinessObjectByScanCodeBusObIdAsync([AliasAs("scanCode")] string scanCode, [AliasAs("busobid")] string busobid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<BarcodeLookupResponse> GetBusinessObjectByScanCodeBusObIdAsync(
+		[AliasAs("scanCode")] string scanCode,
+		[AliasAs("busobid")] string busobid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get a Business Object by its scan code and Business Object name
@@ -291,7 +392,12 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of BarcodeLookupResponse</returns>
 	[Get("/api/V1/getbusinessobject/scancode/{scanCode}/busobname/{busobname}")]
-	Task<BarcodeLookupResponse> GetBusinessObjectByScanCodeBusObNameAsync([AliasAs("scanCode")] string scanCode, [AliasAs("busobname")] string busobname, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<BarcodeLookupResponse> GetBusinessObjectByScanCodeBusObNameAsync(
+		[AliasAs("scanCode")] string scanCode,
+		[AliasAs("busobname")] string busobname,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get a Business Object schema
@@ -306,7 +412,12 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SchemaResponse</returns>
 	[Get("/api/V1/getbusinessobjectschema/busobid/{busobId}")]
-	Task<SchemaResponse> GetBusinessObjectSchemaAsync([AliasAs("busobId")] string busobId, [AliasAs("includerelationships")] bool? includerelationships, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<SchemaResponse> GetBusinessObjectSchemaAsync(
+		[AliasAs("busobId")] string busobId,
+		[AliasAs("includerelationships")] bool? includerelationships,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get Business Object summaries by type
@@ -320,7 +431,11 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;Summary&gt;</returns>
 	[Get("/api/V1/getbusinessobjectsummaries/type/{type}")]
-	Task<List<Summary>> GetBusinessObjectSummariesAsync([AliasAs("type")] string type, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<List<Summary>> GetBusinessObjectSummariesAsync(
+		[AliasAs("type")] string type,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get a Business Object summary by ID
@@ -334,7 +449,11 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;Summary&gt;</returns>
 	[Get("/api/V1/getbusinessobjectsummary/busobid/{busobid}")]
-	Task<List<Summary>> GetBusinessObjectSummaryByIdAsync([AliasAs("busobid")] string busobid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<List<Summary>> GetBusinessObjectSummaryByIdAsync(
+		[AliasAs("busobid")] string busobid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get a Business Object summary by name
@@ -348,7 +467,11 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;Summary&gt;</returns>
 	[Get("/api/V1/getbusinessobjectsummary/busobname/{busobname}")]
-	Task<List<Summary>> GetBusinessObjectSummaryByNameAsync([AliasAs("busobname")] string busobname, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<List<Summary>> GetBusinessObjectSummaryByNameAsync(
+		[AliasAs("busobname")] string busobname,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get Business Object templates for create
@@ -362,7 +485,11 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of TemplateResponse</returns>
 	[Post("/api/V1/getbusinessobjecttemplate")]
-	Task<TemplateResponse> GetBusinessObjectTemplateAsync([Body] TemplateRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<TemplateResponse> GetBusinessObjectTemplateAsync(
+		[Body] TemplateRequest request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get related Business Objects using a request object
@@ -377,7 +504,12 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SearchesRelatedBusinessObjectResponse</returns>
 	[Post("/api/V1/getrelatedbusinessobject")]
-	Task<RelatedBusinessObjectResponse> GetRelatedBusinessObjectByRequestAsync([Body] RelatedBusinessObjectRequest relatedBusinessObjectRequest, [AliasAs("includelinks")] bool? includelinks, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<RelatedBusinessObjectResponse> GetRelatedBusinessObjectByRequestAsync(
+		[Body] RelatedBusinessObjectRequest relatedBusinessObjectRequest,
+		[AliasAs("includelinks")] bool? includelinks,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get related Business Objects by ID
@@ -398,7 +530,18 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SearchesRelatedBusinessObjectResponse</returns>
 	[Get("/api/V1/getrelatedbusinessobject/parentbusobid/{parentbusobid}/parentbusobrecid/{parentbusobrecid}/relationshipid/{relationshipid}")]
-	Task<RelatedBusinessObjectResponse> GetRelatedBusinessObjectAsync([AliasAs("parentbusobid")] string parentbusobid, [AliasAs("parentbusobrecid")] string parentbusobrecid, [AliasAs("relationshipid")] string relationshipid, [AliasAs("pageNumber")] int? pageNumber, [AliasAs("pageSize")] int? pageSize, [AliasAs("allfields")] bool? allfields, [AliasAs("usedefaultgrid")] bool? usedefaultgrid, [AliasAs("includelinks")] bool? includelinks, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<RelatedBusinessObjectResponse> GetRelatedBusinessObjectAsync(
+		[AliasAs("parentbusobid")] string parentbusobid,
+		[AliasAs("parentbusobrecid")] string parentbusobrecid,
+		[AliasAs("relationshipid")] string relationshipid,
+		[AliasAs("pageNumber")] int? pageNumber,
+		[AliasAs("pageSize")] int? pageSize,
+		[AliasAs("allfields")] bool? allfields,
+		[AliasAs("usedefaultgrid")] bool? usedefaultgrid,
+		[AliasAs("includelinks")] bool? includelinks,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get related Business Objects custom grid
@@ -418,7 +561,17 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SearchesRelatedBusinessObjectResponse</returns>
 	[Get("/api/V1/getrelatedbusinessobject/parentbusobid/{parentbusobid}/parentbusobrecid/{parentbusobrecid}/relationshipid/{relationshipid}/gridid/{gridid}")]
-	Task<RelatedBusinessObjectResponse> GetRelatedBusinessObjectWithCustomGridAsync([AliasAs("parentbusobid")] string parentbusobid, [AliasAs("parentbusobrecid")] string parentbusobrecid, [AliasAs("relationshipid")] string relationshipid, [AliasAs("gridid")] string gridid, [AliasAs("pageNumber")] int? pageNumber, [AliasAs("pageSize")] int? pageSize, [AliasAs("includelinks")] bool? includelinks, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<RelatedBusinessObjectResponse> GetRelatedBusinessObjectWithCustomGridAsync(
+		[AliasAs("parentbusobid")] string parentbusobid,
+		[AliasAs("parentbusobrecid")] string parentbusobrecid,
+		[AliasAs("relationshipid")] string relationshipid,
+		[AliasAs("gridid")] string gridid,
+		[AliasAs("pageNumber")] int? pageNumber,
+		[AliasAs("pageSize")] int? pageSize,
+		[AliasAs("includelinks")] bool? includelinks,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Link related Business Objects
@@ -436,7 +589,15 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SearchesRelatedBusinessObjectResponse</returns>
 	[Get("/api/V1/linkrelatedbusinessobject/parentbusobid/{parentbusobid}/parentbusobrecid/{parentbusobrecid}/relationshipid/{relationshipid}/busobid/{busobid}/busobrecid/{busobrecid}")]
-	Task<RelatedBusinessObjectResponse> LinkRelatedBusinessObjectByRecIdAsync([AliasAs("parentbusobid")] string parentbusobid, [AliasAs("parentbusobrecid")] string parentbusobrecid, [AliasAs("relationshipid")] string relationshipid, [AliasAs("busobid")] string busobid, [AliasAs("busobrecid")] string busobrecid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<RelatedBusinessObjectResponse> LinkRelatedBusinessObjectByRecIdAsync(
+		[AliasAs("parentbusobid")] string parentbusobid,
+		[AliasAs("parentbusobrecid")] string parentbusobrecid,
+		[AliasAs("relationshipid")] string relationshipid,
+		[AliasAs("busobid")] string busobid,
+		[AliasAs("busobrecid")] string busobrecid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Link related Business Objects
@@ -454,7 +615,15 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ResponseBase</returns>
 	[Get("/api/V2/linkrelatedbusinessobject/parentbusobid/{parentbusobid}/parentbusobrecid/{parentbusobrecid}/relationshipid/{relationshipid}/busobid/{busobid}/busobrecid/{busobrecid}")]
-	Task<ResponseBase> LinkRelatedBusinessObjectByRecIdV2Async([AliasAs("parentbusobid")] string parentbusobid, [AliasAs("parentbusobrecid")] string parentbusobrecid, [AliasAs("relationshipid")] string relationshipid, [AliasAs("busobid")] string busobid, [AliasAs("busobrecid")] string busobrecid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ResponseBase> LinkRelatedBusinessObjectByRecIdV2Async(
+		[AliasAs("parentbusobid")] string parentbusobid,
+		[AliasAs("parentbusobrecid")] string parentbusobrecid,
+		[AliasAs("relationshipid")] string relationshipid,
+		[AliasAs("busobid")] string busobid,
+		[AliasAs("busobrecid")] string busobrecid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Remove an attachment by Business Object ID and public ID
@@ -470,7 +639,13 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of void</returns>
 	[Delete("/api/V1/removebusinessobjectattachment/attachmentid/{attachmentid}/busobid/{busobid}/publicid/{publicid}")]
-	Task RemoveBusinessObjectAttachmentByIdAndPublicIdAsync([AliasAs("attachmentid")] string attachmentid, [AliasAs("busobid")] string busobid, [AliasAs("publicid")] string publicid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task RemoveBusinessObjectAttachmentByIdAndPublicIdAsync(
+		[AliasAs("attachmentid")] string attachmentid,
+		[AliasAs("busobid")] string busobid,
+		[AliasAs("publicid")] string publicid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Remove an attachment by Business Object ID and record ID
@@ -486,7 +661,13 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of void</returns>
 	[Delete("/api/V1/removebusinessobjectattachment/attachmentid/{attachmentid}/busobid/{busobid}/busobrecid/{busobrecid}")]
-	Task RemoveBusinessObjectAttachmentByIdAndRecIdAsync([AliasAs("attachmentid")] string attachmentid, [AliasAs("busobid")] string busobid, [AliasAs("busobrecid")] string busobrecid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task RemoveBusinessObjectAttachmentByIdAndRecIdAsync(
+		[AliasAs("attachmentid")] string attachmentid,
+		[AliasAs("busobid")] string busobid,
+		[AliasAs("busobrecid")] string busobrecid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Remove an attachment by Business Object name and public ID
@@ -502,7 +683,13 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of void</returns>
 	[Delete("/api/V1/removebusinessobjectattachment/attachmentid/{attachmentid}/busobname/{busobname}/publicid/{publicid}")]
-	Task RemoveBusinessObjectAttachmentByNameAndPublicIdAsync([AliasAs("attachmentid")] string attachmentid, [AliasAs("busobname")] string busobname, [AliasAs("publicid")] string publicid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task RemoveBusinessObjectAttachmentByNameAndPublicIdAsync(
+		[AliasAs("attachmentid")] string attachmentid,
+		[AliasAs("busobname")] string busobname,
+		[AliasAs("publicid")] string publicid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Remove an attachment by Business Object name and record ID
@@ -518,7 +705,13 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of void</returns>
 	[Delete("/api/V1/removebusinessobjectattachment/attachmentid/{attachmentid}/busobname/{busobname}/busobrecid/{busobrecid}")]
-	Task RemoveBusinessObjectAttachmentByNameAndRecIdAsync([AliasAs("attachmentid")] string attachmentid, [AliasAs("busobname")] string busobname, [AliasAs("busobrecid")] string busobrecid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task RemoveBusinessObjectAttachmentByNameAndRecIdAsync(
+		[AliasAs("attachmentid")] string attachmentid,
+		[AliasAs("busobname")] string busobname,
+		[AliasAs("busobrecid")] string busobrecid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Attach a Business Object to a Business Object
@@ -532,7 +725,11 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of AttachmentsResponse</returns>
 	[Put("/api/V1/savebusinessobjectattachmentbusob")]
-	Task<AttachmentsResponse> SaveBusinessObjectAttachmentBusObAsync([Body] SaveBusObAttachmentRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<AttachmentsResponse> SaveBusinessObjectAttachmentBusObAsync(
+		[Body] SaveBusObAttachmentRequest request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Attach a file via UNC
@@ -546,7 +743,11 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of AttachmentsResponse</returns>
 	[Put("/api/V1/savebusinessobjectattachmentlink")]
-	Task<AttachmentsResponse> SaveBusinessObjectAttachmentLinkAsync([Body] SaveLinkAttachmentRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<AttachmentsResponse> SaveBusinessObjectAttachmentLinkAsync(
+		[Body] SaveLinkAttachmentRequest request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Attach a URL path
@@ -560,7 +761,11 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of AttachmentsResponse</returns>
 	[Put("/api/V1/savebusinessobjectattachmenturl")]
-	Task<AttachmentsResponse> SaveBusinessObjectAttachmentUrlAsync([Body] SaveUrlAttachmentRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<AttachmentsResponse> SaveBusinessObjectAttachmentUrlAsync(
+		[Body] SaveUrlAttachmentRequest request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Create or update a batch of Business Objects
@@ -574,7 +779,11 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of BatchSaveResponse</returns>
 	[Post("/api/V1/savebusinessobjectbatch")]
-	Task<BatchSaveResponse> SaveBusinessObjectBatchAsync([Body] BatchSaveRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<BatchSaveResponse> SaveBusinessObjectBatchAsync(
+		[Body] BatchSaveRequest request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Create or Update a Business Object
@@ -588,7 +797,11 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SaveResponse</returns>
 	[Post("/api/V1/savebusinessobject")]
-	Task<SaveResponse> SaveBusinessObjectAsync([Body] SaveRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<SaveResponse> SaveBusinessObjectAsync(
+		[Body] SaveRequest request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Create or update a related Business Object
@@ -602,7 +815,11 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of RelatedSaveResponse</returns>
 	[Post("/api/V1/saverelatedbusinessobject")]
-	Task<RelatedSaveResponse> SaveRelatedBusinessObjectAsync([Body] RelatedSaveRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<RelatedSaveResponse> SaveRelatedBusinessObjectAsync(
+		[Body] RelatedSaveRequest request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// UnLink related Business Objects
@@ -620,7 +837,15 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SearchesRelatedBusinessObjectResponse</returns>
 	[Delete("/api/V1/unlinkrelatedbusinessobject/parentbusobid/{parentbusobid}/parentbusobrecid/{parentbusobrecid}/relationshipid/{relationshipid}/busobid/{busobid}/busobrecid/{busobrecid}")]
-	Task<RelatedBusinessObjectResponse> UnLinkRelatedBusinessObjectByRecIdAsync([AliasAs("parentbusobid")] string parentbusobid, [AliasAs("parentbusobrecid")] string parentbusobrecid, [AliasAs("relationshipid")] string relationshipid, [AliasAs("busobid")] string busobid, [AliasAs("busobrecid")] string busobrecid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<RelatedBusinessObjectResponse> UnLinkRelatedBusinessObjectByRecIdAsync(
+		[AliasAs("parentbusobid")] string parentbusobid,
+		[AliasAs("parentbusobrecid")] string parentbusobrecid,
+		[AliasAs("relationshipid")] string relationshipid,
+		[AliasAs("busobid")] string busobid,
+		[AliasAs("busobrecid")] string busobrecid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Upload an attachment by Business Object ID and public ID
@@ -641,7 +866,18 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of string</returns>
 	[Post("/api/V1/uploadbusinessobjectattachment/filename/{filename}/busobid/{busobid}/publicid/{publicid}/offset/{offset}/totalsize/{totalsize}")]
-	Task<string> UploadBusinessObjectAttachmentByIdAndPublicIdAsync([Body] byte[] body, [AliasAs("filename")] string filename, [AliasAs("busobid")] string busobid, [AliasAs("publicid")] string publicid, [AliasAs("offset")] int? offset, [AliasAs("totalsize")] int? totalsize, [AliasAs("attachmentid")] string attachmentid, [AliasAs("displaytext")] string displaytext, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<string> UploadBusinessObjectAttachmentByIdAndPublicIdAsync(
+		[Body] byte[] body,
+		[AliasAs("filename")] string filename,
+		[AliasAs("busobid")] string busobid,
+		[AliasAs("publicid")] string publicid,
+		[AliasAs("offset")] int? offset,
+		[AliasAs("totalsize")] int? totalsize,
+		[AliasAs("attachmentid")] string attachmentid,
+		[AliasAs("displaytext")] string displaytext,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Upload an attachment by Business Object ID and record ID
@@ -662,7 +898,18 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of string</returns>
 	[Post("/api/V1/uploadbusinessobjectattachment/filename/{filename}/busobid/{busobid}/busobrecid/{busobrecid}/offset/{offset}/totalsize/{totalsize}")]
-	Task<string> UploadBusinessObjectAttachmentByIdAndRecIdAsync([Body] byte[] body, [AliasAs("filename")] string filename, [AliasAs("busobid")] string busobid, [AliasAs("busobrecid")] string busobrecid, [AliasAs("offset")] int? offset, [AliasAs("totalsize")] int? totalsize, [AliasAs("attachmentid")] string attachmentid, [AliasAs("displaytext")] string displaytext, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<string> UploadBusinessObjectAttachmentByIdAndRecIdAsync(
+		[Body] byte[] body,
+		[AliasAs("filename")] string filename,
+		[AliasAs("busobid")] string busobid,
+		[AliasAs("busobrecid")] string busobrecid,
+		[AliasAs("offset")] int? offset,
+		[AliasAs("totalsize")] int? totalsize,
+		[AliasAs("attachmentid")] string attachmentid,
+		[AliasAs("displaytext")] string displaytext,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Upload an attachment by Business Object name and public ID
@@ -683,7 +930,18 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of string</returns>
 	[Post("/api/V1/uploadbusinessobjectattachment/filename/{filename}/busobname/{busobname}/publicid/{publicid}/offset/{offset}/totalsize/{totalsize}")]
-	Task<string> UploadBusinessObjectAttachmentByNameAndPublicIdAsync([Body] byte[] body, [AliasAs("filename")] string filename, [AliasAs("busobname")] string busobname, [AliasAs("publicid")] string publicid, [AliasAs("offset")] int? offset, [AliasAs("totalsize")] int? totalsize, [AliasAs("attachmentid")] string attachmentid, [AliasAs("displaytext")] string displaytext, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<string> UploadBusinessObjectAttachmentByNameAndPublicIdAsync(
+		[Body] byte[] body,
+		[AliasAs("filename")] string filename,
+		[AliasAs("busobname")] string busobname,
+		[AliasAs("publicid")] string publicid,
+		[AliasAs("offset")] int? offset,
+		[AliasAs("totalsize")] int? totalsize,
+		[AliasAs("attachmentid")] string attachmentid,
+		[AliasAs("displaytext")] string displaytext,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Upload an attachment by Business Object name and record ID
@@ -704,5 +962,16 @@ public interface IBusinessObject
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of string</returns>
 	[Post("/api/V1/uploadbusinessobjectattachment/filename/{filename}/busobname/{busobname}/busobrecid/{busobrecid}/offset/{offset}/totalsize/{totalsize}")]
-	Task<string> UploadBusinessObjectAttachmentByNameAndRecIdAsync([Body] byte[] body, [AliasAs("filename")] string filename, [AliasAs("busobname")] string busobname, [AliasAs("busobrecid")] string busobrecid, [AliasAs("offset")] int? offset, [AliasAs("totalsize")] int? totalsize, [AliasAs("attachmentid")] string attachmentid, [AliasAs("displaytext")] string displaytext, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<string> UploadBusinessObjectAttachmentByNameAndRecIdAsync(
+		[Body] byte[] body,
+		[AliasAs("filename")] string filename,
+		[AliasAs("busobname")] string busobname,
+		[AliasAs("busobrecid")] string busobrecid,
+		[AliasAs("offset")] int? offset,
+		[AliasAs("totalsize")] int? totalsize,
+		[AliasAs("attachmentid")] string attachmentid,
+		[AliasAs("displaytext")] string displaytext,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 }

@@ -19,7 +19,11 @@ public interface ISearches
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of QuickSearchConfigurationResponse</returns>
 	[Post("/api/V1/getquicksearchconfigurationforbusobs")]
-	Task<QuickSearchConfigurationResponse> GetQuickSearchConfigurationForBusObsAsync([Body] QuickSearchConfigurationRequest dataRequest, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<QuickSearchConfigurationResponse> GetQuickSearchConfigurationForBusObsAsync(
+		[Body] QuickSearchConfigurationRequest dataRequest,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get a Quick Search by Business Objects with view rights
@@ -32,7 +36,10 @@ public interface ISearches
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of QuickSearchConfigurationResponse</returns>
 	[Get("/api/V1/getquicksearchconfigurationforbusobswithviewrights")]
-	Task<QuickSearchConfigurationResponse> GetQuickSearchConfigurationForBusObsWithViewRightsAsync([AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<QuickSearchConfigurationResponse> GetQuickSearchConfigurationForBusObsWithViewRightsAsync(
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Execute a Quick Search from a list of Business Object IDs and search text
@@ -47,7 +54,12 @@ public interface ISearches
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SimpleResultsList</returns>
 	[Post("/api/V1/getquicksearchresults")]
-	Task<SimpleResultsList> GetQuickSearchResultsAsync([Body] QuickSearchRequest dataRequest, [AliasAs("includeLinks")] bool? includeLinks, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<SimpleResultsList> GetQuickSearchResultsAsync(
+		[Body] QuickSearchRequest dataRequest,
+		[AliasAs("includeLinks")] bool? includeLinks,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Execute a Quick Search on a specific Business Object
@@ -64,7 +76,14 @@ public interface ISearches
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SearchResultsTableResponse</returns>
 	[Post("/api/V1/getquicksearchspecificresults")]
-	Task<SearchResultsTableResponse> GetQuickSearchSpecificResultsAsync([Body] QuickSearchSpecificRequest dataRequest, [AliasAs("includeSchema")] bool? includeSchema, [AliasAs("includeLocationFields")] bool? includeLocationFields, [AliasAs("includeLinks")] bool? includeLinks, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<SearchResultsTableResponse> GetQuickSearchSpecificResultsAsync(
+		[Body] QuickSearchSpecificRequest dataRequest,
+		[AliasAs("includeSchema")] bool? includeSchema,
+		[AliasAs("includeLocationFields")] bool? includeLocationFields,
+		[AliasAs("includeLinks")] bool? includeLinks,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Execute a Quick Search on a specific Business Object
@@ -81,7 +100,14 @@ public interface ISearches
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of QuickSearchResponse</returns>
 	[Post("/api/V2/getquicksearchspecificresults")]
-	Task<QuickSearchResponse> GetQuickSearchSpecificResultsV2Async([Body] QuickSearchSpecificRequest dataRequest, [AliasAs("includeSchema")] bool? includeSchema, [AliasAs("includeLocationFields")] bool? includeLocationFields, [AliasAs("includeLinks")] bool? includeLinks, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<QuickSearchResponse> GetQuickSearchSpecificResultsV2Async(
+		[Body] QuickSearchSpecificRequest dataRequest,
+		[AliasAs("includeSchema")] bool? includeSchema,
+		[AliasAs("includeLocationFields")] bool? includeLocationFields,
+		[AliasAs("includeLinks")] bool? includeLinks,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get all saved searches by Folder ID
@@ -99,7 +125,15 @@ public interface ISearches
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SearchItemResponse</returns>
 	[Get("/api/V1/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
-	Task<SearchItemResponse> GetSearchItemsByAssociationScopeScopeOwnerFolderAsync([AliasAs("association")] string association, [AliasAs("scope")] string scope, [AliasAs("scopeowner")] string scopeowner, [AliasAs("folder")] string folder, [AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<SearchItemResponse> GetSearchItemsByAssociationScopeScopeOwnerFolderAsync(
+		[AliasAs("association")] string association,
+		[AliasAs("scope")] string scope,
+		[AliasAs("scopeowner")] string scopeowner,
+		[AliasAs("folder")] string folder,
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get all saved searches by Folder ID
@@ -117,7 +151,15 @@ public interface ISearches
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CoreManagerData</returns>
 	[Get("/api/V2/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
-	Task<ManagerData> GetSearchItemsByAssociationScopeScopeOwnerFolderV2Async([AliasAs("association")] string association, [AliasAs("scope")] string scope, [AliasAs("scopeowner")] string scopeowner, [AliasAs("folder")] string folder, [AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ManagerData> GetSearchItemsByAssociationScopeScopeOwnerFolderV2Async(
+		[AliasAs("association")] string association,
+		[AliasAs("scope")] string scope,
+		[AliasAs("scopeowner")] string scopeowner,
+		[AliasAs("folder")] string folder,
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get all saved searches by scope owner (sub scope)
@@ -134,7 +176,14 @@ public interface ISearches
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SearchItemResponse</returns>
 	[Get("/api/V1/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}")]
-	Task<SearchItemResponse> GetSearchItemsByAssociationScopeScopeOwnerAsync([AliasAs("association")] string association, [AliasAs("scope")] string scope, [AliasAs("scopeowner")] string scopeowner, [AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<SearchItemResponse> GetSearchItemsByAssociationScopeScopeOwnerAsync(
+		[AliasAs("association")] string association,
+		[AliasAs("scope")] string scope,
+		[AliasAs("scopeowner")] string scopeowner,
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get all saved searches by scope owner (sub scope)
@@ -151,7 +200,14 @@ public interface ISearches
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CoreManagerData</returns>
 	[Get("/api/V2/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}")]
-	Task<ManagerData> GetSearchItemsByAssociationScopeScopeOwnerV2Async([AliasAs("association")] string association, [AliasAs("scope")] string scope, [AliasAs("scopeowner")] string scopeowner, [AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ManagerData> GetSearchItemsByAssociationScopeScopeOwnerV2Async(
+		[AliasAs("association")] string association,
+		[AliasAs("scope")] string scope,
+		[AliasAs("scopeowner")] string scopeowner,
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get all saved searches by scope
@@ -167,7 +223,13 @@ public interface ISearches
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SearchItemResponse</returns>
 	[Get("/api/V1/getsearchitems/association/{association}/scope/{scope}")]
-	Task<SearchItemResponse> GetSearchItemsByAssociationScopeAsync([AliasAs("association")] string association, [AliasAs("scope")] string scope, [AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<SearchItemResponse> GetSearchItemsByAssociationScopeAsync(
+		[AliasAs("association")] string association,
+		[AliasAs("scope")] string scope,
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get all saved searches by scope
@@ -183,7 +245,13 @@ public interface ISearches
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CoreManagerData</returns>
 	[Get("/api/V2/getsearchitems/association/{association}/scope/{scope}")]
-	Task<ManagerData> GetSearchItemsByAssociationScopeV2Async([AliasAs("association")] string association, [AliasAs("scope")] string scope, [AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ManagerData> GetSearchItemsByAssociationScopeV2Async(
+		[AliasAs("association")] string association,
+		[AliasAs("scope")] string scope,
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get all saved searches by Business Object association
@@ -198,7 +266,12 @@ public interface ISearches
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SearchItemResponse</returns>
 	[Get("/api/V1/getsearchitems/association/{association}")]
-	Task<SearchItemResponse> GetSearchItemsByAssociationAsync([AliasAs("association")] string association, [AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<SearchItemResponse> GetSearchItemsByAssociationAsync(
+		[AliasAs("association")] string association,
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get all saved searches by Business Object association
@@ -213,7 +286,12 @@ public interface ISearches
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CoreManagerData</returns>
 	[Get("/api/V2/getsearchitems/association/{association}")]
-	Task<ManagerData> GetSearchItemsByAssociationV2Async([AliasAs("association")] string association, [AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ManagerData> GetSearchItemsByAssociationV2Async(
+		[AliasAs("association")] string association,
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get all saved searches by default Business Object association
@@ -227,7 +305,11 @@ public interface ISearches
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SearchItemResponse</returns>
 	[Get("/api/V1/getsearchitems")]
-	Task<SearchItemResponse> GetSearchItemsAsync([AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<SearchItemResponse> GetSearchItemsAsync(
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get all saved searches by default Business Object association
@@ -241,7 +323,11 @@ public interface ISearches
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CoreManagerData</returns>
 	[Get("/api/V2/getsearchitems")]
-	Task<ManagerData> GetSearchItemsV2Async([AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ManagerData> GetSearchItemsV2Async(
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Run an ad-hoc search
@@ -255,7 +341,11 @@ public interface ISearches
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SearchResultsResponse</returns>
 	[Post("/api/V1/getsearchresults")]
-	Task<SearchResultsResponse> GetSearchResultsAdHocAsync([Body] SearchResultsRequest dataRequest, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<SearchResultsResponse> GetSearchResultsAdHocAsync(
+		[Body] SearchResultsRequest dataRequest,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get results of a saved search
@@ -269,7 +359,11 @@ public interface ISearches
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of StoredSearchResults</returns>
 	[Post("/api/V2/storedsearches")]
-	Task<StoredSearchResults> GetSearchResultsAsStringByIdV2Async([Body] StoredSearchRequest searchRequest, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<StoredSearchResults> GetSearchResultsAsStringByIdV2Async(
+		[Body] StoredSearchRequest searchRequest,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get results of a saved search
@@ -286,7 +380,14 @@ public interface ISearches
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;Dictionary&lt;string, string&gt;&gt;</returns>
 	[Get("/api/V1/storedsearches/{scope}/{associationName}/{searchName}")]
-	Task<List<Dictionary<string, string>>> GetSearchResultsAsStringByNameAsync([AliasAs("scope")] string scope, [AliasAs("associationName")] string associationName, [AliasAs("searchName")] string searchName, [AliasAs("scopeOwner")] string scopeOwner, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<List<Dictionary<string, string>>> GetSearchResultsAsStringByNameAsync(
+		[AliasAs("scope")] string scope,
+		[AliasAs("associationName")] string associationName,
+		[AliasAs("searchName")] string searchName,
+		[AliasAs("scopeOwner")] string scopeOwner,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get results of a saved search
@@ -303,7 +404,14 @@ public interface ISearches
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of List&lt;Dictionary&lt;string, string&gt;&gt;</returns>
 	[Get("/api/V2/storedsearches/{scope}/{associationName}/{searchName}")]
-	Task<List<Dictionary<string, string>>> GetSearchResultsAsStringByNameV2Async([AliasAs("scope")] string scope, [AliasAs("associationName")] string associationName, [AliasAs("searchName")] string searchName, [AliasAs("scopeOwner")] string scopeOwner, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<List<Dictionary<string, string>>> GetSearchResultsAsStringByNameV2Async(
+		[AliasAs("scope")] string scope,
+		[AliasAs("associationName")] string associationName,
+		[AliasAs("searchName")] string searchName,
+		[AliasAs("scopeOwner")] string scopeOwner,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Run a saved search by internal ID
@@ -325,7 +433,19 @@ public interface ISearches
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SearchResultsResponse</returns>
 	[Get("/api/V1/getsearchresults/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchid/{searchid}")]
-	Task<SearchResultsResponse> GetSearchResultsByIdAsync([AliasAs("association")] string association, [AliasAs("scope")] string scope, [AliasAs("scopeowner")] string scopeowner, [AliasAs("searchid")] string searchid, [AliasAs("searchTerm")] string searchTerm, [AliasAs("pagenumber")] int? pagenumber, [AliasAs("pagesize")] int? pagesize, [AliasAs("includeschema")] bool? includeschema, [AliasAs("resultsAsSimpleResultsList")] bool? resultsAsSimpleResultsList, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<SearchResultsResponse> GetSearchResultsByIdAsync(
+		[AliasAs("association")] string association,
+		[AliasAs("scope")] string scope,
+		[AliasAs("scopeowner")] string scopeowner,
+		[AliasAs("searchid")] string searchid,
+		[AliasAs("searchTerm")] string searchTerm,
+		[AliasAs("pagenumber")] int? pagenumber,
+		[AliasAs("pagesize")] int? pagesize,
+		[AliasAs("includeschema")] bool? includeschema,
+		[AliasAs("resultsAsSimpleResultsList")] bool? resultsAsSimpleResultsList,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Run a saved search by name
@@ -347,7 +467,19 @@ public interface ISearches
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of SearchResultsResponse</returns>
 	[Get("/api/V1/getsearchresults/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchname/{searchname}")]
-	Task<SearchResultsResponse> GetSearchResultsByNameAsync([AliasAs("association")] string association, [AliasAs("scope")] string scope, [AliasAs("scopeowner")] string scopeowner, [AliasAs("searchname")] string searchname, [AliasAs("searchTerm")] string searchTerm, [AliasAs("pagenumber")] int? pagenumber, [AliasAs("pagesize")] int? pagesize, [AliasAs("includeschema")] bool? includeschema, [AliasAs("resultsAsSimpleResultsList")] bool? resultsAsSimpleResultsList, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<SearchResultsResponse> GetSearchResultsByNameAsync(
+		[AliasAs("association")] string association,
+		[AliasAs("scope")] string scope,
+		[AliasAs("scopeowner")] string scopeowner,
+		[AliasAs("searchname")] string searchname,
+		[AliasAs("searchTerm")] string searchTerm,
+		[AliasAs("pagenumber")] int? pagenumber,
+		[AliasAs("pagesize")] int? pagesize,
+		[AliasAs("includeschema")] bool? includeschema,
+		[AliasAs("resultsAsSimpleResultsList")] bool? resultsAsSimpleResultsList,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Export an ad-hoc search
@@ -361,7 +493,11 @@ public interface ISearches
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of string</returns>
 	[Post("/api/V1/getsearchresultsexport")]
-	Task<string> GetSearchResultsExportAdHocAsync([Body] ExportSearchResultsRequest dataRequest, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<string> GetSearchResultsExportAdHocAsync(
+		[Body] ExportSearchResultsRequest dataRequest,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Export a saved search by ID
@@ -382,7 +518,18 @@ public interface ISearches
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of string</returns>
 	[Get("/api/V1/getsearchresultsexport/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchid/{searchid}/exportformat/{exportformat}")]
-	Task<string> GetSearchResultsExportByIdAsync([AliasAs("association")] string association, [AliasAs("scope")] string scope, [AliasAs("scopeowner")] string scopeowner, [AliasAs("searchid")] string searchid, [AliasAs("exportformat")] string exportformat, [AliasAs("searchTerm")] string searchTerm, [AliasAs("pagenumber")] int? pagenumber, [AliasAs("pagesize")] int? pagesize, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<string> GetSearchResultsExportByIdAsync(
+		[AliasAs("association")] string association,
+		[AliasAs("scope")] string scope,
+		[AliasAs("scopeowner")] string scopeowner,
+		[AliasAs("searchid")] string searchid,
+		[AliasAs("exportformat")] string exportformat,
+		[AliasAs("searchTerm")] string searchTerm,
+		[AliasAs("pagenumber")] int? pagenumber,
+		[AliasAs("pagesize")] int? pagesize,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Export a saved search by name
@@ -403,5 +550,16 @@ public interface ISearches
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of string</returns>
 	[Get("/api/V1/getsearchresultsexport/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchname/{searchname}/exportformat/{exportformat}")]
-	Task<string> GetSearchResultsExportByNameAsync([AliasAs("association")] string association, [AliasAs("scope")] string scope, [AliasAs("scopeowner")] string scopeowner, [AliasAs("searchname")] string searchname, [AliasAs("exportformat")] string exportformat, [AliasAs("searchTerm")] string searchTerm, [AliasAs("pagenumber")] int? pagenumber, [AliasAs("pagesize")] int? pagesize, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<string> GetSearchResultsExportByNameAsync(
+		[AliasAs("association")] string association,
+		[AliasAs("scope")] string scope,
+		[AliasAs("scopeowner")] string scopeowner,
+		[AliasAs("searchname")] string searchname,
+		[AliasAs("exportformat")] string exportformat,
+		[AliasAs("searchTerm")] string searchTerm,
+		[AliasAs("pagenumber")] int? pagenumber,
+		[AliasAs("pagesize")] int? pagesize,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 }

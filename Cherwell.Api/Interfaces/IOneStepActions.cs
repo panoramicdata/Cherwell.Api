@@ -23,7 +23,15 @@ public interface IOneStepActions
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CoreManagerData</returns>
 	[Get("/api/V1/getonestepactions/association/{association}/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
-	Task<ManagerData> GetOneStepActionsByAssociationScopeScopeOwnerFolderAsync([AliasAs("association")] string association, [AliasAs("scope")] string scope, [AliasAs("scopeowner")] string scopeowner, [AliasAs("folder")] string folder, [AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ManagerData> GetOneStepActionsByAssociationScopeScopeOwnerFolderAsync(
+		[AliasAs("association")] string association,
+		[AliasAs("scope")] string scope,
+		[AliasAs("scopeowner")] string scopeowner,
+		[AliasAs("folder")] string folder,
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get One-Step Actions by Scope Owner
@@ -40,7 +48,14 @@ public interface IOneStepActions
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CoreManagerData</returns>
 	[Get("/api/V1/getonestepactions/association/{association}/scope/{scope}/scopeowner/{scopeowner}")]
-	Task<ManagerData> GetOneStepActionsByAssociationScopeScopeOwnerAsync([AliasAs("association")] string association, [AliasAs("scope")] string scope, [AliasAs("scopeowner")] string scopeowner, [AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ManagerData> GetOneStepActionsByAssociationScopeScopeOwnerAsync(
+		[AliasAs("association")] string association,
+		[AliasAs("scope")] string scope,
+		[AliasAs("scopeowner")] string scopeowner,
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get One-Step Actions by Scope
@@ -56,7 +71,13 @@ public interface IOneStepActions
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CoreManagerData</returns>
 	[Get("/api/V1/getonestepactions/association/{association}/scope/{scope}")]
-	Task<ManagerData> GetOneStepActionsByAssociationScopeAsync([AliasAs("association")] string association, [AliasAs("scope")] string scope, [AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ManagerData> GetOneStepActionsByAssociationScopeAsync(
+		[AliasAs("association")] string association,
+		[AliasAs("scope")] string scope,
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get One-Step Actions by Association
@@ -71,7 +92,12 @@ public interface IOneStepActions
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CoreManagerData</returns>
 	[Get("/api/V1/getonestepactions/association/{association}")]
-	Task<ManagerData> GetOneStepActionsByAssociationAsync([AliasAs("association")] string association, [AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ManagerData> GetOneStepActionsByAssociationAsync(
+		[AliasAs("association")] string association,
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get One-Step Actions by default Association
@@ -85,7 +111,11 @@ public interface IOneStepActions
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of CoreManagerData</returns>
 	[Get("/api/V1/getonestepactions")]
-	Task<ManagerData> GetOneStepActionsAsync([AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ManagerData> GetOneStepActionsAsync(
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Run a One-Step Action for a Business Object record
@@ -101,7 +131,13 @@ public interface IOneStepActions
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of OneStepActionResponse</returns>
 	[Get("/api/V1/runonestepaction/standinkey/{standinkey}/busobid/{busobid}/busobrecid/{busobrecid}")]
-	Task<OneStepActionResponse> RunOneStepActionByKeyForRecordByRecIdAsync([AliasAs("standinkey")] string standinkey, [AliasAs("busobid")] string busobid, [AliasAs("busobrecid")] string busobrecid, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<OneStepActionResponse> RunOneStepActionByKeyForRecordByRecIdAsync(
+		[AliasAs("standinkey")] string standinkey,
+		[AliasAs("busobid")] string busobid,
+		[AliasAs("busobrecid")] string busobrecid,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Run a stand alone One-Step Action
@@ -115,7 +151,11 @@ public interface IOneStepActions
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of OneStepActionResponse</returns>
 	[Get("/api/V1/runonestepaction/standinkey/{standinkey}")]
-	Task<OneStepActionResponse> RunOneStepActionByStandInKeyAsync([AliasAs("standinkey")] string standinkey, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<OneStepActionResponse> RunOneStepActionByStandInKeyAsync(
+		[AliasAs("standinkey")] string standinkey,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Run a One-Step Action using a OneStepActionRequest
@@ -129,5 +169,9 @@ public interface IOneStepActions
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of OneStepActionResponse</returns>
 	[Post("/api/V1/runonestepaction")]
-	Task<OneStepActionResponse> RunOneStepActionAsync([Body] OneStepActionRequest request, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<OneStepActionResponse> RunOneStepActionAsync(
+		[Body] OneStepActionRequest request,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 }

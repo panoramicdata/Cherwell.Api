@@ -19,7 +19,11 @@ public interface ICore
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of void</returns>
 	[Delete("/api/V1/deletegalleryimage/standinkey/{standinkey}")]
-	Task DeleteGalleryImageByStandInKeyAsync([AliasAs("standinkey")] string standinkey, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task DeleteGalleryImageByStandInKeyAsync(
+		[AliasAs("standinkey")] string standinkey,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get built-in images
@@ -35,7 +39,13 @@ public interface ICore
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of string</returns>
 	[Get("/api/V1/getgalleryimage/name/{name}")]
-	Task<string> GetGalleryImageAsync([AliasAs("name")] string name, [AliasAs("width")] int? width, [AliasAs("height")] int? height, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<string> GetGalleryImageAsync(
+		[AliasAs("name")] string name,
+		[AliasAs("width")] int? width,
+		[AliasAs("height")] int? height,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get gallery images by scope, scopeowner, and folder
@@ -52,7 +62,14 @@ public interface ICore
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ManagerData</returns>
 	[Get("/api/V1/getgalleryimages/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
-	Task<ManagerData> GetGalleryImagesFolderAsync([AliasAs("scope")] string scope, [AliasAs("scopeowner")] string scopeowner, [AliasAs("folder")] string folder, [AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ManagerData> GetGalleryImagesFolderAsync(
+		[AliasAs("scope")] string scope,
+		[AliasAs("scopeowner")] string scopeowner,
+		[AliasAs("folder")] string folder,
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get gallery images by scope and scopeowner
@@ -68,7 +85,13 @@ public interface ICore
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ManagerData</returns>
 	[Get("/api/V1/getgalleryimages/scope/{scope}/scopeowner/{scopeowner}")]
-	Task<ManagerData> GetGalleryImagesScopeOwnerAsync([AliasAs("scope")] string scope, [AliasAs("scopeowner")] string scopeowner, [AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ManagerData> GetGalleryImagesScopeOwnerAsync(
+		[AliasAs("scope")] string scope,
+		[AliasAs("scopeowner")] string scopeowner,
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get gallery images by scope
@@ -83,7 +106,12 @@ public interface ICore
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ManagerData</returns>
 	[Get("/api/V1/getgalleryimages/scope/{scope}")]
-	Task<ManagerData> GetGalleryImagesScopeAsync([AliasAs("scope")] string scope, [AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ManagerData> GetGalleryImagesScopeAsync(
+		[AliasAs("scope")] string scope,
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get all gallery images
@@ -97,7 +125,11 @@ public interface ICore
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ManagerData</returns>
 	[Get("/api/V1/getgalleryimages")]
-	Task<ManagerData> GetGalleryImagesAsync([AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ManagerData> GetGalleryImagesAsync(
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get a  stored value
@@ -111,7 +143,11 @@ public interface ICore
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of StoredValueResponse</returns>
 	[Get("/api/V1/getstoredvalue/standinkey/{standInKey}")]
-	Task<StoredValueResponse> GetStoredValueAsync([AliasAs("standInKey")] string standInKey, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<StoredValueResponse> GetStoredValueAsync(
+		[AliasAs("standInKey")] string standInKey,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get stored values by folder
@@ -128,7 +164,14 @@ public interface ICore
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ManagerData</returns>
 	[Get("/api/V1/storedvalues/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}")]
-	Task<ManagerData> GetStoredValuesFolderAsync([AliasAs("scope")] string scope, [AliasAs("scopeowner")] string scopeowner, [AliasAs("folder")] string folder, [AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ManagerData> GetStoredValuesFolderAsync(
+		[AliasAs("scope")] string scope,
+		[AliasAs("scopeowner")] string scopeowner,
+		[AliasAs("folder")] string folder,
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get stored values by scope owner
@@ -144,7 +187,13 @@ public interface ICore
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ManagerData</returns>
 	[Get("/api/V1/storedvalues/scope/{scope}/scopeowner/{scopeowner}")]
-	Task<ManagerData> GetStoredValuesScopeOwnerAsync([AliasAs("scope")] string scope, [AliasAs("scopeowner")] string scopeowner, [AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ManagerData> GetStoredValuesScopeOwnerAsync(
+		[AliasAs("scope")] string scope,
+		[AliasAs("scopeowner")] string scopeowner,
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get stored values by scope
@@ -159,7 +208,12 @@ public interface ICore
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ManagerData</returns>
 	[Get("/api/V1/storedvalues/scope/{scope}")]
-	Task<ManagerData> GetStoredValuesScopeAsync([AliasAs("scope")] string scope, [AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ManagerData> GetStoredValuesScopeAsync(
+		[AliasAs("scope")] string scope,
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Gets all the stored values in the system
@@ -173,7 +227,11 @@ public interface ICore
 	/// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
 	/// <returns>Task of ManagerData</returns>
 	[Get("/api/V1/storedvalues")]
-	Task<ManagerData> GetStoredValuesAsync([AliasAs("links")] bool? links, [AliasAs("lang")] string? lang = null, [AliasAs("locale")] string? locale = null, CancellationToken cancellationToken = default);
+	Task<ManagerData> GetStoredValuesAsync(
+		[AliasAs("links")] bool? links,
+		[AliasAs("lang")] string? lang = null,
+		[AliasAs("locale")] string? locale = null,
+		CancellationToken cancellationToken = default);
 
 	/// <summary>
 	/// Get a list of the views
