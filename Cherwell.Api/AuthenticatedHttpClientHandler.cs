@@ -24,6 +24,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		{
 			BaseAddress = new Uri(options.BaseAddress!)
 		};
+		SetUserAgent(_authenticatingClient, _options.UserAgent);
 	}
 
 	/// <summary>
@@ -43,19 +44,9 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			request.Headers.Authorization = new AuthenticationHeaderValue(_authenticationType, accessToken);
 		}
 
-		// Add a user agent to ensure consistent behaviour
-		if (_options.UserAgent is not null)
-		{
-			var userAgentArray = _options.UserAgent.Split('/');
-			if (userAgentArray.Length != 2)
-			{
-				throw new FormatException("UserAgent should be in the form 'SystemName/1.0', where 1.0 is the system version in the form 'Major.Minor'");
-			}
-
-			request.Headers.UserAgent.Add(new ProductInfoHeaderValue(userAgentArray[0], userAgentArray[1]));
-		}
-
-		return await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
+		return await base
+			.SendAsync(request, cancellationToken)
+			.ConfigureAwait(false);
 	}
 
 	/// <summary>
@@ -98,11 +89,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		{
 			BaseAddress = new($"{_options.BaseAddress}/token"),
 		};
-
-		if (_options.UserAgent is not null)
-		{
-			httpClient.DefaultRequestHeaders.Add("User-Agent", _options.UserAgent);
-		}
+		SetUserAgent(httpClient, _options.UserAgent);
 
 		var base64String = (string?)Convert.ToBase64String(Encoding.UTF8.GetBytes($"{_options.ClientId}:"));
 		httpClient.DefaultRequestHeaders.Add("Authorization", $"Basic {base64String}");
@@ -161,6 +148,26 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		_tokenRefreshRequiredAt = DateTime.Now.AddMinutes((tokenResponse.ExpiresIn ?? 15) - 1);
 	}
 
+	private static void SetUserAgent(HttpClient httpClient, string? userAgentString)
+	{
+		// Add a user agent to ensure consistent behaviour
+		if (userAgentString is null)
+		{
+			return;
+		}
+
+		var userAgentArray = userAgentString.Split('/');
+		if (userAgentArray.Length != 2)
+		{
+			throw new FormatException("UserAgent should be in the form 'SystemName/1.0', where 1.0 is the system version in the form 'Major.Minor'");
+		}
+
+		httpClient
+			.DefaultRequestHeaders
+			.UserAgent
+			.Add(new ProductInfoHeaderValue(userAgentArray[0], userAgentArray[1]));
+	}
+
 	/// <summary>
 	/// Log out, invalidating the access token for improved security
 	/// </summary>
@@ -207,22 +214,6 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 	{
 		Password = 0,
 		RefreshToken = 1
-	}
-
-	#endregion
-
-	#region Private Helper Types
-
-	private class TokenRequest
-	{
-		public string? grant_type { get; set; }
-		public string? client_id { get; set; }
-		public string? client_secret { get; set; }
-		public string? username { get; set; }
-		public string? password { get; set; }
-		public string? refresh_token { get; set; }
-		public string? auth_mode { get; set; }
-		public string? site_name { get; set; }
 	}
 
 	#endregion

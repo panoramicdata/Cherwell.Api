@@ -8,13 +8,14 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Performance",
 	"CA1848:Use the LoggerMessage delegates",
 	Justification = "Additional performance not considered necessary in this scenario",
-	Scope = "member",
-	Target = "~M:Cherwell.Api.AuthenticatedHttpClientHandler.GetAccessTokenAsync(System.Threading.CancellationToken)~System.Threading.Tasks.Task{System.String}")
+	Scope = "namespaceanddescendants",
+	Target = "~N:Cherwell.Api")
 	]
+
 [assembly: SuppressMessage(
-	"Performance",
-	"CA1848:Use the LoggerMessage delegates",
-	Justification = "Additional performance not considered necessary in this scenario",
-	Scope = "member",
-	Target = "~M:Cherwell.Api.AuthenticatedHttpClientHandler.LogoutAsync~System.Threading.Tasks.Task")
-	]
+	"Naming",
+	"CA1711:Identifiers should not have incorrect suffix",
+	Justification = "Model is correctly named",
+	Scope = "type",
+	Target = "~T:Cherwell.Api.Models.Security.BusinessObjectPermission")
+]
