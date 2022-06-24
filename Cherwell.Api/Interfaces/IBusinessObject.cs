@@ -21,7 +21,7 @@ public interface IBusinessObject
 		[Body] BatchDeleteRequest request,
 		[AliasAs("lang")] string? lang,
 		[AliasAs("locale")] string? locale,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Delete a Business Object by public ID
@@ -37,7 +37,7 @@ public interface IBusinessObject
 	Task<DeleteResponse> DeleteBusinessObjectByPublicIdAsync(
 		[AliasAs("busobid")] string busobid,
 		[AliasAs("publicid")] string publicid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Delete a Business Object by record ID
@@ -53,7 +53,7 @@ public interface IBusinessObject
 	Task<DeleteResponse> DeleteBusinessObjectByRecIdAsync(
 		[AliasAs("busobid")] string busobid,
 		[AliasAs("busobrecid")] string busobrecid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Delete a related Business Object by public ID
@@ -73,7 +73,7 @@ public interface IBusinessObject
 		[AliasAs("parentbusobrecid")] string parentbusobrecid,
 		[AliasAs("relationshipid")] string relationshipid,
 		[AliasAs("publicid")] string publicid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Delete a related Business Object by record ID
@@ -93,7 +93,7 @@ public interface IBusinessObject
 		[AliasAs("parentbusobrecid")] string parentbusobrecid,
 		[AliasAs("relationshipid")] string relationshipid,
 		[AliasAs("busobrecid")] string busobrecid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get lookup values for Fields
@@ -107,7 +107,7 @@ public interface IBusinessObject
 	[Post("/api/V1/fieldvalueslookup")]
 	Task<FieldValuesLookupResponse> BusinessObjectFieldValuesLookupAsync(
 		[Body] FieldValuesLookupRequest request,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Retrieve all activities for a business object
@@ -129,7 +129,7 @@ public interface IBusinessObject
 		[AliasAs("pageSize")] int? pageSize,
 		[AliasAs("pageNumber")] int? pageNumber,
 		[AliasAs("activityType")] string activityType,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get an imported Business Object attachment
@@ -147,7 +147,7 @@ public interface IBusinessObject
 		[AliasAs("attachmentid")] string attachmentid,
 		[AliasAs("busobid")] string busobid,
 		[AliasAs("busobrecid")] string busobrecid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get attachments by Business Object public ID
@@ -169,7 +169,7 @@ public interface IBusinessObject
 		[AliasAs("type")] string type,
 		[AliasAs("attachmenttype")] string attachmenttype,
 		[AliasAs("includelinks")] bool? includelinks,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get attachments by Business Object record ID
@@ -191,7 +191,7 @@ public interface IBusinessObject
 		[AliasAs("type")] string type,
 		[AliasAs("attachmenttype")] string attachmenttype,
 		[AliasAs("includelinks")] bool? includelinks,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get attachments by Business Object name and public ID
@@ -213,7 +213,7 @@ public interface IBusinessObject
 		[AliasAs("type")] string type,
 		[AliasAs("attachmenttype")] string attachmenttype,
 		[AliasAs("includelinks")] bool? includelinks,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get attachments by Business Object name and record ID
@@ -235,7 +235,7 @@ public interface IBusinessObject
 		[AliasAs("type")] string type,
 		[AliasAs("attachmenttype")] string attachmenttype,
 		[AliasAs("includelinks")] bool? includelinks,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get Business Object attachments by request object
@@ -249,7 +249,7 @@ public interface IBusinessObject
 	[Post("/api/V1/getbusinessobjectattachments")]
 	Task<AttachmentsResponse> GetBusinessObjectAttachmentsAsync(
 		[Body] AttachmentsRequest attachmentsRequest,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get a batch of Business Object records
@@ -263,7 +263,7 @@ public interface IBusinessObject
 	[Post("/api/V1/getbusinessobjectbatch")]
 	Task<BatchReadResponse> GetBusinessObjectBatchAsync(
 		[Body] BatchReadRequest request,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get a Business Object record
@@ -279,7 +279,7 @@ public interface IBusinessObject
 	Task<ReadResponse> GetBusinessObjectByPublicIdAsync(
 		[AliasAs("busobid")] string busobid,
 		[AliasAs("publicid")] string publicid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get a Business Object record
@@ -295,7 +295,7 @@ public interface IBusinessObject
 	Task<ReadResponse> GetBusinessObjectByRecIdAsync(
 		[AliasAs("busobid")] string busobid,
 		[AliasAs("busobrecid")] string busobrecid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get a Business Object by its scan code and Business Object ID
@@ -311,7 +311,7 @@ public interface IBusinessObject
 	Task<BarcodeLookupResponse> GetBusinessObjectByScanCodeBusObIdAsync(
 		[AliasAs("scanCode")] string scanCode,
 		[AliasAs("busobid")] string busobid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get a Business Object by its scan code and Business Object name
@@ -327,7 +327,7 @@ public interface IBusinessObject
 	Task<BarcodeLookupResponse> GetBusinessObjectByScanCodeBusObNameAsync(
 		[AliasAs("scanCode")] string scanCode,
 		[AliasAs("busobname")] string busobname,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get a Business Object schema
@@ -343,7 +343,7 @@ public interface IBusinessObject
 	Task<SchemaResponse> GetBusinessObjectSchemaAsync(
 		[AliasAs("busobId")] string busobId,
 		[AliasAs("includerelationships")] bool? includerelationships,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get Business Object summaries by type
@@ -357,7 +357,7 @@ public interface IBusinessObject
 	[Get("/api/V1/getbusinessobjectsummaries/type/{type}")]
 	Task<List<Summary>> GetBusinessObjectSummariesAsync(
 		[AliasAs("type")] string type,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get a Business Object summary by ID
@@ -371,7 +371,7 @@ public interface IBusinessObject
 	[Get("/api/V1/getbusinessobjectsummary/busobid/{busobid}")]
 	Task<List<Summary>> GetBusinessObjectSummaryByIdAsync(
 		[AliasAs("busobid")] string busobid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get a Business Object summary by name
@@ -385,7 +385,7 @@ public interface IBusinessObject
 	[Get("/api/V1/getbusinessobjectsummary/busobname/{busobname}")]
 	Task<List<Summary>> GetBusinessObjectSummaryByNameAsync(
 		[AliasAs("busobname")] string busobname,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get Business Object templates for create
@@ -399,7 +399,7 @@ public interface IBusinessObject
 	[Post("/api/V1/getbusinessobjecttemplate")]
 	Task<TemplateResponse> GetBusinessObjectTemplateAsync(
 		[Body] TemplateRequest request,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get related Business Objects using a request object
@@ -415,7 +415,7 @@ public interface IBusinessObject
 	Task<RelatedBusinessObjectResponse> GetRelatedBusinessObjectByRequestAsync(
 		[Body] RelatedBusinessObjectRequest relatedBusinessObjectRequest,
 		[AliasAs("includelinks")] bool? includelinks,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get related Business Objects by ID
@@ -443,7 +443,7 @@ public interface IBusinessObject
 		[AliasAs("allfields")] bool? allfields,
 		[AliasAs("usedefaultgrid")] bool? usedefaultgrid,
 		[AliasAs("includelinks")] bool? includelinks,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get related Business Objects custom grid
@@ -469,7 +469,7 @@ public interface IBusinessObject
 		[AliasAs("pageNumber")] int? pageNumber,
 		[AliasAs("pageSize")] int? pageSize,
 		[AliasAs("includelinks")] bool? includelinks,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Link related Business Objects
@@ -491,7 +491,7 @@ public interface IBusinessObject
 		[AliasAs("relationshipid")] string relationshipid,
 		[AliasAs("busobid")] string busobid,
 		[AliasAs("busobrecid")] string busobrecid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Link related Business Objects
@@ -513,7 +513,7 @@ public interface IBusinessObject
 		[AliasAs("relationshipid")] string relationshipid,
 		[AliasAs("busobid")] string busobid,
 		[AliasAs("busobrecid")] string busobrecid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Remove an attachment by Business Object ID and public ID
@@ -531,7 +531,7 @@ public interface IBusinessObject
 		[AliasAs("attachmentid")] string attachmentid,
 		[AliasAs("busobid")] string busobid,
 		[AliasAs("publicid")] string publicid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Remove an attachment by Business Object ID and record ID
@@ -549,7 +549,7 @@ public interface IBusinessObject
 		[AliasAs("attachmentid")] string attachmentid,
 		[AliasAs("busobid")] string busobid,
 		[AliasAs("busobrecid")] string busobrecid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Remove an attachment by Business Object name and public ID
@@ -567,7 +567,7 @@ public interface IBusinessObject
 		[AliasAs("attachmentid")] string attachmentid,
 		[AliasAs("busobname")] string busobname,
 		[AliasAs("publicid")] string publicid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Remove an attachment by Business Object name and record ID
@@ -585,7 +585,7 @@ public interface IBusinessObject
 		[AliasAs("attachmentid")] string attachmentid,
 		[AliasAs("busobname")] string busobname,
 		[AliasAs("busobrecid")] string busobrecid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Attach a Business Object to a Business Object
@@ -599,7 +599,7 @@ public interface IBusinessObject
 	[Put("/api/V1/savebusinessobjectattachmentbusob")]
 	Task<AttachmentsResponse> SaveBusinessObjectAttachmentBusObAsync(
 		[Body] SaveBusObAttachmentRequest request,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Attach a file via UNC
@@ -613,7 +613,7 @@ public interface IBusinessObject
 	[Put("/api/V1/savebusinessobjectattachmentlink")]
 	Task<AttachmentsResponse> SaveBusinessObjectAttachmentLinkAsync(
 		[Body] SaveLinkAttachmentRequest request,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Attach a URL path
@@ -627,7 +627,7 @@ public interface IBusinessObject
 	[Put("/api/V1/savebusinessobjectattachmenturl")]
 	Task<AttachmentsResponse> SaveBusinessObjectAttachmentUrlAsync(
 		[Body] SaveUrlAttachmentRequest request,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Create or update a batch of Business Objects
@@ -641,7 +641,7 @@ public interface IBusinessObject
 	[Post("/api/V1/savebusinessobjectbatch")]
 	Task<BatchSaveResponse> SaveBusinessObjectBatchAsync(
 		[Body] BatchSaveRequest request,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Create or Update a Business Object
@@ -655,7 +655,7 @@ public interface IBusinessObject
 	[Post("/api/V1/savebusinessobject")]
 	Task<SaveResponse> SaveBusinessObjectAsync(
 		[Body] SaveRequest request,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Create or update a related Business Object
@@ -669,7 +669,7 @@ public interface IBusinessObject
 	[Post("/api/V1/saverelatedbusinessobject")]
 	Task<RelatedSaveResponse> SaveRelatedBusinessObjectAsync(
 		[Body] RelatedSaveRequest request,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// UnLink related Business Objects
@@ -691,7 +691,7 @@ public interface IBusinessObject
 		[AliasAs("relationshipid")] string relationshipid,
 		[AliasAs("busobid")] string busobid,
 		[AliasAs("busobrecid")] string busobrecid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Upload an attachment by Business Object ID and public ID
@@ -719,7 +719,7 @@ public interface IBusinessObject
 		[AliasAs("totalsize")] int? totalsize,
 		[AliasAs("attachmentid")] string attachmentid,
 		[AliasAs("displaytext")] string displaytext,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Upload an attachment by Business Object ID and record ID
@@ -747,7 +747,7 @@ public interface IBusinessObject
 		[AliasAs("totalsize")] int? totalsize,
 		[AliasAs("attachmentid")] string attachmentid,
 		[AliasAs("displaytext")] string displaytext,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Upload an attachment by Business Object name and public ID
@@ -775,7 +775,7 @@ public interface IBusinessObject
 		[AliasAs("totalsize")] int? totalsize,
 		[AliasAs("attachmentid")] string attachmentid,
 		[AliasAs("displaytext")] string displaytext,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Upload an attachment by Business Object name and record ID
@@ -803,5 +803,5 @@ public interface IBusinessObject
 		[AliasAs("totalsize")] int? totalsize,
 		[AliasAs("attachmentid")] string attachmentid,
 		[AliasAs("displaytext")] string displaytext,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 }

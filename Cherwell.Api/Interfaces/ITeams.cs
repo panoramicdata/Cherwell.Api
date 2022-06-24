@@ -19,7 +19,7 @@ public interface ITeams
 	[Post("/api/V1/addusertoteambybatch")]
 	Task<AddUserToTeamByBatchResponse> AddUserToTeamByBatchAsync(
 		[Body] AddUserToTeamByBatchRequest request,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Add a user to a team
@@ -33,7 +33,7 @@ public interface ITeams
 	[Post("/api/V1/addusertoteam")]
 	Task AddUserToTeamAsync(
 		[Body] AddUserToTeamRequest dataRequest,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Add a user to a team
@@ -47,7 +47,7 @@ public interface ITeams
 	[Post("/api/V2/addusertoteam")]
 	Task<AddUserToTeamResponse> AddUserToTeamV2Async(
 		[Body] AddUserToTeamRequest dataRequest,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Delete a Team
@@ -61,7 +61,7 @@ public interface ITeams
 	[Delete("/api/V1/deleteteam/{teamid}")]
 	Task DeleteTeamAsync(
 		[AliasAs("teamid")] string teamid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get a team by its TeamId
@@ -75,7 +75,7 @@ public interface ITeams
 	[Get("/api/V1/getteam/{teamid}")]
 	Task<TeamResponse> GetTeamAsync(
 		[AliasAs("teamid")] string teamid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get all available Teams
@@ -87,7 +87,7 @@ public interface ITeams
 	/// <returns>Task of TeamsResponse</returns>
 	[Get("/api/V1/getteams")]
 	Task<TeamsResponse> GetTeamsAsync(
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get all available Teams
@@ -99,7 +99,7 @@ public interface ITeams
 	/// <returns>Task of TeamsV2Response</returns>
 	[Get("/api/V2/getteams")]
 	Task<TeamsV2Response> GetTeamsV2Async(
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get Team assignments for a user
@@ -113,7 +113,7 @@ public interface ITeams
 	[Get("/api/V1/getusersteams/userrecordid/{userRecordId}")]
 	Task<TeamsResponse> GetUsersTeamsAsync(
 		[AliasAs("userRecordId")] string userRecordId,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get Team assignments for a user
@@ -127,7 +127,7 @@ public interface ITeams
 	[Get("/api/V2/getusersteams/userrecordid/{userRecordId}")]
 	Task<TeamsV2Response> GetUsersTeamsV2Async(
 		[AliasAs("userRecordId")] string userRecordId,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get all available Workgroups
@@ -139,7 +139,7 @@ public interface ITeams
 	/// <returns>Task of TeamsResponse</returns>
 	[Get("/api/V1/getworkgroups")]
 	Task<TeamsResponse> GetWorkgroupsAsync(
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get all available Workgroups
@@ -151,7 +151,7 @@ public interface ITeams
 	/// <returns>Task of TeamsV2Response</returns>
 	[Get("/api/V2/getworkgroups")]
 	Task<TeamsV2Response> GetWorkgroupsV2Async(
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Remove a customer from a Workgroup
@@ -167,7 +167,7 @@ public interface ITeams
 	Task<RemoveCustomerFromWorkgroupResponse> TeamsRemoveCustomerFromWorkgroupAsync(
 		[AliasAs("workgroupid")] string workgroupid,
 		[AliasAs("customerrecordid")] string customerrecordid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Operation to remove a User from a Team.
@@ -183,7 +183,7 @@ public interface ITeams
 	Task RemoveUserFromTeamAsync(
 		[AliasAs("teamId")] string teamId,
 		[AliasAs("userrecordid")] string userrecordid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Operation to remove a User from a Team.
@@ -199,7 +199,7 @@ public interface ITeams
 	Task<RemoveUserFromTeamResponse> RemoveUserFromTeamV2Async(
 		[AliasAs("teamId")] string teamId,
 		[AliasAs("userrecordid")] string userrecordid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Add or Update a team member
@@ -213,7 +213,7 @@ public interface ITeams
 	[Post("/api/V1/saveteammember")]
 	Task<SaveTeamMemberResponse> SaveTeamMemberAsync(
 		[Body] SaveTeamMemberRequest request,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Create or update a team
@@ -227,7 +227,7 @@ public interface ITeams
 	[Post("/api/V1/saveteam")]
 	Task<TeamSaveResponse> SaveTeamAsync(
 		[Body] TeamSaveRequest request,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Save the membership status of a Workgroup member.
@@ -241,5 +241,5 @@ public interface ITeams
 	[Post("/api/V1/saveworkgroupmember")]
 	Task<SaveWorkgroupMemberResponse> SaveWorkgroupMemberAsync(
 		[Body] SaveWorkgroupMemberRequest request,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 }

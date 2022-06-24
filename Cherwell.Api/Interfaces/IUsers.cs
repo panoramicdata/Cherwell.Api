@@ -19,7 +19,7 @@ public interface IUsers
 	[Post("/api/V1/deleteuserbatch")]
 	Task<UserBatchDeleteResponse> DeleteUserBatchAsync(
 		[Body] UserBatchDeleteRequest request,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Delete a batch of users
@@ -33,7 +33,7 @@ public interface IUsers
 	[Post("/api/V2/deleteuserbatch")]
 	Task<UserBatchDeleteV2Response> DeleteUserBatchV2Async(
 		[Body] UserBatchDeleteRequest request,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Delete a user by record ID
@@ -47,7 +47,7 @@ public interface IUsers
 	[Delete("/api/V1/deleteuser/userrecordid/{userrecordid}")]
 	Task<UserDeleteResponse> DeleteUserAsync(
 		[AliasAs("userrecordid")] string userrecordid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Delete a user by record ID
@@ -61,7 +61,7 @@ public interface IUsers
 	[Delete("/api/V2/deleteuser/userrecordid/{userrecordid}")]
 	Task<UserDeleteV2Response> DeleteUserV2Async(
 		[AliasAs("userrecordid")] string userrecordid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get a list of all system users.
@@ -77,7 +77,7 @@ public interface IUsers
 	Task<UserListResponse> GetListOfUsersAsync(
 		[AliasAs("loginidfilter")] string loginidfilter,
 		[AliasAs("stoponerror")] bool? stoponerror,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get user information in a batch
@@ -91,7 +91,7 @@ public interface IUsers
 	[Post("/api/V1/getuserbatch")]
 	Task<UserBatchReadResponse> GetUserBatchAsync(
 		[Body] UserBatchReadRequest request,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get a user by login ID
@@ -105,7 +105,7 @@ public interface IUsers
 	[Get("/api/V1/getuserbyloginid/loginid/{loginid}")]
 	Task<User> GetUserByLoginIdAsync(
 		[AliasAs("loginid")] string loginid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get a user by login ID and login ID type
@@ -121,7 +121,7 @@ public interface IUsers
 	Task<User> GetUserByLoginIdV2Async(
 		[AliasAs("loginid")] string loginid,
 		[AliasAs("loginidtype")] string loginidtype,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get a user by login ID and login ID type
@@ -137,7 +137,7 @@ public interface IUsers
 	Task<UserV2> GetUserByLoginIdV3Async(
 		[AliasAs("loginid")] string loginid,
 		[AliasAs("loginidtype")] string loginidtype,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get a user by public ID
@@ -151,7 +151,7 @@ public interface IUsers
 	[Get("/api/V1/getuserbypublicid/publicid/{publicid}")]
 	Task<UserReadResponse> GetUserByPublicIdAsync(
 		[AliasAs("publicid")] string publicid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get a user by public ID
@@ -165,7 +165,7 @@ public interface IUsers
 	[Get("/api/V2/getuserbypublicid/publicid/{publicid}")]
 	Task<UserReadV2Response> GetUserByPublicIdV2Async(
 		[AliasAs("publicid")] string publicid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get a user by record ID
@@ -179,7 +179,7 @@ public interface IUsers
 	[Get("/api/V1/getuserbyrecid/recid/{recid}")]
 	Task<UserV2> GetUserByRecIdAsync(
 		[AliasAs("recid")] string recid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Create or update users in a batch
@@ -193,7 +193,7 @@ public interface IUsers
 	[Post("/api/V1/saveuserbatch")]
 	Task<UserBatchSaveResponse> SaveUserBatchAsync(
 		[Body] UserBatchSaveRequest request,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Create or update users in a batch
@@ -207,7 +207,7 @@ public interface IUsers
 	[Post("/api/V2/saveuserbatch")]
 	Task<UserBatchSaveV2Response> SaveUserBatchV2Async(
 		[Body] UserBatchSaveV2Request request,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Create or update a user
@@ -221,7 +221,7 @@ public interface IUsers
 	[Post("/api/V1/saveuser")]
 	Task<UserSaveResponse> SaveUserAsync(
 		[Body] UserSaveRequest request,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Create or update a user
@@ -235,5 +235,5 @@ public interface IUsers
 	[Post("/api/V2/saveuser")]
 	Task<UserSaveV2Response> SaveUserV2Async(
 		[Body] UserSaveV2Request request,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 }

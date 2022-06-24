@@ -25,7 +25,7 @@ public interface IForms
 		[AliasAs("publicid")] string publicid,
 		[AliasAs("foredit")] bool? foredit,
 		[AliasAs("formid")] string formid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get mobile form by Business Object ID and Business Object Record ID.
@@ -45,7 +45,7 @@ public interface IForms
 		[AliasAs("busobrecid")] string busobrecid,
 		[AliasAs("foredit")] bool? foredit,
 		[AliasAs("formid")] string formid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get mobile form by Business Object name and Public ID
@@ -65,7 +65,7 @@ public interface IForms
 		[AliasAs("publicid")] string publicid,
 		[AliasAs("foredit")] bool? foredit,
 		[AliasAs("formid")] string formid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get mobile form by Business Object name and record ID.
@@ -85,5 +85,5 @@ public interface IForms
 		[AliasAs("busobrecid")] string busobrecid,
 		[AliasAs("foredit")] bool? foredit,
 		[AliasAs("formid")] string formid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 }

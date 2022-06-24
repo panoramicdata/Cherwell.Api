@@ -21,7 +21,7 @@ public interface ILifecycle
 	Task<GetRecordStatusResponse> GetRecordStageAsync(
 		[AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId,
 		[AliasAs("recordId")] string recordId,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get current lifecycle status for record
@@ -37,7 +37,7 @@ public interface ILifecycle
 	Task<GetRecordStatusResponse> GetRecordStatusAsync(
 		[AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId,
 		[AliasAs("recordId")] string recordId,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get lifecycle stages
@@ -51,7 +51,7 @@ public interface ILifecycle
 	[Get("/api/V1/{businessObjectDefinitionId}/lifecycle/stages")]
 	Task<GetStagesResponse> GetStagesAsync(
 		[AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get lifecycle statuses
@@ -65,7 +65,7 @@ public interface ILifecycle
 	[Get("/api/V1/{businessObjectDefinitionId}/lifecycle/statuses")]
 	Task<GetStatusesResponse> GetStatusesAsync(
 		[AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get lifecycle transition options for record
@@ -81,7 +81,7 @@ public interface ILifecycle
 	Task<GetTransitionOptionsResponse> GetTransitionOptionsAsync(
 		[AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId,
 		[AliasAs("recordId")] string recordId,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get lifecycle transitions
@@ -95,7 +95,7 @@ public interface ILifecycle
 	[Get("/api/V1/{businessObjectDefinitionId}/lifecycle/transitions")]
 	Task<GetTransitionsResponse> GetTransitionsAsync(
 		[AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Transition a business object record
@@ -113,5 +113,5 @@ public interface ILifecycle
 		[AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId,
 		[AliasAs("recordId")] string recordId,
 		[Body] TransitionRecordRequest transitionRecordRequest,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 }

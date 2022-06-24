@@ -27,7 +27,7 @@ public interface IOneStepActions
 		[AliasAs("scopeowner")] string scopeowner,
 		[AliasAs("folder")] string folder,
 		[AliasAs("links")] bool? links,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get One-Step Actions by Scope Owner
@@ -47,7 +47,7 @@ public interface IOneStepActions
 		[AliasAs("scope")] string scope,
 		[AliasAs("scopeowner")] string scopeowner,
 		[AliasAs("links")] bool? links,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get One-Step Actions by Scope
@@ -65,7 +65,7 @@ public interface IOneStepActions
 		[AliasAs("association")] string association,
 		[AliasAs("scope")] string scope,
 		[AliasAs("links")] bool? links,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get One-Step Actions by Association
@@ -81,7 +81,7 @@ public interface IOneStepActions
 	Task<ManagerData> GetOneStepActionsByAssociationAsync(
 		[AliasAs("association")] string association,
 		[AliasAs("links")] bool? links,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get One-Step Actions by default Association
@@ -95,7 +95,7 @@ public interface IOneStepActions
 	[Get("/api/V1/getonestepactions")]
 	Task<ManagerData> GetOneStepActionsAsync(
 		[AliasAs("links")] bool? links,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Run a One-Step Action for a Business Object record
@@ -113,7 +113,7 @@ public interface IOneStepActions
 		[AliasAs("standinkey")] string standinkey,
 		[AliasAs("busobid")] string busobid,
 		[AliasAs("busobrecid")] string busobrecid,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Run a stand alone One-Step Action
@@ -127,7 +127,7 @@ public interface IOneStepActions
 	[Get("/api/V1/runonestepaction/standinkey/{standinkey}")]
 	Task<OneStepActionResponse> RunOneStepActionByStandInKeyAsync(
 		[AliasAs("standinkey")] string standinkey,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Run a One-Step Action using a OneStepActionRequest
@@ -141,5 +141,5 @@ public interface IOneStepActions
 	[Post("/api/V1/runonestepaction")]
 	Task<OneStepActionResponse> RunOneStepActionAsync(
 		[Body] OneStepActionRequest request,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 }

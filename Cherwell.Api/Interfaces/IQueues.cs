@@ -19,7 +19,7 @@ public interface IQueues
 	[Post("/api/V1/additemtoqueue")]
 	Task<AddItemToQueueResponse> AddItemToQueueAsync(
 		[Body] AddItemToQueueRequest request,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Check a Business Object in to a queue
@@ -33,7 +33,7 @@ public interface IQueues
 	[Post("/api/V1/checkinqueueitem")]
 	Task<CheckInQueueItemResponse> CheckInQueueItemAsync(
 		[Body] CheckInQueueItemRequest request,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Check a Business Object out of a queue
@@ -47,7 +47,7 @@ public interface IQueues
 	[Post("/api/V1/checkoutqueueitem")]
 	Task<CheckOutQueueItemResponse> CheckOutQueueItemAsync(
 		[Body] CheckOutQueueItemRequest request,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get available queues.
@@ -67,7 +67,7 @@ public interface IQueues
 		[AliasAs("scopeowner")] string scopeowner,
 		[AliasAs("folder")] string folder,
 		[AliasAs("links")] bool? links,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get available queues.
@@ -85,7 +85,7 @@ public interface IQueues
 		[AliasAs("scope")] string scope,
 		[AliasAs("scopeowner")] string scopeowner,
 		[AliasAs("links")] bool? links,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get available queues.
@@ -101,7 +101,7 @@ public interface IQueues
 	Task<ManagerData> GetQueuesScopeAsync(
 		[AliasAs("scope")] string scope,
 		[AliasAs("links")] bool? links,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get available queues.
@@ -115,7 +115,7 @@ public interface IQueues
 	[Get("/api/V1/getqueues")]
 	Task<ManagerData> GetQueuesAsync(
 		[AliasAs("links")] bool? links,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Remove an item from a queue
@@ -129,5 +129,5 @@ public interface IQueues
 	[Post("/api/V1/removeitemfromqueue")]
 	Task<RemoveItemFromQueueResponse> RemoveItemFromQueueAsync(
 		[Body] RemoveItemFromQueueRequest request,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 }

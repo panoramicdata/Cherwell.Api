@@ -21,7 +21,7 @@ public interface IApproval
 	Task<SaveResponse> ActionApprovalAsync(
 		[AliasAs("approvalRecId")] string approvalRecId,
 		[AliasAs("approvalAction")] string approvalAction,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get Approval
@@ -35,7 +35,7 @@ public interface IApproval
 	[Get("/api/V1/approval/{approvalRecId}")]
 	Task<ApprovalReadResponse> GetApprovalByRecIdAsync(
 		[AliasAs("approvalRecId")] string approvalRecId,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get all waitings for the current user
@@ -47,7 +47,7 @@ public interface IApproval
 	/// <returns>Task ofGetApprovalsResponse</returns>
 	[Get("/api/V1/getmyapprovals")]
 	Task<GetApprovalsResponse> GetMyApprovalsAsync(
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get all waiting approvals that were created by the current user
@@ -59,5 +59,5 @@ public interface IApproval
 	/// <returns>Task ofGetApprovalsResponse</returns>
 	[Get("/api/V1/getmypendingapprovals")]
 	Task<GetApprovalsResponse> GetMyPendingApprovalsAsync(
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 }

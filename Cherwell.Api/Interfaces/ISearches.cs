@@ -19,7 +19,7 @@ public interface ISearches
 	[Post("/api/V1/getquicksearchconfigurationforbusobs")]
 	Task<QuickSearchConfigurationResponse> GetQuickSearchConfigurationForBusObsAsync(
 		[Body] QuickSearchConfigurationRequest dataRequest,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get a Quick Search by Business Objects with view rights
@@ -31,7 +31,7 @@ public interface ISearches
 	/// <returns>Task of QuickSearchConfigurationResponse</returns>
 	[Get("/api/V1/getquicksearchconfigurationforbusobswithviewrights")]
 	Task<QuickSearchConfigurationResponse> GetQuickSearchConfigurationForBusObsWithViewRightsAsync(
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Execute a Quick Search from a list of Business Object IDs and search text
@@ -47,7 +47,7 @@ public interface ISearches
 	Task<SimpleResultsList> GetQuickSearchResultsAsync(
 		[Body] QuickSearchRequest dataRequest,
 		[AliasAs("includeLinks")] bool? includeLinks,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Execute a Quick Search on a specific Business Object
@@ -67,7 +67,7 @@ public interface ISearches
 		[AliasAs("includeSchema")] bool? includeSchema,
 		[AliasAs("includeLocationFields")] bool? includeLocationFields,
 		[AliasAs("includeLinks")] bool? includeLinks,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Execute a Quick Search on a specific Business Object
@@ -87,7 +87,7 @@ public interface ISearches
 		[AliasAs("includeSchema")] bool? includeSchema,
 		[AliasAs("includeLocationFields")] bool? includeLocationFields,
 		[AliasAs("includeLinks")] bool? includeLinks,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get all saved searches by Folder ID
@@ -109,7 +109,7 @@ public interface ISearches
 		[AliasAs("scopeowner")] string scopeowner,
 		[AliasAs("folder")] string folder,
 		[AliasAs("links")] bool? links,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get all saved searches by Folder ID
@@ -131,7 +131,7 @@ public interface ISearches
 		[AliasAs("scopeowner")] string scopeowner,
 		[AliasAs("folder")] string folder,
 		[AliasAs("links")] bool? links,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get all saved searches by scope owner (sub scope)
@@ -151,7 +151,7 @@ public interface ISearches
 		[AliasAs("scope")] string scope,
 		[AliasAs("scopeowner")] string scopeowner,
 		[AliasAs("links")] bool? links,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get all saved searches by scope owner (sub scope)
@@ -171,7 +171,7 @@ public interface ISearches
 		[AliasAs("scope")] string scope,
 		[AliasAs("scopeowner")] string scopeowner,
 		[AliasAs("links")] bool? links,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get all saved searches by scope
@@ -189,7 +189,7 @@ public interface ISearches
 		[AliasAs("association")] string association,
 		[AliasAs("scope")] string scope,
 		[AliasAs("links")] bool? links,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get all saved searches by scope
@@ -207,7 +207,7 @@ public interface ISearches
 		[AliasAs("association")] string association,
 		[AliasAs("scope")] string scope,
 		[AliasAs("links")] bool? links,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get all saved searches by Business Object association
@@ -223,7 +223,7 @@ public interface ISearches
 	Task<SearchItemResponse> GetSearchItemsByAssociationAsync(
 		[AliasAs("association")] string association,
 		[AliasAs("links")] bool? links,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get all saved searches by Business Object association
@@ -239,7 +239,7 @@ public interface ISearches
 	Task<ManagerData> GetSearchItemsByAssociationV2Async(
 		[AliasAs("association")] string association,
 		[AliasAs("links")] bool? links,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get all saved searches by default Business Object association
@@ -253,7 +253,7 @@ public interface ISearches
 	[Get("/api/V1/getsearchitems")]
 	Task<SearchItemResponse> GetSearchItemsAsync(
 		[AliasAs("links")] bool? links,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get all saved searches by default Business Object association
@@ -267,7 +267,7 @@ public interface ISearches
 	[Get("/api/V2/getsearchitems")]
 	Task<ManagerData> GetSearchItemsV2Async(
 		[AliasAs("links")] bool? links,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Run an ad-hoc search
@@ -281,7 +281,7 @@ public interface ISearches
 	[Post("/api/V1/getsearchresults")]
 	Task<SearchResultsResponse> GetSearchResultsAdHocAsync(
 		[Body] SearchResultsRequest dataRequest,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get results of a saved search
@@ -295,7 +295,7 @@ public interface ISearches
 	[Post("/api/V2/storedsearches")]
 	Task<StoredSearchResults> GetSearchResultsAsStringByIdV2Async(
 		[Body] StoredSearchRequest searchRequest,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get results of a saved search
@@ -315,7 +315,7 @@ public interface ISearches
 		[AliasAs("associationName")] string associationName,
 		[AliasAs("searchName")] string searchName,
 		[AliasAs("scopeOwner")] string scopeOwner,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get results of a saved search
@@ -335,7 +335,7 @@ public interface ISearches
 		[AliasAs("associationName")] string associationName,
 		[AliasAs("searchName")] string searchName,
 		[AliasAs("scopeOwner")] string scopeOwner,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Run a saved search by internal ID
@@ -365,7 +365,7 @@ public interface ISearches
 		[AliasAs("pagesize")] int? pagesize,
 		[AliasAs("includeschema")] bool? includeschema,
 		[AliasAs("resultsAsSimpleResultsList")] bool? resultsAsSimpleResultsList,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Run a saved search by name
@@ -395,7 +395,7 @@ public interface ISearches
 		[AliasAs("pagesize")] int? pagesize,
 		[AliasAs("includeschema")] bool? includeschema,
 		[AliasAs("resultsAsSimpleResultsList")] bool? resultsAsSimpleResultsList,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Export an ad-hoc search
@@ -409,7 +409,7 @@ public interface ISearches
 	[Post("/api/V1/getsearchresultsexport")]
 	Task<string> GetSearchResultsExportAdHocAsync(
 		[Body] ExportSearchResultsRequest dataRequest,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Export a saved search by ID
@@ -437,7 +437,7 @@ public interface ISearches
 		[AliasAs("searchTerm")] string searchTerm,
 		[AliasAs("pagenumber")] int? pagenumber,
 		[AliasAs("pagesize")] int? pagesize,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Export a saved search by name
@@ -465,5 +465,5 @@ public interface ISearches
 		[AliasAs("searchTerm")] string searchTerm,
 		[AliasAs("pagenumber")] int? pagenumber,
 		[AliasAs("pagesize")] int? pagesize,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 }

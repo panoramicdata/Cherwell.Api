@@ -36,7 +36,7 @@ Task<List<InventoryDevice>> GetOrganizationInventoryDevicesAsync(
 	string? endingBefore = null,
 	string? usedState = null,
 	string? search = null,
-	CancellationToken cancellationToken = default);
+	CancellationToken cancellationToken);
 ```
 2. Create a second copy of the endpoint called `GetInventoryDevicesApiResponseAsync` and marked `internal`.
 Exclude the paging parameters `perPage` and `endingBefore` and just leave the filtering parameters.
@@ -47,7 +47,7 @@ internal Task<ApiResponse<List<InventoryDevice>>> GetOrganizationInventoryDevice
 	string? startingAfter = null,
 	string? usedState = null,
 	string? search = null,
-	CancellationToken cancellationToken = default);
+	CancellationToken cancellationToken);
 ```
 3. Change the second copy return type to wrap it in a Refit `ApiResponse`.
 4. This second copy will be used by an extension method that uses the `ApiReponse` to get the response headers and handle paging.
@@ -69,7 +69,7 @@ public static class IOrganizationsInventoryDevicesExtensions
 		string organizationId,
 		string? usedState = null,
 		string? search = null,
-		CancellationToken cancellationToken = default)
+		CancellationToken cancellationToken)
 		=> CherwellClient.GetAllAsync(
 			(startingAfter, cancellationToken)
 			=> organizationInventoryDevices.GetOrganizationInventoryDevicesApiResponseAsync(

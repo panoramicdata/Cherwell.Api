@@ -17,7 +17,7 @@ public interface IService
 	/// <returns>Task of CoreServiceInfoResponse</returns>
 	[Get("/api/V1/serviceinfo")]
 	Task<ServiceInfoResponse> GetServiceInfoAsync(
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Log out user by token
@@ -29,7 +29,7 @@ public interface IService
 	/// <returns>Task of void</returns>
 	[Delete("/api/V1/logout")]
 	Task LogoutUserAsync(
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 
 	/// <summary>
 	/// Get an access token
@@ -51,5 +51,5 @@ public interface IService
 	Task<TokenResponse> TokenAsync(string grantType, string clientId, string clientSecret, string username, string password, string refreshToken,
 		[AliasAs("auth_mode")] string authMode,
 		[AliasAs("site_name")] string? siteName = null,
-		CancellationToken cancellationToken = default);
+		CancellationToken cancellationToken);
 }
