@@ -40,6 +40,46 @@ public class GetSearchResultsAdHocTests : CherwellClientTest
 			.BusinessObjects
 			.Should()
 			.NotBeNullOrEmpty();
+
+		searchResults
+			.BusinessObjects
+			.ForEach(bo =>
+			{
+				bo.BusObId.Should().NotBeNullOrEmpty();
+				bo.BusObPublicId.Should().NotBeNullOrEmpty();
+				bo.BusObRecId.Should().NotBeNullOrEmpty();
+				bo.Fields.Should().NotBeNullOrEmpty();
+				bo.Fields.ForEach(f =>
+				{
+					f.Dirty.Should().BeFalse();
+					f.DisplayName.Should().NotBeNullOrEmpty();
+					f.FieldId.Should().NotBeNullOrEmpty();
+					f.FullFieldId.Should().NotBeNullOrEmpty();
+					f.Html.Should().BeNull();
+					f.Name.Should().NotBeNullOrEmpty();
+					f.Value.Should().NotBeNull();
+				});
+				bo.Links.Should().NotBeNullOrEmpty();
+				bo.Links.ForEach(l =>
+				{
+					l.Name.Should().NotBeNullOrEmpty();
+					l.Url.Should().NotBeNullOrEmpty();
+				});
+				bo.ErrorCode.Should().BeNull();
+				bo.ErrorMessage.Should().BeNull();
+				bo.HasError.Should().BeFalse();
+			});
+
+		searchResults.HasPrompts.Should().BeFalse();
+		searchResults.Links.Should().BeEmpty();
+		searchResults.Prompts.Should().BeEmpty();
+		searchResults.SearchResultsFields.Should().BeEmpty();
+		searchResults.SimpleResults.Should().BeNull();
+		searchResults.TotalRows.Should().NotBe(0);
+		searchResults.HasMoreRecords.Should().BeFalse();
+		searchResults.ErrorCode.Should().BeNull();
+		searchResults.ErrorMessage.Should().BeNull();
+		searchResults.HasError.Should().BeFalse();
 	}
 
 	[Fact]
