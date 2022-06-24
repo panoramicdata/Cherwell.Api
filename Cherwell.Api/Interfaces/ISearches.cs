@@ -21,8 +21,6 @@ public interface ISearches
 	[Post("/api/V1/getquicksearchconfigurationforbusobs")]
 	Task<QuickSearchConfigurationResponse> GetQuickSearchConfigurationForBusObsAsync(
 		[Body] QuickSearchConfigurationRequest dataRequest,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -37,8 +35,6 @@ public interface ISearches
 	/// <returns>Task of QuickSearchConfigurationResponse</returns>
 	[Get("/api/V1/getquicksearchconfigurationforbusobswithviewrights")]
 	Task<QuickSearchConfigurationResponse> GetQuickSearchConfigurationForBusObsWithViewRightsAsync(
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -57,8 +53,6 @@ public interface ISearches
 	Task<SimpleResultsList> GetQuickSearchResultsAsync(
 		[Body] QuickSearchRequest dataRequest,
 		[AliasAs("includeLinks")] bool? includeLinks,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -81,8 +75,6 @@ public interface ISearches
 		[AliasAs("includeSchema")] bool? includeSchema,
 		[AliasAs("includeLocationFields")] bool? includeLocationFields,
 		[AliasAs("includeLinks")] bool? includeLinks,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -105,8 +97,6 @@ public interface ISearches
 		[AliasAs("includeSchema")] bool? includeSchema,
 		[AliasAs("includeLocationFields")] bool? includeLocationFields,
 		[AliasAs("includeLinks")] bool? includeLinks,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -131,8 +121,6 @@ public interface ISearches
 		[AliasAs("scopeowner")] string scopeowner,
 		[AliasAs("folder")] string folder,
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -157,8 +145,6 @@ public interface ISearches
 		[AliasAs("scopeowner")] string scopeowner,
 		[AliasAs("folder")] string folder,
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -181,8 +167,6 @@ public interface ISearches
 		[AliasAs("scope")] string scope,
 		[AliasAs("scopeowner")] string scopeowner,
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -205,8 +189,6 @@ public interface ISearches
 		[AliasAs("scope")] string scope,
 		[AliasAs("scopeowner")] string scopeowner,
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -227,8 +209,6 @@ public interface ISearches
 		[AliasAs("association")] string association,
 		[AliasAs("scope")] string scope,
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -249,8 +229,6 @@ public interface ISearches
 		[AliasAs("association")] string association,
 		[AliasAs("scope")] string scope,
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -269,8 +247,6 @@ public interface ISearches
 	Task<SearchItemResponse> GetSearchItemsByAssociationAsync(
 		[AliasAs("association")] string association,
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -289,8 +265,6 @@ public interface ISearches
 	Task<ManagerData> GetSearchItemsByAssociationV2Async(
 		[AliasAs("association")] string association,
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -307,8 +281,6 @@ public interface ISearches
 	[Get("/api/V1/getsearchitems")]
 	Task<SearchItemResponse> GetSearchItemsAsync(
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -325,8 +297,6 @@ public interface ISearches
 	[Get("/api/V2/getsearchitems")]
 	Task<ManagerData> GetSearchItemsV2Async(
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -343,8 +313,6 @@ public interface ISearches
 	[Post("/api/V1/getsearchresults")]
 	Task<SearchResultsResponse> GetSearchResultsAdHocAsync(
 		[Body] SearchResultsRequest dataRequest,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -361,8 +329,6 @@ public interface ISearches
 	[Post("/api/V2/storedsearches")]
 	Task<StoredSearchResults> GetSearchResultsAsStringByIdV2Async(
 		[Body] StoredSearchRequest searchRequest,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -385,8 +351,6 @@ public interface ISearches
 		[AliasAs("associationName")] string associationName,
 		[AliasAs("searchName")] string searchName,
 		[AliasAs("scopeOwner")] string scopeOwner,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -409,8 +373,6 @@ public interface ISearches
 		[AliasAs("associationName")] string associationName,
 		[AliasAs("searchName")] string searchName,
 		[AliasAs("scopeOwner")] string scopeOwner,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -443,8 +405,6 @@ public interface ISearches
 		[AliasAs("pagesize")] int? pagesize,
 		[AliasAs("includeschema")] bool? includeschema,
 		[AliasAs("resultsAsSimpleResultsList")] bool? resultsAsSimpleResultsList,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -477,8 +437,6 @@ public interface ISearches
 		[AliasAs("pagesize")] int? pagesize,
 		[AliasAs("includeschema")] bool? includeschema,
 		[AliasAs("resultsAsSimpleResultsList")] bool? resultsAsSimpleResultsList,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -495,8 +453,6 @@ public interface ISearches
 	[Post("/api/V1/getsearchresultsexport")]
 	Task<string> GetSearchResultsExportAdHocAsync(
 		[Body] ExportSearchResultsRequest dataRequest,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -527,8 +483,6 @@ public interface ISearches
 		[AliasAs("searchTerm")] string searchTerm,
 		[AliasAs("pagenumber")] int? pagenumber,
 		[AliasAs("pagesize")] int? pagesize,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -559,7 +513,5 @@ public interface ISearches
 		[AliasAs("searchTerm")] string searchTerm,
 		[AliasAs("pagenumber")] int? pagenumber,
 		[AliasAs("pagesize")] int? pagesize,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 }

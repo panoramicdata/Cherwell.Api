@@ -21,8 +21,6 @@ public interface IUsers
 	[Post("/api/V1/deleteuserbatch")]
 	Task<UserBatchDeleteResponse> DeleteUserBatchAsync(
 		[Body] UserBatchDeleteRequest request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -39,8 +37,6 @@ public interface IUsers
 	[Post("/api/V2/deleteuserbatch")]
 	Task<UserBatchDeleteV2Response> DeleteUserBatchV2Async(
 		[Body] UserBatchDeleteRequest request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -57,8 +53,6 @@ public interface IUsers
 	[Delete("/api/V1/deleteuser/userrecordid/{userrecordid}")]
 	Task<UserDeleteResponse> DeleteUserAsync(
 		[AliasAs("userrecordid")] string userrecordid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -75,8 +69,6 @@ public interface IUsers
 	[Delete("/api/V2/deleteuser/userrecordid/{userrecordid}")]
 	Task<UserDeleteV2Response> DeleteUserV2Async(
 		[AliasAs("userrecordid")] string userrecordid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -95,8 +87,6 @@ public interface IUsers
 	Task<UserListResponse> GetListOfUsersAsync(
 		[AliasAs("loginidfilter")] string loginidfilter,
 		[AliasAs("stoponerror")] bool? stoponerror,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -113,8 +103,6 @@ public interface IUsers
 	[Post("/api/V1/getuserbatch")]
 	Task<UserBatchReadResponse> GetUserBatchAsync(
 		[Body] UserBatchReadRequest request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -131,8 +119,6 @@ public interface IUsers
 	[Get("/api/V1/getuserbyloginid/loginid/{loginid}")]
 	Task<User> GetUserByLoginIdAsync(
 		[AliasAs("loginid")] string loginid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -151,8 +137,6 @@ public interface IUsers
 	Task<User> GetUserByLoginIdV2Async(
 		[AliasAs("loginid")] string loginid,
 		[AliasAs("loginidtype")] string loginidtype,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -171,8 +155,6 @@ public interface IUsers
 	Task<UserV2> GetUserByLoginIdV3Async(
 		[AliasAs("loginid")] string loginid,
 		[AliasAs("loginidtype")] string loginidtype,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -189,8 +171,6 @@ public interface IUsers
 	[Get("/api/V1/getuserbypublicid/publicid/{publicid}")]
 	Task<UserReadResponse> GetUserByPublicIdAsync(
 		[AliasAs("publicid")] string publicid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -207,8 +187,6 @@ public interface IUsers
 	[Get("/api/V2/getuserbypublicid/publicid/{publicid}")]
 	Task<UserReadV2Response> GetUserByPublicIdV2Async(
 		[AliasAs("publicid")] string publicid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -225,8 +203,6 @@ public interface IUsers
 	[Get("/api/V1/getuserbyrecid/recid/{recid}")]
 	Task<UserV2> GetUserByRecIdAsync(
 		[AliasAs("recid")] string recid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -243,8 +219,6 @@ public interface IUsers
 	[Post("/api/V1/saveuserbatch")]
 	Task<UserBatchSaveResponse> SaveUserBatchAsync(
 		[Body] UserBatchSaveRequest request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -261,8 +235,6 @@ public interface IUsers
 	[Post("/api/V2/saveuserbatch")]
 	Task<UserBatchSaveV2Response> SaveUserBatchV2Async(
 		[Body] UserBatchSaveV2Request request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -279,8 +251,6 @@ public interface IUsers
 	[Post("/api/V1/saveuser")]
 	Task<UserSaveResponse> SaveUserAsync(
 		[Body] UserSaveRequest request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -297,7 +267,5 @@ public interface IUsers
 	[Post("/api/V2/saveuser")]
 	Task<UserSaveV2Response> SaveUserV2Async(
 		[Body] UserSaveV2Request request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 }

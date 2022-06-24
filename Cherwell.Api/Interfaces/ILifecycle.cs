@@ -23,8 +23,6 @@ public interface ILifecycle
 	Task<GetRecordStatusResponse> GetRecordStageAsync(
 		[AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId,
 		[AliasAs("recordId")] string recordId,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -43,8 +41,6 @@ public interface ILifecycle
 	Task<GetRecordStatusResponse> GetRecordStatusAsync(
 		[AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId,
 		[AliasAs("recordId")] string recordId,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -61,8 +57,6 @@ public interface ILifecycle
 	[Get("/api/V1/{businessObjectDefinitionId}/lifecycle/stages")]
 	Task<GetStagesResponse> GetStagesAsync(
 		[AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -79,8 +73,6 @@ public interface ILifecycle
 	[Get("/api/V1/{businessObjectDefinitionId}/lifecycle/statuses")]
 	Task<GetStatusesResponse> GetStatusesAsync(
 		[AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -99,8 +91,6 @@ public interface ILifecycle
 	Task<GetTransitionOptionsResponse> GetTransitionOptionsAsync(
 		[AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId,
 		[AliasAs("recordId")] string recordId,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -117,8 +107,6 @@ public interface ILifecycle
 	[Get("/api/V1/{businessObjectDefinitionId}/lifecycle/transitions")]
 	Task<GetTransitionsResponse> GetTransitionsAsync(
 		[AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -139,7 +127,5 @@ public interface ILifecycle
 		[AliasAs("businessObjectDefinitionId")] string businessObjectDefinitionId,
 		[AliasAs("recordId")] string recordId,
 		[Body] TransitionRecordRequest transitionRecordRequest,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 }

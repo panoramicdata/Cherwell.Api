@@ -23,8 +23,6 @@ public interface IApproval
 	Task<SaveResponse> ActionApprovalAsync(
 		[AliasAs("approvalRecId")] string approvalRecId,
 		[AliasAs("approvalAction")] string approvalAction,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -41,8 +39,6 @@ public interface IApproval
 	[Get("/api/V1/approval/{approvalRecId}")]
 	Task<ApprovalReadResponse> GetApprovalByRecIdAsync(
 		[AliasAs("approvalRecId")] string approvalRecId,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -57,8 +53,6 @@ public interface IApproval
 	/// <returns>Task ofGetApprovalsResponse</returns>
 	[Get("/api/V1/getmyapprovals")]
 	Task<GetApprovalsResponse> GetMyApprovalsAsync(
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -73,7 +67,5 @@ public interface IApproval
 	/// <returns>Task ofGetApprovalsResponse</returns>
 	[Get("/api/V1/getmypendingapprovals")]
 	Task<GetApprovalsResponse> GetMyPendingApprovalsAsync(
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 }

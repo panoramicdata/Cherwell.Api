@@ -21,8 +21,6 @@ public interface ITeams
 	[Post("/api/V1/addusertoteambybatch")]
 	Task<AddUserToTeamByBatchResponse> AddUserToTeamByBatchAsync(
 		[Body] AddUserToTeamByBatchRequest request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -39,8 +37,6 @@ public interface ITeams
 	[Post("/api/V1/addusertoteam")]
 	Task AddUserToTeamAsync(
 		[Body] AddUserToTeamRequest dataRequest,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -57,8 +53,6 @@ public interface ITeams
 	[Post("/api/V2/addusertoteam")]
 	Task<AddUserToTeamResponse> AddUserToTeamV2Async(
 		[Body] AddUserToTeamRequest dataRequest,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -75,8 +69,6 @@ public interface ITeams
 	[Delete("/api/V1/deleteteam/{teamid}")]
 	Task DeleteTeamAsync(
 		[AliasAs("teamid")] string teamid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -93,8 +85,6 @@ public interface ITeams
 	[Get("/api/V1/getteam/{teamid}")]
 	Task<TeamResponse> GetTeamAsync(
 		[AliasAs("teamid")] string teamid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -109,8 +99,6 @@ public interface ITeams
 	/// <returns>Task of TeamsResponse</returns>
 	[Get("/api/V1/getteams")]
 	Task<TeamsResponse> GetTeamsAsync(
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -125,8 +113,6 @@ public interface ITeams
 	/// <returns>Task of TeamsV2Response</returns>
 	[Get("/api/V2/getteams")]
 	Task<TeamsV2Response> GetTeamsV2Async(
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -143,8 +129,6 @@ public interface ITeams
 	[Get("/api/V1/getusersteams/userrecordid/{userRecordId}")]
 	Task<TeamsResponse> GetUsersTeamsAsync(
 		[AliasAs("userRecordId")] string userRecordId,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -161,8 +145,6 @@ public interface ITeams
 	[Get("/api/V2/getusersteams/userrecordid/{userRecordId}")]
 	Task<TeamsV2Response> GetUsersTeamsV2Async(
 		[AliasAs("userRecordId")] string userRecordId,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -177,8 +159,6 @@ public interface ITeams
 	/// <returns>Task of TeamsResponse</returns>
 	[Get("/api/V1/getworkgroups")]
 	Task<TeamsResponse> GetWorkgroupsAsync(
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -193,8 +173,6 @@ public interface ITeams
 	/// <returns>Task of TeamsV2Response</returns>
 	[Get("/api/V2/getworkgroups")]
 	Task<TeamsV2Response> GetWorkgroupsV2Async(
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -213,8 +191,6 @@ public interface ITeams
 	Task<RemoveCustomerFromWorkgroupResponse> TeamsRemoveCustomerFromWorkgroupAsync(
 		[AliasAs("workgroupid")] string workgroupid,
 		[AliasAs("customerrecordid")] string customerrecordid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -233,8 +209,6 @@ public interface ITeams
 	Task RemoveUserFromTeamAsync(
 		[AliasAs("teamId")] string teamId,
 		[AliasAs("userrecordid")] string userrecordid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -253,8 +227,6 @@ public interface ITeams
 	Task<RemoveUserFromTeamResponse> RemoveUserFromTeamV2Async(
 		[AliasAs("teamId")] string teamId,
 		[AliasAs("userrecordid")] string userrecordid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -271,8 +243,6 @@ public interface ITeams
 	[Post("/api/V1/saveteammember")]
 	Task<SaveTeamMemberResponse> SaveTeamMemberAsync(
 		[Body] SaveTeamMemberRequest request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -289,8 +259,6 @@ public interface ITeams
 	[Post("/api/V1/saveteam")]
 	Task<TeamSaveResponse> SaveTeamAsync(
 		[Body] TeamSaveRequest request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -307,7 +275,5 @@ public interface ITeams
 	[Post("/api/V1/saveworkgroupmember")]
 	Task<SaveWorkgroupMemberResponse> SaveWorkgroupMemberAsync(
 		[Body] SaveWorkgroupMemberRequest request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 }

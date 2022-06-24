@@ -27,8 +27,6 @@ public interface IForms
 		[AliasAs("publicid")] string publicid,
 		[AliasAs("foredit")] bool? foredit,
 		[AliasAs("formid")] string formid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -51,8 +49,6 @@ public interface IForms
 		[AliasAs("busobrecid")] string busobrecid,
 		[AliasAs("foredit")] bool? foredit,
 		[AliasAs("formid")] string formid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -75,8 +71,6 @@ public interface IForms
 		[AliasAs("publicid")] string publicid,
 		[AliasAs("foredit")] bool? foredit,
 		[AliasAs("formid")] string formid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -99,7 +93,5 @@ public interface IForms
 		[AliasAs("busobrecid")] string busobrecid,
 		[AliasAs("foredit")] bool? foredit,
 		[AliasAs("formid")] string formid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 }

@@ -29,8 +29,6 @@ public interface IOneStepActions
 		[AliasAs("scopeowner")] string scopeowner,
 		[AliasAs("folder")] string folder,
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -53,8 +51,6 @@ public interface IOneStepActions
 		[AliasAs("scope")] string scope,
 		[AliasAs("scopeowner")] string scopeowner,
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -75,8 +71,6 @@ public interface IOneStepActions
 		[AliasAs("association")] string association,
 		[AliasAs("scope")] string scope,
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -95,8 +89,6 @@ public interface IOneStepActions
 	Task<ManagerData> GetOneStepActionsByAssociationAsync(
 		[AliasAs("association")] string association,
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -113,8 +105,6 @@ public interface IOneStepActions
 	[Get("/api/V1/getonestepactions")]
 	Task<ManagerData> GetOneStepActionsAsync(
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -135,8 +125,6 @@ public interface IOneStepActions
 		[AliasAs("standinkey")] string standinkey,
 		[AliasAs("busobid")] string busobid,
 		[AliasAs("busobrecid")] string busobrecid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -153,8 +141,6 @@ public interface IOneStepActions
 	[Get("/api/V1/runonestepaction/standinkey/{standinkey}")]
 	Task<OneStepActionResponse> RunOneStepActionByStandInKeyAsync(
 		[AliasAs("standinkey")] string standinkey,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -171,7 +157,5 @@ public interface IOneStepActions
 	[Post("/api/V1/runonestepaction")]
 	Task<OneStepActionResponse> RunOneStepActionAsync(
 		[Body] OneStepActionRequest request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 }

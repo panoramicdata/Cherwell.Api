@@ -19,8 +19,6 @@ public interface IService
 	/// <returns>Task of CoreServiceInfoResponse</returns>
 	[Get("/api/V1/serviceinfo")]
 	Task<ServiceInfoResponse> GetServiceInfoAsync(
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -35,8 +33,6 @@ public interface IService
 	/// <returns>Task of void</returns>
 	[Delete("/api/V1/logout")]
 	Task LogoutUserAsync(
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>

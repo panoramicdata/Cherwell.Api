@@ -21,8 +21,6 @@ public interface ICore
 	[Delete("/api/V1/deletegalleryimage/standinkey/{standinkey}")]
 	Task DeleteGalleryImageByStandInKeyAsync(
 		[AliasAs("standinkey")] string standinkey,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -43,8 +41,6 @@ public interface ICore
 		[AliasAs("name")] string name,
 		[AliasAs("width")] int? width,
 		[AliasAs("height")] int? height,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -67,8 +63,6 @@ public interface ICore
 		[AliasAs("scopeowner")] string scopeowner,
 		[AliasAs("folder")] string folder,
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -89,8 +83,6 @@ public interface ICore
 		[AliasAs("scope")] string scope,
 		[AliasAs("scopeowner")] string scopeowner,
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -109,8 +101,6 @@ public interface ICore
 	Task<ManagerData> GetGalleryImagesScopeAsync(
 		[AliasAs("scope")] string scope,
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -127,8 +117,6 @@ public interface ICore
 	[Get("/api/V1/getgalleryimages")]
 	Task<ManagerData> GetGalleryImagesAsync(
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -145,8 +133,6 @@ public interface ICore
 	[Get("/api/V1/getstoredvalue/standinkey/{standInKey}")]
 	Task<StoredValueResponse> GetStoredValueAsync(
 		[AliasAs("standInKey")] string standInKey,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -169,8 +155,6 @@ public interface ICore
 		[AliasAs("scopeowner")] string scopeowner,
 		[AliasAs("folder")] string folder,
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -191,8 +175,6 @@ public interface ICore
 		[AliasAs("scope")] string scope,
 		[AliasAs("scopeowner")] string scopeowner,
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -211,8 +193,6 @@ public interface ICore
 	Task<ManagerData> GetStoredValuesScopeAsync(
 		[AliasAs("scope")] string scope,
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -229,8 +209,6 @@ public interface ICore
 	[Get("/api/V1/storedvalues")]
 	Task<ManagerData> GetStoredValuesAsync(
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -245,8 +223,6 @@ public interface ICore
 	/// <returns>Task of ViewsResponse</returns>
 	[Get("/api/V1/getviews")]
 	Task<ViewsResponse> GetViewsAsync(
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -282,8 +258,6 @@ public interface ICore
 	[Post("/api/V1/savestoredvalue")]
 	Task<StoredValueResponse> SaveStoredValueAsync(
 		[Body] SaveStoredValueRequest request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -300,7 +274,5 @@ public interface ICore
 	[Put("/api/V1/setculture/culturecode/{culturecode}")]
 	Task<string> SetCultureAsync(
 		[AliasAs("culturecode")] string culturecode,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 }

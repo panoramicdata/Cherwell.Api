@@ -21,8 +21,6 @@ public interface IQueues
 	[Post("/api/V1/additemtoqueue")]
 	Task<AddItemToQueueResponse> AddItemToQueueAsync(
 		[Body] AddItemToQueueRequest request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -39,8 +37,6 @@ public interface IQueues
 	[Post("/api/V1/checkinqueueitem")]
 	Task<CheckInQueueItemResponse> CheckInQueueItemAsync(
 		[Body] CheckInQueueItemRequest request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -57,8 +53,6 @@ public interface IQueues
 	[Post("/api/V1/checkoutqueueitem")]
 	Task<CheckOutQueueItemResponse> CheckOutQueueItemAsync(
 		[Body] CheckOutQueueItemRequest request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -81,8 +75,6 @@ public interface IQueues
 		[AliasAs("scopeowner")] string scopeowner,
 		[AliasAs("folder")] string folder,
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -103,8 +95,6 @@ public interface IQueues
 		[AliasAs("scope")] string scope,
 		[AliasAs("scopeowner")] string scopeowner,
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -123,8 +113,6 @@ public interface IQueues
 	Task<ManagerData> GetQueuesScopeAsync(
 		[AliasAs("scope")] string scope,
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -141,8 +129,6 @@ public interface IQueues
 	[Get("/api/V1/getqueues")]
 	Task<ManagerData> GetQueuesAsync(
 		[AliasAs("links")] bool? links,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -159,7 +145,5 @@ public interface IQueues
 	[Post("/api/V1/removeitemfromqueue")]
 	Task<RemoveItemFromQueueResponse> RemoveItemFromQueueAsync(
 		[Body] RemoveItemFromQueueRequest request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 }

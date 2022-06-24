@@ -41,8 +41,6 @@ public interface IBusinessObject
 	Task<DeleteResponse> DeleteBusinessObjectByPublicIdAsync(
 		[AliasAs("busobid")] string busobid,
 		[AliasAs("publicid")] string publicid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -61,8 +59,6 @@ public interface IBusinessObject
 	Task<DeleteResponse> DeleteBusinessObjectByRecIdAsync(
 		[AliasAs("busobid")] string busobid,
 		[AliasAs("busobrecid")] string busobrecid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -85,8 +81,6 @@ public interface IBusinessObject
 		[AliasAs("parentbusobrecid")] string parentbusobrecid,
 		[AliasAs("relationshipid")] string relationshipid,
 		[AliasAs("publicid")] string publicid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -109,8 +103,6 @@ public interface IBusinessObject
 		[AliasAs("parentbusobrecid")] string parentbusobrecid,
 		[AliasAs("relationshipid")] string relationshipid,
 		[AliasAs("busobrecid")] string busobrecid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -127,8 +119,6 @@ public interface IBusinessObject
 	[Post("/api/V1/fieldvalueslookup")]
 	Task<FieldValuesLookupResponse> BusinessObjectFieldValuesLookupAsync(
 		[Body] FieldValuesLookupRequest request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -153,8 +143,6 @@ public interface IBusinessObject
 		[AliasAs("pageSize")] int? pageSize,
 		[AliasAs("pageNumber")] int? pageNumber,
 		[AliasAs("activityType")] string activityType,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -175,8 +163,6 @@ public interface IBusinessObject
 		[AliasAs("attachmentid")] string attachmentid,
 		[AliasAs("busobid")] string busobid,
 		[AliasAs("busobrecid")] string busobrecid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -201,8 +187,6 @@ public interface IBusinessObject
 		[AliasAs("type")] string type,
 		[AliasAs("attachmenttype")] string attachmenttype,
 		[AliasAs("includelinks")] bool? includelinks,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -227,8 +211,6 @@ public interface IBusinessObject
 		[AliasAs("type")] string type,
 		[AliasAs("attachmenttype")] string attachmenttype,
 		[AliasAs("includelinks")] bool? includelinks,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -253,8 +235,6 @@ public interface IBusinessObject
 		[AliasAs("type")] string type,
 		[AliasAs("attachmenttype")] string attachmenttype,
 		[AliasAs("includelinks")] bool? includelinks,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -279,8 +259,6 @@ public interface IBusinessObject
 		[AliasAs("type")] string type,
 		[AliasAs("attachmenttype")] string attachmenttype,
 		[AliasAs("includelinks")] bool? includelinks,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -297,8 +275,6 @@ public interface IBusinessObject
 	[Post("/api/V1/getbusinessobjectattachments")]
 	Task<AttachmentsResponse> GetBusinessObjectAttachmentsAsync(
 		[Body] AttachmentsRequest attachmentsRequest,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -315,8 +291,6 @@ public interface IBusinessObject
 	[Post("/api/V1/getbusinessobjectbatch")]
 	Task<BatchReadResponse> GetBusinessObjectBatchAsync(
 		[Body] BatchReadRequest request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -335,8 +309,6 @@ public interface IBusinessObject
 	Task<ReadResponse> GetBusinessObjectByPublicIdAsync(
 		[AliasAs("busobid")] string busobid,
 		[AliasAs("publicid")] string publicid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -355,8 +327,6 @@ public interface IBusinessObject
 	Task<ReadResponse> GetBusinessObjectByRecIdAsync(
 		[AliasAs("busobid")] string busobid,
 		[AliasAs("busobrecid")] string busobrecid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -375,8 +345,6 @@ public interface IBusinessObject
 	Task<BarcodeLookupResponse> GetBusinessObjectByScanCodeBusObIdAsync(
 		[AliasAs("scanCode")] string scanCode,
 		[AliasAs("busobid")] string busobid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -395,8 +363,6 @@ public interface IBusinessObject
 	Task<BarcodeLookupResponse> GetBusinessObjectByScanCodeBusObNameAsync(
 		[AliasAs("scanCode")] string scanCode,
 		[AliasAs("busobname")] string busobname,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -415,8 +381,6 @@ public interface IBusinessObject
 	Task<SchemaResponse> GetBusinessObjectSchemaAsync(
 		[AliasAs("busobId")] string busobId,
 		[AliasAs("includerelationships")] bool? includerelationships,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -433,8 +397,6 @@ public interface IBusinessObject
 	[Get("/api/V1/getbusinessobjectsummaries/type/{type}")]
 	Task<List<Summary>> GetBusinessObjectSummariesAsync(
 		[AliasAs("type")] string type,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -451,8 +413,6 @@ public interface IBusinessObject
 	[Get("/api/V1/getbusinessobjectsummary/busobid/{busobid}")]
 	Task<List<Summary>> GetBusinessObjectSummaryByIdAsync(
 		[AliasAs("busobid")] string busobid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -469,8 +429,6 @@ public interface IBusinessObject
 	[Get("/api/V1/getbusinessobjectsummary/busobname/{busobname}")]
 	Task<List<Summary>> GetBusinessObjectSummaryByNameAsync(
 		[AliasAs("busobname")] string busobname,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -487,8 +445,6 @@ public interface IBusinessObject
 	[Post("/api/V1/getbusinessobjecttemplate")]
 	Task<TemplateResponse> GetBusinessObjectTemplateAsync(
 		[Body] TemplateRequest request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -507,8 +463,6 @@ public interface IBusinessObject
 	Task<RelatedBusinessObjectResponse> GetRelatedBusinessObjectByRequestAsync(
 		[Body] RelatedBusinessObjectRequest relatedBusinessObjectRequest,
 		[AliasAs("includelinks")] bool? includelinks,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -539,8 +493,6 @@ public interface IBusinessObject
 		[AliasAs("allfields")] bool? allfields,
 		[AliasAs("usedefaultgrid")] bool? usedefaultgrid,
 		[AliasAs("includelinks")] bool? includelinks,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -569,8 +521,6 @@ public interface IBusinessObject
 		[AliasAs("pageNumber")] int? pageNumber,
 		[AliasAs("pageSize")] int? pageSize,
 		[AliasAs("includelinks")] bool? includelinks,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -595,8 +545,6 @@ public interface IBusinessObject
 		[AliasAs("relationshipid")] string relationshipid,
 		[AliasAs("busobid")] string busobid,
 		[AliasAs("busobrecid")] string busobrecid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -621,8 +569,6 @@ public interface IBusinessObject
 		[AliasAs("relationshipid")] string relationshipid,
 		[AliasAs("busobid")] string busobid,
 		[AliasAs("busobrecid")] string busobrecid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -643,8 +589,6 @@ public interface IBusinessObject
 		[AliasAs("attachmentid")] string attachmentid,
 		[AliasAs("busobid")] string busobid,
 		[AliasAs("publicid")] string publicid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -665,8 +609,6 @@ public interface IBusinessObject
 		[AliasAs("attachmentid")] string attachmentid,
 		[AliasAs("busobid")] string busobid,
 		[AliasAs("busobrecid")] string busobrecid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -687,8 +629,6 @@ public interface IBusinessObject
 		[AliasAs("attachmentid")] string attachmentid,
 		[AliasAs("busobname")] string busobname,
 		[AliasAs("publicid")] string publicid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -709,8 +649,6 @@ public interface IBusinessObject
 		[AliasAs("attachmentid")] string attachmentid,
 		[AliasAs("busobname")] string busobname,
 		[AliasAs("busobrecid")] string busobrecid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -727,8 +665,6 @@ public interface IBusinessObject
 	[Put("/api/V1/savebusinessobjectattachmentbusob")]
 	Task<AttachmentsResponse> SaveBusinessObjectAttachmentBusObAsync(
 		[Body] SaveBusObAttachmentRequest request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -745,8 +681,6 @@ public interface IBusinessObject
 	[Put("/api/V1/savebusinessobjectattachmentlink")]
 	Task<AttachmentsResponse> SaveBusinessObjectAttachmentLinkAsync(
 		[Body] SaveLinkAttachmentRequest request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -763,8 +697,6 @@ public interface IBusinessObject
 	[Put("/api/V1/savebusinessobjectattachmenturl")]
 	Task<AttachmentsResponse> SaveBusinessObjectAttachmentUrlAsync(
 		[Body] SaveUrlAttachmentRequest request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -781,8 +713,6 @@ public interface IBusinessObject
 	[Post("/api/V1/savebusinessobjectbatch")]
 	Task<BatchSaveResponse> SaveBusinessObjectBatchAsync(
 		[Body] BatchSaveRequest request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -799,8 +729,6 @@ public interface IBusinessObject
 	[Post("/api/V1/savebusinessobject")]
 	Task<SaveResponse> SaveBusinessObjectAsync(
 		[Body] SaveRequest request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -817,8 +745,6 @@ public interface IBusinessObject
 	[Post("/api/V1/saverelatedbusinessobject")]
 	Task<RelatedSaveResponse> SaveRelatedBusinessObjectAsync(
 		[Body] RelatedSaveRequest request,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -843,8 +769,6 @@ public interface IBusinessObject
 		[AliasAs("relationshipid")] string relationshipid,
 		[AliasAs("busobid")] string busobid,
 		[AliasAs("busobrecid")] string busobrecid,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -875,8 +799,6 @@ public interface IBusinessObject
 		[AliasAs("totalsize")] int? totalsize,
 		[AliasAs("attachmentid")] string attachmentid,
 		[AliasAs("displaytext")] string displaytext,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -907,8 +829,6 @@ public interface IBusinessObject
 		[AliasAs("totalsize")] int? totalsize,
 		[AliasAs("attachmentid")] string attachmentid,
 		[AliasAs("displaytext")] string displaytext,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -939,8 +859,6 @@ public interface IBusinessObject
 		[AliasAs("totalsize")] int? totalsize,
 		[AliasAs("attachmentid")] string attachmentid,
 		[AliasAs("displaytext")] string displaytext,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 
 	/// <summary>
@@ -971,7 +889,5 @@ public interface IBusinessObject
 		[AliasAs("totalsize")] int? totalsize,
 		[AliasAs("attachmentid")] string attachmentid,
 		[AliasAs("displaytext")] string displaytext,
-		[AliasAs("lang")] string? lang = null,
-		[AliasAs("locale")] string? locale = null,
 		CancellationToken cancellationToken = default);
 }
