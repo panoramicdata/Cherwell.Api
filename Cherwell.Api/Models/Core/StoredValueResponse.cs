@@ -13,7 +13,7 @@ namespace Cherwell.Api.Models.Core;
 public partial class StoredValueResponse : IEquatable<StoredValueResponse>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets StoredValueType
+	/// StoredValueType
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum EnumStoredValueType
@@ -75,13 +75,13 @@ public partial class StoredValueResponse : IEquatable<StoredValueResponse>, IVal
 	}
 
 	/// <summary>
-	/// Gets or Sets StoredValueType
+	/// StoredValueType
 	/// </summary>
 	[DataMember(Name = "storedValueType", EmitDefaultValue = false)]
 	public EnumStoredValueType? StoredValueType { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HttpStatusCode
+	/// HttpStatusCode
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
@@ -120,67 +120,67 @@ public partial class StoredValueResponse : IEquatable<StoredValueResponse>, IVal
 	}
 
 	/// <summary>
-	/// Gets or Sets Description
+	/// Description
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
 	public string Description { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Folder
+	/// Folder
 	/// </summary>
 	[DataMember(Name = "folder", EmitDefaultValue = false)]
 	public string Folder { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Id
+	/// Id
 	/// </summary>
 	[DataMember(Name = "id", EmitDefaultValue = false)]
 	public string Id { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Name
+	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Scope
+	/// Scope
 	/// </summary>
 	[DataMember(Name = "scope", EmitDefaultValue = false)]
 	public string Scope { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ScopeOwner
+	/// ScopeOwner
 	/// </summary>
 	[DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
 	public string ScopeOwner { get; set; }
 
 	/// <summary>
-	/// Gets or Sets StandInKey
+	/// StandInKey
 	/// </summary>
 	[DataMember(Name = "standInKey", EmitDefaultValue = false)]
 	public string StandInKey { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Value
+	/// Value
 	/// </summary>
 	[DataMember(Name = "value", EmitDefaultValue = false)]
 	public string Value { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorCode
+	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorMessage
+	/// ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasError
+	/// HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }

@@ -29,31 +29,31 @@ public partial class TemplateRequest : IEquatable<TemplateRequest>, IValidatable
 	}
 
 	/// <summary>
-	/// Gets or Sets BusObId
+	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets FieldNames
+	/// FieldNames
 	/// </summary>
 	[DataMember(Name = "fieldNames", EmitDefaultValue = false)]
 	public List<string> FieldNames { get; set; }
 
 	/// <summary>
-	/// Gets or Sets FieldIds
+	/// FieldIds
 	/// </summary>
 	[DataMember(Name = "fieldIds", EmitDefaultValue = false)]
 	public List<string> FieldIds { get; set; }
 
 	/// <summary>
-	/// Gets or Sets IncludeAll
+	/// IncludeAll
 	/// </summary>
 	[DataMember(Name = "includeAll", EmitDefaultValue = false)]
 	public bool? IncludeAll { get; set; }
 
 	/// <summary>
-	/// Gets or Sets IncludeRequired
+	/// IncludeRequired
 	/// </summary>
 	[DataMember(Name = "includeRequired", EmitDefaultValue = false)]
 	public bool? IncludeRequired { get; set; }

@@ -43,73 +43,73 @@ public partial class BusObActivity : IEquatable<BusObActivity>, IValidatableObje
 	}
 
 	/// <summary>
-	/// Gets or Sets Id
+	/// Id
 	/// </summary>
 	[DataMember(Name = "id", EmitDefaultValue = false)]
 	public string Id { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ParentBusObDefId
+	/// ParentBusObDefId
 	/// </summary>
 	[DataMember(Name = "parentBusObDefId", EmitDefaultValue = false)]
 	public string ParentBusObDefId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ParentBusObRecId
+	/// ParentBusObRecId
 	/// </summary>
 	[DataMember(Name = "parentBusObRecId", EmitDefaultValue = false)]
 	public string ParentBusObRecId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HistoryBusObDefId
+	/// HistoryBusObDefId
 	/// </summary>
 	[DataMember(Name = "historyBusObDefId", EmitDefaultValue = false)]
 	public string HistoryBusObDefId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HistoryBusObRecId
+	/// HistoryBusObRecId
 	/// </summary>
 	[DataMember(Name = "historyBusObRecId", EmitDefaultValue = false)]
 	public string HistoryBusObRecId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Type
+	/// Type
 	/// </summary>
 	[DataMember(Name = "type", EmitDefaultValue = false)]
 	public string Type { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Title
+	/// Title
 	/// </summary>
 	[DataMember(Name = "title", EmitDefaultValue = false)]
 	public string Title { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Body
+	/// Body
 	/// </summary>
 	[DataMember(Name = "body", EmitDefaultValue = false)]
 	public string Body { get; set; }
 
 	/// <summary>
-	/// Gets or Sets CreatedBy
+	/// CreatedBy
 	/// </summary>
 	[DataMember(Name = "createdBy", EmitDefaultValue = false)]
 	public string CreatedBy { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Created
+	/// Created
 	/// </summary>
 	[DataMember(Name = "created", EmitDefaultValue = false)]
 	public DateTime? Created { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Modified
+	/// Modified
 	/// </summary>
 	[DataMember(Name = "modified", EmitDefaultValue = false)]
 	public DateTime? Modified { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ModifiedBy
+	/// ModifiedBy
 	/// </summary>
 	[DataMember(Name = "modifiedBy", EmitDefaultValue = false)]
 	public string ModifiedBy { get; set; }

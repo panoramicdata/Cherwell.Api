@@ -5,7 +5,7 @@ using System.Text.Json.Serialization;
 namespace Cherwell.Api.Models;
 
 /// <summary>
-/// Gets or Sets HttpStatusCode
+/// HttpStatusCode
 /// </summary>
 [JsonConverter(typeof(StringEnumConverter))]
 public enum EnumHttpStatusCode

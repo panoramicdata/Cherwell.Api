@@ -12,7 +12,7 @@ namespace Cherwell.Api.Models.Lifecycle;
 public partial class GetRecordStatusResponse : IEquatable<GetRecordStatusResponse>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets HttpStatusCode
+	/// HttpStatusCode
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
@@ -37,31 +37,31 @@ public partial class GetRecordStatusResponse : IEquatable<GetRecordStatusRespons
 	}
 
 	/// <summary>
-	/// Gets or Sets Id
+	/// Id
 	/// </summary>
 	[DataMember(Name = "id", EmitDefaultValue = false)]
 	public string Id { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Name
+	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorCode
+	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorMessage
+	/// ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasError
+	/// HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }

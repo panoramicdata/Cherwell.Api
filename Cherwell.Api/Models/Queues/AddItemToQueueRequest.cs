@@ -25,23 +25,20 @@ public partial class AddItemToQueueRequest : IEquatable<AddItemToQueueRequest>, 
 	}
 
 	/// <summary>
-	/// Gets or Sets BusObId
+	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
-
 	/// <summary>
-	/// Gets or Sets BusObRecId
+	/// BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; }
-
 	/// <summary>
-	/// Gets or Sets QueueStandInKey
+	/// QueueStandInKey
 	/// </summary>
 	[DataMember(Name = "queueStandInKey", EmitDefaultValue = false)]
 	public string QueueStandInKey { get; set; }
-
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

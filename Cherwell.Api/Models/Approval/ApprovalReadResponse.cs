@@ -12,7 +12,7 @@ namespace Cherwell.Api.Models.Approval;
 public partial class ApprovalReadResponse : IEquatable<ApprovalReadResponse>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets HttpStatusCode
+	/// HttpStatusCode
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
@@ -43,31 +43,31 @@ public partial class ApprovalReadResponse : IEquatable<ApprovalReadResponse>, IV
 	}
 
 	/// <summary>
-	/// Gets or Sets properties
+	/// properties
 	/// </summary>
 	[DataMember(Name = "properties", EmitDefaultValue = false)]
 	public Dictionary<string, object> Properties { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Links
+	/// Links
 	/// </summary>
 	[DataMember(Name = "links", EmitDefaultValue = false)]
 	public List<Link> Links { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorCode
+	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorMessage
+	/// ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasError
+	/// HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }

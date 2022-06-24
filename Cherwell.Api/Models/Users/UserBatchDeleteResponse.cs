@@ -21,7 +21,7 @@ public partial class UserBatchDeleteResponse : IEquatable<UserBatchDeleteRespons
 	}
 
 	/// <summary>
-	/// Gets or Sets Responses
+	/// Responses
 	/// </summary>
 	[DataMember(Name = "responses", EmitDefaultValue = false)]
 	public List<UserDeleteResponse> Responses { get; set; }

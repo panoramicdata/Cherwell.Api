@@ -35,49 +35,49 @@ public partial class PromptValue : IEquatable<PromptValue>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets BusObId
+	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets CollectionStoreEntireRow
+	/// CollectionStoreEntireRow
 	/// </summary>
 	[DataMember(Name = "collectionStoreEntireRow", EmitDefaultValue = false)]
 	public string CollectionStoreEntireRow { get; set; }
 
 	/// <summary>
-	/// Gets or Sets CollectionValueField
+	/// CollectionValueField
 	/// </summary>
 	[DataMember(Name = "collectionValueField", EmitDefaultValue = false)]
 	public string CollectionValueField { get; set; }
 
 	/// <summary>
-	/// Gets or Sets FieldId
+	/// FieldId
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
 	public string FieldId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ListReturnFieldId
+	/// ListReturnFieldId
 	/// </summary>
 	[DataMember(Name = "listReturnFieldId", EmitDefaultValue = false)]
 	public string ListReturnFieldId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets PromptId
+	/// PromptId
 	/// </summary>
 	[DataMember(Name = "promptId", EmitDefaultValue = false)]
 	public string PromptId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Value
+	/// Value
 	/// </summary>
 	[DataMember(Name = "value", EmitDefaultValue = false)]
 	public Object Value { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ValueIsRecId
+	/// ValueIsRecId
 	/// </summary>
 	[DataMember(Name = "valueIsRecId", EmitDefaultValue = false)]
 	public bool? ValueIsRecId { get; set; }

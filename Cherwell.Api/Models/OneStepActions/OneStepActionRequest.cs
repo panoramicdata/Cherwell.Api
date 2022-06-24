@@ -29,31 +29,31 @@ public partial class OneStepActionRequest : IEquatable<OneStepActionRequest>, IV
 	}
 
 	/// <summary>
-	/// Gets or Sets AcquireLicense
+	/// AcquireLicense
 	/// </summary>
 	[DataMember(Name = "acquireLicense", EmitDefaultValue = false)]
 	public bool? AcquireLicense { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObId
+	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObRecId
+	/// BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets OneStepActionStandInKey
+	/// OneStepActionStandInKey
 	/// </summary>
 	[DataMember(Name = "oneStepActionStandInKey", EmitDefaultValue = false)]
 	public string OneStepActionStandInKey { get; set; }
 
 	/// <summary>
-	/// Gets or Sets PromptValues
+	/// PromptValues
 	/// </summary>
 	[DataMember(Name = "promptValues", EmitDefaultValue = false)]
 	public List<SimplePromptValue> PromptValues { get; set; }

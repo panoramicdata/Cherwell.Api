@@ -13,7 +13,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 public partial class SaveRequest : IEquatable<SaveRequest>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets CacheScope
+	/// CacheScope
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum EnumCacheScope
@@ -39,7 +39,7 @@ public partial class SaveRequest : IEquatable<SaveRequest>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets CacheScope
+	/// CacheScope
 	/// </summary>
 	[DataMember(Name = "cacheScope", EmitDefaultValue = false)]
 	public EnumCacheScope? CacheScope { get; set; }
@@ -66,37 +66,37 @@ public partial class SaveRequest : IEquatable<SaveRequest>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets BusObId
+	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObPublicId
+	/// BusObPublicId
 	/// </summary>
 	[DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
 	public string BusObPublicId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObRecId
+	/// BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets CacheKey
+	/// CacheKey
 	/// </summary>
 	[DataMember(Name = "cacheKey", EmitDefaultValue = false)]
 	public string CacheKey { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Fields
+	/// Fields
 	/// </summary>
 	[DataMember(Name = "fields", EmitDefaultValue = false)]
 	public List<FieldTemplateItem> Fields { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Persist
+	/// Persist
 	/// </summary>
 	[DataMember(Name = "persist", EmitDefaultValue = false)]
 	public bool? Persist { get; set; }

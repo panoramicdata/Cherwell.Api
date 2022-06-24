@@ -12,7 +12,7 @@ namespace Cherwell.Api.Models.Searches;
 public partial class SearchResultsResponse : IEquatable<SearchResultsResponse>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets HttpStatusCode
+	/// HttpStatusCode
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
@@ -49,67 +49,67 @@ public partial class SearchResultsResponse : IEquatable<SearchResultsResponse>, 
 	}
 
 	/// <summary>
-	/// Gets or Sets BusinessObjects
+	/// BusinessObjects
 	/// </summary>
 	[DataMember(Name = "businessObjects", EmitDefaultValue = false)]
 	public List<ReadResponse> BusinessObjects { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasPrompts
+	/// HasPrompts
 	/// </summary>
 	[DataMember(Name = "hasPrompts", EmitDefaultValue = false)]
 	public bool? HasPrompts { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Links
+	/// Links
 	/// </summary>
 	[DataMember(Name = "links", EmitDefaultValue = false)]
 	public List<Link> Links { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Prompts
+	/// Prompts
 	/// </summary>
 	[DataMember(Name = "prompts", EmitDefaultValue = false)]
 	public List<Prompt> Prompts { get; set; }
 
 	/// <summary>
-	/// Gets or Sets SearchResultsFields
+	/// SearchResultsFields
 	/// </summary>
 	[DataMember(Name = "searchResultsFields", EmitDefaultValue = false)]
 	public List<Field> SearchResultsFields { get; set; }
 
 	/// <summary>
-	/// Gets or Sets SimpleResults
+	/// SimpleResults
 	/// </summary>
 	[DataMember(Name = "simpleResults", EmitDefaultValue = false)]
 	public SimpleResultsList SimpleResults { get; set; }
 
 	/// <summary>
-	/// Gets or Sets TotalRows
+	/// TotalRows
 	/// </summary>
 	[DataMember(Name = "totalRows", EmitDefaultValue = false)]
 	public long? TotalRows { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasMoreRecords
+	/// HasMoreRecords
 	/// </summary>
 	[DataMember(Name = "hasMoreRecords", EmitDefaultValue = false)]
 	public bool? HasMoreRecords { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorCode
+	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorMessage
+	/// ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasError
+	/// HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }

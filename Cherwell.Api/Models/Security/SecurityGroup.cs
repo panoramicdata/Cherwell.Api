@@ -25,19 +25,19 @@ public partial class SecurityGroup : IEquatable<SecurityGroup>, IValidatableObje
 	}
 
 	/// <summary>
-	/// Gets or Sets Description
+	/// Description
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
 	public string Description { get; set; }
 
 	/// <summary>
-	/// Gets or Sets GroupId
+	/// GroupId
 	/// </summary>
 	[DataMember(Name = "groupId", EmitDefaultValue = false)]
 	public string GroupId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets GroupName
+	/// GroupName
 	/// </summary>
 	[DataMember(Name = "groupName", EmitDefaultValue = false)]
 	public string GroupName { get; set; }

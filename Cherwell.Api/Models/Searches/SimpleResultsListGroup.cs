@@ -12,7 +12,7 @@ namespace Cherwell.Api.Models.Searches;
 public partial class SimpleResultsListGroup : IEquatable<SimpleResultsListGroup>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets HttpStatusCode
+	/// HttpStatusCode
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
@@ -43,49 +43,49 @@ public partial class SimpleResultsListGroup : IEquatable<SimpleResultsListGroup>
 	}
 
 	/// <summary>
-	/// Gets or Sets IsBusObTarget
+	/// IsBusObTarget
 	/// </summary>
 	[DataMember(Name = "isBusObTarget", EmitDefaultValue = false)]
 	public bool? IsBusObTarget { get; set; }
 
 	/// <summary>
-	/// Gets or Sets SimpleResultsListItems
+	/// SimpleResultsListItems
 	/// </summary>
 	[DataMember(Name = "simpleResultsListItems", EmitDefaultValue = false)]
 	public List<SimpleResultsListItem> SimpleResultsListItems { get; set; }
 
 	/// <summary>
-	/// Gets or Sets SubTitle
+	/// SubTitle
 	/// </summary>
 	[DataMember(Name = "subTitle", EmitDefaultValue = false)]
 	public string SubTitle { get; set; }
 
 	/// <summary>
-	/// Gets or Sets TargetId
+	/// TargetId
 	/// </summary>
 	[DataMember(Name = "targetId", EmitDefaultValue = false)]
 	public string TargetId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Title
+	/// Title
 	/// </summary>
 	[DataMember(Name = "title", EmitDefaultValue = false)]
 	public string Title { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorCode
+	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorMessage
+	/// ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasError
+	/// HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }

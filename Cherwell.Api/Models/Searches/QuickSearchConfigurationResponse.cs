@@ -12,7 +12,7 @@ namespace Cherwell.Api.Models.Searches;
 public partial class QuickSearchConfigurationResponse : IEquatable<QuickSearchConfigurationResponse>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets HttpStatusCode
+	/// HttpStatusCode
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
@@ -65,115 +65,115 @@ public partial class QuickSearchConfigurationResponse : IEquatable<QuickSearchCo
 	}
 
 	/// <summary>
-	/// Gets or Sets AllowQuickSearch
+	/// AllowQuickSearch
 	/// </summary>
 	[DataMember(Name = "allowQuickSearch", EmitDefaultValue = false)]
 	public bool? AllowQuickSearch { get; set; }
 
 	/// <summary>
-	/// Gets or Sets AllowSpecificSearch
+	/// AllowSpecificSearch
 	/// </summary>
 	[DataMember(Name = "allowSpecificSearch", EmitDefaultValue = false)]
 	public bool? AllowSpecificSearch { get; set; }
 
 	/// <summary>
-	/// Gets or Sets DefaultToQuickSearch
+	/// DefaultToQuickSearch
 	/// </summary>
 	[DataMember(Name = "defaultToQuickSearch", EmitDefaultValue = false)]
 	public bool? DefaultToQuickSearch { get; set; }
 
 	/// <summary>
-	/// Gets or Sets DisplayName
+	/// DisplayName
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; }
 
 	/// <summary>
-	/// Gets or Sets GalleryImage
+	/// GalleryImage
 	/// </summary>
 	[DataMember(Name = "galleryImage", EmitDefaultValue = false)]
 	public string GalleryImage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets History
+	/// History
 	/// </summary>
 	[DataMember(Name = "history", EmitDefaultValue = false)]
 	public List<string> History { get; set; }
 
 	/// <summary>
-	/// Gets or Sets IncludeAvailableInSpecific
+	/// IncludeAvailableInSpecific
 	/// </summary>
 	[DataMember(Name = "includeAvailableInSpecific", EmitDefaultValue = false)]
 	public bool? IncludeAvailableInSpecific { get; set; }
 
 	/// <summary>
-	/// Gets or Sets IncludeQuickSearchInSpecific
+	/// IncludeQuickSearchInSpecific
 	/// </summary>
 	[DataMember(Name = "includeQuickSearchInSpecific", EmitDefaultValue = false)]
 	public bool? IncludeQuickSearchInSpecific { get; set; }
 
 	/// <summary>
-	/// Gets or Sets QuickSearchId
+	/// QuickSearchId
 	/// </summary>
 	[DataMember(Name = "quickSearchId", EmitDefaultValue = false)]
 	public string QuickSearchId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets QuickSearchItems
+	/// QuickSearchItems
 	/// </summary>
 	[DataMember(Name = "quickSearchItems", EmitDefaultValue = false)]
 	public List<QuickSearchItem> QuickSearchItems { get; set; }
 
 	/// <summary>
-	/// Gets or Sets QuickSearchWatermark
+	/// QuickSearchWatermark
 	/// </summary>
 	[DataMember(Name = "quickSearchWatermark", EmitDefaultValue = false)]
 	public string QuickSearchWatermark { get; set; }
 
 	/// <summary>
-	/// Gets or Sets SortByRelevance
+	/// SortByRelevance
 	/// </summary>
 	[DataMember(Name = "sortByRelevance", EmitDefaultValue = false)]
 	public bool? SortByRelevance { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ResolvedQuickSearchWatermark
+	/// ResolvedQuickSearchWatermark
 	/// </summary>
 	[DataMember(Name = "resolvedQuickSearchWatermark", EmitDefaultValue = false)]
 	public string ResolvedQuickSearchWatermark { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Scope
+	/// Scope
 	/// </summary>
 	[DataMember(Name = "scope", EmitDefaultValue = false)]
 	public string Scope { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ScopeOwner
+	/// ScopeOwner
 	/// </summary>
 	[DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
 	public string ScopeOwner { get; set; }
 
 	/// <summary>
-	/// Gets or Sets SpecificSearchItems
+	/// SpecificSearchItems
 	/// </summary>
 	[DataMember(Name = "specificSearchItems", EmitDefaultValue = false)]
 	public List<QuickSearchItem> SpecificSearchItems { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorCode
+	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorMessage
+	/// ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasError
+	/// HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }

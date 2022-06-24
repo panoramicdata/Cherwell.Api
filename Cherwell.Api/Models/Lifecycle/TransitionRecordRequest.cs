@@ -21,7 +21,7 @@ public partial class TransitionRecordRequest : IEquatable<TransitionRecordReques
 	}
 
 	/// <summary>
-	/// Gets or Sets TransitionOptionId
+	/// TransitionOptionId
 	/// </summary>
 	[DataMember(Name = "transitionOptionId", EmitDefaultValue = false)]
 	public string TransitionOptionId { get; set; }

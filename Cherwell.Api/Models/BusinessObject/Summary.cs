@@ -43,73 +43,73 @@ public partial class Summary : IEquatable<Summary>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets FirstRecIdField
+	/// FirstRecIdField
 	/// </summary>
 	[DataMember(Name = "firstRecIdField", EmitDefaultValue = false)]
 	public string FirstRecIdField { get; set; }
 
 	/// <summary>
-	/// Gets or Sets GroupSummaries
+	/// GroupSummaries
 	/// </summary>
 	[DataMember(Name = "groupSummaries", EmitDefaultValue = false)]
 	public List<Summary> GroupSummaries { get; set; }
 
 	/// <summary>
-	/// Gets or Sets RecIdFields
+	/// RecIdFields
 	/// </summary>
 	[DataMember(Name = "recIdFields", EmitDefaultValue = false)]
 	public string RecIdFields { get; set; }
 
 	/// <summary>
-	/// Gets or Sets StateFieldId
+	/// StateFieldId
 	/// </summary>
 	[DataMember(Name = "stateFieldId", EmitDefaultValue = false)]
 	public string StateFieldId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets States
+	/// States
 	/// </summary>
 	[DataMember(Name = "states", EmitDefaultValue = false)]
 	public string States { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObId
+	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets DisplayName
+	/// DisplayName
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Group
+	/// Group
 	/// </summary>
 	[DataMember(Name = "group", EmitDefaultValue = false)]
 	public bool? Group { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Lookup
+	/// Lookup
 	/// </summary>
 	[DataMember(Name = "lookup", EmitDefaultValue = false)]
 	public bool? Lookup { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Major
+	/// Major
 	/// </summary>
 	[DataMember(Name = "major", EmitDefaultValue = false)]
 	public bool? Major { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Name
+	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Supporting
+	/// Supporting
 	/// </summary>
 	[DataMember(Name = "supporting", EmitDefaultValue = false)]
 	public bool? Supporting { get; set; }

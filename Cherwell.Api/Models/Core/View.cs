@@ -25,19 +25,19 @@ public partial class View : IEquatable<View>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets Name
+	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ViewId
+	/// ViewId
 	/// </summary>
 	[DataMember(Name = "viewId", EmitDefaultValue = false)]
 	public string ViewId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Image
+	/// Image
 	/// </summary>
 	[DataMember(Name = "image", EmitDefaultValue = false)]
 	public string Image { get; set; }

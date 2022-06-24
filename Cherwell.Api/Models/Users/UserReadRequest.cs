@@ -23,13 +23,13 @@ public partial class UserReadRequest : IEquatable<UserReadRequest>, IValidatable
 	}
 
 	/// <summary>
-	/// Gets or Sets LoginId
+	/// LoginId
 	/// </summary>
 	[DataMember(Name = "loginId", EmitDefaultValue = false)]
 	public string LoginId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets PublicId
+	/// PublicId
 	/// </summary>
 	[DataMember(Name = "publicId", EmitDefaultValue = false)]
 	public string PublicId { get; set; }

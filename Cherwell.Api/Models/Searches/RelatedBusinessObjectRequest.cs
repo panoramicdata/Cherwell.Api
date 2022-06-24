@@ -41,67 +41,67 @@ public partial class RelatedBusinessObjectRequest : IEquatable<RelatedBusinessOb
 	}
 
 	/// <summary>
-	/// Gets or Sets AllFields
+	/// AllFields
 	/// </summary>
 	[DataMember(Name = "allFields", EmitDefaultValue = false)]
 	public bool? AllFields { get; set; }
 
 	/// <summary>
-	/// Gets or Sets CustomGridId
+	/// CustomGridId
 	/// </summary>
 	[DataMember(Name = "customGridId", EmitDefaultValue = false)]
 	public string CustomGridId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets FieldsList
+	/// FieldsList
 	/// </summary>
 	[DataMember(Name = "fieldsList", EmitDefaultValue = false)]
 	public List<string> FieldsList { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Filters
+	/// Filters
 	/// </summary>
 	[DataMember(Name = "filters", EmitDefaultValue = false)]
 	public List<FilterInfo> Filters { get; set; }
 
 	/// <summary>
-	/// Gets or Sets PageNumber
+	/// PageNumber
 	/// </summary>
 	[DataMember(Name = "pageNumber", EmitDefaultValue = false)]
 	public int? PageNumber { get; set; }
 
 	/// <summary>
-	/// Gets or Sets PageSize
+	/// PageSize
 	/// </summary>
 	[DataMember(Name = "pageSize", EmitDefaultValue = false)]
 	public int? PageSize { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ParentBusObId
+	/// ParentBusObId
 	/// </summary>
 	[DataMember(Name = "parentBusObId", EmitDefaultValue = false)]
 	public string ParentBusObId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ParentBusObRecId
+	/// ParentBusObRecId
 	/// </summary>
 	[DataMember(Name = "parentBusObRecId", EmitDefaultValue = false)]
 	public string ParentBusObRecId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets RelationshipId
+	/// RelationshipId
 	/// </summary>
 	[DataMember(Name = "relationshipId", EmitDefaultValue = false)]
 	public string RelationshipId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Sorting
+	/// Sorting
 	/// </summary>
 	[DataMember(Name = "sorting", EmitDefaultValue = false)]
 	public List<SortInfo> Sorting { get; set; }
 
 	/// <summary>
-	/// Gets or Sets UseDefaultGrid
+	/// UseDefaultGrid
 	/// </summary>
 	[DataMember(Name = "useDefaultGrid", EmitDefaultValue = false)]
 	public bool? UseDefaultGrid { get; set; }

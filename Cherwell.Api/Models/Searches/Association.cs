@@ -23,13 +23,13 @@ public partial class Association : IEquatable<Association>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets BusObId
+	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObName
+	/// BusObName
 	/// </summary>
 	[DataMember(Name = "busObName", EmitDefaultValue = false)]
 	public string BusObName { get; set; }

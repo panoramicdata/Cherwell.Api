@@ -23,13 +23,13 @@ public partial class AddUserToTeamByBatchRequest : IEquatable<AddUserToTeamByBat
 	}
 
 	/// <summary>
-	/// Gets or Sets AddUserToTeamRequests
+	/// AddUserToTeamRequests
 	/// </summary>
 	[DataMember(Name = "addUserToTeamRequests", EmitDefaultValue = false)]
 	public List<AddUserToTeamRequest> AddUserToTeamRequests { get; set; }
 
 	/// <summary>
-	/// Gets or Sets StopOnError
+	/// StopOnError
 	/// </summary>
 	[DataMember(Name = "stopOnError", EmitDefaultValue = false)]
 	public bool? StopOnError { get; set; }

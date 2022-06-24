@@ -64,92 +64,92 @@ public partial class BusinessObjectPermission : IEquatable<BusinessObjectPermiss
 	}
 
 	/// <summary>
-	/// Gets or Sets BusObId
+	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObName
+	/// BusObName
 	/// </summary>
 	[DataMember(Name = "busObName", EmitDefaultValue = false)]
 	public string BusObName { get; set; }
 
 	/// <summary>
-	/// Gets or Sets DepartmentMemberEdit
+	/// DepartmentMemberEdit
 	/// </summary>
 	[DataMember(Name = "departmentMemberEdit", EmitDefaultValue = false)]
 	public bool? DepartmentMemberEdit { get; set; }
 
 	/// <summary>
-	/// Gets or Sets DepartmentMemberView
+	/// DepartmentMemberView
 	/// </summary>
 
 	[DataMember(Name = "departmentMemberView", EmitDefaultValue = false)]
 	public bool? DepartmentMemberView { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Edit
+	/// Edit
 	/// </summary>
 	[DataMember(Name = "edit", EmitDefaultValue = false)]
 	public bool? Edit { get; set; }
 
 	/// <summary>
-	/// Gets or Sets FieldPermissions
+	/// FieldPermissions
 	/// </summary>
 	[DataMember(Name = "fieldPermissions", EmitDefaultValue = false)]
 	public List<FieldPermissiond> FieldPermissions { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ManagerOfOwnerEdit
+	/// ManagerOfOwnerEdit
 	/// </summary>
 	[DataMember(Name = "managerOfOwnerEdit", EmitDefaultValue = false)]
 	public bool? ManagerOfOwnerEdit { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ManagerOfOwnerView
+	/// ManagerOfOwnerView
 	/// </summary>
 	[DataMember(Name = "managerOfOwnerView", EmitDefaultValue = false)]
 	public bool? ManagerOfOwnerView { get; set; }
 
 	/// <summary>
-	/// Gets or Sets OwnerEdit
+	/// OwnerEdit
 	/// </summary>
 	[DataMember(Name = "ownerEdit", EmitDefaultValue = false)]
 	public bool? OwnerEdit { get; set; }
 
 	/// <summary>
-	/// Gets or Sets OwnerView
+	/// OwnerView
 	/// </summary>
 	[DataMember(Name = "ownerView", EmitDefaultValue = false)]
 	public bool? OwnerView { get; set; }
 
 	/// <summary>
-	/// Gets or Sets TeamEdit
+	/// TeamEdit
 	/// </summary>
 	[DataMember(Name = "teamEdit", EmitDefaultValue = false)]
 	public bool? TeamEdit { get; set; }
 
 	/// <summary>
-	/// Gets or Sets TeamManagerOfOwnerEdit
+	/// TeamManagerOfOwnerEdit
 	/// </summary>
 	[DataMember(Name = "teamManagerOfOwnerEdit", EmitDefaultValue = false)]
 	public bool? TeamManagerOfOwnerEdit { get; set; }
 
 	/// <summary>
-	/// Gets or Sets TeamManagerOfOwnerView
+	/// TeamManagerOfOwnerView
 	/// </summary>
 	[DataMember(Name = "teamManagerOfOwnerView", EmitDefaultValue = false)]
 	public bool? TeamManagerOfOwnerView { get; set; }
 
 	/// <summary>
-	/// Gets or Sets TeamView
+	/// TeamView
 	/// </summary>
 	[DataMember(Name = "teamView", EmitDefaultValue = false)]
 	public bool? TeamView { get; set; }
 
 	/// <summary>
-	/// Gets or Sets View
+	/// View
 	/// </summary>
 	[DataMember(Name = "view", EmitDefaultValue = false)]
 	public bool? View { get; set; }

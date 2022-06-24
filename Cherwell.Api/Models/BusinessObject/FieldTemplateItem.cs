@@ -33,43 +33,43 @@ public partial class FieldTemplateItem : IEquatable<FieldTemplateItem>, IValidat
 	}
 
 	/// <summary>
-	/// Gets or Sets Dirty
+	/// Dirty
 	/// </summary>
 	[DataMember(Name = "dirty", EmitDefaultValue = false)]
 	public bool? Dirty { get; set; }
 
 	/// <summary>
-	/// Gets or Sets DisplayName
+	/// DisplayName
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; }
 
 	/// <summary>
-	/// Gets or Sets FieldId
+	/// FieldId
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
 	public string FieldId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets FullFieldId
+	/// FullFieldId
 	/// </summary>
 	[DataMember(Name = "fullFieldId", EmitDefaultValue = false)]
 	public string FullFieldId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Html
+	/// Html
 	/// </summary>
 	[DataMember(Name = "html", EmitDefaultValue = false)]
 	public string Html { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Name
+	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Value
+	/// Value
 	/// </summary>
 	[DataMember(Name = "value", EmitDefaultValue = false)]
 	public string Value { get; set; }

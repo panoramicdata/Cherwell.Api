@@ -25,19 +25,19 @@ public partial class GridDefinition : IEquatable<GridDefinition>, IValidatableOb
 	}
 
 	/// <summary>
-	/// Gets or Sets GridId
+	/// GridId
 	/// </summary>
 	[DataMember(Name = "gridId", EmitDefaultValue = false)]
 	public string GridId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Name
+	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
 
 	/// <summary>
-	/// Gets or Sets DisplayName
+	/// DisplayName
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; }

@@ -23,13 +23,13 @@ public partial class UserBatchSaveRequest : IEquatable<UserBatchSaveRequest>, IV
 	}
 
 	/// <summary>
-	/// Gets or Sets SaveRequests
+	/// SaveRequests
 	/// </summary>
 	[DataMember(Name = "saveRequests", EmitDefaultValue = false)]
 	public List<UserSaveRequest> SaveRequests { get; set; }
 
 	/// <summary>
-	/// Gets or Sets StopOnError
+	/// StopOnError
 	/// </summary>
 	[DataMember(Name = "stopOnError", EmitDefaultValue = false)]
 	public bool? StopOnError { get; set; }

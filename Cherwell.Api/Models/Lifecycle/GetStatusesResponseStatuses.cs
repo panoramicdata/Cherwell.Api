@@ -27,25 +27,25 @@ public partial class GetStatusesResponseStatuses : IEquatable<GetStatusesRespons
 	}
 
 	/// <summary>
-	/// Gets or Sets Id
+	/// Id
 	/// </summary>
 	[DataMember(Name = "id", EmitDefaultValue = false)]
 	public string Id { get; set; }
 
 	/// <summary>
-	/// Gets or Sets IsInitial
+	/// IsInitial
 	/// </summary>
 	[DataMember(Name = "isInitial", EmitDefaultValue = false)]
 	public bool? IsInitial { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Name
+	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
 
 	/// <summary>
-	/// Gets or Sets StageId
+	/// StageId
 	/// </summary>
 	[DataMember(Name = "stageId", EmitDefaultValue = false)]
 	public string StageId { get; set; }

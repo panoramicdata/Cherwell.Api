@@ -12,7 +12,7 @@ namespace Cherwell.Api.Models.Security;
 public partial class SecurityRightCategoriesResponse : IEquatable<SecurityRightCategoriesResponse>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets HttpStatusCode
+	/// HttpStatusCode
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
@@ -35,25 +35,25 @@ public partial class SecurityRightCategoriesResponse : IEquatable<SecurityRightC
 	}
 
 	/// <summary>
-	/// Gets or Sets RightCategories
+	/// RightCategories
 	/// </summary>
 	[DataMember(Name = "rightCategories", EmitDefaultValue = false)]
 	public List<RightCategory> RightCategories { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorCode
+	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorMessage
+	/// ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasError
+	/// HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }

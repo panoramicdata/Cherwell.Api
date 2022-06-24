@@ -59,121 +59,121 @@ public partial class FieldDefinition : IEquatable<FieldDefinition>, IValidatable
 	}
 
 	/// <summary>
-	/// Gets or Sets AutoFill
+	/// AutoFill
 	/// </summary>
 	[DataMember(Name = "autoFill", EmitDefaultValue = false)]
 	public bool? AutoFill { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Calculated
+	/// Calculated
 	/// </summary>
 	[DataMember(Name = "calculated", EmitDefaultValue = false)]
 	public bool? Calculated { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Category
+	/// Category
 	/// </summary>
 	[DataMember(Name = "category", EmitDefaultValue = false)]
 	public string Category { get; set; }
 
 	/// <summary>
-	/// Gets or Sets DecimalDigits
+	/// DecimalDigits
 	/// </summary>
 	[DataMember(Name = "decimalDigits", EmitDefaultValue = false)]
 	public int? DecimalDigits { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Description
+	/// Description
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
 	public string Description { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Details
+	/// Details
 	/// </summary>
 	[DataMember(Name = "details", EmitDefaultValue = false)]
 	public string Details { get; set; }
 
 	/// <summary>
-	/// Gets or Sets DisplayName
+	/// DisplayName
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Enabled
+	/// Enabled
 	/// </summary>
 	[DataMember(Name = "enabled", EmitDefaultValue = false)]
 	public bool? Enabled { get; set; }
 
 	/// <summary>
-	/// Gets or Sets FieldId
+	/// FieldId
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
 	public string FieldId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasDate
+	/// HasDate
 	/// </summary>
 	[DataMember(Name = "hasDate", EmitDefaultValue = false)]
 	public bool? HasDate { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasTime
+	/// HasTime
 	/// </summary>
 	[DataMember(Name = "hasTime", EmitDefaultValue = false)]
 	public bool? HasTime { get; set; }
 
 	/// <summary>
-	/// Gets or Sets IsFullTextSearchable
+	/// IsFullTextSearchable
 	/// </summary>
 	[DataMember(Name = "isFullTextSearchable", EmitDefaultValue = false)]
 	public bool? IsFullTextSearchable { get; set; }
 
 	/// <summary>
-	/// Gets or Sets MaximumSize
+	/// MaximumSize
 	/// </summary>
 	[DataMember(Name = "maximumSize", EmitDefaultValue = false)]
 	public string MaximumSize { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Name
+	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
 
 	/// <summary>
-	/// Gets or Sets _ReadOnly
+	/// _ReadOnly
 	/// </summary>
 	[DataMember(Name = "readOnly", EmitDefaultValue = false)]
 	public bool? ReadOnly { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Required
+	/// Required
 	/// </summary>
 	[DataMember(Name = "required", EmitDefaultValue = false)]
 	public bool? Required { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Type
+	/// Type
 	/// </summary>
 	[DataMember(Name = "type", EmitDefaultValue = false)]
 	public string Type { get; set; }
 
 	/// <summary>
-	/// Gets or Sets TypeLocalized
+	/// TypeLocalized
 	/// </summary>
 	[DataMember(Name = "typeLocalized", EmitDefaultValue = false)]
 	public string TypeLocalized { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Validated
+	/// Validated
 	/// </summary>
 	[DataMember(Name = "validated", EmitDefaultValue = false)]
 	public bool? Validated { get; set; }
 
 	/// <summary>
-	/// Gets or Sets WholeDigits
+	/// WholeDigits
 	/// </summary>
 	[DataMember(Name = "wholeDigits", EmitDefaultValue = false)]
 	public int? WholeDigits { get; set; }

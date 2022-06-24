@@ -31,37 +31,37 @@ public partial class SearchResultsRow : IEquatable<SearchResultsRow>, IValidatab
 	}
 
 	/// <summary>
-	/// Gets or Sets BusObId
+	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObRecId
+	/// BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Links
+	/// Links
 	/// </summary>
 	[DataMember(Name = "links", EmitDefaultValue = false)]
 	public List<Link> Links { get; set; }
 
 	/// <summary>
-	/// Gets or Sets PublicId
+	/// PublicId
 	/// </summary>
 	[DataMember(Name = "publicId", EmitDefaultValue = false)]
 	public string PublicId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets RowColor
+	/// RowColor
 	/// </summary>
 	[DataMember(Name = "rowColor", EmitDefaultValue = false)]
 	public string RowColor { get; set; }
 
 	/// <summary>
-	/// Gets or Sets SearchResultsFieldValues
+	/// SearchResultsFieldValues
 	/// </summary>
 	[DataMember(Name = "searchResultsFieldValues", EmitDefaultValue = false)]
 	public List<FieldTemplateItem> SearchResultsFieldValues { get; set; }

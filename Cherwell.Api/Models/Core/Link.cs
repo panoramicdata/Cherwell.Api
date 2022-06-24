@@ -23,13 +23,13 @@ public partial class Link : IEquatable<Link>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets Name
+	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Url
+	/// Url
 	/// </summary>
 	[DataMember(Name = "url", EmitDefaultValue = false)]
 	public string Url { get; set; }

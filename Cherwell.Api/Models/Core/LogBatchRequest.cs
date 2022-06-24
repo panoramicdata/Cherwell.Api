@@ -21,7 +21,7 @@ public partial class LogBatchRequest : IEquatable<LogBatchRequest>, IValidatable
 	}
 
 	/// <summary>
-	/// Gets or Sets LogRequests
+	/// LogRequests
 	/// </summary>
 	[DataMember(Name = "logRequests", EmitDefaultValue = false)]
 	public List<LogRequest> LogRequests { get; set; }

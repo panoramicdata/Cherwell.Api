@@ -21,7 +21,7 @@ public partial class BatchReadResponse : IEquatable<BatchReadResponse>, IValidat
 	}
 
 	/// <summary>
-	/// Gets or Sets Responses
+	/// Responses
 	/// </summary>
 	[DataMember(Name = "responses", EmitDefaultValue = false)]
 	public List<ReadResponse> Responses { get; set; }

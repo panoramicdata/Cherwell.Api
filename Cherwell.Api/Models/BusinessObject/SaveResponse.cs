@@ -12,7 +12,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 public partial class SaveResponse : IEquatable<SaveResponse>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets HttpStatusCode
+	/// HttpStatusCode
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
@@ -43,49 +43,49 @@ public partial class SaveResponse : IEquatable<SaveResponse>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets BusObPublicId
+	/// BusObPublicId
 	/// </summary>
 	[DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
 	public string BusObPublicId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObRecId
+	/// BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets CacheKey
+	/// CacheKey
 	/// </summary>
 	[DataMember(Name = "cacheKey", EmitDefaultValue = false)]
 	public string CacheKey { get; set; }
 
 	/// <summary>
-	/// Gets or Sets FieldValidationErrors
+	/// FieldValidationErrors
 	/// </summary>
 	[DataMember(Name = "fieldValidationErrors", EmitDefaultValue = false)]
 	public List<FieldValidationError> FieldValidationErrors { get; set; }
 
 	/// <summary>
-	/// Gets or Sets NotificationTriggers
+	/// NotificationTriggers
 	/// </summary>
 	[DataMember(Name = "notificationTriggers", EmitDefaultValue = false)]
 	public List<NotificationTrigger> NotificationTriggers { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorCode
+	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorMessage
+	/// ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasError
+	/// HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }

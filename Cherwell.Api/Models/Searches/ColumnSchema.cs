@@ -13,7 +13,7 @@ namespace Cherwell.Api.Models.Searches;
 public partial class ColumnSchema : IEquatable<ColumnSchema>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets Type
+	/// Type
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum EnumType
@@ -69,7 +69,7 @@ public partial class ColumnSchema : IEquatable<ColumnSchema>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets Type
+	/// Type
 	/// </summary>
 	[DataMember(Name = "type", EmitDefaultValue = false)]
 	public EnumType? Type { get; set; }
@@ -88,13 +88,13 @@ public partial class ColumnSchema : IEquatable<ColumnSchema>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets Name
+	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
 
 	/// <summary>
-	/// Gets or Sets FieldId
+	/// FieldId
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
 	public string FieldId { get; set; }

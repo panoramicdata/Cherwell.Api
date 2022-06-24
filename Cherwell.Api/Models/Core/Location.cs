@@ -29,31 +29,31 @@ public partial class Location : IEquatable<Location>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets Altitude
+	/// Altitude
 	/// </summary>
 	[DataMember(Name = "altitude", EmitDefaultValue = false)]
 	public double? Altitude { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObId
+	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObRecId
+	/// BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Latitude
+	/// Latitude
 	/// </summary>
 	[DataMember(Name = "latitude", EmitDefaultValue = false)]
 	public double? Latitude { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Longitude
+	/// Longitude
 	/// </summary>
 	[DataMember(Name = "longitude", EmitDefaultValue = false)]
 	public double? Longitude { get; set; }

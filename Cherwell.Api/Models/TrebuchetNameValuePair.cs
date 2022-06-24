@@ -35,49 +35,49 @@ public partial class TrebuchetNameValuePair : IEquatable<TrebuchetNameValuePair>
 	}
 
 	/// <summary>
-	/// Gets or Sets Name
+	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ValueObject
+	/// ValueObject
 	/// </summary>
 	[DataMember(Name = "valueObject", EmitDefaultValue = false)]
 	public Object ValueObject { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ValueString
+	/// ValueString
 	/// </summary>
 	[DataMember(Name = "valueString", EmitDefaultValue = false)]
 	public string ValueString { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Category
+	/// Category
 	/// </summary>
 	[DataMember(Name = "category", EmitDefaultValue = false)]
 	public string Category { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Description
+	/// Description
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
 	public string Description { get; set; }
 
 	/// <summary>
-	/// Gets or Sets DisplayShowsValue
+	/// DisplayShowsValue
 	/// </summary>
 	[DataMember(Name = "displayShowsValue", EmitDefaultValue = false)]
 	public bool? DisplayShowsValue { get; set; }
 
 	/// <summary>
-	/// Gets or Sets SpecialUseFlag
+	/// SpecialUseFlag
 	/// </summary>
 	[DataMember(Name = "specialUseFlag", EmitDefaultValue = false)]
 	public bool? SpecialUseFlag { get; set; }
 
 	/// <summary>
-	/// Gets or Sets DisplayString
+	/// DisplayString
 	/// </summary>
 	[DataMember(Name = "displayString", EmitDefaultValue = false)]
 	public string DisplayString { get; set; }

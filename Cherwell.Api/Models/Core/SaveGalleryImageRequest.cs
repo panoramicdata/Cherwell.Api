@@ -13,7 +13,7 @@ namespace Cherwell.Api.Models.Core;
 public partial class SaveGalleryImageRequest : IEquatable<SaveGalleryImageRequest>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets ImageType
+	/// ImageType
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum EnumImageType
@@ -39,7 +39,7 @@ public partial class SaveGalleryImageRequest : IEquatable<SaveGalleryImageReques
 	}
 
 	/// <summary>
-	/// Gets or Sets ImageType
+	/// ImageType
 	/// </summary>
 	[DataMember(Name = "imageType", EmitDefaultValue = false)]
 	public EnumImageType? ImageType { get; set; }
@@ -68,43 +68,43 @@ public partial class SaveGalleryImageRequest : IEquatable<SaveGalleryImageReques
 	}
 
 	/// <summary>
-	/// Gets or Sets Base64EncodedImageData
+	/// Base64EncodedImageData
 	/// </summary>
 	[DataMember(Name = "base64EncodedImageData", EmitDefaultValue = false)]
 	public string Base64EncodedImageData { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Description
+	/// Description
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
 	public string Description { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Folder
+	/// Folder
 	/// </summary>
 	[DataMember(Name = "folder", EmitDefaultValue = false)]
 	public string Folder { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Name
+	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Scope
+	/// Scope
 	/// </summary>
 	[DataMember(Name = "scope", EmitDefaultValue = false)]
 	public string Scope { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ScopeOwner
+	/// ScopeOwner
 	/// </summary>
 	[DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
 	public string ScopeOwner { get; set; }
 
 	/// <summary>
-	/// Gets or Sets StandInKey
+	/// StandInKey
 	/// </summary>
 	[DataMember(Name = "standInKey", EmitDefaultValue = false)]
 	public string StandInKey { get; set; }

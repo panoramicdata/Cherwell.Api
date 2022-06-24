@@ -12,7 +12,7 @@ namespace Cherwell.Api.Models.Lifecycle;
 public partial class GetTransitionOptionsResponse : IEquatable<GetTransitionOptionsResponse>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets HttpStatusCode
+	/// HttpStatusCode
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
@@ -35,25 +35,25 @@ public partial class GetTransitionOptionsResponse : IEquatable<GetTransitionOpti
 	}
 
 	/// <summary>
-	/// Gets or Sets Transitions
+	/// Transitions
 	/// </summary>
 	[DataMember(Name = "transitions", EmitDefaultValue = false)]
 	public List<GetTransitionOptionsResponseTransition> Transitions { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorCode
+	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorMessage
+	/// ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasError
+	/// HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }

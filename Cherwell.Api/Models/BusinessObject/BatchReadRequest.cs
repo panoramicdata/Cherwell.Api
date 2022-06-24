@@ -9,13 +9,13 @@ namespace Cherwell.Api.Models.BusinessObject;
 public partial class BatchReadRequest
 {
 	/// <summary>
-	/// Gets or Sets ReadRequests
+	/// ReadRequests
 	/// </summary>
 	[DataMember(Name = "readRequests", EmitDefaultValue = false)]
 	public List<ReadRequest>? ReadRequests { get; set; }
 
 	/// <summary>
-	/// Gets or Sets StopOnError
+	/// StopOnError
 	/// </summary>
 	[DataMember(Name = "stopOnError", EmitDefaultValue = false)]
 	public bool? StopOnError { get; set; }

@@ -12,7 +12,7 @@ namespace Cherwell.Api.Models.Security;
 public partial class ApiClientSettingResponse : IEquatable<ApiClientSettingResponse>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets HttpStatusCode
+	/// HttpStatusCode
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
@@ -64,73 +64,73 @@ public partial class ApiClientSettingResponse : IEquatable<ApiClientSettingRespo
 	}
 
 	/// <summary>
-	/// Gets or Sets Name
+	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Description
+	/// Description
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
 	public string Description { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Culture
+	/// Culture
 	/// </summary>
 	[DataMember(Name = "culture", EmitDefaultValue = false)]
 	public string Culture { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ClientKey
+	/// ClientKey
 	/// </summary>
 	[DataMember(Name = "clientKey", EmitDefaultValue = false)]
 	public string ClientKey { get; set; }
 
 	/// <summary>
-	/// Gets or Sets TokenLifespanMinutes
+	/// TokenLifespanMinutes
 	/// </summary>
 	[DataMember(Name = "tokenLifespanMinutes", EmitDefaultValue = false)]
 	public int? TokenLifespanMinutes { get; set; }
 
 	/// <summary>
-	/// Gets or Sets RefreshTokenLifespanMinutes
+	/// RefreshTokenLifespanMinutes
 	/// </summary>
 	[DataMember(Name = "refreshTokenLifespanMinutes", EmitDefaultValue = false)]
 	public int? RefreshTokenLifespanMinutes { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ApiAccessIsEnabled
+	/// ApiAccessIsEnabled
 	/// </summary>
 	[DataMember(Name = "apiAccessIsEnabled", EmitDefaultValue = false)]
 	public bool? ApiAccessIsEnabled { get; set; }
 
 	/// <summary>
-	/// Gets or Sets AllowAnonymousAccess
+	/// AllowAnonymousAccess
 	/// </summary>
 	[DataMember(Name = "allowAnonymousAccess", EmitDefaultValue = false)]
 	public bool? AllowAnonymousAccess { get; set; }
 
 	/// <summary>
-	/// Gets or Sets StandInKey
+	/// StandInKey
 	/// </summary>
 	[DataMember(Name = "standInKey", EmitDefaultValue = false)]
 	public string StandInKey { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorCode
+	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorMessage
+	/// ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasError
+	/// HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }

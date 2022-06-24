@@ -48,61 +48,61 @@ public partial class SearchFolder : IEquatable<SearchFolder>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets Association
+	/// Association
 	/// </summary>
 	[DataMember(Name = "association", EmitDefaultValue = false)]
 	public string Association { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ChildFolders
+	/// ChildFolders
 	/// </summary>
 	[DataMember(Name = "childFolders", EmitDefaultValue = false)]
 	public List<SearchFolder> ChildFolders { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ChildItems
+	/// ChildItems
 	/// </summary>
 	[DataMember(Name = "childItems", EmitDefaultValue = false)]
 	public List<SearchItem> ChildItems { get; set; }
 
 	/// <summary>
-	/// Gets or Sets FolderId
+	/// FolderId
 	/// </summary>
 	[DataMember(Name = "folderId", EmitDefaultValue = false)]
 	public string FolderId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets FolderName
+	/// FolderName
 	/// </summary>
 	[DataMember(Name = "folderName", EmitDefaultValue = false)]
 	public string FolderName { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Links
+	/// Links
 	/// </summary>
 	[DataMember(Name = "links", EmitDefaultValue = false)]
 	public List<Link> Links { get; set; }
 
 	/// <summary>
-	/// Gets or Sets LocalizedScopeName
+	/// LocalizedScopeName
 	/// </summary>
 	[DataMember(Name = "localizedScopeName", EmitDefaultValue = false)]
 	public string LocalizedScopeName { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ParentFolderId
+	/// ParentFolderId
 	/// </summary>
 	[DataMember(Name = "parentFolderId", EmitDefaultValue = false)]
 	public string ParentFolderId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Scope
+	/// Scope
 	/// </summary>
 	[DataMember(Name = "scope", EmitDefaultValue = false)]
 	public string Scope { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ScopeOwner
+	/// ScopeOwner
 	/// </summary>
 	[DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
 	public string ScopeOwner { get; set; }

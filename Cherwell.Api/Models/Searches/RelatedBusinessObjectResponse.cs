@@ -54,73 +54,73 @@ public partial class RelatedBusinessObjectResponse : IEquatable<RelatedBusinessO
 	}
 
 	/// <summary>
-	/// Gets or Sets ErrorCode
+	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorMessage
+	/// ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasError
+	/// HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Links
+	/// Links
 	/// </summary>
 	[DataMember(Name = "links", EmitDefaultValue = false)]
 	public List<Link> Links { get; set; }
 
 	/// <summary>
-	/// Gets or Sets PageNumber
+	/// PageNumber
 	/// </summary>
 	[DataMember(Name = "pageNumber", EmitDefaultValue = false)]
 	public int? PageNumber { get; set; }
 
 	/// <summary>
-	/// Gets or Sets PageSize
+	/// PageSize
 	/// </summary>
 	[DataMember(Name = "pageSize", EmitDefaultValue = false)]
 	public int? PageSize { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ParentBusObId
+	/// ParentBusObId
 	/// </summary>
 	[DataMember(Name = "parentBusObId", EmitDefaultValue = false)]
 	public string ParentBusObId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ParentBusObPublicId
+	/// ParentBusObPublicId
 	/// </summary>
 	[DataMember(Name = "parentBusObPublicId", EmitDefaultValue = false)]
 	public string ParentBusObPublicId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ParentBusObRecId
+	/// ParentBusObRecId
 	/// </summary>
 	[DataMember(Name = "parentBusObRecId", EmitDefaultValue = false)]
 	public string ParentBusObRecId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets RelatedBusinessObjects
+	/// RelatedBusinessObjects
 	/// </summary>
 	[DataMember(Name = "relatedBusinessObjects", EmitDefaultValue = false)]
 	public List<ReadResponse> RelatedBusinessObjects { get; set; }
 
 	/// <summary>
-	/// Gets or Sets RelationshipId
+	/// RelationshipId
 	/// </summary>
 	[DataMember(Name = "relationshipId", EmitDefaultValue = false)]
 	public string RelationshipId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets TotalRecords
+	/// TotalRecords
 	/// </summary>
 	[DataMember(Name = "totalRecords", EmitDefaultValue = false)]
 	public int? TotalRecords { get; set; }

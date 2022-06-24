@@ -12,7 +12,7 @@ namespace Cherwell.Api.Models.Teams;
 public partial class RemoveCustomerFromWorkgroupResponse : IEquatable<RemoveCustomerFromWorkgroupResponse>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets HttpStatusCode
+	/// HttpStatusCode
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
@@ -37,31 +37,31 @@ public partial class RemoveCustomerFromWorkgroupResponse : IEquatable<RemoveCust
 	}
 
 	/// <summary>
-	/// Gets or Sets WorkgroupId
+	/// WorkgroupId
 	/// </summary>
 	[DataMember(Name = "workgroupId", EmitDefaultValue = false)]
 	public string WorkgroupId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets CustomerRecordId
+	/// CustomerRecordId
 	/// </summary>
 	[DataMember(Name = "customerRecordId", EmitDefaultValue = false)]
 	public string CustomerRecordId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorCode
+	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorMessage
+	/// ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasError
+	/// HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }

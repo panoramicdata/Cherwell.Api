@@ -13,7 +13,7 @@ namespace Cherwell.Api.Models.Core;
 public partial class LogRequest : IEquatable<LogRequest>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets Level
+	/// Level
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum EnumLevel
@@ -57,7 +57,7 @@ public partial class LogRequest : IEquatable<LogRequest>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets Level
+	/// Level
 	/// </summary>
 	[DataMember(Name = "level", EmitDefaultValue = false)]
 	public EnumLevel? Level { get; set; }
@@ -76,13 +76,13 @@ public partial class LogRequest : IEquatable<LogRequest>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets keyValueproperties
+	/// keyValueproperties
 	/// </summary>
 	[DataMember(Name = "keyValueproperties", EmitDefaultValue = false)]
 	public List<object> keyValueproperties { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Message
+	/// Message
 	/// </summary>
 	[DataMember(Name = "message", EmitDefaultValue = false)]
 	public string Message { get; set; }

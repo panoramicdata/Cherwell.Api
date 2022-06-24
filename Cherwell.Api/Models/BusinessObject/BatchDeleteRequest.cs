@@ -23,13 +23,13 @@ public partial class BatchDeleteRequest : IEquatable<BatchDeleteRequest>, IValid
 	}
 
 	/// <summary>
-	/// Gets or Sets DeleteRequests
+	/// DeleteRequests
 	/// </summary>
 	[DataMember(Name = "deleteRequests", EmitDefaultValue = false)]
 	public List<DeleteRequest> DeleteRequests { get; set; }
 
 	/// <summary>
-	/// Gets or Sets StopOnError
+	/// StopOnError
 	/// </summary>
 	[DataMember(Name = "stopOnError", EmitDefaultValue = false)]
 	public bool? StopOnError { get; set; }

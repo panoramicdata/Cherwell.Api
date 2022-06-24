@@ -25,19 +25,19 @@ public partial class FilterInfo : IEquatable<FilterInfo>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets FieldId
+	/// FieldId
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
 	public string FieldId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets _Operator
+	/// _Operator
 	/// </summary>
 	[DataMember(Name = "operator", EmitDefaultValue = false)]
 	public string Operator { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Value
+	/// Value
 	/// </summary>
 	[DataMember(Name = "value", EmitDefaultValue = false)]
 	public string Value { get; set; }

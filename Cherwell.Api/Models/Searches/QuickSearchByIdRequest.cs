@@ -27,25 +27,25 @@ public partial class QuickSearchByIdRequest : IEquatable<QuickSearchByIdRequest>
 	}
 
 	/// <summary>
-	/// Gets or Sets BusObIds
+	/// BusObIds
 	/// </summary>
 	[DataMember(Name = "busObIds", EmitDefaultValue = false)]
 	public List<string> BusObIds { get; set; }
 
 	/// <summary>
-	/// Gets or Sets IsGeneral
+	/// IsGeneral
 	/// </summary>
 	[DataMember(Name = "isGeneral", EmitDefaultValue = false)]
 	public bool? IsGeneral { get; set; }
 
 	/// <summary>
-	/// Gets or Sets SearchText
+	/// SearchText
 	/// </summary>
 	[DataMember(Name = "searchText", EmitDefaultValue = false)]
 	public string SearchText { get; set; }
 
 	/// <summary>
-	/// Gets or Sets StandIn
+	/// StandIn
 	/// </summary>
 	[DataMember(Name = "standIn", EmitDefaultValue = false)]
 	public string StandIn { get; set; }

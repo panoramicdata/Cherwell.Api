@@ -31,25 +31,25 @@ public partial class ClientSecuritySettingsResponse : IEquatable<ClientSecurityS
 	}
 
 	/// <summary>
-	/// Gets or Sets InternalLoginAllowed
+	/// InternalLoginAllowed
 	/// </summary>
 	[DataMember(Name = "internalLoginAllowed", EmitDefaultValue = false)]
 	public bool? InternalLoginAllowed { get; set; }
 
 	/// <summary>
-	/// Gets or Sets LdapLoginAllowed
+	/// LdapLoginAllowed
 	/// </summary>
 	[DataMember(Name = "ldapLoginAllowed", EmitDefaultValue = false)]
 	public bool? LdapLoginAllowed { get; set; }
 
 	/// <summary>
-	/// Gets or Sets SamlLoginAllowed
+	/// SamlLoginAllowed
 	/// </summary>
 	[DataMember(Name = "samlLoginAllowed", EmitDefaultValue = false)]
 	public bool? SamlLoginAllowed { get; set; }
 
 	/// <summary>
-	/// Gets or Sets WindowsLoginAllowed
+	/// WindowsLoginAllowed
 	/// </summary>
 	[DataMember(Name = "windowsLoginAllowed", EmitDefaultValue = false)]
 	public bool? WindowsLoginAllowed { get; set; }

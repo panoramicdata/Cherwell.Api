@@ -45,79 +45,79 @@ public partial class ManagerItem : IEquatable<ManagerItem>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets Association
+	/// Association
 	/// </summary>
 	[DataMember(Name = "association", EmitDefaultValue = false)]
 	public string Association { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Description
+	/// Description
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
 	public string Description { get; set; }
 
 	/// <summary>
-	/// Gets or Sets DisplayName
+	/// DisplayName
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; }
 
 	/// <summary>
-	/// Gets or Sets GalleryImage
+	/// GalleryImage
 	/// </summary>
 	[DataMember(Name = "galleryImage", EmitDefaultValue = false)]
 	public string GalleryImage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Id
+	/// Id
 	/// </summary>
 	[DataMember(Name = "id", EmitDefaultValue = false)]
 	public string Id { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Links
+	/// Links
 	/// </summary>
 	[DataMember(Name = "links", EmitDefaultValue = false)]
 	public List<Link> Links { get; set; }
 
 	/// <summary>
-	/// Gets or Sets LocalizedScopeName
+	/// LocalizedScopeName
 	/// </summary>
 	[DataMember(Name = "localizedScopeName", EmitDefaultValue = false)]
 	public string LocalizedScopeName { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Name
+	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ParentFolder
+	/// ParentFolder
 	/// </summary>
 	[DataMember(Name = "parentFolder", EmitDefaultValue = false)]
 	public string ParentFolder { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ParentIsScopeFolder
+	/// ParentIsScopeFolder
 	/// </summary>
 	[DataMember(Name = "parentIsScopeFolder", EmitDefaultValue = false)]
 	public bool? ParentIsScopeFolder { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Scope
+	/// Scope
 	/// </summary>
 	[DataMember(Name = "scope", EmitDefaultValue = false)]
 	public string Scope { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ScopeOwner
+	/// ScopeOwner
 	/// </summary>
 	[DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
 	public string ScopeOwner { get; set; }
 
 	/// <summary>
-	/// Gets or Sets StandInKey
+	/// StandInKey
 	/// </summary>
 	[DataMember(Name = "standInKey", EmitDefaultValue = false)]
 	public string StandInKey { get; set; }

@@ -23,13 +23,13 @@ public partial class GetApiClientSettingsResponseItem : IEquatable<GetApiClientS
 	}
 
 	/// <summary>
-	/// Gets or Sets Name
+	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
 
 	/// <summary>
-	/// Gets or Sets StandInKey
+	/// StandInKey
 	/// </summary>
 	[DataMember(Name = "standInKey", EmitDefaultValue = false)]
 	public string StandInKey { get; set; }

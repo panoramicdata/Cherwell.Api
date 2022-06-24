@@ -12,7 +12,7 @@ namespace Cherwell.Api.Models.Approval;
 public partial class GetApprovalsResponse : IEquatable<GetApprovalsResponse>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets HttpStatusCode
+	/// HttpStatusCode
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
@@ -37,31 +37,31 @@ public partial class GetApprovalsResponse : IEquatable<GetApprovalsResponse>, IV
 	}
 
 	/// <summary>
-	/// Gets or Sets TotalRecords
+	/// TotalRecords
 	/// </summary>
 	[DataMember(Name = "totalRecords", EmitDefaultValue = false)]
 	public int? TotalRecords { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Approvals
+	/// Approvals
 	/// </summary>
 	[DataMember(Name = "approvals", EmitDefaultValue = false)]
 	public List<ApprovalReadResponse> Approvals { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorCode
+	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorMessage
+	/// ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasError
+	/// HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }

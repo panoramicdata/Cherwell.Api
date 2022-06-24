@@ -12,7 +12,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 public partial class AttachmentsResponse : IEquatable<AttachmentsResponse>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets HttpStatusCode
+	/// HttpStatusCode
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
@@ -35,25 +35,25 @@ public partial class AttachmentsResponse : IEquatable<AttachmentsResponse>, IVal
 	}
 
 	/// <summary>
-	/// Gets or Sets Attachments
+	/// Attachments
 	/// </summary>
 	[DataMember(Name = "attachments", EmitDefaultValue = false)]
 	public List<ObjectAttachment> Attachments { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorCode
+	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorMessage
+	/// ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasError
+	/// HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }

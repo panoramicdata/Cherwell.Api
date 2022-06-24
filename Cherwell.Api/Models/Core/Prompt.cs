@@ -13,7 +13,7 @@ namespace Cherwell.Api.Models.Core;
 public partial class Prompt : IEquatable<Prompt>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets ListDisplayOption
+	/// ListDisplayOption
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum EnumListDisplayOption
@@ -57,7 +57,7 @@ public partial class Prompt : IEquatable<Prompt>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets PromptType
+	/// PromptType
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum EnumPromptType
@@ -143,13 +143,13 @@ public partial class Prompt : IEquatable<Prompt>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets ListDisplayOption
+	/// ListDisplayOption
 	/// </summary>
 	[DataMember(Name = "listDisplayOption", EmitDefaultValue = false)]
 	public EnumListDisplayOption? ListDisplayOption { get; set; }
 
 	/// <summary>
-	/// Gets or Sets PromptType
+	/// PromptType
 	/// </summary>
 	[DataMember(Name = "promptType", EmitDefaultValue = false)]
 	public EnumPromptType? PromptType { get; set; }
@@ -200,103 +200,103 @@ public partial class Prompt : IEquatable<Prompt>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets AllowValuesOnly
+	/// AllowValuesOnly
 	/// </summary>
 	[DataMember(Name = "allowValuesOnly", EmitDefaultValue = false)]
 	public bool? AllowValuesOnly { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObId
+	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets CollectionStoreEntireRow
+	/// CollectionStoreEntireRow
 	/// </summary>
 	[DataMember(Name = "collectionStoreEntireRow", EmitDefaultValue = false)]
 	public string CollectionStoreEntireRow { get; set; }
 
 	/// <summary>
-	/// Gets or Sets CollectionValueField
+	/// CollectionValueField
 	/// </summary>
 	[DataMember(Name = "collectionValueField", EmitDefaultValue = false)]
 	public string CollectionValueField { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ConstraintXml
+	/// ConstraintXml
 	/// </summary>
 	[DataMember(Name = "constraintXml", EmitDefaultValue = false)]
 	public string ConstraintXml { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Contents
+	/// Contents
 	/// </summary>
 	[DataMember(Name = "contents", EmitDefaultValue = false)]
 	public string Contents { get; set; }
 
 	/// <summary>
-	/// Gets or Sets _Default
+	/// _Default
 	/// </summary>
 	[DataMember(Name = "default", EmitDefaultValue = false)]
 	public string Default { get; set; }
 
 	/// <summary>
-	/// Gets or Sets FieldId
+	/// FieldId
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
 	public string FieldId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets IsDateRange
+	/// IsDateRange
 	/// </summary>
 	[DataMember(Name = "isDateRange", EmitDefaultValue = false)]
 	public bool? IsDateRange { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ListReturnFieldId
+	/// ListReturnFieldId
 	/// </summary>
 	[DataMember(Name = "listReturnFieldId", EmitDefaultValue = false)]
 	public string ListReturnFieldId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets MultiLine
+	/// MultiLine
 	/// </summary>
 	[DataMember(Name = "multiLine", EmitDefaultValue = false)]
 	public bool? MultiLine { get; set; }
 
 	/// <summary>
-	/// Gets or Sets PromptId
+	/// PromptId
 	/// </summary>
 	[DataMember(Name = "promptId", EmitDefaultValue = false)]
 	public string PromptId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets PromptTypeName
+	/// PromptTypeName
 	/// </summary>
 	[DataMember(Name = "promptTypeName", EmitDefaultValue = false)]
 	public string PromptTypeName { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Required
+	/// Required
 	/// </summary>
 	[DataMember(Name = "required", EmitDefaultValue = false)]
 	public bool? Required { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Text
+	/// Text
 	/// </summary>
 	[DataMember(Name = "text", EmitDefaultValue = false)]
 	public string Text { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Value
+	/// Value
 	/// </summary>
 	[DataMember(Name = "value", EmitDefaultValue = false)]
 	public Object Value { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Values
+	/// Values
 	/// </summary>
 	[DataMember(Name = "values", EmitDefaultValue = false)]
 	public List<string> Values { get; set; }

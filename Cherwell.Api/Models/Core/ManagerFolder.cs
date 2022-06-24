@@ -39,61 +39,61 @@ public partial class ManagerFolder : IEquatable<ManagerFolder>, IValidatableObje
 	}
 
 	/// <summary>
-	/// Gets or Sets Association
+	/// Association
 	/// </summary>
 	[DataMember(Name = "association", EmitDefaultValue = false)]
 	public string Association { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ChildFolders
+	/// ChildFolders
 	/// </summary>
 	[DataMember(Name = "childFolders", EmitDefaultValue = false)]
 	public List<ManagerFolder> ChildFolders { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ChildItems
+	/// ChildItems
 	/// </summary>
 	[DataMember(Name = "childItems", EmitDefaultValue = false)]
 	public List<ManagerItem> ChildItems { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Id
+	/// Id
 	/// </summary>
 	[DataMember(Name = "id", EmitDefaultValue = false)]
 	public string Id { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Links
+	/// Links
 	/// </summary>
 	[DataMember(Name = "links", EmitDefaultValue = false)]
 	public List<Link> Links { get; set; }
 
 	/// <summary>
-	/// Gets or Sets LocalizedScopeName
+	/// LocalizedScopeName
 	/// </summary>
 	[DataMember(Name = "localizedScopeName", EmitDefaultValue = false)]
 	public string LocalizedScopeName { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Name
+	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ParentId
+	/// ParentId
 	/// </summary>
 	[DataMember(Name = "parentId", EmitDefaultValue = false)]
 	public string ParentId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Scope
+	/// Scope
 	/// </summary>
 	[DataMember(Name = "scope", EmitDefaultValue = false)]
 	public string Scope { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ScopeOwner
+	/// ScopeOwner
 	/// </summary>
 	[DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
 	public string ScopeOwner { get; set; }

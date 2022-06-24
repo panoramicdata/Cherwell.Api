@@ -9,19 +9,19 @@ namespace Cherwell.Api.Models.BusinessObject;
 public partial class ReadRequest
 {
 	/// <summary>
-	/// Gets or Sets BusObId
+	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string? BusObId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObPublicId
+	/// BusObPublicId
 	/// </summary>
 	[DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
 	public string? BusObPublicId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObRecId
+	/// BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string? BusObRecId { get; set; }

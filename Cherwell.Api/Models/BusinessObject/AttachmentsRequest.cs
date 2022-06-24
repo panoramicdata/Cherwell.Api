@@ -14,7 +14,7 @@ public partial class AttachmentsRequest : IEquatable<AttachmentsRequest>, IValid
 {
 
 	/// <summary>
-	/// Gets or Sets AttachmentTypes
+	/// AttachmentTypes
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum EnumAttachmentTypes
@@ -41,7 +41,7 @@ public partial class AttachmentsRequest : IEquatable<AttachmentsRequest>, IValid
 
 
 	/// <summary>
-	/// Gets or Sets Types
+	/// Types
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum EnumTypes
@@ -103,13 +103,13 @@ public partial class AttachmentsRequest : IEquatable<AttachmentsRequest>, IValid
 	}
 
 	/// <summary>
-	/// Gets or Sets AttachmentTypes
+	/// AttachmentTypes
 	/// </summary>
 	[DataMember(Name = "attachmentTypes", EmitDefaultValue = false)]
 	public List<EnumAttachmentTypes> AttachmentTypes { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Types
+	/// Types
 	/// </summary>
 	[DataMember(Name = "types", EmitDefaultValue = false)]
 	public List<EnumTypes> Types { get; set; }
@@ -138,37 +138,37 @@ public partial class AttachmentsRequest : IEquatable<AttachmentsRequest>, IValid
 	}
 
 	/// <summary>
-	/// Gets or Sets AttachmentId
+	/// AttachmentId
 	/// </summary>
 	[DataMember(Name = "attachmentId", EmitDefaultValue = false)]
 	public string AttachmentId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObId
+	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObName
+	/// BusObName
 	/// </summary>
 	[DataMember(Name = "busObName", EmitDefaultValue = false)]
 	public string BusObName { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObPublicId
+	/// BusObPublicId
 	/// </summary>
 	[DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
 	public string BusObPublicId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObRecId
+	/// BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets IncludeLinks
+	/// IncludeLinks
 	/// </summary>
 	[DataMember(Name = "includeLinks", EmitDefaultValue = false)]
 	public bool? IncludeLinks { get; set; }

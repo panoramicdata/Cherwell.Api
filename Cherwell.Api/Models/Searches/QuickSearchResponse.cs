@@ -12,7 +12,7 @@ namespace Cherwell.Api.Models.Searches;
 public partial class QuickSearchResponse : IEquatable<QuickSearchResponse>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets HttpStatusCode
+	/// HttpStatusCode
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
@@ -37,31 +37,31 @@ public partial class QuickSearchResponse : IEquatable<QuickSearchResponse>, IVal
 	}
 
 	/// <summary>
-	/// Gets or Sets SearchResultsTable
+	/// SearchResultsTable
 	/// </summary>
 	[DataMember(Name = "searchResultsTable", EmitDefaultValue = false)]
 	public SearchResultsTableResponse SearchResultsTable { get; set; }
 
 	/// <summary>
-	/// Gets or Sets SimpleResultsList
+	/// SimpleResultsList
 	/// </summary>
 	[DataMember(Name = "simpleResultsList", EmitDefaultValue = false)]
 	public SimpleResultsList SimpleResultsList { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorCode
+	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorMessage
+	/// ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasError
+	/// HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }

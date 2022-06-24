@@ -13,7 +13,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 public partial class ObjectAttachment : IEquatable<ObjectAttachment>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets AttachmentType
+	/// AttachmentType
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum EnumAttachmentType
@@ -39,7 +39,7 @@ public partial class ObjectAttachment : IEquatable<ObjectAttachment>, IValidatab
 	}
 
 	/// <summary>
-	/// Gets or Sets Scope
+	/// Scope
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum EnumScope
@@ -131,7 +131,7 @@ public partial class ObjectAttachment : IEquatable<ObjectAttachment>, IValidatab
 	}
 
 	/// <summary>
-	/// Gets or Sets Type
+	/// Type
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum EnumType
@@ -193,19 +193,19 @@ public partial class ObjectAttachment : IEquatable<ObjectAttachment>, IValidatab
 	}
 
 	/// <summary>
-	/// Gets or Sets AttachmentType
+	/// AttachmentType
 	/// </summary>
 	[DataMember(Name = "attachmentType", EmitDefaultValue = false)]
 	public EnumAttachmentType? AttachmentType { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Scope
+	/// Scope
 	/// </summary>
 	[DataMember(Name = "scope", EmitDefaultValue = false)]
 	public EnumScope? Scope { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Type
+	/// Type
 	/// </summary>
 	[DataMember(Name = "type", EmitDefaultValue = false)]
 	public EnumType? Type { get; set; }
@@ -252,85 +252,85 @@ public partial class ObjectAttachment : IEquatable<ObjectAttachment>, IValidatab
 	}
 
 	/// <summary>
-	/// Gets or Sets AttachedBusObId
+	/// AttachedBusObId
 	/// </summary>
 	[DataMember(Name = "attachedBusObId", EmitDefaultValue = false)]
 	public string AttachedBusObId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets AttachedBusObRecId
+	/// AttachedBusObRecId
 	/// </summary>
 	[DataMember(Name = "attachedBusObRecId", EmitDefaultValue = false)]
 	public string AttachedBusObRecId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets AttachmentFileId
+	/// AttachmentFileId
 	/// </summary>
 	[DataMember(Name = "attachmentFileId", EmitDefaultValue = false)]
 	public string AttachmentFileId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets AttachmentFileName
+	/// AttachmentFileName
 	/// </summary>
 	[DataMember(Name = "attachmentFileName", EmitDefaultValue = false)]
 	public string AttachmentFileName { get; set; }
 
 	/// <summary>
-	/// Gets or Sets AttachmentFileType
+	/// AttachmentFileType
 	/// </summary>
 	[DataMember(Name = "attachmentFileType", EmitDefaultValue = false)]
 	public string AttachmentFileType { get; set; }
 
 	/// <summary>
-	/// Gets or Sets AttachmentId
+	/// AttachmentId
 	/// </summary>
 	[DataMember(Name = "attachmentId", EmitDefaultValue = false)]
 	public string AttachmentId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObId
+	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObRecId
+	/// BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Comment
+	/// Comment
 	/// </summary>
 	[DataMember(Name = "comment", EmitDefaultValue = false)]
 	public string Comment { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Created
+	/// Created
 	/// </summary>
 	[DataMember(Name = "created", EmitDefaultValue = false)]
 	public DateTime? Created { get; set; }
 
 	/// <summary>
-	/// Gets or Sets DisplayText
+	/// DisplayText
 	/// </summary>
 	[DataMember(Name = "displayText", EmitDefaultValue = false)]
 	public string DisplayText { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Links
+	/// Links
 	/// </summary>
 	[DataMember(Name = "links", EmitDefaultValue = false)]
 	public List<Link> Links { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Owner
+	/// Owner
 	/// </summary>
 	[DataMember(Name = "owner", EmitDefaultValue = false)]
 	public string Owner { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ScopeOwner
+	/// ScopeOwner
 	/// </summary>
 	[DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
 	public string ScopeOwner { get; set; }

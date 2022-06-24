@@ -35,49 +35,49 @@ public partial class StoredSearchRequest : IEquatable<StoredSearchRequest>, IVal
 	}
 
 	/// <summary>
-	/// Gets or Sets AssociationId
+	/// AssociationId
 	/// </summary>
 	[DataMember(Name = "associationId", EmitDefaultValue = false)]
 	public string AssociationId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets AssociationName
+	/// AssociationName
 	/// </summary>
 	[DataMember(Name = "associationName", EmitDefaultValue = false)]
 	public string AssociationName { get; set; }
 
 	/// <summary>
-	/// Gets or Sets GridId
+	/// GridId
 	/// </summary>
 	[DataMember(Name = "gridId", EmitDefaultValue = false)]
 	public string GridId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets IncludeSchema
+	/// IncludeSchema
 	/// </summary>
 	[DataMember(Name = "includeSchema", EmitDefaultValue = false)]
 	public bool? IncludeSchema { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Scope
+	/// Scope
 	/// </summary>
 	[DataMember(Name = "scope", EmitDefaultValue = false)]
 	public string Scope { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ScopeOwnerId
+	/// ScopeOwnerId
 	/// </summary>
 	[DataMember(Name = "scopeOwnerId", EmitDefaultValue = false)]
 	public string ScopeOwnerId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets SearchId
+	/// SearchId
 	/// </summary>
 	[DataMember(Name = "searchId", EmitDefaultValue = false)]
 	public string SearchId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets SearchName
+	/// SearchName
 	/// </summary>
 	[DataMember(Name = "searchName", EmitDefaultValue = false)]
 	public string SearchName { get; set; }

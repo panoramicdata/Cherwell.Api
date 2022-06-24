@@ -27,25 +27,25 @@ public partial class UserDeleteResponse : IEquatable<UserDeleteResponse>, IValid
 	}
 
 	/// <summary>
-	/// Gets or Sets Error
+	/// Error
 	/// </summary>
 	[DataMember(Name = "error", EmitDefaultValue = false)]
 	public string Error { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorCode
+	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasError
+	/// HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Users
+	/// Users
 	/// </summary>
 	[DataMember(Name = "users", EmitDefaultValue = false)]
 	public List<User> Users { get; set; }

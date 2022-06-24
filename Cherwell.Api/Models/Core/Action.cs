@@ -13,7 +13,7 @@ namespace Cherwell.Api.Models.Core;
 public partial class Action : IEquatable<Action>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets ActionType
+	/// ActionType
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum EnumActionType
@@ -117,7 +117,7 @@ public partial class Action : IEquatable<Action>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets LoginEnabledMode
+	/// LoginEnabledMode
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum EnumLoginEnabledMode
@@ -143,7 +143,7 @@ public partial class Action : IEquatable<Action>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets LoginVisibilityMode
+	/// LoginVisibilityMode
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum EnumLoginVisibilityMode
@@ -169,19 +169,19 @@ public partial class Action : IEquatable<Action>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets ActionType
+	/// ActionType
 	/// </summary>
 	[DataMember(Name = "actionType", EmitDefaultValue = false)]
 	public EnumActionType? ActionType { get; set; }
 
 	/// <summary>
-	/// Gets or Sets LoginEnabledMode
+	/// LoginEnabledMode
 	/// </summary>
 	[DataMember(Name = "loginEnabledMode", EmitDefaultValue = false)]
 	public EnumLoginEnabledMode? LoginEnabledMode { get; set; }
 
 	/// <summary>
-	/// Gets or Sets LoginVisibilityMode
+	/// LoginVisibilityMode
 	/// </summary>
 	[DataMember(Name = "loginVisibilityMode", EmitDefaultValue = false)]
 	public EnumLoginVisibilityMode? LoginVisibilityMode { get; set; }
@@ -224,73 +224,73 @@ public partial class Action : IEquatable<Action>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets ActionCommand
+	/// ActionCommand
 	/// </summary>
 	[DataMember(Name = "actionCommand", EmitDefaultValue = false)]
 	public string ActionCommand { get; set; }
 
 	/// <summary>
-	/// Gets or Sets AlwaysTextAndImage
+	/// AlwaysTextAndImage
 	/// </summary>
 	[DataMember(Name = "alwaysTextAndImage", EmitDefaultValue = false)]
 	public bool? AlwaysTextAndImage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BeginGroup
+	/// BeginGroup
 	/// </summary>
 	[DataMember(Name = "beginGroup", EmitDefaultValue = false)]
 	public bool? BeginGroup { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ChildActions
+	/// ChildActions
 	/// </summary>
 	[DataMember(Name = "childActions", EmitDefaultValue = false)]
 	public List<Action> ChildActions { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Dependencies
+	/// Dependencies
 	/// </summary>
 	[DataMember(Name = "dependencies", EmitDefaultValue = false)]
 	public List<string> Dependencies { get; set; }
 
 	/// <summary>
-	/// Gets or Sets DisplayText
+	/// DisplayText
 	/// </summary>
 	[DataMember(Name = "displayText", EmitDefaultValue = false)]
 	public string DisplayText { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Enabled
+	/// Enabled
 	/// </summary>
 	[DataMember(Name = "enabled", EmitDefaultValue = false)]
 	public bool? Enabled { get; set; }
 
 	/// <summary>
-	/// Gets or Sets GalleryImage
+	/// GalleryImage
 	/// </summary>
 	[DataMember(Name = "galleryImage", EmitDefaultValue = false)]
 	public string GalleryImage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HelpText
+	/// HelpText
 	/// </summary>
 	[DataMember(Name = "helpText", EmitDefaultValue = false)]
 	public string HelpText { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Name
+	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Parameters
+	/// Parameters
 	/// </summary>
 	[DataMember(Name = "parameters", EmitDefaultValue = false)]
 	public Dictionary<string, string> Parameters { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Visible
+	/// Visible
 	/// </summary>
 	[DataMember(Name = "visible", EmitDefaultValue = false)]
 	public bool? Visible { get; set; }

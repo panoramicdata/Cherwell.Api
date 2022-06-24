@@ -27,25 +27,25 @@ public partial class NotificationTrigger : IEquatable<NotificationTrigger>, IVal
 	}
 
 	/// <summary>
-	/// Gets or Sets SourceType
+	/// SourceType
 	/// </summary>
 	[DataMember(Name = "sourceType", EmitDefaultValue = false)]
 	public string SourceType { get; set; }
 
 	/// <summary>
-	/// Gets or Sets SourceId
+	/// SourceId
 	/// </summary>
 	[DataMember(Name = "sourceId", EmitDefaultValue = false)]
 	public string SourceId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets SourceChange
+	/// SourceChange
 	/// </summary>
 	[DataMember(Name = "sourceChange", EmitDefaultValue = false)]
 	public string SourceChange { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Key
+	/// Key
 	/// </summary>
 	[DataMember(Name = "key", EmitDefaultValue = false)]
 	public string Key { get; set; }

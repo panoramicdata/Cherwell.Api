@@ -13,7 +13,7 @@ namespace Cherwell.Api.Models.Teams;
 public partial class TeamResponse : IEquatable<TeamResponse>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets TeamType
+	/// TeamType
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum EnumTeamType
@@ -33,13 +33,13 @@ public partial class TeamResponse : IEquatable<TeamResponse>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets TeamType
+	/// TeamType
 	/// </summary>
 	[DataMember(Name = "teamType", EmitDefaultValue = false)]
 	public EnumTeamType? TeamType { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HttpStatusCode
+	/// HttpStatusCode
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
@@ -74,55 +74,55 @@ public partial class TeamResponse : IEquatable<TeamResponse>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets Description
+	/// Description
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
 	public string Description { get; set; }
 
 	/// <summary>
-	/// Gets or Sets EmailAlias
+	/// EmailAlias
 	/// </summary>
 	[DataMember(Name = "emailAlias", EmitDefaultValue = false)]
 	public string EmailAlias { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Fields
+	/// Fields
 	/// </summary>
 	[DataMember(Name = "fields", EmitDefaultValue = false)]
 	public List<FieldTemplateItem> Fields { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Image
+	/// Image
 	/// </summary>
 	[DataMember(Name = "image", EmitDefaultValue = false)]
 	public string Image { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Name
+	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
 
 	/// <summary>
-	/// Gets or Sets TeamId
+	/// TeamId
 	/// </summary>
 	[DataMember(Name = "teamId", EmitDefaultValue = false)]
 	public string TeamId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorCode
+	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorMessage
+	/// ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasError
+	/// HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }

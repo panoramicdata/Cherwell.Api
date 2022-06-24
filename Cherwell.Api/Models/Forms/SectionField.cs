@@ -37,37 +37,37 @@ public partial class SectionField : IEquatable<SectionField>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets Attributes
+	/// Attributes
 	/// </summary>
 	[DataMember(Name = "attributes", EmitDefaultValue = false)]
 	public List<object> Attributes { get; set; }
 
 	/// <summary>
-	/// Gets or Sets FieldId
+	/// FieldId
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
 	public string FieldId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets FieldType
+	/// FieldType
 	/// </summary>
 	[DataMember(Name = "fieldType", EmitDefaultValue = false)]
 	public string FieldType { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Label
+	/// Label
 	/// </summary>
 	[DataMember(Name = "label", EmitDefaultValue = false)]
 	public string Label { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Multiline
+	/// Multiline
 	/// </summary>
 	[DataMember(Name = "multiline", EmitDefaultValue = false)]
 	public bool? Multiline { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Value
+	/// Value
 	/// </summary>
 	[DataMember(Name = "value", EmitDefaultValue = false)]
 	public string Value { get; set; }

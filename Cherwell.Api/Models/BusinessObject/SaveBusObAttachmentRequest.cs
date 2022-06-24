@@ -39,61 +39,61 @@ public partial class SaveBusObAttachmentRequest : IEquatable<SaveBusObAttachment
 	}
 
 	/// <summary>
-	/// Gets or Sets AttachBusObId
+	/// AttachBusObId
 	/// </summary>
 	[DataMember(Name = "attachBusObId", EmitDefaultValue = false)]
 	public string AttachBusObId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets AttachBusObName
+	/// AttachBusObName
 	/// </summary>
 	[DataMember(Name = "attachBusObName", EmitDefaultValue = false)]
 	public string AttachBusObName { get; set; }
 
 	/// <summary>
-	/// Gets or Sets AttachBusObPublicId
+	/// AttachBusObPublicId
 	/// </summary>
 	[DataMember(Name = "attachBusObPublicId", EmitDefaultValue = false)]
 	public string AttachBusObPublicId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets AttachBusObRecId
+	/// AttachBusObRecId
 	/// </summary>
 	[DataMember(Name = "attachBusObRecId", EmitDefaultValue = false)]
 	public string AttachBusObRecId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObId
+	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObName
+	/// BusObName
 	/// </summary>
 	[DataMember(Name = "busObName", EmitDefaultValue = false)]
 	public string BusObName { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObPublicId
+	/// BusObPublicId
 	/// </summary>
 	[DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
 	public string BusObPublicId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObRecId
+	/// BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Comment
+	/// Comment
 	/// </summary>
 	[DataMember(Name = "comment", EmitDefaultValue = false)]
 	public string Comment { get; set; }
 
 	/// <summary>
-	/// Gets or Sets IncludeLinks
+	/// IncludeLinks
 	/// </summary>
 	[DataMember(Name = "includeLinks", EmitDefaultValue = false)]
 	public bool? IncludeLinks { get; set; }

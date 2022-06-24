@@ -35,49 +35,49 @@ public partial class SaveUrlAttachmentRequest : IEquatable<SaveUrlAttachmentRequ
 	}
 
 	/// <summary>
-	/// Gets or Sets BusObId
+	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObName
+	/// BusObName
 	/// </summary>
 	[DataMember(Name = "busObName", EmitDefaultValue = false)]
 	public string BusObName { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObPublicId
+	/// BusObPublicId
 	/// </summary>
 	[DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
 	public string BusObPublicId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets BusObRecId
+	/// BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Comment
+	/// Comment
 	/// </summary>
 	[DataMember(Name = "comment", EmitDefaultValue = false)]
 	public string Comment { get; set; }
 
 	/// <summary>
-	/// Gets or Sets DisplayText
+	/// DisplayText
 	/// </summary>
 	[DataMember(Name = "displayText", EmitDefaultValue = false)]
 	public string DisplayText { get; set; }
 
 	/// <summary>
-	/// Gets or Sets IncludeLinks
+	/// IncludeLinks
 	/// </summary>
 	[DataMember(Name = "includeLinks", EmitDefaultValue = false)]
 	public bool? IncludeLinks { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Url
+	/// Url
 	/// </summary>
 	[DataMember(Name = "url", EmitDefaultValue = false)]
 	public string Url { get; set; }

@@ -12,7 +12,7 @@ namespace Cherwell.Api.Models.Forms;
 public partial class MobileFormResponse : IEquatable<MobileFormResponse>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets HttpStatusCode
+	/// HttpStatusCode
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
@@ -45,55 +45,55 @@ public partial class MobileFormResponse : IEquatable<MobileFormResponse>, IValid
 	}
 
 	/// <summary>
-	/// Gets or Sets Actions
+	/// Actions
 	/// </summary>
 	[DataMember(Name = "actions", EmitDefaultValue = false)]
 	public List<Core.Action> Actions { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Attachments
+	/// Attachments
 	/// </summary>
 	[DataMember(Name = "attachments", EmitDefaultValue = false)]
 	public List<ObjectAttachment> Attachments { get; set; }
 
 	/// <summary>
-	/// Gets or Sets GalleryImage
+	/// GalleryImage
 	/// </summary>
 	[DataMember(Name = "galleryImage", EmitDefaultValue = false)]
 	public string GalleryImage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets LocationInformation
+	/// LocationInformation
 	/// </summary>
 	[DataMember(Name = "locationInformation", EmitDefaultValue = false)]
 	public Location LocationInformation { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Sections
+	/// Sections
 	/// </summary>
 	[DataMember(Name = "sections", EmitDefaultValue = false)]
 	public List<Section> Sections { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Title
+	/// Title
 	/// </summary>
 	[DataMember(Name = "title", EmitDefaultValue = false)]
 	public string Title { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorCode
+	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorMessage
+	/// ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasError
+	/// HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }

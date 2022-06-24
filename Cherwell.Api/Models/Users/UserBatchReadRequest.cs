@@ -23,13 +23,13 @@ public partial class UserBatchReadRequest : IEquatable<UserBatchReadRequest>, IV
 	}
 
 	/// <summary>
-	/// Gets or Sets ReadRequests
+	/// ReadRequests
 	/// </summary>
 	[DataMember(Name = "readRequests", EmitDefaultValue = false)]
 	public List<UserReadRequest> ReadRequests { get; set; }
 
 	/// <summary>
-	/// Gets or Sets StopOnError
+	/// StopOnError
 	/// </summary>
 	[DataMember(Name = "stopOnError", EmitDefaultValue = false)]
 	public bool? StopOnError { get; set; }

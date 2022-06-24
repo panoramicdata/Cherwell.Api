@@ -12,7 +12,7 @@ namespace Cherwell.Api.Models.Users;
 public partial class UserV2 : IEquatable<UserV2>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets HttpStatusCode
+	/// HttpStatusCode
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
@@ -61,103 +61,103 @@ public partial class UserV2 : IEquatable<UserV2>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Gets or Sets AccountLocked
+	/// AccountLocked
 	/// </summary>
 	[DataMember(Name = "accountLocked", EmitDefaultValue = false)]
 	public bool? AccountLocked { get; set; }
 
 	/// <summary>
-	/// Gets or Sets CreateDateTime
+	/// CreateDateTime
 	/// </summary>
 	[DataMember(Name = "createDateTime", EmitDefaultValue = false)]
 	public DateTime? CreateDateTime { get; set; }
 
 	/// <summary>
-	/// Gets or Sets DisplayName
+	/// DisplayName
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Fields
+	/// Fields
 	/// </summary>
 	[DataMember(Name = "fields", EmitDefaultValue = false)]
 	public List<FieldTemplateItem> Fields { get; set; }
 
 	/// <summary>
-	/// Gets or Sets LastPasswordResetDate
+	/// LastPasswordResetDate
 	/// </summary>
 	[DataMember(Name = "lastPasswordResetDate", EmitDefaultValue = false)]
 	public DateTime? LastPasswordResetDate { get; set; }
 
 	/// <summary>
-	/// Gets or Sets LastResetDateTime
+	/// LastResetDateTime
 	/// </summary>
 	[DataMember(Name = "lastResetDateTime", EmitDefaultValue = false)]
 	public DateTime? LastResetDateTime { get; set; }
 
 	/// <summary>
-	/// Gets or Sets LdapRequired
+	/// LdapRequired
 	/// </summary>
 	[DataMember(Name = "ldapRequired", EmitDefaultValue = false)]
 	public bool? LdapRequired { get; set; }
 
 	/// <summary>
-	/// Gets or Sets PasswordNeverExpires
+	/// PasswordNeverExpires
 	/// </summary>
 	[DataMember(Name = "passwordNeverExpires", EmitDefaultValue = false)]
 	public bool? PasswordNeverExpires { get; set; }
 
 	/// <summary>
-	/// Gets or Sets PublicId
+	/// PublicId
 	/// </summary>
 	[DataMember(Name = "publicId", EmitDefaultValue = false)]
 	public string PublicId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets RecordId
+	/// RecordId
 	/// </summary>
 	[DataMember(Name = "recordId", EmitDefaultValue = false)]
 	public string RecordId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets SecurityGroupId
+	/// SecurityGroupId
 	/// </summary>
 	[DataMember(Name = "securityGroupId", EmitDefaultValue = false)]
 	public string SecurityGroupId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ShortdisplayName
+	/// ShortdisplayName
 	/// </summary>
 	[DataMember(Name = "shortdisplayName", EmitDefaultValue = false)]
 	public string ShortdisplayName { get; set; }
 
 	/// <summary>
-	/// Gets or Sets UserCannotChangePassword
+	/// UserCannotChangePassword
 	/// </summary>
 	[DataMember(Name = "userCannotChangePassword", EmitDefaultValue = false)]
 	public bool? UserCannotChangePassword { get; set; }
 
 	/// <summary>
-	/// Gets or Sets UserMustResetPasswordAtNextLogin
+	/// UserMustResetPasswordAtNextLogin
 	/// </summary>
 	[DataMember(Name = "userMustResetPasswordAtNextLogin", EmitDefaultValue = false)]
 	public bool? UserMustResetPasswordAtNextLogin { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorCode
+	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorMessage
+	/// ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasError
+	/// HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }

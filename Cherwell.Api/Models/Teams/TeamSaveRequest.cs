@@ -13,7 +13,7 @@ namespace Cherwell.Api.Models.Teams;
 public partial class TeamSaveRequest : IEquatable<TeamSaveRequest>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets TeamType
+	/// TeamType
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum EnumTeamType
@@ -33,7 +33,7 @@ public partial class TeamSaveRequest : IEquatable<TeamSaveRequest>, IValidatable
 	}
 
 	/// <summary>
-	/// Gets or Sets TeamType
+	/// TeamType
 	/// </summary>
 	[DataMember(Name = "teamType", EmitDefaultValue = false)]
 	public EnumTeamType? TeamType { get; set; }
@@ -58,31 +58,31 @@ public partial class TeamSaveRequest : IEquatable<TeamSaveRequest>, IValidatable
 	}
 
 	/// <summary>
-	/// Gets or Sets Description
+	/// Description
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
 	public string Description { get; set; }
 
 	/// <summary>
-	/// Gets or Sets EmailAlias
+	/// EmailAlias
 	/// </summary>
 	[DataMember(Name = "emailAlias", EmitDefaultValue = false)]
 	public string EmailAlias { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Image
+	/// Image
 	/// </summary>
 	[DataMember(Name = "image", EmitDefaultValue = false)]
 	public string Image { get; set; }
 
 	/// <summary>
-	/// Gets or Sets TeamId
+	/// TeamId
 	/// </summary>
 	[DataMember(Name = "teamId", EmitDefaultValue = false)]
 	public string TeamId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets TeamName
+	/// TeamName
 	/// </summary>
 	[DataMember(Name = "teamName", EmitDefaultValue = false)]
 	public string TeamName { get; set; }

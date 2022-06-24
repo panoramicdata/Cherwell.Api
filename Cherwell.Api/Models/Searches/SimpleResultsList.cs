@@ -12,7 +12,7 @@ namespace Cherwell.Api.Models.Searches;
 public partial class SimpleResultsList : IEquatable<SimpleResultsList>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets HttpStatusCode
+	/// HttpStatusCode
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
@@ -37,31 +37,31 @@ public partial class SimpleResultsList : IEquatable<SimpleResultsList>, IValidat
 	}
 
 	/// <summary>
-	/// Gets or Sets Groups
+	/// Groups
 	/// </summary>
 	[DataMember(Name = "groups", EmitDefaultValue = false)]
 	public List<SimpleResultsListGroup> Groups { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Title
+	/// Title
 	/// </summary>
 	[DataMember(Name = "title", EmitDefaultValue = false)]
 	public string Title { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorCode
+	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorMessage
+	/// ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasError
+	/// HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }

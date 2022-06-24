@@ -25,19 +25,19 @@ public partial class SimplePromptValue : IEquatable<SimplePromptValue>, IValidat
 	}
 
 	/// <summary>
-	/// Gets or Sets PromptDefId
+	/// PromptDefId
 	/// </summary>
 	[DataMember(Name = "promptDefId", EmitDefaultValue = false)]
 	public string PromptDefId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets PromptName
+	/// PromptName
 	/// </summary>
 	[DataMember(Name = "promptName", EmitDefaultValue = false)]
 	public string PromptName { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Value
+	/// Value
 	/// </summary>
 	[DataMember(Name = "value", EmitDefaultValue = false)]
 	public string Value { get; set; }

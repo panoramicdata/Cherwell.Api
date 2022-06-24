@@ -28,19 +28,19 @@ public partial class AddUserToTeamRequest : IEquatable<AddUserToTeamRequest>, IV
 	}
 
 	/// <summary>
-	/// Gets or Sets TeamId
+	/// TeamId
 	/// </summary>
 	[DataMember(Name = "teamId", EmitDefaultValue = false)]
 	public string TeamId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets UserIsTeamManager
+	/// UserIsTeamManager
 	/// </summary>
 	[DataMember(Name = "userIsTeamManager", EmitDefaultValue = false)]
 	public bool? UserIsTeamManager { get; set; }
 
 	/// <summary>
-	/// Gets or Sets UserRecordId
+	/// UserRecordId
 	/// </summary>
 	[DataMember(Name = "userRecordId", EmitDefaultValue = false)]
 	public string UserRecordId { get; set; }

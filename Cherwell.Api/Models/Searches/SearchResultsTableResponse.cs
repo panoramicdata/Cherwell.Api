@@ -12,7 +12,7 @@ namespace Cherwell.Api.Models.Searches;
 public partial class SearchResultsTableResponse : IEquatable<SearchResultsTableResponse>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets HttpStatusCode
+	/// HttpStatusCode
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
@@ -41,43 +41,43 @@ public partial class SearchResultsTableResponse : IEquatable<SearchResultsTableR
 	}
 
 	/// <summary>
-	/// Gets or Sets Columns
+	/// Columns
 	/// </summary>
 	[DataMember(Name = "columns", EmitDefaultValue = false)]
 	public List<Field> Columns { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Rows
+	/// Rows
 	/// </summary>
 	[DataMember(Name = "rows", EmitDefaultValue = false)]
 	public List<SearchResultsRow> Rows { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Sorting
+	/// Sorting
 	/// </summary>
 	[DataMember(Name = "sorting", EmitDefaultValue = false)]
 	public List<SortInfo> Sorting { get; set; }
 
 	/// <summary>
-	/// Gets or Sets TotalRows
+	/// TotalRows
 	/// </summary>
 	[DataMember(Name = "totalRows", EmitDefaultValue = false)]
 	public long? TotalRows { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorCode
+	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorMessage
+	/// ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasError
+	/// HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }

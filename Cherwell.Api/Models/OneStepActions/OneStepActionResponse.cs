@@ -12,7 +12,7 @@ namespace Cherwell.Api.Models.OneStepActions;
 public partial class OneStepActionResponse : IEquatable<OneStepActionResponse>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets HttpStatusCode
+	/// HttpStatusCode
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
@@ -43,49 +43,49 @@ public partial class OneStepActionResponse : IEquatable<OneStepActionResponse>, 
 	}
 
 	/// <summary>
-	/// Gets or Sets Completed
+	/// Completed
 	/// </summary>
 	[DataMember(Name = "completed", EmitDefaultValue = false)]
 	public bool? Completed { get; set; }
 
 	/// <summary>
-	/// Gets or Sets CurrentPrimaryBusObId
+	/// CurrentPrimaryBusObId
 	/// </summary>
 	[DataMember(Name = "currentPrimaryBusObId", EmitDefaultValue = false)]
 	public string CurrentPrimaryBusObId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets CurrentPrimaryBusObRecId
+	/// CurrentPrimaryBusObRecId
 	/// </summary>
 	[DataMember(Name = "currentPrimaryBusObRecId", EmitDefaultValue = false)]
 	public string CurrentPrimaryBusObRecId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasNewAccessToken
+	/// HasNewAccessToken
 	/// </summary>
 	[DataMember(Name = "hasNewAccessToken", EmitDefaultValue = false)]
 	public bool? HasNewAccessToken { get; set; }
 
 	/// <summary>
-	/// Gets or Sets NewAccessToken
+	/// NewAccessToken
 	/// </summary>
 	[DataMember(Name = "newAccessToken", EmitDefaultValue = false)]
 	public string NewAccessToken { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorCode
+	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorMessage
+	/// ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasError
+	/// HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }

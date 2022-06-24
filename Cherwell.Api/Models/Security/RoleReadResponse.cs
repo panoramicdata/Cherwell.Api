@@ -27,25 +27,25 @@ public partial class RoleReadResponse : IEquatable<RoleReadResponse>, IValidatab
 	}
 
 	/// <summary>
-	/// Gets or Sets Error
+	/// Error
 	/// </summary>
 	[DataMember(Name = "error", EmitDefaultValue = false)]
 	public string Error { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorCode
+	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasError
+	/// HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Roles
+	/// Roles
 	/// </summary>
 	[DataMember(Name = "roles", EmitDefaultValue = false)]
 	public List<Role> Roles { get; set; }

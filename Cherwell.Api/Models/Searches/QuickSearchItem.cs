@@ -13,7 +13,7 @@ namespace Cherwell.Api.Models.Searches;
 public partial class QuickSearchItem : IEquatable<QuickSearchItem>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets ChangedOption
+	/// ChangedOption
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum EnumChangedOption
@@ -45,7 +45,7 @@ public partial class QuickSearchItem : IEquatable<QuickSearchItem>, IValidatable
 	}
 
 	/// <summary>
-	/// Gets or Sets NonFinalStateOption
+	/// NonFinalStateOption
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum EnumNonFinalStateOption
@@ -77,7 +77,7 @@ public partial class QuickSearchItem : IEquatable<QuickSearchItem>, IValidatable
 	}
 
 	/// <summary>
-	/// Gets or Sets SearchAnyWordsOption
+	/// SearchAnyWordsOption
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum EnumSearchAnyWordsOption
@@ -109,7 +109,7 @@ public partial class QuickSearchItem : IEquatable<QuickSearchItem>, IValidatable
 	}
 
 	/// <summary>
-	/// Gets or Sets SearchAttachmentsOption
+	/// SearchAttachmentsOption
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum EnumSearchAttachmentsOption
@@ -141,7 +141,7 @@ public partial class QuickSearchItem : IEquatable<QuickSearchItem>, IValidatable
 	}
 
 	/// <summary>
-	/// Gets or Sets SearchRelatedOption
+	/// SearchRelatedOption
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum EnumSearchRelatedOption
@@ -173,7 +173,7 @@ public partial class QuickSearchItem : IEquatable<QuickSearchItem>, IValidatable
 	}
 
 	/// <summary>
-	/// Gets or Sets SearchTargetType
+	/// SearchTargetType
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum EnumSearchTargetType
@@ -193,7 +193,7 @@ public partial class QuickSearchItem : IEquatable<QuickSearchItem>, IValidatable
 	}
 
 	/// <summary>
-	/// Gets or Sets SortByOption
+	/// SortByOption
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum EnumSortByOption
@@ -225,43 +225,43 @@ public partial class QuickSearchItem : IEquatable<QuickSearchItem>, IValidatable
 	}
 
 	/// <summary>
-	/// Gets or Sets ChangedOption
+	/// ChangedOption
 	/// </summary>
 	[DataMember(Name = "changedOption", EmitDefaultValue = false)]
 	public EnumChangedOption? ChangedOption { get; set; }
 
 	/// <summary>
-	/// Gets or Sets NonFinalStateOption
+	/// NonFinalStateOption
 	/// </summary>
 	[DataMember(Name = "nonFinalStateOption", EmitDefaultValue = false)]
 	public EnumNonFinalStateOption? NonFinalStateOption { get; set; }
 
 	/// <summary>
-	/// Gets or Sets SearchAnyWordsOption
+	/// SearchAnyWordsOption
 	/// </summary>
 	[DataMember(Name = "searchAnyWordsOption", EmitDefaultValue = false)]
 	public EnumSearchAnyWordsOption? SearchAnyWordsOption { get; set; }
 
 	/// <summary>
-	/// Gets or Sets SearchAttachmentsOption
+	/// SearchAttachmentsOption
 	/// </summary>
 	[DataMember(Name = "searchAttachmentsOption", EmitDefaultValue = false)]
 	public EnumSearchAttachmentsOption? SearchAttachmentsOption { get; set; }
 
 	/// <summary>
-	/// Gets or Sets SearchRelatedOption
+	/// SearchRelatedOption
 	/// </summary>
 	[DataMember(Name = "searchRelatedOption", EmitDefaultValue = false)]
 	public EnumSearchRelatedOption? SearchRelatedOption { get; set; }
 
 	/// <summary>
-	/// Gets or Sets SearchTargetType
+	/// SearchTargetType
 	/// </summary>
 	[DataMember(Name = "searchTargetType", EmitDefaultValue = false)]
 	public EnumSearchTargetType? SearchTargetType { get; set; }
 
 	/// <summary>
-	/// Gets or Sets SortByOption
+	/// SortByOption
 	/// </summary>
 	[DataMember(Name = "sortByOption", EmitDefaultValue = false)]
 	public EnumSortByOption? SortByOption { get; set; }
@@ -308,61 +308,61 @@ public partial class QuickSearchItem : IEquatable<QuickSearchItem>, IValidatable
 	}
 
 	/// <summary>
-	/// Gets or Sets Ascending
+	/// Ascending
 	/// </summary>
 	[DataMember(Name = "ascending", EmitDefaultValue = false)]
 	public bool? Ascending { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ChangedLimits
+	/// ChangedLimits
 	/// </summary>
 	[DataMember(Name = "changedLimits", EmitDefaultValue = false)]
 	public List<ChangedLimit> ChangedLimits { get; set; }
 
 	/// <summary>
-	/// Gets or Sets DisplayName
+	/// DisplayName
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; }
 
 	/// <summary>
-	/// Gets or Sets GalleryImage
+	/// GalleryImage
 	/// </summary>
 	[DataMember(Name = "galleryImage", EmitDefaultValue = false)]
 	public string GalleryImage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasAnyOptions
+	/// HasAnyOptions
 	/// </summary>
 	[DataMember(Name = "hasAnyOptions", EmitDefaultValue = false)]
 	public bool? HasAnyOptions { get; set; }
 
 	/// <summary>
-	/// Gets or Sets SearchTargetId
+	/// SearchTargetId
 	/// </summary>
 	[DataMember(Name = "searchTargetId", EmitDefaultValue = false)]
 	public string SearchTargetId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets SelectedChangedLimit
+	/// SelectedChangedLimit
 	/// </summary>
 	[DataMember(Name = "selectedChangedLimit", EmitDefaultValue = false)]
 	public ChangedLimit SelectedChangedLimit { get; set; }
 
 	/// <summary>
-	/// Gets or Sets SelectedSortByFieldId
+	/// SelectedSortByFieldId
 	/// </summary>
 	[DataMember(Name = "selectedSortByFieldId", EmitDefaultValue = false)]
 	public string SelectedSortByFieldId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets SortByFields
+	/// SortByFields
 	/// </summary>
 	[DataMember(Name = "sortByFields", EmitDefaultValue = false)]
 	public Dictionary<string, string> SortByFields { get; set; }
 
 	/// <summary>
-	/// Gets or Sets WatermarkText
+	/// WatermarkText
 	/// </summary>
 	[DataMember(Name = "watermarkText", EmitDefaultValue = false)]
 	public string WatermarkText { get; set; }

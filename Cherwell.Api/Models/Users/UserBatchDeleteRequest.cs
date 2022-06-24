@@ -23,13 +23,13 @@ public partial class UserBatchDeleteRequest : IEquatable<UserBatchDeleteRequest>
 	}
 
 	/// <summary>
-	/// Gets or Sets StopOnError
+	/// StopOnError
 	/// </summary>
 	[DataMember(Name = "stopOnError", EmitDefaultValue = false)]
 	public bool? StopOnError { get; set; }
 
 	/// <summary>
-	/// Gets or Sets UserRecordIds
+	/// UserRecordIds
 	/// </summary>
 	[DataMember(Name = "userRecordIds", EmitDefaultValue = false)]
 	public List<string> UserRecordIds { get; set; }

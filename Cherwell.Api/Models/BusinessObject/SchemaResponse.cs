@@ -12,7 +12,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 public partial class SchemaResponse : IEquatable<SchemaResponse>, IValidatableObject
 {
 	/// <summary>
-	/// Gets or Sets HttpStatusCode
+	/// HttpStatusCode
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
@@ -51,73 +51,73 @@ public partial class SchemaResponse : IEquatable<SchemaResponse>, IValidatableOb
 	}
 
 	/// <summary>
-	/// Gets or Sets BusObId
+	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets FieldDefinitions
+	/// FieldDefinitions
 	/// </summary>
 	[DataMember(Name = "fieldDefinitions", EmitDefaultValue = false)]
 	public List<FieldDefinition> FieldDefinitions { get; set; }
 
 	/// <summary>
-	/// Gets or Sets FirstRecIdField
+	/// FirstRecIdField
 	/// </summary>
 	[DataMember(Name = "firstRecIdField", EmitDefaultValue = false)]
 	public string FirstRecIdField { get; set; }
 
 	/// <summary>
-	/// Gets or Sets GridDefinitions
+	/// GridDefinitions
 	/// </summary>
 	[DataMember(Name = "gridDefinitions", EmitDefaultValue = false)]
 	public List<GridDefinition> GridDefinitions { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Name
+	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
 
 	/// <summary>
-	/// Gets or Sets RecIdFields
+	/// RecIdFields
 	/// </summary>
 	[DataMember(Name = "recIdFields", EmitDefaultValue = false)]
 	public string RecIdFields { get; set; }
 
 	/// <summary>
-	/// Gets or Sets Relationships
+	/// Relationships
 	/// </summary>
 	[DataMember(Name = "relationships", EmitDefaultValue = false)]
 	public List<BusinessObjectRelationship> Relationships { get; set; }
 
 	/// <summary>
-	/// Gets or Sets StateFieldId
+	/// StateFieldId
 	/// </summary>
 	[DataMember(Name = "stateFieldId", EmitDefaultValue = false)]
 	public string StateFieldId { get; set; }
 
 	/// <summary>
-	/// Gets or Sets States
+	/// States
 	/// </summary>
 	[DataMember(Name = "states", EmitDefaultValue = false)]
 	public string States { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorCode
+	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
 
 	/// <summary>
-	/// Gets or Sets ErrorMessage
+	/// ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
 
 	/// <summary>
-	/// Gets or Sets HasError
+	/// HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }
