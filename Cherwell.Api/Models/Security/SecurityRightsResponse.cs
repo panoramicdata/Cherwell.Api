@@ -307,6 +307,7 @@ public partial class SecurityRightsResponse : IEquatable<SecurityRightsResponse>
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SecurityRightsResponse" /> class.
 	/// </summary>
@@ -329,21 +330,25 @@ public partial class SecurityRightsResponse : IEquatable<SecurityRightsResponse>
 	/// </summary>
 	[DataMember(Name = "rights", EmitDefaultValue = false)]
 	public List<Right> Rights { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

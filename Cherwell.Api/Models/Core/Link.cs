@@ -27,11 +27,13 @@ public partial class Link : IEquatable<Link>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Url
 	/// </summary>
 	[DataMember(Name = "url", EmitDefaultValue = false)]
 	public string Url { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

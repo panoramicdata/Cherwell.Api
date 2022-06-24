@@ -41,46 +41,55 @@ public partial class SaveApiClientSettingRequest : IEquatable<SaveApiClientSetti
 	/// </summary>
 	[DataMember(Name = "allowAnonymousAccess", EmitDefaultValue = false)]
 	public bool? AllowAnonymousAccess { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ApiAccessIsEnabled
 	/// </summary>
 	[DataMember(Name = "apiAccessIsEnabled", EmitDefaultValue = false)]
 	public bool? ApiAccessIsEnabled { get; set; }
+
 	/// <summary>
 	/// Gets or Sets CreateNewClientKey
 	/// </summary>
 	[DataMember(Name = "createNewClientKey", EmitDefaultValue = false)]
 	public bool? CreateNewClientKey { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Culture
 	/// </summary>
 	[DataMember(Name = "culture", EmitDefaultValue = false)]
 	public string Culture { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Description
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
 	public string Description { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
+
 	/// <summary>
 	/// Gets or Sets RefreshTokenLifespanMinutes
 	/// </summary>
 	[DataMember(Name = "refreshTokenLifespanMinutes", EmitDefaultValue = false)]
 	public int? RefreshTokenLifespanMinutes { get; set; }
+
 	/// <summary>
 	/// Gets or Sets StandInKey
 	/// </summary>
 	[DataMember(Name = "standInKey", EmitDefaultValue = false)]
 	public string StandInKey { get; set; }
+
 	/// <summary>
 	/// Gets or Sets TokenLifespanMinutes
 	/// </summary>
 	[DataMember(Name = "tokenLifespanMinutes", EmitDefaultValue = false)]
 	public int? TokenLifespanMinutes { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

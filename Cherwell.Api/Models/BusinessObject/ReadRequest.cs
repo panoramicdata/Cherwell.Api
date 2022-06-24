@@ -29,16 +29,19 @@ public partial class ReadRequest : IEquatable<ReadRequest>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObPublicId
 	/// </summary>
 	[DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
 	public string BusObPublicId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

@@ -25,6 +25,7 @@ public partial class QuickSearchConfigurationRequest : IEquatable<QuickSearchCon
 	/// </summary>
 	[DataMember(Name = "busObIds", EmitDefaultValue = false)]
 	public List<string> BusObIds { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

@@ -147,11 +147,13 @@ public partial class Prompt : IEquatable<Prompt>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "listDisplayOption", EmitDefaultValue = false)]
 	public EnumListDisplayOption? ListDisplayOption { get; set; }
+
 	/// <summary>
 	/// Gets or Sets PromptType
 	/// </summary>
 	[DataMember(Name = "promptType", EmitDefaultValue = false)]
 	public EnumPromptType? PromptType { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="Prompt" /> class.
 	/// </summary>
@@ -202,86 +204,103 @@ public partial class Prompt : IEquatable<Prompt>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "allowValuesOnly", EmitDefaultValue = false)]
 	public bool? AllowValuesOnly { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets CollectionStoreEntireRow
 	/// </summary>
 	[DataMember(Name = "collectionStoreEntireRow", EmitDefaultValue = false)]
 	public string CollectionStoreEntireRow { get; set; }
+
 	/// <summary>
 	/// Gets or Sets CollectionValueField
 	/// </summary>
 	[DataMember(Name = "collectionValueField", EmitDefaultValue = false)]
 	public string CollectionValueField { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ConstraintXml
 	/// </summary>
 	[DataMember(Name = "constraintXml", EmitDefaultValue = false)]
 	public string ConstraintXml { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Contents
 	/// </summary>
 	[DataMember(Name = "contents", EmitDefaultValue = false)]
 	public string Contents { get; set; }
+
 	/// <summary>
 	/// Gets or Sets _Default
 	/// </summary>
 	[DataMember(Name = "default", EmitDefaultValue = false)]
 	public string Default { get; set; }
+
 	/// <summary>
 	/// Gets or Sets FieldId
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
 	public string FieldId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets IsDateRange
 	/// </summary>
 	[DataMember(Name = "isDateRange", EmitDefaultValue = false)]
 	public bool? IsDateRange { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ListReturnFieldId
 	/// </summary>
 	[DataMember(Name = "listReturnFieldId", EmitDefaultValue = false)]
 	public string ListReturnFieldId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets MultiLine
 	/// </summary>
 	[DataMember(Name = "multiLine", EmitDefaultValue = false)]
 	public bool? MultiLine { get; set; }
+
 	/// <summary>
 	/// Gets or Sets PromptId
 	/// </summary>
 	[DataMember(Name = "promptId", EmitDefaultValue = false)]
 	public string PromptId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets PromptTypeName
 	/// </summary>
 	[DataMember(Name = "promptTypeName", EmitDefaultValue = false)]
 	public string PromptTypeName { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Required
 	/// </summary>
 	[DataMember(Name = "required", EmitDefaultValue = false)]
 	public bool? Required { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Text
 	/// </summary>
 	[DataMember(Name = "text", EmitDefaultValue = false)]
 	public string Text { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Value
 	/// </summary>
 	[DataMember(Name = "value", EmitDefaultValue = false)]
 	public Object Value { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Values
 	/// </summary>
 	[DataMember(Name = "values", EmitDefaultValue = false)]
 	public List<string> Values { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

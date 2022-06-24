@@ -35,31 +35,37 @@ public partial class Section : IEquatable<Section>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "sectionFields", EmitDefaultValue = false)]
 	public List<SectionField> SectionFields { get; set; }
+
 	/// <summary>
 	/// Gets or Sets GalleryImage
 	/// </summary>
 	[DataMember(Name = "galleryImage", EmitDefaultValue = false)]
 	public string GalleryImage { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Title
 	/// </summary>
 	[DataMember(Name = "title", EmitDefaultValue = false)]
 	public string Title { get; set; }
+
 	/// <summary>
 	/// Gets or Sets RelationshipId
 	/// </summary>
 	[DataMember(Name = "relationshipId", EmitDefaultValue = false)]
 	public string RelationshipId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets TargetBusObId
 	/// </summary>
 	[DataMember(Name = "targetBusObId", EmitDefaultValue = false)]
 	public string TargetBusObId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets TargetBusObRecId
 	/// </summary>
 	[DataMember(Name = "targetBusObRecId", EmitDefaultValue = false)]
 	public string TargetBusObRecId { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

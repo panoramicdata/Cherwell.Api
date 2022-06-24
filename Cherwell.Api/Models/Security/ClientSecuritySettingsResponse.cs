@@ -14,20 +14,20 @@ public partial class ClientSecuritySettingsResponse : IEquatable<ClientSecurityS
 	/// <summary>
 	/// Initializes a new instance of the <see cref="ClientSecuritySettingsResponse" /> class.
 	/// </summary>
-	/// <param name="InternalLoginAllowed">InternalLoginAllowed.</param>
-	/// <param name="LdapLoginAllowed">LdapLoginAllowed.</param>
-	/// <param name="SamlLoginAllowed">SamlLoginAllowed.</param>
-	/// <param name="WindowsLoginAllowed">WindowsLoginAllowed.</param>
+	/// <param name="internalLoginAllowed">InternalLoginAllowed.</param>
+	/// <param name="ldapLoginAllowed">LdapLoginAllowed.</param>
+	/// <param name="samlLoginAllowed">SamlLoginAllowed.</param>
+	/// <param name="windowsLoginAllowed">WindowsLoginAllowed.</param>
 	public ClientSecuritySettingsResponse(
-		bool? InternalLoginAllowed = default,
-		bool? LdapLoginAllowed = default,
-		bool? SamlLoginAllowed = default,
-		bool? WindowsLoginAllowed = default)
+		bool? internalLoginAllowed = default,
+		bool? ldapLoginAllowed = default,
+		bool? samlLoginAllowed = default,
+		bool? windowsLoginAllowed = default)
 	{
-		this.InternalLoginAllowed = InternalLoginAllowed;
-		this.LdapLoginAllowed = LdapLoginAllowed;
-		this.SamlLoginAllowed = SamlLoginAllowed;
-		this.WindowsLoginAllowed = WindowsLoginAllowed;
+		InternalLoginAllowed = internalLoginAllowed;
+		LdapLoginAllowed = ldapLoginAllowed;
+		SamlLoginAllowed = samlLoginAllowed;
+		WindowsLoginAllowed = windowsLoginAllowed;
 	}
 
 	/// <summary>
@@ -35,21 +35,25 @@ public partial class ClientSecuritySettingsResponse : IEquatable<ClientSecurityS
 	/// </summary>
 	[DataMember(Name = "internalLoginAllowed", EmitDefaultValue = false)]
 	public bool? InternalLoginAllowed { get; set; }
+
 	/// <summary>
 	/// Gets or Sets LdapLoginAllowed
 	/// </summary>
 	[DataMember(Name = "ldapLoginAllowed", EmitDefaultValue = false)]
 	public bool? LdapLoginAllowed { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SamlLoginAllowed
 	/// </summary>
 	[DataMember(Name = "samlLoginAllowed", EmitDefaultValue = false)]
 	public bool? SamlLoginAllowed { get; set; }
+
 	/// <summary>
 	/// Gets or Sets WindowsLoginAllowed
 	/// </summary>
 	[DataMember(Name = "windowsLoginAllowed", EmitDefaultValue = false)]
 	public bool? WindowsLoginAllowed { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

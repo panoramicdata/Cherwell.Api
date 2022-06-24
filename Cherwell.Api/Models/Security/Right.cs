@@ -55,81 +55,97 @@ public partial class Right : IEquatable<Right>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "add", EmitDefaultValue = false)]
 	public bool? Add { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Allow
 	/// </summary>
 	[DataMember(Name = "allow", EmitDefaultValue = false)]
 	public bool? Allow { get; set; }
+
 	/// <summary>
 	/// Gets or Sets CategoryDescription
 	/// </summary>
 	[DataMember(Name = "categoryDescription", EmitDefaultValue = false)]
 	public string CategoryDescription { get; set; }
+
 	/// <summary>
 	/// Gets or Sets CategoryId
 	/// </summary>
 	[DataMember(Name = "categoryId", EmitDefaultValue = false)]
 	public string CategoryId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets CategoryName
 	/// </summary>
 	[DataMember(Name = "categoryName", EmitDefaultValue = false)]
 	public string CategoryName { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Delete
 	/// </summary>
 	[DataMember(Name = "delete", EmitDefaultValue = false)]
 	public bool? Delete { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Edit
 	/// </summary>
 	[DataMember(Name = "edit", EmitDefaultValue = false)]
 	public bool? Edit { get; set; }
+
 	/// <summary>
 	/// Gets or Sets IsYesNoRight
 	/// </summary>
 	[DataMember(Name = "isYesNoRight", EmitDefaultValue = false)]
 	public bool? IsYesNoRight { get; set; }
+
 	/// <summary>
 	/// Gets or Sets NonScopeOwnerAdd
 	/// </summary>
 	[DataMember(Name = "nonScopeOwnerAdd", EmitDefaultValue = false)]
 	public bool? NonScopeOwnerAdd { get; set; }
+
 	/// <summary>
 	/// Gets or Sets NonScopeOwnerDelete
 	/// </summary>
 	[DataMember(Name = "nonScopeOwnerDelete", EmitDefaultValue = false)]
 	public bool? NonScopeOwnerDelete { get; set; }
+
 	/// <summary>
 	/// Gets or Sets NonScopeOwnerEdit
 	/// </summary>
 	[DataMember(Name = "nonScopeOwnerEdit", EmitDefaultValue = false)]
 	public bool? NonScopeOwnerEdit { get; set; }
+
 	/// <summary>
 	/// Gets or Sets NonScopeOwnerView
 	/// </summary>
 	[DataMember(Name = "nonScopeOwnerView", EmitDefaultValue = false)]
 	public bool? NonScopeOwnerView { get; set; }
+
 	/// <summary>
 	/// Gets or Sets RightId
 	/// </summary>
 	[DataMember(Name = "rightId", EmitDefaultValue = false)]
 	public string RightId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets RightName
 	/// </summary>
 	[DataMember(Name = "rightName", EmitDefaultValue = false)]
 	public string RightName { get; set; }
+
 	/// <summary>
 	/// Gets or Sets StandardRightName
 	/// </summary>
 	[DataMember(Name = "standardRightName", EmitDefaultValue = false)]
 	public string StandardRightName { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ViewRunOpen
 	/// </summary>
 	[DataMember(Name = "viewRunOpen", EmitDefaultValue = false)]
 	public bool? ViewRunOpen { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

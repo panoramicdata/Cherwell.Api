@@ -307,6 +307,7 @@ public partial class QuickSearchConfigurationResponse : IEquatable<QuickSearchCo
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="QuickSearchConfigurationResponse" /> class.
 	/// </summary>
@@ -359,96 +360,115 @@ public partial class QuickSearchConfigurationResponse : IEquatable<QuickSearchCo
 	/// </summary>
 	[DataMember(Name = "allowQuickSearch", EmitDefaultValue = false)]
 	public bool? AllowQuickSearch { get; set; }
+
 	/// <summary>
 	/// Gets or Sets AllowSpecificSearch
 	/// </summary>
 	[DataMember(Name = "allowSpecificSearch", EmitDefaultValue = false)]
 	public bool? AllowSpecificSearch { get; set; }
+
 	/// <summary>
 	/// Gets or Sets DefaultToQuickSearch
 	/// </summary>
 	[DataMember(Name = "defaultToQuickSearch", EmitDefaultValue = false)]
 	public bool? DefaultToQuickSearch { get; set; }
+
 	/// <summary>
 	/// Gets or Sets DisplayName
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; }
+
 	/// <summary>
 	/// Gets or Sets GalleryImage
 	/// </summary>
 	[DataMember(Name = "galleryImage", EmitDefaultValue = false)]
 	public string GalleryImage { get; set; }
+
 	/// <summary>
 	/// Gets or Sets History
 	/// </summary>
 	[DataMember(Name = "history", EmitDefaultValue = false)]
 	public List<string> History { get; set; }
+
 	/// <summary>
 	/// Gets or Sets IncludeAvailableInSpecific
 	/// </summary>
 	[DataMember(Name = "includeAvailableInSpecific", EmitDefaultValue = false)]
 	public bool? IncludeAvailableInSpecific { get; set; }
+
 	/// <summary>
 	/// Gets or Sets IncludeQuickSearchInSpecific
 	/// </summary>
 	[DataMember(Name = "includeQuickSearchInSpecific", EmitDefaultValue = false)]
 	public bool? IncludeQuickSearchInSpecific { get; set; }
+
 	/// <summary>
 	/// Gets or Sets QuickSearchId
 	/// </summary>
 	[DataMember(Name = "quickSearchId", EmitDefaultValue = false)]
 	public string QuickSearchId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets QuickSearchItems
 	/// </summary>
 	[DataMember(Name = "quickSearchItems", EmitDefaultValue = false)]
 	public List<QuickSearchItem> QuickSearchItems { get; set; }
+
 	/// <summary>
 	/// Gets or Sets QuickSearchWatermark
 	/// </summary>
 	[DataMember(Name = "quickSearchWatermark", EmitDefaultValue = false)]
 	public string QuickSearchWatermark { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SortByRelevance
 	/// </summary>
 	[DataMember(Name = "sortByRelevance", EmitDefaultValue = false)]
 	public bool? SortByRelevance { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ResolvedQuickSearchWatermark
 	/// </summary>
 	[DataMember(Name = "resolvedQuickSearchWatermark", EmitDefaultValue = false)]
 	public string ResolvedQuickSearchWatermark { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Scope
 	/// </summary>
 	[DataMember(Name = "scope", EmitDefaultValue = false)]
 	public string Scope { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ScopeOwner
 	/// </summary>
 	[DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
 	public string ScopeOwner { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SpecificSearchItems
 	/// </summary>
 	[DataMember(Name = "specificSearchItems", EmitDefaultValue = false)]
 	public List<QuickSearchItem> SpecificSearchItems { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

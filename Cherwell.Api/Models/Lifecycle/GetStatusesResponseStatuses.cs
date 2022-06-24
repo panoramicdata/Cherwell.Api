@@ -31,21 +31,25 @@ public partial class GetStatusesResponseStatuses : IEquatable<GetStatusesRespons
 	/// </summary>
 	[DataMember(Name = "id", EmitDefaultValue = false)]
 	public string Id { get; set; }
+
 	/// <summary>
 	/// Gets or Sets IsInitial
 	/// </summary>
 	[DataMember(Name = "isInitial", EmitDefaultValue = false)]
 	public bool? IsInitial { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
+
 	/// <summary>
 	/// Gets or Sets StageId
 	/// </summary>
 	[DataMember(Name = "stageId", EmitDefaultValue = false)]
 	public string StageId { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

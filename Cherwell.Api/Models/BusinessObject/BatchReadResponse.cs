@@ -25,6 +25,7 @@ public partial class BatchReadResponse : IEquatable<BatchReadResponse>, IValidat
 	/// </summary>
 	[DataMember(Name = "responses", EmitDefaultValue = false)]
 	public List<ReadResponse> Responses { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

@@ -33,26 +33,31 @@ public partial class UserSaveResponse : IEquatable<UserSaveResponse>, IValidatab
 	/// </summary>
 	[DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
 	public string BusObPublicId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Error
 	/// </summary>
 	[DataMember(Name = "error", EmitDefaultValue = false)]
 	public string Error { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

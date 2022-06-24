@@ -39,41 +39,49 @@ public partial class SearchItem : IEquatable<SearchItem>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "association", EmitDefaultValue = false)]
 	public string Association { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Links
 	/// </summary>
 	[DataMember(Name = "links", EmitDefaultValue = false)]
 	public List<Link> Links { get; set; }
+
 	/// <summary>
 	/// Gets or Sets LocalizedScopeName
 	/// </summary>
 	[DataMember(Name = "localizedScopeName", EmitDefaultValue = false)]
 	public string LocalizedScopeName { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ParentFolderId
 	/// </summary>
 	[DataMember(Name = "parentFolderId", EmitDefaultValue = false)]
 	public string ParentFolderId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Scope
 	/// </summary>
 	[DataMember(Name = "scope", EmitDefaultValue = false)]
 	public string Scope { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ScopeOwner
 	/// </summary>
 	[DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
 	public string ScopeOwner { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SearchId
 	/// </summary>
 	[DataMember(Name = "searchId", EmitDefaultValue = false)]
 	public string SearchId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SearchName
 	/// </summary>
 	[DataMember(Name = "searchName", EmitDefaultValue = false)]
 	public string SearchName { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

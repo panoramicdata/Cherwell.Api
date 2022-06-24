@@ -57,86 +57,103 @@ public partial class UserSaveV2Request : IEquatable<UserSaveV2Request>, IValidat
 	/// </summary>
 	[DataMember(Name = "accountLocked", EmitDefaultValue = false)]
 	public bool? AccountLocked { get; set; }
+
 	/// <summary>
 	/// Gets or Sets AllCultures
 	/// </summary>
 	[DataMember(Name = "allCultures", EmitDefaultValue = false)]
 	public bool? AllCultures { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObPublicId
 	/// </summary>
 	[DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
 	public string BusObPublicId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets DisplayName
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; }
+
 	/// <summary>
 	/// Gets or Sets LdapRequired
 	/// </summary>
 	[DataMember(Name = "ldapRequired", EmitDefaultValue = false)]
 	public bool? LdapRequired { get; set; }
+
 	/// <summary>
 	/// Gets or Sets LoginId
 	/// </summary>
 	[DataMember(Name = "loginId", EmitDefaultValue = false)]
 	public string LoginId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets NextPasswordResetDate
 	/// </summary>
 	[DataMember(Name = "nextPasswordResetDate", EmitDefaultValue = false)]
 	public DateTime? NextPasswordResetDate { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Password
 	/// </summary>
 	[DataMember(Name = "password", EmitDefaultValue = false)]
 	public string Password { get; set; }
+
 	/// <summary>
 	/// Gets or Sets PasswordNeverExpires
 	/// </summary>
 	[DataMember(Name = "passwordNeverExpires", EmitDefaultValue = false)]
 	public bool? PasswordNeverExpires { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SecurityGroupId
 	/// </summary>
 	[DataMember(Name = "securityGroupId", EmitDefaultValue = false)]
 	public string SecurityGroupId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SpecificCulture
 	/// </summary>
 	[DataMember(Name = "specificCulture", EmitDefaultValue = false)]
 	public string SpecificCulture { get; set; }
+
 	/// <summary>
 	/// Gets or Sets UserCannotChangePassword
 	/// </summary>
 	[DataMember(Name = "userCannotChangePassword", EmitDefaultValue = false)]
 	public bool? UserCannotChangePassword { get; set; }
+
 	/// <summary>
 	/// Gets or Sets UserInfoFields
 	/// </summary>
 	[DataMember(Name = "userInfoFields", EmitDefaultValue = false)]
 	public List<FieldTemplateItem> UserInfoFields { get; set; }
+
 	/// <summary>
 	/// Gets or Sets UserMustChangePasswordAtNextLogin
 	/// </summary>
 	[DataMember(Name = "userMustChangePasswordAtNextLogin", EmitDefaultValue = false)]
 	public bool? UserMustChangePasswordAtNextLogin { get; set; }
+
 	/// <summary>
 	/// Gets or Sets WindowsUserId
 	/// </summary>
 	[DataMember(Name = "windowsUserId", EmitDefaultValue = false)]
 	public string WindowsUserId { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

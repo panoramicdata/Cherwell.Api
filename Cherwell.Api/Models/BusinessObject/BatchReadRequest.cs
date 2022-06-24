@@ -27,11 +27,13 @@ public partial class BatchReadRequest : IEquatable<BatchReadRequest>, IValidatab
 	/// </summary>
 	[DataMember(Name = "readRequests", EmitDefaultValue = false)]
 	public List<ReadRequest> ReadRequests { get; set; }
+
 	/// <summary>
 	/// Gets or Sets StopOnError
 	/// </summary>
 	[DataMember(Name = "stopOnError", EmitDefaultValue = false)]
 	public bool? StopOnError { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

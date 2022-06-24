@@ -31,21 +31,25 @@ public partial class RoleReadResponse : IEquatable<RoleReadResponse>, IValidatab
 	/// </summary>
 	[DataMember(Name = "error", EmitDefaultValue = false)]
 	public string Error { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Roles
 	/// </summary>
 	[DataMember(Name = "roles", EmitDefaultValue = false)]
 	public List<Role> Roles { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

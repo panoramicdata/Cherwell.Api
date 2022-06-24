@@ -61,6 +61,7 @@ public partial class LogRequest : IEquatable<LogRequest>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "level", EmitDefaultValue = false)]
 	public EnumLevel? Level { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="LogRequest" /> class.
 	/// </summary>
@@ -79,11 +80,13 @@ public partial class LogRequest : IEquatable<LogRequest>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "keyValueproperties", EmitDefaultValue = false)]
 	public List<object> keyValueproperties { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Message
 	/// </summary>
 	[DataMember(Name = "message", EmitDefaultValue = false)]
 	public string Message { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

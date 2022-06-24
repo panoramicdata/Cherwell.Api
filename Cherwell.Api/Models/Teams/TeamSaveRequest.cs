@@ -37,6 +37,7 @@ public partial class TeamSaveRequest : IEquatable<TeamSaveRequest>, IValidatable
 	/// </summary>
 	[DataMember(Name = "teamType", EmitDefaultValue = false)]
 	public EnumTeamType? TeamType { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="TeamSaveRequest" /> class.
 	/// </summary>
@@ -61,26 +62,31 @@ public partial class TeamSaveRequest : IEquatable<TeamSaveRequest>, IValidatable
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
 	public string Description { get; set; }
+
 	/// <summary>
 	/// Gets or Sets EmailAlias
 	/// </summary>
 	[DataMember(Name = "emailAlias", EmitDefaultValue = false)]
 	public string EmailAlias { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Image
 	/// </summary>
 	[DataMember(Name = "image", EmitDefaultValue = false)]
 	public string Image { get; set; }
+
 	/// <summary>
 	/// Gets or Sets TeamId
 	/// </summary>
 	[DataMember(Name = "teamId", EmitDefaultValue = false)]
 	public string TeamId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets TeamName
 	/// </summary>
 	[DataMember(Name = "teamName", EmitDefaultValue = false)]
 	public string TeamName { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

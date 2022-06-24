@@ -29,16 +29,19 @@ public partial class QuickSearchConfigSavedRequest : IEquatable<QuickSearchConfi
 	/// </summary>
 	[DataMember(Name = "standIn", EmitDefaultValue = false)]
 	public string StandIn { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObIds
 	/// </summary>
 	[DataMember(Name = "busObIds", EmitDefaultValue = false)]
 	public List<string> BusObIds { get; set; }
+
 	/// <summary>
 	/// Gets or Sets IsGeneral
 	/// </summary>
 	[DataMember(Name = "isGeneral", EmitDefaultValue = false)]
 	public bool? IsGeneral { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

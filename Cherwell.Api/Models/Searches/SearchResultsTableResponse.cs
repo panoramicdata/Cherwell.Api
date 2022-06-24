@@ -307,6 +307,7 @@ public partial class SearchResultsTableResponse : IEquatable<SearchResultsTableR
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SearchResultsTableResponse" /> class.
 	/// </summary>
@@ -335,36 +336,43 @@ public partial class SearchResultsTableResponse : IEquatable<SearchResultsTableR
 	/// </summary>
 	[DataMember(Name = "columns", EmitDefaultValue = false)]
 	public List<Field> Columns { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Rows
 	/// </summary>
 	[DataMember(Name = "rows", EmitDefaultValue = false)]
 	public List<SearchResultsRow> Rows { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Sorting
 	/// </summary>
 	[DataMember(Name = "sorting", EmitDefaultValue = false)]
 	public List<SortInfo> Sorting { get; set; }
+
 	/// <summary>
 	/// Gets or Sets TotalRows
 	/// </summary>
 	[DataMember(Name = "totalRows", EmitDefaultValue = false)]
 	public long? TotalRows { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

@@ -43,6 +43,7 @@ public partial class SaveGalleryImageRequest : IEquatable<SaveGalleryImageReques
 	/// </summary>
 	[DataMember(Name = "imageType", EmitDefaultValue = false)]
 	public EnumImageType? ImageType { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SaveGalleryImageRequest" /> class.
 	/// </summary>
@@ -71,36 +72,43 @@ public partial class SaveGalleryImageRequest : IEquatable<SaveGalleryImageReques
 	/// </summary>
 	[DataMember(Name = "base64EncodedImageData", EmitDefaultValue = false)]
 	public string Base64EncodedImageData { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Description
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
 	public string Description { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Folder
 	/// </summary>
 	[DataMember(Name = "folder", EmitDefaultValue = false)]
 	public string Folder { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Scope
 	/// </summary>
 	[DataMember(Name = "scope", EmitDefaultValue = false)]
 	public string Scope { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ScopeOwner
 	/// </summary>
 	[DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
 	public string ScopeOwner { get; set; }
+
 	/// <summary>
 	/// Gets or Sets StandInKey
 	/// </summary>
 	[DataMember(Name = "standInKey", EmitDefaultValue = false)]
 	public string StandInKey { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

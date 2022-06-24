@@ -307,6 +307,7 @@ public partial class GetRecordStatusResponse : IEquatable<GetRecordStatusRespons
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="GetRecordStatusResponse" /> class.
 	/// </summary>
@@ -331,26 +332,31 @@ public partial class GetRecordStatusResponse : IEquatable<GetRecordStatusRespons
 	/// </summary>
 	[DataMember(Name = "id", EmitDefaultValue = false)]
 	public string Id { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

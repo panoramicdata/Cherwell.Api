@@ -80,6 +80,7 @@ public partial class BusinessObjectPermission : IEquatable<BusinessObjectPermiss
 	/// </summary>
 	[DataMember(Name = "departmentMemberEdit", EmitDefaultValue = false)]
 	public bool? DepartmentMemberEdit { get; set; }
+
 	/// <summary>
 	/// Gets or Sets DepartmentMemberView
 	/// </summary>

@@ -25,6 +25,7 @@ public partial class BatchDeleteResponse : IEquatable<BatchDeleteResponse>, IVal
 	/// </summary>
 	[DataMember(Name = "responses", EmitDefaultValue = false)]
 	public List<DeleteResponse> Responses { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

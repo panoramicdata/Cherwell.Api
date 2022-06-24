@@ -27,11 +27,13 @@ public partial class UserReadRequest : IEquatable<UserReadRequest>, IValidatable
 	/// </summary>
 	[DataMember(Name = "loginId", EmitDefaultValue = false)]
 	public string LoginId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets PublicId
 	/// </summary>
 	[DataMember(Name = "publicId", EmitDefaultValue = false)]
 	public string PublicId { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

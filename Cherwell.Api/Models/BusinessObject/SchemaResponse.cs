@@ -307,6 +307,7 @@ public partial class SchemaResponse : IEquatable<SchemaResponse>, IValidatableOb
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SchemaResponse" /> class.
 	/// </summary>
@@ -345,61 +346,73 @@ public partial class SchemaResponse : IEquatable<SchemaResponse>, IValidatableOb
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets FieldDefinitions
 	/// </summary>
 	[DataMember(Name = "fieldDefinitions", EmitDefaultValue = false)]
 	public List<FieldDefinition> FieldDefinitions { get; set; }
+
 	/// <summary>
 	/// Gets or Sets FirstRecIdField
 	/// </summary>
 	[DataMember(Name = "firstRecIdField", EmitDefaultValue = false)]
 	public string FirstRecIdField { get; set; }
+
 	/// <summary>
 	/// Gets or Sets GridDefinitions
 	/// </summary>
 	[DataMember(Name = "gridDefinitions", EmitDefaultValue = false)]
 	public List<GridDefinition> GridDefinitions { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
+
 	/// <summary>
 	/// Gets or Sets RecIdFields
 	/// </summary>
 	[DataMember(Name = "recIdFields", EmitDefaultValue = false)]
 	public string RecIdFields { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Relationships
 	/// </summary>
 	[DataMember(Name = "relationships", EmitDefaultValue = false)]
 	public List<BusinessObjectRelationship> Relationships { get; set; }
+
 	/// <summary>
 	/// Gets or Sets StateFieldId
 	/// </summary>
 	[DataMember(Name = "stateFieldId", EmitDefaultValue = false)]
 	public string StateFieldId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets States
 	/// </summary>
 	[DataMember(Name = "states", EmitDefaultValue = false)]
 	public string States { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

@@ -39,41 +39,49 @@ public partial class TrebuchetNameValuePair : IEquatable<TrebuchetNameValuePair>
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ValueObject
 	/// </summary>
 	[DataMember(Name = "valueObject", EmitDefaultValue = false)]
 	public Object ValueObject { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ValueString
 	/// </summary>
 	[DataMember(Name = "valueString", EmitDefaultValue = false)]
 	public string ValueString { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Category
 	/// </summary>
 	[DataMember(Name = "category", EmitDefaultValue = false)]
 	public string Category { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Description
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
 	public string Description { get; set; }
+
 	/// <summary>
 	/// Gets or Sets DisplayShowsValue
 	/// </summary>
 	[DataMember(Name = "displayShowsValue", EmitDefaultValue = false)]
 	public bool? DisplayShowsValue { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SpecialUseFlag
 	/// </summary>
 	[DataMember(Name = "specialUseFlag", EmitDefaultValue = false)]
 	public bool? SpecialUseFlag { get; set; }
+
 	/// <summary>
 	/// Gets or Sets DisplayString
 	/// </summary>
 	[DataMember(Name = "displayString", EmitDefaultValue = false)]
 	public string DisplayString { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

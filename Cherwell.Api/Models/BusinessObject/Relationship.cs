@@ -35,31 +35,37 @@ public partial class BusinessObjectRelationship : IEquatable<BusinessObjectRelat
 	/// </summary>
 	[DataMember(Name = "cardinality", EmitDefaultValue = false)]
 	public string Cardinality { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Description
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
 	public string Description { get; set; }
+
 	/// <summary>
 	/// Gets or Sets DisplayName
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; }
+
 	/// <summary>
 	/// Gets or Sets FieldDefinitions
 	/// </summary>
 	[DataMember(Name = "fieldDefinitions", EmitDefaultValue = false)]
 	public List<FieldDefinition> FieldDefinitions { get; set; }
+
 	/// <summary>
 	/// Gets or Sets RelationshipId
 	/// </summary>
 	[DataMember(Name = "relationshipId", EmitDefaultValue = false)]
 	public string RelationshipId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Target
 	/// </summary>
 	[DataMember(Name = "target", EmitDefaultValue = false)]
 	public string Target { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

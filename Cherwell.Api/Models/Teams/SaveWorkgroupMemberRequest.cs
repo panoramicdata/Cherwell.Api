@@ -29,16 +29,19 @@ public partial class SaveWorkgroupMemberRequest : IEquatable<SaveWorkgroupMember
 	/// </summary>
 	[DataMember(Name = "customerRecordId", EmitDefaultValue = false)]
 	public string CustomerRecordId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets WorkgroupId
 	/// </summary>
 	[DataMember(Name = "workgroupId", EmitDefaultValue = false)]
 	public string WorkgroupId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets CustomerIsWorkgroupManager
 	/// </summary>
 	[DataMember(Name = "customerIsWorkgroupManager", EmitDefaultValue = false)]
 	public bool? CustomerIsWorkgroupManager { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

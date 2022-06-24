@@ -73,6 +73,7 @@ public partial class ColumnSchema : IEquatable<ColumnSchema>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "type", EmitDefaultValue = false)]
 	public EnumType? Type { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="ColumnSchema" /> class.
 	/// </summary>
@@ -91,11 +92,13 @@ public partial class ColumnSchema : IEquatable<ColumnSchema>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
+
 	/// <summary>
 	/// Gets or Sets FieldId
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
 	public string FieldId { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

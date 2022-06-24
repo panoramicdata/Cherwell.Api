@@ -173,16 +173,19 @@ public partial class Action : IEquatable<Action>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "actionType", EmitDefaultValue = false)]
 	public EnumActionType? ActionType { get; set; }
+
 	/// <summary>
 	/// Gets or Sets LoginEnabledMode
 	/// </summary>
 	[DataMember(Name = "loginEnabledMode", EmitDefaultValue = false)]
 	public EnumLoginEnabledMode? LoginEnabledMode { get; set; }
+
 	/// <summary>
 	/// Gets or Sets LoginVisibilityMode
 	/// </summary>
 	[DataMember(Name = "loginVisibilityMode", EmitDefaultValue = false)]
 	public EnumLoginVisibilityMode? LoginVisibilityMode { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="Action" /> class.
 	/// </summary>
@@ -225,61 +228,73 @@ public partial class Action : IEquatable<Action>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "actionCommand", EmitDefaultValue = false)]
 	public string ActionCommand { get; set; }
+
 	/// <summary>
 	/// Gets or Sets AlwaysTextAndImage
 	/// </summary>
 	[DataMember(Name = "alwaysTextAndImage", EmitDefaultValue = false)]
 	public bool? AlwaysTextAndImage { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BeginGroup
 	/// </summary>
 	[DataMember(Name = "beginGroup", EmitDefaultValue = false)]
 	public bool? BeginGroup { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ChildActions
 	/// </summary>
 	[DataMember(Name = "childActions", EmitDefaultValue = false)]
 	public List<Action> ChildActions { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Dependencies
 	/// </summary>
 	[DataMember(Name = "dependencies", EmitDefaultValue = false)]
 	public List<string> Dependencies { get; set; }
+
 	/// <summary>
 	/// Gets or Sets DisplayText
 	/// </summary>
 	[DataMember(Name = "displayText", EmitDefaultValue = false)]
 	public string DisplayText { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Enabled
 	/// </summary>
 	[DataMember(Name = "enabled", EmitDefaultValue = false)]
 	public bool? Enabled { get; set; }
+
 	/// <summary>
 	/// Gets or Sets GalleryImage
 	/// </summary>
 	[DataMember(Name = "galleryImage", EmitDefaultValue = false)]
 	public string GalleryImage { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HelpText
 	/// </summary>
 	[DataMember(Name = "helpText", EmitDefaultValue = false)]
 	public string HelpText { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Parameters
 	/// </summary>
 	[DataMember(Name = "parameters", EmitDefaultValue = false)]
 	public Dictionary<string, string> Parameters { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Visible
 	/// </summary>
 	[DataMember(Name = "visible", EmitDefaultValue = false)]
 	public bool? Visible { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

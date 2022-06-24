@@ -39,41 +39,49 @@ public partial class PromptValue : IEquatable<PromptValue>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets CollectionStoreEntireRow
 	/// </summary>
 	[DataMember(Name = "collectionStoreEntireRow", EmitDefaultValue = false)]
 	public string CollectionStoreEntireRow { get; set; }
+
 	/// <summary>
 	/// Gets or Sets CollectionValueField
 	/// </summary>
 	[DataMember(Name = "collectionValueField", EmitDefaultValue = false)]
 	public string CollectionValueField { get; set; }
+
 	/// <summary>
 	/// Gets or Sets FieldId
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
 	public string FieldId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ListReturnFieldId
 	/// </summary>
 	[DataMember(Name = "listReturnFieldId", EmitDefaultValue = false)]
 	public string ListReturnFieldId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets PromptId
 	/// </summary>
 	[DataMember(Name = "promptId", EmitDefaultValue = false)]
 	public string PromptId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Value
 	/// </summary>
 	[DataMember(Name = "value", EmitDefaultValue = false)]
 	public Object Value { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ValueIsRecId
 	/// </summary>
 	[DataMember(Name = "valueIsRecId", EmitDefaultValue = false)]
 	public bool? ValueIsRecId { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

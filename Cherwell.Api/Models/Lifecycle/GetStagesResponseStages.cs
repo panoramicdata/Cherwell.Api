@@ -29,16 +29,19 @@ public partial class GetStagesResponseStages : IEquatable<GetStagesResponseStage
 	/// </summary>
 	[DataMember(Name = "id", EmitDefaultValue = false)]
 	public string Id { get; set; }
+
 	/// <summary>
 	/// Gets or Sets IsFinal
 	/// </summary>
 	[DataMember(Name = "isFinal", EmitDefaultValue = false)]
 	public bool? IsFinal { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

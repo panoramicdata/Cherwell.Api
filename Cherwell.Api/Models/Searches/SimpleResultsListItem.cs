@@ -45,56 +45,67 @@ public partial class SimpleResultsListItem : IEquatable<SimpleResultsListItem>, 
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets DocRepositoryItemId
 	/// </summary>
 	[DataMember(Name = "docRepositoryItemId", EmitDefaultValue = false)]
 	public string DocRepositoryItemId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets GalleryImage
 	/// </summary>
 	[DataMember(Name = "galleryImage", EmitDefaultValue = false)]
 	public string GalleryImage { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Links
 	/// </summary>
 	[DataMember(Name = "links", EmitDefaultValue = false)]
 	public List<Link> Links { get; set; }
+
 	/// <summary>
 	/// Gets or Sets PublicId
 	/// </summary>
 	[DataMember(Name = "publicId", EmitDefaultValue = false)]
 	public string PublicId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Scope
 	/// </summary>
 	[DataMember(Name = "scope", EmitDefaultValue = false)]
 	public string Scope { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ScopeOwner
 	/// </summary>
 	[DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
 	public string ScopeOwner { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SubTitle
 	/// </summary>
 	[DataMember(Name = "subTitle", EmitDefaultValue = false)]
 	public string SubTitle { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Text
 	/// </summary>
 	[DataMember(Name = "text", EmitDefaultValue = false)]
 	public string Text { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Title
 	/// </summary>
 	[DataMember(Name = "title", EmitDefaultValue = false)]
 	public string Title { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

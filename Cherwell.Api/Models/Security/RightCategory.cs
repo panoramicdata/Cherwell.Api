@@ -29,16 +29,19 @@ public partial class RightCategory : IEquatable<RightCategory>, IValidatableObje
 	/// </summary>
 	[DataMember(Name = "categoryDescription", EmitDefaultValue = false)]
 	public string CategoryDescription { get; set; }
+
 	/// <summary>
 	/// Gets or Sets CategoryId
 	/// </summary>
 	[DataMember(Name = "categoryId", EmitDefaultValue = false)]
 	public string CategoryId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets CategoryName
 	/// </summary>
 	[DataMember(Name = "categoryName", EmitDefaultValue = false)]
 	public string CategoryName { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

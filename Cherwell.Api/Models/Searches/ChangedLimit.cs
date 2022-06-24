@@ -29,16 +29,19 @@ public partial class ChangedLimit : IEquatable<ChangedLimit>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Units
 	/// </summary>
 	[DataMember(Name = "units", EmitDefaultValue = false)]
 	public string Units { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Value
 	/// </summary>
 	[DataMember(Name = "value", EmitDefaultValue = false)]
 	public int? Value { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

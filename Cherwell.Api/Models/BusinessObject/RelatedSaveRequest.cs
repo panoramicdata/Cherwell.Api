@@ -43,6 +43,7 @@ public partial class RelatedSaveRequest : IEquatable<RelatedSaveRequest>, IValid
 	/// </summary>
 	[DataMember(Name = "cacheScope", EmitDefaultValue = false)]
 	public EnumCacheScope? CacheScope { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="RelatedSaveRequest" /> class.
 	/// </summary>
@@ -77,51 +78,61 @@ public partial class RelatedSaveRequest : IEquatable<RelatedSaveRequest>, IValid
 	/// </summary>
 	[DataMember(Name = "parentBusObId", EmitDefaultValue = false)]
 	public string ParentBusObId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ParentBusObPublicId
 	/// </summary>
 	[DataMember(Name = "parentBusObPublicId", EmitDefaultValue = false)]
 	public string ParentBusObPublicId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ParentBusObRecId
 	/// </summary>
 	[DataMember(Name = "parentBusObRecId", EmitDefaultValue = false)]
 	public string ParentBusObRecId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets RelationshipId
 	/// </summary>
 	[DataMember(Name = "relationshipId", EmitDefaultValue = false)]
 	public string RelationshipId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObPublicId
 	/// </summary>
 	[DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
 	public string BusObPublicId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets CacheKey
 	/// </summary>
 	[DataMember(Name = "cacheKey", EmitDefaultValue = false)]
 	public string CacheKey { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Fields
 	/// </summary>
 	[DataMember(Name = "fields", EmitDefaultValue = false)]
 	public List<FieldTemplateItem> Fields { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Persist
 	/// </summary>
 	[DataMember(Name = "persist", EmitDefaultValue = false)]
 	public bool? Persist { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

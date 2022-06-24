@@ -307,6 +307,7 @@ public partial class SimpleResultsListGroup : IEquatable<SimpleResultsListGroup>
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SimpleResultsListGroup" /> class.
 	/// </summary>
@@ -337,41 +338,49 @@ public partial class SimpleResultsListGroup : IEquatable<SimpleResultsListGroup>
 	/// </summary>
 	[DataMember(Name = "isBusObTarget", EmitDefaultValue = false)]
 	public bool? IsBusObTarget { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SimpleResultsListItems
 	/// </summary>
 	[DataMember(Name = "simpleResultsListItems", EmitDefaultValue = false)]
 	public List<SimpleResultsListItem> SimpleResultsListItems { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SubTitle
 	/// </summary>
 	[DataMember(Name = "subTitle", EmitDefaultValue = false)]
 	public string SubTitle { get; set; }
+
 	/// <summary>
 	/// Gets or Sets TargetId
 	/// </summary>
 	[DataMember(Name = "targetId", EmitDefaultValue = false)]
 	public string TargetId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Title
 	/// </summary>
 	[DataMember(Name = "title", EmitDefaultValue = false)]
 	public string Title { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

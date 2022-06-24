@@ -307,6 +307,7 @@ public partial class AddItemToQueueResponse : IEquatable<AddItemToQueueResponse>
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="AddItemToQueueResponse" /> class.
 	/// </summary>
@@ -333,31 +334,37 @@ public partial class AddItemToQueueResponse : IEquatable<AddItemToQueueResponse>
 	/// </summary>
 	[DataMember(Name = "historyRecId", EmitDefaultValue = false)]
 	public string HistoryRecId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HistoryText
 	/// </summary>
 	[DataMember(Name = "historyText", EmitDefaultValue = false)]
 	public string HistoryText { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HistoryTypeId
 	/// </summary>
 	[DataMember(Name = "historyTypeId", EmitDefaultValue = false)]
 	public string HistoryTypeId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

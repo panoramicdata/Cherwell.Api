@@ -107,11 +107,13 @@ public partial class AttachmentsRequest : IEquatable<AttachmentsRequest>, IValid
 	/// </summary>
 	[DataMember(Name = "attachmentTypes", EmitDefaultValue = false)]
 	public List<EnumAttachmentTypes> AttachmentTypes { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Types
 	/// </summary>
 	[DataMember(Name = "types", EmitDefaultValue = false)]
 	public List<EnumTypes> Types { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="AttachmentsRequest" /> class.
 	/// </summary>
@@ -140,31 +142,37 @@ public partial class AttachmentsRequest : IEquatable<AttachmentsRequest>, IValid
 	/// </summary>
 	[DataMember(Name = "attachmentId", EmitDefaultValue = false)]
 	public string AttachmentId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObName
 	/// </summary>
 	[DataMember(Name = "busObName", EmitDefaultValue = false)]
 	public string BusObName { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObPublicId
 	/// </summary>
 	[DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
 	public string BusObPublicId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets IncludeLinks
 	/// </summary>
 	[DataMember(Name = "includeLinks", EmitDefaultValue = false)]
 	public bool? IncludeLinks { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

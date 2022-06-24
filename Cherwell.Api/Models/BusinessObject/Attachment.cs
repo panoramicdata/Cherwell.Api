@@ -197,16 +197,19 @@ public partial class ObjectAttachment : IEquatable<ObjectAttachment>, IValidatab
 	/// </summary>
 	[DataMember(Name = "attachmentType", EmitDefaultValue = false)]
 	public EnumAttachmentType? AttachmentType { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Scope
 	/// </summary>
 	[DataMember(Name = "scope", EmitDefaultValue = false)]
 	public EnumScope? Scope { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Type
 	/// </summary>
 	[DataMember(Name = "type", EmitDefaultValue = false)]
 	public EnumType? Type { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="ObjectAttachment" /> class.
 	/// </summary>
@@ -253,71 +256,85 @@ public partial class ObjectAttachment : IEquatable<ObjectAttachment>, IValidatab
 	/// </summary>
 	[DataMember(Name = "attachedBusObId", EmitDefaultValue = false)]
 	public string AttachedBusObId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets AttachedBusObRecId
 	/// </summary>
 	[DataMember(Name = "attachedBusObRecId", EmitDefaultValue = false)]
 	public string AttachedBusObRecId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets AttachmentFileId
 	/// </summary>
 	[DataMember(Name = "attachmentFileId", EmitDefaultValue = false)]
 	public string AttachmentFileId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets AttachmentFileName
 	/// </summary>
 	[DataMember(Name = "attachmentFileName", EmitDefaultValue = false)]
 	public string AttachmentFileName { get; set; }
+
 	/// <summary>
 	/// Gets or Sets AttachmentFileType
 	/// </summary>
 	[DataMember(Name = "attachmentFileType", EmitDefaultValue = false)]
 	public string AttachmentFileType { get; set; }
+
 	/// <summary>
 	/// Gets or Sets AttachmentId
 	/// </summary>
 	[DataMember(Name = "attachmentId", EmitDefaultValue = false)]
 	public string AttachmentId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Comment
 	/// </summary>
 	[DataMember(Name = "comment", EmitDefaultValue = false)]
 	public string Comment { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Created
 	/// </summary>
 	[DataMember(Name = "created", EmitDefaultValue = false)]
 	public DateTime? Created { get; set; }
+
 	/// <summary>
 	/// Gets or Sets DisplayText
 	/// </summary>
 	[DataMember(Name = "displayText", EmitDefaultValue = false)]
 	public string DisplayText { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Links
 	/// </summary>
 	[DataMember(Name = "links", EmitDefaultValue = false)]
 	public List<Link> Links { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Owner
 	/// </summary>
 	[DataMember(Name = "owner", EmitDefaultValue = false)]
 	public string Owner { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ScopeOwner
 	/// </summary>
 	[DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
 	public string ScopeOwner { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

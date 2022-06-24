@@ -27,11 +27,13 @@ public partial class GetApiClientSettingsResponseItem : IEquatable<GetApiClientS
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
+
 	/// <summary>
 	/// Gets or Sets StandInKey
 	/// </summary>
 	[DataMember(Name = "standInKey", EmitDefaultValue = false)]
 	public string StandInKey { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

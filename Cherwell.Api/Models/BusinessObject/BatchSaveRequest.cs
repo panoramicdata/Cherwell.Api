@@ -27,11 +27,13 @@ public partial class BatchSaveRequest : IEquatable<BatchSaveRequest>, IValidatab
 	/// </summary>
 	[DataMember(Name = "saveRequests", EmitDefaultValue = false)]
 	public List<SaveRequest> SaveRequests { get; set; }
+
 	/// <summary>
 	/// Gets or Sets StopOnError
 	/// </summary>
 	[DataMember(Name = "stopOnError", EmitDefaultValue = false)]
 	public bool? StopOnError { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

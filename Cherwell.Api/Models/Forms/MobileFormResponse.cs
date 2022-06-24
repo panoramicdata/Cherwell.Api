@@ -307,6 +307,7 @@ public partial class MobileFormResponse : IEquatable<MobileFormResponse>, IValid
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="MobileFormResponse" /> class.
 	/// </summary>
@@ -339,46 +340,55 @@ public partial class MobileFormResponse : IEquatable<MobileFormResponse>, IValid
 	/// </summary>
 	[DataMember(Name = "actions", EmitDefaultValue = false)]
 	public List<Core.Action> Actions { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Attachments
 	/// </summary>
 	[DataMember(Name = "attachments", EmitDefaultValue = false)]
 	public List<ObjectAttachment> Attachments { get; set; }
+
 	/// <summary>
 	/// Gets or Sets GalleryImage
 	/// </summary>
 	[DataMember(Name = "galleryImage", EmitDefaultValue = false)]
 	public string GalleryImage { get; set; }
+
 	/// <summary>
 	/// Gets or Sets LocationInformation
 	/// </summary>
 	[DataMember(Name = "locationInformation", EmitDefaultValue = false)]
 	public Location LocationInformation { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Sections
 	/// </summary>
 	[DataMember(Name = "sections", EmitDefaultValue = false)]
 	public List<Section> Sections { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Title
 	/// </summary>
 	[DataMember(Name = "title", EmitDefaultValue = false)]
 	public string Title { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

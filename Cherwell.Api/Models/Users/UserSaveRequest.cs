@@ -14,44 +14,62 @@ public partial class UserSaveRequest : IEquatable<UserSaveRequest>, IValidatable
 	/// <summary>
 	/// Initializes a new instance of the <see cref="UserSaveRequest" /> class.
 	/// </summary>
-	/// <param name="AccountLocked">AccountLocked.</param>
-	/// <param name="BusObId">BusObId.</param>
-	/// <param name="BusObPublicId">BusObPublicId.</param>
-	/// <param name="BusObRecId">BusObRecId.</param>
-	/// <param name="DisplayName">DisplayName.</param>
-	/// <param name="Error">Error.</param>
-	/// <param name="ErrorCode">ErrorCode.</param>
-	/// <param name="HasError">HasError.</param>
-	/// <param name="LdapRequired">LdapRequired.</param>
-	/// <param name="LoginId">LoginId.</param>
-	/// <param name="NextPasswordResetDate">NextPasswordResetDate.</param>
-	/// <param name="Password">Password.</param>
-	/// <param name="PasswordNeverExpires">PasswordNeverExpires.</param>
-	/// <param name="SecurityGroupId">SecurityGroupId.</param>
-	/// <param name="UserCannotChangePassword">UserCannotChangePassword.</param>
-	/// <param name="UserInfoFields">UserInfoFields.</param>
-	/// <param name="UserMustChangePasswordAtNextLogin">UserMustChangePasswordAtNextLogin.</param>
-	/// <param name="WindowsUserId">WindowsUserId.</param>
-	public UserSaveRequest(bool? AccountLocked, string BusObId, string BusObPublicId, string BusObRecId, string DisplayName, string Error, string ErrorCode, bool? HasError, bool? LdapRequired, string LoginId, DateTime? NextPasswordResetDate, string Password, bool? PasswordNeverExpires, string SecurityGroupId, bool? UserCannotChangePassword, List<FieldTemplateItem> UserInfoFields, bool? UserMustChangePasswordAtNextLogin, string WindowsUserId)
+	/// <param name="accountLocked">AccountLocked.</param>
+	/// <param name="busObId">BusObId.</param>
+	/// <param name="busObPublicId">BusObPublicId.</param>
+	/// <param name="busObRecId">BusObRecId.</param>
+	/// <param name="displayName">DisplayName.</param>
+	/// <param name="error">Error.</param>
+	/// <param name="errorCode">ErrorCode.</param>
+	/// <param name="hasError">HasError.</param>
+	/// <param name="ldapRequired">LdapRequired.</param>
+	/// <param name="loginId">LoginId.</param>
+	/// <param name="nextPasswordResetDate">NextPasswordResetDate.</param>
+	/// <param name="password">Password.</param>
+	/// <param name="passwordNeverExpires">PasswordNeverExpires.</param>
+	/// <param name="securityGroupId">SecurityGroupId.</param>
+	/// <param name="userCannotChangePassword">UserCannotChangePassword.</param>
+	/// <param name="userInfoFields">UserInfoFields.</param>
+	/// <param name="userMustChangePasswordAtNextLogin">UserMustChangePasswordAtNextLogin.</param>
+	/// <param name="windowsUserId">WindowsUserId.</param>
+	public UserSaveRequest(
+		bool? accountLocked,
+		string busObId,
+		string busObPublicId,
+		string busObRecId,
+		string displayName,
+		string error,
+		string errorCode,
+		bool? hasError,
+		bool? ldapRequired,
+		string loginId,
+		DateTime? nextPasswordResetDate,
+		string password,
+		bool? passwordNeverExpires,
+		string securityGroupId,
+		bool? userCannotChangePassword,
+		List<FieldTemplateItem> userInfoFields,
+		bool? userMustChangePasswordAtNextLogin,
+		string windowsUserId)
 	{
-		this.AccountLocked = AccountLocked;
-		this.BusObId = BusObId;
-		this.BusObPublicId = BusObPublicId;
-		this.BusObRecId = BusObRecId;
-		this.DisplayName = DisplayName;
-		this.Error = Error;
-		this.ErrorCode = ErrorCode;
-		this.HasError = HasError;
-		this.LdapRequired = LdapRequired;
-		this.LoginId = LoginId;
-		this.NextPasswordResetDate = NextPasswordResetDate;
-		this.Password = Password;
-		this.PasswordNeverExpires = PasswordNeverExpires;
-		this.SecurityGroupId = SecurityGroupId;
-		this.UserCannotChangePassword = UserCannotChangePassword;
-		this.UserInfoFields = UserInfoFields;
-		this.UserMustChangePasswordAtNextLogin = UserMustChangePasswordAtNextLogin;
-		this.WindowsUserId = WindowsUserId;
+		AccountLocked = accountLocked;
+		BusObId = busObId;
+		BusObPublicId = busObPublicId;
+		BusObRecId = busObRecId;
+		DisplayName = displayName;
+		Error = error;
+		ErrorCode = errorCode;
+		HasError = hasError;
+		LdapRequired = ldapRequired;
+		LoginId = loginId;
+		NextPasswordResetDate = nextPasswordResetDate;
+		Password = password;
+		PasswordNeverExpires = passwordNeverExpires;
+		SecurityGroupId = securityGroupId;
+		UserCannotChangePassword = userCannotChangePassword;
+		UserInfoFields = userInfoFields;
+		UserMustChangePasswordAtNextLogin = userMustChangePasswordAtNextLogin;
+		WindowsUserId = windowsUserId;
 	}
 
 	/// <summary>
@@ -59,91 +77,109 @@ public partial class UserSaveRequest : IEquatable<UserSaveRequest>, IValidatable
 	/// </summary>
 	[DataMember(Name = "accountLocked", EmitDefaultValue = false)]
 	public bool? AccountLocked { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObPublicId
 	/// </summary>
 	[DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
 	public string BusObPublicId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets DisplayName
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Error
 	/// </summary>
 	[DataMember(Name = "error", EmitDefaultValue = false)]
 	public string Error { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }
+
 	/// <summary>
 	/// Gets or Sets LdapRequired
 	/// </summary>
 	[DataMember(Name = "ldapRequired", EmitDefaultValue = false)]
 	public bool? LdapRequired { get; set; }
+
 	/// <summary>
 	/// Gets or Sets LoginId
 	/// </summary>
 	[DataMember(Name = "loginId", EmitDefaultValue = false)]
 	public string LoginId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets NextPasswordResetDate
 	/// </summary>
 	[DataMember(Name = "nextPasswordResetDate", EmitDefaultValue = false)]
 	public DateTime? NextPasswordResetDate { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Password
 	/// </summary>
 	[DataMember(Name = "password", EmitDefaultValue = false)]
 	public string Password { get; set; }
+
 	/// <summary>
 	/// Gets or Sets PasswordNeverExpires
 	/// </summary>
 	[DataMember(Name = "passwordNeverExpires", EmitDefaultValue = false)]
 	public bool? PasswordNeverExpires { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SecurityGroupId
 	/// </summary>
 	[DataMember(Name = "securityGroupId", EmitDefaultValue = false)]
 	public string SecurityGroupId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets UserCannotChangePassword
 	/// </summary>
 	[DataMember(Name = "userCannotChangePassword", EmitDefaultValue = false)]
 	public bool? UserCannotChangePassword { get; set; }
+
 	/// <summary>
 	/// Gets or Sets UserInfoFields
 	/// </summary>
 	[DataMember(Name = "userInfoFields", EmitDefaultValue = false)]
 	public List<FieldTemplateItem> UserInfoFields { get; set; }
+
 	/// <summary>
 	/// Gets or Sets UserMustChangePasswordAtNextLogin
 	/// </summary>
 	[DataMember(Name = "userMustChangePasswordAtNextLogin", EmitDefaultValue = false)]
 	public bool? UserMustChangePasswordAtNextLogin { get; set; }
+
 	/// <summary>
 	/// Gets or Sets WindowsUserId
 	/// </summary>
 	[DataMember(Name = "windowsUserId", EmitDefaultValue = false)]
 	public string WindowsUserId { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

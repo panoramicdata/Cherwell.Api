@@ -27,11 +27,13 @@ public partial class Team : IEquatable<Team>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "teamId", EmitDefaultValue = false)]
 	public string TeamId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets TeamName
 	/// </summary>
 	[DataMember(Name = "teamName", EmitDefaultValue = false)]
 	public string TeamName { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

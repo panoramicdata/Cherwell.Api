@@ -27,11 +27,13 @@ public partial class CloneSecurityGroupRequest : IEquatable<CloneSecurityGroupRe
 	/// </summary>
 	[DataMember(Name = "securityGroupName", EmitDefaultValue = false)]
 	public string SecurityGroupName { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SourceSecurityGroupNameOrId
 	/// </summary>
 	[DataMember(Name = "sourceSecurityGroupNameOrId", EmitDefaultValue = false)]
 	public string SourceSecurityGroupNameOrId { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

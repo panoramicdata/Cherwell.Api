@@ -307,6 +307,7 @@ public partial class GetApprovalsResponse : IEquatable<GetApprovalsResponse>, IV
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="GetApprovalsResponse" /> class.
 	/// </summary>
@@ -331,26 +332,31 @@ public partial class GetApprovalsResponse : IEquatable<GetApprovalsResponse>, IV
 	/// </summary>
 	[DataMember(Name = "totalRecords", EmitDefaultValue = false)]
 	public int? TotalRecords { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Approvals
 	/// </summary>
 	[DataMember(Name = "approvals", EmitDefaultValue = false)]
 	public List<ApprovalReadResponse> Approvals { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

@@ -35,31 +35,37 @@ public partial class ServiceInfoResponse : IEquatable<ServiceInfoResponse>, IVal
 	/// </summary>
 	[DataMember(Name = "apiVersion", EmitDefaultValue = false)]
 	public string ApiVersion { get; set; }
+
 	/// <summary>
 	/// Gets or Sets CsmCulture
 	/// </summary>
 	[DataMember(Name = "csmCulture", EmitDefaultValue = false)]
 	public string CsmCulture { get; set; }
+
 	/// <summary>
 	/// Gets or Sets CsmVersion
 	/// </summary>
 	[DataMember(Name = "csmVersion", EmitDefaultValue = false)]
 	public string CsmVersion { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SystemDateTime
 	/// </summary>
 	[DataMember(Name = "systemDateTime", EmitDefaultValue = false)]
 	public DateTime? SystemDateTime { get; set; }
+
 	/// <summary>
 	/// Gets or Sets TimeZone
 	/// </summary>
 	[DataMember(Name = "timeZone", EmitDefaultValue = false)]
 	public Object TimeZone { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SystemUtcOffset
 	/// </summary>
 	[DataMember(Name = "systemUtcOffset", EmitDefaultValue = false)]
 	public string SystemUtcOffset { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

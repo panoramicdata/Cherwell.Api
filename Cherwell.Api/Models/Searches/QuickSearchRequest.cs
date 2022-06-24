@@ -27,11 +27,13 @@ public partial class QuickSearchRequest : IEquatable<QuickSearchRequest>, IValid
 	/// </summary>
 	[DataMember(Name = "busObIds", EmitDefaultValue = false)]
 	public List<string> BusObIds { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SearchText
 	/// </summary>
 	[DataMember(Name = "searchText", EmitDefaultValue = false)]
 	public string SearchText { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

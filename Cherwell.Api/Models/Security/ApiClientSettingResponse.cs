@@ -307,37 +307,51 @@ public partial class ApiClientSettingResponse : IEquatable<ApiClientSettingRespo
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="ApiClientSettingResponse" /> class.
 	/// </summary>
-	/// <param name="Name">Name.</param>
-	/// <param name="Description">Description.</param>
-	/// <param name="Culture">Culture.</param>
-	/// <param name="ClientKey">ClientKey.</param>
-	/// <param name="TokenLifespanMinutes">TokenLifespanMinutes.</param>
-	/// <param name="RefreshTokenLifespanMinutes">RefreshTokenLifespanMinutes.</param>
-	/// <param name="ApiAccessIsEnabled">ApiAccessIsEnabled.</param>
-	/// <param name="AllowAnonymousAccess">AllowAnonymousAccess.</param>
-	/// <param name="StandInKey">StandInKey.</param>
-	/// <param name="ErrorCode">ErrorCode.</param>
-	/// <param name="ErrorMessage">ErrorMessage.</param>
-	/// <param name="HasError">HasError.</param>
-	/// <param name="HttpStatusCode">HttpStatusCode.</param>
-	public ApiClientSettingResponse(string Name, string Description, string Culture, string ClientKey, int? TokenLifespanMinutes, int? RefreshTokenLifespanMinutes, bool? ApiAccessIsEnabled, bool? AllowAnonymousAccess, string StandInKey, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
+	/// <param name="name">Name.</param>
+	/// <param name="description">Description.</param>
+	/// <param name="culture">Culture.</param>
+	/// <param name="clientKey">ClientKey.</param>
+	/// <param name="tokenLifespanMinutes">TokenLifespanMinutes.</param>
+	/// <param name="refreshTokenLifespanMinutes">RefreshTokenLifespanMinutes.</param>
+	/// <param name="apiAccessIsEnabled">ApiAccessIsEnabled.</param>
+	/// <param name="allowAnonymousAccess">AllowAnonymousAccess.</param>
+	/// <param name="standInKey">StandInKey.</param>
+	/// <param name="errorCode">ErrorCode.</param>
+	/// <param name="errorMessage">ErrorMessage.</param>
+	/// <param name="hasError">HasError.</param>
+	/// <param name="httpStatusCode">HttpStatusCode.</param>
+	public ApiClientSettingResponse(
+		string name,
+		string description,
+		string culture,
+		string clientKey,
+		int? tokenLifespanMinutes,
+		int? refreshTokenLifespanMinutes,
+		bool? apiAccessIsEnabled,
+		bool? allowAnonymousAccess,
+		string standInKey,
+		string errorCode,
+		string errorMessage,
+		bool? hasError,
+		EnumHttpStatusCode? httpStatusCode)
 	{
-		this.Name = Name;
-		this.Description = Description;
-		this.Culture = Culture;
-		this.ClientKey = ClientKey;
-		this.TokenLifespanMinutes = TokenLifespanMinutes;
-		this.RefreshTokenLifespanMinutes = RefreshTokenLifespanMinutes;
-		this.ApiAccessIsEnabled = ApiAccessIsEnabled;
-		this.AllowAnonymousAccess = AllowAnonymousAccess;
-		this.StandInKey = StandInKey;
-		this.ErrorCode = ErrorCode;
-		this.ErrorMessage = ErrorMessage;
-		this.HasError = HasError;
-		this.HttpStatusCode = HttpStatusCode;
+		Name = name;
+		Description = description;
+		Culture = culture;
+		ClientKey = clientKey;
+		TokenLifespanMinutes = tokenLifespanMinutes;
+		RefreshTokenLifespanMinutes = refreshTokenLifespanMinutes;
+		ApiAccessIsEnabled = apiAccessIsEnabled;
+		AllowAnonymousAccess = allowAnonymousAccess;
+		StandInKey = standInKey;
+		ErrorCode = errorCode;
+		ErrorMessage = errorMessage;
+		HasError = hasError;
+		HttpStatusCode = httpStatusCode;
 	}
 
 	/// <summary>
@@ -345,61 +359,73 @@ public partial class ApiClientSettingResponse : IEquatable<ApiClientSettingRespo
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Description
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
 	public string Description { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Culture
 	/// </summary>
 	[DataMember(Name = "culture", EmitDefaultValue = false)]
 	public string Culture { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ClientKey
 	/// </summary>
 	[DataMember(Name = "clientKey", EmitDefaultValue = false)]
 	public string ClientKey { get; set; }
+
 	/// <summary>
 	/// Gets or Sets TokenLifespanMinutes
 	/// </summary>
 	[DataMember(Name = "tokenLifespanMinutes", EmitDefaultValue = false)]
 	public int? TokenLifespanMinutes { get; set; }
+
 	/// <summary>
 	/// Gets or Sets RefreshTokenLifespanMinutes
 	/// </summary>
 	[DataMember(Name = "refreshTokenLifespanMinutes", EmitDefaultValue = false)]
 	public int? RefreshTokenLifespanMinutes { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ApiAccessIsEnabled
 	/// </summary>
 	[DataMember(Name = "apiAccessIsEnabled", EmitDefaultValue = false)]
 	public bool? ApiAccessIsEnabled { get; set; }
+
 	/// <summary>
 	/// Gets or Sets AllowAnonymousAccess
 	/// </summary>
 	[DataMember(Name = "allowAnonymousAccess", EmitDefaultValue = false)]
 	public bool? AllowAnonymousAccess { get; set; }
+
 	/// <summary>
 	/// Gets or Sets StandInKey
 	/// </summary>
 	[DataMember(Name = "standInKey", EmitDefaultValue = false)]
 	public string StandInKey { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

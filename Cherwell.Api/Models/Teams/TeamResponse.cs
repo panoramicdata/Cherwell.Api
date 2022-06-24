@@ -327,11 +327,13 @@ public partial class TeamResponse : IEquatable<TeamResponse>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "teamType", EmitDefaultValue = false)]
 	public EnumTeamType? TeamType { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HttpStatusCode
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="TeamResponse" /> class.
 	/// </summary>
@@ -366,46 +368,55 @@ public partial class TeamResponse : IEquatable<TeamResponse>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
 	public string Description { get; set; }
+
 	/// <summary>
 	/// Gets or Sets EmailAlias
 	/// </summary>
 	[DataMember(Name = "emailAlias", EmitDefaultValue = false)]
 	public string EmailAlias { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Fields
 	/// </summary>
 	[DataMember(Name = "fields", EmitDefaultValue = false)]
 	public List<FieldTemplateItem> Fields { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Image
 	/// </summary>
 	[DataMember(Name = "image", EmitDefaultValue = false)]
 	public string Image { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
+
 	/// <summary>
 	/// Gets or Sets TeamId
 	/// </summary>
 	[DataMember(Name = "teamId", EmitDefaultValue = false)]
 	public string TeamId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

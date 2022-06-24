@@ -25,6 +25,7 @@ public partial class BusObsForViewResponse : IEquatable<BusObsForViewResponse>, 
 	/// </summary>
 	[DataMember(Name = "summaries", EmitDefaultValue = false)]
 	public List<ViewSummary> Summaries { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

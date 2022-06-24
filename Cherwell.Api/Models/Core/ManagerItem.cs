@@ -49,66 +49,79 @@ public partial class ManagerItem : IEquatable<ManagerItem>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "association", EmitDefaultValue = false)]
 	public string Association { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Description
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
 	public string Description { get; set; }
+
 	/// <summary>
 	/// Gets or Sets DisplayName
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; }
+
 	/// <summary>
 	/// Gets or Sets GalleryImage
 	/// </summary>
 	[DataMember(Name = "galleryImage", EmitDefaultValue = false)]
 	public string GalleryImage { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Id
 	/// </summary>
 	[DataMember(Name = "id", EmitDefaultValue = false)]
 	public string Id { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Links
 	/// </summary>
 	[DataMember(Name = "links", EmitDefaultValue = false)]
 	public List<Link> Links { get; set; }
+
 	/// <summary>
 	/// Gets or Sets LocalizedScopeName
 	/// </summary>
 	[DataMember(Name = "localizedScopeName", EmitDefaultValue = false)]
 	public string LocalizedScopeName { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ParentFolder
 	/// </summary>
 	[DataMember(Name = "parentFolder", EmitDefaultValue = false)]
 	public string ParentFolder { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ParentIsScopeFolder
 	/// </summary>
 	[DataMember(Name = "parentIsScopeFolder", EmitDefaultValue = false)]
 	public bool? ParentIsScopeFolder { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Scope
 	/// </summary>
 	[DataMember(Name = "scope", EmitDefaultValue = false)]
 	public string Scope { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ScopeOwner
 	/// </summary>
 	[DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
 	public string ScopeOwner { get; set; }
+
 	/// <summary>
 	/// Gets or Sets StandInKey
 	/// </summary>
 	[DataMember(Name = "standInKey", EmitDefaultValue = false)]
 	public string StandInKey { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

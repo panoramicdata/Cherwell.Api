@@ -69,116 +69,139 @@ public partial class Field : IEquatable<Field>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "caption", EmitDefaultValue = false)]
 	public string Caption { get; set; }
+
 	/// <summary>
 	/// Gets or Sets CurrencyCulture
 	/// </summary>
 	[DataMember(Name = "currencyCulture", EmitDefaultValue = false)]
 	public string CurrencyCulture { get; set; }
+
 	/// <summary>
 	/// Gets or Sets CurrencySymbol
 	/// </summary>
 	[DataMember(Name = "currencySymbol", EmitDefaultValue = false)]
 	public string CurrencySymbol { get; set; }
+
 	/// <summary>
 	/// Gets or Sets DecimalDigits
 	/// </summary>
 	[DataMember(Name = "decimalDigits", EmitDefaultValue = false)]
 	public int? DecimalDigits { get; set; }
+
 	/// <summary>
 	/// Gets or Sets DefaultSortOrderAscending
 	/// </summary>
 	[DataMember(Name = "defaultSortOrderAscending", EmitDefaultValue = false)]
 	public bool? DefaultSortOrderAscending { get; set; }
+
 	/// <summary>
 	/// Gets or Sets DisplayName
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; }
+
 	/// <summary>
 	/// Gets or Sets FieldName
 	/// </summary>
 	[DataMember(Name = "fieldName", EmitDefaultValue = false)]
 	public string FieldName { get; set; }
+
 	/// <summary>
 	/// Gets or Sets FullFieldId
 	/// </summary>
 	[DataMember(Name = "fullFieldId", EmitDefaultValue = false)]
 	public string FullFieldId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HasDefaultSortField
 	/// </summary>
 	[DataMember(Name = "hasDefaultSortField", EmitDefaultValue = false)]
 	public bool? HasDefaultSortField { get; set; }
+
 	/// <summary>
 	/// Gets or Sets FieldId
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
 	public string FieldId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets IsBinary
 	/// </summary>
 	[DataMember(Name = "isBinary", EmitDefaultValue = false)]
 	public bool? IsBinary { get; set; }
+
 	/// <summary>
 	/// Gets or Sets IsCurrency
 	/// </summary>
 	[DataMember(Name = "isCurrency", EmitDefaultValue = false)]
 	public bool? IsCurrency { get; set; }
+
 	/// <summary>
 	/// Gets or Sets IsDateTime
 	/// </summary>
 	[DataMember(Name = "isDateTime", EmitDefaultValue = false)]
 	public bool? IsDateTime { get; set; }
+
 	/// <summary>
 	/// Gets or Sets IsFilterAllowed
 	/// </summary>
 	[DataMember(Name = "isFilterAllowed", EmitDefaultValue = false)]
 	public bool? IsFilterAllowed { get; set; }
+
 	/// <summary>
 	/// Gets or Sets IsLogical
 	/// </summary>
 	[DataMember(Name = "isLogical", EmitDefaultValue = false)]
 	public bool? IsLogical { get; set; }
+
 	/// <summary>
 	/// Gets or Sets IsNumber
 	/// </summary>
 	[DataMember(Name = "isNumber", EmitDefaultValue = false)]
 	public bool? IsNumber { get; set; }
+
 	/// <summary>
 	/// Gets or Sets IsShortDate
 	/// </summary>
 	[DataMember(Name = "isShortDate", EmitDefaultValue = false)]
 	public bool? IsShortDate { get; set; }
+
 	/// <summary>
 	/// Gets or Sets IsShortTime
 	/// </summary>
 	[DataMember(Name = "isShortTime", EmitDefaultValue = false)]
 	public bool? IsShortTime { get; set; }
+
 	/// <summary>
 	/// Gets or Sets IsVisible
 	/// </summary>
 	[DataMember(Name = "isVisible", EmitDefaultValue = false)]
 	public bool? IsVisible { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Sortable
 	/// </summary>
 	[DataMember(Name = "sortable", EmitDefaultValue = false)]
 	public bool? Sortable { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SortOrder
 	/// </summary>
 	[DataMember(Name = "sortOrder", EmitDefaultValue = false)]
 	public string SortOrder { get; set; }
+
 	/// <summary>
 	/// Gets or Sets StorageName
 	/// </summary>
 	[DataMember(Name = "storageName", EmitDefaultValue = false)]
 	public string StorageName { get; set; }
+
 	/// <summary>
 	/// Gets or Sets WholeDigits
 	/// </summary>
 	[DataMember(Name = "wholeDigits", EmitDefaultValue = false)]
 	public int? WholeDigits { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

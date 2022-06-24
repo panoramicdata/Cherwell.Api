@@ -27,11 +27,13 @@ public partial class StoredSearchResults : IEquatable<StoredSearchResults>, IVal
 	/// </summary>
 	[DataMember(Name = "columns", EmitDefaultValue = false)]
 	public List<ColumnSchema> Columns { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Rows
 	/// </summary>
 	[DataMember(Name = "rows", EmitDefaultValue = false)]
 	public List<List<object>> Rows { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

@@ -229,36 +229,43 @@ public partial class QuickSearchItem : IEquatable<QuickSearchItem>, IValidatable
 	/// </summary>
 	[DataMember(Name = "changedOption", EmitDefaultValue = false)]
 	public EnumChangedOption? ChangedOption { get; set; }
+
 	/// <summary>
 	/// Gets or Sets NonFinalStateOption
 	/// </summary>
 	[DataMember(Name = "nonFinalStateOption", EmitDefaultValue = false)]
 	public EnumNonFinalStateOption? NonFinalStateOption { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SearchAnyWordsOption
 	/// </summary>
 	[DataMember(Name = "searchAnyWordsOption", EmitDefaultValue = false)]
 	public EnumSearchAnyWordsOption? SearchAnyWordsOption { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SearchAttachmentsOption
 	/// </summary>
 	[DataMember(Name = "searchAttachmentsOption", EmitDefaultValue = false)]
 	public EnumSearchAttachmentsOption? SearchAttachmentsOption { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SearchRelatedOption
 	/// </summary>
 	[DataMember(Name = "searchRelatedOption", EmitDefaultValue = false)]
 	public EnumSearchRelatedOption? SearchRelatedOption { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SearchTargetType
 	/// </summary>
 	[DataMember(Name = "searchTargetType", EmitDefaultValue = false)]
 	public EnumSearchTargetType? SearchTargetType { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SortByOption
 	/// </summary>
 	[DataMember(Name = "sortByOption", EmitDefaultValue = false)]
 	public EnumSortByOption? SortByOption { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="QuickSearchItem" /> class.
 	/// </summary>
@@ -305,51 +312,61 @@ public partial class QuickSearchItem : IEquatable<QuickSearchItem>, IValidatable
 	/// </summary>
 	[DataMember(Name = "ascending", EmitDefaultValue = false)]
 	public bool? Ascending { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ChangedLimits
 	/// </summary>
 	[DataMember(Name = "changedLimits", EmitDefaultValue = false)]
 	public List<ChangedLimit> ChangedLimits { get; set; }
+
 	/// <summary>
 	/// Gets or Sets DisplayName
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; }
+
 	/// <summary>
 	/// Gets or Sets GalleryImage
 	/// </summary>
 	[DataMember(Name = "galleryImage", EmitDefaultValue = false)]
 	public string GalleryImage { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HasAnyOptions
 	/// </summary>
 	[DataMember(Name = "hasAnyOptions", EmitDefaultValue = false)]
 	public bool? HasAnyOptions { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SearchTargetId
 	/// </summary>
 	[DataMember(Name = "searchTargetId", EmitDefaultValue = false)]
 	public string SearchTargetId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SelectedChangedLimit
 	/// </summary>
 	[DataMember(Name = "selectedChangedLimit", EmitDefaultValue = false)]
 	public ChangedLimit SelectedChangedLimit { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SelectedSortByFieldId
 	/// </summary>
 	[DataMember(Name = "selectedSortByFieldId", EmitDefaultValue = false)]
 	public string SelectedSortByFieldId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SortByFields
 	/// </summary>
 	[DataMember(Name = "sortByFields", EmitDefaultValue = false)]
 	public Dictionary<string, string> SortByFields { get; set; }
+
 	/// <summary>
 	/// Gets or Sets WatermarkText
 	/// </summary>
 	[DataMember(Name = "watermarkText", EmitDefaultValue = false)]
 	public string WatermarkText { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

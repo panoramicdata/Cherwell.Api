@@ -25,6 +25,7 @@ public partial class SecurityGroupResponse : IEquatable<SecurityGroupResponse>, 
 	/// </summary>
 	[DataMember(Name = "securityGroups", EmitDefaultValue = false)]
 	public List<SecurityGroup> SecurityGroups { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

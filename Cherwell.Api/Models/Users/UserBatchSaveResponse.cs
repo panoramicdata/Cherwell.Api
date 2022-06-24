@@ -25,6 +25,7 @@ public partial class UserBatchSaveResponse : IEquatable<UserBatchSaveResponse>, 
 	/// </summary>
 	[DataMember(Name = "responses", EmitDefaultValue = false)]
 	public List<UserSaveResponse> Responses { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

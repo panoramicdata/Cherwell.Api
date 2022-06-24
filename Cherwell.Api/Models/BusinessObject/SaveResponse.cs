@@ -307,6 +307,7 @@ public partial class SaveResponse : IEquatable<SaveResponse>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SaveResponse" /> class.
 	/// </summary>
@@ -337,41 +338,49 @@ public partial class SaveResponse : IEquatable<SaveResponse>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
 	public string BusObPublicId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets CacheKey
 	/// </summary>
 	[DataMember(Name = "cacheKey", EmitDefaultValue = false)]
 	public string CacheKey { get; set; }
+
 	/// <summary>
 	/// Gets or Sets FieldValidationErrors
 	/// </summary>
 	[DataMember(Name = "fieldValidationErrors", EmitDefaultValue = false)]
 	public List<FieldValidationError> FieldValidationErrors { get; set; }
+
 	/// <summary>
 	/// Gets or Sets NotificationTriggers
 	/// </summary>
 	[DataMember(Name = "notificationTriggers", EmitDefaultValue = false)]
 	public List<NotificationTrigger> NotificationTriggers { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

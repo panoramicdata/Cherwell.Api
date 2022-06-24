@@ -37,36 +37,43 @@ public partial class FieldTemplateItem : IEquatable<FieldTemplateItem>, IValidat
 	/// </summary>
 	[DataMember(Name = "dirty", EmitDefaultValue = false)]
 	public bool? Dirty { get; set; }
+
 	/// <summary>
 	/// Gets or Sets DisplayName
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; }
+
 	/// <summary>
 	/// Gets or Sets FieldId
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
 	public string FieldId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets FullFieldId
 	/// </summary>
 	[DataMember(Name = "fullFieldId", EmitDefaultValue = false)]
 	public string FullFieldId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Html
 	/// </summary>
 	[DataMember(Name = "html", EmitDefaultValue = false)]
 	public string Html { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Value
 	/// </summary>
 	[DataMember(Name = "value", EmitDefaultValue = false)]
 	public string Value { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

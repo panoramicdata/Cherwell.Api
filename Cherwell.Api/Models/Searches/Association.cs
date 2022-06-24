@@ -27,11 +27,13 @@ public partial class Association : IEquatable<Association>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObName
 	/// </summary>
 	[DataMember(Name = "busObName", EmitDefaultValue = false)]
 	public string BusObName { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

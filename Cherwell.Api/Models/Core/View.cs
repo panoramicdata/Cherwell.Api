@@ -29,16 +29,19 @@ public partial class View : IEquatable<View>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ViewId
 	/// </summary>
 	[DataMember(Name = "viewId", EmitDefaultValue = false)]
 	public string ViewId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Image
 	/// </summary>
 	[DataMember(Name = "image", EmitDefaultValue = false)]
 	public string Image { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

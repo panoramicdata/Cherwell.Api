@@ -35,31 +35,37 @@ public partial class FieldValuesLookupRequest : IEquatable<FieldValuesLookupRequ
 	/// </summary>
 	[DataMember(Name = "busbPublicId", EmitDefaultValue = false)]
 	public string BusbPublicId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets FieldId
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
 	public string FieldId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets FieldName
 	/// </summary>
 	[DataMember(Name = "fieldName", EmitDefaultValue = false)]
 	public string FieldName { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Fields
 	/// </summary>
 	[DataMember(Name = "fields", EmitDefaultValue = false)]
 	public List<FieldTemplateItem> Fields { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

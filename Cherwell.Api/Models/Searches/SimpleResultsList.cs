@@ -307,6 +307,7 @@ public partial class SimpleResultsList : IEquatable<SimpleResultsList>, IValidat
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SimpleResultsList" /> class.
 	/// </summary>
@@ -331,26 +332,31 @@ public partial class SimpleResultsList : IEquatable<SimpleResultsList>, IValidat
 	/// </summary>
 	[DataMember(Name = "groups", EmitDefaultValue = false)]
 	public List<SimpleResultsListGroup> Groups { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Title
 	/// </summary>
 	[DataMember(Name = "title", EmitDefaultValue = false)]
 	public string Title { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

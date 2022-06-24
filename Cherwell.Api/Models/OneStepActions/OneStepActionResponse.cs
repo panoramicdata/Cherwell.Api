@@ -307,6 +307,7 @@ public partial class OneStepActionResponse : IEquatable<OneStepActionResponse>, 
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="OneStepActionResponse" /> class.
 	/// </summary>
@@ -337,41 +338,49 @@ public partial class OneStepActionResponse : IEquatable<OneStepActionResponse>, 
 	/// </summary>
 	[DataMember(Name = "completed", EmitDefaultValue = false)]
 	public bool? Completed { get; set; }
+
 	/// <summary>
 	/// Gets or Sets CurrentPrimaryBusObId
 	/// </summary>
 	[DataMember(Name = "currentPrimaryBusObId", EmitDefaultValue = false)]
 	public string CurrentPrimaryBusObId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets CurrentPrimaryBusObRecId
 	/// </summary>
 	[DataMember(Name = "currentPrimaryBusObRecId", EmitDefaultValue = false)]
 	public string CurrentPrimaryBusObRecId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HasNewAccessToken
 	/// </summary>
 	[DataMember(Name = "hasNewAccessToken", EmitDefaultValue = false)]
 	public bool? HasNewAccessToken { get; set; }
+
 	/// <summary>
 	/// Gets or Sets NewAccessToken
 	/// </summary>
 	[DataMember(Name = "newAccessToken", EmitDefaultValue = false)]
 	public string NewAccessToken { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

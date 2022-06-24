@@ -307,6 +307,7 @@ public partial class QuickSearchResponse : IEquatable<QuickSearchResponse>, IVal
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="QuickSearchResponse" /> class.
 	/// </summary>
@@ -331,26 +332,31 @@ public partial class QuickSearchResponse : IEquatable<QuickSearchResponse>, IVal
 	/// </summary>
 	[DataMember(Name = "searchResultsTable", EmitDefaultValue = false)]
 	public SearchResultsTableResponse SearchResultsTable { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SimpleResultsList
 	/// </summary>
 	[DataMember(Name = "simpleResultsList", EmitDefaultValue = false)]
 	public SimpleResultsList SimpleResultsList { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

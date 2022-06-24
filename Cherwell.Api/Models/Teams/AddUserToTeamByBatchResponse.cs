@@ -307,6 +307,7 @@ public partial class AddUserToTeamByBatchResponse : IEquatable<AddUserToTeamByBa
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
 	public EnumHttpStatusCode? HttpStatusCode { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="AddUserToTeamByBatchResponse" /> class.
 	/// </summary>
@@ -329,21 +330,25 @@ public partial class AddUserToTeamByBatchResponse : IEquatable<AddUserToTeamByBa
 	/// </summary>
 	[DataMember(Name = "responses", EmitDefaultValue = false)]
 	public List<AddUserToTeamResponse> Responses { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
 	public string ErrorCode { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
 	public string ErrorMessage { get; set; }
+
 	/// <summary>
 	/// Gets or Sets HasError
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
 	public bool? HasError { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

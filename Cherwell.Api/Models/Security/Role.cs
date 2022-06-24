@@ -41,46 +41,55 @@ public partial class Role : IEquatable<Role>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "browserClientCustomViewId", EmitDefaultValue = false)]
 	public string BrowserClientCustomViewId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusinessObjectExcludeList
 	/// </summary>
 	[DataMember(Name = "businessObjectExcludeList", EmitDefaultValue = false)]
 	public List<string> BusinessObjectExcludeList { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Culture
 	/// </summary>
 	[DataMember(Name = "culture", EmitDefaultValue = false)]
 	public string Culture { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Description
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
 	public string Description { get; set; }
+
 	/// <summary>
 	/// Gets or Sets MobileClientCustomViewId
 	/// </summary>
 	[DataMember(Name = "mobileClientCustomViewId", EmitDefaultValue = false)]
 	public string MobileClientCustomViewId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets PrimaryBusObId
 	/// </summary>
 	[DataMember(Name = "primaryBusObId", EmitDefaultValue = false)]
 	public string PrimaryBusObId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets RoleId
 	/// </summary>
 	[DataMember(Name = "roleId", EmitDefaultValue = false)]
 	public string RoleId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets RoleName
 	/// </summary>
 	[DataMember(Name = "roleName", EmitDefaultValue = false)]
 	public string RoleName { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SmartClientCustomViewId
 	/// </summary>
 	[DataMember(Name = "smartClientCustomViewId", EmitDefaultValue = false)]
 	public string SmartClientCustomViewId { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

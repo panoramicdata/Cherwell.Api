@@ -27,11 +27,13 @@ public partial class SortInfo : IEquatable<SortInfo>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
 	public string FieldId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SortDirection
 	/// </summary>
 	[DataMember(Name = "sortDirection", EmitDefaultValue = false)]
 	public int? SortDirection { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

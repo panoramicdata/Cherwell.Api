@@ -39,41 +39,49 @@ public partial class SaveLinkAttachmentRequest : IEquatable<SaveLinkAttachmentRe
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObName
 	/// </summary>
 	[DataMember(Name = "busObName", EmitDefaultValue = false)]
 	public string BusObName { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObPublicId
 	/// </summary>
 	[DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
 	public string BusObPublicId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Comment
 	/// </summary>
 	[DataMember(Name = "comment", EmitDefaultValue = false)]
 	public string Comment { get; set; }
+
 	/// <summary>
 	/// Gets or Sets DisplayText
 	/// </summary>
 	[DataMember(Name = "displayText", EmitDefaultValue = false)]
 	public string DisplayText { get; set; }
+
 	/// <summary>
 	/// Gets or Sets IncludeLinks
 	/// </summary>
 	[DataMember(Name = "includeLinks", EmitDefaultValue = false)]
 	public bool? IncludeLinks { get; set; }
+
 	/// <summary>
 	/// Gets or Sets UncFilePath
 	/// </summary>
 	[DataMember(Name = "uncFilePath", EmitDefaultValue = false)]
 	public string UncFilePath { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

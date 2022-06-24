@@ -31,21 +31,25 @@ public partial class GetTransitionOptionsResponseTransition : IEquatable<GetTran
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Id
 	/// </summary>
 	[DataMember(Name = "id", EmitDefaultValue = false)]
 	public string Id { get; set; }
+
 	/// <summary>
 	/// Gets or Sets IsAvailable
 	/// </summary>
 	[DataMember(Name = "isAvailable", EmitDefaultValue = false)]
 	public bool? IsAvailable { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Criteria
 	/// </summary>
 	[DataMember(Name = "criteria", EmitDefaultValue = false)]
 	public List<string> Criteria { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

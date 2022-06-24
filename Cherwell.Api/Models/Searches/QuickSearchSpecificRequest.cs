@@ -47,61 +47,73 @@ public partial class QuickSearchSpecificRequest : IEquatable<QuickSearchSpecific
 	/// </summary>
 	[DataMember(Name = "ascending", EmitDefaultValue = false)]
 	public bool? Ascending { get; set; }
+
 	/// <summary>
 	/// Gets or Sets IsBusObTarget
 	/// </summary>
 	[DataMember(Name = "isBusObTarget", EmitDefaultValue = false)]
 	public bool? IsBusObTarget { get; set; }
+
 	/// <summary>
 	/// Gets or Sets NonFinalState
 	/// </summary>
 	[DataMember(Name = "nonFinalState", EmitDefaultValue = false)]
 	public bool? NonFinalState { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SearchAnyWords
 	/// </summary>
 	[DataMember(Name = "searchAnyWords", EmitDefaultValue = false)]
 	public bool? SearchAnyWords { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SearchAttachments
 	/// </summary>
 	[DataMember(Name = "searchAttachments", EmitDefaultValue = false)]
 	public bool? SearchAttachments { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SearchRelated
 	/// </summary>
 	[DataMember(Name = "searchRelated", EmitDefaultValue = false)]
 	public bool? SearchRelated { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SearchText
 	/// </summary>
 	[DataMember(Name = "searchText", EmitDefaultValue = false)]
 	public string SearchText { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SelectedChangedLimit
 	/// </summary>
 	[DataMember(Name = "selectedChangedLimit", EmitDefaultValue = false)]
 	public ChangedLimit SelectedChangedLimit { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SelectedSortByFieldId
 	/// </summary>
 	[DataMember(Name = "selectedSortByFieldId", EmitDefaultValue = false)]
 	public string SelectedSortByFieldId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SortByRelevance
 	/// </summary>
 	[DataMember(Name = "sortByRelevance", EmitDefaultValue = false)]
 	public bool? SortByRelevance { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SpecificSearchTargetId
 	/// </summary>
 	[DataMember(Name = "specificSearchTargetId", EmitDefaultValue = false)]
 	public string SpecificSearchTargetId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets UseSortBy
 	/// </summary>
 	[DataMember(Name = "useSortBy", EmitDefaultValue = false)]
 	public bool? UseSortBy { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

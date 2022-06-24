@@ -79,6 +79,7 @@ public partial class SaveStoredValueRequest : IEquatable<SaveStoredValueRequest>
 	/// </summary>
 	[DataMember(Name = "storedValueType", EmitDefaultValue = false)]
 	public EnumStoredValueType? StoredValueType { get; set; }
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SaveStoredValueRequest" /> class.
 	/// </summary>
@@ -107,36 +108,43 @@ public partial class SaveStoredValueRequest : IEquatable<SaveStoredValueRequest>
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
 	public string Description { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Folder
 	/// </summary>
 	[DataMember(Name = "folder", EmitDefaultValue = false)]
 	public string Folder { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Scope
 	/// </summary>
 	[DataMember(Name = "scope", EmitDefaultValue = false)]
 	public string Scope { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ScopeOwner
 	/// </summary>
 	[DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
 	public string ScopeOwner { get; set; }
+
 	/// <summary>
 	/// Gets or Sets StandInKey
 	/// </summary>
 	[DataMember(Name = "standInKey", EmitDefaultValue = false)]
 	public string StandInKey { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Value
 	/// </summary>
 	[DataMember(Name = "value", EmitDefaultValue = false)]
 	public string Value { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

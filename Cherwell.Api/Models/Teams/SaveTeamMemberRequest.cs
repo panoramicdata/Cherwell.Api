@@ -31,21 +31,25 @@ public partial class SaveTeamMemberRequest : IEquatable<SaveTeamMemberRequest>, 
 	/// </summary>
 	[DataMember(Name = "isTeamManager", EmitDefaultValue = false)]
 	public bool? IsTeamManager { get; set; }
+
 	/// <summary>
 	/// Gets or Sets SetAsDefaultTeam
 	/// </summary>
 	[DataMember(Name = "setAsDefaultTeam", EmitDefaultValue = false)]
 	public bool? SetAsDefaultTeam { get; set; }
+
 	/// <summary>
 	/// Gets or Sets TeamId
 	/// </summary>
 	[DataMember(Name = "teamId", EmitDefaultValue = false)]
 	public string TeamId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets UserRecId
 	/// </summary>
 	[DataMember(Name = "userRecId", EmitDefaultValue = false)]
 	public string UserRecId { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

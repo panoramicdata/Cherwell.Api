@@ -33,26 +33,31 @@ public partial class Location : IEquatable<Location>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "altitude", EmitDefaultValue = false)]
 	public double? Altitude { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Latitude
 	/// </summary>
 	[DataMember(Name = "latitude", EmitDefaultValue = false)]
 	public double? Latitude { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Longitude
 	/// </summary>
 	[DataMember(Name = "longitude", EmitDefaultValue = false)]
 	public double? Longitude { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

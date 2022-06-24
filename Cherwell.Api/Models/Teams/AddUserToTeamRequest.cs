@@ -14,14 +14,17 @@ public partial class AddUserToTeamRequest : IEquatable<AddUserToTeamRequest>, IV
 	/// <summary>
 	/// Initializes a new instance of the <see cref="AddUserToTeamRequest" /> class.
 	/// </summary>
-	/// <param name="TeamId">TeamId.</param>
-	/// <param name="UserIsTeamManager">UserIsTeamManager.</param>
-	/// <param name="UserRecordId">UserRecordId.</param>
-	public AddUserToTeamRequest(string TeamId, bool? UserIsTeamManager, string UserRecordId)
+	/// <param name="teamId">TeamId.</param>
+	/// <param name="userIsTeamManager">UserIsTeamManager.</param>
+	/// <param name="userRecordId">UserRecordId.</param>
+	public AddUserToTeamRequest(
+		string teamId,
+		bool? userIsTeamManager,
+		string userRecordId)
 	{
-		this.TeamId = TeamId;
-		this.UserIsTeamManager = UserIsTeamManager;
-		this.UserRecordId = UserRecordId;
+		TeamId = teamId;
+		UserIsTeamManager = userIsTeamManager;
+		UserRecordId = userRecordId;
 	}
 
 	/// <summary>
@@ -29,16 +32,19 @@ public partial class AddUserToTeamRequest : IEquatable<AddUserToTeamRequest>, IV
 	/// </summary>
 	[DataMember(Name = "teamId", EmitDefaultValue = false)]
 	public string TeamId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets UserIsTeamManager
 	/// </summary>
 	[DataMember(Name = "userIsTeamManager", EmitDefaultValue = false)]
 	public bool? UserIsTeamManager { get; set; }
+
 	/// <summary>
 	/// Gets or Sets UserRecordId
 	/// </summary>
 	[DataMember(Name = "userRecordId", EmitDefaultValue = false)]
 	public string UserRecordId { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>

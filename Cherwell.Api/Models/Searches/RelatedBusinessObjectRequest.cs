@@ -45,56 +45,67 @@ public partial class RelatedBusinessObjectRequest : IEquatable<RelatedBusinessOb
 	/// </summary>
 	[DataMember(Name = "allFields", EmitDefaultValue = false)]
 	public bool? AllFields { get; set; }
+
 	/// <summary>
 	/// Gets or Sets CustomGridId
 	/// </summary>
 	[DataMember(Name = "customGridId", EmitDefaultValue = false)]
 	public string CustomGridId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets FieldsList
 	/// </summary>
 	[DataMember(Name = "fieldsList", EmitDefaultValue = false)]
 	public List<string> FieldsList { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Filters
 	/// </summary>
 	[DataMember(Name = "filters", EmitDefaultValue = false)]
 	public List<FilterInfo> Filters { get; set; }
+
 	/// <summary>
 	/// Gets or Sets PageNumber
 	/// </summary>
 	[DataMember(Name = "pageNumber", EmitDefaultValue = false)]
 	public int? PageNumber { get; set; }
+
 	/// <summary>
 	/// Gets or Sets PageSize
 	/// </summary>
 	[DataMember(Name = "pageSize", EmitDefaultValue = false)]
 	public int? PageSize { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ParentBusObId
 	/// </summary>
 	[DataMember(Name = "parentBusObId", EmitDefaultValue = false)]
 	public string ParentBusObId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets ParentBusObRecId
 	/// </summary>
 	[DataMember(Name = "parentBusObRecId", EmitDefaultValue = false)]
 	public string ParentBusObRecId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets RelationshipId
 	/// </summary>
 	[DataMember(Name = "relationshipId", EmitDefaultValue = false)]
 	public string RelationshipId { get; set; }
+
 	/// <summary>
 	/// Gets or Sets Sorting
 	/// </summary>
 	[DataMember(Name = "sorting", EmitDefaultValue = false)]
 	public List<SortInfo> Sorting { get; set; }
+
 	/// <summary>
 	/// Gets or Sets UseDefaultGrid
 	/// </summary>
 	[DataMember(Name = "useDefaultGrid", EmitDefaultValue = false)]
 	public bool? UseDefaultGrid { get; set; }
+
 	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>
