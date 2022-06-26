@@ -10,7 +10,7 @@ using System.Diagnostics.CodeAnalysis;
 	Justification = "Additional performance not considered necessary in this scenario",
 	Scope = "namespaceanddescendants",
 	Target = "~N:Cherwell.Api")
-	]
+]
 
 [assembly: SuppressMessage(
 	"Naming",

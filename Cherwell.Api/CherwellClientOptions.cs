@@ -37,7 +37,7 @@ public class CherwellClientOptions
 	/// <summary>
 	/// The user agent to be included in requests to the API
 	/// </summary>
-	public string? UserAgent { get; set; }
+	public string? UserAgent { get; set; } = "CherwellApiNuget/" + ThisAssembly.AssemblyFileVersion;
 
 	/// <summary>
 	/// How to handle missing members

@@ -25,11 +25,6 @@ public partial class CherwellClient : IDisposable
 
 		// Validate that all of the necessary configuration has been provided
 		options.Validate();
-		if (string.IsNullOrWhiteSpace(options.UserAgent))
-		{
-			//options.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246";
-			options.UserAgent = "Cherwell.Api";
-		}
 
 		_httpClient = new HttpClient(new AuthenticatedHttpClientHandler(options, _logger))
 		{
