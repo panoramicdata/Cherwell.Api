@@ -9,32 +9,26 @@ namespace Cherwell.Api.Models.Queues;
 /// QueuesRemoveItemFromQueueResponse
 /// </summary>
 [DataContract]
-public partial class RemoveItemFromQueueResponse : IEquatable<RemoveItemFromQueueResponse>, IValidatableObject
+public partial class RemoveItemFromQueueResponse : Response, IEquatable<RemoveItemFromQueueResponse>, IValidatableObject
 {
-	/// <summary>
-	/// HttpStatusCode
-	/// </summary>
-	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-	public EnumHttpStatusCode? HttpStatusCode { get; set; }
-
 	/// <summary>
 	/// Initializes a new instance of the <see cref="RemoveItemFromQueueResponse" /> class.
 	/// </summary>
 	/// <param name="HistoryRecId">HistoryRecId.</param>
 	/// <param name="HistoryText">HistoryText.</param>
 	/// <param name="HistoryTypeId">HistoryTypeId.</param>
-	/// <param name="ErrorCode">ErrorCode.</param>
-	/// <param name="ErrorMessage">ErrorMessage.</param>
-	/// <param name="HasError">HasError.</param>
+	/// <param name="errorCode">ErrorCode.</param>
+	/// <param name="errorMessage">ErrorMessage.</param>
+	/// <param name="hasError">HasError.</param>
 	/// <param name="HttpStatusCode">HttpStatusCode.</param>
-	public RemoveItemFromQueueResponse(string HistoryRecId, string HistoryText, string HistoryTypeId, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
+	public RemoveItemFromQueueResponse(string HistoryRecId, string HistoryText, string HistoryTypeId, string errorCode, string errorMessage, bool? hasError, EnumHttpStatusCode HttpStatusCode)
 	{
 		this.HistoryRecId = HistoryRecId;
 		this.HistoryText = HistoryText;
 		this.HistoryTypeId = HistoryTypeId;
-		this.ErrorCode = ErrorCode;
-		this.ErrorMessage = ErrorMessage;
-		this.HasError = HasError;
+		this.ErrorCode = errorCode;
+		this.ErrorMessage = errorMessage;
+		this.HasError = hasError;
 		this.HttpStatusCode = HttpStatusCode;
 	}
 
@@ -57,24 +51,6 @@ public partial class RemoveItemFromQueueResponse : IEquatable<RemoveItemFromQueu
 	public string HistoryTypeId { get; set; }
 
 	/// <summary>
-	/// ErrorCode
-	/// </summary>
-	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
-	public string ErrorCode { get; set; }
-
-	/// <summary>
-	/// ErrorMessage
-	/// </summary>
-	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
-	public string ErrorMessage { get; set; }
-
-	/// <summary>
-	/// HasError
-	/// </summary>
-	[DataMember(Name = "hasError", EmitDefaultValue = false)]
-	public bool? HasError { get; set; }
-
-	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>
 	/// <returns>String presentation of the object</returns>
@@ -91,15 +67,6 @@ public partial class RemoveItemFromQueueResponse : IEquatable<RemoveItemFromQueu
 		sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

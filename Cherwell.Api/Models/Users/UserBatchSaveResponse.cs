@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Users;
 /// UserBatchSaveResponse
 /// </summary>
 [DataContract]
-public partial class UserBatchSaveResponse : IEquatable<UserBatchSaveResponse>, IValidatableObject
+public partial class UserBatchSaveResponse : Response, IEquatable<UserBatchSaveResponse>, IValidatableObject
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="UserBatchSaveResponse" /> class.
@@ -37,15 +37,6 @@ public partial class UserBatchSaveResponse : IEquatable<UserBatchSaveResponse>, 
 		sb.Append("  Responses: ").Append(Responses).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

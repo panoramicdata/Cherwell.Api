@@ -9,30 +9,24 @@ namespace Cherwell.Api.Models.Users;
 /// UserSaveV2Response
 /// </summary>
 [DataContract]
-public partial class UserSaveV2Response : IEquatable<UserSaveV2Response>, IValidatableObject
+public partial class UserSaveV2Response : Response, IEquatable<UserSaveV2Response>, IValidatableObject
 {
-	/// <summary>
-	/// HttpStatusCode
-	/// </summary>
-	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-	public EnumHttpStatusCode? HttpStatusCode { get; set; }
-
 	/// <summary>
 	/// Initializes a new instance of the <see cref="UserSaveV2Response" /> class.
 	/// </summary>
 	/// <param name="BusObPublicId">BusObPublicId.</param>
 	/// <param name="BusObRecId">BusObRecId.</param>
-	/// <param name="ErrorCode">ErrorCode.</param>
-	/// <param name="ErrorMessage">ErrorMessage.</param>
-	/// <param name="HasError">HasError.</param>
+	/// <param name="errorCode">ErrorCode.</param>
+	/// <param name="errorMessage">ErrorMessage.</param>
+	/// <param name="hasError">HasError.</param>
 	/// <param name="HttpStatusCode">HttpStatusCode.</param>
-	public UserSaveV2Response(string BusObPublicId, string BusObRecId, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
+	public UserSaveV2Response(string BusObPublicId, string BusObRecId, string errorCode, string errorMessage, bool? hasError, EnumHttpStatusCode HttpStatusCode)
 	{
 		this.BusObPublicId = BusObPublicId;
 		this.BusObRecId = BusObRecId;
-		this.ErrorCode = ErrorCode;
-		this.ErrorMessage = ErrorMessage;
-		this.HasError = HasError;
+		this.ErrorCode = errorCode;
+		this.ErrorMessage = errorMessage;
+		this.HasError = hasError;
 		this.HttpStatusCode = HttpStatusCode;
 	}
 
@@ -47,24 +41,6 @@ public partial class UserSaveV2Response : IEquatable<UserSaveV2Response>, IValid
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; }
-
-	/// <summary>
-	/// ErrorCode
-	/// </summary>
-	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
-	public string ErrorCode { get; set; }
-
-	/// <summary>
-	/// ErrorMessage
-	/// </summary>
-	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
-	public string ErrorMessage { get; set; }
-
-	/// <summary>
-	/// HasError
-	/// </summary>
-	[DataMember(Name = "hasError", EmitDefaultValue = false)]
-	public bool? HasError { get; set; }
 
 	/// <summary>
 	/// Returns the string presentation of the object
@@ -82,15 +58,6 @@ public partial class UserSaveV2Response : IEquatable<UserSaveV2Response>, IValid
 		sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

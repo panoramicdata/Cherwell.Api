@@ -9,14 +9,14 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesRelatedBusinessObjectResponse
 /// </summary>
 [DataContract]
-public partial class RelatedBusinessObjectResponse : IEquatable<RelatedBusinessObjectResponse>, IValidatableObject
+public partial class RelatedBusinessObjectResponse : Response, IEquatable<RelatedBusinessObjectResponse>, IValidatableObject
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="RelatedBusinessObjectResponse" /> class.
 	/// </summary>
-	/// <param name="ErrorCode">ErrorCode.</param>
-	/// <param name="ErrorMessage">ErrorMessage.</param>
-	/// <param name="HasError">HasError.</param>
+	/// <param name="errorCode">ErrorCode.</param>
+	/// <param name="errorMessage">ErrorMessage.</param>
+	/// <param name="hasError">HasError.</param>
 	/// <param name="Links">Links.</param>
 	/// <param name="PageNumber">PageNumber.</param>
 	/// <param name="PageSize">PageSize.</param>
@@ -26,9 +26,9 @@ public partial class RelatedBusinessObjectResponse : IEquatable<RelatedBusinessO
 	/// <param name="RelatedBusinessObjects">RelatedBusinessObjects.</param>
 	/// <param name="RelationshipId">RelationshipId.</param>
 	/// <param name="TotalRecords">TotalRecords.</param>
-	public RelatedBusinessObjectResponse(string ErrorCode,
-		string ErrorMessage,
-		bool? HasError,
+	public RelatedBusinessObjectResponse(string errorCode,
+		string errorMessage,
+		bool? hasError,
 		List<Link> Links,
 		int? PageNumber,
 		int? PageSize,
@@ -39,9 +39,9 @@ public partial class RelatedBusinessObjectResponse : IEquatable<RelatedBusinessO
 		string RelationshipId,
 		int? TotalRecords)
 	{
-		this.ErrorCode = ErrorCode;
-		this.ErrorMessage = ErrorMessage;
-		this.HasError = HasError;
+		this.ErrorCode = errorCode;
+		this.ErrorMessage = errorMessage;
+		this.HasError = hasError;
 		this.Links = Links;
 		this.PageNumber = PageNumber;
 		this.PageSize = PageSize;
@@ -52,24 +52,6 @@ public partial class RelatedBusinessObjectResponse : IEquatable<RelatedBusinessO
 		this.RelationshipId = RelationshipId;
 		this.TotalRecords = TotalRecords;
 	}
-
-	/// <summary>
-	/// ErrorCode
-	/// </summary>
-	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
-	public string ErrorCode { get; set; }
-
-	/// <summary>
-	/// ErrorMessage
-	/// </summary>
-	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
-	public string ErrorMessage { get; set; }
-
-	/// <summary>
-	/// HasError
-	/// </summary>
-	[DataMember(Name = "hasError", EmitDefaultValue = false)]
-	public bool? HasError { get; set; }
 
 	/// <summary>
 	/// Links
@@ -147,15 +129,6 @@ public partial class RelatedBusinessObjectResponse : IEquatable<RelatedBusinessO
 		sb.Append("  TotalRecords: ").Append(TotalRecords).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

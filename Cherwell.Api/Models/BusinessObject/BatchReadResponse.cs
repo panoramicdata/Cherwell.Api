@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// BusinessObjectBatchReadResponse
 /// </summary>
 [DataContract]
-public partial class BatchReadResponse : IEquatable<BatchReadResponse>, IValidatableObject
+public partial class BatchReadResponse : Response, IEquatable<BatchReadResponse>, IValidatableObject
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="BatchReadResponse" /> class.
@@ -37,15 +37,6 @@ public partial class BatchReadResponse : IEquatable<BatchReadResponse>, IValidat
 		sb.Append("  Responses: ").Append(Responses).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

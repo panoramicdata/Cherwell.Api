@@ -9,14 +9,8 @@ namespace Cherwell.Api.Models.Security;
 /// ApiClientSettingResponse
 /// </summary>
 [DataContract]
-public partial class ApiClientSettingResponse : IEquatable<ApiClientSettingResponse>, IValidatableObject
+public partial class ApiClientSettingResponse : Response, IEquatable<ApiClientSettingResponse>, IValidatableObject
 {
-	/// <summary>
-	/// HttpStatusCode
-	/// </summary>
-	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-	public EnumHttpStatusCode? HttpStatusCode { get; set; }
-
 	/// <summary>
 	/// Initializes a new instance of the <see cref="ApiClientSettingResponse" /> class.
 	/// </summary>
@@ -45,7 +39,7 @@ public partial class ApiClientSettingResponse : IEquatable<ApiClientSettingRespo
 		string standInKey,
 		string errorCode,
 		string errorMessage,
-		bool? hasError,
+		bool hasError,
 		EnumHttpStatusCode? httpStatusCode)
 	{
 		Name = name;
@@ -118,24 +112,6 @@ public partial class ApiClientSettingResponse : IEquatable<ApiClientSettingRespo
 	public string StandInKey { get; set; }
 
 	/// <summary>
-	/// ErrorCode
-	/// </summary>
-	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
-	public string ErrorCode { get; set; }
-
-	/// <summary>
-	/// ErrorMessage
-	/// </summary>
-	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
-	public string ErrorMessage { get; set; }
-
-	/// <summary>
-	/// HasError
-	/// </summary>
-	[DataMember(Name = "hasError", EmitDefaultValue = false)]
-	public bool? HasError { get; set; }
-
-	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>
 	/// <returns>String presentation of the object</returns>
@@ -158,15 +134,6 @@ public partial class ApiClientSettingResponse : IEquatable<ApiClientSettingRespo
 		sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

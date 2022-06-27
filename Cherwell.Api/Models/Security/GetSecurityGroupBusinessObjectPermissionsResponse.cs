@@ -9,28 +9,22 @@ namespace Cherwell.Api.Models.Security;
 /// GetSecurityGroupBusinessObjectPermissionsResponse
 /// </summary>
 [DataContract]
-public partial class GetSecurityGroupBusinessObjectPermissionsResponse : IEquatable<GetSecurityGroupBusinessObjectPermissionsResponse>, IValidatableObject
+public partial class GetSecurityGroupBusinessObjectPermissionsResponse : Response, IEquatable<GetSecurityGroupBusinessObjectPermissionsResponse>, IValidatableObject
 {
-	/// <summary>
-	/// HttpStatusCode
-	/// </summary>
-	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-	public EnumHttpStatusCode? HttpStatusCode { get; set; }
-
 	/// <summary>
 	/// Initializes a new instance of the <see cref="GetSecurityGroupBusinessObjectPermissionsResponse" /> class.
 	/// </summary>
 	/// <param name="BusinessObjectPermissions">BusinessObjectPermissions.</param>
-	/// <param name="ErrorCode">ErrorCode.</param>
-	/// <param name="ErrorMessage">ErrorMessage.</param>
-	/// <param name="HasError">HasError.</param>
+	/// <param name="errorCode">ErrorCode.</param>
+	/// <param name="errorMessage">ErrorMessage.</param>
+	/// <param name="hasError">HasError.</param>
 	/// <param name="HttpStatusCode">HttpStatusCode.</param>
-	public GetSecurityGroupBusinessObjectPermissionsResponse(List<BusinessObjectPermission> BusinessObjectPermissions, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
+	public GetSecurityGroupBusinessObjectPermissionsResponse(List<BusinessObjectPermission> BusinessObjectPermissions, string errorCode, string errorMessage, bool? hasError, EnumHttpStatusCode HttpStatusCode)
 	{
 		this.BusinessObjectPermissions = BusinessObjectPermissions;
-		this.ErrorCode = ErrorCode;
-		this.ErrorMessage = ErrorMessage;
-		this.HasError = HasError;
+		this.ErrorCode = errorCode;
+		this.ErrorMessage = errorMessage;
+		this.HasError = hasError;
 		this.HttpStatusCode = HttpStatusCode;
 	}
 
@@ -39,24 +33,6 @@ public partial class GetSecurityGroupBusinessObjectPermissionsResponse : IEquata
 	/// </summary>
 	[DataMember(Name = "businessObjectPermissions", EmitDefaultValue = false)]
 	public List<BusinessObjectPermission> BusinessObjectPermissions { get; set; }
-
-	/// <summary>
-	/// ErrorCode
-	/// </summary>
-	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
-	public string ErrorCode { get; set; }
-
-	/// <summary>
-	/// ErrorMessage
-	/// </summary>
-	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
-	public string ErrorMessage { get; set; }
-
-	/// <summary>
-	/// HasError
-	/// </summary>
-	[DataMember(Name = "hasError", EmitDefaultValue = false)]
-	public bool? HasError { get; set; }
 
 	/// <summary>
 	/// Returns the string presentation of the object
@@ -73,15 +49,6 @@ public partial class GetSecurityGroupBusinessObjectPermissionsResponse : IEquata
 		sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

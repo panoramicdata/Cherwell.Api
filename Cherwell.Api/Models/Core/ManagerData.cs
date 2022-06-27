@@ -9,30 +9,24 @@ namespace Cherwell.Api.Models.Core;
 /// CoreManagerData
 /// </summary>
 [DataContract]
-public partial class ManagerData : IEquatable<ManagerData>, IValidatableObject
+public partial class ManagerData : Response, IEquatable<ManagerData>, IValidatableObject
 {
-	/// <summary>
-	/// HttpStatusCode
-	/// </summary>
-	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-	public EnumHttpStatusCode? HttpStatusCode { get; set; }
-
 	/// <summary>
 	/// Initializes a new instance of the <see cref="ManagerData" /> class.
 	/// </summary>
 	/// <param name="Root">Root.</param>
 	/// <param name="SupportedAssociations">SupportedAssociations.</param>
-	/// <param name="ErrorCode">ErrorCode.</param>
-	/// <param name="ErrorMessage">ErrorMessage.</param>
-	/// <param name="HasError">HasError.</param>
+	/// <param name="errorCode">ErrorCode.</param>
+	/// <param name="errorMessage">ErrorMessage.</param>
+	/// <param name="hasError">HasError.</param>
 	/// <param name="HttpStatusCode">HttpStatusCode.</param>
-	public ManagerData(ManagerFolder Root, List<TrebuchetNameValuePair> SupportedAssociations, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
+	public ManagerData(ManagerFolder Root, List<TrebuchetNameValuePair> SupportedAssociations, string errorCode, string errorMessage, bool? hasError, EnumHttpStatusCode HttpStatusCode)
 	{
 		this.Root = Root;
 		this.SupportedAssociations = SupportedAssociations;
-		this.ErrorCode = ErrorCode;
-		this.ErrorMessage = ErrorMessage;
-		this.HasError = HasError;
+		this.ErrorCode = errorCode;
+		this.ErrorMessage = errorMessage;
+		this.HasError = hasError;
 		this.HttpStatusCode = HttpStatusCode;
 	}
 
@@ -47,24 +41,6 @@ public partial class ManagerData : IEquatable<ManagerData>, IValidatableObject
 	/// </summary>
 	[DataMember(Name = "supportedAssociations", EmitDefaultValue = false)]
 	public List<TrebuchetNameValuePair> SupportedAssociations { get; set; }
-
-	/// <summary>
-	/// ErrorCode
-	/// </summary>
-	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
-	public string ErrorCode { get; set; }
-
-	/// <summary>
-	/// ErrorMessage
-	/// </summary>
-	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
-	public string ErrorMessage { get; set; }
-
-	/// <summary>
-	/// HasError
-	/// </summary>
-	[DataMember(Name = "hasError", EmitDefaultValue = false)]
-	public bool? HasError { get; set; }
 
 	/// <summary>
 	/// Returns the string presentation of the object
@@ -82,15 +58,6 @@ public partial class ManagerData : IEquatable<ManagerData>, IValidatableObject
 		sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

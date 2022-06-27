@@ -9,30 +9,24 @@ namespace Cherwell.Api.Models.Teams;
 /// RemoveUserFromTeamResponse
 /// </summary>
 [DataContract]
-public partial class RemoveUserFromTeamResponse : IEquatable<RemoveUserFromTeamResponse>, IValidatableObject
+public partial class RemoveUserFromTeamResponse : Response, IEquatable<RemoveUserFromTeamResponse>, IValidatableObject
 {
-	/// <summary>
-	/// HttpStatusCode
-	/// </summary>
-	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-	public EnumHttpStatusCode? HttpStatusCode { get; set; }
-
 	/// <summary>
 	/// Initializes a new instance of the <see cref="RemoveUserFromTeamResponse" /> class.
 	/// </summary>
 	/// <param name="TeamId">TeamId.</param>
 	/// <param name="UserRecordId">UserRecordId.</param>
-	/// <param name="ErrorCode">ErrorCode.</param>
-	/// <param name="ErrorMessage">ErrorMessage.</param>
-	/// <param name="HasError">HasError.</param>
+	/// <param name="errorCode">ErrorCode.</param>
+	/// <param name="errorMessage">ErrorMessage.</param>
+	/// <param name="hasError">HasError.</param>
 	/// <param name="HttpStatusCode">HttpStatusCode.</param>
-	public RemoveUserFromTeamResponse(string TeamId, string UserRecordId, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
+	public RemoveUserFromTeamResponse(string TeamId, string UserRecordId, string errorCode, string errorMessage, bool? hasError, EnumHttpStatusCode HttpStatusCode)
 	{
 		this.TeamId = TeamId;
 		this.UserRecordId = UserRecordId;
-		this.ErrorCode = ErrorCode;
-		this.ErrorMessage = ErrorMessage;
-		this.HasError = HasError;
+		this.ErrorCode = errorCode;
+		this.ErrorMessage = errorMessage;
+		this.HasError = hasError;
 		this.HttpStatusCode = HttpStatusCode;
 	}
 
@@ -47,24 +41,6 @@ public partial class RemoveUserFromTeamResponse : IEquatable<RemoveUserFromTeamR
 	/// </summary>
 	[DataMember(Name = "userRecordId", EmitDefaultValue = false)]
 	public string UserRecordId { get; set; }
-
-	/// <summary>
-	/// ErrorCode
-	/// </summary>
-	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
-	public string ErrorCode { get; set; }
-
-	/// <summary>
-	/// ErrorMessage
-	/// </summary>
-	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
-	public string ErrorMessage { get; set; }
-
-	/// <summary>
-	/// HasError
-	/// </summary>
-	[DataMember(Name = "hasError", EmitDefaultValue = false)]
-	public bool? HasError { get; set; }
 
 	/// <summary>
 	/// Returns the string presentation of the object
@@ -82,15 +58,6 @@ public partial class RemoveUserFromTeamResponse : IEquatable<RemoveUserFromTeamR
 		sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

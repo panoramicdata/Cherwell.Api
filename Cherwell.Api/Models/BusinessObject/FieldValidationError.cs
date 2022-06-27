@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// BusinessObjectFieldValidationError
 /// </summary>
 [DataContract]
-public partial class FieldValidationError : IEquatable<FieldValidationError>, IValidatableObject
+public partial class FieldValidationError : Response, IEquatable<FieldValidationError>, IValidatableObject
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="FieldValidationError" /> class.
@@ -17,10 +17,10 @@ public partial class FieldValidationError : IEquatable<FieldValidationError>, IV
 	/// <param name="Error">Error.</param>
 	/// <param name="ErrorCode">ErrorCode.</param>
 	/// <param name="FieldId">FieldId.</param>
-	public FieldValidationError(string Error, string ErrorCode, string FieldId)
+	public FieldValidationError(string error, string errorCode, string FieldId)
 	{
-		this.Error = Error;
-		this.ErrorCode = ErrorCode;
+		this.Error = error;
+		this.ErrorCode = errorCode;
 		this.FieldId = FieldId;
 	}
 
@@ -29,12 +29,6 @@ public partial class FieldValidationError : IEquatable<FieldValidationError>, IV
 	/// </summary>
 	[DataMember(Name = "error", EmitDefaultValue = false)]
 	public string Error { get; set; }
-
-	/// <summary>
-	/// ErrorCode
-	/// </summary>
-	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
-	public string ErrorCode { get; set; }
 
 	/// <summary>
 	/// FieldId
@@ -55,15 +49,6 @@ public partial class FieldValidationError : IEquatable<FieldValidationError>, IV
 		sb.Append("  FieldId: ").Append(FieldId).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

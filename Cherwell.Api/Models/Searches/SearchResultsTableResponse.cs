@@ -9,14 +9,8 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesSearchResultsTableResponse
 /// </summary>
 [DataContract]
-public partial class SearchResultsTableResponse : IEquatable<SearchResultsTableResponse>, IValidatableObject
+public partial class SearchResultsTableResponse : Response, IEquatable<SearchResultsTableResponse>, IValidatableObject
 {
-	/// <summary>
-	/// HttpStatusCode
-	/// </summary>
-	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-	public EnumHttpStatusCode? HttpStatusCode { get; set; }
-
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SearchResultsTableResponse" /> class.
 	/// </summary>
@@ -24,19 +18,19 @@ public partial class SearchResultsTableResponse : IEquatable<SearchResultsTableR
 	/// <param name="Rows">Rows.</param>
 	/// <param name="Sorting">Sorting.</param>
 	/// <param name="TotalRows">TotalRows.</param>
-	/// <param name="ErrorCode">ErrorCode.</param>
-	/// <param name="ErrorMessage">ErrorMessage.</param>
-	/// <param name="HasError">HasError.</param>
+	/// <param name="errorCode">ErrorCode.</param>
+	/// <param name="errorMessage">ErrorMessage.</param>
+	/// <param name="hasError">HasError.</param>
 	/// <param name="HttpStatusCode">HttpStatusCode.</param>
-	public SearchResultsTableResponse(List<Field> Columns, List<SearchResultsRow> Rows, List<SortInfo> Sorting, long? TotalRows, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
+	public SearchResultsTableResponse(List<Field> Columns, List<SearchResultsRow> Rows, List<SortInfo> Sorting, long? TotalRows, string errorCode, string errorMessage, bool? hasError, EnumHttpStatusCode HttpStatusCode)
 	{
 		this.Columns = Columns;
 		this.Rows = Rows;
 		this.Sorting = Sorting;
 		this.TotalRows = TotalRows;
-		this.ErrorCode = ErrorCode;
-		this.ErrorMessage = ErrorMessage;
-		this.HasError = HasError;
+		this.ErrorCode = errorCode;
+		this.ErrorMessage = errorMessage;
+		this.HasError = hasError;
 		this.HttpStatusCode = HttpStatusCode;
 	}
 
@@ -65,24 +59,6 @@ public partial class SearchResultsTableResponse : IEquatable<SearchResultsTableR
 	public long? TotalRows { get; set; }
 
 	/// <summary>
-	/// ErrorCode
-	/// </summary>
-	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
-	public string ErrorCode { get; set; }
-
-	/// <summary>
-	/// ErrorMessage
-	/// </summary>
-	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
-	public string ErrorMessage { get; set; }
-
-	/// <summary>
-	/// HasError
-	/// </summary>
-	[DataMember(Name = "hasError", EmitDefaultValue = false)]
-	public bool? HasError { get; set; }
-
-	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>
 	/// <returns>String presentation of the object</returns>
@@ -100,15 +76,6 @@ public partial class SearchResultsTableResponse : IEquatable<SearchResultsTableR
 		sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

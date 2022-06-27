@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Users;
 /// UserBatchDeleteResponse
 /// </summary>
 [DataContract]
-public partial class UserBatchDeleteResponse : IEquatable<UserBatchDeleteResponse>, IValidatableObject
+public partial class UserBatchDeleteResponse : Response, IEquatable<UserBatchDeleteResponse>, IValidatableObject
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="UserBatchDeleteResponse" /> class.
@@ -37,15 +37,6 @@ public partial class UserBatchDeleteResponse : IEquatable<UserBatchDeleteRespons
 		sb.Append("  Responses: ").Append(Responses).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

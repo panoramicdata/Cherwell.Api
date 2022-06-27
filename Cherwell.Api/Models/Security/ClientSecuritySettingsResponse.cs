@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Security;
 /// ClientSecuritySettingsResponse
 /// </summary>
 [DataContract]
-public partial class ClientSecuritySettingsResponse : IEquatable<ClientSecuritySettingsResponse>, IValidatableObject
+public partial class ClientSecuritySettingsResponse : Response, IEquatable<ClientSecuritySettingsResponse>, IValidatableObject
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="ClientSecuritySettingsResponse" /> class.
@@ -68,15 +68,6 @@ public partial class ClientSecuritySettingsResponse : IEquatable<ClientSecurityS
 		sb.Append("  WindowsLoginAllowed: ").Append(WindowsLoginAllowed).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

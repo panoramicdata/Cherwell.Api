@@ -9,14 +9,8 @@ namespace Cherwell.Api.Models.OneStepActions;
 /// OneStepActionsOneStepActionResponse
 /// </summary>
 [DataContract]
-public partial class OneStepActionResponse : IEquatable<OneStepActionResponse>, IValidatableObject
+public partial class OneStepActionResponse : Response, IEquatable<OneStepActionResponse>, IValidatableObject
 {
-	/// <summary>
-	/// HttpStatusCode
-	/// </summary>
-	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-	public EnumHttpStatusCode? HttpStatusCode { get; set; }
-
 	/// <summary>
 	/// Initializes a new instance of the <see cref="OneStepActionResponse" /> class.
 	/// </summary>
@@ -25,20 +19,20 @@ public partial class OneStepActionResponse : IEquatable<OneStepActionResponse>, 
 	/// <param name="CurrentPrimaryBusObRecId">CurrentPrimaryBusObRecId.</param>
 	/// <param name="HasNewAccessToken">HasNewAccessToken.</param>
 	/// <param name="NewAccessToken">NewAccessToken.</param>
-	/// <param name="ErrorCode">ErrorCode.</param>
-	/// <param name="ErrorMessage">ErrorMessage.</param>
-	/// <param name="HasError">HasError.</param>
+	/// <param name="errorCode">ErrorCode.</param>
+	/// <param name="errorMessage">ErrorMessage.</param>
+	/// <param name="hasError">HasError.</param>
 	/// <param name="HttpStatusCode">HttpStatusCode.</param>
-	public OneStepActionResponse(bool? Completed, string CurrentPrimaryBusObId, string CurrentPrimaryBusObRecId, bool? HasNewAccessToken, string NewAccessToken, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
+	public OneStepActionResponse(bool? Completed, string CurrentPrimaryBusObId, string CurrentPrimaryBusObRecId, bool? HasNewAccessToken, string NewAccessToken, string errorCode, string errorMessage, bool? hasError, EnumHttpStatusCode HttpStatusCode)
 	{
 		this.Completed = Completed;
 		this.CurrentPrimaryBusObId = CurrentPrimaryBusObId;
 		this.CurrentPrimaryBusObRecId = CurrentPrimaryBusObRecId;
 		this.HasNewAccessToken = HasNewAccessToken;
 		this.NewAccessToken = NewAccessToken;
-		this.ErrorCode = ErrorCode;
-		this.ErrorMessage = ErrorMessage;
-		this.HasError = HasError;
+		this.ErrorCode = errorCode;
+		this.ErrorMessage = errorMessage;
+		this.HasError = hasError;
 		this.HttpStatusCode = HttpStatusCode;
 	}
 
@@ -73,24 +67,6 @@ public partial class OneStepActionResponse : IEquatable<OneStepActionResponse>, 
 	public string NewAccessToken { get; set; }
 
 	/// <summary>
-	/// ErrorCode
-	/// </summary>
-	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
-	public string ErrorCode { get; set; }
-
-	/// <summary>
-	/// ErrorMessage
-	/// </summary>
-	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
-	public string ErrorMessage { get; set; }
-
-	/// <summary>
-	/// HasError
-	/// </summary>
-	[DataMember(Name = "hasError", EmitDefaultValue = false)]
-	public bool? HasError { get; set; }
-
-	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>
 	/// <returns>String presentation of the object</returns>
@@ -109,15 +85,6 @@ public partial class OneStepActionResponse : IEquatable<OneStepActionResponse>, 
 		sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

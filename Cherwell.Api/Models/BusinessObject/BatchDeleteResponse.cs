@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// BusinessObjectBatchDeleteResponse
 /// </summary>
 [DataContract]
-public partial class BatchDeleteResponse : IEquatable<BatchDeleteResponse>, IValidatableObject
+public partial class BatchDeleteResponse : Response, IEquatable<BatchDeleteResponse>, IValidatableObject
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="BatchDeleteResponse" /> class.
@@ -37,15 +37,6 @@ public partial class BatchDeleteResponse : IEquatable<BatchDeleteResponse>, IVal
 		sb.Append("  Responses: ").Append(Responses).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

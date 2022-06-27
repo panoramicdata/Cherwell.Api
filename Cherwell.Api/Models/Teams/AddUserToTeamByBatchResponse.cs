@@ -9,28 +9,22 @@ namespace Cherwell.Api.Models.Teams;
 /// AddUserToTeamByBatchResponse
 /// </summary>
 [DataContract]
-public partial class AddUserToTeamByBatchResponse : IEquatable<AddUserToTeamByBatchResponse>, IValidatableObject
+public partial class AddUserToTeamByBatchResponse : Response, IEquatable<AddUserToTeamByBatchResponse>, IValidatableObject
 {
-	/// <summary>
-	/// HttpStatusCode
-	/// </summary>
-	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-	public EnumHttpStatusCode? HttpStatusCode { get; set; }
-
 	/// <summary>
 	/// Initializes a new instance of the <see cref="AddUserToTeamByBatchResponse" /> class.
 	/// </summary>
 	/// <param name="Responses">Responses.</param>
-	/// <param name="ErrorCode">ErrorCode.</param>
-	/// <param name="ErrorMessage">ErrorMessage.</param>
-	/// <param name="HasError">HasError.</param>
+	/// <param name="errorCode">ErrorCode.</param>
+	/// <param name="errorMessage">ErrorMessage.</param>
+	/// <param name="hasError">HasError.</param>
 	/// <param name="HttpStatusCode">HttpStatusCode.</param>
-	public AddUserToTeamByBatchResponse(List<AddUserToTeamResponse> Responses, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
+	public AddUserToTeamByBatchResponse(List<AddUserToTeamResponse> Responses, string errorCode, string errorMessage, bool? hasError, EnumHttpStatusCode HttpStatusCode)
 	{
 		this.Responses = Responses;
-		this.ErrorCode = ErrorCode;
-		this.ErrorMessage = ErrorMessage;
-		this.HasError = HasError;
+		this.ErrorCode = errorCode;
+		this.ErrorMessage = errorMessage;
+		this.HasError = hasError;
 		this.HttpStatusCode = HttpStatusCode;
 	}
 
@@ -39,24 +33,6 @@ public partial class AddUserToTeamByBatchResponse : IEquatable<AddUserToTeamByBa
 	/// </summary>
 	[DataMember(Name = "responses", EmitDefaultValue = false)]
 	public List<AddUserToTeamResponse> Responses { get; set; }
-
-	/// <summary>
-	/// ErrorCode
-	/// </summary>
-	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
-	public string ErrorCode { get; set; }
-
-	/// <summary>
-	/// ErrorMessage
-	/// </summary>
-	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
-	public string ErrorMessage { get; set; }
-
-	/// <summary>
-	/// HasError
-	/// </summary>
-	[DataMember(Name = "hasError", EmitDefaultValue = false)]
-	public bool? HasError { get; set; }
 
 	/// <summary>
 	/// Returns the string presentation of the object
@@ -73,15 +49,6 @@ public partial class AddUserToTeamByBatchResponse : IEquatable<AddUserToTeamByBa
 		sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

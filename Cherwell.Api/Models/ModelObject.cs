@@ -32,15 +32,6 @@ public partial class ModelObject : IEquatable<ModelObject>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
-	}
-
-	/// <summary>
 	/// Returns true if objects are equal
 	/// </summary>
 	/// <param name="obj">Object to be compared</param>

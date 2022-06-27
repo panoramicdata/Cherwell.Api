@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Security;
 /// SecurityGroupResponse
 /// </summary>
 [DataContract]
-public partial class SecurityGroupResponse : IEquatable<SecurityGroupResponse>, IValidatableObject
+public partial class SecurityGroupResponse : Response, IEquatable<SecurityGroupResponse>, IValidatableObject
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SecurityGroupResponse" /> class.
@@ -37,15 +37,6 @@ public partial class SecurityGroupResponse : IEquatable<SecurityGroupResponse>, 
 		sb.Append("  SecurityGroups: ").Append(SecurityGroups).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

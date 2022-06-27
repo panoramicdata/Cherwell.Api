@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Users;
 /// User
 /// </summary>
 [DataContract]
-public partial class User : IEquatable<User>, IValidatableObject
+public partial class User : Response, IEquatable<User>, IValidatableObject
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="User" /> class.
@@ -31,7 +31,7 @@ public partial class User : IEquatable<User>, IValidatableObject
 	/// <param name="shortDisplayName">shortDisplayName.</param>
 	/// <param name="userCannotChangePassword">UserCannotChangePassword.</param>
 	/// <param name="userMustResetPasswordAtNextLogin">UserMustResetPasswordAtNextLogin.</param>
-	public User(bool? accountLocked, DateTime? createDateTime, string displayName, string error, string errorCode, List<FieldTemplateItem> fields, bool? hasError, DateTime? lastPasswordResetDate, DateTime? lastResetDateTime, bool? ldapRequired, bool? passwordNeverExpires, string publicId, string recordId, string securityGroupId, string shortDisplayName, bool? userCannotChangePassword, bool? userMustResetPasswordAtNextLogin)
+	public User(bool? accountLocked, DateTime? createDateTime, string displayName, string error, string errorCode, List<FieldTemplateItem> fields, bool hasError, DateTime? lastPasswordResetDate, DateTime? lastResetDateTime, bool? ldapRequired, bool? passwordNeverExpires, string publicId, string recordId, string securityGroupId, string shortDisplayName, bool? userCannotChangePassword, bool? userMustResetPasswordAtNextLogin)
 	{
 		AccountLocked = accountLocked;
 		CreateDateTime = createDateTime;
@@ -77,22 +77,10 @@ public partial class User : IEquatable<User>, IValidatableObject
 	public string Error { get; set; }
 
 	/// <summary>
-	/// ErrorCode
-	/// </summary>
-	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
-	public string ErrorCode { get; set; }
-
-	/// <summary>
 	/// Fields
 	/// </summary>
 	[DataMember(Name = "fields", EmitDefaultValue = false)]
 	public List<FieldTemplateItem> Fields { get; set; }
-
-	/// <summary>
-	/// HasError
-	/// </summary>
-	[DataMember(Name = "hasError", EmitDefaultValue = false)]
-	public bool? HasError { get; set; }
 
 	/// <summary>
 	/// LastPasswordResetDate
@@ -181,15 +169,6 @@ public partial class User : IEquatable<User>, IValidatableObject
 		sb.Append("  UserMustResetPasswordAtNextLogin: ").Append(UserMustResetPasswordAtNextLogin).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Security;
 /// RoleReadResponse
 /// </summary>
 [DataContract]
-public partial class RoleReadResponse : IEquatable<RoleReadResponse>, IValidatableObject
+public partial class RoleReadResponse : Response, IEquatable<RoleReadResponse>, IValidatableObject
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="RoleReadResponse" /> class.
@@ -18,11 +18,11 @@ public partial class RoleReadResponse : IEquatable<RoleReadResponse>, IValidatab
 	/// <param name="ErrorCode">ErrorCode.</param>
 	/// <param name="HasError">HasError.</param>
 	/// <param name="Roles">Roles.</param>
-	public RoleReadResponse(string Error, string ErrorCode, bool? HasError, List<Role> Roles)
+	public RoleReadResponse(string error, string errorCode, bool? hasError, List<Role> Roles)
 	{
-		this.Error = Error;
-		this.ErrorCode = ErrorCode;
-		this.HasError = HasError;
+		this.Error = error;
+		this.ErrorCode = errorCode;
+		this.HasError = hasError;
 		this.Roles = Roles;
 	}
 
@@ -31,18 +31,6 @@ public partial class RoleReadResponse : IEquatable<RoleReadResponse>, IValidatab
 	/// </summary>
 	[DataMember(Name = "error", EmitDefaultValue = false)]
 	public string Error { get; set; }
-
-	/// <summary>
-	/// ErrorCode
-	/// </summary>
-	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
-	public string ErrorCode { get; set; }
-
-	/// <summary>
-	/// HasError
-	/// </summary>
-	[DataMember(Name = "hasError", EmitDefaultValue = false)]
-	public bool? HasError { get; set; }
 
 	/// <summary>
 	/// Roles
@@ -64,15 +52,6 @@ public partial class RoleReadResponse : IEquatable<RoleReadResponse>, IValidatab
 		sb.Append("  Roles: ").Append(Roles).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

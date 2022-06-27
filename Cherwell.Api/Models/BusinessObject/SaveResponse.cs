@@ -9,14 +9,8 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// BusinessObjectSaveResponse
 /// </summary>
 [DataContract]
-public partial class SaveResponse : IEquatable<SaveResponse>, IValidatableObject
+public partial class SaveResponse : Response, IEquatable<SaveResponse>, IValidatableObject
 {
-	/// <summary>
-	/// HttpStatusCode
-	/// </summary>
-	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-	public EnumHttpStatusCode? HttpStatusCode { get; set; }
-
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SaveResponse" /> class.
 	/// </summary>
@@ -25,20 +19,20 @@ public partial class SaveResponse : IEquatable<SaveResponse>, IValidatableObject
 	/// <param name="CacheKey">CacheKey.</param>
 	/// <param name="FieldValidationErrors">FieldValidationErrors.</param>
 	/// <param name="NotificationTriggers">NotificationTriggers.</param>
-	/// <param name="ErrorCode">ErrorCode.</param>
-	/// <param name="ErrorMessage">ErrorMessage.</param>
-	/// <param name="HasError">HasError.</param>
+	/// <param name="errorCode">ErrorCode.</param>
+	/// <param name="errorMessage">ErrorMessage.</param>
+	/// <param name="hasError">HasError.</param>
 	/// <param name="HttpStatusCode">HttpStatusCode.</param>
-	public SaveResponse(string BusObPublicId, string BusObRecId, string CacheKey, List<FieldValidationError> FieldValidationErrors, List<NotificationTrigger> NotificationTriggers, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
+	public SaveResponse(string BusObPublicId, string BusObRecId, string CacheKey, List<FieldValidationError> FieldValidationErrors, List<NotificationTrigger> NotificationTriggers, string errorCode, string errorMessage, bool? hasError, EnumHttpStatusCode HttpStatusCode)
 	{
 		this.BusObPublicId = BusObPublicId;
 		this.BusObRecId = BusObRecId;
 		this.CacheKey = CacheKey;
 		this.FieldValidationErrors = FieldValidationErrors;
 		this.NotificationTriggers = NotificationTriggers;
-		this.ErrorCode = ErrorCode;
-		this.ErrorMessage = ErrorMessage;
-		this.HasError = HasError;
+		this.ErrorCode = errorCode;
+		this.ErrorMessage = errorMessage;
+		this.HasError = hasError;
 		this.HttpStatusCode = HttpStatusCode;
 	}
 
@@ -73,24 +67,6 @@ public partial class SaveResponse : IEquatable<SaveResponse>, IValidatableObject
 	public List<NotificationTrigger> NotificationTriggers { get; set; }
 
 	/// <summary>
-	/// ErrorCode
-	/// </summary>
-	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
-	public string ErrorCode { get; set; }
-
-	/// <summary>
-	/// ErrorMessage
-	/// </summary>
-	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
-	public string ErrorMessage { get; set; }
-
-	/// <summary>
-	/// HasError
-	/// </summary>
-	[DataMember(Name = "hasError", EmitDefaultValue = false)]
-	public bool? HasError { get; set; }
-
-	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>
 	/// <returns>String presentation of the object</returns>
@@ -109,15 +85,6 @@ public partial class SaveResponse : IEquatable<SaveResponse>, IValidatableObject
 		sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

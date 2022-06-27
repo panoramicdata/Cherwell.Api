@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Users;
 /// UserDeleteResponse
 /// </summary>
 [DataContract]
-public partial class UserDeleteResponse : IEquatable<UserDeleteResponse>, IValidatableObject
+public partial class UserDeleteResponse : Response, IEquatable<UserDeleteResponse>, IValidatableObject
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="UserDeleteResponse" /> class.
@@ -18,11 +18,11 @@ public partial class UserDeleteResponse : IEquatable<UserDeleteResponse>, IValid
 	/// <param name="ErrorCode">ErrorCode.</param>
 	/// <param name="HasError">HasError.</param>
 	/// <param name="Users">Users.</param>
-	public UserDeleteResponse(string Error, string ErrorCode, bool? HasError, List<User> Users)
+	public UserDeleteResponse(string error, string errorCode, bool? hasError, List<User> Users)
 	{
-		this.Error = Error;
-		this.ErrorCode = ErrorCode;
-		this.HasError = HasError;
+		this.Error = error;
+		this.ErrorCode = errorCode;
+		this.HasError = hasError;
 		this.Users = Users;
 	}
 
@@ -31,18 +31,6 @@ public partial class UserDeleteResponse : IEquatable<UserDeleteResponse>, IValid
 	/// </summary>
 	[DataMember(Name = "error", EmitDefaultValue = false)]
 	public string Error { get; set; }
-
-	/// <summary>
-	/// ErrorCode
-	/// </summary>
-	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
-	public string ErrorCode { get; set; }
-
-	/// <summary>
-	/// HasError
-	/// </summary>
-	[DataMember(Name = "hasError", EmitDefaultValue = false)]
-	public bool? HasError { get; set; }
 
 	/// <summary>
 	/// Users
@@ -64,15 +52,6 @@ public partial class UserDeleteResponse : IEquatable<UserDeleteResponse>, IValid
 		sb.Append("  Users: ").Append(Users).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

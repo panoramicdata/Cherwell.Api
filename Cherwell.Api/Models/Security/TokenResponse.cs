@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Security;
 /// TokenResponse
 /// </summary>
 [DataContract]
-public partial class TokenResponse : IEquatable<TokenResponse>, IValidatableObject
+public partial class TokenResponse : Response, IEquatable<TokenResponse>, IValidatableObject
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="TokenResponse" /> class.
@@ -108,15 +108,6 @@ public partial class TokenResponse : IEquatable<TokenResponse>, IValidatableObje
 		sb.Append("  Username: ").Append(Username).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

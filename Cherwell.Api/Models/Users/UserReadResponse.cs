@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Users;
 /// UserReadResponse
 /// </summary>
 [DataContract]
-public partial class UserReadResponse : IEquatable<UserReadResponse>, IValidatableObject
+public partial class UserReadResponse : Response, IEquatable<UserReadResponse>, IValidatableObject
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="UserReadResponse" /> class.
@@ -21,7 +21,7 @@ public partial class UserReadResponse : IEquatable<UserReadResponse>, IValidatab
 	public UserReadResponse(
 		string error,
 		string errorCode,
-		bool? hasError,
+		bool hasError,
 		List<User> users)
 	{
 		Error = error;
@@ -35,18 +35,6 @@ public partial class UserReadResponse : IEquatable<UserReadResponse>, IValidatab
 	/// </summary>
 	[DataMember(Name = "error", EmitDefaultValue = false)]
 	public string Error { get; set; }
-
-	/// <summary>
-	/// ErrorCode
-	/// </summary>
-	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
-	public string ErrorCode { get; set; }
-
-	/// <summary>
-	/// HasError
-	/// </summary>
-	[DataMember(Name = "hasError", EmitDefaultValue = false)]
-	public bool? HasError { get; set; }
 
 	/// <summary>
 	/// Users
@@ -68,15 +56,6 @@ public partial class UserReadResponse : IEquatable<UserReadResponse>, IValidatab
 		sb.Append("  Users: ").Append(Users).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

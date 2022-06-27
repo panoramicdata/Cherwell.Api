@@ -9,14 +9,8 @@ namespace Cherwell.Api.Models.Users;
 /// UserV2
 /// </summary>
 [DataContract]
-public partial class UserV2 : IEquatable<UserV2>, IValidatableObject
+public partial class UserV2 : Response, IEquatable<UserV2>, IValidatableObject
 {
-	/// <summary>
-	/// HttpStatusCode
-	/// </summary>
-	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-	public EnumHttpStatusCode? HttpStatusCode { get; set; }
-
 	/// <summary>
 	/// Initializes a new instance of the <see cref="UserV2" /> class.
 	/// </summary>
@@ -38,7 +32,7 @@ public partial class UserV2 : IEquatable<UserV2>, IValidatableObject
 	/// <param name="errorMessage">ErrorMessage.</param>
 	/// <param name="hasError">HasError.</param>
 	/// <param name="httpStatusCode">HttpStatusCode.</param>
-	public UserV2(bool? accountLocked, DateTime? createDateTime, string displayName, List<FieldTemplateItem> fields, DateTime? lastPasswordResetDate, DateTime? lastResetDateTime, bool? ldapRequired, bool? passwordNeverExpires, string publicId, string recordId, string securityGroupId, string shortdisplayName, bool? userCannotChangePassword, bool? userMustResetPasswordAtNextLogin, string errorCode, string errorMessage, bool? hasError, EnumHttpStatusCode? httpStatusCode)
+	public UserV2(bool? accountLocked, DateTime? createDateTime, string displayName, List<FieldTemplateItem> fields, DateTime? lastPasswordResetDate, DateTime? lastResetDateTime, bool? ldapRequired, bool? passwordNeverExpires, string publicId, string recordId, string securityGroupId, string shortdisplayName, bool? userCannotChangePassword, bool? userMustResetPasswordAtNextLogin, string errorCode, string errorMessage, bool hasError, EnumHttpStatusCode? httpStatusCode)
 	{
 		AccountLocked = accountLocked;
 		CreateDateTime = createDateTime;
@@ -145,24 +139,6 @@ public partial class UserV2 : IEquatable<UserV2>, IValidatableObject
 	public bool? UserMustResetPasswordAtNextLogin { get; set; }
 
 	/// <summary>
-	/// ErrorCode
-	/// </summary>
-	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
-	public string ErrorCode { get; set; }
-
-	/// <summary>
-	/// ErrorMessage
-	/// </summary>
-	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
-	public string ErrorMessage { get; set; }
-
-	/// <summary>
-	/// HasError
-	/// </summary>
-	[DataMember(Name = "hasError", EmitDefaultValue = false)]
-	public bool? HasError { get; set; }
-
-	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>
 	/// <returns>String presentation of the object</returns>
@@ -190,15 +166,6 @@ public partial class UserV2 : IEquatable<UserV2>, IValidatableObject
 		sb.Append("  httpStatusCode: ").Append(HttpStatusCode).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

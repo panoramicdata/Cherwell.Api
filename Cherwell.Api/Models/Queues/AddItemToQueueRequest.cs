@@ -39,29 +39,6 @@ public partial class AddItemToQueueRequest : IEquatable<AddItemToQueueRequest>, 
 	/// </summary>
 	[DataMember(Name = "queueStandInKey", EmitDefaultValue = false)]
 	public string QueueStandInKey { get; set; }
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class QueuesAddItemToQueueRequest {\n");
-		sb.Append("  BusObId: ").Append(BusObId).Append('\n');
-		sb.Append("  BusObRecId: ").Append(BusObRecId).Append('\n');
-		sb.Append("  QueueStandInKey: ").Append(QueueStandInKey).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
-	}
 
 	/// <summary>
 	/// Returns true if objects are equal

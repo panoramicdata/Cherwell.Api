@@ -9,14 +9,8 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesQuickSearchConfigurationResponse
 /// </summary>
 [DataContract]
-public partial class QuickSearchConfigurationResponse : IEquatable<QuickSearchConfigurationResponse>, IValidatableObject
+public partial class QuickSearchConfigurationResponse : Response, IEquatable<QuickSearchConfigurationResponse>, IValidatableObject
 {
-	/// <summary>
-	/// HttpStatusCode
-	/// </summary>
-	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-	public EnumHttpStatusCode? HttpStatusCode { get; set; }
-
 	/// <summary>
 	/// Initializes a new instance of the <see cref="QuickSearchConfigurationResponse" /> class.
 	/// </summary>
@@ -36,11 +30,11 @@ public partial class QuickSearchConfigurationResponse : IEquatable<QuickSearchCo
 	/// <param name="Scope">Scope.</param>
 	/// <param name="ScopeOwner">ScopeOwner.</param>
 	/// <param name="SpecificSearchItems">SpecificSearchItems.</param>
-	/// <param name="ErrorCode">ErrorCode.</param>
-	/// <param name="ErrorMessage">ErrorMessage.</param>
-	/// <param name="HasError">HasError.</param>
+	/// <param name="errorCode">ErrorCode.</param>
+	/// <param name="errorMessage">ErrorMessage.</param>
+	/// <param name="hasError">HasError.</param>
 	/// <param name="HttpStatusCode">HttpStatusCode.</param>
-	public QuickSearchConfigurationResponse(bool? AllowQuickSearch, bool? AllowSpecificSearch, bool? DefaultToQuickSearch, string DisplayName, string GalleryImage, List<string> History, bool? IncludeAvailableInSpecific, bool? IncludeQuickSearchInSpecific, string QuickSearchId, List<QuickSearchItem> QuickSearchItems, string QuickSearchWatermark, bool? SortByRelevance, string ResolvedQuickSearchWatermark, string Scope, string ScopeOwner, List<QuickSearchItem> SpecificSearchItems, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
+	public QuickSearchConfigurationResponse(bool? AllowQuickSearch, bool? AllowSpecificSearch, bool? DefaultToQuickSearch, string DisplayName, string GalleryImage, List<string> History, bool? IncludeAvailableInSpecific, bool? IncludeQuickSearchInSpecific, string QuickSearchId, List<QuickSearchItem> QuickSearchItems, string QuickSearchWatermark, bool? SortByRelevance, string ResolvedQuickSearchWatermark, string Scope, string ScopeOwner, List<QuickSearchItem> SpecificSearchItems, string errorCode, string errorMessage, bool? hasError, EnumHttpStatusCode HttpStatusCode)
 	{
 		this.AllowQuickSearch = AllowQuickSearch;
 		this.AllowSpecificSearch = AllowSpecificSearch;
@@ -58,9 +52,9 @@ public partial class QuickSearchConfigurationResponse : IEquatable<QuickSearchCo
 		this.Scope = Scope;
 		this.ScopeOwner = ScopeOwner;
 		this.SpecificSearchItems = SpecificSearchItems;
-		this.ErrorCode = ErrorCode;
-		this.ErrorMessage = ErrorMessage;
-		this.HasError = HasError;
+		this.ErrorCode = errorCode;
+		this.ErrorMessage = errorMessage;
+		this.HasError = hasError;
 		this.HttpStatusCode = HttpStatusCode;
 	}
 
@@ -161,24 +155,6 @@ public partial class QuickSearchConfigurationResponse : IEquatable<QuickSearchCo
 	public List<QuickSearchItem> SpecificSearchItems { get; set; }
 
 	/// <summary>
-	/// ErrorCode
-	/// </summary>
-	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
-	public string ErrorCode { get; set; }
-
-	/// <summary>
-	/// ErrorMessage
-	/// </summary>
-	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
-	public string ErrorMessage { get; set; }
-
-	/// <summary>
-	/// HasError
-	/// </summary>
-	[DataMember(Name = "hasError", EmitDefaultValue = false)]
-	public bool? HasError { get; set; }
-
-	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>
 	/// <returns>String presentation of the object</returns>
@@ -208,15 +184,6 @@ public partial class QuickSearchConfigurationResponse : IEquatable<QuickSearchCo
 		sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

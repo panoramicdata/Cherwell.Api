@@ -9,14 +9,8 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// BusinessObjectSchemaResponse
 /// </summary>
 [DataContract]
-public partial class SchemaResponse : IEquatable<SchemaResponse>, IValidatableObject
+public partial class SchemaResponse : Response, IEquatable<SchemaResponse>, IValidatableObject
 {
-	/// <summary>
-	/// HttpStatusCode
-	/// </summary>
-	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-	public EnumHttpStatusCode? HttpStatusCode { get; set; }
-
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SchemaResponse" /> class.
 	/// </summary>
@@ -29,11 +23,11 @@ public partial class SchemaResponse : IEquatable<SchemaResponse>, IValidatableOb
 	/// <param name="Relationships">Relationships.</param>
 	/// <param name="StateFieldId">StateFieldId.</param>
 	/// <param name="states">States.</param>
-	/// <param name="ErrorCode">ErrorCode.</param>
-	/// <param name="ErrorMessage">ErrorMessage.</param>
-	/// <param name="HasError">HasError.</param>
+	/// <param name="errorCode">ErrorCode.</param>
+	/// <param name="errorMessage">ErrorMessage.</param>
+	/// <param name="hasError">HasError.</param>
 	/// <param name="HttpStatusCode">HttpStatusCode.</param>
-	public SchemaResponse(string BusObId, List<FieldDefinition> fieldDefinitions, string firstRecIdField, List<GridDefinition> GridDefinitions, string Name, string RecIdFields, List<BusinessObjectRelationship> Relationships, string StateFieldId, string states, string ErrorCode, string ErrorMessage, bool? HasError, EnumHttpStatusCode? HttpStatusCode)
+	public SchemaResponse(string BusObId, List<FieldDefinition> fieldDefinitions, string firstRecIdField, List<GridDefinition> GridDefinitions, string Name, string RecIdFields, List<BusinessObjectRelationship> Relationships, string StateFieldId, string states, string errorCode, string errorMessage, bool? hasError, EnumHttpStatusCode HttpStatusCode)
 	{
 		this.BusObId = BusObId;
 		FieldDefinitions = fieldDefinitions;
@@ -44,9 +38,9 @@ public partial class SchemaResponse : IEquatable<SchemaResponse>, IValidatableOb
 		this.Relationships = Relationships;
 		this.StateFieldId = StateFieldId;
 		States = states;
-		this.ErrorCode = ErrorCode;
-		this.ErrorMessage = ErrorMessage;
-		this.HasError = HasError;
+		this.ErrorCode = errorCode;
+		this.ErrorMessage = errorMessage;
+		this.HasError = hasError;
 		this.HttpStatusCode = HttpStatusCode;
 	}
 
@@ -105,24 +99,6 @@ public partial class SchemaResponse : IEquatable<SchemaResponse>, IValidatableOb
 	public string States { get; set; }
 
 	/// <summary>
-	/// ErrorCode
-	/// </summary>
-	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
-	public string ErrorCode { get; set; }
-
-	/// <summary>
-	/// ErrorMessage
-	/// </summary>
-	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
-	public string ErrorMessage { get; set; }
-
-	/// <summary>
-	/// HasError
-	/// </summary>
-	[DataMember(Name = "hasError", EmitDefaultValue = false)]
-	public bool? HasError { get; set; }
-
-	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>
 	/// <returns>String presentation of the object</returns>
@@ -145,15 +121,6 @@ public partial class SchemaResponse : IEquatable<SchemaResponse>, IValidatableOb
 		sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

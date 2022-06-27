@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Users;
 /// UserSaveResponse
 /// </summary>
 [DataContract]
-public partial class UserSaveResponse : IEquatable<UserSaveResponse>, IValidatableObject
+public partial class UserSaveResponse : Response, IEquatable<UserSaveResponse>, IValidatableObject
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="UserSaveResponse" /> class.
@@ -19,13 +19,13 @@ public partial class UserSaveResponse : IEquatable<UserSaveResponse>, IValidatab
 	/// <param name="Error">Error.</param>
 	/// <param name="ErrorCode">ErrorCode.</param>
 	/// <param name="HasError">HasError.</param>
-	public UserSaveResponse(string BusObPublicId, string BusObRecId, string Error, string ErrorCode, bool? HasError)
+	public UserSaveResponse(string BusObPublicId, string BusObRecId, string error, string errorCode, bool? hasError)
 	{
 		this.BusObPublicId = BusObPublicId;
 		this.BusObRecId = BusObRecId;
-		this.Error = Error;
-		this.ErrorCode = ErrorCode;
-		this.HasError = HasError;
+		this.Error = error;
+		this.ErrorCode = errorCode;
+		this.HasError = hasError;
 	}
 
 	/// <summary>
@@ -47,18 +47,6 @@ public partial class UserSaveResponse : IEquatable<UserSaveResponse>, IValidatab
 	public string Error { get; set; }
 
 	/// <summary>
-	/// ErrorCode
-	/// </summary>
-	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
-	public string ErrorCode { get; set; }
-
-	/// <summary>
-	/// HasError
-	/// </summary>
-	[DataMember(Name = "hasError", EmitDefaultValue = false)]
-	public bool? HasError { get; set; }
-
-	/// <summary>
 	/// Returns the string presentation of the object
 	/// </summary>
 	/// <returns>String presentation of the object</returns>
@@ -73,15 +61,6 @@ public partial class UserSaveResponse : IEquatable<UserSaveResponse>, IValidatab
 		sb.Append("  HasError: ").Append(HasError).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

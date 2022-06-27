@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Users;
 /// UserSaveRequest
 /// </summary>
 [DataContract]
-public partial class UserSaveRequest : IEquatable<UserSaveRequest>, IValidatableObject
+public partial class UserSaveRequest : Response, IEquatable<UserSaveRequest>, IValidatableObject
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="UserSaveRequest" /> class.
@@ -40,7 +40,7 @@ public partial class UserSaveRequest : IEquatable<UserSaveRequest>, IValidatable
 		string displayName,
 		string error,
 		string errorCode,
-		bool? hasError,
+		bool hasError,
 		bool? ldapRequired,
 		string loginId,
 		DateTime? nextPasswordResetDate,
@@ -107,18 +107,6 @@ public partial class UserSaveRequest : IEquatable<UserSaveRequest>, IValidatable
 	/// </summary>
 	[DataMember(Name = "error", EmitDefaultValue = false)]
 	public string Error { get; set; }
-
-	/// <summary>
-	/// ErrorCode
-	/// </summary>
-	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
-	public string ErrorCode { get; set; }
-
-	/// <summary>
-	/// HasError
-	/// </summary>
-	[DataMember(Name = "hasError", EmitDefaultValue = false)]
-	public bool? HasError { get; set; }
 
 	/// <summary>
 	/// LdapRequired
@@ -208,15 +196,6 @@ public partial class UserSaveRequest : IEquatable<UserSaveRequest>, IValidatable
 		sb.Append("  WindowsUserId: ").Append(WindowsUserId).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

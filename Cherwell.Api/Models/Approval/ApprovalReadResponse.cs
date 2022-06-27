@@ -9,14 +9,8 @@ namespace Cherwell.Api.Models.Approval;
 /// ApprovalApprovalReadResponse
 /// </summary>
 [DataContract]
-public partial class ApprovalReadResponse : IEquatable<ApprovalReadResponse>, IValidatableObject
+public partial class ApprovalReadResponse : Response, IEquatable<ApprovalReadResponse>, IValidatableObject
 {
-	/// <summary>
-	/// HttpStatusCode
-	/// </summary>
-	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-	public EnumHttpStatusCode? HttpStatusCode { get; set; }
-
 	/// <summary>
 	/// Initializes a new instance of the <see cref="ApprovalReadResponse" /> class.
 	/// </summary>
@@ -53,51 +47,6 @@ public partial class ApprovalReadResponse : IEquatable<ApprovalReadResponse>, IV
 	/// </summary>
 	[DataMember(Name = "links", EmitDefaultValue = false)]
 	public List<Link> Links { get; set; }
-
-	/// <summary>
-	/// ErrorCode
-	/// </summary>
-	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
-	public string ErrorCode { get; set; }
-
-	/// <summary>
-	/// ErrorMessage
-	/// </summary>
-	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
-	public string ErrorMessage { get; set; }
-
-	/// <summary>
-	/// HasError
-	/// </summary>
-	[DataMember(Name = "hasError", EmitDefaultValue = false)]
-	public bool? HasError { get; set; }
-
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class ApprovalApprovalReadResponse {\n");
-		sb.Append("  properties: ").Append(Properties).Append('\n');
-		sb.Append("  Links: ").Append(Links).Append('\n');
-		sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
-		sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append('\n');
-		sb.Append("  HasError: ").Append(HasError).Append('\n');
-		sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
-	}
 
 	/// <summary>
 	/// Returns true if objects are equal

@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Teams;
 /// TeamsResponse
 /// </summary>
 [DataContract]
-public partial class TeamsResponse : IEquatable<TeamsResponse>, IValidatableObject
+public partial class TeamsResponse : Response, IEquatable<TeamsResponse>, IValidatableObject
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="TeamsResponse" /> class.
@@ -18,11 +18,11 @@ public partial class TeamsResponse : IEquatable<TeamsResponse>, IValidatableObje
 	/// <param name="ErrorCode">ErrorCode.</param>
 	/// <param name="HasError">HasError.</param>
 	/// <param name="Teams">Teams.</param>
-	public TeamsResponse(string Error, string ErrorCode, bool? HasError, List<Team> Teams)
+	public TeamsResponse(string error, string errorCode, bool? hasError, List<Team> Teams)
 	{
-		this.Error = Error;
-		this.ErrorCode = ErrorCode;
-		this.HasError = HasError;
+		this.Error = error;
+		this.ErrorCode = errorCode;
+		this.HasError = hasError;
 		this.Teams = Teams;
 	}
 
@@ -31,18 +31,6 @@ public partial class TeamsResponse : IEquatable<TeamsResponse>, IValidatableObje
 	/// </summary>
 	[DataMember(Name = "error", EmitDefaultValue = false)]
 	public string Error { get; set; }
-
-	/// <summary>
-	/// ErrorCode
-	/// </summary>
-	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
-	public string ErrorCode { get; set; }
-
-	/// <summary>
-	/// HasError
-	/// </summary>
-	[DataMember(Name = "hasError", EmitDefaultValue = false)]
-	public bool? HasError { get; set; }
 
 	/// <summary>
 	/// Teams
@@ -64,15 +52,6 @@ public partial class TeamsResponse : IEquatable<TeamsResponse>, IValidatableObje
 		sb.Append("  Teams: ").Append(Teams).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

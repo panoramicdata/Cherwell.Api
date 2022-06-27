@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// BusinessObjectBusObsForViewResponse
 /// </summary>
 [DataContract]
-public partial class BusObsForViewResponse : IEquatable<BusObsForViewResponse>, IValidatableObject
+public partial class BusObsForViewResponse : Response, IEquatable<BusObsForViewResponse>, IValidatableObject
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="BusObsForViewResponse" /> class.
@@ -37,15 +37,6 @@ public partial class BusObsForViewResponse : IEquatable<BusObsForViewResponse>, 
 		sb.Append("  Summaries: ").Append(Summaries).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>

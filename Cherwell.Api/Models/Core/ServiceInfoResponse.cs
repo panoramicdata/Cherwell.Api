@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Core;
 /// CoreServiceInfoResponse
 /// </summary>
 [DataContract]
-public partial class ServiceInfoResponse : IEquatable<ServiceInfoResponse>, IValidatableObject
+public partial class ServiceInfoResponse : Response, IEquatable<ServiceInfoResponse>, IValidatableObject
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="ServiceInfoResponse" /> class.
@@ -82,15 +82,6 @@ public partial class ServiceInfoResponse : IEquatable<ServiceInfoResponse>, IVal
 		sb.Append("  SystemUtcOffset: ").Append(SystemUtcOffset).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns the JSON string presentation of the object
-	/// </summary>
-	/// <returns>JSON string presentation of the object</returns>
-	public string ToJson()
-	{
-		return JsonConvert.SerializeObject(this, Formatting.Indented);
 	}
 
 	/// <summary>
