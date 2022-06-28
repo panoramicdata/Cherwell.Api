@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Security;
 /// RightCategory
 /// </summary>
 [DataContract]
-public partial class RightCategory : IEquatable<RightCategory>, IValidatableObject
+public partial class RightCategory
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="RightCategory" /> class.
@@ -55,17 +55,6 @@ public partial class RightCategory : IEquatable<RightCategory>, IValidatableObje
 		sb.Append("  CategoryName: ").Append(CategoryName).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as RightCategory);
 	}
 
 	/// <summary>
@@ -129,14 +118,6 @@ public partial class RightCategory : IEquatable<RightCategory>, IValidatableObje
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }
 

@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models;
 /// ResponseBase
 /// </summary>
 [DataContract]
-public partial class ResponseBase : Response, IEquatable<ResponseBase>, IValidatableObject
+public partial class ResponseBase : Response
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="ResponseBase" /> class.
@@ -40,17 +40,6 @@ public partial class ResponseBase : Response, IEquatable<ResponseBase>, IValidat
 		sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as ResponseBase);
 	}
 
 	/// <summary>
@@ -124,13 +113,5 @@ public partial class ResponseBase : Response, IEquatable<ResponseBase>, IValidat
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }

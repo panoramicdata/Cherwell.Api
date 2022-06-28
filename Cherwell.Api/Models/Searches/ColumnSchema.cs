@@ -10,7 +10,7 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesColumnSchema
 /// </summary>
 [DataContract]
-public partial class ColumnSchema : IEquatable<ColumnSchema>, IValidatableObject
+public partial class ColumnSchema
 {
 	/// <summary>
 	/// Type
@@ -115,17 +115,6 @@ public partial class ColumnSchema : IEquatable<ColumnSchema>, IValidatableObject
 	}
 
 	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as ColumnSchema);
-	}
-
-	/// <summary>
 	/// Returns true if SearchesColumnSchema instances are equal
 	/// </summary>
 	/// <param name="other">Instance of SearchesColumnSchema to be compared</param>
@@ -186,13 +175,5 @@ public partial class ColumnSchema : IEquatable<ColumnSchema>, IValidatableObject
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }

@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// BusinessObjectFieldDefinition
 /// </summary>
 [DataContract]
-public partial class FieldDefinition : IEquatable<FieldDefinition>, IValidatableObject
+public partial class FieldDefinition
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="FieldDefinition" /> class.
@@ -208,17 +208,6 @@ public partial class FieldDefinition : IEquatable<FieldDefinition>, IValidatable
 		sb.Append("  WholeDigits: ").Append(WholeDigits).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as FieldDefinition);
 	}
 
 	/// <summary>
@@ -452,13 +441,5 @@ public partial class FieldDefinition : IEquatable<FieldDefinition>, IValidatable
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }

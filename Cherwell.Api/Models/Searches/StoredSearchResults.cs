@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesStoredSearchResults
 /// </summary>
 [DataContract]
-public partial class StoredSearchResults : IEquatable<StoredSearchResults>, IValidatableObject
+public partial class StoredSearchResults
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="StoredSearchResults" /> class.
@@ -46,17 +46,6 @@ public partial class StoredSearchResults : IEquatable<StoredSearchResults>, IVal
 		sb.Append("  Rows: ").Append(Rows).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as StoredSearchResults);
 	}
 
 	/// <summary>
@@ -110,13 +99,5 @@ public partial class StoredSearchResults : IEquatable<StoredSearchResults>, IVal
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }

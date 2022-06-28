@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Core;
 /// CoreLocation
 /// </summary>
 [DataContract]
-public partial class Location : IEquatable<Location>, IValidatableObject
+public partial class Location
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="Location" /> class.
@@ -73,17 +73,6 @@ public partial class Location : IEquatable<Location>, IValidatableObject
 		sb.Append("  Longitude: ").Append(Longitude).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as Location);
 	}
 
 	/// <summary>
@@ -167,13 +156,5 @@ public partial class Location : IEquatable<Location>, IValidatableObject
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }

@@ -10,7 +10,7 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesQuickSearchItem
 /// </summary>
 [DataContract]
-public partial class QuickSearchItem : IEquatable<QuickSearchItem>, IValidatableObject
+public partial class QuickSearchItem
 {
 	/// <summary>
 	/// ChangedOption
@@ -397,17 +397,6 @@ public partial class QuickSearchItem : IEquatable<QuickSearchItem>, IValidatable
 	}
 
 	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as QuickSearchItem);
-	}
-
-	/// <summary>
 	/// Returns true if SearchesQuickSearchItem instances are equal
 	/// </summary>
 	/// <param name="other">Instance of SearchesQuickSearchItem to be compared</param>
@@ -608,13 +597,5 @@ public partial class QuickSearchItem : IEquatable<QuickSearchItem>, IValidatable
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }

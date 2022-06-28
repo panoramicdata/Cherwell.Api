@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Approval;
 /// ApprovalGetApprovalsResponse
 /// </summary>
 [DataContract]
-public partial class GetApprovalsResponse : Response, IEquatable<GetApprovalsResponse>, IValidatableObject
+public partial class GetApprovalsResponse : Response 
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="GetApprovalsResponse" /> class.
@@ -58,17 +58,6 @@ public partial class GetApprovalsResponse : Response, IEquatable<GetApprovalsRes
 		sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as GetApprovalsResponse);
 	}
 
 	/// <summary>
@@ -162,13 +151,5 @@ public partial class GetApprovalsResponse : Response, IEquatable<GetApprovalsRes
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }

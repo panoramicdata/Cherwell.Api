@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Security;
 /// RoleReadResponse
 /// </summary>
 [DataContract]
-public partial class RoleReadResponse : Response, IEquatable<RoleReadResponse>, IValidatableObject
+public partial class RoleReadResponse : Response
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="RoleReadResponse" /> class.
@@ -52,17 +52,6 @@ public partial class RoleReadResponse : Response, IEquatable<RoleReadResponse>, 
 		sb.Append("  Roles: ").Append(Roles).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as RoleReadResponse);
 	}
 
 	/// <summary>
@@ -136,14 +125,6 @@ public partial class RoleReadResponse : Response, IEquatable<RoleReadResponse>, 
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }
 

@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Queues;
 /// QueuesAddItemToQueueRequest
 /// </summary>
 [DataContract]
-public partial class AddItemToQueueRequest : IEquatable<AddItemToQueueRequest>, IValidatableObject
+public partial class AddItemToQueueRequest
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="AddItemToQueueRequest" /> class.
@@ -39,17 +39,6 @@ public partial class AddItemToQueueRequest : IEquatable<AddItemToQueueRequest>, 
 	/// </summary>
 	[DataMember(Name = "queueStandInKey", EmitDefaultValue = false)]
 	public string QueueStandInKey { get; set; }
-
-	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as AddItemToQueueRequest);
-	}
 
 	/// <summary>
 	/// Returns true if QueuesAddItemToQueueRequest instances are equal
@@ -112,13 +101,5 @@ public partial class AddItemToQueueRequest : IEquatable<AddItemToQueueRequest>, 
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }

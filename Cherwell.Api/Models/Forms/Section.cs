@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Forms;
 /// FormsSection
 /// </summary>
 [DataContract]
-public partial class Section : IEquatable<Section>, IValidatableObject
+public partial class Section
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="Section" /> class.
@@ -82,17 +82,6 @@ public partial class Section : IEquatable<Section>, IValidatableObject
 		sb.Append("  TargetBusObRecId: ").Append(TargetBusObRecId).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as Section);
 	}
 
 	/// <summary>
@@ -186,13 +175,5 @@ public partial class Section : IEquatable<Section>, IValidatableObject
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }

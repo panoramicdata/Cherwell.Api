@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Security;
 /// FieldPermissiond
 /// </summary>
 [DataContract]
-public partial class FieldPermissiond : IEquatable<FieldPermissiond>, IValidatableObject
+public partial class FieldPermissiond
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="FieldPermissiond" /> class.
@@ -154,17 +154,6 @@ public partial class FieldPermissiond : IEquatable<FieldPermissiond>, IValidatab
 		sb.Append("  View: ").Append(View).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as FieldPermissiond);
 	}
 
 	/// <summary>
@@ -338,13 +327,5 @@ public partial class FieldPermissiond : IEquatable<FieldPermissiond>, IValidatab
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }

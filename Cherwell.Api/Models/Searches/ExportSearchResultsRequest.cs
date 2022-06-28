@@ -10,7 +10,7 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesExportSearchResultsRequest
 /// </summary>
 [DataContract]
-public partial class ExportSearchResultsRequest : IEquatable<ExportSearchResultsRequest>, IValidatableObject
+public partial class ExportSearchResultsRequest
 {
 	/// <summary>
 	/// ExportFormat
@@ -274,17 +274,6 @@ public partial class ExportSearchResultsRequest : IEquatable<ExportSearchResults
 	}
 
 	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as ExportSearchResultsRequest);
-	}
-
-	/// <summary>
 	/// Returns true if SearchesExportSearchResultsRequest instances are equal
 	/// </summary>
 	/// <param name="other">Instance of SearchesExportSearchResultsRequest to be compared</param>
@@ -535,13 +524,5 @@ public partial class ExportSearchResultsRequest : IEquatable<ExportSearchResults
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }

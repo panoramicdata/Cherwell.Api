@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// BusinessObjectBusObsForViewResponse
 /// </summary>
 [DataContract]
-public partial class BusObsForViewResponse : Response, IEquatable<BusObsForViewResponse>, IValidatableObject
+public partial class BusObsForViewResponse : Response
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="BusObsForViewResponse" /> class.
@@ -37,17 +37,6 @@ public partial class BusObsForViewResponse : Response, IEquatable<BusObsForViewR
 		sb.Append("  Summaries: ").Append(Summaries).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as BusObsForViewResponse);
 	}
 
 	/// <summary>
@@ -91,13 +80,5 @@ public partial class BusObsForViewResponse : Response, IEquatable<BusObsForViewR
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }

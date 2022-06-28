@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Lifecycle;
 /// LifecycleGetStatusesResponseStatuses
 /// </summary>
 [DataContract]
-public partial class GetStatusesResponseStatuses : IEquatable<GetStatusesResponseStatuses>, IValidatableObject
+public partial class GetStatusesResponseStatuses
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="GetStatusesResponseStatuses" /> class.
@@ -64,17 +64,6 @@ public partial class GetStatusesResponseStatuses : IEquatable<GetStatusesRespons
 		sb.Append("  StageId: ").Append(StageId).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as GetStatusesResponseStatuses);
 	}
 
 	/// <summary>
@@ -148,13 +137,5 @@ public partial class GetStatusesResponseStatuses : IEquatable<GetStatusesRespons
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }

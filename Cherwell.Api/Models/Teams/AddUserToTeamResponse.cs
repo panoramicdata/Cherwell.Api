@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Teams;
 /// AddUserToTeamResponse
 /// </summary>
 [DataContract]
-public partial class AddUserToTeamResponse : Response, IEquatable<AddUserToTeamResponse>, IValidatableObject
+public partial class AddUserToTeamResponse : Response
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="AddUserToTeamResponse" /> class.
@@ -44,17 +44,6 @@ public partial class AddUserToTeamResponse : Response, IEquatable<AddUserToTeamR
 		sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as AddUserToTeamResponse);
 	}
 
 	/// <summary>
@@ -128,14 +117,6 @@ public partial class AddUserToTeamResponse : Response, IEquatable<AddUserToTeamR
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }
 

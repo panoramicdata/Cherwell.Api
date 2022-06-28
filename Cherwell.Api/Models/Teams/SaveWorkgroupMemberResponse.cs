@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Teams;
 /// SaveWorkgroupMemberResponse
 /// </summary>
 [DataContract]
-public partial class SaveWorkgroupMemberResponse : Response, IEquatable<SaveWorkgroupMemberResponse>, IValidatableObject
+public partial class SaveWorkgroupMemberResponse : Response
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SaveWorkgroupMemberResponse" /> class.
@@ -40,17 +40,6 @@ public partial class SaveWorkgroupMemberResponse : Response, IEquatable<SaveWork
 		sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as SaveWorkgroupMemberResponse);
 	}
 
 	/// <summary>
@@ -124,14 +113,6 @@ public partial class SaveWorkgroupMemberResponse : Response, IEquatable<SaveWork
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }
 

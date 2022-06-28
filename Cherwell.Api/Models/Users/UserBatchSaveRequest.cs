@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Users;
 /// UserBatchSaveRequest
 /// </summary>
 [DataContract]
-public partial class UserBatchSaveRequest : IEquatable<UserBatchSaveRequest>, IValidatableObject
+public partial class UserBatchSaveRequest
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="UserBatchSaveRequest" /> class.
@@ -46,17 +46,6 @@ public partial class UserBatchSaveRequest : IEquatable<UserBatchSaveRequest>, IV
 		sb.Append("  StopOnError: ").Append(StopOnError).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as UserBatchSaveRequest);
 	}
 
 	/// <summary>
@@ -110,14 +99,6 @@ public partial class UserBatchSaveRequest : IEquatable<UserBatchSaveRequest>, IV
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }
 

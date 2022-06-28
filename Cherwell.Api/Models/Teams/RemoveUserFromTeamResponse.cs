@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Teams;
 /// RemoveUserFromTeamResponse
 /// </summary>
 [DataContract]
-public partial class RemoveUserFromTeamResponse : Response, IEquatable<RemoveUserFromTeamResponse>, IValidatableObject
+public partial class RemoveUserFromTeamResponse : Response
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="RemoveUserFromTeamResponse" /> class.
@@ -58,17 +58,6 @@ public partial class RemoveUserFromTeamResponse : Response, IEquatable<RemoveUse
 		sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as RemoveUserFromTeamResponse);
 	}
 
 	/// <summary>
@@ -162,14 +151,6 @@ public partial class RemoveUserFromTeamResponse : Response, IEquatable<RemoveUse
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }
 

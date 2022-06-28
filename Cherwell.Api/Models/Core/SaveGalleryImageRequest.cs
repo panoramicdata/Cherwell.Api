@@ -10,7 +10,7 @@ namespace Cherwell.Api.Models.Core;
 /// CoreSaveGalleryImageRequest
 /// </summary>
 [DataContract]
-public partial class SaveGalleryImageRequest : IEquatable<SaveGalleryImageRequest>, IValidatableObject
+public partial class SaveGalleryImageRequest
 {
 	/// <summary>
 	/// ImageType
@@ -130,17 +130,6 @@ public partial class SaveGalleryImageRequest : IEquatable<SaveGalleryImageReques
 	}
 
 	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as SaveGalleryImageRequest);
-	}
-
-	/// <summary>
 	/// Returns true if CoreSaveGalleryImageRequest instances are equal
 	/// </summary>
 	/// <param name="other">Instance of CoreSaveGalleryImageRequest to be compared</param>
@@ -251,13 +240,5 @@ public partial class SaveGalleryImageRequest : IEquatable<SaveGalleryImageReques
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }

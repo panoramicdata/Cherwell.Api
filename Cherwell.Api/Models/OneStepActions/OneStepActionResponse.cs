@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.OneStepActions;
 /// OneStepActionsOneStepActionResponse
 /// </summary>
 [DataContract]
-public partial class OneStepActionResponse : Response, IEquatable<OneStepActionResponse>, IValidatableObject
+public partial class OneStepActionResponse : Response
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="OneStepActionResponse" /> class.
@@ -85,17 +85,6 @@ public partial class OneStepActionResponse : Response, IEquatable<OneStepActionR
 		sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as OneStepActionResponse);
 	}
 
 	/// <summary>
@@ -219,13 +208,5 @@ public partial class OneStepActionResponse : Response, IEquatable<OneStepActionR
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }

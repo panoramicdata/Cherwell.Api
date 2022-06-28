@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesQuickSearchConfigurationResponse
 /// </summary>
 [DataContract]
-public partial class QuickSearchConfigurationResponse : Response, IEquatable<QuickSearchConfigurationResponse>, IValidatableObject
+public partial class QuickSearchConfigurationResponse : Response
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="QuickSearchConfigurationResponse" /> class.
@@ -184,17 +184,6 @@ public partial class QuickSearchConfigurationResponse : Response, IEquatable<Qui
 		sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as QuickSearchConfigurationResponse);
 	}
 
 	/// <summary>
@@ -428,13 +417,5 @@ public partial class QuickSearchConfigurationResponse : Response, IEquatable<Qui
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }

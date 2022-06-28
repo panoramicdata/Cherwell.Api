@@ -10,7 +10,7 @@ namespace Cherwell.Api.Models.Core;
 /// CoreStoredValueResponse
 /// </summary>
 [DataContract]
-public partial class StoredValueResponse : Response, IEquatable<StoredValueResponse>, IValidatableObject
+public partial class StoredValueResponse : Response
 {
 	/// <summary>
 	/// StoredValueType
@@ -187,17 +187,6 @@ public partial class StoredValueResponse : Response, IEquatable<StoredValueRespo
 	}
 
 	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as StoredValueResponse);
-	}
-
-	/// <summary>
 	/// Returns true if CoreStoredValueResponse instances are equal
 	/// </summary>
 	/// <param name="other">Instance of CoreStoredValueResponse to be compared</param>
@@ -358,13 +347,5 @@ public partial class StoredValueResponse : Response, IEquatable<StoredValueRespo
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }

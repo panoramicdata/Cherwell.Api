@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Core;
 /// CorePromptValue
 /// </summary>
 [DataContract]
-public partial class PromptValue : IEquatable<PromptValue>, IValidatableObject
+public partial class PromptValue
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="PromptValue" /> class.
@@ -100,17 +100,6 @@ public partial class PromptValue : IEquatable<PromptValue>, IValidatableObject
 		sb.Append("  ValueIsRecId: ").Append(ValueIsRecId).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as PromptValue);
 	}
 
 	/// <summary>
@@ -224,13 +213,5 @@ public partial class PromptValue : IEquatable<PromptValue>, IValidatableObject
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }

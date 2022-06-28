@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Security;
 /// GetApiClientSettingsResponseItem
 /// </summary>
 [DataContract]
-public partial class GetApiClientSettingsResponseItem : IEquatable<GetApiClientSettingsResponseItem>, IValidatableObject
+public partial class GetApiClientSettingsResponseItem
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="GetApiClientSettingsResponseItem" /> class.
@@ -46,17 +46,6 @@ public partial class GetApiClientSettingsResponseItem : IEquatable<GetApiClientS
 		sb.Append("  StandInKey: ").Append(StandInKey).Append('\n');
 		sb.Append("}\n");
 		return sb.ToString();
-	}
-
-	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as GetApiClientSettingsResponseItem);
 	}
 
 	/// <summary>
@@ -110,13 +99,5 @@ public partial class GetApiClientSettingsResponseItem : IEquatable<GetApiClientS
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }

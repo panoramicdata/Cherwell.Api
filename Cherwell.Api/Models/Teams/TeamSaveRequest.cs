@@ -10,7 +10,7 @@ namespace Cherwell.Api.Models.Teams;
 /// TeamSaveRequest
 /// </summary>
 [DataContract]
-public partial class TeamSaveRequest : IEquatable<TeamSaveRequest>, IValidatableObject
+public partial class TeamSaveRequest
 {
 	/// <summary>
 	/// TeamType
@@ -106,17 +106,6 @@ public partial class TeamSaveRequest : IEquatable<TeamSaveRequest>, IValidatable
 	}
 
 	/// <summary>
-	/// Returns true if objects are equal
-	/// </summary>
-	/// <param name="obj">Object to be compared</param>
-	/// <returns>Boolean</returns>
-	public override bool Equals(object? obj)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		return Equals(obj as TeamSaveRequest);
-	}
-
-	/// <summary>
 	/// Returns true if TeamSaveRequest instances are equal
 	/// </summary>
 	/// <param name="other">Instance of TeamSaveRequest to be compared</param>
@@ -207,14 +196,6 @@ public partial class TeamSaveRequest : IEquatable<TeamSaveRequest>, IValidatable
 		}
 	}
 
-	/// <summary>
-	/// To validate all properties of the instance
-	/// </summary>
-	/// <param name="validationContext">Validation context</param>
-	/// <returns>Validation Result</returns>
-	IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-	{
-		yield break;
-	}
+	
 }
 
