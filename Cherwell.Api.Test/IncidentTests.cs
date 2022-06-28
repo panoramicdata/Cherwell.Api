@@ -38,12 +38,26 @@ public class IncidentTests : CherwellClientTest
 			.States
 			.Split(",", StringSplitOptions.RemoveEmptyEntries);
 
+		// Retrieve the schema that explains the available fields on the object
+		var incidentSchema = await TestCherwellClient
+			.BusinessObject
+			.GetBusinessObjectSchemaAsync(
+			incidentSummary.BusObId,
+			true,
+			cancellationToken)
+			.ConfigureAwait(false);
+
 		var searchItemResponse = await TestCherwellClient
 			.Searches
 			.GetSearchResultsAdHocAsync(
 			new SearchResultsRequest
 			{
 				BusObId = incidentSummary.BusObId,
+				Fields = incidentSchema
+					.FieldDefinitions
+					.Take(5)
+					.Select(f => f.FieldId)
+					.ToList(),
 				Filters = new List<FilterInfo>()
 				{
 					// Multiple filters on the same field are treated as an OR operation
@@ -67,7 +81,6 @@ public class IncidentTests : CherwellClientTest
 		searchItemResponse
 			.Should()
 			.NotBeNull();
-
 	}
 
 	[Fact]
