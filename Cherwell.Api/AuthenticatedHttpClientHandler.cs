@@ -87,10 +87,17 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			var body = httpResponse.Content is not null
 				? await httpResponse.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false)
 				: string.Empty;
-			var jObject = JsonConvert.DeserializeObject<JObject>(body);
-			if (jObject is not null)
+			try
 			{
-				body = JsonConvert.SerializeObject(jObject, Formatting.Indented);
+				var jObject = JsonConvert.DeserializeObject<JObject>(body);
+				if (jObject is not null)
+				{
+					body = JsonConvert.SerializeObject(jObject, Formatting.Indented);
+				}
+			}
+			catch (Exception)
+			{
+				// This doesn't work for arrays, which return the JArray type
 			}
 
 			_logger.LogDebug(
