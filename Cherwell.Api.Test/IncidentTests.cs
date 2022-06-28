@@ -80,6 +80,42 @@ public class IncidentTests : CherwellClientTest
 		searchItemResponse
 			.Should()
 			.NotBeNull();
+
+		searchItemResponse
+			.HasError
+			.Should()
+			.BeFalse();
+
+		searchItemResponse
+			.ErrorCode
+			.Should()
+			.BeNullOrEmpty();
+
+		searchItemResponse
+			.ErrorMessage
+			.Should()
+			.BeNullOrEmpty();
+
+		//searchItemResponse
+		//	.HttpStatusCode
+		//	.Should()
+		//	.NotBeNull();
+
+		searchItemResponse
+			.BusinessObjects
+			.Should()
+			.NotBeNull();
+
+		searchItemResponse
+			.Links
+			.Should()
+			.NotBeNull();
+
+		searchItemResponse
+			.HasPrompts
+			.Should()
+			.NotBeNull();
+
 	}
 
 	[Fact]
