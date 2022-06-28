@@ -27,9 +27,8 @@ public class IncidentTests : CherwellClientTest
 			.NotBeNull();
 
 		objectSummaries
-			.Count
 			.Should()
-			.Be(1);
+			.ContainSingle();
 
 		var incidentSummary = objectSummaries[0];
 
@@ -99,9 +98,8 @@ public class IncidentTests : CherwellClientTest
 			.NotBeNull();
 
 		objectSummaries
-			.Count
 			.Should()
-			.Be(1);
+			.ContainSingle();
 
 		var incidentSummary = objectSummaries[0];
 
@@ -147,7 +145,7 @@ public class IncidentTests : CherwellClientTest
 			.FieldDefinitions
 			.Count
 			.Should()
-			.BeGreaterThan(0);
+			.BePositive();
 
 		incidentSchema
 			.FirstRecIdField
