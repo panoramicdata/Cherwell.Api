@@ -42,20 +42,11 @@ public partial class FilterInfo
 	[DataMember(Name = "value", EmitDefaultValue = false)]
 	public string Value { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class SearchesFilterInfo {\n");
-		sb.Append("  FieldId: ").Append(FieldId).Append('\n');
-		sb.Append("  _Operator: ").Append(Operator).Append('\n');
-		sb.Append("  Value: ").Append(Value).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -68,21 +59,6 @@ public partial class FilterInfo
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (FieldId != null)
-			{
-				hash = hash * 59 + FieldId.GetHashCode();
-			}
-
-			if (Operator != null)
-			{
-				hash = hash * 59 + Operator.GetHashCode();
-			}
-
-			if (Value != null)
-			{
-				hash = hash * 59 + Value.GetHashCode();
-			}
-
 			return hash;
 		}
 	}

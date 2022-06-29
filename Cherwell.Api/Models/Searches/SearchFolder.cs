@@ -107,27 +107,18 @@ public partial class SearchFolder
 	[DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
 	public string ScopeOwner { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class SearchesSearchFolder {\n");
-		sb.Append("  Association: ").Append(Association).Append('\n');
-		sb.Append("  ChildFolders: ").Append(ChildFolders).Append('\n');
-		sb.Append("  ChildItems: ").Append(ChildItems).Append('\n');
-		sb.Append("  FolderId: ").Append(FolderId).Append('\n');
-		sb.Append("  FolderName: ").Append(FolderName).Append('\n');
-		sb.Append("  Links: ").Append(Links).Append('\n');
-		sb.Append("  LocalizedScopeName: ").Append(LocalizedScopeName).Append('\n');
-		sb.Append("  ParentFolderId: ").Append(ParentFolderId).Append('\n');
-		sb.Append("  Scope: ").Append(Scope).Append('\n');
-		sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -140,57 +131,11 @@ public partial class SearchFolder
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (Association != null)
-			{
-				hash = hash * 59 + Association.GetHashCode();
-			}
 
-			if (ChildFolders != null)
-			{
-				hash = hash * 59 + ChildFolders.GetHashCode();
-			}
 
-			if (ChildItems != null)
-			{
-				hash = hash * 59 + ChildItems.GetHashCode();
-			}
 
-			if (FolderId != null)
-			{
-				hash = hash * 59 + FolderId.GetHashCode();
-			}
 
-			if (FolderName != null)
-			{
-				hash = hash * 59 + FolderName.GetHashCode();
-			}
 
-			if (Links != null)
-			{
-				hash = hash * 59 + Links.GetHashCode();
-			}
-
-			if (LocalizedScopeName != null)
-			{
-				hash = hash * 59 + LocalizedScopeName.GetHashCode();
-			}
-
-			if (ParentFolderId != null)
-			{
-				hash = hash * 59 + ParentFolderId.GetHashCode();
-			}
-
-			if (Scope != null)
-			{
-				hash = hash * 59 + Scope.GetHashCode();
-			}
-
-			if (ScopeOwner != null)
-			{
-				hash = hash * 59 + ScopeOwner.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

@@ -82,25 +82,16 @@ public partial class TrebuchetNameValuePair
 	[DataMember(Name = "displayString", EmitDefaultValue = false)]
 	public string DisplayString { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class TrebuchetNameValuePair {\n");
-		sb.Append("  Name: ").Append(Name).Append('\n');
-		sb.Append("  ValueObject: ").Append(ValueObject).Append('\n');
-		sb.Append("  ValueString: ").Append(ValueString).Append('\n');
-		sb.Append("  Category: ").Append(Category).Append('\n');
-		sb.Append("  Description: ").Append(Description).Append('\n');
-		sb.Append("  DisplayShowsValue: ").Append(DisplayShowsValue).Append('\n');
-		sb.Append("  SpecialUseFlag: ").Append(SpecialUseFlag).Append('\n');
-		sb.Append("  DisplayString: ").Append(DisplayString).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -113,47 +104,10 @@ public partial class TrebuchetNameValuePair
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (Name != null)
-			{
-				hash = hash * 59 + Name.GetHashCode();
-			}
 
-			if (ValueObject != null)
-			{
-				hash = hash * 59 + ValueObject.GetHashCode();
-			}
 
-			if (ValueString != null)
-			{
-				hash = hash * 59 + ValueString.GetHashCode();
-			}
 
-			if (Category != null)
-			{
-				hash = hash * 59 + Category.GetHashCode();
-			}
 
-			if (Description != null)
-			{
-				hash = hash * 59 + Description.GetHashCode();
-			}
-
-			if (DisplayShowsValue != null)
-			{
-				hash = hash * 59 + DisplayShowsValue.GetHashCode();
-			}
-
-			if (SpecialUseFlag != null)
-			{
-				hash = hash * 59 + SpecialUseFlag.GetHashCode();
-			}
-
-			if (DisplayString != null)
-			{
-				hash = hash * 59 + DisplayString.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

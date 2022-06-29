@@ -146,33 +146,24 @@ public partial class Right
 	[DataMember(Name = "viewRunOpen", EmitDefaultValue = false)]
 	public bool? ViewRunOpen { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class SecurityRight {\n");
-		sb.Append("  Add: ").Append(Add).Append('\n');
-		sb.Append("  Allow: ").Append(Allow).Append('\n');
-		sb.Append("  CategoryDescription: ").Append(CategoryDescription).Append('\n');
-		sb.Append("  CategoryId: ").Append(CategoryId).Append('\n');
-		sb.Append("  CategoryName: ").Append(CategoryName).Append('\n');
-		sb.Append("  Delete: ").Append(Delete).Append('\n');
-		sb.Append("  Edit: ").Append(Edit).Append('\n');
-		sb.Append("  IsYesNoRight: ").Append(IsYesNoRight).Append('\n');
-		sb.Append("  NonScopeOwnerAdd: ").Append(NonScopeOwnerAdd).Append('\n');
-		sb.Append("  NonScopeOwnerDelete: ").Append(NonScopeOwnerDelete).Append('\n');
-		sb.Append("  NonScopeOwnerEdit: ").Append(NonScopeOwnerEdit).Append('\n');
-		sb.Append("  NonScopeOwnerView: ").Append(NonScopeOwnerView).Append('\n');
-		sb.Append("  RightId: ").Append(RightId).Append('\n');
-		sb.Append("  RightName: ").Append(RightName).Append('\n');
-		sb.Append("  StandardRightName: ").Append(StandardRightName).Append('\n');
-		sb.Append("  ViewRunOpen: ").Append(ViewRunOpen).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -185,87 +176,14 @@ public partial class Right
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (Add != null)
-			{
-				hash = hash * 59 + Add.GetHashCode();
-			}
 
-			if (Allow != null)
-			{
-				hash = hash * 59 + Allow.GetHashCode();
-			}
 
-			if (CategoryDescription != null)
-			{
-				hash = hash * 59 + CategoryDescription.GetHashCode();
-			}
 
-			if (CategoryId != null)
-			{
-				hash = hash * 59 + CategoryId.GetHashCode();
-			}
 
-			if (CategoryName != null)
-			{
-				hash = hash * 59 + CategoryName.GetHashCode();
-			}
 
-			if (Delete != null)
-			{
-				hash = hash * 59 + Delete.GetHashCode();
-			}
 
-			if (Edit != null)
-			{
-				hash = hash * 59 + Edit.GetHashCode();
-			}
 
-			if (IsYesNoRight != null)
-			{
-				hash = hash * 59 + IsYesNoRight.GetHashCode();
-			}
 
-			if (NonScopeOwnerAdd != null)
-			{
-				hash = hash * 59 + NonScopeOwnerAdd.GetHashCode();
-			}
-
-			if (NonScopeOwnerDelete != null)
-			{
-				hash = hash * 59 + NonScopeOwnerDelete.GetHashCode();
-			}
-
-			if (NonScopeOwnerEdit != null)
-			{
-				hash = hash * 59 + NonScopeOwnerEdit.GetHashCode();
-			}
-
-			if (NonScopeOwnerView != null)
-			{
-				hash = hash * 59 + NonScopeOwnerView.GetHashCode();
-			}
-
-			if (RightId != null)
-			{
-				hash = hash * 59 + RightId.GetHashCode();
-			}
-
-			if (RightName != null)
-			{
-				hash = hash * 59 + RightName.GetHashCode();
-			}
-
-			if (StandardRightName != null)
-			{
-				hash = hash * 59 + StandardRightName.GetHashCode();
-			}
-
-			if (ViewRunOpen != null)
-			{
-				hash = hash * 59 + ViewRunOpen.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

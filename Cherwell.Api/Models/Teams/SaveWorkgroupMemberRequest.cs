@@ -42,20 +42,11 @@ public partial class SaveWorkgroupMemberRequest
 	[DataMember(Name = "customerIsWorkgroupManager", EmitDefaultValue = false)]
 	public bool? CustomerIsWorkgroupManager { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class TeamsSaveWorkgroupMemberRequest {\n");
-		sb.Append("  CustomerRecordId: ").Append(CustomerRecordId).Append('\n');
-		sb.Append("  WorkgroupId: ").Append(WorkgroupId).Append('\n');
-		sb.Append("  CustomerIsWorkgroupManager: ").Append(CustomerIsWorkgroupManager).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -68,21 +59,6 @@ public partial class SaveWorkgroupMemberRequest
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (CustomerRecordId != null)
-			{
-				hash = hash * 59 + CustomerRecordId.GetHashCode();
-			}
-
-			if (WorkgroupId != null)
-			{
-				hash = hash * 59 + WorkgroupId.GetHashCode();
-			}
-
-			if (CustomerIsWorkgroupManager != null)
-			{
-				hash = hash * 59 + CustomerIsWorkgroupManager.GetHashCode();
-			}
-
 			return hash;
 		}
 	}

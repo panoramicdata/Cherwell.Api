@@ -173,25 +173,16 @@ public partial class AttachmentsRequest
 	[DataMember(Name = "includeLinks", EmitDefaultValue = false)]
 	public bool? IncludeLinks { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class BusinessObjectAttachmentsRequest {\n");
-		sb.Append("  AttachmentId: ").Append(AttachmentId).Append('\n');
-		sb.Append("  AttachmentTypes: ").Append(AttachmentTypes).Append('\n');
-		sb.Append("  BusObId: ").Append(BusObId).Append('\n');
-		sb.Append("  BusObName: ").Append(BusObName).Append('\n');
-		sb.Append("  BusObPublicId: ").Append(BusObPublicId).Append('\n');
-		sb.Append("  BusObRecId: ").Append(BusObRecId).Append('\n');
-		sb.Append("  IncludeLinks: ").Append(IncludeLinks).Append('\n');
-		sb.Append("  Types: ").Append(Types).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -204,47 +195,10 @@ public partial class AttachmentsRequest
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (AttachmentId != null)
-			{
-				hash = hash * 59 + AttachmentId.GetHashCode();
-			}
 
-			if (AttachmentTypes != null)
-			{
-				hash = hash * 59 + AttachmentTypes.GetHashCode();
-			}
 
-			if (BusObId != null)
-			{
-				hash = hash * 59 + BusObId.GetHashCode();
-			}
 
-			if (BusObName != null)
-			{
-				hash = hash * 59 + BusObName.GetHashCode();
-			}
 
-			if (BusObPublicId != null)
-			{
-				hash = hash * 59 + BusObPublicId.GetHashCode();
-			}
-
-			if (BusObRecId != null)
-			{
-				hash = hash * 59 + BusObRecId.GetHashCode();
-			}
-
-			if (IncludeLinks != null)
-			{
-				hash = hash * 59 + IncludeLinks.GetHashCode();
-			}
-
-			if (Types != null)
-			{
-				hash = hash * 59 + Types.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

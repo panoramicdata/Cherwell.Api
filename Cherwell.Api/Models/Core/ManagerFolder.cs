@@ -98,27 +98,18 @@ public partial class ManagerFolder
 	[DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
 	public string ScopeOwner { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class CoreManagerFolder {\n");
-		sb.Append("  Association: ").Append(Association).Append('\n');
-		sb.Append("  ChildFolders: ").Append(ChildFolders).Append('\n');
-		sb.Append("  ChildItems: ").Append(ChildItems).Append('\n');
-		sb.Append("  Id: ").Append(Id).Append('\n');
-		sb.Append("  Links: ").Append(Links).Append('\n');
-		sb.Append("  LocalizedScopeName: ").Append(LocalizedScopeName).Append('\n');
-		sb.Append("  Name: ").Append(Name).Append('\n');
-		sb.Append("  ParentId: ").Append(ParentId).Append('\n');
-		sb.Append("  Scope: ").Append(Scope).Append('\n');
-		sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -131,57 +122,11 @@ public partial class ManagerFolder
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (Association != null)
-			{
-				hash = hash * 59 + Association.GetHashCode();
-			}
 
-			if (ChildFolders != null)
-			{
-				hash = hash * 59 + ChildFolders.GetHashCode();
-			}
 
-			if (ChildItems != null)
-			{
-				hash = hash * 59 + ChildItems.GetHashCode();
-			}
 
-			if (Id != null)
-			{
-				hash = hash * 59 + Id.GetHashCode();
-			}
 
-			if (Links != null)
-			{
-				hash = hash * 59 + Links.GetHashCode();
-			}
 
-			if (LocalizedScopeName != null)
-			{
-				hash = hash * 59 + LocalizedScopeName.GetHashCode();
-			}
-
-			if (Name != null)
-			{
-				hash = hash * 59 + Name.GetHashCode();
-			}
-
-			if (ParentId != null)
-			{
-				hash = hash * 59 + ParentId.GetHashCode();
-			}
-
-			if (Scope != null)
-			{
-				hash = hash * 59 + Scope.GetHashCode();
-			}
-
-			if (ScopeOwner != null)
-			{
-				hash = hash * 59 + ScopeOwner.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

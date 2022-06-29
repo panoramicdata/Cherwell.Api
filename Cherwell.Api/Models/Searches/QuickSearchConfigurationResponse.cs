@@ -154,37 +154,28 @@ public partial class QuickSearchConfigurationResponse : Response
 	[DataMember(Name = "specificSearchItems", EmitDefaultValue = false)]
 	public List<QuickSearchItem> SpecificSearchItems { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class SearchesQuickSearchConfigurationResponse {\n");
-		sb.Append("  AllowQuickSearch: ").Append(AllowQuickSearch).Append('\n');
-		sb.Append("  AllowSpecificSearch: ").Append(AllowSpecificSearch).Append('\n');
-		sb.Append("  DefaultToQuickSearch: ").Append(DefaultToQuickSearch).Append('\n');
-		sb.Append("  DisplayName: ").Append(DisplayName).Append('\n');
-		sb.Append("  GalleryImage: ").Append(GalleryImage).Append('\n');
-		sb.Append("  History: ").Append(History).Append('\n');
-		sb.Append("  IncludeAvailableInSpecific: ").Append(IncludeAvailableInSpecific).Append('\n');
-		sb.Append("  IncludeQuickSearchInSpecific: ").Append(IncludeQuickSearchInSpecific).Append('\n');
-		sb.Append("  QuickSearchId: ").Append(QuickSearchId).Append('\n');
-		sb.Append("  QuickSearchItems: ").Append(QuickSearchItems).Append('\n');
-		sb.Append("  QuickSearchWatermark: ").Append(QuickSearchWatermark).Append('\n');
-		sb.Append("  SortByRelevance: ").Append(SortByRelevance).Append('\n');
-		sb.Append("  ResolvedQuickSearchWatermark: ").Append(ResolvedQuickSearchWatermark).Append('\n');
-		sb.Append("  Scope: ").Append(Scope).Append('\n');
-		sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append('\n');
-		sb.Append("  SpecificSearchItems: ").Append(SpecificSearchItems).Append('\n');
-		sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
-		sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append('\n');
-		sb.Append("  HasError: ").Append(HasError).Append('\n');
-		sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -197,107 +188,16 @@ public partial class QuickSearchConfigurationResponse : Response
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (AllowQuickSearch != null)
-			{
-				hash = hash * 59 + AllowQuickSearch.GetHashCode();
-			}
 
-			if (AllowSpecificSearch != null)
-			{
-				hash = hash * 59 + AllowSpecificSearch.GetHashCode();
-			}
 
-			if (DefaultToQuickSearch != null)
-			{
-				hash = hash * 59 + DefaultToQuickSearch.GetHashCode();
-			}
 
-			if (DisplayName != null)
-			{
-				hash = hash * 59 + DisplayName.GetHashCode();
-			}
 
-			if (GalleryImage != null)
-			{
-				hash = hash * 59 + GalleryImage.GetHashCode();
-			}
 
-			if (History != null)
-			{
-				hash = hash * 59 + History.GetHashCode();
-			}
 
-			if (IncludeAvailableInSpecific != null)
-			{
-				hash = hash * 59 + IncludeAvailableInSpecific.GetHashCode();
-			}
 
-			if (IncludeQuickSearchInSpecific != null)
-			{
-				hash = hash * 59 + IncludeQuickSearchInSpecific.GetHashCode();
-			}
 
-			if (QuickSearchId != null)
-			{
-				hash = hash * 59 + QuickSearchId.GetHashCode();
-			}
 
-			if (QuickSearchItems != null)
-			{
-				hash = hash * 59 + QuickSearchItems.GetHashCode();
-			}
 
-			if (QuickSearchWatermark != null)
-			{
-				hash = hash * 59 + QuickSearchWatermark.GetHashCode();
-			}
-
-			if (SortByRelevance != null)
-			{
-				hash = hash * 59 + SortByRelevance.GetHashCode();
-			}
-
-			if (ResolvedQuickSearchWatermark != null)
-			{
-				hash = hash * 59 + ResolvedQuickSearchWatermark.GetHashCode();
-			}
-
-			if (Scope != null)
-			{
-				hash = hash * 59 + Scope.GetHashCode();
-			}
-
-			if (ScopeOwner != null)
-			{
-				hash = hash * 59 + ScopeOwner.GetHashCode();
-			}
-
-			if (SpecificSearchItems != null)
-			{
-				hash = hash * 59 + SpecificSearchItems.GetHashCode();
-			}
-
-			if (ErrorCode != null)
-			{
-				hash = hash * 59 + ErrorCode.GetHashCode();
-			}
-
-			if (ErrorMessage != null)
-			{
-				hash = hash * 59 + ErrorMessage.GetHashCode();
-			}
-
-			if (HasError != null)
-			{
-				hash = hash * 59 + HasError.GetHashCode();
-			}
-
-			if (HttpStatusCode != null)
-			{
-				hash = hash * 59 + HttpStatusCode.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

@@ -50,21 +50,12 @@ public partial class NotificationTrigger
 	[DataMember(Name = "key", EmitDefaultValue = false)]
 	public string Key { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class BusinessObjectNotificationTrigger {\n");
-		sb.Append("  SourceType: ").Append(SourceType).Append('\n');
-		sb.Append("  SourceId: ").Append(SourceId).Append('\n');
-		sb.Append("  SourceChange: ").Append(SourceChange).Append('\n');
-		sb.Append("  Key: ").Append(Key).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -77,27 +68,8 @@ public partial class NotificationTrigger
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (SourceType != null)
-			{
-				hash = hash * 59 + SourceType.GetHashCode();
-			}
 
-			if (SourceId != null)
-			{
-				hash = hash * 59 + SourceId.GetHashCode();
-			}
 
-			if (SourceChange != null)
-			{
-				hash = hash * 59 + SourceChange.GetHashCode();
-			}
-
-			if (Key != null)
-			{
-				hash = hash * 59 + Key.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

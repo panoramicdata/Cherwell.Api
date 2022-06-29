@@ -42,20 +42,11 @@ public partial class ChangedLimit
 	[DataMember(Name = "value", EmitDefaultValue = false)]
 	public int? Value { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class SearchesChangedLimit {\n");
-		sb.Append("  DisplayName: ").Append(DisplayName).Append('\n');
-		sb.Append("  Units: ").Append(Units).Append('\n');
-		sb.Append("  Value: ").Append(Value).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -68,21 +59,6 @@ public partial class ChangedLimit
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (DisplayName != null)
-			{
-				hash = hash * 59 + DisplayName.GetHashCode();
-			}
-
-			if (Units != null)
-			{
-				hash = hash * 59 + Units.GetHashCode();
-			}
-
-			if (Value != null)
-			{
-				hash = hash * 59 + Value.GetHashCode();
-			}
-
 			return hash;
 		}
 	}

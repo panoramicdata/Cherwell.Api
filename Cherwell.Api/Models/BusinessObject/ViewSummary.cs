@@ -98,27 +98,18 @@ public partial class ViewSummary
 	[DataMember(Name = "supporting", EmitDefaultValue = false)]
 	public bool? Supporting { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class BusinessObjectViewSummary {\n");
-		sb.Append("  GroupSummaries: ").Append(GroupSummaries).Append('\n');
-		sb.Append("  Image: ").Append(Image).Append('\n');
-		sb.Append("  IsPartOfView: ").Append(IsPartOfView).Append('\n');
-		sb.Append("  BusObId: ").Append(BusObId).Append('\n');
-		sb.Append("  DisplayName: ").Append(DisplayName).Append('\n');
-		sb.Append("  Group: ").Append(Group).Append('\n');
-		sb.Append("  Lookup: ").Append(Lookup).Append('\n');
-		sb.Append("  Major: ").Append(Major).Append('\n');
-		sb.Append("  Name: ").Append(Name).Append('\n');
-		sb.Append("  Supporting: ").Append(Supporting).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -131,57 +122,11 @@ public partial class ViewSummary
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (GroupSummaries != null)
-			{
-				hash = hash * 59 + GroupSummaries.GetHashCode();
-			}
 
-			if (Image != null)
-			{
-				hash = hash * 59 + Image.GetHashCode();
-			}
 
-			if (IsPartOfView != null)
-			{
-				hash = hash * 59 + IsPartOfView.GetHashCode();
-			}
 
-			if (BusObId != null)
-			{
-				hash = hash * 59 + BusObId.GetHashCode();
-			}
 
-			if (DisplayName != null)
-			{
-				hash = hash * 59 + DisplayName.GetHashCode();
-			}
 
-			if (Group != null)
-			{
-				hash = hash * 59 + Group.GetHashCode();
-			}
-
-			if (Lookup != null)
-			{
-				hash = hash * 59 + Lookup.GetHashCode();
-			}
-
-			if (Major != null)
-			{
-				hash = hash * 59 + Major.GetHashCode();
-			}
-
-			if (Name != null)
-			{
-				hash = hash * 59 + Name.GetHashCode();
-			}
-
-			if (Supporting != null)
-			{
-				hash = hash * 59 + Supporting.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

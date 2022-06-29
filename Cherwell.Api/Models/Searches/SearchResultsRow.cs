@@ -66,23 +66,14 @@ public partial class SearchResultsRow
 	[DataMember(Name = "searchResultsFieldValues", EmitDefaultValue = false)]
 	public List<FieldTemplateItem> SearchResultsFieldValues { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class SearchesSearchResultsRow {\n");
-		sb.Append("  BusObId: ").Append(BusObId).Append('\n');
-		sb.Append("  BusObRecId: ").Append(BusObRecId).Append('\n');
-		sb.Append("  Links: ").Append(Links).Append('\n');
-		sb.Append("  PublicId: ").Append(PublicId).Append('\n');
-		sb.Append("  RowColor: ").Append(RowColor).Append('\n');
-		sb.Append("  SearchResultsFieldValues: ").Append(SearchResultsFieldValues).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -95,37 +86,9 @@ public partial class SearchResultsRow
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (BusObId != null)
-			{
-				hash = hash * 59 + BusObId.GetHashCode();
-			}
 
-			if (BusObRecId != null)
-			{
-				hash = hash * 59 + BusObRecId.GetHashCode();
-			}
 
-			if (Links != null)
-			{
-				hash = hash * 59 + Links.GetHashCode();
-			}
 
-			if (PublicId != null)
-			{
-				hash = hash * 59 + PublicId.GetHashCode();
-			}
-
-			if (RowColor != null)
-			{
-				hash = hash * 59 + RowColor.GetHashCode();
-			}
-
-			if (SearchResultsFieldValues != null)
-			{
-				hash = hash * 59 + SearchResultsFieldValues.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

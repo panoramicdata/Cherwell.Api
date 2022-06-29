@@ -99,20 +99,11 @@ public partial class ColumnSchema
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
 	public string FieldId { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class SearchesColumnSchema {\n");
-		sb.Append("  Name: ").Append(Name).Append('\n');
-		sb.Append("  FieldId: ").Append(FieldId).Append('\n');
-		sb.Append("  Type: ").Append(Type).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -125,21 +116,6 @@ public partial class ColumnSchema
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (Name != null)
-			{
-				hash = hash * 59 + Name.GetHashCode();
-			}
-
-			if (FieldId != null)
-			{
-				hash = hash * 59 + FieldId.GetHashCode();
-			}
-
-			if (Type != null)
-			{
-				hash = hash * 59 + Type.GetHashCode();
-			}
-
 			return hash;
 		}
 	}

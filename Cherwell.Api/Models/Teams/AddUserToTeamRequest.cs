@@ -45,20 +45,11 @@ public partial class AddUserToTeamRequest
 	[DataMember(Name = "userRecordId", EmitDefaultValue = false)]
 	public string UserRecordId { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class TeamsAddUserToTeamRequest {\n");
-		sb.Append("  TeamId: ").Append(TeamId).Append('\n');
-		sb.Append("  UserIsTeamManager: ").Append(UserIsTeamManager).Append('\n');
-		sb.Append("  UserRecordId: ").Append(UserRecordId).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -71,21 +62,6 @@ public partial class AddUserToTeamRequest
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (TeamId != null)
-			{
-				hash = hash * 59 + TeamId.GetHashCode();
-			}
-
-			if (UserIsTeamManager != null)
-			{
-				hash = hash * 59 + UserIsTeamManager.GetHashCode();
-			}
-
-			if (UserRecordId != null)
-			{
-				hash = hash * 59 + UserRecordId.GetHashCode();
-			}
-
 			return hash;
 		}
 	}

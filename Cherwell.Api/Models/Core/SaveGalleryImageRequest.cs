@@ -109,25 +109,16 @@ public partial class SaveGalleryImageRequest
 	[DataMember(Name = "standInKey", EmitDefaultValue = false)]
 	public string StandInKey { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class CoreSaveGalleryImageRequest {\n");
-		sb.Append("  Base64EncodedImageData: ").Append(Base64EncodedImageData).Append('\n');
-		sb.Append("  Description: ").Append(Description).Append('\n');
-		sb.Append("  Folder: ").Append(Folder).Append('\n');
-		sb.Append("  ImageType: ").Append(ImageType).Append('\n');
-		sb.Append("  Name: ").Append(Name).Append('\n');
-		sb.Append("  Scope: ").Append(Scope).Append('\n');
-		sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append('\n');
-		sb.Append("  StandInKey: ").Append(StandInKey).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -140,47 +131,10 @@ public partial class SaveGalleryImageRequest
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (Base64EncodedImageData != null)
-			{
-				hash = hash * 59 + Base64EncodedImageData.GetHashCode();
-			}
 
-			if (Description != null)
-			{
-				hash = hash * 59 + Description.GetHashCode();
-			}
 
-			if (Folder != null)
-			{
-				hash = hash * 59 + Folder.GetHashCode();
-			}
 
-			if (ImageType != null)
-			{
-				hash = hash * 59 + ImageType.GetHashCode();
-			}
 
-			if (Name != null)
-			{
-				hash = hash * 59 + Name.GetHashCode();
-			}
-
-			if (Scope != null)
-			{
-				hash = hash * 59 + Scope.GetHashCode();
-			}
-
-			if (ScopeOwner != null)
-			{
-				hash = hash * 59 + ScopeOwner.GetHashCode();
-			}
-
-			if (StandInKey != null)
-			{
-				hash = hash * 59 + StandInKey.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

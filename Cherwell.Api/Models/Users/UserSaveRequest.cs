@@ -168,35 +168,26 @@ public partial class UserSaveRequest : Response
 	[DataMember(Name = "windowsUserId", EmitDefaultValue = false)]
 	public string WindowsUserId { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class UserSaveRequest {\n");
-		sb.Append("  AccountLocked: ").Append(AccountLocked).Append('\n');
-		sb.Append("  BusObId: ").Append(BusObId).Append('\n');
-		sb.Append("  BusObPublicId: ").Append(BusObPublicId).Append('\n');
-		sb.Append("  BusObRecId: ").Append(BusObRecId).Append('\n');
-		sb.Append("  DisplayName: ").Append(DisplayName).Append('\n');
-		sb.Append("  Error: ").Append(Error).Append('\n');
-		sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
-		sb.Append("  HasError: ").Append(HasError).Append('\n');
-		sb.Append("  LdapRequired: ").Append(LdapRequired).Append('\n');
-		sb.Append("  LoginId: ").Append(LoginId).Append('\n');
-		sb.Append("  NextPasswordResetDate: ").Append(NextPasswordResetDate).Append('\n');
-		sb.Append("  Password: ").Append(Password).Append('\n');
-		sb.Append("  PasswordNeverExpires: ").Append(PasswordNeverExpires).Append('\n');
-		sb.Append("  SecurityGroupId: ").Append(SecurityGroupId).Append('\n');
-		sb.Append("  UserCannotChangePassword: ").Append(UserCannotChangePassword).Append('\n');
-		sb.Append("  UserInfoFields: ").Append(UserInfoFields).Append('\n');
-		sb.Append("  UserMustChangePasswordAtNextLogin: ").Append(UserMustChangePasswordAtNextLogin).Append('\n');
-		sb.Append("  WindowsUserId: ").Append(WindowsUserId).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -209,97 +200,15 @@ public partial class UserSaveRequest : Response
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (AccountLocked != null)
-			{
-				hash = hash * 59 + AccountLocked.GetHashCode();
-			}
 
-			if (BusObId != null)
-			{
-				hash = hash * 59 + BusObId.GetHashCode();
-			}
 
-			if (BusObPublicId != null)
-			{
-				hash = hash * 59 + BusObPublicId.GetHashCode();
-			}
 
-			if (BusObRecId != null)
-			{
-				hash = hash * 59 + BusObRecId.GetHashCode();
-			}
 
-			if (DisplayName != null)
-			{
-				hash = hash * 59 + DisplayName.GetHashCode();
-			}
 
-			if (Error != null)
-			{
-				hash = hash * 59 + Error.GetHashCode();
-			}
 
-			if (ErrorCode != null)
-			{
-				hash = hash * 59 + ErrorCode.GetHashCode();
-			}
 
-			if (HasError != null)
-			{
-				hash = hash * 59 + HasError.GetHashCode();
-			}
 
-			if (LdapRequired != null)
-			{
-				hash = hash * 59 + LdapRequired.GetHashCode();
-			}
 
-			if (LoginId != null)
-			{
-				hash = hash * 59 + LoginId.GetHashCode();
-			}
-
-			if (NextPasswordResetDate != null)
-			{
-				hash = hash * 59 + NextPasswordResetDate.GetHashCode();
-			}
-
-			if (Password != null)
-			{
-				hash = hash * 59 + Password.GetHashCode();
-			}
-
-			if (PasswordNeverExpires != null)
-			{
-				hash = hash * 59 + PasswordNeverExpires.GetHashCode();
-			}
-
-			if (SecurityGroupId != null)
-			{
-				hash = hash * 59 + SecurityGroupId.GetHashCode();
-			}
-
-			if (UserCannotChangePassword != null)
-			{
-				hash = hash * 59 + UserCannotChangePassword.GetHashCode();
-			}
-
-			if (UserInfoFields != null)
-			{
-				hash = hash * 59 + UserInfoFields.GetHashCode();
-			}
-
-			if (UserMustChangePasswordAtNextLogin != null)
-			{
-				hash = hash * 59 + UserMustChangePasswordAtNextLogin.GetHashCode();
-			}
-
-			if (WindowsUserId != null)
-			{
-				hash = hash * 59 + WindowsUserId.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

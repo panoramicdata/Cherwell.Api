@@ -42,20 +42,11 @@ public partial class SimplePromptValue
 	[DataMember(Name = "value", EmitDefaultValue = false)]
 	public string Value { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class CoreSimplePromptValue {\n");
-		sb.Append("  PromptDefId: ").Append(PromptDefId).Append('\n');
-		sb.Append("  PromptName: ").Append(PromptName).Append('\n');
-		sb.Append("  Value: ").Append(Value).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -68,21 +59,6 @@ public partial class SimplePromptValue
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (PromptDefId != null)
-			{
-				hash = hash * 59 + PromptDefId.GetHashCode();
-			}
-
-			if (PromptName != null)
-			{
-				hash = hash * 59 + PromptName.GetHashCode();
-			}
-
-			if (Value != null)
-			{
-				hash = hash * 59 + Value.GetHashCode();
-			}
-
 			return hash;
 		}
 	}

@@ -239,39 +239,30 @@ public partial class ExportSearchResultsRequest
 	[DataMember(Name = "promptValues", EmitDefaultValue = false)]
 	public List<PromptValue> PromptValues { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class SearchesExportSearchResultsRequest {\n");
-		sb.Append("  CustomSeparator: ").Append(CustomSeparator).Append('\n');
-		sb.Append("  ExportFormat: ").Append(ExportFormat).Append('\n');
-		sb.Append("  ExportTitle: ").Append(ExportTitle).Append('\n');
-		sb.Append("  Association: ").Append(Association).Append('\n');
-		sb.Append("  AssociationName: ").Append(AssociationName).Append('\n');
-		sb.Append("  BusObId: ").Append(BusObId).Append('\n');
-		sb.Append("  CustomGridDefId: ").Append(CustomGridDefId).Append('\n');
-		sb.Append("  DateTimeFormatting: ").Append(DateTimeFormatting).Append('\n');
-		sb.Append("  FieldId: ").Append(FieldId).Append('\n');
-		sb.Append("  Fields: ").Append(Fields).Append('\n');
-		sb.Append("  Filters: ").Append(Filters).Append('\n');
-		sb.Append("  IncludeAllFields: ").Append(IncludeAllFields).Append('\n');
-		sb.Append("  IncludeSchema: ").Append(IncludeSchema).Append('\n');
-		sb.Append("  PageNumber: ").Append(PageNumber).Append('\n');
-		sb.Append("  PageSize: ").Append(PageSize).Append('\n');
-		sb.Append("  Scope: ").Append(Scope).Append('\n');
-		sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append('\n');
-		sb.Append("  SearchId: ").Append(SearchId).Append('\n');
-		sb.Append("  SearchName: ").Append(SearchName).Append('\n');
-		sb.Append("  SearchText: ").Append(SearchText).Append('\n');
-		sb.Append("  Sorting: ").Append(Sorting).Append('\n');
-		sb.Append("  PromptValues: ").Append(PromptValues).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -284,117 +275,17 @@ public partial class ExportSearchResultsRequest
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (CustomSeparator != null)
-			{
-				hash = hash * 59 + CustomSeparator.GetHashCode();
-			}
 
-			if (ExportFormat != null)
-			{
-				hash = hash * 59 + ExportFormat.GetHashCode();
-			}
 
-			if (ExportTitle != null)
-			{
-				hash = hash * 59 + ExportTitle.GetHashCode();
-			}
 
-			if (Association != null)
-			{
-				hash = hash * 59 + Association.GetHashCode();
-			}
 
-			if (AssociationName != null)
-			{
-				hash = hash * 59 + AssociationName.GetHashCode();
-			}
 
-			if (BusObId != null)
-			{
-				hash = hash * 59 + BusObId.GetHashCode();
-			}
 
-			if (CustomGridDefId != null)
-			{
-				hash = hash * 59 + CustomGridDefId.GetHashCode();
-			}
 
-			if (DateTimeFormatting != null)
-			{
-				hash = hash * 59 + DateTimeFormatting.GetHashCode();
-			}
 
-			if (FieldId != null)
-			{
-				hash = hash * 59 + FieldId.GetHashCode();
-			}
 
-			if (Fields != null)
-			{
-				hash = hash * 59 + Fields.GetHashCode();
-			}
 
-			if (Filters != null)
-			{
-				hash = hash * 59 + Filters.GetHashCode();
-			}
 
-			if (IncludeAllFields != null)
-			{
-				hash = hash * 59 + IncludeAllFields.GetHashCode();
-			}
-
-			if (IncludeSchema != null)
-			{
-				hash = hash * 59 + IncludeSchema.GetHashCode();
-			}
-
-			if (PageNumber != null)
-			{
-				hash = hash * 59 + PageNumber.GetHashCode();
-			}
-
-			if (PageSize != null)
-			{
-				hash = hash * 59 + PageSize.GetHashCode();
-			}
-
-			if (Scope != null)
-			{
-				hash = hash * 59 + Scope.GetHashCode();
-			}
-
-			if (ScopeOwner != null)
-			{
-				hash = hash * 59 + ScopeOwner.GetHashCode();
-			}
-
-			if (SearchId != null)
-			{
-				hash = hash * 59 + SearchId.GetHashCode();
-			}
-
-			if (SearchName != null)
-			{
-				hash = hash * 59 + SearchName.GetHashCode();
-			}
-
-			if (SearchText != null)
-			{
-				hash = hash * 59 + SearchText.GetHashCode();
-			}
-
-			if (Sorting != null)
-			{
-				hash = hash * 59 + Sorting.GetHashCode();
-			}
-
-			if (PromptValues != null)
-			{
-				hash = hash * 59 + PromptValues.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

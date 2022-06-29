@@ -42,20 +42,11 @@ public partial class GetStagesResponseStages
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class LifecycleGetStagesResponseStages {\n");
-		sb.Append("  Id: ").Append(Id).Append('\n');
-		sb.Append("  IsFinal: ").Append(IsFinal).Append('\n');
-		sb.Append("  Name: ").Append(Name).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -68,21 +59,6 @@ public partial class GetStagesResponseStages
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (Id != null)
-			{
-				hash = hash * 59 + Id.GetHashCode();
-			}
-
-			if (IsFinal != null)
-			{
-				hash = hash * 59 + IsFinal.GetHashCode();
-			}
-
-			if (Name != null)
-			{
-				hash = hash * 59 + Name.GetHashCode();
-			}
-
 			return hash;
 		}
 	}

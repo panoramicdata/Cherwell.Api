@@ -82,25 +82,16 @@ public partial class StoredSearchRequest
 	[DataMember(Name = "searchName", EmitDefaultValue = false)]
 	public string SearchName { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class SearchesStoredSearchRequest {\n");
-		sb.Append("  AssociationId: ").Append(AssociationId).Append('\n');
-		sb.Append("  AssociationName: ").Append(AssociationName).Append('\n');
-		sb.Append("  GridId: ").Append(GridId).Append('\n');
-		sb.Append("  IncludeSchema: ").Append(IncludeSchema).Append('\n');
-		sb.Append("  Scope: ").Append(Scope).Append('\n');
-		sb.Append("  ScopeOwnerId: ").Append(ScopeOwnerId).Append('\n');
-		sb.Append("  SearchId: ").Append(SearchId).Append('\n');
-		sb.Append("  SearchName: ").Append(SearchName).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -113,47 +104,10 @@ public partial class StoredSearchRequest
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (AssociationId != null)
-			{
-				hash = hash * 59 + AssociationId.GetHashCode();
-			}
 
-			if (AssociationName != null)
-			{
-				hash = hash * 59 + AssociationName.GetHashCode();
-			}
 
-			if (GridId != null)
-			{
-				hash = hash * 59 + GridId.GetHashCode();
-			}
 
-			if (IncludeSchema != null)
-			{
-				hash = hash * 59 + IncludeSchema.GetHashCode();
-			}
 
-			if (Scope != null)
-			{
-				hash = hash * 59 + Scope.GetHashCode();
-			}
-
-			if (ScopeOwnerId != null)
-			{
-				hash = hash * 59 + ScopeOwnerId.GetHashCode();
-			}
-
-			if (SearchId != null)
-			{
-				hash = hash * 59 + SearchId.GetHashCode();
-			}
-
-			if (SearchName != null)
-			{
-				hash = hash * 59 + SearchName.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

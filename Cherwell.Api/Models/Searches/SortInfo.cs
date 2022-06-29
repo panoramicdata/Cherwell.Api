@@ -34,19 +34,10 @@ public partial class SortInfo
 	[DataMember(Name = "sortDirection", EmitDefaultValue = false)]
 	public int? SortDirection { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class SearchesSortInfo {\n");
-		sb.Append("  FieldId: ").Append(FieldId).Append('\n');
-		sb.Append("  SortDirection: ").Append(SortDirection).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -59,17 +50,7 @@ public partial class SortInfo
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (FieldId != null)
-			{
-				hash = hash * 59 + FieldId.GetHashCode();
-			}
 
-			if (SortDirection != null)
-			{
-				hash = hash * 59 + SortDirection.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

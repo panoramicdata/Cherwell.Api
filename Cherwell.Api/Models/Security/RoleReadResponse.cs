@@ -38,21 +38,12 @@ public partial class RoleReadResponse : Response
 	[DataMember(Name = "roles", EmitDefaultValue = false)]
 	public List<Role> Roles { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class SecurityRoleReadResponse {\n");
-		sb.Append("  Error: ").Append(Error).Append('\n');
-		sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
-		sb.Append("  HasError: ").Append(HasError).Append('\n');
-		sb.Append("  Roles: ").Append(Roles).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -65,27 +56,8 @@ public partial class RoleReadResponse : Response
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (Error != null)
-			{
-				hash = hash * 59 + Error.GetHashCode();
-			}
 
-			if (ErrorCode != null)
-			{
-				hash = hash * 59 + ErrorCode.GetHashCode();
-			}
 
-			if (HasError != null)
-			{
-				hash = hash * 59 + HasError.GetHashCode();
-			}
-
-			if (Roles != null)
-			{
-				hash = hash * 59 + Roles.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

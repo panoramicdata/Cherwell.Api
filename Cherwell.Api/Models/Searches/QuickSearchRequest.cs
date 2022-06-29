@@ -34,19 +34,10 @@ public partial class QuickSearchRequest
 	[DataMember(Name = "searchText", EmitDefaultValue = false)]
 	public string SearchText { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class SearchesQuickSearchRequest {\n");
-		sb.Append("  BusObIds: ").Append(BusObIds).Append('\n');
-		sb.Append("  SearchText: ").Append(SearchText).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -59,17 +50,7 @@ public partial class QuickSearchRequest
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (BusObIds != null)
-			{
-				hash = hash * 59 + BusObIds.GetHashCode();
-			}
 
-			if (SearchText != null)
-			{
-				hash = hash * 59 + SearchText.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

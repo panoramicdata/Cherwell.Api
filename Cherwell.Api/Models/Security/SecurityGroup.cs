@@ -42,20 +42,11 @@ public partial class SecurityGroup
 	[DataMember(Name = "groupName", EmitDefaultValue = false)]
 	public string GroupName { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class SecuritySecurityGroup {\n");
-		sb.Append("  Description: ").Append(Description).Append('\n');
-		sb.Append("  GroupId: ").Append(GroupId).Append('\n');
-		sb.Append("  GroupName: ").Append(GroupName).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -68,21 +59,6 @@ public partial class SecurityGroup
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (Description != null)
-			{
-				hash = hash * 59 + Description.GetHashCode();
-			}
-
-			if (GroupId != null)
-			{
-				hash = hash * 59 + GroupId.GetHashCode();
-			}
-
-			if (GroupName != null)
-			{
-				hash = hash * 59 + GroupName.GetHashCode();
-			}
-
 			return hash;
 		}
 	}

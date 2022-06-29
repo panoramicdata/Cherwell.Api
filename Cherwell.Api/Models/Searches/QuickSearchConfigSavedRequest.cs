@@ -42,20 +42,11 @@ public partial class QuickSearchConfigSavedRequest
 	[DataMember(Name = "isGeneral", EmitDefaultValue = false)]
 	public bool? IsGeneral { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class SearchesQuickSearchConfigSavedRequest {\n");
-		sb.Append("  StandIn: ").Append(StandIn).Append('\n');
-		sb.Append("  BusObIds: ").Append(BusObIds).Append('\n');
-		sb.Append("  IsGeneral: ").Append(IsGeneral).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -68,21 +59,6 @@ public partial class QuickSearchConfigSavedRequest
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (StandIn != null)
-			{
-				hash = hash * 59 + StandIn.GetHashCode();
-			}
-
-			if (BusObIds != null)
-			{
-				hash = hash * 59 + BusObIds.GetHashCode();
-			}
-
-			if (IsGeneral != null)
-			{
-				hash = hash * 59 + IsGeneral.GetHashCode();
-			}
-
 			return hash;
 		}
 	}

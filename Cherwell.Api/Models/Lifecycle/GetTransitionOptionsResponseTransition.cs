@@ -50,21 +50,12 @@ public partial class GetTransitionOptionsResponseTransition
 	[DataMember(Name = "criteria", EmitDefaultValue = false)]
 	public List<string> Criteria { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class LifecycleGetTransitionOptionsResponseTransition {\n");
-		sb.Append("  Name: ").Append(Name).Append('\n');
-		sb.Append("  Id: ").Append(Id).Append('\n');
-		sb.Append("  IsAvailable: ").Append(IsAvailable).Append('\n');
-		sb.Append("  Criteria: ").Append(Criteria).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -77,27 +68,8 @@ public partial class GetTransitionOptionsResponseTransition
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (Name != null)
-			{
-				hash = hash * 59 + Name.GetHashCode();
-			}
 
-			if (Id != null)
-			{
-				hash = hash * 59 + Id.GetHashCode();
-			}
 
-			if (IsAvailable != null)
-			{
-				hash = hash * 59 + IsAvailable.GetHashCode();
-			}
-
-			if (Criteria != null)
-			{
-				hash = hash * 59 + Criteria.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

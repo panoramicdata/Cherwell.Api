@@ -48,50 +48,7 @@ public partial class ApprovalReadResponse : Response
 	[DataMember(Name = "links", EmitDefaultValue = false)]
 	public List<Link> Links { get; set; }
 
-	/// <summary>
-	/// Gets the hash code
-	/// </summary>
-	/// <returns>Hash code</returns>
-	public override int GetHashCode()
-	{
-		// credit: http://stackoverflow.com/a/263416/677735
-		unchecked // Overflow is fine, just wrap
-		{
-			int hash = 41;
-			// Suitable nullity checks etc, of course :)
-			if (Properties != null)
-			{
-				hash = hash * 59 + Properties.GetHashCode();
-			}
 
-			if (Links != null)
-			{
-				hash = hash * 59 + Links.GetHashCode();
-			}
-
-			if (ErrorCode != null)
-			{
-				hash = hash * 59 + ErrorCode.GetHashCode();
-			}
-
-			if (ErrorMessage != null)
-			{
-				hash = hash * 59 + ErrorMessage.GetHashCode();
-			}
-
-			if (HasError != null)
-			{
-				hash = hash * 59 + HasError.GetHashCode();
-			}
-
-			if (HttpStatusCode != null)
-			{
-				hash = hash * 59 + HttpStatusCode.GetHashCode();
-			}
-
-			return hash;
-		}
-	}
 
 	
 }

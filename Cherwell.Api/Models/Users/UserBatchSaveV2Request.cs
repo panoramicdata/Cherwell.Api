@@ -34,45 +34,11 @@ public partial class UserBatchSaveV2Request
 	[DataMember(Name = "stopOnError", EmitDefaultValue = false)]
 	public bool? StopOnError { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class UserBatchSaveV2Request {\n");
-		sb.Append("  SaveRequests: ").Append(SaveRequests).Append('\n');
-		sb.Append("  StopOnError: ").Append(StopOnError).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
 
-	/// <summary>
-	/// Gets the hash code
-	/// </summary>
-	/// <returns>Hash code</returns>
-	public override int GetHashCode()
-	{
-		// credit: http://stackoverflow.com/a/263416/677735
-		unchecked // Overflow is fine, just wrap
-		{
-			int hash = 41;
-			// Suitable nullity checks etc, of course :)
-			if (SaveRequests != null)
-			{
-				hash = hash * 59 + SaveRequests.GetHashCode();
-			}
 
-			if (StopOnError != null)
-			{
-				hash = hash * 59 + StopOnError.GetHashCode();
-			}
 
-			return hash;
-		}
-	}
 
-	
+
+
 }
 

@@ -72,23 +72,14 @@ public partial class SectionField
 	[DataMember(Name = "value", EmitDefaultValue = false)]
 	public string Value { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class FormsSectionField {\n");
-		sb.Append("  Attributes: ").Append(Attributes).Append('\n');
-		sb.Append("  FieldId: ").Append(FieldId).Append('\n');
-		sb.Append("  FieldType: ").Append(FieldType).Append('\n');
-		sb.Append("  Label: ").Append(Label).Append('\n');
-		sb.Append("  Multiline: ").Append(Multiline).Append('\n');
-		sb.Append("  Value: ").Append(Value).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -101,37 +92,9 @@ public partial class SectionField
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (Attributes != null)
-			{
-				hash = hash * 59 + Attributes.GetHashCode();
-			}
 
-			if (FieldId != null)
-			{
-				hash = hash * 59 + FieldId.GetHashCode();
-			}
 
-			if (FieldType != null)
-			{
-				hash = hash * 59 + FieldType.GetHashCode();
-			}
 
-			if (Label != null)
-			{
-				hash = hash * 59 + Label.GetHashCode();
-			}
-
-			if (Multiline != null)
-			{
-				hash = hash * 59 + Multiline.GetHashCode();
-			}
-
-			if (Value != null)
-			{
-				hash = hash * 59 + Value.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

@@ -107,29 +107,20 @@ public partial class RelatedBusinessObjectResponse : Response
 	[DataMember(Name = "totalRecords", EmitDefaultValue = false)]
 	public int? TotalRecords { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class SearchesRelatedBusinessObjectResponse {\n");
-		sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
-		sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append('\n');
-		sb.Append("  HasError: ").Append(HasError).Append('\n');
-		sb.Append("  Links: ").Append(Links).Append('\n');
-		sb.Append("  PageNumber: ").Append(PageNumber).Append('\n');
-		sb.Append("  PageSize: ").Append(PageSize).Append('\n');
-		sb.Append("  ParentBusObId: ").Append(ParentBusObId).Append('\n');
-		sb.Append("  ParentBusObPublicId: ").Append(ParentBusObPublicId).Append('\n');
-		sb.Append("  ParentBusObRecId: ").Append(ParentBusObRecId).Append('\n');
-		sb.Append("  RelatedBusinessObjects: ").Append(RelatedBusinessObjects).Append('\n');
-		sb.Append("  RelationshipId: ").Append(RelationshipId).Append('\n');
-		sb.Append("  TotalRecords: ").Append(TotalRecords).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -142,67 +133,12 @@ public partial class RelatedBusinessObjectResponse : Response
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (ErrorCode != null)
-			{
-				hash = hash * 59 + ErrorCode.GetHashCode();
-			}
 
-			if (ErrorMessage != null)
-			{
-				hash = hash * 59 + ErrorMessage.GetHashCode();
-			}
 
-			if (HasError != null)
-			{
-				hash = hash * 59 + HasError.GetHashCode();
-			}
 
-			if (Links != null)
-			{
-				hash = hash * 59 + Links.GetHashCode();
-			}
 
-			if (PageNumber != null)
-			{
-				hash = hash * 59 + PageNumber.GetHashCode();
-			}
 
-			if (PageSize != null)
-			{
-				hash = hash * 59 + PageSize.GetHashCode();
-			}
 
-			if (ParentBusObId != null)
-			{
-				hash = hash * 59 + ParentBusObId.GetHashCode();
-			}
-
-			if (ParentBusObPublicId != null)
-			{
-				hash = hash * 59 + ParentBusObPublicId.GetHashCode();
-			}
-
-			if (ParentBusObRecId != null)
-			{
-				hash = hash * 59 + ParentBusObRecId.GetHashCode();
-			}
-
-			if (RelatedBusinessObjects != null)
-			{
-				hash = hash * 59 + RelatedBusinessObjects.GetHashCode();
-			}
-
-			if (RelationshipId != null)
-			{
-				hash = hash * 59 + RelationshipId.GetHashCode();
-			}
-
-			if (TotalRecords != null)
-			{
-				hash = hash * 59 + TotalRecords.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

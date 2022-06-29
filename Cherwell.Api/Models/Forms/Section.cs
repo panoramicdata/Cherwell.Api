@@ -66,23 +66,14 @@ public partial class Section
 	[DataMember(Name = "targetBusObRecId", EmitDefaultValue = false)]
 	public string TargetBusObRecId { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class FormsSection {\n");
-		sb.Append("  SectionFields: ").Append(SectionFields).Append('\n');
-		sb.Append("  GalleryImage: ").Append(GalleryImage).Append('\n');
-		sb.Append("  Title: ").Append(Title).Append('\n');
-		sb.Append("  RelationshipId: ").Append(RelationshipId).Append('\n');
-		sb.Append("  TargetBusObId: ").Append(TargetBusObId).Append('\n');
-		sb.Append("  TargetBusObRecId: ").Append(TargetBusObRecId).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -95,37 +86,9 @@ public partial class Section
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (SectionFields != null)
-			{
-				hash = hash * 59 + SectionFields.GetHashCode();
-			}
 
-			if (GalleryImage != null)
-			{
-				hash = hash * 59 + GalleryImage.GetHashCode();
-			}
 
-			if (Title != null)
-			{
-				hash = hash * 59 + Title.GetHashCode();
-			}
 
-			if (RelationshipId != null)
-			{
-				hash = hash * 59 + RelationshipId.GetHashCode();
-			}
-
-			if (TargetBusObId != null)
-			{
-				hash = hash * 59 + TargetBusObId.GetHashCode();
-			}
-
-			if (TargetBusObRecId != null)
-			{
-				hash = hash * 59 + TargetBusObRecId.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

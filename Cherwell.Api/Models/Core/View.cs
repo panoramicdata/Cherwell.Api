@@ -42,20 +42,11 @@ public partial class View
 	[DataMember(Name = "image", EmitDefaultValue = false)]
 	public string Image { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class CoreView {\n");
-		sb.Append("  Name: ").Append(Name).Append('\n');
-		sb.Append("  ViewId: ").Append(ViewId).Append('\n');
-		sb.Append("  Image: ").Append(Image).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -68,21 +59,6 @@ public partial class View
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (Name != null)
-			{
-				hash = hash * 59 + Name.GetHashCode();
-			}
-
-			if (ViewId != null)
-			{
-				hash = hash * 59 + ViewId.GetHashCode();
-			}
-
-			if (Image != null)
-			{
-				hash = hash * 59 + Image.GetHashCode();
-			}
-
 			return hash;
 		}
 	}

@@ -145,25 +145,16 @@ public partial class SaveStoredValueRequest
 	[DataMember(Name = "value", EmitDefaultValue = false)]
 	public string Value { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class CoreSaveStoredValueRequest {\n");
-		sb.Append("  Description: ").Append(Description).Append('\n');
-		sb.Append("  Folder: ").Append(Folder).Append('\n');
-		sb.Append("  Name: ").Append(Name).Append('\n');
-		sb.Append("  Scope: ").Append(Scope).Append('\n');
-		sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append('\n');
-		sb.Append("  StandInKey: ").Append(StandInKey).Append('\n');
-		sb.Append("  StoredValueType: ").Append(StoredValueType).Append('\n');
-		sb.Append("  Value: ").Append(Value).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -176,47 +167,10 @@ public partial class SaveStoredValueRequest
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (Description != null)
-			{
-				hash = hash * 59 + Description.GetHashCode();
-			}
 
-			if (Folder != null)
-			{
-				hash = hash * 59 + Folder.GetHashCode();
-			}
 
-			if (Name != null)
-			{
-				hash = hash * 59 + Name.GetHashCode();
-			}
 
-			if (Scope != null)
-			{
-				hash = hash * 59 + Scope.GetHashCode();
-			}
 
-			if (ScopeOwner != null)
-			{
-				hash = hash * 59 + ScopeOwner.GetHashCode();
-			}
-
-			if (StandInKey != null)
-			{
-				hash = hash * 59 + StandInKey.GetHashCode();
-			}
-
-			if (StoredValueType != null)
-			{
-				hash = hash * 59 + StoredValueType.GetHashCode();
-			}
-
-			if (Value != null)
-			{
-				hash = hash * 59 + Value.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

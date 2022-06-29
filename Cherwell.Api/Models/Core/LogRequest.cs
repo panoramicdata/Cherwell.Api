@@ -87,20 +87,11 @@ public partial class LogRequest
 	[DataMember(Name = "message", EmitDefaultValue = false)]
 	public string Message { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class CoreLogRequest {\n");
-		sb.Append("  keyValueproperties: ").Append(keyValueproperties).Append('\n');
-		sb.Append("  Level: ").Append(Level).Append('\n');
-		sb.Append("  Message: ").Append(Message).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -113,21 +104,6 @@ public partial class LogRequest
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (keyValueproperties != null)
-			{
-				hash = hash * 59 + keyValueproperties.GetHashCode();
-			}
-
-			if (Level != null)
-			{
-				hash = hash * 59 + Level.GetHashCode();
-			}
-
-			if (Message != null)
-			{
-				hash = hash * 59 + Message.GetHashCode();
-			}
-
 			return hash;
 		}
 	}

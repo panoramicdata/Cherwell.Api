@@ -42,20 +42,11 @@ public partial class GridDefinition
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class BusinessObjectGridDefinition {\n");
-		sb.Append("  GridId: ").Append(GridId).Append('\n');
-		sb.Append("  Name: ").Append(Name).Append('\n');
-		sb.Append("  DisplayName: ").Append(DisplayName).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -68,21 +59,6 @@ public partial class GridDefinition
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (GridId != null)
-			{
-				hash = hash * 59 + GridId.GetHashCode();
-			}
-
-			if (Name != null)
-			{
-				hash = hash * 59 + Name.GetHashCode();
-			}
-
-			if (DisplayName != null)
-			{
-				hash = hash * 59 + DisplayName.GetHashCode();
-			}
-
 			return hash;
 		}
 	}

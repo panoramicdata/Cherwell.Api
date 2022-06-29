@@ -130,31 +130,22 @@ public partial class FieldPermissiond
 	[DataMember(Name = "view", EmitDefaultValue = false)]
 	public bool? View { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class PermissionSecurityField {\n");
-		sb.Append("  DepartmentMemberEdit: ").Append(DepartmentMemberEdit).Append('\n');
-		sb.Append("  DepartmentMemberView: ").Append(DepartmentMemberView).Append('\n');
-		sb.Append("  Edit: ").Append(Edit).Append('\n');
-		sb.Append("  FieldId: ").Append(FieldId).Append('\n');
-		sb.Append("  FieldName: ").Append(FieldName).Append('\n');
-		sb.Append("  ManagerOfOwnerEdit: ").Append(ManagerOfOwnerEdit).Append('\n');
-		sb.Append("  ManagerOfOwnerView: ").Append(ManagerOfOwnerView).Append('\n');
-		sb.Append("  OwnerEdit: ").Append(OwnerEdit).Append('\n');
-		sb.Append("  OwnerView: ").Append(OwnerView).Append('\n');
-		sb.Append("  TeamEdit: ").Append(TeamEdit).Append('\n');
-		sb.Append("  TeamManagerOfOwnerEdit: ").Append(TeamManagerOfOwnerEdit).Append('\n');
-		sb.Append("  TeamManagerOfOwnerView: ").Append(TeamManagerOfOwnerView).Append('\n');
-		sb.Append("  TeamView: ").Append(TeamView).Append('\n');
-		sb.Append("  View: ").Append(View).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -167,77 +158,13 @@ public partial class FieldPermissiond
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (DepartmentMemberEdit != null)
-			{
-				hash = hash * 59 + DepartmentMemberEdit.GetHashCode();
-			}
 
-			if (DepartmentMemberView != null)
-			{
-				hash = hash * 59 + DepartmentMemberView.GetHashCode();
-			}
 
-			if (Edit != null)
-			{
-				hash = hash * 59 + Edit.GetHashCode();
-			}
 
-			if (FieldId != null)
-			{
-				hash = hash * 59 + FieldId.GetHashCode();
-			}
 
-			if (FieldName != null)
-			{
-				hash = hash * 59 + FieldName.GetHashCode();
-			}
 
-			if (ManagerOfOwnerEdit != null)
-			{
-				hash = hash * 59 + ManagerOfOwnerEdit.GetHashCode();
-			}
 
-			if (ManagerOfOwnerView != null)
-			{
-				hash = hash * 59 + ManagerOfOwnerView.GetHashCode();
-			}
 
-			if (OwnerEdit != null)
-			{
-				hash = hash * 59 + OwnerEdit.GetHashCode();
-			}
-
-			if (OwnerView != null)
-			{
-				hash = hash * 59 + OwnerView.GetHashCode();
-			}
-
-			if (TeamEdit != null)
-			{
-				hash = hash * 59 + TeamEdit.GetHashCode();
-			}
-
-			if (TeamManagerOfOwnerEdit != null)
-			{
-				hash = hash * 59 + TeamManagerOfOwnerEdit.GetHashCode();
-			}
-
-			if (TeamManagerOfOwnerView != null)
-			{
-				hash = hash * 59 + TeamManagerOfOwnerView.GetHashCode();
-			}
-
-			if (TeamView != null)
-			{
-				hash = hash * 59 + TeamView.GetHashCode();
-			}
-
-			if (View != null)
-			{
-				hash = hash * 59 + View.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

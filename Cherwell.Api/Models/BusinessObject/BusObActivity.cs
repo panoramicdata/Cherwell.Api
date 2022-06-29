@@ -114,29 +114,20 @@ public partial class BusObActivity
 	[DataMember(Name = "modifiedBy", EmitDefaultValue = false)]
 	public string ModifiedBy { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class BusinessObjectBusObActivity {\n");
-		sb.Append("  Id: ").Append(Id).Append('\n');
-		sb.Append("  ParentBusObDefId: ").Append(ParentBusObDefId).Append('\n');
-		sb.Append("  ParentBusObRecId: ").Append(ParentBusObRecId).Append('\n');
-		sb.Append("  HistoryBusObDefId: ").Append(HistoryBusObDefId).Append('\n');
-		sb.Append("  HistoryBusObRecId: ").Append(HistoryBusObRecId).Append('\n');
-		sb.Append("  Type: ").Append(Type).Append('\n');
-		sb.Append("  Title: ").Append(Title).Append('\n');
-		sb.Append("  Body: ").Append(Body).Append('\n');
-		sb.Append("  CreatedBy: ").Append(CreatedBy).Append('\n');
-		sb.Append("  Created: ").Append(Created).Append('\n');
-		sb.Append("  Modified: ").Append(Modified).Append('\n');
-		sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -149,67 +140,12 @@ public partial class BusObActivity
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (Id != null)
-			{
-				hash = hash * 59 + Id.GetHashCode();
-			}
 
-			if (ParentBusObDefId != null)
-			{
-				hash = hash * 59 + ParentBusObDefId.GetHashCode();
-			}
 
-			if (ParentBusObRecId != null)
-			{
-				hash = hash * 59 + ParentBusObRecId.GetHashCode();
-			}
 
-			if (HistoryBusObDefId != null)
-			{
-				hash = hash * 59 + HistoryBusObDefId.GetHashCode();
-			}
 
-			if (HistoryBusObRecId != null)
-			{
-				hash = hash * 59 + HistoryBusObRecId.GetHashCode();
-			}
 
-			if (Type != null)
-			{
-				hash = hash * 59 + Type.GetHashCode();
-			}
 
-			if (Title != null)
-			{
-				hash = hash * 59 + Title.GetHashCode();
-			}
-
-			if (Body != null)
-			{
-				hash = hash * 59 + Body.GetHashCode();
-			}
-
-			if (CreatedBy != null)
-			{
-				hash = hash * 59 + CreatedBy.GetHashCode();
-			}
-
-			if (Created != null)
-			{
-				hash = hash * 59 + Created.GetHashCode();
-			}
-
-			if (Modified != null)
-			{
-				hash = hash * 59 + Modified.GetHashCode();
-			}
-
-			if (ModifiedBy != null)
-			{
-				hash = hash * 59 + ModifiedBy.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

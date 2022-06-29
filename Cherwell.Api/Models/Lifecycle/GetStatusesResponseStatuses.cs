@@ -50,21 +50,12 @@ public partial class GetStatusesResponseStatuses
 	[DataMember(Name = "stageId", EmitDefaultValue = false)]
 	public string StageId { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class LifecycleGetStatusesResponseStatuses {\n");
-		sb.Append("  Id: ").Append(Id).Append('\n');
-		sb.Append("  IsInitial: ").Append(IsInitial).Append('\n');
-		sb.Append("  Name: ").Append(Name).Append('\n');
-		sb.Append("  StageId: ").Append(StageId).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -77,27 +68,8 @@ public partial class GetStatusesResponseStatuses
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (Id != null)
-			{
-				hash = hash * 59 + Id.GetHashCode();
-			}
 
-			if (IsInitial != null)
-			{
-				hash = hash * 59 + IsInitial.GetHashCode();
-			}
 
-			if (Name != null)
-			{
-				hash = hash * 59 + Name.GetHashCode();
-			}
-
-			if (StageId != null)
-			{
-				hash = hash * 59 + StageId.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

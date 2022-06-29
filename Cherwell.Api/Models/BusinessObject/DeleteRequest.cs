@@ -42,20 +42,11 @@ public partial class DeleteRequest
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class BusinessObjectDeleteRequest {\n");
-		sb.Append("  BusObId: ").Append(BusObId).Append('\n');
-		sb.Append("  BusObPublicId: ").Append(BusObPublicId).Append('\n');
-		sb.Append("  BusObRecId: ").Append(BusObRecId).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -68,21 +59,6 @@ public partial class DeleteRequest
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (BusObId != null)
-			{
-				hash = hash * 59 + BusObId.GetHashCode();
-			}
-
-			if (BusObPublicId != null)
-			{
-				hash = hash * 59 + BusObPublicId.GetHashCode();
-			}
-
-			if (BusObRecId != null)
-			{
-				hash = hash * 59 + BusObRecId.GetHashCode();
-			}
-
 			return hash;
 		}
 	}

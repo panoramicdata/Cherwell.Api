@@ -82,25 +82,16 @@ public partial class SearchItem
 	[DataMember(Name = "searchName", EmitDefaultValue = false)]
 	public string SearchName { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class SearchesSearchItem {\n");
-		sb.Append("  Association: ").Append(Association).Append('\n');
-		sb.Append("  Links: ").Append(Links).Append('\n');
-		sb.Append("  LocalizedScopeName: ").Append(LocalizedScopeName).Append('\n');
-		sb.Append("  ParentFolderId: ").Append(ParentFolderId).Append('\n');
-		sb.Append("  Scope: ").Append(Scope).Append('\n');
-		sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append('\n');
-		sb.Append("  SearchId: ").Append(SearchId).Append('\n');
-		sb.Append("  SearchName: ").Append(SearchName).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -113,47 +104,10 @@ public partial class SearchItem
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (Association != null)
-			{
-				hash = hash * 59 + Association.GetHashCode();
-			}
 
-			if (Links != null)
-			{
-				hash = hash * 59 + Links.GetHashCode();
-			}
 
-			if (LocalizedScopeName != null)
-			{
-				hash = hash * 59 + LocalizedScopeName.GetHashCode();
-			}
 
-			if (ParentFolderId != null)
-			{
-				hash = hash * 59 + ParentFolderId.GetHashCode();
-			}
 
-			if (Scope != null)
-			{
-				hash = hash * 59 + Scope.GetHashCode();
-			}
-
-			if (ScopeOwner != null)
-			{
-				hash = hash * 59 + ScopeOwner.GetHashCode();
-			}
-
-			if (SearchId != null)
-			{
-				hash = hash * 59 + SearchId.GetHashCode();
-			}
-
-			if (SearchName != null)
-			{
-				hash = hash * 59 + SearchName.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

@@ -90,25 +90,16 @@ public partial class TokenResponse : Response
 	[DataMember(Name = "username", EmitDefaultValue = false)]
 	public string Username { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class SecurityTokenResponse {\n");
-		sb.Append("  AccessToken: ").Append(AccessToken).Append('\n');
-		sb.Append("  AsclientId: ").Append(AsclientId).Append('\n');
-		sb.Append("  Expires: ").Append(Expires).Append('\n');
-		sb.Append("  ExpiresIn: ").Append(ExpiresIn).Append('\n');
-		sb.Append("  Issued: ").Append(Issued).Append('\n');
-		sb.Append("  RefreshToken: ").Append(RefreshToken).Append('\n');
-		sb.Append("  TokenType: ").Append(TokenType).Append('\n');
-		sb.Append("  Username: ").Append(Username).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -121,47 +112,10 @@ public partial class TokenResponse : Response
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (AccessToken != null)
-			{
-				hash = hash * 59 + AccessToken.GetHashCode();
-			}
 
-			if (AsclientId != null)
-			{
-				hash = hash * 59 + AsclientId.GetHashCode();
-			}
 
-			if (Expires != null)
-			{
-				hash = hash * 59 + Expires.GetHashCode();
-			}
 
-			if (ExpiresIn != null)
-			{
-				hash = hash * 59 + ExpiresIn.GetHashCode();
-			}
 
-			if (Issued != null)
-			{
-				hash = hash * 59 + Issued.GetHashCode();
-			}
-
-			if (RefreshToken != null)
-			{
-				hash = hash * 59 + RefreshToken.GetHashCode();
-			}
-
-			if (TokenType != null)
-			{
-				hash = hash * 59 + TokenType.GetHashCode();
-			}
-
-			if (Username != null)
-			{
-				hash = hash * 59 + Username.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

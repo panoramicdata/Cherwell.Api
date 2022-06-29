@@ -34,19 +34,10 @@ public partial class GetApiClientSettingsResponseItem
 	[DataMember(Name = "standInKey", EmitDefaultValue = false)]
 	public string StandInKey { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class SecurityGetApiClientSettingsResponseItem {\n");
-		sb.Append("  Name: ").Append(Name).Append('\n');
-		sb.Append("  StandInKey: ").Append(StandInKey).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -59,17 +50,7 @@ public partial class GetApiClientSettingsResponseItem
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (Name != null)
-			{
-				hash = hash * 59 + Name.GetHashCode();
-			}
 
-			if (StandInKey != null)
-			{
-				hash = hash * 59 + StandInKey.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

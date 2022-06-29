@@ -66,23 +66,14 @@ public partial class BusinessObjectRelationship
 	[DataMember(Name = "target", EmitDefaultValue = false)]
 	public string Target { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class BusinessObjectRelationship {\n");
-		sb.Append("  Cardinality: ").Append(Cardinality).Append('\n');
-		sb.Append("  Description: ").Append(Description).Append('\n');
-		sb.Append("  DisplayName: ").Append(DisplayName).Append('\n');
-		sb.Append("  FieldDefinitions: ").Append(FieldDefinitions).Append('\n');
-		sb.Append("  RelationshipId: ").Append(RelationshipId).Append('\n');
-		sb.Append("  Target: ").Append(Target).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -95,37 +86,9 @@ public partial class BusinessObjectRelationship
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (Cardinality != null)
-			{
-				hash = hash * 59 + Cardinality.GetHashCode();
-			}
 
-			if (Description != null)
-			{
-				hash = hash * 59 + Description.GetHashCode();
-			}
 
-			if (DisplayName != null)
-			{
-				hash = hash * 59 + DisplayName.GetHashCode();
-			}
 
-			if (FieldDefinitions != null)
-			{
-				hash = hash * 59 + FieldDefinitions.GetHashCode();
-			}
-
-			if (RelationshipId != null)
-			{
-				hash = hash * 59 + RelationshipId.GetHashCode();
-			}
-
-			if (Target != null)
-			{
-				hash = hash * 59 + Target.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

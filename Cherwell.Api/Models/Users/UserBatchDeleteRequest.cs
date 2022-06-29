@@ -34,19 +34,10 @@ public partial class UserBatchDeleteRequest
 	[DataMember(Name = "userRecordIds", EmitDefaultValue = false)]
 	public List<string> UserRecordIds { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class UserBatchDeleteRequest {\n");
-		sb.Append("  StopOnError: ").Append(StopOnError).Append('\n');
-		sb.Append("  UserRecordIds: ").Append(UserRecordIds).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -59,17 +50,7 @@ public partial class UserBatchDeleteRequest
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (StopOnError != null)
-			{
-				hash = hash * 59 + StopOnError.GetHashCode();
-			}
 
-			if (UserRecordIds != null)
-			{
-				hash = hash * 59 + UserRecordIds.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

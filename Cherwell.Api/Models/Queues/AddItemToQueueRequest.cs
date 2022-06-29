@@ -51,21 +51,6 @@ public partial class AddItemToQueueRequest
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (BusObId != null)
-			{
-				hash = hash * 59 + BusObId.GetHashCode();
-			}
-
-			if (BusObRecId != null)
-			{
-				hash = hash * 59 + BusObRecId.GetHashCode();
-			}
-
-			if (QueueStandInKey != null)
-			{
-				hash = hash * 59 + QueueStandInKey.GetHashCode();
-			}
-
 			return hash;
 		}
 	}

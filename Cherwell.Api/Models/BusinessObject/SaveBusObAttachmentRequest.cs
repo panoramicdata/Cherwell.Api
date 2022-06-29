@@ -98,27 +98,18 @@ public partial class SaveBusObAttachmentRequest
 	[DataMember(Name = "includeLinks", EmitDefaultValue = false)]
 	public bool? IncludeLinks { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class BusinessObjectSaveBusObAttachmentRequest {\n");
-		sb.Append("  AttachBusObId: ").Append(AttachBusObId).Append('\n');
-		sb.Append("  AttachBusObName: ").Append(AttachBusObName).Append('\n');
-		sb.Append("  AttachBusObPublicId: ").Append(AttachBusObPublicId).Append('\n');
-		sb.Append("  AttachBusObRecId: ").Append(AttachBusObRecId).Append('\n');
-		sb.Append("  BusObId: ").Append(BusObId).Append('\n');
-		sb.Append("  BusObName: ").Append(BusObName).Append('\n');
-		sb.Append("  BusObPublicId: ").Append(BusObPublicId).Append('\n');
-		sb.Append("  BusObRecId: ").Append(BusObRecId).Append('\n');
-		sb.Append("  Comment: ").Append(Comment).Append('\n');
-		sb.Append("  IncludeLinks: ").Append(IncludeLinks).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -131,57 +122,11 @@ public partial class SaveBusObAttachmentRequest
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (AttachBusObId != null)
-			{
-				hash = hash * 59 + AttachBusObId.GetHashCode();
-			}
 
-			if (AttachBusObName != null)
-			{
-				hash = hash * 59 + AttachBusObName.GetHashCode();
-			}
 
-			if (AttachBusObPublicId != null)
-			{
-				hash = hash * 59 + AttachBusObPublicId.GetHashCode();
-			}
 
-			if (AttachBusObRecId != null)
-			{
-				hash = hash * 59 + AttachBusObRecId.GetHashCode();
-			}
 
-			if (BusObId != null)
-			{
-				hash = hash * 59 + BusObId.GetHashCode();
-			}
 
-			if (BusObName != null)
-			{
-				hash = hash * 59 + BusObName.GetHashCode();
-			}
-
-			if (BusObPublicId != null)
-			{
-				hash = hash * 59 + BusObPublicId.GetHashCode();
-			}
-
-			if (BusObRecId != null)
-			{
-				hash = hash * 59 + BusObRecId.GetHashCode();
-			}
-
-			if (Comment != null)
-			{
-				hash = hash * 59 + Comment.GetHashCode();
-			}
-
-			if (IncludeLinks != null)
-			{
-				hash = hash * 59 + IncludeLinks.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

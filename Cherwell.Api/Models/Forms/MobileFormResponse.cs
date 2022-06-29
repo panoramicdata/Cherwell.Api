@@ -74,27 +74,18 @@ public partial class MobileFormResponse : Response
 	[DataMember(Name = "title", EmitDefaultValue = false)]
 	public string Title { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class FormsMobileFormResponse {\n");
-		sb.Append("  Actions: ").Append(Actions).Append('\n');
-		sb.Append("  Attachments: ").Append(Attachments).Append('\n');
-		sb.Append("  GalleryImage: ").Append(GalleryImage).Append('\n');
-		sb.Append("  LocationInformation: ").Append(LocationInformation).Append('\n');
-		sb.Append("  Sections: ").Append(Sections).Append('\n');
-		sb.Append("  Title: ").Append(Title).Append('\n');
-		sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
-		sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append('\n');
-		sb.Append("  HasError: ").Append(HasError).Append('\n');
-		sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -107,57 +98,11 @@ public partial class MobileFormResponse : Response
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (Actions != null)
-			{
-				hash = hash * 59 + Actions.GetHashCode();
-			}
 
-			if (Attachments != null)
-			{
-				hash = hash * 59 + Attachments.GetHashCode();
-			}
 
-			if (GalleryImage != null)
-			{
-				hash = hash * 59 + GalleryImage.GetHashCode();
-			}
 
-			if (LocationInformation != null)
-			{
-				hash = hash * 59 + LocationInformation.GetHashCode();
-			}
 
-			if (Sections != null)
-			{
-				hash = hash * 59 + Sections.GetHashCode();
-			}
 
-			if (Title != null)
-			{
-				hash = hash * 59 + Title.GetHashCode();
-			}
-
-			if (ErrorCode != null)
-			{
-				hash = hash * 59 + ErrorCode.GetHashCode();
-			}
-
-			if (ErrorMessage != null)
-			{
-				hash = hash * 59 + ErrorMessage.GetHashCode();
-			}
-
-			if (HasError != null)
-			{
-				hash = hash * 59 + HasError.GetHashCode();
-			}
-
-			if (HttpStatusCode != null)
-			{
-				hash = hash * 59 + HttpStatusCode.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

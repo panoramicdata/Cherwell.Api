@@ -34,19 +34,10 @@ public partial class StoredSearchResults
 	[DataMember(Name = "rows", EmitDefaultValue = false)]
 	public List<List<object>> Rows { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class SearchesStoredSearchResults {\n");
-		sb.Append("  Columns: ").Append(Columns).Append('\n');
-		sb.Append("  Rows: ").Append(Rows).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -59,17 +50,7 @@ public partial class StoredSearchResults
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (Columns != null)
-			{
-				hash = hash * 59 + Columns.GetHashCode();
-			}
 
-			if (Rows != null)
-			{
-				hash = hash * 59 + Rows.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

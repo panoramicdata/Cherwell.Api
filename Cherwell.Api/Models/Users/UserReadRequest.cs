@@ -34,19 +34,10 @@ public partial class UserReadRequest
 	[DataMember(Name = "publicId", EmitDefaultValue = false)]
 	public string PublicId { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class UserReadRequest {\n");
-		sb.Append("  LoginId: ").Append(LoginId).Append('\n');
-		sb.Append("  PublicId: ").Append(PublicId).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -59,17 +50,7 @@ public partial class UserReadRequest
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (LoginId != null)
-			{
-				hash = hash * 59 + LoginId.GetHashCode();
-			}
 
-			if (PublicId != null)
-			{
-				hash = hash * 59 + PublicId.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

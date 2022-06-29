@@ -50,21 +50,12 @@ public partial class QuickSearchByIdRequest
 	[DataMember(Name = "standIn", EmitDefaultValue = false)]
 	public string StandIn { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class SearchesQuickSearchByIdRequest {\n");
-		sb.Append("  BusObIds: ").Append(BusObIds).Append('\n');
-		sb.Append("  IsGeneral: ").Append(IsGeneral).Append('\n');
-		sb.Append("  SearchText: ").Append(SearchText).Append('\n');
-		sb.Append("  StandIn: ").Append(StandIn).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -77,27 +68,8 @@ public partial class QuickSearchByIdRequest
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (BusObIds != null)
-			{
-				hash = hash * 59 + BusObIds.GetHashCode();
-			}
 
-			if (IsGeneral != null)
-			{
-				hash = hash * 59 + IsGeneral.GetHashCode();
-			}
 
-			if (SearchText != null)
-			{
-				hash = hash * 59 + SearchText.GetHashCode();
-			}
-
-			if (StandIn != null)
-			{
-				hash = hash * 59 + StandIn.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

@@ -38,21 +38,12 @@ public partial class TeamsResponse : Response
 	[DataMember(Name = "teams", EmitDefaultValue = false)]
 	public List<Team> Teams { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class TeamsTeamsResponse {\n");
-		sb.Append("  Error: ").Append(Error).Append('\n');
-		sb.Append("  ErrorCode: ").Append(ErrorCode).Append('\n');
-		sb.Append("  HasError: ").Append(HasError).Append('\n');
-		sb.Append("  Teams: ").Append(Teams).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -65,27 +56,8 @@ public partial class TeamsResponse : Response
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (Error != null)
-			{
-				hash = hash * 59 + Error.GetHashCode();
-			}
 
-			if (ErrorCode != null)
-			{
-				hash = hash * 59 + ErrorCode.GetHashCode();
-			}
 
-			if (HasError != null)
-			{
-				hash = hash * 59 + HasError.GetHashCode();
-			}
-
-			if (Teams != null)
-			{
-				hash = hash * 59 + Teams.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

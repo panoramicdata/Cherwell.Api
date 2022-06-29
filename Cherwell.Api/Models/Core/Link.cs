@@ -34,19 +34,10 @@ public partial class Link
 	[DataMember(Name = "url", EmitDefaultValue = false)]
 	public string Url { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class CoreLink {\n");
-		sb.Append("  Name: ").Append(Name).Append('\n');
-		sb.Append("  Url: ").Append(Url).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -59,17 +50,7 @@ public partial class Link
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (Name != null)
-			{
-				hash = hash * 59 + Name.GetHashCode();
-			}
 
-			if (Url != null)
-			{
-				hash = hash * 59 + Url.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

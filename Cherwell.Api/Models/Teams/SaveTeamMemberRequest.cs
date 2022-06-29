@@ -50,21 +50,12 @@ public partial class SaveTeamMemberRequest
 	[DataMember(Name = "userRecId", EmitDefaultValue = false)]
 	public string UserRecId { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class TeamsSaveTeamMemberRequest {\n");
-		sb.Append("  IsTeamManager: ").Append(IsTeamManager).Append('\n');
-		sb.Append("  SetAsDefaultTeam: ").Append(SetAsDefaultTeam).Append('\n');
-		sb.Append("  TeamId: ").Append(TeamId).Append('\n');
-		sb.Append("  UserRecId: ").Append(UserRecId).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -77,27 +68,8 @@ public partial class SaveTeamMemberRequest
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (IsTeamManager != null)
-			{
-				hash = hash * 59 + IsTeamManager.GetHashCode();
-			}
 
-			if (SetAsDefaultTeam != null)
-			{
-				hash = hash * 59 + SetAsDefaultTeam.GetHashCode();
-			}
 
-			if (TeamId != null)
-			{
-				hash = hash * 59 + TeamId.GetHashCode();
-			}
-
-			if (UserRecId != null)
-			{
-				hash = hash * 59 + UserRecId.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

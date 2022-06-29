@@ -82,25 +82,16 @@ public partial class PromptValue
 	[DataMember(Name = "valueIsRecId", EmitDefaultValue = false)]
 	public bool? ValueIsRecId { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class CorePromptValue {\n");
-		sb.Append("  BusObId: ").Append(BusObId).Append('\n');
-		sb.Append("  CollectionStoreEntireRow: ").Append(CollectionStoreEntireRow).Append('\n');
-		sb.Append("  CollectionValueField: ").Append(CollectionValueField).Append('\n');
-		sb.Append("  FieldId: ").Append(FieldId).Append('\n');
-		sb.Append("  ListReturnFieldId: ").Append(ListReturnFieldId).Append('\n');
-		sb.Append("  PromptId: ").Append(PromptId).Append('\n');
-		sb.Append("  Value: ").Append(Value).Append('\n');
-		sb.Append("  ValueIsRecId: ").Append(ValueIsRecId).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -113,47 +104,10 @@ public partial class PromptValue
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (BusObId != null)
-			{
-				hash = hash * 59 + BusObId.GetHashCode();
-			}
 
-			if (CollectionStoreEntireRow != null)
-			{
-				hash = hash * 59 + CollectionStoreEntireRow.GetHashCode();
-			}
 
-			if (CollectionValueField != null)
-			{
-				hash = hash * 59 + CollectionValueField.GetHashCode();
-			}
 
-			if (FieldId != null)
-			{
-				hash = hash * 59 + FieldId.GetHashCode();
-			}
 
-			if (ListReturnFieldId != null)
-			{
-				hash = hash * 59 + ListReturnFieldId.GetHashCode();
-			}
-
-			if (PromptId != null)
-			{
-				hash = hash * 59 + PromptId.GetHashCode();
-			}
-
-			if (Value != null)
-			{
-				hash = hash * 59 + Value.GetHashCode();
-			}
-
-			if (ValueIsRecId != null)
-			{
-				hash = hash * 59 + ValueIsRecId.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

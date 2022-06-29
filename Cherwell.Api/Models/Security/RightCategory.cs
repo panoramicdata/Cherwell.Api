@@ -42,20 +42,11 @@ public partial class RightCategory
 	[DataMember(Name = "categoryName", EmitDefaultValue = false)]
 	public string CategoryName { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class SecurityRightCategory {\n");
-		sb.Append("  CategoryDescription: ").Append(CategoryDescription).Append('\n');
-		sb.Append("  CategoryId: ").Append(CategoryId).Append('\n');
-		sb.Append("  CategoryName: ").Append(CategoryName).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -68,21 +59,6 @@ public partial class RightCategory
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (CategoryDescription != null)
-			{
-				hash = hash * 59 + CategoryDescription.GetHashCode();
-			}
-
-			if (CategoryId != null)
-			{
-				hash = hash * 59 + CategoryId.GetHashCode();
-			}
-
-			if (CategoryName != null)
-			{
-				hash = hash * 59 + CategoryName.GetHashCode();
-			}
-
 			return hash;
 		}
 	}

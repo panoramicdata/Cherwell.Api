@@ -87,23 +87,14 @@ public partial class TeamSaveRequest
 	[DataMember(Name = "teamName", EmitDefaultValue = false)]
 	public string TeamName { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class TeamsTeamSaveRequest {\n");
-		sb.Append("  Description: ").Append(Description).Append('\n');
-		sb.Append("  EmailAlias: ").Append(EmailAlias).Append('\n');
-		sb.Append("  Image: ").Append(Image).Append('\n');
-		sb.Append("  TeamId: ").Append(TeamId).Append('\n');
-		sb.Append("  TeamName: ").Append(TeamName).Append('\n');
-		sb.Append("  TeamType: ").Append(TeamType).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -116,37 +107,9 @@ public partial class TeamSaveRequest
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (Description != null)
-			{
-				hash = hash * 59 + Description.GetHashCode();
-			}
 
-			if (EmailAlias != null)
-			{
-				hash = hash * 59 + EmailAlias.GetHashCode();
-			}
 
-			if (Image != null)
-			{
-				hash = hash * 59 + Image.GetHashCode();
-			}
 
-			if (TeamId != null)
-			{
-				hash = hash * 59 + TeamId.GetHashCode();
-			}
-
-			if (TeamName != null)
-			{
-				hash = hash * 59 + TeamName.GetHashCode();
-			}
-
-			if (TeamType != null)
-			{
-				hash = hash * 59 + TeamType.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

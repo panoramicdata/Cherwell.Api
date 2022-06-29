@@ -34,19 +34,10 @@ public partial class Team
 	[DataMember(Name = "teamName", EmitDefaultValue = false)]
 	public string TeamName { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class TeamsTeam {\n");
-		sb.Append("  TeamId: ").Append(TeamId).Append('\n');
-		sb.Append("  TeamName: ").Append(TeamName).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -59,17 +50,7 @@ public partial class Team
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (TeamId != null)
-			{
-				hash = hash * 59 + TeamId.GetHashCode();
-			}
 
-			if (TeamName != null)
-			{
-				hash = hash * 59 + TeamName.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

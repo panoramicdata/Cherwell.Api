@@ -178,37 +178,28 @@ public partial class FieldDefinition
 	[DataMember(Name = "wholeDigits", EmitDefaultValue = false)]
 	public int? WholeDigits { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class BusinessObjectFieldDefinition {\n");
-		sb.Append("  AutoFill: ").Append(AutoFill).Append('\n');
-		sb.Append("  Calculated: ").Append(Calculated).Append('\n');
-		sb.Append("  Category: ").Append(Category).Append('\n');
-		sb.Append("  DecimalDigits: ").Append(DecimalDigits).Append('\n');
-		sb.Append("  Description: ").Append(Description).Append('\n');
-		sb.Append("  Details: ").Append(Details).Append('\n');
-		sb.Append("  DisplayName: ").Append(DisplayName).Append('\n');
-		sb.Append("  Enabled: ").Append(Enabled).Append('\n');
-		sb.Append("  FieldId: ").Append(FieldId).Append('\n');
-		sb.Append("  HasDate: ").Append(HasDate).Append('\n');
-		sb.Append("  HasTime: ").Append(HasTime).Append('\n');
-		sb.Append("  IsFullTextSearchable: ").Append(IsFullTextSearchable).Append('\n');
-		sb.Append("  MaximumSize: ").Append(MaximumSize).Append('\n');
-		sb.Append("  Name: ").Append(Name).Append('\n');
-		sb.Append("  _ReadOnly: ").Append(ReadOnly).Append('\n');
-		sb.Append("  Required: ").Append(Required).Append('\n');
-		sb.Append("  Type: ").Append(Type).Append('\n');
-		sb.Append("  TypeLocalized: ").Append(TypeLocalized).Append('\n');
-		sb.Append("  Validated: ").Append(Validated).Append('\n');
-		sb.Append("  WholeDigits: ").Append(WholeDigits).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -221,107 +212,16 @@ public partial class FieldDefinition
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (AutoFill != null)
-			{
-				hash = hash * 59 + AutoFill.GetHashCode();
-			}
 
-			if (Calculated != null)
-			{
-				hash = hash * 59 + Calculated.GetHashCode();
-			}
 
-			if (Category != null)
-			{
-				hash = hash * 59 + Category.GetHashCode();
-			}
 
-			if (DecimalDigits != null)
-			{
-				hash = hash * 59 + DecimalDigits.GetHashCode();
-			}
 
-			if (Description != null)
-			{
-				hash = hash * 59 + Description.GetHashCode();
-			}
 
-			if (Details != null)
-			{
-				hash = hash * 59 + Details.GetHashCode();
-			}
 
-			if (DisplayName != null)
-			{
-				hash = hash * 59 + DisplayName.GetHashCode();
-			}
 
-			if (Enabled != null)
-			{
-				hash = hash * 59 + Enabled.GetHashCode();
-			}
 
-			if (FieldId != null)
-			{
-				hash = hash * 59 + FieldId.GetHashCode();
-			}
 
-			if (HasDate != null)
-			{
-				hash = hash * 59 + HasDate.GetHashCode();
-			}
 
-			if (HasTime != null)
-			{
-				hash = hash * 59 + HasTime.GetHashCode();
-			}
-
-			if (IsFullTextSearchable != null)
-			{
-				hash = hash * 59 + IsFullTextSearchable.GetHashCode();
-			}
-
-			if (MaximumSize != null)
-			{
-				hash = hash * 59 + MaximumSize.GetHashCode();
-			}
-
-			if (Name != null)
-			{
-				hash = hash * 59 + Name.GetHashCode();
-			}
-
-			if (ReadOnly != null)
-			{
-				hash = hash * 59 + ReadOnly.GetHashCode();
-			}
-
-			if (Required != null)
-			{
-				hash = hash * 59 + Required.GetHashCode();
-			}
-
-			if (Type != null)
-			{
-				hash = hash * 59 + Type.GetHashCode();
-			}
-
-			if (TypeLocalized != null)
-			{
-				hash = hash * 59 + TypeLocalized.GetHashCode();
-			}
-
-			if (Validated != null)
-			{
-				hash = hash * 59 + Validated.GetHashCode();
-			}
-
-			if (WholeDigits != null)
-			{
-				hash = hash * 59 + WholeDigits.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

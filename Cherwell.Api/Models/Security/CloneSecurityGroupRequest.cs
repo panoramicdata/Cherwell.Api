@@ -34,19 +34,10 @@ public partial class CloneSecurityGroupRequest
 	[DataMember(Name = "sourceSecurityGroupNameOrId", EmitDefaultValue = false)]
 	public string SourceSecurityGroupNameOrId { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class SecurityCloneSecurityGroupRequest {\n");
-		sb.Append("  SecurityGroupName: ").Append(SecurityGroupName).Append('\n');
-		sb.Append("  SourceSecurityGroupNameOrId: ").Append(SourceSecurityGroupNameOrId).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -59,17 +50,7 @@ public partial class CloneSecurityGroupRequest
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (SecurityGroupName != null)
-			{
-				hash = hash * 59 + SecurityGroupName.GetHashCode();
-			}
 
-			if (SourceSecurityGroupNameOrId != null)
-			{
-				hash = hash * 59 + SourceSecurityGroupNameOrId.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

@@ -66,23 +66,14 @@ public partial class ServiceInfoResponse : Response
 	[DataMember(Name = "systemUtcOffset", EmitDefaultValue = false)]
 	public string SystemUtcOffset { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class CoreServiceInfoResponse {\n");
-		sb.Append("  ApiVersion: ").Append(ApiVersion).Append('\n');
-		sb.Append("  CsmCulture: ").Append(CsmCulture).Append('\n');
-		sb.Append("  CsmVersion: ").Append(CsmVersion).Append('\n');
-		sb.Append("  SystemDateTime: ").Append(SystemDateTime).Append('\n');
-		sb.Append("  TimeZone: ").Append(TimeZone).Append('\n');
-		sb.Append("  SystemUtcOffset: ").Append(SystemUtcOffset).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -95,37 +86,9 @@ public partial class ServiceInfoResponse : Response
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (ApiVersion != null)
-			{
-				hash = hash * 59 + ApiVersion.GetHashCode();
-			}
 
-			if (CsmCulture != null)
-			{
-				hash = hash * 59 + CsmCulture.GetHashCode();
-			}
 
-			if (CsmVersion != null)
-			{
-				hash = hash * 59 + CsmVersion.GetHashCode();
-			}
 
-			if (SystemDateTime != null)
-			{
-				hash = hash * 59 + SystemDateTime.GetHashCode();
-			}
-
-			if (TimeZone != null)
-			{
-				hash = hash * 59 + TimeZone.GetHashCode();
-			}
-
-			if (SystemUtcOffset != null)
-			{
-				hash = hash * 59 + SystemUtcOffset.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

@@ -19,17 +19,8 @@ public partial class ModelObject
 	{
 	}
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class ModelObject {\n");
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
 
 	/// <summary>
 	/// Gets the hash code

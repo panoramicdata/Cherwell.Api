@@ -54,21 +54,12 @@ public partial class ClientSecuritySettingsResponse : Response
 	[DataMember(Name = "windowsLoginAllowed", EmitDefaultValue = false)]
 	public bool? WindowsLoginAllowed { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class SecurityClientSecuritySettingsResponse {\n");
-		sb.Append("  InternalLoginAllowed: ").Append(InternalLoginAllowed).Append('\n');
-		sb.Append("  LdapLoginAllowed: ").Append(LdapLoginAllowed).Append('\n');
-		sb.Append("  SamlLoginAllowed: ").Append(SamlLoginAllowed).Append('\n');
-		sb.Append("  WindowsLoginAllowed: ").Append(WindowsLoginAllowed).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -81,27 +72,8 @@ public partial class ClientSecuritySettingsResponse : Response
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (InternalLoginAllowed != null)
-			{
-				hash = hash * 59 + InternalLoginAllowed.GetHashCode();
-			}
 
-			if (LdapLoginAllowed != null)
-			{
-				hash = hash * 59 + LdapLoginAllowed.GetHashCode();
-			}
 
-			if (SamlLoginAllowed != null)
-			{
-				hash = hash * 59 + SamlLoginAllowed.GetHashCode();
-			}
-
-			if (WindowsLoginAllowed != null)
-			{
-				hash = hash * 59 + WindowsLoginAllowed.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

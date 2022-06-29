@@ -130,31 +130,22 @@ public partial class QuickSearchSpecificByIdRequest
 	[DataMember(Name = "useSortBy", EmitDefaultValue = false)]
 	public bool? UseSortBy { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class SearchesQuickSearchSpecificByIdRequest {\n");
-		sb.Append("  BusObIds: ").Append(BusObIds).Append('\n');
-		sb.Append("  StandIn: ").Append(StandIn).Append('\n');
-		sb.Append("  Ascending: ").Append(Ascending).Append('\n');
-		sb.Append("  IsBusObTarget: ").Append(IsBusObTarget).Append('\n');
-		sb.Append("  NonFinalState: ").Append(NonFinalState).Append('\n');
-		sb.Append("  SearchAnyWords: ").Append(SearchAnyWords).Append('\n');
-		sb.Append("  SearchAttachments: ").Append(SearchAttachments).Append('\n');
-		sb.Append("  SearchRelated: ").Append(SearchRelated).Append('\n');
-		sb.Append("  SearchText: ").Append(SearchText).Append('\n');
-		sb.Append("  SelectedChangedLimit: ").Append(SelectedChangedLimit).Append('\n');
-		sb.Append("  SelectedSortByFieldId: ").Append(SelectedSortByFieldId).Append('\n');
-		sb.Append("  SortByRelevance: ").Append(SortByRelevance).Append('\n');
-		sb.Append("  SpecificSearchTargetId: ").Append(SpecificSearchTargetId).Append('\n');
-		sb.Append("  UseSortBy: ").Append(UseSortBy).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -167,77 +158,13 @@ public partial class QuickSearchSpecificByIdRequest
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (BusObIds != null)
-			{
-				hash = hash * 59 + BusObIds.GetHashCode();
-			}
 
-			if (StandIn != null)
-			{
-				hash = hash * 59 + StandIn.GetHashCode();
-			}
 
-			if (Ascending != null)
-			{
-				hash = hash * 59 + Ascending.GetHashCode();
-			}
 
-			if (IsBusObTarget != null)
-			{
-				hash = hash * 59 + IsBusObTarget.GetHashCode();
-			}
 
-			if (NonFinalState != null)
-			{
-				hash = hash * 59 + NonFinalState.GetHashCode();
-			}
 
-			if (SearchAnyWords != null)
-			{
-				hash = hash * 59 + SearchAnyWords.GetHashCode();
-			}
 
-			if (SearchAttachments != null)
-			{
-				hash = hash * 59 + SearchAttachments.GetHashCode();
-			}
 
-			if (SearchRelated != null)
-			{
-				hash = hash * 59 + SearchRelated.GetHashCode();
-			}
-
-			if (SearchText != null)
-			{
-				hash = hash * 59 + SearchText.GetHashCode();
-			}
-
-			if (SelectedChangedLimit != null)
-			{
-				hash = hash * 59 + SelectedChangedLimit.GetHashCode();
-			}
-
-			if (SelectedSortByFieldId != null)
-			{
-				hash = hash * 59 + SelectedSortByFieldId.GetHashCode();
-			}
-
-			if (SortByRelevance != null)
-			{
-				hash = hash * 59 + SortByRelevance.GetHashCode();
-			}
-
-			if (SpecificSearchTargetId != null)
-			{
-				hash = hash * 59 + SpecificSearchTargetId.GetHashCode();
-			}
-
-			if (UseSortBy != null)
-			{
-				hash = hash * 59 + UseSortBy.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 

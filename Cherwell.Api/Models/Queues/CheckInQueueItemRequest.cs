@@ -50,21 +50,12 @@ public partial class CheckInQueueItemRequest
 	[DataMember(Name = "queueStandInKey", EmitDefaultValue = false)]
 	public string QueueStandInKey { get; set; }
 
-	/// <summary>
-	/// Returns the string presentation of the object
-	/// </summary>
-	/// <returns>String presentation of the object</returns>
-	public override string ToString()
-	{
-		var sb = new StringBuilder();
-		sb.Append("class QueuesCheckInQueueItemRequest {\n");
-		sb.Append("  BusObId: ").Append(BusObId).Append('\n');
-		sb.Append("  BusObRecId: ").Append(BusObRecId).Append('\n');
-		sb.Append("  HistoryNotes: ").Append(HistoryNotes).Append('\n');
-		sb.Append("  QueueStandInKey: ").Append(QueueStandInKey).Append('\n');
-		sb.Append("}\n");
-		return sb.ToString();
-	}
+
+
+
+
+
+
 
 	/// <summary>
 	/// Gets the hash code
@@ -77,27 +68,8 @@ public partial class CheckInQueueItemRequest
 		{
 			int hash = 41;
 			// Suitable nullity checks etc, of course :)
-			if (BusObId != null)
-			{
-				hash = hash * 59 + BusObId.GetHashCode();
-			}
 
-			if (BusObRecId != null)
-			{
-				hash = hash * 59 + BusObRecId.GetHashCode();
-			}
 
-			if (HistoryNotes != null)
-			{
-				hash = hash * 59 + HistoryNotes.GetHashCode();
-			}
-
-			if (QueueStandInKey != null)
-			{
-				hash = hash * 59 + QueueStandInKey.GetHashCode();
-			}
-
-			return hash;
 		}
 	}
 
