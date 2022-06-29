@@ -58,37 +58,6 @@ public partial class GetStagesResponseStages
 	}
 
 	/// <summary>
-	/// Returns true if LifecycleGetStagesResponseStages instances are equal
-	/// </summary>
-	/// <param name="other">Instance of LifecycleGetStagesResponseStages to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(GetStagesResponseStages? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					Id == other.Id ||
-					Id != null &&
-					Id.Equals(other.Id, StringComparison.Ordinal)
-				) &&
-				(
-					IsFinal == other.IsFinal ||
-					IsFinal != null &&
-					IsFinal.Equals(other.IsFinal)
-				) &&
-				(
-					Name == other.Name ||
-					Name != null &&
-					Name.Equals(other.Name, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

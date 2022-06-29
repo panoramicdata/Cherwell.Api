@@ -40,27 +40,6 @@ public partial class LogBatchRequest
 	}
 
 	/// <summary>
-	/// Returns true if CoreLogBatchRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of CoreLogBatchRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(LogBatchRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					LogRequests == other.LogRequests ||
-					LogRequests != null &&
-					LogRequests.SequenceEqual(other.LogRequests)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

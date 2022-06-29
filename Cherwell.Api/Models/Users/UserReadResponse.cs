@@ -59,42 +59,6 @@ public partial class UserReadResponse : Response
 	}
 
 	/// <summary>
-	/// Returns true if UserReadResponse instances are equal
-	/// </summary>
-	/// <param name="other">Instance of UserReadResponse to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(UserReadResponse? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					Error == other.Error ||
-					Error != null &&
-					Error.Equals(other.Error, StringComparison.Ordinal)
-				) &&
-				(
-					ErrorCode == other.ErrorCode ||
-					ErrorCode != null &&
-					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
-				) &&
-				(
-					HasError == other.HasError ||
-					HasError != null &&
-					HasError.Equals(other.HasError)
-				) &&
-				(
-					Users == other.Users ||
-					Users != null &&
-					Users.SequenceEqual(other.Users)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

@@ -67,42 +67,6 @@ public partial class QuickSearchByIdRequest
 	}
 
 	/// <summary>
-	/// Returns true if SearchesQuickSearchByIdRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of SearchesQuickSearchByIdRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(QuickSearchByIdRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					BusObIds == other.BusObIds ||
-					BusObIds != null &&
-					BusObIds.SequenceEqual(other.BusObIds)
-				) &&
-				(
-					IsGeneral == other.IsGeneral ||
-					IsGeneral != null &&
-					IsGeneral.Equals(other.IsGeneral)
-				) &&
-				(
-					SearchText == other.SearchText ||
-					SearchText != null &&
-					SearchText.Equals(other.SearchText, StringComparison.Ordinal)
-				) &&
-				(
-					StandIn == other.StandIn ||
-					StandIn != null &&
-					StandIn.Equals(other.StandIn, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

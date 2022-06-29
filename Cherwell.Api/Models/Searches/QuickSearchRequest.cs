@@ -49,32 +49,6 @@ public partial class QuickSearchRequest
 	}
 
 	/// <summary>
-	/// Returns true if SearchesQuickSearchRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of SearchesQuickSearchRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(QuickSearchRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					BusObIds == other.BusObIds ||
-					BusObIds != null &&
-					BusObIds.SequenceEqual(other.BusObIds)
-				) &&
-				(
-					SearchText == other.SearchText ||
-					SearchText != null &&
-					SearchText.Equals(other.SearchText, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

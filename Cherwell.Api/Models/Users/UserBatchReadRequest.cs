@@ -49,32 +49,6 @@ public partial class UserBatchReadRequest
 	}
 
 	/// <summary>
-	/// Returns true if UserBatchReadRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of UserBatchReadRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(UserBatchReadRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					ReadRequests == other.ReadRequests ||
-					ReadRequests != null &&
-					ReadRequests.SequenceEqual(other.ReadRequests)
-				) &&
-				(
-					StopOnError == other.StopOnError ||
-					StopOnError != null &&
-					StopOnError.Equals(other.StopOnError)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

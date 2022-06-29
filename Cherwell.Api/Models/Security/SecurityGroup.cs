@@ -58,37 +58,6 @@ public partial class SecurityGroup
 	}
 
 	/// <summary>
-	/// Returns true if SecurityGroup instances are equal
-	/// </summary>
-	/// <param name="other">Instance of SecurityGroup to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(SecurityGroup? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					Description == other.Description ||
-					Description != null &&
-					Description.Equals(other.Description, StringComparison.Ordinal)
-				) &&
-				(
-					GroupId == other.GroupId ||
-					GroupId != null &&
-					GroupId.Equals(other.GroupId, StringComparison.Ordinal)
-				) &&
-				(
-					GroupName == other.GroupName ||
-					GroupName != null &&
-					GroupName.Equals(other.GroupName, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

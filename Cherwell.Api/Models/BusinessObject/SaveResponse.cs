@@ -88,67 +88,6 @@ public partial class SaveResponse : Response
 	}
 
 	/// <summary>
-	/// Returns true if BusinessObjectSaveResponse instances are equal
-	/// </summary>
-	/// <param name="other">Instance of BusinessObjectSaveResponse to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(SaveResponse? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					BusObPublicId == other.BusObPublicId ||
-					BusObPublicId != null &&
-					BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
-				) &&
-				(
-					BusObRecId == other.BusObRecId ||
-					BusObRecId != null &&
-					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
-				) &&
-				(
-					CacheKey == other.CacheKey ||
-					CacheKey != null &&
-					CacheKey.Equals(other.CacheKey, StringComparison.Ordinal)
-				) &&
-				(
-					FieldValidationErrors == other.FieldValidationErrors ||
-					FieldValidationErrors != null &&
-					FieldValidationErrors.SequenceEqual(other.FieldValidationErrors)
-				) &&
-				(
-					NotificationTriggers == other.NotificationTriggers ||
-					NotificationTriggers != null &&
-					NotificationTriggers.SequenceEqual(other.NotificationTriggers)
-				) &&
-				(
-					ErrorCode == other.ErrorCode ||
-					ErrorCode != null &&
-					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
-				) &&
-				(
-					ErrorMessage == other.ErrorMessage ||
-					ErrorMessage != null &&
-					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
-				) &&
-				(
-					HasError == other.HasError ||
-					HasError != null &&
-					HasError.Equals(other.HasError)
-				) &&
-				(
-					HttpStatusCode == other.HttpStatusCode ||
-					HttpStatusCode != null &&
-					HttpStatusCode.Equals(other.HttpStatusCode)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

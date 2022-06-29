@@ -56,37 +56,6 @@ public partial class ChangedLimit
 		sb.Append("}\n");
 		return sb.ToString();
 	}
-	
-	/// <summary>
-	/// Returns true if SearchesChangedLimit instances are equal
-	/// </summary>
-	/// <param name="other">Instance of SearchesChangedLimit to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(ChangedLimit? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					DisplayName == other.DisplayName ||
-					DisplayName != null &&
-					DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
-				) &&
-				(
-					Units == other.Units ||
-					Units != null &&
-					Units.Equals(other.Units, StringComparison.Ordinal)
-				) &&
-				(
-					Value == other.Value ||
-					Value != null &&
-					Value.Equals(other.Value)
-				);
-	}
 
 	/// <summary>
 	/// Gets the hash code

@@ -85,52 +85,6 @@ public partial class FieldValuesLookupRequest
 	}
 
 	/// <summary>
-	/// Returns true if BusinessObjectFieldValuesLookupRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of BusinessObjectFieldValuesLookupRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(FieldValuesLookupRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					BusbPublicId == other.BusbPublicId ||
-					BusbPublicId != null &&
-					BusbPublicId.Equals(other.BusbPublicId, StringComparison.Ordinal)
-				) &&
-				(
-					BusObId == other.BusObId ||
-					BusObId != null &&
-					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
-				) &&
-				(
-					BusObRecId == other.BusObRecId ||
-					BusObRecId != null &&
-					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
-				) &&
-				(
-					FieldId == other.FieldId ||
-					FieldId != null &&
-					FieldId.Equals(other.FieldId, StringComparison.Ordinal)
-				) &&
-				(
-					FieldName == other.FieldName ||
-					FieldName != null &&
-					FieldName.Equals(other.FieldName, StringComparison.Ordinal)
-				) &&
-				(
-					Fields == other.Fields ||
-					Fields != null &&
-					Fields.SequenceEqual(other.Fields)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

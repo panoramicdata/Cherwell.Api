@@ -58,37 +58,6 @@ public partial class SaveWorkgroupMemberRequest
 	}
 
 	/// <summary>
-	/// Returns true if SaveWorkgroupMemberRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of SaveWorkgroupMemberRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(SaveWorkgroupMemberRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					CustomerRecordId == other.CustomerRecordId ||
-					CustomerRecordId != null &&
-					CustomerRecordId.Equals(other.CustomerRecordId, StringComparison.Ordinal)
-				) &&
-				(
-					WorkgroupId == other.WorkgroupId ||
-					WorkgroupId != null &&
-					WorkgroupId.Equals(other.WorkgroupId, StringComparison.Ordinal)
-				) &&
-				(
-					CustomerIsWorkgroupManager == other.CustomerIsWorkgroupManager ||
-					CustomerIsWorkgroupManager != null &&
-					CustomerIsWorkgroupManager.Equals(other.CustomerIsWorkgroupManager)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

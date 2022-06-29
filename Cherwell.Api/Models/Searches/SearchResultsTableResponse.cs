@@ -79,62 +79,6 @@ public partial class SearchResultsTableResponse : Response
 	}
 
 	/// <summary>
-	/// Returns true if SearchesSearchResultsTableResponse instances are equal
-	/// </summary>
-	/// <param name="other">Instance of SearchesSearchResultsTableResponse to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(SearchResultsTableResponse? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					Columns == other.Columns ||
-					Columns != null &&
-					Columns.SequenceEqual(other.Columns)
-				) &&
-				(
-					Rows == other.Rows ||
-					Rows != null &&
-					Rows.SequenceEqual(other.Rows)
-				) &&
-				(
-					Sorting == other.Sorting ||
-					Sorting != null &&
-					Sorting.SequenceEqual(other.Sorting)
-				) &&
-				(
-					TotalRows == other.TotalRows ||
-					TotalRows != null &&
-					TotalRows.Equals(other.TotalRows)
-				) &&
-				(
-					ErrorCode == other.ErrorCode ||
-					ErrorCode != null &&
-					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
-				) &&
-				(
-					ErrorMessage == other.ErrorMessage ||
-					ErrorMessage != null &&
-					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
-				) &&
-				(
-					HasError == other.HasError ||
-					HasError != null &&
-					HasError.Equals(other.HasError)
-				) &&
-				(
-					HttpStatusCode == other.HttpStatusCode ||
-					HttpStatusCode != null &&
-					HttpStatusCode.Equals(other.HttpStatusCode)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

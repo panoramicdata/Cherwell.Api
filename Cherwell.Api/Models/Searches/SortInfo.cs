@@ -49,32 +49,6 @@ public partial class SortInfo
 	}
 
 	/// <summary>
-	/// Returns true if SearchesSortInfo instances are equal
-	/// </summary>
-	/// <param name="other">Instance of SearchesSortInfo to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(SortInfo? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					FieldId == other.FieldId ||
-					FieldId != null &&
-					FieldId.Equals(other.FieldId, StringComparison.Ordinal)
-				) &&
-				(
-					SortDirection == other.SortDirection ||
-					SortDirection != null &&
-					SortDirection.Equals(other.SortDirection)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

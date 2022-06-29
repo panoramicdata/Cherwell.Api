@@ -52,47 +52,6 @@ public partial class SecurityGroupV2Response : Response
 	}
 
 	/// <summary>
-	/// Returns true if SecurityGroupV2Response instances are equal
-	/// </summary>
-	/// <param name="other">Instance of SecurityGroupV2Response to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(SecurityGroupV2Response? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					SecurityGroups == other.SecurityGroups ||
-					SecurityGroups != null &&
-					SecurityGroups.SequenceEqual(other.SecurityGroups)
-				) &&
-				(
-					ErrorCode == other.ErrorCode ||
-					ErrorCode != null &&
-					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
-				) &&
-				(
-					ErrorMessage == other.ErrorMessage ||
-					ErrorMessage != null &&
-					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
-				) &&
-				(
-					HasError == other.HasError ||
-					HasError != null &&
-					HasError.Equals(other.HasError)
-				) &&
-				(
-					HttpStatusCode == other.HttpStatusCode ||
-					HttpStatusCode != null &&
-					HttpStatusCode.Equals(other.HttpStatusCode)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

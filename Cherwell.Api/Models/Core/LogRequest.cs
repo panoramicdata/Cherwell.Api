@@ -101,37 +101,6 @@ public partial class LogRequest
 		sb.Append("}\n");
 		return sb.ToString();
 	}
-	
-	/// <summary>
-	/// Returns true if CoreLogRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of CoreLogRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(LogRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					keyValueproperties == other.keyValueproperties ||
-					keyValueproperties != null &&
-					keyValueproperties.SequenceEqual(other.keyValueproperties)
-				) &&
-				(
-					Level == other.Level ||
-					Level != null &&
-					Level.Equals(other.Level)
-				) &&
-				(
-					Message == other.Message ||
-					Message != null &&
-					Message.Equals(other.Message, StringComparison.Ordinal)
-				);
-	}
 
 	/// <summary>
 	/// Gets the hash code

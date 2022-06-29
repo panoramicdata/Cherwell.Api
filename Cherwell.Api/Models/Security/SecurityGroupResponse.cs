@@ -40,27 +40,6 @@ public partial class SecurityGroupResponse : Response
 	}
 
 	/// <summary>
-	/// Returns true if SecurityGroupResponse instances are equal
-	/// </summary>
-	/// <param name="other">Instance of SecurityGroupResponse to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(SecurityGroupResponse? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					SecurityGroups == other.SecurityGroups ||
-					SecurityGroups != null &&
-					SecurityGroups.SequenceEqual(other.SecurityGroups)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

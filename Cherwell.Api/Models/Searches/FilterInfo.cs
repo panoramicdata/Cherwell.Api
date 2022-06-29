@@ -58,37 +58,6 @@ public partial class FilterInfo
 	}
 
 	/// <summary>
-	/// Returns true if SearchesFilterInfo instances are equal
-	/// </summary>
-	/// <param name="other">Instance of SearchesFilterInfo to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(FilterInfo? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					FieldId == other.FieldId ||
-					FieldId != null &&
-					FieldId.Equals(other.FieldId, StringComparison.Ordinal)
-				) &&
-				(
-					Operator == other.Operator ||
-					Operator != null &&
-					Operator.Equals(other.Operator, StringComparison.Ordinal)
-				) &&
-				(
-					Value == other.Value ||
-					Value != null &&
-					Value.Equals(other.Value, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

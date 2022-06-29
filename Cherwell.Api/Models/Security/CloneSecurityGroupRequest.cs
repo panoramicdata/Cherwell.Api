@@ -49,32 +49,6 @@ public partial class CloneSecurityGroupRequest
 	}
 
 	/// <summary>
-	/// Returns true if CloneSecurityGroupRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of CloneSecurityGroupRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(CloneSecurityGroupRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					SecurityGroupName == other.SecurityGroupName ||
-					SecurityGroupName != null &&
-					SecurityGroupName.Equals(other.SecurityGroupName, StringComparison.Ordinal)
-				) &&
-				(
-					SourceSecurityGroupNameOrId == other.SourceSecurityGroupNameOrId ||
-					SourceSecurityGroupNameOrId != null &&
-					SourceSecurityGroupNameOrId.Equals(other.SourceSecurityGroupNameOrId, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

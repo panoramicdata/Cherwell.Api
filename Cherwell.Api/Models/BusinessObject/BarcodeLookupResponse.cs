@@ -67,52 +67,6 @@ public partial class BarcodeLookupResponse : Response
 	}
 
 	/// <summary>
-	/// Returns true if BusinessObjectBarcodeLookupResponse instances are equal
-	/// </summary>
-	/// <param name="other">Instance of BusinessObjectBarcodeLookupResponse to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(BarcodeLookupResponse? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					BusObId == other.BusObId ||
-					BusObId != null &&
-					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
-				) &&
-				(
-					BusObRecId == other.BusObRecId ||
-					BusObRecId != null &&
-					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
-				) &&
-				(
-					ErrorCode == other.ErrorCode ||
-					ErrorCode != null &&
-					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
-				) &&
-				(
-					ErrorMessage == other.ErrorMessage ||
-					ErrorMessage != null &&
-					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
-				) &&
-				(
-					HasError == other.HasError ||
-					HasError != null &&
-					HasError.Equals(other.HasError)
-				) &&
-				(
-					HttpStatusCode == other.HttpStatusCode ||
-					HttpStatusCode != null &&
-					HttpStatusCode.Equals(other.HttpStatusCode)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

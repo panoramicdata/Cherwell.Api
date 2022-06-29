@@ -103,62 +103,6 @@ public partial class PromptValue
 	}
 
 	/// <summary>
-	/// Returns true if CorePromptValue instances are equal
-	/// </summary>
-	/// <param name="other">Instance of CorePromptValue to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(PromptValue? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					BusObId == other.BusObId ||
-					BusObId != null &&
-					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
-				) &&
-				(
-					CollectionStoreEntireRow == other.CollectionStoreEntireRow ||
-					CollectionStoreEntireRow != null &&
-					CollectionStoreEntireRow.Equals(other.CollectionStoreEntireRow, StringComparison.Ordinal)
-				) &&
-				(
-					CollectionValueField == other.CollectionValueField ||
-					CollectionValueField != null &&
-					CollectionValueField.Equals(other.CollectionValueField, StringComparison.Ordinal)
-				) &&
-				(
-					FieldId == other.FieldId ||
-					FieldId != null &&
-					FieldId.Equals(other.FieldId, StringComparison.Ordinal)
-				) &&
-				(
-					ListReturnFieldId == other.ListReturnFieldId ||
-					ListReturnFieldId != null &&
-					ListReturnFieldId.Equals(other.ListReturnFieldId, StringComparison.Ordinal)
-				) &&
-				(
-					PromptId == other.PromptId ||
-					PromptId != null &&
-					PromptId.Equals(other.PromptId, StringComparison.Ordinal)
-				) &&
-				(
-					Value == other.Value ||
-					Value != null &&
-					Value.Equals(other.Value)
-				) &&
-				(
-					ValueIsRecId == other.ValueIsRecId ||
-					ValueIsRecId != null &&
-					ValueIsRecId.Equals(other.ValueIsRecId)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

@@ -103,62 +103,6 @@ public partial class StoredSearchRequest
 	}
 
 	/// <summary>
-	/// Returns true if SearchesStoredSearchRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of SearchesStoredSearchRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(StoredSearchRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					AssociationId == other.AssociationId ||
-					AssociationId != null &&
-					AssociationId.Equals(other.AssociationId, StringComparison.Ordinal)
-				) &&
-				(
-					AssociationName == other.AssociationName ||
-					AssociationName != null &&
-					AssociationName.Equals(other.AssociationName, StringComparison.Ordinal)
-				) &&
-				(
-					GridId == other.GridId ||
-					GridId != null &&
-					GridId.Equals(other.GridId, StringComparison.Ordinal)
-				) &&
-				(
-					IncludeSchema == other.IncludeSchema ||
-					IncludeSchema != null &&
-					IncludeSchema.Equals(other.IncludeSchema)
-				) &&
-				(
-					Scope == other.Scope ||
-					Scope != null &&
-					Scope.Equals(other.Scope, StringComparison.Ordinal)
-				) &&
-				(
-					ScopeOwnerId == other.ScopeOwnerId ||
-					ScopeOwnerId != null &&
-					ScopeOwnerId.Equals(other.ScopeOwnerId, StringComparison.Ordinal)
-				) &&
-				(
-					SearchId == other.SearchId ||
-					SearchId != null &&
-					SearchId.Equals(other.SearchId, StringComparison.Ordinal)
-				) &&
-				(
-					SearchName == other.SearchName ||
-					SearchName != null &&
-					SearchName.Equals(other.SearchName, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

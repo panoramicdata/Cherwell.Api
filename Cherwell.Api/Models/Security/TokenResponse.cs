@@ -111,62 +111,6 @@ public partial class TokenResponse : Response
 	}
 
 	/// <summary>
-	/// Returns true if TokenResponse instances are equal
-	/// </summary>
-	/// <param name="other">Instance of TokenResponse to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(TokenResponse? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					AccessToken == other.AccessToken ||
-					AccessToken != null &&
-					AccessToken.Equals(other.AccessToken, StringComparison.Ordinal)
-				) &&
-				(
-					AsclientId == other.AsclientId ||
-					AsclientId != null &&
-					AsclientId.Equals(other.AsclientId, StringComparison.Ordinal)
-				) &&
-				(
-					Expires == other.Expires ||
-					Expires != null &&
-					Expires.Equals(other.Expires, StringComparison.Ordinal)
-				) &&
-				(
-					ExpiresIn == other.ExpiresIn ||
-					ExpiresIn != null &&
-					ExpiresIn.Equals(other.ExpiresIn)
-				) &&
-				(
-					Issued == other.Issued ||
-					Issued != null &&
-					Issued.Equals(other.Issued, StringComparison.Ordinal)
-				) &&
-				(
-					RefreshToken == other.RefreshToken ||
-					RefreshToken != null &&
-					RefreshToken.Equals(other.RefreshToken, StringComparison.Ordinal)
-				) &&
-				(
-					TokenType == other.TokenType ||
-					TokenType != null &&
-					TokenType.Equals(other.TokenType, StringComparison.Ordinal)
-				) &&
-				(
-					Username == other.Username ||
-					Username != null &&
-					Username.Equals(other.Username, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

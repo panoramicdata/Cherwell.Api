@@ -49,32 +49,6 @@ public partial class AddUserToTeamByBatchRequest
 	}
 
 	/// <summary>
-	/// Returns true if AddUserToTeamByBatchRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of AddUserToTeamByBatchRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(AddUserToTeamByBatchRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					AddUserToTeamRequests == other.AddUserToTeamRequests ||
-					AddUserToTeamRequests != null &&
-					AddUserToTeamRequests.SequenceEqual(other.AddUserToTeamRequests)
-				) &&
-				(
-					StopOnError == other.StopOnError ||
-					StopOnError != null &&
-					StopOnError.Equals(other.StopOnError)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

@@ -58,37 +58,6 @@ public partial class DeleteRequest
 	}
 
 	/// <summary>
-	/// Returns true if BusinessObjectDeleteRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of BusinessObjectDeleteRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(DeleteRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					BusObId == other.BusObId ||
-					BusObId != null &&
-					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
-				) &&
-				(
-					BusObPublicId == other.BusObPublicId ||
-					BusObPublicId != null &&
-					BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
-				) &&
-				(
-					BusObRecId == other.BusObRecId ||
-					BusObRecId != null &&
-					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

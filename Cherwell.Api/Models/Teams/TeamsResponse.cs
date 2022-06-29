@@ -55,42 +55,6 @@ public partial class TeamsResponse : Response
 	}
 
 	/// <summary>
-	/// Returns true if TeamsResponse instances are equal
-	/// </summary>
-	/// <param name="other">Instance of TeamsResponse to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(TeamsResponse? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					Error == other.Error ||
-					Error != null &&
-					Error.Equals(other.Error, StringComparison.Ordinal)
-				) &&
-				(
-					ErrorCode == other.ErrorCode ||
-					ErrorCode != null &&
-					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
-				) &&
-				(
-					HasError == other.HasError ||
-					HasError != null &&
-					HasError.Equals(other.HasError)
-				) &&
-				(
-					Teams == other.Teams ||
-					Teams != null &&
-					Teams.SequenceEqual(other.Teams)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

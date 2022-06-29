@@ -103,62 +103,6 @@ public partial class TrebuchetNameValuePair
 	}
 
 	/// <summary>
-	/// Returns true if TrebuchetNameValuePair instances are equal
-	/// </summary>
-	/// <param name="other">Instance of TrebuchetNameValuePair to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(TrebuchetNameValuePair? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					Name == other.Name ||
-					Name != null &&
-					Name.Equals(other.Name, StringComparison.Ordinal)
-				) &&
-				(
-					ValueObject == other.ValueObject ||
-					ValueObject != null &&
-					ValueObject.Equals(other.ValueObject)
-				) &&
-				(
-					ValueString == other.ValueString ||
-					ValueString != null &&
-					ValueString.Equals(other.ValueString, StringComparison.Ordinal)
-				) &&
-				(
-					Category == other.Category ||
-					Category != null &&
-					Category.Equals(other.Category, StringComparison.Ordinal)
-				) &&
-				(
-					Description == other.Description ||
-					Description != null &&
-					Description.Equals(other.Description, StringComparison.Ordinal)
-				) &&
-				(
-					DisplayShowsValue == other.DisplayShowsValue ||
-					DisplayShowsValue != null &&
-					DisplayShowsValue.Equals(other.DisplayShowsValue)
-				) &&
-				(
-					SpecialUseFlag == other.SpecialUseFlag ||
-					SpecialUseFlag != null &&
-					SpecialUseFlag.Equals(other.SpecialUseFlag)
-				) &&
-				(
-					DisplayString == other.DisplayString ||
-					DisplayString != null &&
-					DisplayString.Equals(other.DisplayString, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

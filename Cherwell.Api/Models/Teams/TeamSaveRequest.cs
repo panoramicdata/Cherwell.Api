@@ -106,52 +106,6 @@ public partial class TeamSaveRequest
 	}
 
 	/// <summary>
-	/// Returns true if TeamSaveRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of TeamSaveRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(TeamSaveRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					Description == other.Description ||
-					Description != null &&
-					Description.Equals(other.Description, StringComparison.Ordinal)
-				) &&
-				(
-					EmailAlias == other.EmailAlias ||
-					EmailAlias != null &&
-					EmailAlias.Equals(other.EmailAlias, StringComparison.Ordinal)
-				) &&
-				(
-					Image == other.Image ||
-					Image != null &&
-					Image.Equals(other.Image, StringComparison.Ordinal)
-				) &&
-				(
-					TeamId == other.TeamId ||
-					TeamId != null &&
-					TeamId.Equals(other.TeamId, StringComparison.Ordinal)
-				) &&
-				(
-					TeamName == other.TeamName ||
-					TeamName != null &&
-					TeamName.Equals(other.TeamName, StringComparison.Ordinal)
-				) &&
-				(
-					TeamType == other.TeamType ||
-					TeamType != null &&
-					TeamType.Equals(other.TeamType)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

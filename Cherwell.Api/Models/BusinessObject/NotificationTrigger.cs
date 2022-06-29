@@ -67,42 +67,6 @@ public partial class NotificationTrigger
 	}
 
 	/// <summary>
-	/// Returns true if BusinessObjectNotificationTrigger instances are equal
-	/// </summary>
-	/// <param name="other">Instance of BusinessObjectNotificationTrigger to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(NotificationTrigger? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					SourceType == other.SourceType ||
-					SourceType != null &&
-					SourceType.Equals(other.SourceType, StringComparison.Ordinal)
-				) &&
-				(
-					SourceId == other.SourceId ||
-					SourceId != null &&
-					SourceId.Equals(other.SourceId, StringComparison.Ordinal)
-				) &&
-				(
-					SourceChange == other.SourceChange ||
-					SourceChange != null &&
-					SourceChange.Equals(other.SourceChange, StringComparison.Ordinal)
-				) &&
-				(
-					Key == other.Key ||
-					Key != null &&
-					Key.Equals(other.Key, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

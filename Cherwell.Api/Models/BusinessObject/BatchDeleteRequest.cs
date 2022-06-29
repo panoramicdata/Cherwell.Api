@@ -47,32 +47,6 @@ public partial class BatchDeleteRequest
 		sb.Append("}\n");
 		return sb.ToString();
 	}
-	
-	/// <summary>
-	/// Returns true if BusinessObjectBatchDeleteRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of BusinessObjectBatchDeleteRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(BatchDeleteRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					DeleteRequests == other.DeleteRequests ||
-					DeleteRequests != null &&
-					DeleteRequests.SequenceEqual(other.DeleteRequests)
-				) &&
-				(
-					StopOnError == other.StopOnError ||
-					StopOnError != null &&
-					StopOnError.Equals(other.StopOnError)
-				);
-	}
 
 	/// <summary>
 	/// Gets the hash code

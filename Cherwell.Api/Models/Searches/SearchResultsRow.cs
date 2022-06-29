@@ -85,52 +85,6 @@ public partial class SearchResultsRow
 	}
 
 	/// <summary>
-	/// Returns true if SearchesSearchResultsRow instances are equal
-	/// </summary>
-	/// <param name="other">Instance of SearchesSearchResultsRow to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(SearchResultsRow? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					BusObId == other.BusObId ||
-					BusObId != null &&
-					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
-				) &&
-				(
-					BusObRecId == other.BusObRecId ||
-					BusObRecId != null &&
-					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
-				) &&
-				(
-					Links == other.Links ||
-					Links != null &&
-					Links.SequenceEqual(other.Links)
-				) &&
-				(
-					PublicId == other.PublicId ||
-					PublicId != null &&
-					PublicId.Equals(other.PublicId, StringComparison.Ordinal)
-				) &&
-				(
-					RowColor == other.RowColor ||
-					RowColor != null &&
-					RowColor.Equals(other.RowColor, StringComparison.Ordinal)
-				) &&
-				(
-					SearchResultsFieldValues == other.SearchResultsFieldValues ||
-					SearchResultsFieldValues != null &&
-					SearchResultsFieldValues.SequenceEqual(other.SearchResultsFieldValues)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

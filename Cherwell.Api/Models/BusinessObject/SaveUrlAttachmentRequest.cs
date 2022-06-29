@@ -103,62 +103,6 @@ public partial class SaveUrlAttachmentRequest
 	}
 
 	/// <summary>
-	/// Returns true if BusinessObjectSaveUrlAttachmentRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of BusinessObjectSaveUrlAttachmentRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(SaveUrlAttachmentRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					BusObId == other.BusObId ||
-					BusObId != null &&
-					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
-				) &&
-				(
-					BusObName == other.BusObName ||
-					BusObName != null &&
-					BusObName.Equals(other.BusObName, StringComparison.Ordinal)
-				) &&
-				(
-					BusObPublicId == other.BusObPublicId ||
-					BusObPublicId != null &&
-					BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
-				) &&
-				(
-					BusObRecId == other.BusObRecId ||
-					BusObRecId != null &&
-					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
-				) &&
-				(
-					Comment == other.Comment ||
-					Comment != null &&
-					Comment.Equals(other.Comment, StringComparison.Ordinal)
-				) &&
-				(
-					DisplayText == other.DisplayText ||
-					DisplayText != null &&
-					DisplayText.Equals(other.DisplayText, StringComparison.Ordinal)
-				) &&
-				(
-					IncludeLinks == other.IncludeLinks ||
-					IncludeLinks != null &&
-					IncludeLinks.Equals(other.IncludeLinks)
-				) &&
-				(
-					Url == other.Url ||
-					Url != null &&
-					Url.Equals(other.Url, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

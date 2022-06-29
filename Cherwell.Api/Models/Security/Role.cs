@@ -112,67 +112,6 @@ public partial class Role
 	}
 
 	/// <summary>
-	/// Returns true if Role instances are equal
-	/// </summary>
-	/// <param name="other">Instance of Role to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(Role? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					BrowserClientCustomViewId == other.BrowserClientCustomViewId ||
-					BrowserClientCustomViewId != null &&
-					BrowserClientCustomViewId.Equals(other.BrowserClientCustomViewId, StringComparison.Ordinal)
-				) &&
-				(
-					BusinessObjectExcludeList == other.BusinessObjectExcludeList ||
-					BusinessObjectExcludeList != null &&
-					BusinessObjectExcludeList.SequenceEqual(other.BusinessObjectExcludeList)
-				) &&
-				(
-					Culture == other.Culture ||
-					Culture != null &&
-					Culture.Equals(other.Culture, StringComparison.Ordinal)
-				) &&
-				(
-					Description == other.Description ||
-					Description != null &&
-					Description.Equals(other.Description, StringComparison.Ordinal)
-				) &&
-				(
-					MobileClientCustomViewId == other.MobileClientCustomViewId ||
-					MobileClientCustomViewId != null &&
-					MobileClientCustomViewId.Equals(other.MobileClientCustomViewId, StringComparison.Ordinal)
-				) &&
-				(
-					PrimaryBusObId == other.PrimaryBusObId ||
-					PrimaryBusObId != null &&
-					PrimaryBusObId.Equals(other.PrimaryBusObId, StringComparison.Ordinal)
-				) &&
-				(
-					RoleId == other.RoleId ||
-					RoleId != null &&
-					RoleId.Equals(other.RoleId, StringComparison.Ordinal)
-				) &&
-				(
-					RoleName == other.RoleName ||
-					RoleName != null &&
-					RoleName.Equals(other.RoleName, StringComparison.Ordinal)
-				) &&
-				(
-					SmartClientCustomViewId == other.SmartClientCustomViewId ||
-					SmartClientCustomViewId != null &&
-					SmartClientCustomViewId.Equals(other.SmartClientCustomViewId, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

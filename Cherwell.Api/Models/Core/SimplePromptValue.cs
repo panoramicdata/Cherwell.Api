@@ -58,37 +58,6 @@ public partial class SimplePromptValue
 	}
 
 	/// <summary>
-	/// Returns true if CoreSimplePromptValue instances are equal
-	/// </summary>
-	/// <param name="other">Instance of CoreSimplePromptValue to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(SimplePromptValue? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					PromptDefId == other.PromptDefId ||
-					PromptDefId != null &&
-					PromptDefId.Equals(other.PromptDefId, StringComparison.Ordinal)
-				) &&
-				(
-					PromptName == other.PromptName ||
-					PromptName != null &&
-					PromptName.Equals(other.PromptName, StringComparison.Ordinal)
-				) &&
-				(
-					Value == other.Value ||
-					Value != null &&
-					Value.Equals(other.Value, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

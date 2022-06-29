@@ -58,37 +58,6 @@ public partial class View
 	}
 
 	/// <summary>
-	/// Returns true if CoreView instances are equal
-	/// </summary>
-	/// <param name="other">Instance of CoreView to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(View? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					Name == other.Name ||
-					Name != null &&
-					Name.Equals(other.Name, StringComparison.Ordinal)
-				) &&
-				(
-					ViewId == other.ViewId ||
-					ViewId != null &&
-					ViewId.Equals(other.ViewId, StringComparison.Ordinal)
-				) &&
-				(
-					Image == other.Image ||
-					Image != null &&
-					Image.Equals(other.Image, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

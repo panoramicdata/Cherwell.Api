@@ -41,37 +41,6 @@ public partial class AddItemToQueueRequest
 	public string QueueStandInKey { get; set; }
 
 	/// <summary>
-	/// Returns true if QueuesAddItemToQueueRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of QueuesAddItemToQueueRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(AddItemToQueueRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					BusObId == other.BusObId ||
-					BusObId != null &&
-					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
-				) &&
-				(
-					BusObRecId == other.BusObRecId ||
-					BusObRecId != null &&
-					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
-				) &&
-				(
-					QueueStandInKey == other.QueueStandInKey ||
-					QueueStandInKey != null &&
-					QueueStandInKey.Equals(other.QueueStandInKey, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

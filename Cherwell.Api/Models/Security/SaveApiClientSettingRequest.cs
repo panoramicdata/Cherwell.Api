@@ -112,67 +112,6 @@ public partial class SaveApiClientSettingRequest
 	}
 
 	/// <summary>
-	/// Returns true if SaveApiClientSettingRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of SaveApiClientSettingRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(SaveApiClientSettingRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					AllowAnonymousAccess == other.AllowAnonymousAccess ||
-					AllowAnonymousAccess != null &&
-					AllowAnonymousAccess.Equals(other.AllowAnonymousAccess)
-				) &&
-				(
-					ApiAccessIsEnabled == other.ApiAccessIsEnabled ||
-					ApiAccessIsEnabled != null &&
-					ApiAccessIsEnabled.Equals(other.ApiAccessIsEnabled)
-				) &&
-				(
-					CreateNewClientKey == other.CreateNewClientKey ||
-					CreateNewClientKey != null &&
-					CreateNewClientKey.Equals(other.CreateNewClientKey)
-				) &&
-				(
-					Culture == other.Culture ||
-					Culture != null &&
-					Culture.Equals(other.Culture, StringComparison.Ordinal)
-				) &&
-				(
-					Description == other.Description ||
-					Description != null &&
-					Description.Equals(other.Description, StringComparison.Ordinal)
-				) &&
-				(
-					Name == other.Name ||
-					Name != null &&
-					Name.Equals(other.Name, StringComparison.Ordinal)
-				) &&
-				(
-					RefreshTokenLifespanMinutes == other.RefreshTokenLifespanMinutes ||
-					RefreshTokenLifespanMinutes != null &&
-					RefreshTokenLifespanMinutes.Equals(other.RefreshTokenLifespanMinutes)
-				) &&
-				(
-					StandInKey == other.StandInKey ||
-					StandInKey != null &&
-					StandInKey.Equals(other.StandInKey, StringComparison.Ordinal)
-				) &&
-				(
-					TokenLifespanMinutes == other.TokenLifespanMinutes ||
-					TokenLifespanMinutes != null &&
-					TokenLifespanMinutes.Equals(other.TokenLifespanMinutes)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

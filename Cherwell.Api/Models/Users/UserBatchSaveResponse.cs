@@ -40,27 +40,6 @@ public partial class UserBatchSaveResponse : Response
 	}
 
 	/// <summary>
-	/// Returns true if UserBatchSaveResponse instances are equal
-	/// </summary>
-	/// <param name="other">Instance of UserBatchSaveResponse to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(UserBatchSaveResponse? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-
-					Responses == other.Responses ||
-					Responses != null &&
-					Responses.SequenceEqual(other.Responses)
-				;
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

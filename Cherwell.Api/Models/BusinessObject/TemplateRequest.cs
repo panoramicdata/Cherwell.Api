@@ -76,47 +76,6 @@ public partial class TemplateRequest
 	}
 
 	/// <summary>
-	/// Returns true if BusinessObjectTemplateRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of BusinessObjectTemplateRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(TemplateRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					BusObId == other.BusObId ||
-					BusObId != null &&
-					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
-				) &&
-				(
-					FieldNames == other.FieldNames ||
-					FieldNames != null &&
-					FieldNames.SequenceEqual(other.FieldNames)
-				) &&
-				(
-					FieldIds == other.FieldIds ||
-					FieldIds != null &&
-					FieldIds.SequenceEqual(other.FieldIds)
-				) &&
-				(
-					IncludeAll == other.IncludeAll ||
-					IncludeAll != null &&
-					IncludeAll.Equals(other.IncludeAll)
-				) &&
-				(
-					IncludeRequired == other.IncludeRequired ||
-					IncludeRequired != null &&
-					IncludeRequired.Equals(other.IncludeRequired)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

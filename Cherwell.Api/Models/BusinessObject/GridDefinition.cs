@@ -58,37 +58,6 @@ public partial class GridDefinition
 	}
 
 	/// <summary>
-	/// Returns true if BusinessObjectGridDefinition instances are equal
-	/// </summary>
-	/// <param name="other">Instance of BusinessObjectGridDefinition to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(GridDefinition? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					GridId == other.GridId ||
-					GridId != null &&
-					GridId.Equals(other.GridId, StringComparison.Ordinal)
-				) &&
-				(
-					Name == other.Name ||
-					Name != null &&
-					Name.Equals(other.Name, StringComparison.Ordinal)
-				) &&
-				(
-					DisplayName == other.DisplayName ||
-					DisplayName != null &&
-					DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

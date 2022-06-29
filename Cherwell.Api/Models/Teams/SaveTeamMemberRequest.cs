@@ -67,42 +67,6 @@ public partial class SaveTeamMemberRequest
 	}
 
 	/// <summary>
-	/// Returns true if SaveTeamMemberRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of SaveTeamMemberRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(SaveTeamMemberRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					IsTeamManager == other.IsTeamManager ||
-					IsTeamManager != null &&
-					IsTeamManager.Equals(other.IsTeamManager)
-				) &&
-				(
-					SetAsDefaultTeam == other.SetAsDefaultTeam ||
-					SetAsDefaultTeam != null &&
-					SetAsDefaultTeam.Equals(other.SetAsDefaultTeam)
-				) &&
-				(
-					TeamId == other.TeamId ||
-					TeamId != null &&
-					TeamId.Equals(other.TeamId, StringComparison.Ordinal)
-				) &&
-				(
-					UserRecId == other.UserRecId ||
-					UserRecId != null &&
-					UserRecId.Equals(other.UserRecId, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

@@ -94,57 +94,6 @@ public partial class FieldTemplateItem
 	}
 
 	/// <summary>
-	/// Returns true if BusinessObjectFieldTemplateItem instances are equal
-	/// </summary>
-	/// <param name="other">Instance of BusinessObjectFieldTemplateItem to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(FieldTemplateItem? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					Dirty == other.Dirty ||
-					Dirty != null &&
-					Dirty.Equals(other.Dirty)
-				) &&
-				(
-					DisplayName == other.DisplayName ||
-					DisplayName != null &&
-					DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
-				) &&
-				(
-					FieldId == other.FieldId ||
-					FieldId != null &&
-					FieldId.Equals(other.FieldId, StringComparison.Ordinal)
-				) &&
-				(
-					FullFieldId == other.FullFieldId ||
-					FullFieldId != null &&
-					FullFieldId.Equals(other.FullFieldId, StringComparison.Ordinal)
-				) &&
-				(
-					Html == other.Html ||
-					Html != null &&
-					Html.Equals(other.Html, StringComparison.Ordinal)
-				) &&
-				(
-					Name == other.Name ||
-					Name != null &&
-					Name.Equals(other.Name, StringComparison.Ordinal)
-				) &&
-				(
-					Value == other.Value ||
-					Value != null &&
-					Value.Equals(other.Value, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

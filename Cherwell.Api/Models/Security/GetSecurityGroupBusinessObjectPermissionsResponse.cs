@@ -52,47 +52,6 @@ public partial class GetSecurityGroupBusinessObjectPermissionsResponse : Respons
 	}
 
 	/// <summary>
-	/// Returns true if GetSecurityGroupBusinessObjectPermissionsResponse instances are equal
-	/// </summary>
-	/// <param name="other">Instance of GetSecurityGroupBusinessObjectPermissionsResponse to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(GetSecurityGroupBusinessObjectPermissionsResponse? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					BusinessObjectPermissions == other.BusinessObjectPermissions ||
-					BusinessObjectPermissions != null &&
-					BusinessObjectPermissions.SequenceEqual(other.BusinessObjectPermissions)
-				) &&
-				(
-					ErrorCode == other.ErrorCode ||
-					ErrorCode != null &&
-					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
-				) &&
-				(
-					ErrorMessage == other.ErrorMessage ||
-					ErrorMessage != null &&
-					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
-				) &&
-				(
-					HasError == other.HasError ||
-					HasError != null &&
-					HasError.Equals(other.HasError)
-				) &&
-				(
-					HttpStatusCode == other.HttpStatusCode ||
-					HttpStatusCode != null &&
-					HttpStatusCode.Equals(other.HttpStatusCode)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

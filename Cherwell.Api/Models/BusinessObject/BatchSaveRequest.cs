@@ -49,32 +49,6 @@ public partial class BatchSaveRequest
 	}
 
 	/// <summary>
-	/// Returns true if BusinessObjectBatchSaveRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of BusinessObjectBatchSaveRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(BatchSaveRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					SaveRequests == other.SaveRequests ||
-					SaveRequests != null &&
-					SaveRequests.SequenceEqual(other.SaveRequests)
-				) &&
-				(
-					StopOnError == other.StopOnError ||
-					StopOnError != null &&
-					StopOnError.Equals(other.StopOnError)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

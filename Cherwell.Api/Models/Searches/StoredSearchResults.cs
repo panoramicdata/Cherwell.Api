@@ -49,32 +49,6 @@ public partial class StoredSearchResults
 	}
 
 	/// <summary>
-	/// Returns true if SearchesStoredSearchResults instances are equal
-	/// </summary>
-	/// <param name="other">Instance of SearchesStoredSearchResults to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(StoredSearchResults? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					Columns == other.Columns ||
-					Columns != null &&
-					Columns.SequenceEqual(other.Columns)
-				) &&
-				(
-					Rows == other.Rows ||
-					Rows != null &&
-					Rows.SequenceEqual(other.Rows)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

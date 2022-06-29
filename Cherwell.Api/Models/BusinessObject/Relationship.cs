@@ -85,52 +85,6 @@ public partial class BusinessObjectRelationship
 	}
 
 	/// <summary>
-	/// Returns true if BusinessObjectRelationship instances are equal
-	/// </summary>
-	/// <param name="other">Instance of BusinessObjectRelationship to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(BusinessObjectRelationship? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					Cardinality == other.Cardinality ||
-					Cardinality != null &&
-					Cardinality.Equals(other.Cardinality, StringComparison.Ordinal)
-				) &&
-				(
-					Description == other.Description ||
-					Description != null &&
-					Description.Equals(other.Description, StringComparison.Ordinal)
-				) &&
-				(
-					DisplayName == other.DisplayName ||
-					DisplayName != null &&
-					DisplayName.Equals(other.DisplayName, StringComparison.Ordinal)
-				) &&
-				(
-					FieldDefinitions == other.FieldDefinitions ||
-					FieldDefinitions != null &&
-					FieldDefinitions.SequenceEqual(other.FieldDefinitions)
-				) &&
-				(
-					RelationshipId == other.RelationshipId ||
-					RelationshipId != null &&
-					RelationshipId.Equals(other.RelationshipId, StringComparison.Ordinal)
-				) &&
-				(
-					Target == other.Target ||
-					Target != null &&
-					Target.Equals(other.Target, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

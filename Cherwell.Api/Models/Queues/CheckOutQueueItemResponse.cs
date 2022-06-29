@@ -70,57 +70,6 @@ public partial class CheckOutQueueItemResponse : Response
 	}
 
 	/// <summary>
-	/// Returns true if QueuesCheckOutQueueItemResponse instances are equal
-	/// </summary>
-	/// <param name="other">Instance of QueuesCheckOutQueueItemResponse to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(CheckOutQueueItemResponse? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					HistoryRecId == other.HistoryRecId ||
-					HistoryRecId != null &&
-					HistoryRecId.Equals(other.HistoryRecId, StringComparison.Ordinal)
-				) &&
-				(
-					HistoryText == other.HistoryText ||
-					HistoryText != null &&
-					HistoryText.Equals(other.HistoryText, StringComparison.Ordinal)
-				) &&
-				(
-					HistoryTypeId == other.HistoryTypeId ||
-					HistoryTypeId != null &&
-					HistoryTypeId.Equals(other.HistoryTypeId, StringComparison.Ordinal)
-				) &&
-				(
-					ErrorCode == other.ErrorCode ||
-					ErrorCode != null &&
-					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
-				) &&
-				(
-					ErrorMessage == other.ErrorMessage ||
-					ErrorMessage != null &&
-					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
-				) &&
-				(
-					HasError == other.HasError ||
-					HasError != null &&
-					HasError.Equals(other.HasError)
-				) &&
-				(
-					HttpStatusCode == other.HttpStatusCode ||
-					HttpStatusCode != null &&
-					HttpStatusCode.Equals(other.HttpStatusCode)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

@@ -64,47 +64,6 @@ public partial class UserSaveResponse : Response
 	}
 
 	/// <summary>
-	/// Returns true if UserSaveResponse instances are equal
-	/// </summary>
-	/// <param name="other">Instance of UserSaveResponse to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(UserSaveResponse? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					BusObPublicId == other.BusObPublicId ||
-					BusObPublicId != null &&
-					BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
-				) &&
-				(
-					BusObRecId == other.BusObRecId ||
-					BusObRecId != null &&
-					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
-				) &&
-				(
-					Error == other.Error ||
-					Error != null &&
-					Error.Equals(other.Error, StringComparison.Ordinal)
-				) &&
-				(
-					ErrorCode == other.ErrorCode ||
-					ErrorCode != null &&
-					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
-				) &&
-				(
-					HasError == other.HasError ||
-					HasError != null &&
-					HasError.Equals(other.HasError)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

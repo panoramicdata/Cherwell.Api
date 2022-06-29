@@ -58,37 +58,6 @@ public partial class QuickSearchConfigSavedRequest
 	}
 
 	/// <summary>
-	/// Returns true if SearchesQuickSearchConfigSavedRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of SearchesQuickSearchConfigSavedRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(QuickSearchConfigSavedRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					StandIn == other.StandIn ||
-					StandIn != null &&
-					StandIn.Equals(other.StandIn, StringComparison.Ordinal)
-				) &&
-				(
-					BusObIds == other.BusObIds ||
-					BusObIds != null &&
-					BusObIds.SequenceEqual(other.BusObIds)
-				) &&
-				(
-					IsGeneral == other.IsGeneral ||
-					IsGeneral != null &&
-					IsGeneral.Equals(other.IsGeneral)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

@@ -58,37 +58,6 @@ public partial class RightCategory
 	}
 
 	/// <summary>
-	/// Returns true if RightCategory instances are equal
-	/// </summary>
-	/// <param name="other">Instance of RightCategory to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(RightCategory? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					CategoryDescription == other.CategoryDescription ||
-					CategoryDescription != null &&
-					CategoryDescription.Equals(other.CategoryDescription, StringComparison.Ordinal)
-				) &&
-				(
-					CategoryId == other.CategoryId ||
-					CategoryId != null &&
-					CategoryId.Equals(other.CategoryId, StringComparison.Ordinal)
-				) &&
-				(
-					CategoryName == other.CategoryName ||
-					CategoryName != null &&
-					CategoryName.Equals(other.CategoryName, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

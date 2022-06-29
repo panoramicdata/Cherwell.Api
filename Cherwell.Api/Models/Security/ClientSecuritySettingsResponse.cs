@@ -71,42 +71,6 @@ public partial class ClientSecuritySettingsResponse : Response
 	}
 
 	/// <summary>
-	/// Returns true if ClientSecuritySettingsResponse instances are equal
-	/// </summary>
-	/// <param name="other">Instance of ClientSecuritySettingsResponse to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(ClientSecuritySettingsResponse? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					InternalLoginAllowed == other.InternalLoginAllowed ||
-					InternalLoginAllowed != null &&
-					InternalLoginAllowed.Equals(other.InternalLoginAllowed)
-				) &&
-				(
-					LdapLoginAllowed == other.LdapLoginAllowed ||
-					LdapLoginAllowed != null &&
-					LdapLoginAllowed.Equals(other.LdapLoginAllowed)
-				) &&
-				(
-					SamlLoginAllowed == other.SamlLoginAllowed ||
-					SamlLoginAllowed != null &&
-					SamlLoginAllowed.Equals(other.SamlLoginAllowed)
-				) &&
-				(
-					WindowsLoginAllowed == other.WindowsLoginAllowed ||
-					WindowsLoginAllowed != null &&
-					WindowsLoginAllowed.Equals(other.WindowsLoginAllowed)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

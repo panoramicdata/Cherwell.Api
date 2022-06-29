@@ -52,47 +52,6 @@ public partial class FieldValuesLookupResponse : Response
 	}
 
 	/// <summary>
-	/// Returns true if BusinessObjectFieldValuesLookupResponse instances are equal
-	/// </summary>
-	/// <param name="other">Instance of BusinessObjectFieldValuesLookupResponse to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(FieldValuesLookupResponse? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					Values == other.Values ||
-					Values != null &&
-					Values.SequenceEqual(other.Values)
-				) &&
-				(
-					ErrorCode == other.ErrorCode ||
-					ErrorCode != null &&
-					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
-				) &&
-				(
-					ErrorMessage == other.ErrorMessage ||
-					ErrorMessage != null &&
-					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
-				) &&
-				(
-					HasError == other.HasError ||
-					HasError != null &&
-					HasError.Equals(other.HasError)
-				) &&
-				(
-					HttpStatusCode == other.HttpStatusCode ||
-					HttpStatusCode != null &&
-					HttpStatusCode.Equals(other.HttpStatusCode)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

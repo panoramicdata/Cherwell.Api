@@ -40,27 +40,6 @@ public partial class UserBatchDeleteResponse : Response
 	}
 
 	/// <summary>
-	/// Returns true if UserBatchDeleteResponse instances are equal
-	/// </summary>
-	/// <param name="other">Instance of UserBatchDeleteResponse to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(UserBatchDeleteResponse? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-
-					Responses == other.Responses ||
-					Responses != null &&
-					Responses.SequenceEqual(other.Responses)
-				;
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

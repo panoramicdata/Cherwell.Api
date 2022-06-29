@@ -85,52 +85,6 @@ public partial class ServiceInfoResponse : Response
 	}
 
 	/// <summary>
-	/// Returns true if CoreServiceInfoResponse instances are equal
-	/// </summary>
-	/// <param name="other">Instance of CoreServiceInfoResponse to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(ServiceInfoResponse? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					ApiVersion == other.ApiVersion ||
-					ApiVersion != null &&
-					ApiVersion.Equals(other.ApiVersion, StringComparison.Ordinal)
-				) &&
-				(
-					CsmCulture == other.CsmCulture ||
-					CsmCulture != null &&
-					CsmCulture.Equals(other.CsmCulture, StringComparison.Ordinal)
-				) &&
-				(
-					CsmVersion == other.CsmVersion ||
-					CsmVersion != null &&
-					CsmVersion.Equals(other.CsmVersion, StringComparison.Ordinal)
-				) &&
-				(
-					SystemDateTime == other.SystemDateTime ||
-					SystemDateTime != null &&
-					SystemDateTime.Equals(other.SystemDateTime)
-				) &&
-				(
-					TimeZone == other.TimeZone ||
-					TimeZone != null &&
-					TimeZone.Equals(other.TimeZone)
-				) &&
-				(
-					SystemUtcOffset == other.SystemUtcOffset ||
-					SystemUtcOffset != null &&
-					SystemUtcOffset.Equals(other.SystemUtcOffset, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

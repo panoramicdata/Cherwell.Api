@@ -103,62 +103,6 @@ public partial class SearchItem
 	}
 
 	/// <summary>
-	/// Returns true if SearchesSearchItem instances are equal
-	/// </summary>
-	/// <param name="other">Instance of SearchesSearchItem to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(SearchItem? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					Association == other.Association ||
-					Association != null &&
-					Association.Equals(other.Association, StringComparison.Ordinal)
-				) &&
-				(
-					Links == other.Links ||
-					Links != null &&
-					Links.SequenceEqual(other.Links)
-				) &&
-				(
-					LocalizedScopeName == other.LocalizedScopeName ||
-					LocalizedScopeName != null &&
-					LocalizedScopeName.Equals(other.LocalizedScopeName, StringComparison.Ordinal)
-				) &&
-				(
-					ParentFolderId == other.ParentFolderId ||
-					ParentFolderId != null &&
-					ParentFolderId.Equals(other.ParentFolderId, StringComparison.Ordinal)
-				) &&
-				(
-					Scope == other.Scope ||
-					Scope != null &&
-					Scope.Equals(other.Scope, StringComparison.Ordinal)
-				) &&
-				(
-					ScopeOwner == other.ScopeOwner ||
-					ScopeOwner != null &&
-					ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
-				) &&
-				(
-					SearchId == other.SearchId ||
-					SearchId != null &&
-					SearchId.Equals(other.SearchId, StringComparison.Ordinal)
-				) &&
-				(
-					SearchName == other.SearchName ||
-					SearchName != null &&
-					SearchName.Equals(other.SearchName, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

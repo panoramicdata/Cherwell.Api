@@ -49,32 +49,6 @@ public partial class Team
 	}
 
 	/// <summary>
-	/// Returns true if Team instances are equal
-	/// </summary>
-	/// <param name="other">Instance of Team to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(Team? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					TeamId == other.TeamId ||
-					TeamId != null &&
-					TeamId.Equals(other.TeamId, StringComparison.Ordinal)
-				) &&
-				(
-					TeamName == other.TeamName ||
-					TeamName != null &&
-					TeamName.Equals(other.TeamName, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

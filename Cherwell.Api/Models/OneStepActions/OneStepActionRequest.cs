@@ -76,47 +76,6 @@ public partial class OneStepActionRequest
 	}
 
 	/// <summary>
-	/// Returns true if OneStepActionsOneStepActionRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of OneStepActionsOneStepActionRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(OneStepActionRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					AcquireLicense == other.AcquireLicense ||
-					AcquireLicense != null &&
-					AcquireLicense.Equals(other.AcquireLicense)
-				) &&
-				(
-					BusObId == other.BusObId ||
-					BusObId != null &&
-					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
-				) &&
-				(
-					BusObRecId == other.BusObRecId ||
-					BusObRecId != null &&
-					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
-				) &&
-				(
-					OneStepActionStandInKey == other.OneStepActionStandInKey ||
-					OneStepActionStandInKey != null &&
-					OneStepActionStandInKey.Equals(other.OneStepActionStandInKey, StringComparison.Ordinal)
-				) &&
-				(
-					PromptValues == other.PromptValues ||
-					PromptValues != null &&
-					PromptValues.SequenceEqual(other.PromptValues)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

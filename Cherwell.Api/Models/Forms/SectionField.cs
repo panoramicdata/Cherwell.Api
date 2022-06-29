@@ -91,52 +91,6 @@ public partial class SectionField
 	}
 
 	/// <summary>
-	/// Returns true if FormsSectionField instances are equal
-	/// </summary>
-	/// <param name="other">Instance of FormsSectionField to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(SectionField? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					Attributes == other.Attributes ||
-					Attributes != null &&
-					Attributes.SequenceEqual(other.Attributes)
-				) &&
-				(
-					FieldId == other.FieldId ||
-					FieldId != null &&
-					FieldId.Equals(other.FieldId, StringComparison.Ordinal)
-				) &&
-				(
-					FieldType == other.FieldType ||
-					FieldType != null &&
-					FieldType.Equals(other.FieldType, StringComparison.Ordinal)
-				) &&
-				(
-					Label == other.Label ||
-					Label != null &&
-					Label.Equals(other.Label, StringComparison.Ordinal)
-				) &&
-				(
-					Multiline == other.Multiline ||
-					Multiline != null &&
-					Multiline.Equals(other.Multiline)
-				) &&
-				(
-					Value == other.Value ||
-					Value != null &&
-					Value.Equals(other.Value, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

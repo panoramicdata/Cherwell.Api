@@ -32,22 +32,6 @@ public partial class ModelObject
 	}
 
 	/// <summary>
-	/// Returns true if ModelObject instances are equal
-	/// </summary>
-	/// <param name="other">Instance of ModelObject to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(ModelObject? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return false;
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

@@ -115,37 +115,6 @@ public partial class ColumnSchema
 	}
 
 	/// <summary>
-	/// Returns true if SearchesColumnSchema instances are equal
-	/// </summary>
-	/// <param name="other">Instance of SearchesColumnSchema to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(ColumnSchema? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					Name == other.Name ||
-					Name != null &&
-					Name.Equals(other.Name, StringComparison.Ordinal)
-				) &&
-				(
-					FieldId == other.FieldId ||
-					FieldId != null &&
-					FieldId.Equals(other.FieldId, StringComparison.Ordinal)
-				) &&
-				(
-					Type == other.Type ||
-					Type != null &&
-					Type.Equals(other.Type)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

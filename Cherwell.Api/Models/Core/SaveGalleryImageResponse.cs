@@ -61,52 +61,6 @@ public partial class SaveGalleryImageResponse : Response
 	}
 
 	/// <summary>
-	/// Returns true if CoreSaveGalleryImageResponse instances are equal
-	/// </summary>
-	/// <param name="other">Instance of CoreSaveGalleryImageResponse to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(SaveGalleryImageResponse? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					Name == other.Name ||
-					Name != null &&
-					Name.Equals(other.Name, StringComparison.Ordinal)
-				) &&
-				(
-					StandInKey == other.StandInKey ||
-					StandInKey != null &&
-					StandInKey.Equals(other.StandInKey, StringComparison.Ordinal)
-				) &&
-				(
-					ErrorCode == other.ErrorCode ||
-					ErrorCode != null &&
-					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
-				) &&
-				(
-					ErrorMessage == other.ErrorMessage ||
-					ErrorMessage != null &&
-					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
-				) &&
-				(
-					HasError == other.HasError ||
-					HasError != null &&
-					HasError.Equals(other.HasError)
-				) &&
-				(
-					HttpStatusCode == other.HttpStatusCode ||
-					HttpStatusCode != null &&
-					HttpStatusCode.Equals(other.HttpStatusCode)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

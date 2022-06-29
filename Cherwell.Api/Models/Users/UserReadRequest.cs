@@ -49,32 +49,6 @@ public partial class UserReadRequest
 	}
 
 	/// <summary>
-	/// Returns true if UserReadRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of UserReadRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(UserReadRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					LoginId == other.LoginId ||
-					LoginId != null &&
-					LoginId.Equals(other.LoginId, StringComparison.Ordinal)
-				) &&
-				(
-					PublicId == other.PublicId ||
-					PublicId != null &&
-					PublicId.Equals(other.PublicId, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

@@ -67,42 +67,6 @@ public partial class CheckInQueueItemRequest
 	}
 
 	/// <summary>
-	/// Returns true if QueuesCheckInQueueItemRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of QueuesCheckInQueueItemRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(CheckInQueueItemRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					BusObId == other.BusObId ||
-					BusObId != null &&
-					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
-				) &&
-				(
-					BusObRecId == other.BusObRecId ||
-					BusObRecId != null &&
-					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
-				) &&
-				(
-					HistoryNotes == other.HistoryNotes ||
-					HistoryNotes != null &&
-					HistoryNotes.Equals(other.HistoryNotes, StringComparison.Ordinal)
-				) &&
-				(
-					QueueStandInKey == other.QueueStandInKey ||
-					QueueStandInKey != null &&
-					QueueStandInKey.Equals(other.QueueStandInKey, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

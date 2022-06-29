@@ -76,47 +76,6 @@ public partial class Location
 	}
 
 	/// <summary>
-	/// Returns true if CoreLocation instances are equal
-	/// </summary>
-	/// <param name="other">Instance of CoreLocation to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(Location? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					Altitude == other.Altitude ||
-					Altitude != null &&
-					Altitude.Equals(other.Altitude)
-				) &&
-				(
-					BusObId == other.BusObId ||
-					BusObId != null &&
-					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
-				) &&
-				(
-					BusObRecId == other.BusObRecId ||
-					BusObRecId != null &&
-					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
-				) &&
-				(
-					Latitude == other.Latitude ||
-					Latitude != null &&
-					Latitude.Equals(other.Latitude)
-				) &&
-				(
-					Longitude == other.Longitude ||
-					Longitude != null &&
-					Longitude.Equals(other.Longitude)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

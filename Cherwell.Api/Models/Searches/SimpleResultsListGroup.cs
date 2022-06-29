@@ -88,67 +88,6 @@ public partial class SimpleResultsListGroup : Response
 	}
 
 	/// <summary>
-	/// Returns true if SearchesSimpleResultsListGroup instances are equal
-	/// </summary>
-	/// <param name="other">Instance of SearchesSimpleResultsListGroup to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(SimpleResultsListGroup? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					IsBusObTarget == other.IsBusObTarget ||
-					IsBusObTarget != null &&
-					IsBusObTarget.Equals(other.IsBusObTarget)
-				) &&
-				(
-					SimpleResultsListItems == other.SimpleResultsListItems ||
-					SimpleResultsListItems != null &&
-					SimpleResultsListItems.SequenceEqual(other.SimpleResultsListItems)
-				) &&
-				(
-					SubTitle == other.SubTitle ||
-					SubTitle != null &&
-					SubTitle.Equals(other.SubTitle, StringComparison.Ordinal)
-				) &&
-				(
-					TargetId == other.TargetId ||
-					TargetId != null &&
-					TargetId.Equals(other.TargetId, StringComparison.Ordinal)
-				) &&
-				(
-					Title == other.Title ||
-					Title != null &&
-					Title.Equals(other.Title, StringComparison.Ordinal)
-				) &&
-				(
-					ErrorCode == other.ErrorCode ||
-					ErrorCode != null &&
-					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
-				) &&
-				(
-					ErrorMessage == other.ErrorMessage ||
-					ErrorMessage != null &&
-					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
-				) &&
-				(
-					HasError == other.HasError ||
-					HasError != null &&
-					HasError.Equals(other.HasError)
-				) &&
-				(
-					HttpStatusCode == other.HttpStatusCode ||
-					HttpStatusCode != null &&
-					HttpStatusCode.Equals(other.HttpStatusCode)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

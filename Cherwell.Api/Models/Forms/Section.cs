@@ -85,52 +85,6 @@ public partial class Section
 	}
 
 	/// <summary>
-	/// Returns true if FormsSection instances are equal
-	/// </summary>
-	/// <param name="other">Instance of FormsSection to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(Section? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					SectionFields == other.SectionFields ||
-					SectionFields != null &&
-					SectionFields.SequenceEqual(other.SectionFields)
-				) &&
-				(
-					GalleryImage == other.GalleryImage ||
-					GalleryImage != null &&
-					GalleryImage.Equals(other.GalleryImage, StringComparison.Ordinal)
-				) &&
-				(
-					Title == other.Title ||
-					Title != null &&
-					Title.Equals(other.Title, StringComparison.Ordinal)
-				) &&
-				(
-					RelationshipId == other.RelationshipId ||
-					RelationshipId != null &&
-					RelationshipId.Equals(other.RelationshipId, StringComparison.Ordinal)
-				) &&
-				(
-					TargetBusObId == other.TargetBusObId ||
-					TargetBusObId != null &&
-					TargetBusObId.Equals(other.TargetBusObId, StringComparison.Ordinal)
-				) &&
-				(
-					TargetBusObRecId == other.TargetBusObRecId ||
-					TargetBusObRecId != null &&
-					TargetBusObRecId.Equals(other.TargetBusObRecId, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

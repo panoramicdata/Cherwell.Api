@@ -52,47 +52,6 @@ public partial class GetTransitionOptionsResponse : Response
 	}
 
 	/// <summary>
-	/// Returns true if LifecycleGetTransitionOptionsResponse instances are equal
-	/// </summary>
-	/// <param name="other">Instance of LifecycleGetTransitionOptionsResponse to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(GetTransitionOptionsResponse? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					Transitions == other.Transitions ||
-					Transitions != null &&
-					Transitions.SequenceEqual(other.Transitions)
-				) &&
-				(
-					ErrorCode == other.ErrorCode ||
-					ErrorCode != null &&
-					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
-				) &&
-				(
-					ErrorMessage == other.ErrorMessage ||
-					ErrorMessage != null &&
-					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
-				) &&
-				(
-					HasError == other.HasError ||
-					HasError != null &&
-					HasError.Equals(other.HasError)
-				) &&
-				(
-					HttpStatusCode == other.HttpStatusCode ||
-					HttpStatusCode != null &&
-					HttpStatusCode.Equals(other.HttpStatusCode)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

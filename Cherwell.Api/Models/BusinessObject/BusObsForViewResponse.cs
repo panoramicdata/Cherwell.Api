@@ -40,27 +40,6 @@ public partial class BusObsForViewResponse : Response
 	}
 
 	/// <summary>
-	/// Returns true if BusinessObjectBusObsForViewResponse instances are equal
-	/// </summary>
-	/// <param name="other">Instance of BusinessObjectBusObsForViewResponse to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(BusObsForViewResponse? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					Summaries == other.Summaries ||
-					Summaries != null &&
-					Summaries.SequenceEqual(other.Summaries)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

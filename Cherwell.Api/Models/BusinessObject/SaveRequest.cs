@@ -121,57 +121,6 @@ public partial class SaveRequest
 	}
 
 	/// <summary>
-	/// Returns true if BusinessObjectSaveRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of BusinessObjectSaveRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(SaveRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					BusObId == other.BusObId ||
-					BusObId != null &&
-					BusObId.Equals(other.BusObId, StringComparison.Ordinal)
-				) &&
-				(
-					BusObPublicId == other.BusObPublicId ||
-					BusObPublicId != null &&
-					BusObPublicId.Equals(other.BusObPublicId, StringComparison.Ordinal)
-				) &&
-				(
-					BusObRecId == other.BusObRecId ||
-					BusObRecId != null &&
-					BusObRecId.Equals(other.BusObRecId, StringComparison.Ordinal)
-				) &&
-				(
-					CacheKey == other.CacheKey ||
-					CacheKey != null &&
-					CacheKey.Equals(other.CacheKey, StringComparison.Ordinal)
-				) &&
-				(
-					CacheScope == other.CacheScope ||
-					CacheScope != null &&
-					CacheScope.Equals(other.CacheScope)
-				) &&
-				(
-					Fields == other.Fields ||
-					Fields != null &&
-					Fields.SequenceEqual(other.Fields)
-				) &&
-				(
-					Persist == other.Persist ||
-					Persist != null &&
-					Persist.Equals(other.Persist)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

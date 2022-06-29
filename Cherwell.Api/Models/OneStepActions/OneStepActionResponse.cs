@@ -88,67 +88,6 @@ public partial class OneStepActionResponse : Response
 	}
 
 	/// <summary>
-	/// Returns true if OneStepActionsOneStepActionResponse instances are equal
-	/// </summary>
-	/// <param name="other">Instance of OneStepActionsOneStepActionResponse to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(OneStepActionResponse? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					Completed == other.Completed ||
-					Completed != null &&
-					Completed.Equals(other.Completed)
-				) &&
-				(
-					CurrentPrimaryBusObId == other.CurrentPrimaryBusObId ||
-					CurrentPrimaryBusObId != null &&
-					CurrentPrimaryBusObId.Equals(other.CurrentPrimaryBusObId, StringComparison.Ordinal)
-				) &&
-				(
-					CurrentPrimaryBusObRecId == other.CurrentPrimaryBusObRecId ||
-					CurrentPrimaryBusObRecId != null &&
-					CurrentPrimaryBusObRecId.Equals(other.CurrentPrimaryBusObRecId, StringComparison.Ordinal)
-				) &&
-				(
-					HasNewAccessToken == other.HasNewAccessToken ||
-					HasNewAccessToken != null &&
-					HasNewAccessToken.Equals(other.HasNewAccessToken)
-				) &&
-				(
-					NewAccessToken == other.NewAccessToken ||
-					NewAccessToken != null &&
-					NewAccessToken.Equals(other.NewAccessToken, StringComparison.Ordinal)
-				) &&
-				(
-					ErrorCode == other.ErrorCode ||
-					ErrorCode != null &&
-					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
-				) &&
-				(
-					ErrorMessage == other.ErrorMessage ||
-					ErrorMessage != null &&
-					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
-				) &&
-				(
-					HasError == other.HasError ||
-					HasError != null &&
-					HasError.Equals(other.HasError)
-				) &&
-				(
-					HttpStatusCode == other.HttpStatusCode ||
-					HttpStatusCode != null &&
-					HttpStatusCode.Equals(other.HttpStatusCode)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

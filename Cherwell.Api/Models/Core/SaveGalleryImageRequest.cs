@@ -130,62 +130,6 @@ public partial class SaveGalleryImageRequest
 	}
 
 	/// <summary>
-	/// Returns true if CoreSaveGalleryImageRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of CoreSaveGalleryImageRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(SaveGalleryImageRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					Base64EncodedImageData == other.Base64EncodedImageData ||
-					Base64EncodedImageData != null &&
-					Base64EncodedImageData.Equals(other.Base64EncodedImageData, StringComparison.Ordinal)
-				) &&
-				(
-					Description == other.Description ||
-					Description != null &&
-					Description.Equals(other.Description, StringComparison.Ordinal)
-				) &&
-				(
-					Folder == other.Folder ||
-					Folder != null &&
-					Folder.Equals(other.Folder, StringComparison.Ordinal)
-				) &&
-				(
-					ImageType == other.ImageType ||
-					ImageType != null &&
-					ImageType.Equals(other.ImageType)
-				) &&
-				(
-					Name == other.Name ||
-					Name != null &&
-					Name.Equals(other.Name, StringComparison.Ordinal)
-				) &&
-				(
-					Scope == other.Scope ||
-					Scope != null &&
-					Scope.Equals(other.Scope, StringComparison.Ordinal)
-				) &&
-				(
-					ScopeOwner == other.ScopeOwner ||
-					ScopeOwner != null &&
-					ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
-				) &&
-				(
-					StandInKey == other.StandInKey ||
-					StandInKey != null &&
-					StandInKey.Equals(other.StandInKey, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

@@ -61,52 +61,6 @@ public partial class GetApprovalsResponse : Response
 	}
 
 	/// <summary>
-	/// Returns true if ApprovalGetApprovalsResponse instances are equal
-	/// </summary>
-	/// <param name="other">Instance of ApprovalGetApprovalsResponse to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(GetApprovalsResponse? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					TotalRecords == other.TotalRecords ||
-					TotalRecords != null &&
-					TotalRecords.Equals(other.TotalRecords)
-				) &&
-				(
-					Approvals == other.Approvals ||
-					Approvals != null &&
-					Approvals.SequenceEqual(other.Approvals)
-				) &&
-				(
-					ErrorCode == other.ErrorCode ||
-					ErrorCode != null &&
-					ErrorCode.Equals(other.ErrorCode, StringComparison.Ordinal)
-				) &&
-				(
-					ErrorMessage == other.ErrorMessage ||
-					ErrorMessage != null &&
-					ErrorMessage.Equals(other.ErrorMessage, StringComparison.Ordinal)
-				) &&
-				(
-					HasError == other.HasError ||
-					HasError != null &&
-					HasError.Equals(other.HasError)
-				) &&
-				(
-					HttpStatusCode == other.HttpStatusCode ||
-					HttpStatusCode != null &&
-					HttpStatusCode.Equals(other.HttpStatusCode)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

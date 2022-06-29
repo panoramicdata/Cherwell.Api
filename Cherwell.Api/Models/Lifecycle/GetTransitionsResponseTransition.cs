@@ -67,42 +67,6 @@ public partial class GetTransitionsResponseTransition
 	}
 
 	/// <summary>
-	/// Returns true if LifecycleGetTransitionsResponseTransition instances are equal
-	/// </summary>
-	/// <param name="other">Instance of LifecycleGetTransitionsResponseTransition to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(GetTransitionsResponseTransition? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					Id == other.Id ||
-					Id != null &&
-					Id.Equals(other.Id, StringComparison.Ordinal)
-				) &&
-				(
-					Name == other.Name ||
-					Name != null &&
-					Name.Equals(other.Name, StringComparison.Ordinal)
-				) &&
-				(
-					FromStatusId == other.FromStatusId ||
-					FromStatusId != null &&
-					FromStatusId.Equals(other.FromStatusId, StringComparison.Ordinal)
-				) &&
-				(
-					ToStatusId == other.ToStatusId ||
-					ToStatusId != null &&
-					ToStatusId.Equals(other.ToStatusId, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

@@ -61,37 +61,6 @@ public partial class AddUserToTeamRequest
 	}
 
 	/// <summary>
-	/// Returns true if AddUserToTeamRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of AddUserToTeamRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(AddUserToTeamRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					TeamId == other.TeamId ||
-					TeamId != null &&
-					TeamId.Equals(other.TeamId, StringComparison.Ordinal)
-				) &&
-				(
-					UserIsTeamManager == other.UserIsTeamManager ||
-					UserIsTeamManager != null &&
-					UserIsTeamManager.Equals(other.UserIsTeamManager)
-				) &&
-				(
-					UserRecordId == other.UserRecordId ||
-					UserRecordId != null &&
-					UserRecordId.Equals(other.UserRecordId, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

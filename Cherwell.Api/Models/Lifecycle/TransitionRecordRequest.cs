@@ -40,27 +40,6 @@ public partial class TransitionRecordRequest
 	}
 
 	/// <summary>
-	/// Returns true if LifecycleTransitionRecordRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of LifecycleTransitionRecordRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(TransitionRecordRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					TransitionOptionId == other.TransitionOptionId ||
-					TransitionOptionId != null &&
-					TransitionOptionId.Equals(other.TransitionOptionId, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>

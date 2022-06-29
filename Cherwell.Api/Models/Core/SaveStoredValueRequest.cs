@@ -166,62 +166,6 @@ public partial class SaveStoredValueRequest
 	}
 
 	/// <summary>
-	/// Returns true if CoreSaveStoredValueRequest instances are equal
-	/// </summary>
-	/// <param name="other">Instance of CoreSaveStoredValueRequest to be compared</param>
-	/// <returns>Boolean</returns>
-	public bool Equals(SaveStoredValueRequest? other)
-	{
-		// credit: http://stackoverflow.com/a/10454552/677735
-		if (other == null)
-		{
-			return false;
-		}
-
-		return
-				(
-					Description == other.Description ||
-					Description != null &&
-					Description.Equals(other.Description, StringComparison.Ordinal)
-				) &&
-				(
-					Folder == other.Folder ||
-					Folder != null &&
-					Folder.Equals(other.Folder, StringComparison.Ordinal)
-				) &&
-				(
-					Name == other.Name ||
-					Name != null &&
-					Name.Equals(other.Name, StringComparison.Ordinal)
-				) &&
-				(
-					Scope == other.Scope ||
-					Scope != null &&
-					Scope.Equals(other.Scope, StringComparison.Ordinal)
-				) &&
-				(
-					ScopeOwner == other.ScopeOwner ||
-					ScopeOwner != null &&
-					ScopeOwner.Equals(other.ScopeOwner, StringComparison.Ordinal)
-				) &&
-				(
-					StandInKey == other.StandInKey ||
-					StandInKey != null &&
-					StandInKey.Equals(other.StandInKey, StringComparison.Ordinal)
-				) &&
-				(
-					StoredValueType == other.StoredValueType ||
-					StoredValueType != null &&
-					StoredValueType.Equals(other.StoredValueType)
-				) &&
-				(
-					Value == other.Value ||
-					Value != null &&
-					Value.Equals(other.Value, StringComparison.Ordinal)
-				);
-	}
-
-	/// <summary>
 	/// Gets the hash code
 	/// </summary>
 	/// <returns>Hash code</returns>
