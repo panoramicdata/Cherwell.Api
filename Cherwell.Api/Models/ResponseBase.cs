@@ -17,12 +17,12 @@ public partial class ResponseBase : Response
 	/// <param name="errorCode">ErrorCode.</param>
 	/// <param name="errorMessage">ErrorMessage.</param>
 	/// <param name="hasError">HasError.</param>
-	/// <param name="HttpStatusCode">HttpStatusCode.</param>
-	public ResponseBase(string errorCode, string errorMessage, bool hasError, EnumHttpStatusCode HttpStatusCode)
+	/// <param name="httpStatusCode">httpStatusCode.</param>
+	public ResponseBase(string errorCode, string errorMessage, bool hasError, EnumHttpStatusCode httpStatusCode)
 	{
 		this.ErrorCode = errorCode;
 		this.ErrorMessage = errorMessage;
 		this.HasError = hasError;
-		this.HttpStatusCode = HttpStatusCode;
+		this.HttpStatusCode = httpStatusCode;
 	}
 }

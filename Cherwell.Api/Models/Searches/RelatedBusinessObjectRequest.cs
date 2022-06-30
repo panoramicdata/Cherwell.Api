@@ -12,35 +12,6 @@ namespace Cherwell.Api.Models.Searches;
 public partial class RelatedBusinessObjectRequest
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="RelatedBusinessObjectRequest" /> class.
-	/// </summary>
-	/// <param name="AllFields">AllFields.</param>
-	/// <param name="CustomGridId">CustomGridId.</param>
-	/// <param name="FieldsList">FieldsList.</param>
-	/// <param name="Filters">Filters.</param>
-	/// <param name="PageNumber">PageNumber.</param>
-	/// <param name="PageSize">PageSize.</param>
-	/// <param name="ParentBusObId">ParentBusObId.</param>
-	/// <param name="ParentBusObRecId">ParentBusObRecId.</param>
-	/// <param name="RelationshipId">RelationshipId.</param>
-	/// <param name="Sorting">Sorting.</param>
-	/// <param name="UseDefaultGrid">UseDefaultGrid.</param>
-	public RelatedBusinessObjectRequest(bool AllFields, string CustomGridId, List<string> FieldsList, List<FilterInfo> Filters, int PageNumber, int PageSize, string ParentBusObId, string ParentBusObRecId, string RelationshipId, List<SortInfo> Sorting, bool UseDefaultGrid)
-	{
-		this.AllFields = AllFields;
-		this.CustomGridId = CustomGridId;
-		this.FieldsList = FieldsList;
-		this.Filters = Filters;
-		this.PageNumber = PageNumber;
-		this.PageSize = PageSize;
-		this.ParentBusObId = ParentBusObId;
-		this.ParentBusObRecId = ParentBusObRecId;
-		this.RelationshipId = RelationshipId;
-		this.Sorting = Sorting;
-		this.UseDefaultGrid = UseDefaultGrid;
-	}
-
-	/// <summary>
 	/// AllFields
 	/// </summary>
 	[DataMember(Name = "allFields", EmitDefaultValue = false)]

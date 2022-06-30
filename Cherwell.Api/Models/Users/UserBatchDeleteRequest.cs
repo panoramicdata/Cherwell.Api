@@ -9,17 +9,6 @@ namespace Cherwell.Api.Models.Users;
 public partial class UserBatchDeleteRequest
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="UserBatchDeleteRequest" /> class.
-	/// </summary>
-	/// <param name="StopOnError">StopOnError.</param>
-	/// <param name="UserRecordIds">UserRecordIds.</param>
-	public UserBatchDeleteRequest(bool StopOnError, List<string> UserRecordIds)
-	{
-		this.StopOnError = StopOnError;
-		this.UserRecordIds = UserRecordIds;
-	}
-
-	/// <summary>
 	/// StopOnError
 	/// </summary>
 	[DataMember(Name = "stopOnError", EmitDefaultValue = false)]

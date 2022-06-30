@@ -12,31 +12,6 @@ namespace Cherwell.Api.Models.Security;
 public partial class SaveApiClientSettingRequest
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="SaveApiClientSettingRequest" /> class.
-	/// </summary>
-	/// <param name="AllowAnonymousAccess">AllowAnonymousAccess.</param>
-	/// <param name="ApiAccessIsEnabled">ApiAccessIsEnabled.</param>
-	/// <param name="CreateNewClientKey">CreateNewClientKey.</param>
-	/// <param name="Culture">Culture.</param>
-	/// <param name="Description">Description.</param>
-	/// <param name="Name">Name.</param>
-	/// <param name="RefreshTokenLifespanMinutes">RefreshTokenLifespanMinutes.</param>
-	/// <param name="StandInKey">StandInKey.</param>
-	/// <param name="TokenLifespanMinutes">TokenLifespanMinutes.</param>
-	public SaveApiClientSettingRequest(bool AllowAnonymousAccess, bool ApiAccessIsEnabled, bool CreateNewClientKey, string Culture, string Description, string Name, int RefreshTokenLifespanMinutes, string StandInKey, int TokenLifespanMinutes)
-	{
-		this.AllowAnonymousAccess = AllowAnonymousAccess;
-		this.ApiAccessIsEnabled = ApiAccessIsEnabled;
-		this.CreateNewClientKey = CreateNewClientKey;
-		this.Culture = Culture;
-		this.Description = Description;
-		this.Name = Name;
-		this.RefreshTokenLifespanMinutes = RefreshTokenLifespanMinutes;
-		this.StandInKey = StandInKey;
-		this.TokenLifespanMinutes = TokenLifespanMinutes;
-	}
-
-	/// <summary>
 	/// AllowAnonymousAccess
 	/// </summary>
 	[DataMember(Name = "allowAnonymousAccess", EmitDefaultValue = false)]

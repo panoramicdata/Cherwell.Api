@@ -9,17 +9,6 @@ namespace Cherwell.Api.Models.Security;
 public partial class CloneSecurityGroupRequest
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="CloneSecurityGroupRequest" /> class.
-	/// </summary>
-	/// <param name="SecurityGroupName">SecurityGroupName.</param>
-	/// <param name="SourceSecurityGroupNameOrId">SourceSecurityGroupNameOrId.</param>
-	public CloneSecurityGroupRequest(string SecurityGroupName, string SourceSecurityGroupNameOrId)
-	{
-		this.SecurityGroupName = SecurityGroupName;
-		this.SourceSecurityGroupNameOrId = SourceSecurityGroupNameOrId;
-	}
-
-	/// <summary>
 	/// SecurityGroupName
 	/// </summary>
 	[DataMember(Name = "securityGroupName", EmitDefaultValue = false)]

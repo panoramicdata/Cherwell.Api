@@ -59,56 +59,6 @@ public partial class ExportSearchResultsRequest
 	/// </summary>
 	[DataMember(Name = "exportFormat", EmitDefaultValue = false)]
 	public EnumExportFormat ExportFormat { get; set; }
-	/// <summary>
-	/// Initializes a new instance of the <see cref="ExportSearchResultsRequest" /> class.
-	/// </summary>
-	/// <param name="CustomSeparator">CustomSeparator.</param>
-	/// <param name="ExportFormat">ExportFormat.</param>
-	/// <param name="ExportTitle">ExportTitle.</param>
-	/// <param name="Association">Association.</param>
-	/// <param name="AssociationName">AssociationName.</param>
-	/// <param name="BusObId">BusObId.</param>
-	/// <param name="CustomGridDefId">CustomGridDefId.</param>
-	/// <param name="DateTimeFormatting">DateTimeFormatting.</param>
-	/// <param name="FieldId">FieldId.</param>
-	/// <param name="Fields">Fields.</param>
-	/// <param name="Filters">Filters.</param>
-	/// <param name="IncludeAllFields">IncludeAllFields.</param>
-	/// <param name="IncludeSchema">IncludeSchema.</param>
-	/// <param name="PageNumber">PageNumber.</param>
-	/// <param name="PageSize">PageSize.</param>
-	/// <param name="Scope">Scope.</param>
-	/// <param name="ScopeOwner">ScopeOwner.</param>
-	/// <param name="SearchId">SearchId.</param>
-	/// <param name="SearchName">SearchName.</param>
-	/// <param name="SearchText">SearchText.</param>
-	/// <param name="Sorting">Sorting.</param>
-	/// <param name="PromptValues">PromptValues.</param>
-	public ExportSearchResultsRequest(string CustomSeparator, EnumExportFormat ExportFormat, string ExportTitle, string Association, string AssociationName, string BusObId, string CustomGridDefId, string DateTimeFormatting, string FieldId, List<string> Fields, List<FilterInfo> Filters, bool IncludeAllFields, bool IncludeSchema, int PageNumber, int PageSize, string Scope, string ScopeOwner, string SearchId, string SearchName, string SearchText, List<SortInfo> Sorting, List<PromptValue> PromptValues)
-	{
-		this.CustomSeparator = CustomSeparator;
-		this.ExportFormat = ExportFormat;
-		this.ExportTitle = ExportTitle;
-		this.Association = Association;
-		this.AssociationName = AssociationName;
-		this.BusObId = BusObId;
-		this.CustomGridDefId = CustomGridDefId;
-		this.DateTimeFormatting = DateTimeFormatting;
-		this.FieldId = FieldId;
-		this.Fields = Fields;
-		this.Filters = Filters;
-		this.IncludeAllFields = IncludeAllFields;
-		this.IncludeSchema = IncludeSchema;
-		this.PageNumber = PageNumber;
-		this.PageSize = PageSize;
-		this.Scope = Scope;
-		this.ScopeOwner = ScopeOwner;
-		this.SearchId = SearchId;
-		this.SearchName = SearchName;
-		this.SearchText = SearchText;
-		this.Sorting = Sorting;
-		this.PromptValues = PromptValues;
-	}
 
 	/// <summary>
 	/// CustomSeparator

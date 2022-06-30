@@ -9,29 +9,6 @@ namespace Cherwell.Api.Models.Searches;
 public partial class StoredSearchRequest
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="StoredSearchRequest" /> class.
-	/// </summary>
-	/// <param name="AssociationId">AssociationId.</param>
-	/// <param name="AssociationName">AssociationName.</param>
-	/// <param name="GridId">GridId.</param>
-	/// <param name="IncludeSchema">IncludeSchema.</param>
-	/// <param name="Scope">Scope.</param>
-	/// <param name="ScopeOwnerId">ScopeOwnerId.</param>
-	/// <param name="SearchId">SearchId.</param>
-	/// <param name="SearchName">SearchName.</param>
-	public StoredSearchRequest(string AssociationId, string AssociationName, string GridId, bool IncludeSchema, string Scope, string ScopeOwnerId, string SearchId, string SearchName)
-	{
-		this.AssociationId = AssociationId;
-		this.AssociationName = AssociationName;
-		this.GridId = GridId;
-		this.IncludeSchema = IncludeSchema;
-		this.Scope = Scope;
-		this.ScopeOwnerId = ScopeOwnerId;
-		this.SearchId = SearchId;
-		this.SearchName = SearchName;
-	}
-
-	/// <summary>
 	/// AssociationId
 	/// </summary>
 	[DataMember(Name = "associationId", EmitDefaultValue = false)]

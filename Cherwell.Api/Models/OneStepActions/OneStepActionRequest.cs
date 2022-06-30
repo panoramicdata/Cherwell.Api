@@ -12,23 +12,6 @@ namespace Cherwell.Api.Models.OneStepActions;
 public partial class OneStepActionRequest
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="OneStepActionRequest" /> class.
-	/// </summary>
-	/// <param name="AcquireLicense">AcquireLicense.</param>
-	/// <param name="BusObId">BusObId.</param>
-	/// <param name="BusObRecId">BusObRecId.</param>
-	/// <param name="OneStepActionStandInKey">OneStepActionStandInKey.</param>
-	/// <param name="PromptValues">PromptValues.</param>
-	public OneStepActionRequest(bool AcquireLicense, string BusObId, string BusObRecId, string OneStepActionStandInKey, List<SimplePromptValue> PromptValues)
-	{
-		this.AcquireLicense = AcquireLicense;
-		this.BusObId = BusObId;
-		this.BusObRecId = BusObRecId;
-		this.OneStepActionStandInKey = OneStepActionStandInKey;
-		this.PromptValues = PromptValues;
-	}
-
-	/// <summary>
 	/// AcquireLicense
 	/// </summary>
 	[DataMember(Name = "acquireLicense", EmitDefaultValue = false)]

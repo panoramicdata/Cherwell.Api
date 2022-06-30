@@ -9,17 +9,6 @@ namespace Cherwell.Api.Models.Searches;
 public partial class QuickSearchRequest
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="QuickSearchRequest" /> class.
-	/// </summary>
-	/// <param name="BusObIds">BusObIds.</param>
-	/// <param name="SearchText">SearchText.</param>
-	public QuickSearchRequest(List<string> BusObIds, string SearchText)
-	{
-		this.BusObIds = BusObIds;
-		this.SearchText = SearchText;
-	}
-
-	/// <summary>
 	/// BusObIds
 	/// </summary>
 	[DataMember(Name = "busObIds", EmitDefaultValue = false)]

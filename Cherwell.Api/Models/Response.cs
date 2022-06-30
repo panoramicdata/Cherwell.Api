@@ -8,7 +8,7 @@ public class Response
 	/// HttpStatusCode
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-	public EnumHttpStatusCode HttpStatusCode { get; set; }
+	public EnumHttpStatusCode? HttpStatusCode { get; set; }
 	/// <summary>
 	/// ErrorCode
 	/// </summary>

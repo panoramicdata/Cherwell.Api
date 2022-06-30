@@ -22,12 +22,6 @@ public class GetSearchResultsAdHocTests : CherwellClientTest
 			{
 				BusObId = "6dd53665c0c24cab86870a21cf6434ae",
 				Filters = new List<FilterInfo>()
-				{
-					new FilterInfo(
-						"5eb3234ae1344c64a19819eda437f18d",
-						"eq",
-						"Resolved")
-				}
 			},
 			default)
 		.ConfigureAwait(false);

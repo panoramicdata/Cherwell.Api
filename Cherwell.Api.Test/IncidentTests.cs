@@ -58,21 +58,6 @@ public class IncidentTests : CherwellClientTest
 					.Select(f => f.FieldId)
 					.ToList(),
 				Filters = new List<FilterInfo>()
-				{
-					// Multiple filters on the same field are treated as an OR operation
-					new FilterInfo(
-						FieldId : incidentSummary.StateFieldId,
-						Operator : "eq",
-						Value : "In Progress"			// The first status of interest
-					),
-					new FilterInfo(
-						FieldId : incidentSummary.StateFieldId,
-						Operator : "eq",
-						Value : "Reopened"				// The second status of interest
-					)
-				},
-				PageNumber = 1,
-				PageSize = 100
 			},
 			cancellationToken)
 		.ConfigureAwait(false);
@@ -110,12 +95,6 @@ public class IncidentTests : CherwellClientTest
 			.Links
 			.Should()
 			.NotBeNull();
-
-		searchItemResponse
-			.HasPrompts
-			.Should()
-			.NotBeNull();
-
 	}
 
 	[Fact]

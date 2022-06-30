@@ -36,7 +36,7 @@ public partial class ServiceInfoResponse : Response
 	/// TimeZone
 	/// </summary>
 	[DataMember(Name = "timeZone", EmitDefaultValue = false)]
-	public Object TimeZone { get; set; }
+	public Object TimeZone { get; set; } = null!;
 
 	/// <summary>
 	/// SystemUtcOffset

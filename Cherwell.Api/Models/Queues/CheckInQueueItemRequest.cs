@@ -9,21 +9,6 @@ namespace Cherwell.Api.Models.Queues;
 public partial class CheckInQueueItemRequest
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="CheckInQueueItemRequest" /> class.
-	/// </summary>
-	/// <param name="BusObId">BusObId.</param>
-	/// <param name="BusObRecId">BusObRecId.</param>
-	/// <param name="HistoryNotes">HistoryNotes.</param>
-	/// <param name="QueueStandInKey">QueueStandInKey.</param>
-	public CheckInQueueItemRequest(string BusObId, string BusObRecId, string HistoryNotes, string QueueStandInKey)
-	{
-		this.BusObId = BusObId;
-		this.BusObRecId = BusObRecId;
-		this.HistoryNotes = HistoryNotes;
-		this.QueueStandInKey = QueueStandInKey;
-	}
-
-	/// <summary>
 	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]

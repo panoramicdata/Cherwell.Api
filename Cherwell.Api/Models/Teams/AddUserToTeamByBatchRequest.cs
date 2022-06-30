@@ -9,17 +9,6 @@ namespace Cherwell.Api.Models.Teams;
 public partial class AddUserToTeamByBatchRequest
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="AddUserToTeamByBatchRequest" /> class.
-	/// </summary>
-	/// <param name="AddUserToTeamRequests">AddUserToTeamRequests.</param>
-	/// <param name="StopOnError">StopOnError.</param>
-	public AddUserToTeamByBatchRequest(List<AddUserToTeamRequest> AddUserToTeamRequests, bool StopOnError)
-	{
-		this.AddUserToTeamRequests = AddUserToTeamRequests;
-		this.StopOnError = StopOnError;
-	}
-
-	/// <summary>
 	/// AddUserToTeamRequests
 	/// </summary>
 	[DataMember(Name = "addUserToTeamRequests", EmitDefaultValue = false)]

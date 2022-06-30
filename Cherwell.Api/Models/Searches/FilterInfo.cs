@@ -12,19 +12,6 @@ namespace Cherwell.Api.Models.Searches;
 public partial class FilterInfo
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="FilterInfo" /> class.
-	/// </summary>
-	/// <param name="FieldId">FieldId.</param>
-	/// <param name="Operator">_Operator.</param>
-	/// <param name="Value">Value.</param>
-	public FilterInfo(string FieldId, string Operator, string Value)
-	{
-		this.FieldId = FieldId;
-		this.Operator = Operator;
-		this.Value = Value;
-	}
-
-	/// <summary>
 	/// FieldId
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]

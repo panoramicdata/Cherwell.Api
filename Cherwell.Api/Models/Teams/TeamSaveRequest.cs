@@ -35,24 +35,6 @@ public partial class TeamSaveRequest
 	/// </summary>
 	[DataMember(Name = "teamType", EmitDefaultValue = false)]
 	public EnumTeamType TeamType { get; set; }
-	/// <summary>
-	/// Initializes a new instance of the <see cref="TeamSaveRequest" /> class.
-	/// </summary>
-	/// <param name="Description">Description.</param>
-	/// <param name="EmailAlias">EmailAlias.</param>
-	/// <param name="Image">Image.</param>
-	/// <param name="TeamId">TeamId.</param>
-	/// <param name="TeamName">TeamName.</param>
-	/// <param name="TeamType">TeamType.</param>
-	public TeamSaveRequest(string Description, string EmailAlias, string Image, string TeamId, string TeamName, EnumTeamType TeamType)
-	{
-		this.Description = Description;
-		this.EmailAlias = EmailAlias;
-		this.Image = Image;
-		this.TeamId = TeamId;
-		this.TeamName = TeamName;
-		this.TeamType = TeamType;
-	}
 
 	/// <summary>
 	/// Description

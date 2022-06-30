@@ -9,19 +9,6 @@ namespace Cherwell.Api.Models.Teams;
 public partial class SaveWorkgroupMemberRequest
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="SaveWorkgroupMemberRequest" /> class.
-	/// </summary>
-	/// <param name="CustomerRecordId">CustomerRecordId.</param>
-	/// <param name="WorkgroupId">WorkgroupId.</param>
-	/// <param name="CustomerIsWorkgroupManager">CustomerIsWorkgroupManager.</param>
-	public SaveWorkgroupMemberRequest(string CustomerRecordId, string WorkgroupId, bool CustomerIsWorkgroupManager)
-	{
-		this.CustomerRecordId = CustomerRecordId;
-		this.WorkgroupId = WorkgroupId;
-		this.CustomerIsWorkgroupManager = CustomerIsWorkgroupManager;
-	}
-
-	/// <summary>
 	/// CustomerRecordId
 	/// </summary>
 	[DataMember(Name = "customerRecordId", EmitDefaultValue = false)]

@@ -9,67 +9,6 @@ namespace Cherwell.Api.Models.Users;
 public partial class UserSaveRequest : Response
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="UserSaveRequest" /> class.
-	/// </summary>
-	/// <param name="accountLocked">AccountLocked.</param>
-	/// <param name="busObId">BusObId.</param>
-	/// <param name="busObPublicId">BusObPublicId.</param>
-	/// <param name="busObRecId">BusObRecId.</param>
-	/// <param name="displayName">DisplayName.</param>
-	/// <param name="error">Error.</param>
-	/// <param name="errorCode">ErrorCode.</param>
-	/// <param name="hasError">HasError.</param>
-	/// <param name="ldapRequired">LdapRequired.</param>
-	/// <param name="loginId">LoginId.</param>
-	/// <param name="nextPasswordResetDate">NextPasswordResetDate.</param>
-	/// <param name="password">Password.</param>
-	/// <param name="passwordNeverExpires">PasswordNeverExpires.</param>
-	/// <param name="securityGroupId">SecurityGroupId.</param>
-	/// <param name="userCannotChangePassword">UserCannotChangePassword.</param>
-	/// <param name="userInfoFields">UserInfoFields.</param>
-	/// <param name="userMustChangePasswordAtNextLogin">UserMustChangePasswordAtNextLogin.</param>
-	/// <param name="windowsUserId">WindowsUserId.</param>
-	public UserSaveRequest(
-		bool accountLocked,
-		string busObId,
-		string busObPublicId,
-		string busObRecId,
-		string displayName,
-		string error,
-		string errorCode,
-		bool hasError,
-		bool ldapRequired,
-		string loginId,
-		DateTime nextPasswordResetDate,
-		string password,
-		bool passwordNeverExpires,
-		string securityGroupId,
-		bool userCannotChangePassword,
-		List<FieldTemplateItem> userInfoFields,
-		bool userMustChangePasswordAtNextLogin,
-		string windowsUserId)
-	{
-		AccountLocked = accountLocked;
-		BusObId = busObId;
-		BusObPublicId = busObPublicId;
-		BusObRecId = busObRecId;
-		DisplayName = displayName;
-		Error = error;
-		ErrorCode = errorCode;
-		HasError = hasError;
-		LdapRequired = ldapRequired;
-		LoginId = loginId;
-		NextPasswordResetDate = nextPasswordResetDate;
-		Password = password;
-		PasswordNeverExpires = passwordNeverExpires;
-		SecurityGroupId = securityGroupId;
-		UserCannotChangePassword = userCannotChangePassword;
-		UserInfoFields = userInfoFields;
-		UserMustChangePasswordAtNextLogin = userMustChangePasswordAtNextLogin;
-		WindowsUserId = windowsUserId;
-	}
-
-	/// <summary>
 	/// AccountLocked
 	/// </summary>
 	[DataMember(Name = "accountLocked", EmitDefaultValue = false)]

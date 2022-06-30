@@ -9,21 +9,6 @@ namespace Cherwell.Api.Models.Searches;
 public partial class QuickSearchByIdRequest
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="QuickSearchByIdRequest" /> class.
-	/// </summary>
-	/// <param name="BusObIds">BusObIds.</param>
-	/// <param name="IsGeneral">IsGeneral.</param>
-	/// <param name="SearchText">SearchText.</param>
-	/// <param name="StandIn">StandIn.</param>
-	public QuickSearchByIdRequest(List<string> BusObIds, bool IsGeneral, string SearchText, string StandIn)
-	{
-		this.BusObIds = BusObIds;
-		this.IsGeneral = IsGeneral;
-		this.SearchText = SearchText;
-		this.StandIn = StandIn;
-	}
-
-	/// <summary>
 	/// BusObIds
 	/// </summary>
 	[DataMember(Name = "busObIds", EmitDefaultValue = false)]

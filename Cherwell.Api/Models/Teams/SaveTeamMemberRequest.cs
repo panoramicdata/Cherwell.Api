@@ -9,21 +9,6 @@ namespace Cherwell.Api.Models.Teams;
 public partial class SaveTeamMemberRequest
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="SaveTeamMemberRequest" /> class.
-	/// </summary>
-	/// <param name="IsTeamManager">IsTeamManager.</param>
-	/// <param name="SetAsDefaultTeam">SetAsDefaultTeam.</param>
-	/// <param name="TeamId">TeamId.</param>
-	/// <param name="UserRecId">UserRecId.</param>
-	public SaveTeamMemberRequest(bool IsTeamManager, bool SetAsDefaultTeam, string TeamId, string UserRecId)
-	{
-		this.IsTeamManager = IsTeamManager;
-		this.SetAsDefaultTeam = SetAsDefaultTeam;
-		this.TeamId = TeamId;
-		this.UserRecId = UserRecId;
-	}
-
-	/// <summary>
 	/// IsTeamManager
 	/// </summary>
 	[DataMember(Name = "isTeamManager", EmitDefaultValue = false)]

@@ -9,37 +9,6 @@ namespace Cherwell.Api.Models.Searches;
 public partial class QuickSearchSpecificRequest
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="QuickSearchSpecificRequest" /> class.
-	/// </summary>
-	/// <param name="Ascending">Ascending.</param>
-	/// <param name="IsBusObTarget">IsBusObTarget.</param>
-	/// <param name="NonFinalState">NonFinalState.</param>
-	/// <param name="SearchAnyWords">SearchAnyWords.</param>
-	/// <param name="SearchAttachments">SearchAttachments.</param>
-	/// <param name="SearchRelated">SearchRelated.</param>
-	/// <param name="SearchText">SearchText.</param>
-	/// <param name="SelectedChangedLimit">SelectedChangedLimit.</param>
-	/// <param name="SelectedSortByFieldId">SelectedSortByFieldId.</param>
-	/// <param name="SortByRelevance">SortByRelevance.</param>
-	/// <param name="SpecificSearchTargetId">SpecificSearchTargetId.</param>
-	/// <param name="UseSortBy">UseSortBy.</param>
-	public QuickSearchSpecificRequest(bool Ascending, bool IsBusObTarget, bool NonFinalState, bool SearchAnyWords, bool SearchAttachments, bool SearchRelated, string SearchText, ChangedLimit SelectedChangedLimit, string SelectedSortByFieldId, bool SortByRelevance, string SpecificSearchTargetId, bool UseSortBy)
-	{
-		this.Ascending = Ascending;
-		this.IsBusObTarget = IsBusObTarget;
-		this.NonFinalState = NonFinalState;
-		this.SearchAnyWords = SearchAnyWords;
-		this.SearchAttachments = SearchAttachments;
-		this.SearchRelated = SearchRelated;
-		this.SearchText = SearchText;
-		this.SelectedChangedLimit = SelectedChangedLimit;
-		this.SelectedSortByFieldId = SelectedSortByFieldId;
-		this.SortByRelevance = SortByRelevance;
-		this.SpecificSearchTargetId = SpecificSearchTargetId;
-		this.UseSortBy = UseSortBy;
-	}
-
-	/// <summary>
 	/// Ascending
 	/// </summary>
 	[DataMember(Name = "ascending", EmitDefaultValue = false)]

@@ -232,7 +232,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 
 		_accessToken = tokenResponse.AccessToken;
 		_refreshToken = tokenResponse.RefreshToken;
-		_tokenRefreshRequiredAt = DateTime.Now.AddSeconds((tokenResponse.ExpiresIn ?? 15) - 5);
+		_tokenRefreshRequiredAt = DateTime.Now.AddSeconds((tokenResponse.ExpiresIn) - 5);
 	}
 
 	private static void SetUserAgent(HttpClient httpClient, string? userAgentString)

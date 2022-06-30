@@ -12,47 +12,6 @@ namespace Cherwell.Api.Models.Users;
 public partial class UserSaveV2Request
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="UserSaveV2Request" /> class.
-	/// </summary>
-	/// <param name="AccountLocked">AccountLocked.</param>
-	/// <param name="AllCultures">AllCultures.</param>
-	/// <param name="BusObId">BusObId.</param>
-	/// <param name="BusObPublicId">BusObPublicId.</param>
-	/// <param name="BusObRecId">BusObRecId.</param>
-	/// <param name="DisplayName">DisplayName.</param>
-	/// <param name="LdapRequired">LdapRequired.</param>
-	/// <param name="LoginId">LoginId.</param>
-	/// <param name="NextPasswordResetDate">NextPasswordResetDate.</param>
-	/// <param name="Password">Password.</param>
-	/// <param name="PasswordNeverExpires">PasswordNeverExpires.</param>
-	/// <param name="SecurityGroupId">SecurityGroupId.</param>
-	/// <param name="SpecificCulture">SpecificCulture.</param>
-	/// <param name="UserCannotChangePassword">UserCannotChangePassword.</param>
-	/// <param name="UserInfoFields">UserInfoFields.</param>
-	/// <param name="UserMustChangePasswordAtNextLogin">UserMustChangePasswordAtNextLogin.</param>
-	/// <param name="WindowsUserId">WindowsUserId.</param>
-	public UserSaveV2Request(bool AccountLocked, bool AllCultures, string BusObId, string BusObPublicId, string BusObRecId, string DisplayName, bool LdapRequired, string LoginId, DateTime NextPasswordResetDate, string Password, bool PasswordNeverExpires, string SecurityGroupId, string SpecificCulture, bool UserCannotChangePassword, List<FieldTemplateItem> UserInfoFields, bool UserMustChangePasswordAtNextLogin, string WindowsUserId)
-	{
-		this.AccountLocked = AccountLocked;
-		this.AllCultures = AllCultures;
-		this.BusObId = BusObId;
-		this.BusObPublicId = BusObPublicId;
-		this.BusObRecId = BusObRecId;
-		this.DisplayName = DisplayName;
-		this.LdapRequired = LdapRequired;
-		this.LoginId = LoginId;
-		this.NextPasswordResetDate = NextPasswordResetDate;
-		this.Password = Password;
-		this.PasswordNeverExpires = PasswordNeverExpires;
-		this.SecurityGroupId = SecurityGroupId;
-		this.SpecificCulture = SpecificCulture;
-		this.UserCannotChangePassword = UserCannotChangePassword;
-		this.UserInfoFields = UserInfoFields;
-		this.UserMustChangePasswordAtNextLogin = UserMustChangePasswordAtNextLogin;
-		this.WindowsUserId = WindowsUserId;
-	}
-
-	/// <summary>
 	/// AccountLocked
 	/// </summary>
 	[DataMember(Name = "accountLocked", EmitDefaultValue = false)]

@@ -9,19 +9,6 @@ namespace Cherwell.Api.Models.Queues;
 public partial class AddItemToQueueRequest
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="AddItemToQueueRequest" /> class.
-	/// </summary>
-	/// <param name="BusObId">BusObId.</param>
-	/// <param name="BusObRecId">BusObRecId.</param>
-	/// <param name="QueueStandInKey">QueueStandInKey.</param>
-	public AddItemToQueueRequest(string BusObId, string BusObRecId, string QueueStandInKey)
-	{
-		this.BusObId = BusObId;
-		this.BusObRecId = BusObRecId;
-		this.QueueStandInKey = QueueStandInKey;
-	}
-
-	/// <summary>
 	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
