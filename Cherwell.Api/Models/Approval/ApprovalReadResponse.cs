@@ -6,7 +6,7 @@ using System.Text;
 namespace Cherwell.Api.Models.Approval;
 
 /// <summary>
-/// ApprovalApprovalReadResponse
+/// ApprovalReadResponse
 /// </summary>
 [DataContract]
 public partial class ApprovalReadResponse : Response

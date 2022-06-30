@@ -6,7 +6,7 @@ using System.Text;
 namespace Cherwell.Api.Models.BusinessObject;
 
 /// <summary>
-/// BusinessObjectFieldDefinition
+/// FieldDefinition
 /// </summary>
 [DataContract]
 public partial class FieldDefinition

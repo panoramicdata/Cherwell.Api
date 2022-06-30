@@ -6,7 +6,7 @@ using System.Text;
 namespace Cherwell.Api.Models.Core;
 
 /// <summary>
-/// CoreSaveGalleryImageResponse
+/// SaveGalleryImageResponse
 /// </summary>
 [DataContract]
 public partial class SaveGalleryImageResponse : Response

@@ -6,7 +6,7 @@ using System.Text;
 namespace Cherwell.Api.Models.BusinessObject;
 
 /// <summary>
-/// BusinessObjectRelationship
+/// Relationship
 /// </summary>
 [DataContract]
 public partial class BusinessObjectRelationship

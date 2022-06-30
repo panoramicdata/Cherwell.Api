@@ -7,7 +7,7 @@ using System.Text;
 namespace Cherwell.Api.Models.BusinessObject;
 
 /// <summary>
-/// BusinessObjectAttachmentsRequest
+/// AttachmentsRequest
 /// </summary>
 [DataContract]
 public partial class AttachmentsRequest

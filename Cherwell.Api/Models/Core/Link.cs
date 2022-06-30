@@ -6,7 +6,7 @@ using System.Text;
 namespace Cherwell.Api.Models.Core;
 
 /// <summary>
-/// CoreLink
+/// Link
 /// </summary>
 [DataContract]
 public partial class Link

@@ -6,7 +6,7 @@ using System.Text;
 namespace Cherwell.Api.Models.BusinessObject;
 
 /// <summary>
-/// BusinessObjectSaveBusObAttachmentRequest
+/// SaveBusObAttachmentRequest
 /// </summary>
 [DataContract]
 public partial class SaveBusObAttachmentRequest

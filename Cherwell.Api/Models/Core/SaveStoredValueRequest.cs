@@ -7,7 +7,7 @@ using System.Text;
 namespace Cherwell.Api.Models.Core;
 
 /// <summary>
-/// CoreSaveStoredValueRequest
+/// SaveStoredValueRequest
 /// </summary>
 [DataContract]
 public partial class SaveStoredValueRequest

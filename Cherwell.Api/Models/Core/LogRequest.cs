@@ -7,7 +7,7 @@ using System.Text;
 namespace Cherwell.Api.Models.Core;
 
 /// <summary>
-/// CoreLogRequest
+/// LogRequest
 /// </summary>
 [DataContract]
 public partial class LogRequest

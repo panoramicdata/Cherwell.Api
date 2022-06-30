@@ -33,27 +33,5 @@ public partial class UserBatchDeleteRequest
 	/// </summary>
 	[DataMember(Name = "userRecordIds", EmitDefaultValue = false)]
 	public List<string> UserRecordIds { get; set; }
-
-
-
-
-
-
-	/// <summary>
-	/// Gets the hash code
-	/// </summary>
-	/// <returns>Hash code</returns>
-	public override int GetHashCode()
-	{
-		// credit: http://stackoverflow.com/a/263416/677735
-		unchecked // Overflow is fine, just wrap
-		{
-			int hash = 41;
-			// Suitable nullity checks etc, of course :)
-
-		}
-	}
-
-	
 }
 

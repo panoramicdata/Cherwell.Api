@@ -6,7 +6,7 @@ using System.Text;
 namespace Cherwell.Api.Models.BusinessObject;
 
 /// <summary>
-/// BusinessObjectGridDefinition
+/// GridDefinition
 /// </summary>
 [DataContract]
 public partial class GridDefinition

@@ -6,7 +6,7 @@ using System.Text;
 namespace Cherwell.Api.Models.BusinessObject;
 
 /// <summary>
-/// BusinessObjectTemplateRequest
+/// TemplateRequest
 /// </summary>
 [DataContract]
 public partial class TemplateRequest

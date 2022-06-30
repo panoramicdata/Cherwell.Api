@@ -6,7 +6,7 @@ using System.Text;
 namespace Cherwell.Api.Models.BusinessObject;
 
 /// <summary>
-/// BusinessObjectSummary
+/// Summary
 /// </summary>
 [DataContract]
 public partial class Summary

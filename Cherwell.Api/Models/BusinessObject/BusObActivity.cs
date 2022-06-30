@@ -6,7 +6,7 @@ using System.Text;
 namespace Cherwell.Api.Models.BusinessObject;
 
 /// <summary>
-/// BusinessObjectBusObActivity
+/// BusObActivity
 /// </summary>
 [DataContract]
 public partial class BusObActivity

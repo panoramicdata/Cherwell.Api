@@ -6,7 +6,7 @@ using System.Text;
 namespace Cherwell.Api.Models.BusinessObject;
 
 /// <summary>
-/// BusinessObjectFieldValidationError
+/// FieldValidationError
 /// </summary>
 [DataContract]
 public partial class FieldValidationError : Response

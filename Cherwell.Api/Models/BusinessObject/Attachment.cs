@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 namespace Cherwell.Api.Models.BusinessObject;
 
 /// <summary>
-/// BusinessObject Attachment
+/// Attachment
 /// </summary>
 [DataContract]
 public partial class Attachment

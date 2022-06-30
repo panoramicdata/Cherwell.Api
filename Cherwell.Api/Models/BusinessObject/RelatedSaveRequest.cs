@@ -7,7 +7,7 @@ using System.Text;
 namespace Cherwell.Api.Models.BusinessObject;
 
 /// <summary>
-/// BusinessObjectRelatedSaveRequest
+/// RelatedSaveRequest
 /// </summary>
 [DataContract]
 public partial class RelatedSaveRequest

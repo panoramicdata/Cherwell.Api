@@ -6,7 +6,7 @@ using System.Text;
 namespace Cherwell.Api.Models.Core;
 
 /// <summary>
-/// CorePromptValue
+/// PromptValue
 /// </summary>
 [DataContract]
 public partial class PromptValue

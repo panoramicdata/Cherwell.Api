@@ -6,7 +6,7 @@ using System.Text;
 namespace Cherwell.Api.Models.Core;
 
 /// <summary>
-/// CoreLogBatchRequest
+/// LogBatchRequest
 /// </summary>
 [DataContract]
 public partial class LogBatchRequest

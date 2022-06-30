@@ -7,7 +7,7 @@ using System.Text;
 namespace Cherwell.Api.Models.Core;
 
 /// <summary>
-/// CoreAction
+/// Action
 /// </summary>
 [DataContract]
 public partial class Action

@@ -6,7 +6,7 @@ using System.Text;
 namespace Cherwell.Api.Models.BusinessObject;
 
 /// <summary>
-/// BusinessObjectDeleteResponse
+/// DeleteResponse
 /// </summary>
 [DataContract]
 public partial class DeleteResponse : Response

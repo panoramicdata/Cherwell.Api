@@ -6,7 +6,7 @@ using System.Text;
 namespace Cherwell.Api.Models.Core;
 
 /// <summary>
-/// CoreLocation
+/// Location
 /// </summary>
 [DataContract]
 public partial class Location

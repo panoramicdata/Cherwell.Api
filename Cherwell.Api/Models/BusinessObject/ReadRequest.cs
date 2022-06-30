@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 namespace Cherwell.Api.Models.BusinessObject;
 
 /// <summary>
-/// BusinessObjectReadRequest
+/// ReadRequest
 /// </summary>
 [DataContract]
 public partial class ReadRequest

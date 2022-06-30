@@ -6,7 +6,7 @@ using System.Text;
 namespace Cherwell.Api.Models.BusinessObject;
 
 /// <summary>
-/// BusinessObjectFieldValuesLookupResponse
+/// FieldValuesLookupResponse
 /// </summary>
 [DataContract]
 public partial class FieldValuesLookupResponse : Response

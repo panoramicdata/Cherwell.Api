@@ -6,7 +6,7 @@ using System.Text;
 namespace Cherwell.Api.Models.Core;
 
 /// <summary>
-/// CoreServiceInfoResponse
+/// ServiceInfoResponse
 /// </summary>
 [DataContract]
 public partial class ServiceInfoResponse : Response

@@ -6,7 +6,7 @@ using System.Text;
 namespace Cherwell.Api.Models.Core;
 
 /// <summary>
-/// CoreView
+/// View
 /// </summary>
 [DataContract]
 public partial class View

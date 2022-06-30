@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 namespace Cherwell.Api.Models.BusinessObject;
 
 /// <summary>
-/// BusinessObject Attachments Response
+/// Attachments Response
 /// </summary>
 [DataContract]
 public partial class AttachmentsResponse : Response

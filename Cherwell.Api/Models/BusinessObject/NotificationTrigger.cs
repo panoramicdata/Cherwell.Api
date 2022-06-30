@@ -6,7 +6,7 @@ using System.Text;
 namespace Cherwell.Api.Models.BusinessObject;
 
 /// <summary>
-/// BusinessObjectNotificationTrigger
+/// NotificationTrigger
 /// </summary>
 [DataContract]
 public partial class NotificationTrigger

@@ -6,7 +6,7 @@ using System.Text;
 namespace Cherwell.Api.Models.Core;
 
 /// <summary>
-/// CoreManagerData
+/// ManagerData
 /// </summary>
 [DataContract]
 public partial class ManagerData : Response

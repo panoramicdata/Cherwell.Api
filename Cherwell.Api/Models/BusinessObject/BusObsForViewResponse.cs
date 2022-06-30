@@ -6,7 +6,7 @@ using System.Text;
 namespace Cherwell.Api.Models.BusinessObject;
 
 /// <summary>
-/// BusinessObjectBusObsForViewResponse
+/// BusObsForViewResponse
 /// </summary>
 [DataContract]
 public partial class BusObsForViewResponse : Response

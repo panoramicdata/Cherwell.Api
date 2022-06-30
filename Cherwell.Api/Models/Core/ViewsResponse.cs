@@ -7,7 +7,7 @@ namespace Cherwell.Api.Models.Core;
 
 
 /// <summary>
-/// CoreViewsResponse
+/// ViewsResponse
 /// </summary>
 [DataContract]
 public partial class ViewsResponse : Response

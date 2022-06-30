@@ -6,7 +6,7 @@ using System.Text;
 namespace Cherwell.Api.Models.BusinessObject;
 
 /// <summary>
-/// BusinessObjectSaveUrlAttachmentRequest
+/// SaveUrlAttachmentRequest
 /// </summary>
 [DataContract]
 public partial class SaveUrlAttachmentRequest

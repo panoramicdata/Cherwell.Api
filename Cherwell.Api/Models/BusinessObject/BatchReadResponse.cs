@@ -6,7 +6,7 @@ using System.Text;
 namespace Cherwell.Api.Models.BusinessObject;
 
 /// <summary>
-/// BusinessObjectBatchReadResponse
+/// BatchReadResponse
 /// </summary>
 [DataContract]
 public partial class BatchReadResponse : Response
