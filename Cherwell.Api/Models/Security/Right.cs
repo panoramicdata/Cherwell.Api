@@ -12,96 +12,90 @@ public partial class Right
 	/// Add
 	/// </summary>
 	[DataMember(Name = "add", EmitDefaultValue = false)]
-	public bool? Add { get; set; }
+	public bool Add { get; set; }
 
 	/// <summary>
 	/// Allow
 	/// </summary>
 	[DataMember(Name = "allow", EmitDefaultValue = false)]
-	public bool? Allow { get; set; }
+	public bool Allow { get; set; }
 
 	/// <summary>
 	/// CategoryDescription
 	/// </summary>
 	[DataMember(Name = "categoryDescription", EmitDefaultValue = false)]
-	public string? CategoryDescription { get; set; }
-
+	public string CategoryDescription { get; set; } = null!;
 	/// <summary>
 	/// CategoryId
 	/// </summary>
 	[DataMember(Name = "categoryId", EmitDefaultValue = false)]
-	public string? CategoryId { get; set; }
-
+	public string CategoryId { get; set; } = null!;
 	/// <summary>
 	/// CategoryName
 	/// </summary>
 	[DataMember(Name = "categoryName", EmitDefaultValue = false)]
-	public string? CategoryName { get; set; }
-
+	public string CategoryName { get; set; } = null!;
 	/// <summary>
 	/// Delete
 	/// </summary>
 	[DataMember(Name = "delete", EmitDefaultValue = false)]
-	public bool? Delete { get; set; }
+	public bool Delete { get; set; }
 
 	/// <summary>
 	/// Edit
 	/// </summary>
 	[DataMember(Name = "edit", EmitDefaultValue = false)]
-	public bool? Edit { get; set; }
+	public bool Edit { get; set; }
 
 	/// <summary>
 	/// IsYesNoRight
 	/// </summary>
 	[DataMember(Name = "isYesNoRight", EmitDefaultValue = false)]
-	public bool? IsYesNoRight { get; set; }
+	public bool IsYesNoRight { get; set; }
 
 	/// <summary>
 	/// NonScopeOwnerAdd
 	/// </summary>
 	[DataMember(Name = "nonScopeOwnerAdd", EmitDefaultValue = false)]
-	public bool? NonScopeOwnerAdd { get; set; }
+	public bool NonScopeOwnerAdd { get; set; }
 
 	/// <summary>
 	/// NonScopeOwnerDelete
 	/// </summary>
 	[DataMember(Name = "nonScopeOwnerDelete", EmitDefaultValue = false)]
-	public bool? NonScopeOwnerDelete { get; set; }
+	public bool NonScopeOwnerDelete { get; set; }
 
 	/// <summary>
 	/// NonScopeOwnerEdit
 	/// </summary>
 	[DataMember(Name = "nonScopeOwnerEdit", EmitDefaultValue = false)]
-	public bool? NonScopeOwnerEdit { get; set; }
+	public bool NonScopeOwnerEdit { get; set; }
 
 	/// <summary>
 	/// NonScopeOwnerView
 	/// </summary>
 	[DataMember(Name = "nonScopeOwnerView", EmitDefaultValue = false)]
-	public bool? NonScopeOwnerView { get; set; }
+	public bool NonScopeOwnerView { get; set; }
 
 	/// <summary>
 	/// RightId
 	/// </summary>
 	[DataMember(Name = "rightId", EmitDefaultValue = false)]
-	public string? RightId { get; set; }
-
+	public string RightId { get; set; } = null!;
 	/// <summary>
 	/// RightName
 	/// </summary>
 	[DataMember(Name = "rightName", EmitDefaultValue = false)]
-	public string? RightName { get; set; }
-
+	public string RightName { get; set; } = null!;
 	/// <summary>
 	/// StandardRightName
 	/// </summary>
 	[DataMember(Name = "standardRightName", EmitDefaultValue = false)]
-	public string? StandardRightName { get; set; }
-
+	public string StandardRightName { get; set; } = null!;
 	/// <summary>
 	/// ViewRunOpen
 	/// </summary>
 	[DataMember(Name = "viewRunOpen", EmitDefaultValue = false)]
-	public bool? ViewRunOpen { get; set; }
+	public bool ViewRunOpen { get; set; }
 }
 

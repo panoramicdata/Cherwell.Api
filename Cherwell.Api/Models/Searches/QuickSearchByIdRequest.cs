@@ -15,7 +15,7 @@ public partial class QuickSearchByIdRequest
 	/// <param name="IsGeneral">IsGeneral.</param>
 	/// <param name="SearchText">SearchText.</param>
 	/// <param name="StandIn">StandIn.</param>
-	public QuickSearchByIdRequest(List<string> BusObIds, bool? IsGeneral, string SearchText, string StandIn)
+	public QuickSearchByIdRequest(List<string> BusObIds, bool IsGeneral, string SearchText, string StandIn)
 	{
 		this.BusObIds = BusObIds;
 		this.IsGeneral = IsGeneral;
@@ -27,23 +27,23 @@ public partial class QuickSearchByIdRequest
 	/// BusObIds
 	/// </summary>
 	[DataMember(Name = "busObIds", EmitDefaultValue = false)]
-	public List<string> BusObIds { get; set; }
+	public List<string> BusObIds { get; set; } = null!;
 
 	/// <summary>
 	/// IsGeneral
 	/// </summary>
 	[DataMember(Name = "isGeneral", EmitDefaultValue = false)]
-	public bool? IsGeneral { get; set; }
+	public bool IsGeneral { get; set; }
 
 	/// <summary>
 	/// SearchText
 	/// </summary>
 	[DataMember(Name = "searchText", EmitDefaultValue = false)]
-	public string SearchText { get; set; }
+	public string SearchText { get; set; } = null!;
 
 	/// <summary>
 	/// StandIn
 	/// </summary>
 	[DataMember(Name = "standIn", EmitDefaultValue = false)]
-	public string StandIn { get; set; }
+	public string StandIn { get; set; } = null!;
 }

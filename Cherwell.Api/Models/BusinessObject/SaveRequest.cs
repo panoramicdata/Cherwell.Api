@@ -42,41 +42,36 @@ public partial class SaveRequest
 	/// CacheScope
 	/// </summary>
 	[DataMember(Name = "cacheScope", EmitDefaultValue = false)]
-	public EnumCacheScope? CacheScope { get; set; }
+	public EnumCacheScope CacheScope { get; set; }
 
 	/// <summary>
 	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
-	public string? BusObId { get; set; }
-
+	public string BusObId { get; set; } = null!;
 	/// <summary>
 	/// BusObPublicId
 	/// </summary>
 	[DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
-	public string? BusObPublicId { get; set; }
-
+	public string BusObPublicId { get; set; } = null!;
 	/// <summary>
 	/// BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
-	public string? BusObRecId { get; set; }
-
+	public string BusObRecId { get; set; } = null!;
 	/// <summary>
 	/// CacheKey
 	/// </summary>
 	[DataMember(Name = "cacheKey", EmitDefaultValue = false)]
-	public string? CacheKey { get; set; }
-
+	public string CacheKey { get; set; } = null!;
 	/// <summary>
 	/// Fields
 	/// </summary>
 	[DataMember(Name = "fields", EmitDefaultValue = false)]
-	public List<FieldTemplateItem>? Fields { get; set; }
-
+	public List<FieldTemplateItem> Fields { get; set; } = null!;
 	/// <summary>
 	/// Persist
 	/// </summary>
 	[DataMember(Name = "persist", EmitDefaultValue = false)]
-	public bool? Persist { get; set; }
+	public bool Persist { get; set; }
 }

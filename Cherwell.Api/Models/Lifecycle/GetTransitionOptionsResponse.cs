@@ -12,5 +12,5 @@ public partial class GetTransitionOptionsResponse : Response
 	/// Transitions
 	/// </summary>
 	[DataMember(Name = "transitions", EmitDefaultValue = false)]
-	public List<GetTransitionOptionsResponseTransition>? Transitions { get; set; }
+	public List<GetTransitionOptionsResponseTransition> Transitions { get; set; } = null!;
 }

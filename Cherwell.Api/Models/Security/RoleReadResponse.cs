@@ -12,12 +12,11 @@ public partial class RoleReadResponse : Response
 	/// Error
 	/// </summary>
 	[DataMember(Name = "error", EmitDefaultValue = false)]
-	public string? Error { get; set; }
-
+	public string Error { get; set; } = null!;
 	/// <summary>
 	/// Roles
 	/// </summary>
 	[DataMember(Name = "roles", EmitDefaultValue = false)]
-	public List<Role>? Roles { get; set; }
+	public List<Role> Roles { get; set; } = null!;
 }
 

@@ -23,11 +23,11 @@ public partial class CloneSecurityGroupRequest
 	/// SecurityGroupName
 	/// </summary>
 	[DataMember(Name = "securityGroupName", EmitDefaultValue = false)]
-	public string SecurityGroupName { get; set; }
+	public string SecurityGroupName { get; set; } = null!;
 
 	/// <summary>
 	/// SourceSecurityGroupNameOrId
 	/// </summary>
 	[DataMember(Name = "sourceSecurityGroupNameOrId", EmitDefaultValue = false)]
-	public string SourceSecurityGroupNameOrId { get; set; }
+	public string SourceSecurityGroupNameOrId { get; set; } = null!;
 }

@@ -25,7 +25,7 @@ public partial class QuickSearchSpecificByIdRequest
 	/// <param name="SortByRelevance">SortByRelevance.</param>
 	/// <param name="SpecificSearchTargetId">SpecificSearchTargetId.</param>
 	/// <param name="UseSortBy">UseSortBy.</param>
-	public QuickSearchSpecificByIdRequest(List<string> BusObIds, string StandIn, bool? Ascending, bool? IsBusObTarget, bool? NonFinalState, bool? SearchAnyWords, bool? SearchAttachments, bool? SearchRelated, string SearchText, ChangedLimit SelectedChangedLimit, string SelectedSortByFieldId, bool? SortByRelevance, string SpecificSearchTargetId, bool? UseSortBy)
+	public QuickSearchSpecificByIdRequest(List<string> BusObIds, string StandIn, bool Ascending, bool IsBusObTarget, bool NonFinalState, bool SearchAnyWords, bool SearchAttachments, bool SearchRelated, string SearchText, ChangedLimit SelectedChangedLimit, string SelectedSortByFieldId, bool SortByRelevance, string SpecificSearchTargetId, bool UseSortBy)
 	{
 		this.BusObIds = BusObIds;
 		this.StandIn = StandIn;
@@ -47,83 +47,83 @@ public partial class QuickSearchSpecificByIdRequest
 	/// BusObIds
 	/// </summary>
 	[DataMember(Name = "busObIds", EmitDefaultValue = false)]
-	public List<string> BusObIds { get; set; }
+	public List<string> BusObIds { get; set; } = null!;
 
 	/// <summary>
 	/// StandIn
 	/// </summary>
 	[DataMember(Name = "standIn", EmitDefaultValue = false)]
-	public string StandIn { get; set; }
+	public string StandIn { get; set; } = null!;
 
 	/// <summary>
 	/// Ascending
 	/// </summary>
 	[DataMember(Name = "ascending", EmitDefaultValue = false)]
-	public bool? Ascending { get; set; }
+	public bool Ascending { get; set; }
 
 	/// <summary>
 	/// IsBusObTarget
 	/// </summary>
 	[DataMember(Name = "isBusObTarget", EmitDefaultValue = false)]
-	public bool? IsBusObTarget { get; set; }
+	public bool IsBusObTarget { get; set; }
 
 	/// <summary>
 	/// NonFinalState
 	/// </summary>
 	[DataMember(Name = "nonFinalState", EmitDefaultValue = false)]
-	public bool? NonFinalState { get; set; }
+	public bool NonFinalState { get; set; }
 
 	/// <summary>
 	/// SearchAnyWords
 	/// </summary>
 	[DataMember(Name = "searchAnyWords", EmitDefaultValue = false)]
-	public bool? SearchAnyWords { get; set; }
+	public bool SearchAnyWords { get; set; }
 
 	/// <summary>
 	/// SearchAttachments
 	/// </summary>
 	[DataMember(Name = "searchAttachments", EmitDefaultValue = false)]
-	public bool? SearchAttachments { get; set; }
+	public bool SearchAttachments { get; set; }
 
 	/// <summary>
 	/// SearchRelated
 	/// </summary>
 	[DataMember(Name = "searchRelated", EmitDefaultValue = false)]
-	public bool? SearchRelated { get; set; }
+	public bool SearchRelated { get; set; }
 
 	/// <summary>
 	/// SearchText
 	/// </summary>
 	[DataMember(Name = "searchText", EmitDefaultValue = false)]
-	public string SearchText { get; set; }
+	public string SearchText { get; set; } = null!;
 
 	/// <summary>
 	/// SelectedChangedLimit
 	/// </summary>
 	[DataMember(Name = "selectedChangedLimit", EmitDefaultValue = false)]
-	public ChangedLimit SelectedChangedLimit { get; set; }
+	public ChangedLimit SelectedChangedLimit { get; set; } = null!;
 
 	/// <summary>
 	/// SelectedSortByFieldId
 	/// </summary>
 	[DataMember(Name = "selectedSortByFieldId", EmitDefaultValue = false)]
-	public string SelectedSortByFieldId { get; set; }
+	public string SelectedSortByFieldId { get; set; } = null!;
 
 	/// <summary>
 	/// SortByRelevance
 	/// </summary>
 	[DataMember(Name = "sortByRelevance", EmitDefaultValue = false)]
-	public bool? SortByRelevance { get; set; }
+	public bool SortByRelevance { get; set; }
 
 	/// <summary>
 	/// SpecificSearchTargetId
 	/// </summary>
 	[DataMember(Name = "specificSearchTargetId", EmitDefaultValue = false)]
-	public string SpecificSearchTargetId { get; set; }
+	public string SpecificSearchTargetId { get; set; } = null!;
 
 	/// <summary>
 	/// UseSortBy
 	/// </summary>
 	[DataMember(Name = "useSortBy", EmitDefaultValue = false)]
-	public bool? UseSortBy { get; set; }
+	public bool UseSortBy { get; set; }
 }

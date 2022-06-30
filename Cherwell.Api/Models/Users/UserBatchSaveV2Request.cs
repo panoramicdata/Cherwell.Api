@@ -13,7 +13,7 @@ public partial class UserBatchSaveV2Request
 	/// </summary>
 	/// <param name="SaveRequests">SaveRequests.</param>
 	/// <param name="StopOnError">StopOnError.</param>
-	public UserBatchSaveV2Request(List<UserSaveV2Request> SaveRequests, bool? StopOnError)
+	public UserBatchSaveV2Request(List<UserSaveV2Request> SaveRequests, bool StopOnError)
 	{
 		this.SaveRequests = SaveRequests;
 		this.StopOnError = StopOnError;
@@ -23,12 +23,12 @@ public partial class UserBatchSaveV2Request
 	/// SaveRequests
 	/// </summary>
 	[DataMember(Name = "saveRequests", EmitDefaultValue = false)]
-	public List<UserSaveV2Request> SaveRequests { get; set; }
+	public List<UserSaveV2Request> SaveRequests { get; set; } = null!;
 
 	/// <summary>
 	/// StopOnError
 	/// </summary>
 	[DataMember(Name = "stopOnError", EmitDefaultValue = false)]
-	public bool? StopOnError { get; set; }
+	public bool StopOnError { get; set; }
 }
 

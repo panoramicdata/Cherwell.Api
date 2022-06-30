@@ -15,5 +15,5 @@ public partial class BatchDeleteResponse : Response
 	/// Responses
 	/// </summary>
 	[DataMember(Name = "responses", EmitDefaultValue = false)]
-	public List<DeleteResponse>? Responses { get; set; }
+	public List<DeleteResponse> Responses { get; set; } = null!;
 }

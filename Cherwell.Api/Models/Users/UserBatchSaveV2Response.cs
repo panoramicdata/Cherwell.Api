@@ -12,6 +12,6 @@ public partial class UserBatchSaveV2Response : Response
 	/// Responses
 	/// </summary>
 	[DataMember(Name = "responses", EmitDefaultValue = false)]
-	public List<UserSaveV2Response>? Responses { get; set; }
+	public List<UserSaveV2Response> Responses { get; set; } = null!;
 }
 

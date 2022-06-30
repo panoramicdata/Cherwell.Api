@@ -15,5 +15,5 @@ public partial class FieldValuesLookupResponse : Response
 	/// Values
 	/// </summary>
 	[DataMember(Name = "values", EmitDefaultValue = false)]
-	public List<string>? Values { get; set; }
+	public List<string> Values { get; set; } = null!;
 }

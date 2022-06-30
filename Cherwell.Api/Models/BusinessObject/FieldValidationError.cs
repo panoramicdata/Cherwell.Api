@@ -15,11 +15,10 @@ public partial class FieldValidationError : Response
 	/// Error
 	/// </summary>
 	[DataMember(Name = "error", EmitDefaultValue = false)]
-	public string? Error { get; set; }
-
+	public string Error { get; set; } = null!;
 	/// <summary>
 	/// FieldId
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
-	public string? FieldId { get; set; }
+	public string FieldId { get; set; } = null!;
 }

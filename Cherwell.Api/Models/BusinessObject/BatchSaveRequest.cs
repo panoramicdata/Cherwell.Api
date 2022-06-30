@@ -15,11 +15,10 @@ public partial class BatchSaveRequest
 	/// SaveRequests
 	/// </summary>
 	[DataMember(Name = "saveRequests", EmitDefaultValue = false)]
-	public List<SaveRequest>? SaveRequests { get; set; }
-
+	public List<SaveRequest> SaveRequests { get; set; } = null!;
 	/// <summary>
 	/// StopOnError
 	/// </summary>
 	[DataMember(Name = "stopOnError", EmitDefaultValue = false)]
-	public bool? StopOnError { get; set; }
+	public bool StopOnError { get; set; }
 }

@@ -194,19 +194,19 @@ public partial class Attachment
 	/// AttachmentType
 	/// </summary>
 	[DataMember(Name = "attachmentType", EmitDefaultValue = false)]
-	public EnumAttachmentType? AttachmentType { get; set; }
+	public EnumAttachmentType AttachmentType { get; set; }
 
 	/// <summary>
 	/// Scope
 	/// </summary>
 	[DataMember(Name = "scope", EmitDefaultValue = false)]
-	public AttachmentScope? Scope { get; set; }
+	public AttachmentScope Scope { get; set; }
 
 	/// <summary>
 	/// Type
 	/// </summary>
 	[DataMember(Name = "type", EmitDefaultValue = false)]
-	public ObjectType? Type { get; set; }
+	public ObjectType Type { get; set; }
 
 	/// <summary>
 	/// AttachedBusObId
@@ -266,7 +266,7 @@ public partial class Attachment
 	/// Created
 	/// </summary>
 	[DataMember(Name = "created", EmitDefaultValue = false)]
-	public DateTime? Created { get; set; } = null!;
+	public DateTime Created { get; set; }
 
 	/// <summary>
 	/// DisplayText

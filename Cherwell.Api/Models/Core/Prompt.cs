@@ -146,113 +146,99 @@ public partial class Prompt
 	/// ListDisplayOption
 	/// </summary>
 	[DataMember(Name = "listDisplayOption", EmitDefaultValue = false)]
-	public EnumListDisplayOption? ListDisplayOption { get; set; }
-
+	public EnumListDisplayOption ListDisplayOption { get; set; }
 	/// <summary>
 	/// PromptType
 	/// </summary>
 	[DataMember(Name = "promptType", EmitDefaultValue = false)]
-	public EnumPromptType? PromptType { get; set; }
-
+	public EnumPromptType PromptType { get; set; }
 	/// <summary>
 	/// AllowValuesOnly
 	/// </summary>
 	[DataMember(Name = "allowValuesOnly", EmitDefaultValue = false)]
-	public bool? AllowValuesOnly { get; set; }
+	public bool AllowValuesOnly { get; set; }
 
 	/// <summary>
 	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
-	public string? BusObId { get; set; }
-
+	public string BusObId { get; set; } = null!;
 	/// <summary>
 	/// CollectionStoreEntireRow
 	/// </summary>
 	[DataMember(Name = "collectionStoreEntireRow", EmitDefaultValue = false)]
-	public string? CollectionStoreEntireRow { get; set; }
-
+	public string CollectionStoreEntireRow { get; set; } = null!;
 	/// <summary>
 	/// CollectionValueField
 	/// </summary>
 	[DataMember(Name = "collectionValueField", EmitDefaultValue = false)]
-	public string? CollectionValueField { get; set; }
-
+	public string CollectionValueField { get; set; } = null!;
 	/// <summary>
 	/// ConstraintXml
 	/// </summary>
 	[DataMember(Name = "constraintXml", EmitDefaultValue = false)]
-	public string? ConstraintXml { get; set; }
-
+	public string ConstraintXml { get; set; } = null!;
 	/// <summary>
 	/// Contents
 	/// </summary>
 	[DataMember(Name = "contents", EmitDefaultValue = false)]
-	public string? Contents { get; set; }
-
+	public string Contents { get; set; } = null!;
 	/// <summary>
 	/// _Default
 	/// </summary>
 	[DataMember(Name = "default", EmitDefaultValue = false)]
-	public string? Default { get; set; }
-
+	public string Default { get; set; } = null!;
 	/// <summary>
 	/// FieldId
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
-	public string? FieldId { get; set; }
-
+	public string FieldId { get; set; } = null!;
 	/// <summary>
 	/// IsDateRange
 	/// </summary>
 	[DataMember(Name = "isDateRange", EmitDefaultValue = false)]
-	public bool? IsDateRange { get; set; }
+	public bool IsDateRange { get; set; }
 
 	/// <summary>
 	/// ListReturnFieldId
 	/// </summary>
 	[DataMember(Name = "listReturnFieldId", EmitDefaultValue = false)]
-	public string? ListReturnFieldId { get; set; }
-
+	public string ListReturnFieldId { get; set; } = null!;
 	/// <summary>
 	/// MultiLine
 	/// </summary>
 	[DataMember(Name = "multiLine", EmitDefaultValue = false)]
-	public bool? MultiLine { get; set; }
+	public bool MultiLine { get; set; }
 
 	/// <summary>
 	/// PromptId
 	/// </summary>
 	[DataMember(Name = "promptId", EmitDefaultValue = false)]
-	public string? PromptId { get; set; }
-
+	public string PromptId { get; set; } = null!;
 	/// <summary>
 	/// PromptTypeName
 	/// </summary>
 	[DataMember(Name = "promptTypeName", EmitDefaultValue = false)]
-	public string? PromptTypeName { get; set; }
-
+	public string PromptTypeName { get; set; } = null!;
 	/// <summary>
 	/// Required
 	/// </summary>
 	[DataMember(Name = "required", EmitDefaultValue = false)]
-	public bool? Required { get; set; }
+	public bool Required { get; set; }
 
 	/// <summary>
 	/// Text
 	/// </summary>
 	[DataMember(Name = "text", EmitDefaultValue = false)]
-	public string? Text { get; set; }
-
+	public string Text { get; set; } = null!;
 	/// <summary>
 	/// Value
 	/// </summary>
 	[DataMember(Name = "value", EmitDefaultValue = false)]
-	public Object? Value { get; set; }
-
+	public Object Value { get; set; } = null!;
 	/// <summary>
 	/// Values
 	/// </summary>
 	[DataMember(Name = "values", EmitDefaultValue = false)]
-	public List<string?>? Values { get; set; }
+	public List<string> Values { get; set; } = null!;
 }

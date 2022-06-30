@@ -12,5 +12,5 @@ public partial class MobileCredentialsModeResponse : Response
 	/// CredentialsMode
 	/// </summary>
 	[DataMember(Name = "credentialsMode", EmitDefaultValue = false)]
-	public int? CredentialsMode { get; set; }
+	public int CredentialsMode { get; set; }
 }

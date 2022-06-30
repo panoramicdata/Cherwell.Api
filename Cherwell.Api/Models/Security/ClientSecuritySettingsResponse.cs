@@ -12,23 +12,23 @@ public partial class ClientSecuritySettingsResponse : Response
 	/// InternalLoginAllowed
 	/// </summary>
 	[DataMember(Name = "internalLoginAllowed", EmitDefaultValue = false)]
-	public bool? InternalLoginAllowed { get; set; }
+	public bool InternalLoginAllowed { get; set; }
 
 	/// <summary>
 	/// LdapLoginAllowed
 	/// </summary>
 	[DataMember(Name = "ldapLoginAllowed", EmitDefaultValue = false)]
-	public bool? LdapLoginAllowed { get; set; }
+	public bool LdapLoginAllowed { get; set; }
 
 	/// <summary>
 	/// SamlLoginAllowed
 	/// </summary>
 	[DataMember(Name = "samlLoginAllowed", EmitDefaultValue = false)]
-	public bool? SamlLoginAllowed { get; set; }
+	public bool SamlLoginAllowed { get; set; }
 
 	/// <summary>
 	/// WindowsLoginAllowed
 	/// </summary>
 	[DataMember(Name = "windowsLoginAllowed", EmitDefaultValue = false)]
-	public bool? WindowsLoginAllowed { get; set; }
+	public bool WindowsLoginAllowed { get; set; }
 }

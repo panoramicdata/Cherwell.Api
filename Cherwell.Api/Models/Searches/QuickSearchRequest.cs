@@ -23,11 +23,11 @@ public partial class QuickSearchRequest
 	/// BusObIds
 	/// </summary>
 	[DataMember(Name = "busObIds", EmitDefaultValue = false)]
-	public List<string> BusObIds { get; set; }
+	public List<string> BusObIds { get; set; } = null!;
 
 	/// <summary>
 	/// SearchText
 	/// </summary>
 	[DataMember(Name = "searchText", EmitDefaultValue = false)]
-	public string SearchText { get; set; }
+	public string SearchText { get; set; } = null!;
 }

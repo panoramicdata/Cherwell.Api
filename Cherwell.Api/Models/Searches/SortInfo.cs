@@ -12,11 +12,10 @@ public partial class SortInfo
 	/// FieldId
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
-	public string? FieldId { get; set; }
-
+	public string FieldId { get; set; } = null!;
 	/// <summary>
 	/// SortDirection
 	/// </summary>
 	[DataMember(Name = "sortDirection", EmitDefaultValue = false)]
-	public int? SortDirection { get; set; }
+	public int SortDirection { get; set; }
 }

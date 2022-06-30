@@ -12,6 +12,6 @@ public partial class SecurityGroupResponse : Response
 	/// SecurityGroups
 	/// </summary>
 	[DataMember(Name = "securityGroups", EmitDefaultValue = false)]
-	public List<SecurityGroup>? SecurityGroups { get; set; }
+	public List<SecurityGroup> SecurityGroups { get; set; } = null!;
 }
 

@@ -15,25 +15,22 @@ public partial class ServiceInfoResponse : Response
 	/// ApiVersion
 	/// </summary>
 	[DataMember(Name = "apiVersion", EmitDefaultValue = false)]
-	public string? ApiVersion { get; set; }
-
+	public string ApiVersion { get; set; } = null!;
 	/// <summary>
 	/// CsmCulture
 	/// </summary>
 	[DataMember(Name = "csmCulture", EmitDefaultValue = false)]
-	public string? CsmCulture { get; set; }
-
+	public string CsmCulture { get; set; } = null!;
 	/// <summary>
 	/// CsmVersion
 	/// </summary>
 	[DataMember(Name = "csmVersion", EmitDefaultValue = false)]
-	public string? CsmVersion { get; set; }
-
+	public string CsmVersion { get; set; } = null!;
 	/// <summary>
 	/// SystemDateTime
 	/// </summary>
 	[DataMember(Name = "systemDateTime", EmitDefaultValue = false)]
-	public DateTime? SystemDateTime { get; set; }
+	public DateTime SystemDateTime { get; set; }
 
 	/// <summary>
 	/// TimeZone
@@ -45,5 +42,5 @@ public partial class ServiceInfoResponse : Response
 	/// SystemUtcOffset
 	/// </summary>
 	[DataMember(Name = "systemUtcOffset", EmitDefaultValue = false)]
-	public string? SystemUtcOffset { get; set; }
+	public string SystemUtcOffset { get; set; } = null!;
 }

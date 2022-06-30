@@ -12,12 +12,11 @@ public partial class TeamsResponse : Response
 	/// Error
 	/// </summary>
 	[DataMember(Name = "error", EmitDefaultValue = false)]
-	public string? Error { get; set; }
-
+	public string Error { get; set; } = null!;
 	/// <summary>
 	/// Teams
 	/// </summary>
 	[DataMember(Name = "teams", EmitDefaultValue = false)]
-	public List<Team>? Teams { get; set; }
+	public List<Team> Teams { get; set; } = null!;
 }
 

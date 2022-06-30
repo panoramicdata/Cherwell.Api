@@ -12,17 +12,16 @@ public partial class GetStagesResponseStages
 	/// Id
 	/// </summary>
 	[DataMember(Name = "id", EmitDefaultValue = false)]
-	public string? Id { get; set; }
-
+	public string Id { get; set; } = null!;
 	/// <summary>
 	/// IsFinal
 	/// </summary>
 	[DataMember(Name = "isFinal", EmitDefaultValue = false)]
-	public bool? IsFinal { get; set; }
+	public bool IsFinal { get; set; }
 
 	/// <summary>
 	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
-	public string? Name { get; set; }
+	public string Name { get; set; } = null!;
 }

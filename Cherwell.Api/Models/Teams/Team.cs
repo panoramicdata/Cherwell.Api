@@ -12,12 +12,11 @@ public partial class Team
 	/// TeamId
 	/// </summary>
 	[DataMember(Name = "teamId", EmitDefaultValue = false)]
-	public string? TeamId { get; set; }
-
+	public string TeamId { get; set; } = null!;
 	/// <summary>
 	/// TeamName
 	/// </summary>
 	[DataMember(Name = "teamName", EmitDefaultValue = false)]
-	public string? TeamName { get; set; }
+	public string TeamName { get; set; } = null!;
 }
 

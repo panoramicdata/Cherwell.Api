@@ -13,7 +13,7 @@ public partial class AddUserToTeamByBatchRequest
 	/// </summary>
 	/// <param name="AddUserToTeamRequests">AddUserToTeamRequests.</param>
 	/// <param name="StopOnError">StopOnError.</param>
-	public AddUserToTeamByBatchRequest(List<AddUserToTeamRequest> AddUserToTeamRequests, bool? StopOnError)
+	public AddUserToTeamByBatchRequest(List<AddUserToTeamRequest> AddUserToTeamRequests, bool StopOnError)
 	{
 		this.AddUserToTeamRequests = AddUserToTeamRequests;
 		this.StopOnError = StopOnError;
@@ -23,12 +23,12 @@ public partial class AddUserToTeamByBatchRequest
 	/// AddUserToTeamRequests
 	/// </summary>
 	[DataMember(Name = "addUserToTeamRequests", EmitDefaultValue = false)]
-	public List<AddUserToTeamRequest> AddUserToTeamRequests { get; set; }
+	public List<AddUserToTeamRequest> AddUserToTeamRequests { get; set; } = null!;
 
 	/// <summary>
 	/// StopOnError
 	/// </summary>
 	[DataMember(Name = "stopOnError", EmitDefaultValue = false)]
-	public bool? StopOnError { get; set; }
+	public bool StopOnError { get; set; }
 }
 

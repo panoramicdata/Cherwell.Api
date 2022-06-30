@@ -12,6 +12,6 @@ public partial class TeamsV2Response : Response
 	/// Teams
 	/// </summary>
 	[DataMember(Name = "teams", EmitDefaultValue = false)]
-	public List<Team>? Teams { get; set; }
+	public List<Team> Teams { get; set; } = null!;
 }
 

@@ -12,12 +12,11 @@ public partial class UserDeleteResponse : Response
 	/// Error
 	/// </summary>
 	[DataMember(Name = "error", EmitDefaultValue = false)]
-	public string? Error { get; set; }
-
+	public string Error { get; set; } = null!;
 	/// <summary>
 	/// Users
 	/// </summary>
 	[DataMember(Name = "users", EmitDefaultValue = false)]
-	public List<User>? Users { get; set; }
+	public List<User> Users { get; set; } = null!;
 }
 

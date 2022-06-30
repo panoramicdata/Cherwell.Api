@@ -12,5 +12,5 @@ public partial class TransitionRecordRequest
 	/// TransitionOptionId
 	/// </summary>
 	[DataMember(Name = "transitionOptionId", EmitDefaultValue = false)]
-	public string? TransitionOptionId { get; set; }
+	public string TransitionOptionId { get; set; } = null!;
 }

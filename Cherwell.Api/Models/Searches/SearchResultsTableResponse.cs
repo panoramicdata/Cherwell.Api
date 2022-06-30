@@ -12,23 +12,20 @@ public partial class SearchResultsTableResponse : Response
 	/// Columns
 	/// </summary>
 	[DataMember(Name = "columns", EmitDefaultValue = false)]
-	public List<Field>? Columns { get; set; }
-
+	public List<Field> Columns { get; set; } = null!;
 	/// <summary>
 	/// Rows
 	/// </summary>
 	[DataMember(Name = "rows", EmitDefaultValue = false)]
-	public List<SearchResultsRow>? Rows { get; set; }
-
+	public List<SearchResultsRow> Rows { get; set; } = null!;
 	/// <summary>
 	/// Sorting
 	/// </summary>
 	[DataMember(Name = "sorting", EmitDefaultValue = false)]
-	public List<SortInfo>? Sorting { get; set; }
-
+	public List<SortInfo> Sorting { get; set; } = null!;
 	/// <summary>
 	/// TotalRows
 	/// </summary>
 	[DataMember(Name = "totalRows", EmitDefaultValue = false)]
-	public long? TotalRows { get; set; }
+	public long TotalRows { get; set; }
 }

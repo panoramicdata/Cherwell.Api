@@ -13,7 +13,7 @@ public partial class UserBatchReadRequest
 	/// </summary>
 	/// <param name="ReadRequests">ReadRequests.</param>
 	/// <param name="StopOnError">StopOnError.</param>
-	public UserBatchReadRequest(List<UserReadRequest> ReadRequests, bool? StopOnError)
+	public UserBatchReadRequest(List<UserReadRequest> ReadRequests, bool StopOnError)
 	{
 		this.ReadRequests = ReadRequests;
 		this.StopOnError = StopOnError;
@@ -23,12 +23,12 @@ public partial class UserBatchReadRequest
 	/// ReadRequests
 	/// </summary>
 	[DataMember(Name = "readRequests", EmitDefaultValue = false)]
-	public List<UserReadRequest> ReadRequests { get; set; }
+	public List<UserReadRequest> ReadRequests { get; set; } = null!;
 
 	/// <summary>
 	/// StopOnError
 	/// </summary>
 	[DataMember(Name = "stopOnError", EmitDefaultValue = false)]
-	public bool? StopOnError { get; set; }
+	public bool StopOnError { get; set; }
 }
 

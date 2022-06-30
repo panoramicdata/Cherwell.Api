@@ -60,17 +60,15 @@ public partial class LogRequest
 	/// Level
 	/// </summary>
 	[DataMember(Name = "level", EmitDefaultValue = false)]
-	public EnumLevel? Level { get; set; }
-
+	public EnumLevel Level { get; set; }
 	/// <summary>
 	/// keyValueproperties
 	/// </summary>
 	[DataMember(Name = "keyValueproperties", EmitDefaultValue = false)]
-	public List<object>? keyValueproperties { get; set; }
-
+	public List<object> keyValueproperties { get; set; } = null!;
 	/// <summary>
 	/// Message
 	/// </summary>
 	[DataMember(Name = "message", EmitDefaultValue = false)]
-	public string? Message { get; set; }
+	public string Message { get; set; } = null!;
 }

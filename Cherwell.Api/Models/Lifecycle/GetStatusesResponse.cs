@@ -12,5 +12,5 @@ public partial class GetStatusesResponse : Response
 	/// Statuses
 	/// </summary>
 	[DataMember(Name = "statuses", EmitDefaultValue = false)]
-	public List<GetStatusesResponseStatuses>? Statuses { get; set; }
+	public List<GetStatusesResponseStatuses> Statuses { get; set; } = null!;
 }

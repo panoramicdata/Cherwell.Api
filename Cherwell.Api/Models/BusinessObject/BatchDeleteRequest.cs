@@ -15,11 +15,10 @@ public partial class BatchDeleteRequest
 	/// DeleteRequests
 	/// </summary>
 	[DataMember(Name = "deleteRequests", EmitDefaultValue = false)]
-	public List<DeleteRequest>? DeleteRequests { get; set; }
-
+	public List<DeleteRequest> DeleteRequests { get; set; } = null!;
 	/// <summary>
 	/// StopOnError
 	/// </summary>
 	[DataMember(Name = "stopOnError", EmitDefaultValue = false)]
-	public bool? StopOnError { get; set; }
+	public bool StopOnError { get; set; }
 }

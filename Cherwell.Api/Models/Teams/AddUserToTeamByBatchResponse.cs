@@ -12,6 +12,6 @@ public partial class AddUserToTeamByBatchResponse : Response
 	/// Responses
 	/// </summary>
 	[DataMember(Name = "responses", EmitDefaultValue = false)]
-	public List<AddUserToTeamResponse>? Responses { get; set; }
+	public List<AddUserToTeamResponse> Responses { get; set; } = null!;
 }
 

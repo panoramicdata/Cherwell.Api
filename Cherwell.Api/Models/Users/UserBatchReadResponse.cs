@@ -12,6 +12,6 @@ public partial class UserBatchReadResponse : Response
 	/// Responses
 	/// </summary>
 	[DataMember(Name = "responses", EmitDefaultValue = false)]
-	public List<UserReadV2Response>? Responses { get; set; }
+	public List<UserReadV2Response> Responses { get; set; } = null!;
 }
 

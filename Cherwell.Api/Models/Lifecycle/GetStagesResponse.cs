@@ -12,5 +12,5 @@ public partial class GetStagesResponse : Response
 	/// Stages
 	/// </summary>
 	[DataMember(Name = "stages", EmitDefaultValue = false)]
-	public List<GetStagesResponseStages>? Stages { get; set; }
+	public List<GetStagesResponseStages> Stages { get; set; } = null!;
 }

@@ -12,6 +12,6 @@ public partial class UserListResponse : Response
 	/// Users
 	/// </summary>
 	[DataMember(Name = "users", EmitDefaultValue = false)]
-	public List<UserV2>? Users { get; set; }
+	public List<UserV2> Users { get; set; } = null!;
 }
 

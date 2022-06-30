@@ -12,6 +12,6 @@ public partial class SecurityRightCategoriesResponse : Response
 	/// RightCategories
 	/// </summary>
 	[DataMember(Name = "rightCategories", EmitDefaultValue = false)]
-	public List<RightCategory>? RightCategories { get; set; }
+	public List<RightCategory> RightCategories { get; set; } = null!;
 }
 

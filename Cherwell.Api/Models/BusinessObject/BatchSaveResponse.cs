@@ -15,5 +15,5 @@ public partial class BatchSaveResponse : Response
 	/// Responses
 	/// </summary>
 	[DataMember(Name = "responses", EmitDefaultValue = false)]
-	public List<SaveResponse>? Responses { get; set; }
+	public List<SaveResponse> Responses { get; set; } = null!;
 }

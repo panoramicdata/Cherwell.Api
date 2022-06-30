@@ -12,6 +12,6 @@ public partial class RoleReadV2Response : Response
 	/// Roles
 	/// </summary>
 	[DataMember(Name = "roles", EmitDefaultValue = false)]
-	public List<Role>? Roles { get; set; }
+	public List<Role> Roles { get; set; } = null!;
 }
 

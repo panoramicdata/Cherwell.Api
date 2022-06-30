@@ -12,12 +12,11 @@ public partial class RemoveUserFromTeamResponse : Response
 	/// TeamId
 	/// </summary>
 	[DataMember(Name = "teamId", EmitDefaultValue = false)]
-	public string? TeamId { get; set; }
-
+	public string TeamId { get; set; } = null!;
 	/// <summary>
 	/// UserRecordId
 	/// </summary>
 	[DataMember(Name = "userRecordId", EmitDefaultValue = false)]
-	public string? UserRecordId { get; set; }
+	public string UserRecordId { get; set; } = null!;
 }
 

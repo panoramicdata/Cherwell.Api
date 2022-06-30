@@ -12,5 +12,5 @@ public partial class CloneSecurityGroupResponse : Response
 	/// SecurityGroupId
 	/// </summary>
 	[DataMember(Name = "securityGroupId", EmitDefaultValue = false)]
-	public string? SecurityGroupId { get; set; }
+	public string SecurityGroupId { get; set; } = null!;
 }

@@ -23,12 +23,12 @@ public partial class UserReadRequest
 	/// LoginId
 	/// </summary>
 	[DataMember(Name = "loginId", EmitDefaultValue = false)]
-	public string LoginId { get; set; }
+	public string LoginId { get; set; } = null!;
 
 	/// <summary>
 	/// PublicId
 	/// </summary>
 	[DataMember(Name = "publicId", EmitDefaultValue = false)]
-	public string PublicId { get; set; }
+	public string PublicId { get; set; } = null!;
 }
 

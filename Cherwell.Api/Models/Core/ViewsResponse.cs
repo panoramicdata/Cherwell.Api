@@ -16,5 +16,5 @@ public partial class ViewsResponse : Response
 	/// Views
 	/// </summary>
 	[DataMember(Name = "views", EmitDefaultValue = false)]
-	public List<View>? Views { get; set; }
+	public List<View> Views { get; set; } = null!;
 }

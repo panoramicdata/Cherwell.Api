@@ -15,11 +15,11 @@ public partial class ApprovalReadResponse : Response
 	/// properties
 	/// </summary>
 	[DataMember(Name = "properties", EmitDefaultValue = false)]
-	public Dictionary<string, object>? Properties { get; set; }
+	public Dictionary<string, object> Properties { get; set; } = null!;
 
 	/// <summary>
 	/// Links
 	/// </summary>
 	[DataMember(Name = "links", EmitDefaultValue = false)]
-	public List<Link>? Links { get; set; }
+	public List<Link> Links { get; set; } = null!;
 }

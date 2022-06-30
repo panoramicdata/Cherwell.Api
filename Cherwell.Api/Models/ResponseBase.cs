@@ -18,7 +18,7 @@ public partial class ResponseBase : Response
 	/// <param name="errorMessage">ErrorMessage.</param>
 	/// <param name="hasError">HasError.</param>
 	/// <param name="HttpStatusCode">HttpStatusCode.</param>
-	public ResponseBase(string errorCode, string errorMessage, bool? hasError, EnumHttpStatusCode HttpStatusCode)
+	public ResponseBase(string errorCode, string errorMessage, bool hasError, EnumHttpStatusCode HttpStatusCode)
 	{
 		this.ErrorCode = errorCode;
 		this.ErrorMessage = errorMessage;

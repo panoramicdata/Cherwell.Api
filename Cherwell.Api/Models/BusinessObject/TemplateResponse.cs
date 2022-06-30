@@ -15,5 +15,5 @@ public partial class TemplateResponse : Response
 	/// Fields
 	/// </summary>
 	[DataMember(Name = "fields", EmitDefaultValue = false)]
-	public List<FieldTemplateItem>? Fields { get; set; }
+	public List<FieldTemplateItem> Fields { get; set; } = null!;
 }

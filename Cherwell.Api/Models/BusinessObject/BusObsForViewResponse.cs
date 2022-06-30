@@ -15,5 +15,5 @@ public partial class BusObsForViewResponse : Response
 	/// Summaries
 	/// </summary>
 	[DataMember(Name = "summaries", EmitDefaultValue = false)]
-	public List<ViewSummary>? Summaries { get; set; }
+	public List<ViewSummary> Summaries { get; set; } = null!;
 }

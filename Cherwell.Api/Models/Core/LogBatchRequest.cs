@@ -15,5 +15,5 @@ public partial class LogBatchRequest
 	/// LogRequests
 	/// </summary>
 	[DataMember(Name = "logRequests", EmitDefaultValue = false)]
-	public List<LogRequest>? LogRequests { get; set; }
+	public List<LogRequest> LogRequests { get; set; } = null!;
 }

@@ -34,8 +34,7 @@ public partial class TeamSaveRequest
 	/// TeamType
 	/// </summary>
 	[DataMember(Name = "teamType", EmitDefaultValue = false)]
-	public EnumTeamType? TeamType { get; set; }
-
+	public EnumTeamType TeamType { get; set; }
 	/// <summary>
 	/// Initializes a new instance of the <see cref="TeamSaveRequest" /> class.
 	/// </summary>
@@ -45,7 +44,7 @@ public partial class TeamSaveRequest
 	/// <param name="TeamId">TeamId.</param>
 	/// <param name="TeamName">TeamName.</param>
 	/// <param name="TeamType">TeamType.</param>
-	public TeamSaveRequest(string Description, string EmailAlias, string Image, string TeamId, string TeamName, EnumTeamType? TeamType)
+	public TeamSaveRequest(string Description, string EmailAlias, string Image, string TeamId, string TeamName, EnumTeamType TeamType)
 	{
 		this.Description = Description;
 		this.EmailAlias = EmailAlias;
@@ -59,30 +58,30 @@ public partial class TeamSaveRequest
 	/// Description
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
-	public string Description { get; set; }
+	public string Description { get; set; } = null!;
 
 	/// <summary>
 	/// EmailAlias
 	/// </summary>
 	[DataMember(Name = "emailAlias", EmitDefaultValue = false)]
-	public string EmailAlias { get; set; }
+	public string EmailAlias { get; set; } = null!;
 
 	/// <summary>
 	/// Image
 	/// </summary>
 	[DataMember(Name = "image", EmitDefaultValue = false)]
-	public string Image { get; set; }
+	public string Image { get; set; } = null!;
 
 	/// <summary>
 	/// TeamId
 	/// </summary>
 	[DataMember(Name = "teamId", EmitDefaultValue = false)]
-	public string TeamId { get; set; }
+	public string TeamId { get; set; } = null!;
 
 	/// <summary>
 	/// TeamName
 	/// </summary>
 	[DataMember(Name = "teamName", EmitDefaultValue = false)]
-	public string TeamName { get; set; }
+	public string TeamName { get; set; } = null!;
 }
 

@@ -19,7 +19,7 @@ public partial class OneStepActionRequest
 	/// <param name="BusObRecId">BusObRecId.</param>
 	/// <param name="OneStepActionStandInKey">OneStepActionStandInKey.</param>
 	/// <param name="PromptValues">PromptValues.</param>
-	public OneStepActionRequest(bool? AcquireLicense, string BusObId, string BusObRecId, string OneStepActionStandInKey, List<SimplePromptValue> PromptValues)
+	public OneStepActionRequest(bool AcquireLicense, string BusObId, string BusObRecId, string OneStepActionStandInKey, List<SimplePromptValue> PromptValues)
 	{
 		this.AcquireLicense = AcquireLicense;
 		this.BusObId = BusObId;
@@ -32,29 +32,29 @@ public partial class OneStepActionRequest
 	/// AcquireLicense
 	/// </summary>
 	[DataMember(Name = "acquireLicense", EmitDefaultValue = false)]
-	public bool? AcquireLicense { get; set; }
+	public bool AcquireLicense { get; set; }
 
 	/// <summary>
 	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
-	public string BusObId { get; set; }
+	public string BusObId { get; set; } = null!;
 
 	/// <summary>
 	/// BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
-	public string BusObRecId { get; set; }
+	public string BusObRecId { get; set; } = null!;
 
 	/// <summary>
 	/// OneStepActionStandInKey
 	/// </summary>
 	[DataMember(Name = "oneStepActionStandInKey", EmitDefaultValue = false)]
-	public string OneStepActionStandInKey { get; set; }
+	public string OneStepActionStandInKey { get; set; } = null!;
 
 	/// <summary>
 	/// PromptValues
 	/// </summary>
 	[DataMember(Name = "promptValues", EmitDefaultValue = false)]
-	public List<SimplePromptValue> PromptValues { get; set; }
+	public List<SimplePromptValue> PromptValues { get; set; } = null!;
 }

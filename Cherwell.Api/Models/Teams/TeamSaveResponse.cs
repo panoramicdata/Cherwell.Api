@@ -12,6 +12,6 @@ public partial class TeamSaveResponse : Response
 	/// TeamId
 	/// </summary>
 	[DataMember(Name = "teamId", EmitDefaultValue = false)]
-	public string? TeamId { get; set; }
+	public string TeamId { get; set; } = null!;
 }
 

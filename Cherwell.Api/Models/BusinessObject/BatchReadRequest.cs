@@ -12,11 +12,10 @@ public partial class BatchReadRequest
 	/// ReadRequests
 	/// </summary>
 	[DataMember(Name = "readRequests", EmitDefaultValue = false)]
-	public List<ReadRequest>? ReadRequests { get; set; }
-
+	public List<ReadRequest> ReadRequests { get; set; } = null!;
 	/// <summary>
 	/// StopOnError
 	/// </summary>
 	[DataMember(Name = "stopOnError", EmitDefaultValue = false)]
-	public bool? StopOnError { get; set; }
+	public bool StopOnError { get; set; }
 }

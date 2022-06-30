@@ -12,5 +12,5 @@ public partial class GetSecurityGroupBusinessObjectPermissionsResponse : Respons
 	/// BusinessObjectPermissions
 	/// </summary>
 	[DataMember(Name = "businessObjectPermissions", EmitDefaultValue = false)]
-	public List<BusinessObjectPermission>? BusinessObjectPermissions { get; set; }
+	public List<BusinessObjectPermission> BusinessObjectPermissions { get; set; } = null!;
 }

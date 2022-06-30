@@ -12,5 +12,5 @@ public partial class GetApiClientSettingsResponse : Response
 	/// Settings
 	/// </summary>
 	[DataMember(Name = "settings", EmitDefaultValue = false)]
-	public List<GetApiClientSettingsResponseItem>? Settings { get; set; }
+	public List<GetApiClientSettingsResponseItem> Settings { get; set; } = null!;
 }

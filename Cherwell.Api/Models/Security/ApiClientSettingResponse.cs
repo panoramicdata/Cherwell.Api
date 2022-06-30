@@ -12,53 +12,49 @@ public partial class ApiClientSettingResponse : Response
 	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
-	public string? Name { get; set; }
-
+	public string Name { get; set; } = null!;
 	/// <summary>
 	/// Description
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
-	public string? Description { get; set; }
-
+	public string Description { get; set; } = null!;
 	/// <summary>
 	/// Culture
 	/// </summary>
 	[DataMember(Name = "culture", EmitDefaultValue = false)]
-	public string? Culture { get; set; }
-
+	public string Culture { get; set; } = null!;
 	/// <summary>
 	/// ClientKey
 	/// </summary>
 	[DataMember(Name = "clientKey", EmitDefaultValue = false)]
-	public string? ClientKey { get; set; }
-
+	public string ClientKey { get; set; } = null!;
 	/// <summary>
 	/// TokenLifespanMinutes
 	/// </summary>
 	[DataMember(Name = "tokenLifespanMinutes", EmitDefaultValue = false)]
-	public int? TokenLifespanMinutes { get; set; }
+	public int TokenLifespanMinutes { get; set; }
 
 	/// <summary>
 	/// RefreshTokenLifespanMinutes
 	/// </summary>
 	[DataMember(Name = "refreshTokenLifespanMinutes", EmitDefaultValue = false)]
-	public int? RefreshTokenLifespanMinutes { get; set; }
+	public int RefreshTokenLifespanMinutes { get; set; }
 
 	/// <summary>
 	/// ApiAccessIsEnabled
 	/// </summary>
 	[DataMember(Name = "apiAccessIsEnabled", EmitDefaultValue = false)]
-	public bool? ApiAccessIsEnabled { get; set; }
+	public bool ApiAccessIsEnabled { get; set; }
 
 	/// <summary>
 	/// AllowAnonymousAccess
 	/// </summary>
 	[DataMember(Name = "allowAnonymousAccess", EmitDefaultValue = false)]
-	public bool? AllowAnonymousAccess { get; set; }
+	public bool AllowAnonymousAccess { get; set; }
 
 	/// <summary>
 	/// StandInKey
 	/// </summary>
 	[DataMember(Name = "standInKey", EmitDefaultValue = false)]
-	public string? StandInKey { get; set; }
+	public string StandInKey { get; set; } = null!;
 }

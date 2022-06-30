@@ -22,7 +22,7 @@ public partial class TrebuchetNameValuePair
 	/// <param name="DisplayShowsValue">DisplayShowsValue.</param>
 	/// <param name="SpecialUseFlag">SpecialUseFlag.</param>
 	/// <param name="DisplayString">DisplayString.</param>
-	public TrebuchetNameValuePair(string Name, Object ValueObject, string ValueString, string Category, string Description, bool? DisplayShowsValue, bool? SpecialUseFlag, string DisplayString)
+	public TrebuchetNameValuePair(string Name, Object ValueObject, string ValueString, string Category, string Description, bool DisplayShowsValue, bool SpecialUseFlag, string DisplayString)
 	{
 		this.Name = Name;
 		this.ValueObject = ValueObject;
@@ -38,7 +38,7 @@ public partial class TrebuchetNameValuePair
 	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
-	public string Name { get; set; }
+	public string Name { get; set; } = null!;
 
 	/// <summary>
 	/// ValueObject
@@ -50,35 +50,35 @@ public partial class TrebuchetNameValuePair
 	/// ValueString
 	/// </summary>
 	[DataMember(Name = "valueString", EmitDefaultValue = false)]
-	public string ValueString { get; set; }
+	public string ValueString { get; set; } = null!;
 
 	/// <summary>
 	/// Category
 	/// </summary>
 	[DataMember(Name = "category", EmitDefaultValue = false)]
-	public string Category { get; set; }
+	public string Category { get; set; } = null!;
 
 	/// <summary>
 	/// Description
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
-	public string Description { get; set; }
+	public string Description { get; set; } = null!;
 
 	/// <summary>
 	/// DisplayShowsValue
 	/// </summary>
 	[DataMember(Name = "displayShowsValue", EmitDefaultValue = false)]
-	public bool? DisplayShowsValue { get; set; }
+	public bool DisplayShowsValue { get; set; }
 
 	/// <summary>
 	/// SpecialUseFlag
 	/// </summary>
 	[DataMember(Name = "specialUseFlag", EmitDefaultValue = false)]
-	public bool? SpecialUseFlag { get; set; }
+	public bool SpecialUseFlag { get; set; }
 
 	/// <summary>
 	/// DisplayString
 	/// </summary>
 	[DataMember(Name = "displayString", EmitDefaultValue = false)]
-	public string DisplayString { get; set; }
+	public string DisplayString { get; set; } = null!;
 }

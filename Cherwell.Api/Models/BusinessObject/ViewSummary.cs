@@ -15,59 +15,54 @@ public partial class ViewSummary
 	/// GroupSummaries
 	/// </summary>
 	[DataMember(Name = "groupSummaries", EmitDefaultValue = false)]
-	public List<ViewSummary>? GroupSummaries { get; set; }
-
+	public List<ViewSummary> GroupSummaries { get; set; } = null!;
 	/// <summary>
 	/// Image
 	/// </summary>
 	[DataMember(Name = "image", EmitDefaultValue = false)]
-	public string? Image { get; set; }
-
+	public string Image { get; set; } = null!;
 	/// <summary>
 	/// IsPartOfView
 	/// </summary>
 	[DataMember(Name = "isPartOfView", EmitDefaultValue = false)]
-	public bool? IsPartOfView { get; set; }
+	public bool IsPartOfView { get; set; }
 
 	/// <summary>
 	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
-	public string? BusObId { get; set; }
-
+	public string BusObId { get; set; } = null!;
 	/// <summary>
 	/// DisplayName
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
-	public string? DisplayName { get; set; }
-
+	public string DisplayName { get; set; } = null!;
 	/// <summary>
 	/// Group
 	/// </summary>
 	[DataMember(Name = "group", EmitDefaultValue = false)]
-	public bool? Group { get; set; }
+	public bool Group { get; set; }
 
 	/// <summary>
 	/// Lookup
 	/// </summary>
 	[DataMember(Name = "lookup", EmitDefaultValue = false)]
-	public bool? Lookup { get; set; }
+	public bool Lookup { get; set; }
 
 	/// <summary>
 	/// Major
 	/// </summary>
 	[DataMember(Name = "major", EmitDefaultValue = false)]
-	public bool? Major { get; set; }
+	public bool Major { get; set; }
 
 	/// <summary>
 	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
-	public string? Name { get; set; }
-
+	public string Name { get; set; } = null!;
 	/// <summary>
 	/// Supporting
 	/// </summary>
 	[DataMember(Name = "supporting", EmitDefaultValue = false)]
-	public bool? Supporting { get; set; }
+	public bool Supporting { get; set; }
 }

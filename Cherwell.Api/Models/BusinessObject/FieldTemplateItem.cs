@@ -15,41 +15,36 @@ public partial class FieldTemplateItem
 	/// Dirty
 	/// </summary>
 	[DataMember(Name = "dirty", EmitDefaultValue = false)]
-	public bool? Dirty { get; set; }
+	public bool Dirty { get; set; }
 
 	/// <summary>
 	/// DisplayName
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
-	public string? DisplayName { get; set; }
-
+	public string DisplayName { get; set; } = null!;
 	/// <summary>
 	/// FieldId
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
-	public string? FieldId { get; set; }
-
+	public string FieldId { get; set; } = null!;
 	/// <summary>
 	/// FullFieldId
 	/// </summary>
 	[DataMember(Name = "fullFieldId", EmitDefaultValue = false)]
-	public string? FullFieldId { get; set; }
-
+	public string FullFieldId { get; set; } = null!;
 	/// <summary>
 	/// Html
 	/// </summary>
 	[DataMember(Name = "html", EmitDefaultValue = false)]
-	public string? Html { get; set; }
-
+	public string Html { get; set; } = null!;
 	/// <summary>
 	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
-	public string? Name { get; set; }
-
+	public string Name { get; set; } = null!;
 	/// <summary>
 	/// Value
 	/// </summary>
 	[DataMember(Name = "value", EmitDefaultValue = false)]
-	public string? Value { get; set; }
+	public string Value { get; set; } = null!;
 }

@@ -16,7 +16,7 @@ public partial class AddUserToTeamRequest
 	/// <param name="userRecordId">UserRecordId.</param>
 	public AddUserToTeamRequest(
 		string teamId,
-		bool? userIsTeamManager,
+		bool userIsTeamManager,
 		string userRecordId)
 	{
 		TeamId = teamId;
@@ -28,18 +28,18 @@ public partial class AddUserToTeamRequest
 	/// TeamId
 	/// </summary>
 	[DataMember(Name = "teamId", EmitDefaultValue = false)]
-	public string TeamId { get; set; }
+	public string TeamId { get; set; } = null!;
 
 	/// <summary>
 	/// UserIsTeamManager
 	/// </summary>
 	[DataMember(Name = "userIsTeamManager", EmitDefaultValue = false)]
-	public bool? UserIsTeamManager { get; set; }
+	public bool UserIsTeamManager { get; set; }
 
 	/// <summary>
 	/// UserRecordId
 	/// </summary>
 	[DataMember(Name = "userRecordId", EmitDefaultValue = false)]
-	public string UserRecordId { get; set; }
+	public string UserRecordId { get; set; } = null!;
 }
 

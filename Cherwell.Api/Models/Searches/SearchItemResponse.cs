@@ -12,11 +12,10 @@ public partial class SearchItemResponse : Response
 	/// Root
 	/// </summary>
 	[DataMember(Name = "root", EmitDefaultValue = false)]
-	public SearchFolder? Root { get; set; }
-
+	public SearchFolder Root { get; set; } = null!;
 	/// <summary>
 	/// SupportedAssociations
 	/// </summary>
 	[DataMember(Name = "supportedAssociations", EmitDefaultValue = false)]
-	public List<Association>? SupportedAssociations { get; set; }
+	public List<Association> SupportedAssociations { get; set; } = null!;
 }

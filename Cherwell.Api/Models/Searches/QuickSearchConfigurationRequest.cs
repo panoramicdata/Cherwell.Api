@@ -21,5 +21,5 @@ public partial class QuickSearchConfigurationRequest
 	/// BusObIds
 	/// </summary>
 	[DataMember(Name = "busObIds", EmitDefaultValue = false)]
-	public List<string> BusObIds { get; set; }
+	public List<string> BusObIds { get; set; } = null!;
 }

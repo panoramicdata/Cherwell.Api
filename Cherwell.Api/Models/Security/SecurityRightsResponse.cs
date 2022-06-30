@@ -12,6 +12,6 @@ public partial class SecurityRightsResponse : Response
 	/// Rights
 	/// </summary>
 	[DataMember(Name = "rights", EmitDefaultValue = false)]
-	public List<Right>? Rights { get; set; }
+	public List<Right> Rights { get; set; } = null!;
 }
 

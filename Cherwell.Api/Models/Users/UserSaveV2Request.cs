@@ -31,7 +31,7 @@ public partial class UserSaveV2Request
 	/// <param name="UserInfoFields">UserInfoFields.</param>
 	/// <param name="UserMustChangePasswordAtNextLogin">UserMustChangePasswordAtNextLogin.</param>
 	/// <param name="WindowsUserId">WindowsUserId.</param>
-	public UserSaveV2Request(bool? AccountLocked, bool? AllCultures, string BusObId, string BusObPublicId, string BusObRecId, string DisplayName, bool? LdapRequired, string LoginId, DateTime? NextPasswordResetDate, string Password, bool? PasswordNeverExpires, string SecurityGroupId, string SpecificCulture, bool? UserCannotChangePassword, List<FieldTemplateItem> UserInfoFields, bool? UserMustChangePasswordAtNextLogin, string WindowsUserId)
+	public UserSaveV2Request(bool AccountLocked, bool AllCultures, string BusObId, string BusObPublicId, string BusObRecId, string DisplayName, bool LdapRequired, string LoginId, DateTime NextPasswordResetDate, string Password, bool PasswordNeverExpires, string SecurityGroupId, string SpecificCulture, bool UserCannotChangePassword, List<FieldTemplateItem> UserInfoFields, bool UserMustChangePasswordAtNextLogin, string WindowsUserId)
 	{
 		this.AccountLocked = AccountLocked;
 		this.AllCultures = AllCultures;
@@ -56,101 +56,101 @@ public partial class UserSaveV2Request
 	/// AccountLocked
 	/// </summary>
 	[DataMember(Name = "accountLocked", EmitDefaultValue = false)]
-	public bool? AccountLocked { get; set; }
+	public bool AccountLocked { get; set; }
 
 	/// <summary>
 	/// AllCultures
 	/// </summary>
 	[DataMember(Name = "allCultures", EmitDefaultValue = false)]
-	public bool? AllCultures { get; set; }
+	public bool AllCultures { get; set; }
 
 	/// <summary>
 	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
-	public string BusObId { get; set; }
+	public string BusObId { get; set; } = null!;
 
 	/// <summary>
 	/// BusObPublicId
 	/// </summary>
 	[DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
-	public string BusObPublicId { get; set; }
+	public string BusObPublicId { get; set; } = null!;
 
 	/// <summary>
 	/// BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
-	public string BusObRecId { get; set; }
+	public string BusObRecId { get; set; } = null!;
 
 	/// <summary>
 	/// DisplayName
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
-	public string DisplayName { get; set; }
+	public string DisplayName { get; set; } = null!;
 
 	/// <summary>
 	/// LdapRequired
 	/// </summary>
 	[DataMember(Name = "ldapRequired", EmitDefaultValue = false)]
-	public bool? LdapRequired { get; set; }
+	public bool LdapRequired { get; set; }
 
 	/// <summary>
 	/// LoginId
 	/// </summary>
 	[DataMember(Name = "loginId", EmitDefaultValue = false)]
-	public string LoginId { get; set; }
+	public string LoginId { get; set; } = null!;
 
 	/// <summary>
 	/// NextPasswordResetDate
 	/// </summary>
 	[DataMember(Name = "nextPasswordResetDate", EmitDefaultValue = false)]
-	public DateTime? NextPasswordResetDate { get; set; }
+	public DateTime NextPasswordResetDate { get; set; }
 
 	/// <summary>
 	/// Password
 	/// </summary>
 	[DataMember(Name = "password", EmitDefaultValue = false)]
-	public string Password { get; set; }
+	public string Password { get; set; } = null!;
 
 	/// <summary>
 	/// PasswordNeverExpires
 	/// </summary>
 	[DataMember(Name = "passwordNeverExpires", EmitDefaultValue = false)]
-	public bool? PasswordNeverExpires { get; set; }
+	public bool PasswordNeverExpires { get; set; }
 
 	/// <summary>
 	/// SecurityGroupId
 	/// </summary>
 	[DataMember(Name = "securityGroupId", EmitDefaultValue = false)]
-	public string SecurityGroupId { get; set; }
+	public string SecurityGroupId { get; set; } = null!;
 
 	/// <summary>
 	/// SpecificCulture
 	/// </summary>
 	[DataMember(Name = "specificCulture", EmitDefaultValue = false)]
-	public string SpecificCulture { get; set; }
+	public string SpecificCulture { get; set; } = null!;
 
 	/// <summary>
 	/// UserCannotChangePassword
 	/// </summary>
 	[DataMember(Name = "userCannotChangePassword", EmitDefaultValue = false)]
-	public bool? UserCannotChangePassword { get; set; }
+	public bool UserCannotChangePassword { get; set; }
 
 	/// <summary>
 	/// UserInfoFields
 	/// </summary>
 	[DataMember(Name = "userInfoFields", EmitDefaultValue = false)]
-	public List<FieldTemplateItem> UserInfoFields { get; set; }
+	public List<FieldTemplateItem> UserInfoFields { get; set; } = null!;
 
 	/// <summary>
 	/// UserMustChangePasswordAtNextLogin
 	/// </summary>
 	[DataMember(Name = "userMustChangePasswordAtNextLogin", EmitDefaultValue = false)]
-	public bool? UserMustChangePasswordAtNextLogin { get; set; }
+	public bool UserMustChangePasswordAtNextLogin { get; set; }
 
 	/// <summary>
 	/// WindowsUserId
 	/// </summary>
 	[DataMember(Name = "windowsUserId", EmitDefaultValue = false)]
-	public string WindowsUserId { get; set; }
+	public string WindowsUserId { get; set; } = null!;
 }

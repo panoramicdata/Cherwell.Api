@@ -16,5 +16,5 @@ public partial class BatchReadResponse : Response
 	/// Responses
 	/// </summary>
 	[DataMember(Name = "responses", EmitDefaultValue = false)]
-	public List<ReadResponse>? Responses { get; set; }
+	public List<ReadResponse> Responses { get; set; } = null!;
 }

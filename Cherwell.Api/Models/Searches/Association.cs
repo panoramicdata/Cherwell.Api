@@ -12,11 +12,11 @@ public partial class Association
 	/// BusOb Id
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
-	public string? BusObId { get; set; } = null!;
+	public string BusObId { get; set; } = null!;
 
 	/// <summary>
 	/// BusOb Name
 	/// </summary>
 	[DataMember(Name = "busObName", EmitDefaultValue = false)]
-	public string? BusObName { get; set; } = null!;
+	public string BusObName { get; set; } = null!;
 }

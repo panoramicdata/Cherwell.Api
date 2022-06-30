@@ -106,71 +106,42 @@ public partial class AttachmentsRequest
 	/// AttachmentTypes
 	/// </summary>
 	[DataMember(Name = "attachmentTypes", EmitDefaultValue = false)]
-	public List<EnumAttachmentTypes> AttachmentTypes { get; set; }
-
-	/// <summary>
-	/// Types
-	/// </summary>
-	[DataMember(Name = "types", EmitDefaultValue = false)]
-	public List<EnumTypes> Types { get; set; }
-
-	/// <summary>
-	/// Initializes a new instance of the <see cref="AttachmentsRequest" /> class.
-	/// </summary>
-	/// <param name="AttachmentId">AttachmentId.</param>
-	/// <param name="AttachmentTypes">AttachmentTypes.</param>
-	/// <param name="BusObId">BusObId.</param>
-	/// <param name="BusObName">BusObName.</param>
-	/// <param name="BusObPublicId">BusObPublicId.</param>
-	/// <param name="BusObRecId">BusObRecId.</param>
-	/// <param name="IncludeLinks">IncludeLinks.</param>
-	/// <param name="Types">Types.</param>
-	public AttachmentsRequest(string AttachmentId, List<EnumAttachmentTypes> AttachmentTypes, string BusObId, string BusObName, string BusObPublicId, string BusObRecId, bool? IncludeLinks, List<EnumTypes> Types)
-	{
-		this.AttachmentId = AttachmentId;
-		this.AttachmentTypes = AttachmentTypes;
-		this.BusObId = BusObId;
-		this.BusObName = BusObName;
-		this.BusObPublicId = BusObPublicId;
-		this.BusObRecId = BusObRecId;
-		this.IncludeLinks = IncludeLinks;
-		this.Types = Types;
-	}
+	public List<EnumAttachmentTypes> AttachmentTypes { get; set; } = null!;
 
 	/// <summary>
 	/// AttachmentId
 	/// </summary>
 	[DataMember(Name = "attachmentId", EmitDefaultValue = false)]
-	public string AttachmentId { get; set; }
+	public string AttachmentId { get; set; } = null!;
 
 	/// <summary>
 	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
-	public string BusObId { get; set; }
+	public string BusObId { get; set; } = null!;
 
 	/// <summary>
 	/// BusObName
 	/// </summary>
 	[DataMember(Name = "busObName", EmitDefaultValue = false)]
-	public string BusObName { get; set; }
+	public string BusObName { get; set; } = null!;
 
 	/// <summary>
 	/// BusObPublicId
 	/// </summary>
 	[DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
-	public string BusObPublicId { get; set; }
+	public string BusObPublicId { get; set; } = null!;
 
 	/// <summary>
 	/// BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
-	public string BusObRecId { get; set; }
+	public string BusObRecId { get; set; } = null!;
 
 	/// <summary>
 	/// IncludeLinks
 	/// </summary>
 	[DataMember(Name = "includeLinks", EmitDefaultValue = false)]
-	public bool? IncludeLinks { get; set; }
+	public bool IncludeLinks { get; set; }
 
 }

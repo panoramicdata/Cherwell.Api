@@ -12,23 +12,21 @@ public partial class GetStatusesResponseStatuses
 	/// Id
 	/// </summary>
 	[DataMember(Name = "id", EmitDefaultValue = false)]
-	public string? Id { get; set; }
-
+	public string Id { get; set; } = null!;
 	/// <summary>
 	/// IsInitial
 	/// </summary>
 	[DataMember(Name = "isInitial", EmitDefaultValue = false)]
-	public bool? IsInitial { get; set; }
+	public bool IsInitial { get; set; }
 
 	/// <summary>
 	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
-	public string? Name { get; set; }
-
+	public string Name { get; set; } = null!;
 	/// <summary>
 	/// StageId
 	/// </summary>
 	[DataMember(Name = "stageId", EmitDefaultValue = false)]
-	public string? StageId { get; set; }
+	public string StageId { get; set; } = null!;
 }

@@ -12,11 +12,10 @@ public partial class UserSaveV2Response : Response
 	/// BusObPublicId
 	/// </summary>
 	[DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
-	public string? BusObPublicId { get; set; }
-
+	public string BusObPublicId { get; set; } = null!;
 	/// <summary>
 	/// BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
-	public string? BusObRecId { get; set; }
+	public string BusObRecId { get; set; } = null!;
 }

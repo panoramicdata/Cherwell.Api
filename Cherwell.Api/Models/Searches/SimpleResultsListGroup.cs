@@ -12,29 +12,26 @@ public partial class SimpleResultsListGroup : Response
 	/// IsBusObTarget
 	/// </summary>
 	[DataMember(Name = "isBusObTarget", EmitDefaultValue = false)]
-	public bool? IsBusObTarget { get; set; }
+	public bool IsBusObTarget { get; set; }
 
 	/// <summary>
 	/// SimpleResultsListItems
 	/// </summary>
 	[DataMember(Name = "simpleResultsListItems", EmitDefaultValue = false)]
-	public List<SimpleResultsListItem>? SimpleResultsListItems { get; set; }
-
+	public List<SimpleResultsListItem> SimpleResultsListItems { get; set; } = null!;
 	/// <summary>
 	/// SubTitle
 	/// </summary>
 	[DataMember(Name = "subTitle", EmitDefaultValue = false)]
-	public string? SubTitle { get; set; }
-
+	public string SubTitle { get; set; } = null!;
 	/// <summary>
 	/// TargetId
 	/// </summary>
 	[DataMember(Name = "targetId", EmitDefaultValue = false)]
-	public string? TargetId { get; set; }
-
+	public string TargetId { get; set; } = null!;
 	/// <summary>
 	/// Title
 	/// </summary>
 	[DataMember(Name = "title", EmitDefaultValue = false)]
-	public string? Title { get; set; }
+	public string Title { get; set; } = null!;
 }

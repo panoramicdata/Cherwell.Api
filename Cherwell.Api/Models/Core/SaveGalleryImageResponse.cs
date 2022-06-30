@@ -15,11 +15,10 @@ public partial class SaveGalleryImageResponse : Response
 	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
-	public string? Name { get; set; }
-
+	public string Name { get; set; } = null!;
 	/// <summary>
 	/// StandInKey
 	/// </summary>
 	[DataMember(Name = "standInKey", EmitDefaultValue = false)]
-	public string? StandInKey { get; set; }
+	public string StandInKey { get; set; } = null!;
 }

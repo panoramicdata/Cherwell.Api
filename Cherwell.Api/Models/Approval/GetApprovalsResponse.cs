@@ -15,12 +15,11 @@ public partial class GetApprovalsResponse : Response
 	/// TotalRecords
 	/// </summary>
 	[DataMember(Name = "totalRecords", EmitDefaultValue = false)]
-	public int? TotalRecords { get; set; }
+	public int TotalRecords { get; set; }
 
 	/// <summary>
 	/// Approvals
 	/// </summary>
 	[DataMember(Name = "approvals", EmitDefaultValue = false)]
-	public List<ApprovalReadResponse>? Approvals { get; set; }
-
+	public List<ApprovalReadResponse> Approvals { get; set; } = null!;
 }

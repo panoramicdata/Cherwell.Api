@@ -15,17 +15,15 @@ public partial class View
 	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
-	public string? Name { get; set; }
-
+	public string Name { get; set; } = null!;
 	/// <summary>
 	/// ViewId
 	/// </summary>
 	[DataMember(Name = "viewId", EmitDefaultValue = false)]
-	public string? ViewId { get; set; }
-
+	public string ViewId { get; set; } = null!;
 	/// <summary>
 	/// Image
 	/// </summary>
 	[DataMember(Name = "image", EmitDefaultValue = false)]
-	public string? Image { get; set; }
+	public string Image { get; set; } = null!;
 }

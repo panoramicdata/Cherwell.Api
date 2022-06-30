@@ -12,6 +12,6 @@ public partial class UserBatchDeleteResponse : Response
 	/// Responses
 	/// </summary>
 	[DataMember(Name = "responses", EmitDefaultValue = false)]
-	public List<UserDeleteResponse>? Responses { get; set; }
+	public List<UserDeleteResponse> Responses { get; set; } = null!;
 }
 

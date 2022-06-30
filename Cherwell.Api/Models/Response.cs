@@ -8,23 +8,22 @@ public class Response
 	/// HttpStatusCode
 	/// </summary>
 	[DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
-	public EnumHttpStatusCode? HttpStatusCode { get; set; }
-
+	public EnumHttpStatusCode HttpStatusCode { get; set; }
 	/// <summary>
 	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
-	public string? ErrorCode { get; set; } = null!;
+	public string ErrorCode { get; set; } = null!;
 
 	/// <summary>
 	/// ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
-	public string? ErrorMessage { get; set; } = null!;
+	public string ErrorMessage { get; set; } = null!;
 
 	/// <summary>
 	/// HasError 
 	/// </summary>
 	[DataMember(Name = "hasError", EmitDefaultValue = false)]
-	public bool? HasError { get; set; }
+	public bool HasError { get; set; }
 }

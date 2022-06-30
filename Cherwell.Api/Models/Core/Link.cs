@@ -15,11 +15,10 @@ public partial class Link
 	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
-	public string? Name { get; set; }
-
+	public string Name { get; set; } = null!;
 	/// <summary>
 	/// Url
 	/// </summary>
 	[DataMember(Name = "url", EmitDefaultValue = false)]
-	public string? Url { get; set; }
+	public string Url { get; set; } = null!;
 }

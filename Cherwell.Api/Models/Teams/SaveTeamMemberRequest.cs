@@ -15,7 +15,7 @@ public partial class SaveTeamMemberRequest
 	/// <param name="SetAsDefaultTeam">SetAsDefaultTeam.</param>
 	/// <param name="TeamId">TeamId.</param>
 	/// <param name="UserRecId">UserRecId.</param>
-	public SaveTeamMemberRequest(bool? IsTeamManager, bool? SetAsDefaultTeam, string TeamId, string UserRecId)
+	public SaveTeamMemberRequest(bool IsTeamManager, bool SetAsDefaultTeam, string TeamId, string UserRecId)
 	{
 		this.IsTeamManager = IsTeamManager;
 		this.SetAsDefaultTeam = SetAsDefaultTeam;
@@ -27,24 +27,24 @@ public partial class SaveTeamMemberRequest
 	/// IsTeamManager
 	/// </summary>
 	[DataMember(Name = "isTeamManager", EmitDefaultValue = false)]
-	public bool? IsTeamManager { get; set; }
+	public bool IsTeamManager { get; set; }
 
 	/// <summary>
 	/// SetAsDefaultTeam
 	/// </summary>
 	[DataMember(Name = "setAsDefaultTeam", EmitDefaultValue = false)]
-	public bool? SetAsDefaultTeam { get; set; }
+	public bool SetAsDefaultTeam { get; set; }
 
 	/// <summary>
 	/// TeamId
 	/// </summary>
 	[DataMember(Name = "teamId", EmitDefaultValue = false)]
-	public string TeamId { get; set; }
+	public string TeamId { get; set; } = null!;
 
 	/// <summary>
 	/// UserRecId
 	/// </summary>
 	[DataMember(Name = "userRecId", EmitDefaultValue = false)]
-	public string UserRecId { get; set; }
+	public string UserRecId { get; set; } = null!;
 }
 

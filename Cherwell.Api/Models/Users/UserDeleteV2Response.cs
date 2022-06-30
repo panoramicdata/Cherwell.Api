@@ -12,6 +12,6 @@ public partial class UserDeleteV2Response : Response
 	/// UserRecordId
 	/// </summary>
 	[DataMember(Name = "userRecordId", EmitDefaultValue = false)]
-	public string? UserRecordId { get; set; }
+	public string UserRecordId { get; set; } = null!;
 }
 
