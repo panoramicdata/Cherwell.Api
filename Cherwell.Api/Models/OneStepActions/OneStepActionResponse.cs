@@ -19,11 +19,13 @@ public partial class OneStepActionResponse : Response
 	/// </summary>
 	[DataMember(Name = "currentPrimaryBusObId", EmitDefaultValue = false)]
 	public string CurrentPrimaryBusObId { get; set; } = null!;
+
 	/// <summary>
 	/// CurrentPrimaryBusObRecId
 	/// </summary>
 	[DataMember(Name = "currentPrimaryBusObRecId", EmitDefaultValue = false)]
 	public string CurrentPrimaryBusObRecId { get; set; } = null!;
+
 	/// <summary>
 	/// HasNewAccessToken
 	/// </summary>

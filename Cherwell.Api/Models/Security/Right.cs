@@ -25,16 +25,19 @@ public partial class Right
 	/// </summary>
 	[DataMember(Name = "categoryDescription", EmitDefaultValue = false)]
 	public string CategoryDescription { get; set; } = null!;
+
 	/// <summary>
 	/// CategoryId
 	/// </summary>
 	[DataMember(Name = "categoryId", EmitDefaultValue = false)]
 	public string CategoryId { get; set; } = null!;
+
 	/// <summary>
 	/// CategoryName
 	/// </summary>
 	[DataMember(Name = "categoryName", EmitDefaultValue = false)]
 	public string CategoryName { get; set; } = null!;
+
 	/// <summary>
 	/// Delete
 	/// </summary>
@@ -82,16 +85,19 @@ public partial class Right
 	/// </summary>
 	[DataMember(Name = "rightId", EmitDefaultValue = false)]
 	public string RightId { get; set; } = null!;
+
 	/// <summary>
 	/// RightName
 	/// </summary>
 	[DataMember(Name = "rightName", EmitDefaultValue = false)]
 	public string RightName { get; set; } = null!;
+
 	/// <summary>
 	/// StandardRightName
 	/// </summary>
 	[DataMember(Name = "standardRightName", EmitDefaultValue = false)]
 	public string StandardRightName { get; set; } = null!;
+
 	/// <summary>
 	/// ViewRunOpen
 	/// </summary>

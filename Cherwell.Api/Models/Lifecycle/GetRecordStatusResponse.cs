@@ -13,6 +13,7 @@ public partial class GetRecordStatusResponse : Response
 	/// </summary>
 	[DataMember(Name = "id", EmitDefaultValue = false)]
 	public string Id { get; set; } = null!;
+
 	/// <summary>
 	/// Name
 	/// </summary>

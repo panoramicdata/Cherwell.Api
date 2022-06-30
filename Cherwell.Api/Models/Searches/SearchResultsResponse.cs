@@ -13,6 +13,7 @@ public partial class SearchResultsResponse : Response
 	/// </summary>
 	[DataMember(Name = "businessObjects", EmitDefaultValue = false)]
 	public List<ReadResponse> BusinessObjects { get; set; } = null!;
+
 	/// <summary>
 	/// HasPrompts
 	/// </summary>
@@ -30,16 +31,19 @@ public partial class SearchResultsResponse : Response
 	/// </summary>
 	[DataMember(Name = "prompts", EmitDefaultValue = false)]
 	public List<Prompt> Prompts { get; set; } = null!;
+
 	/// <summary>
 	/// SearchResultsFields
 	/// </summary>
 	[DataMember(Name = "searchResultsFields", EmitDefaultValue = false)]
 	public List<Field> SearchResultsFields { get; set; } = null!;
+
 	/// <summary>
 	/// SimpleResults
 	/// </summary>
 	[DataMember(Name = "simpleResults", EmitDefaultValue = false)]
 	public SimpleResultsList SimpleResults { get; set; } = null!;
+
 	/// <summary>
 	/// TotalRows
 	/// </summary>

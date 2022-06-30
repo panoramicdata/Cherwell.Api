@@ -12,6 +12,7 @@ public interface IUsers
 	/// </summary>
 	/// <remarks>
 	/// Operation to delete a batch of users. To get record IDs, use \&quot;Get a user by login ID\&quot; or \&quot;Get a user by public id.\&quot;
+
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="request">Request object listing record IDs for users to be deleted and an error flag.</param>
@@ -26,6 +27,7 @@ public interface IUsers
 	/// </summary>
 	/// <remarks>
 	/// Operation to delete a batch of users. To get record IDs, use \&quot;Get a user by login ID\&quot; or \&quot;Get a user by public id.\&quot;
+
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="request">Request object listing record IDs for users to be deleted and an error flag.</param>
@@ -40,6 +42,7 @@ public interface IUsers
 	/// </summary>
 	/// <remarks>
 	/// Operation to delete a user by record ID. To get record IDs, use \&quot;Get a user by login ID\&quot; or \&quot;Get a user by public id.\&quot;
+
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="userrecordid">Specify the record ID of the user you want to delete</param>
@@ -54,6 +57,7 @@ public interface IUsers
 	/// </summary>
 	/// <remarks>
 	/// Operation to delete a user by record ID. To get record IDs, use \&quot;Get a user by login ID\&quot; or \&quot;Get a user by public id.\&quot;
+
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="userrecordid">Specify the record ID of the user you want to delete</param>
@@ -84,6 +88,7 @@ public interface IUsers
 	/// </summary>
 	/// <remarks>
 	/// Operation to get user information in a batch. To get record IDs, use \&quot;Get a user by login ID\&quot; or \&quot;Get a user by public id.\&quot;
+
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="request">Request object that lists user record IDs or public IDs of users and an error flag.</param>

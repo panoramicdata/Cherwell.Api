@@ -13,11 +13,13 @@ public partial class SecurityGroup
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
 	public string Description { get; set; } = null!;
+
 	/// <summary>
 	/// GroupId
 	/// </summary>
 	[DataMember(Name = "groupId", EmitDefaultValue = false)]
 	public string GroupId { get; set; } = null!;
+
 	/// <summary>
 	/// GroupName
 	/// </summary>

@@ -19,16 +19,19 @@ public partial class SimpleResultsListGroup : Response
 	/// </summary>
 	[DataMember(Name = "simpleResultsListItems", EmitDefaultValue = false)]
 	public List<SimpleResultsListItem> SimpleResultsListItems { get; set; } = null!;
+
 	/// <summary>
 	/// SubTitle
 	/// </summary>
 	[DataMember(Name = "subTitle", EmitDefaultValue = false)]
 	public string SubTitle { get; set; } = null!;
+
 	/// <summary>
 	/// TargetId
 	/// </summary>
 	[DataMember(Name = "targetId", EmitDefaultValue = false)]
 	public string TargetId { get; set; } = null!;
+
 	/// <summary>
 	/// Title
 	/// </summary>

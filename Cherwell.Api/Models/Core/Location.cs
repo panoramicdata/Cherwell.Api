@@ -21,11 +21,13 @@ public partial class Location
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; } = null!;
+
 	/// <summary>
 	/// BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; } = null!;
+
 	/// <summary>
 	/// Latitude
 	/// </summary>

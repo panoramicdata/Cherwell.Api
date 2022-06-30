@@ -13,6 +13,7 @@ public partial class RemoveCustomerFromWorkgroupResponse : Response
 	/// </summary>
 	[DataMember(Name = "workgroupId", EmitDefaultValue = false)]
 	public string WorkgroupId { get; set; } = null!;
+
 	/// <summary>
 	/// CustomerRecordId
 	/// </summary>

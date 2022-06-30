@@ -13,6 +13,7 @@ public partial class UserDeleteResponse : Response
 	/// </summary>
 	[DataMember(Name = "error", EmitDefaultValue = false)]
 	public string Error { get; set; } = null!;
+
 	/// <summary>
 	/// Users
 	/// </summary>

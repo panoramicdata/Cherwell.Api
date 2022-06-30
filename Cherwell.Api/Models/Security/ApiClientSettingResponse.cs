@@ -13,21 +13,25 @@ public partial class ApiClientSettingResponse : Response
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; } = null!;
+
 	/// <summary>
 	/// Description
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
 	public string Description { get; set; } = null!;
+
 	/// <summary>
 	/// Culture
 	/// </summary>
 	[DataMember(Name = "culture", EmitDefaultValue = false)]
 	public string Culture { get; set; } = null!;
+
 	/// <summary>
 	/// ClientKey
 	/// </summary>
 	[DataMember(Name = "clientKey", EmitDefaultValue = false)]
 	public string ClientKey { get; set; } = null!;
+
 	/// <summary>
 	/// TokenLifespanMinutes
 	/// </summary>

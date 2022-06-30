@@ -13,6 +13,7 @@ public partial class RemoveUserFromTeamResponse : Response
 	/// </summary>
 	[DataMember(Name = "teamId", EmitDefaultValue = false)]
 	public string TeamId { get; set; } = null!;
+
 	/// <summary>
 	/// UserRecordId
 	/// </summary>

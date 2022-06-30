@@ -13,6 +13,7 @@ public partial class GetStatusesResponseStatuses
 	/// </summary>
 	[DataMember(Name = "id", EmitDefaultValue = false)]
 	public string Id { get; set; } = null!;
+
 	/// <summary>
 	/// IsInitial
 	/// </summary>
@@ -24,6 +25,7 @@ public partial class GetStatusesResponseStatuses
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; } = null!;
+
 	/// <summary>
 	/// StageId
 	/// </summary>

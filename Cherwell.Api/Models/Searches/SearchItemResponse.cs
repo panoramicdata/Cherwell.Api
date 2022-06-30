@@ -13,6 +13,7 @@ public partial class SearchItemResponse : Response
 	/// </summary>
 	[DataMember(Name = "root", EmitDefaultValue = false)]
 	public SearchFolder Root { get; set; } = null!;
+
 	/// <summary>
 	/// SupportedAssociations
 	/// </summary>

@@ -194,6 +194,7 @@ public interface ISecurity
 	/// </summary>
 	/// <remarks>
 	/// Operation to get permissions for a Security Group by category. To get Security Group IDs, use \&quot;Get all available Security Groups.\&quot; To get Security Group category IDs, use \&quot;Get all Security Group categories.\&quot;
+
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="groupid">Specify the Security Group ID</param>
@@ -210,6 +211,7 @@ public interface ISecurity
 	/// </summary>
 	/// <remarks>
 	/// Operation to get permissions for a Security Group by category. To get Security Group IDs, use \&quot;Get all available Security Groups.\&quot; To get Security Group category IDs, use \&quot;Get all Security Group categories.\&quot;
+
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="groupid">Specify the Security Group ID</param>
@@ -258,6 +260,7 @@ public interface ISecurity
 	/// </summary>
 	/// <remarks>
 	/// Operation to get permissions for the current user&#39;s Security Group by category. To get Security Group category IDs, use \&quot;Get all Security Group categories.\&quot;
+
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="categoryid">Specify the Security Group category ID.</param>
@@ -272,6 +275,7 @@ public interface ISecurity
 	/// </summary>
 	/// <remarks>
 	/// Operation to get permissions for the current user&#39;s Security Group by category. To get Security Group category IDs, use \&quot;Get all Security Group categories.\&quot;
+
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="categoryid">Specify the Security Group category ID.</param>

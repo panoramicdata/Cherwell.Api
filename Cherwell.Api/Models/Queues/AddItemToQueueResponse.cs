@@ -13,11 +13,13 @@ public partial class AddItemToQueueResponse : Response
 	/// </summary>
 	[DataMember(Name = "historyRecId", EmitDefaultValue = false)]
 	public string HistoryRecId { get; set; } = null!;
+
 	/// <summary>
 	/// HistoryText
 	/// </summary>
 	[DataMember(Name = "historyText", EmitDefaultValue = false)]
 	public string HistoryText { get; set; } = null!;
+
 	/// <summary>
 	/// HistoryTypeId
 	/// </summary>

@@ -10,22 +10,25 @@ namespace Cherwell.Api.Models.Core;
 /// </summary>
 [DataContract]
 public partial class ServiceInfoResponse : Response
-{ 
+{
 	/// <summary>
 	/// ApiVersion
 	/// </summary>
 	[DataMember(Name = "apiVersion", EmitDefaultValue = false)]
 	public string ApiVersion { get; set; } = null!;
+
 	/// <summary>
 	/// CsmCulture
 	/// </summary>
 	[DataMember(Name = "csmCulture", EmitDefaultValue = false)]
 	public string CsmCulture { get; set; } = null!;
+
 	/// <summary>
 	/// CsmVersion
 	/// </summary>
 	[DataMember(Name = "csmVersion", EmitDefaultValue = false)]
 	public string CsmVersion { get; set; } = null!;
+
 	/// <summary>
 	/// SystemDateTime
 	/// </summary>

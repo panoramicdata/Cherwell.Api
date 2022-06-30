@@ -48,31 +48,37 @@ public partial class SaveGalleryImageRequest
 	/// </summary>
 	[DataMember(Name = "base64EncodedImageData", EmitDefaultValue = false)]
 	public string Base64EncodedImageData { get; set; } = null!;
+
 	/// <summary>
 	/// Description
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
 	public string Description { get; set; } = null!;
+
 	/// <summary>
 	/// Folder
 	/// </summary>
 	[DataMember(Name = "folder", EmitDefaultValue = false)]
 	public string Folder { get; set; } = null!;
+
 	/// <summary>
 	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; } = null!;
+
 	/// <summary>
 	/// Scope
 	/// </summary>
 	[DataMember(Name = "scope", EmitDefaultValue = false)]
 	public string Scope { get; set; } = null!;
+
 	/// <summary>
 	/// ScopeOwner
 	/// </summary>
 	[DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
 	public string ScopeOwner { get; set; } = null!;
+
 	/// <summary>
 	/// StandInKey
 	/// </summary>

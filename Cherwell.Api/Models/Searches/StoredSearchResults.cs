@@ -13,6 +13,7 @@ public partial class StoredSearchResults
 	/// </summary>
 	[DataMember(Name = "columns", EmitDefaultValue = false)]
 	public List<ColumnSchema> Columns { get; set; } = null!;
+
 	/// <summary>
 	/// Rows
 	/// </summary>

@@ -13,6 +13,7 @@ public partial class RoleReadResponse : Response
 	/// </summary>
 	[DataMember(Name = "error", EmitDefaultValue = false)]
 	public string Error { get; set; } = null!;
+
 	/// <summary>
 	/// Roles
 	/// </summary>

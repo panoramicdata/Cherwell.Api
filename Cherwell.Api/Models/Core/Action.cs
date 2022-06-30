@@ -191,6 +191,7 @@ public partial class Action
 	/// </summary>
 	[DataMember(Name = "actionCommand", EmitDefaultValue = false)]
 	public string ActionCommand { get; set; } = null!;
+
 	/// <summary>
 	/// AlwaysTextAndImage
 	/// </summary>
@@ -208,16 +209,19 @@ public partial class Action
 	/// </summary>
 	[DataMember(Name = "childActions", EmitDefaultValue = false)]
 	public List<Action> ChildActions { get; set; } = null!;
+
 	/// <summary>
 	/// Dependencies
 	/// </summary>
 	[DataMember(Name = "dependencies", EmitDefaultValue = false)]
 	public List<string> Dependencies { get; set; } = null!;
+
 	/// <summary>
 	/// DisplayText
 	/// </summary>
 	[DataMember(Name = "displayText", EmitDefaultValue = false)]
 	public string DisplayText { get; set; } = null!;
+
 	/// <summary>
 	/// Enabled
 	/// </summary>
@@ -229,16 +233,19 @@ public partial class Action
 	/// </summary>
 	[DataMember(Name = "galleryImage", EmitDefaultValue = false)]
 	public string GalleryImage { get; set; } = null!;
+
 	/// <summary>
 	/// HelpText
 	/// </summary>
 	[DataMember(Name = "helpText", EmitDefaultValue = false)]
 	public string HelpText { get; set; } = null!;
+
 	/// <summary>
 	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; } = null!;
+
 	/// <summary>
 	/// Parameters
 	/// </summary>

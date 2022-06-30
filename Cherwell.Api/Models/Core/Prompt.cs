@@ -163,36 +163,43 @@ public partial class Prompt
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; } = null!;
+
 	/// <summary>
 	/// CollectionStoreEntireRow
 	/// </summary>
 	[DataMember(Name = "collectionStoreEntireRow", EmitDefaultValue = false)]
 	public string CollectionStoreEntireRow { get; set; } = null!;
+
 	/// <summary>
 	/// CollectionValueField
 	/// </summary>
 	[DataMember(Name = "collectionValueField", EmitDefaultValue = false)]
 	public string CollectionValueField { get; set; } = null!;
+
 	/// <summary>
 	/// ConstraintXml
 	/// </summary>
 	[DataMember(Name = "constraintXml", EmitDefaultValue = false)]
 	public string ConstraintXml { get; set; } = null!;
+
 	/// <summary>
 	/// Contents
 	/// </summary>
 	[DataMember(Name = "contents", EmitDefaultValue = false)]
 	public string Contents { get; set; } = null!;
+
 	/// <summary>
 	/// _Default
 	/// </summary>
 	[DataMember(Name = "default", EmitDefaultValue = false)]
 	public string Default { get; set; } = null!;
+
 	/// <summary>
 	/// FieldId
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
 	public string FieldId { get; set; } = null!;
+
 	/// <summary>
 	/// IsDateRange
 	/// </summary>
@@ -204,6 +211,7 @@ public partial class Prompt
 	/// </summary>
 	[DataMember(Name = "listReturnFieldId", EmitDefaultValue = false)]
 	public string ListReturnFieldId { get; set; } = null!;
+
 	/// <summary>
 	/// MultiLine
 	/// </summary>
@@ -215,11 +223,13 @@ public partial class Prompt
 	/// </summary>
 	[DataMember(Name = "promptId", EmitDefaultValue = false)]
 	public string PromptId { get; set; } = null!;
+
 	/// <summary>
 	/// PromptTypeName
 	/// </summary>
 	[DataMember(Name = "promptTypeName", EmitDefaultValue = false)]
 	public string PromptTypeName { get; set; } = null!;
+
 	/// <summary>
 	/// Required
 	/// </summary>
@@ -231,11 +241,13 @@ public partial class Prompt
 	/// </summary>
 	[DataMember(Name = "text", EmitDefaultValue = false)]
 	public string Text { get; set; } = null!;
+
 	/// <summary>
 	/// Value
 	/// </summary>
 	[DataMember(Name = "value", EmitDefaultValue = false)]
 	public Object Value { get; set; } = null!;
+
 	/// <summary>
 	/// Values
 	/// </summary>

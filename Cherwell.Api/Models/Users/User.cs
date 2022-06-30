@@ -25,16 +25,19 @@ public partial class User : Response
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; } = null!;
+
 	/// <summary>
 	/// error
 	/// </summary>
 	[DataMember(Name = "error", EmitDefaultValue = false)]
 	public string Error { get; set; } = null!;
+
 	/// <summary>
 	/// Fields
 	/// </summary>
 	[DataMember(Name = "fields", EmitDefaultValue = false)]
 	public List<FieldTemplateItem> Fields { get; set; } = null!;
+
 	/// <summary>
 	/// LastPasswordResetDate
 	/// </summary>
@@ -64,21 +67,25 @@ public partial class User : Response
 	/// </summary>
 	[DataMember(Name = "publicId", EmitDefaultValue = false)]
 	public string PublicId { get; set; } = null!;
+
 	/// <summary>
 	/// RecordId
 	/// </summary>
 	[DataMember(Name = "recordId", EmitDefaultValue = false)]
 	public string RecordId { get; set; } = null!;
+
 	/// <summary>
 	/// SecurityGroupId
 	/// </summary>
 	[DataMember(Name = "securityGroupId", EmitDefaultValue = false)]
 	public string SecurityGroupId { get; set; } = null!;
+
 	/// <summary>
 	/// shortDisplayName
 	/// </summary>
 	[DataMember(Name = "shortDisplayName", EmitDefaultValue = false)]
 	public string ShortDisplayName { get; set; } = null!;
+
 	/// <summary>
 	/// UserCannotChangePassword
 	/// </summary>

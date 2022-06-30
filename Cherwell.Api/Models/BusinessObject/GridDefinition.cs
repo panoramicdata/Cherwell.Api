@@ -16,11 +16,13 @@ public partial class GridDefinition
 	/// </summary>
 	[DataMember(Name = "gridId", EmitDefaultValue = false)]
 	public string GridId { get; set; } = null!;
+
 	/// <summary>
 	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; } = null!;
+
 	/// <summary>
 	/// DisplayName
 	/// </summary>

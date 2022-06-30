@@ -31,16 +31,19 @@ public partial class QuickSearchConfigurationResponse : Response
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; } = null!;
+
 	/// <summary>
 	/// GalleryImage
 	/// </summary>
 	[DataMember(Name = "galleryImage", EmitDefaultValue = false)]
 	public string GalleryImage { get; set; } = null!;
+
 	/// <summary>
 	/// History
 	/// </summary>
 	[DataMember(Name = "history", EmitDefaultValue = false)]
 	public List<string> History { get; set; } = null!;
+
 	/// <summary>
 	/// IncludeAvailableInSpecific
 	/// </summary>
@@ -58,16 +61,19 @@ public partial class QuickSearchConfigurationResponse : Response
 	/// </summary>
 	[DataMember(Name = "quickSearchId", EmitDefaultValue = false)]
 	public string QuickSearchId { get; set; } = null!;
+
 	/// <summary>
 	/// QuickSearchItems
 	/// </summary>
 	[DataMember(Name = "quickSearchItems", EmitDefaultValue = false)]
 	public List<QuickSearchItem> QuickSearchItems { get; set; } = null!;
+
 	/// <summary>
 	/// QuickSearchWatermark
 	/// </summary>
 	[DataMember(Name = "quickSearchWatermark", EmitDefaultValue = false)]
 	public string QuickSearchWatermark { get; set; } = null!;
+
 	/// <summary>
 	/// SortByRelevance
 	/// </summary>
@@ -79,16 +85,19 @@ public partial class QuickSearchConfigurationResponse : Response
 	/// </summary>
 	[DataMember(Name = "resolvedQuickSearchWatermark", EmitDefaultValue = false)]
 	public string ResolvedQuickSearchWatermark { get; set; } = null!;
+
 	/// <summary>
 	/// Scope
 	/// </summary>
 	[DataMember(Name = "scope", EmitDefaultValue = false)]
 	public string Scope { get; set; } = null!;
+
 	/// <summary>
 	/// ScopeOwner
 	/// </summary>
 	[DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
 	public string ScopeOwner { get; set; } = null!;
+
 	/// <summary>
 	/// SpecificSearchItems
 	/// </summary>

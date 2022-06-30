@@ -16,11 +16,13 @@ public partial class View
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; } = null!;
+
 	/// <summary>
 	/// ViewId
 	/// </summary>
 	[DataMember(Name = "viewId", EmitDefaultValue = false)]
 	public string ViewId { get; set; } = null!;
+
 	/// <summary>
 	/// Image
 	/// </summary>

@@ -31,11 +31,13 @@ public partial class FieldPermissiond
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
 	public string FieldId { get; set; } = null!;
+
 	/// <summary>
 	/// FieldName
 	/// </summary>
 	[DataMember(Name = "fieldName", EmitDefaultValue = false)]
 	public string FieldName { get; set; } = null!;
+
 	/// <summary>
 	/// ManagerOfOwnerEdit
 	/// </summary>

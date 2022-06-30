@@ -13,6 +13,7 @@ public partial class SortInfo
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
 	public string FieldId { get; set; } = null!;
+
 	/// <summary>
 	/// SortDirection
 	/// </summary>

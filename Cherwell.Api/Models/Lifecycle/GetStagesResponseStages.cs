@@ -13,6 +13,7 @@ public partial class GetStagesResponseStages
 	/// </summary>
 	[DataMember(Name = "id", EmitDefaultValue = false)]
 	public string Id { get; set; } = null!;
+
 	/// <summary>
 	/// IsFinal
 	/// </summary>

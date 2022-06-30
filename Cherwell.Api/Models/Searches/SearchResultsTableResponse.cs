@@ -13,16 +13,19 @@ public partial class SearchResultsTableResponse : Response
 	/// </summary>
 	[DataMember(Name = "columns", EmitDefaultValue = false)]
 	public List<Field> Columns { get; set; } = null!;
+
 	/// <summary>
 	/// Rows
 	/// </summary>
 	[DataMember(Name = "rows", EmitDefaultValue = false)]
 	public List<SearchResultsRow> Rows { get; set; } = null!;
+
 	/// <summary>
 	/// Sorting
 	/// </summary>
 	[DataMember(Name = "sorting", EmitDefaultValue = false)]
 	public List<SortInfo> Sorting { get; set; } = null!;
+
 	/// <summary>
 	/// TotalRows
 	/// </summary>

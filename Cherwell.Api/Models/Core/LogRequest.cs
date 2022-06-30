@@ -66,6 +66,7 @@ public partial class LogRequest
 	/// </summary>
 	[DataMember(Name = "keyValueproperties", EmitDefaultValue = false)]
 	public List<object> keyValueproperties { get; set; } = null!;
+
 	/// <summary>
 	/// Message
 	/// </summary>

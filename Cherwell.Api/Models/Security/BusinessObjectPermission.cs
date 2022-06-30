@@ -13,11 +13,13 @@ public partial class BusinessObjectPermission
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; } = null!;
+
 	/// <summary>
 	/// BusObName
 	/// </summary>
 	[DataMember(Name = "busObName", EmitDefaultValue = false)]
 	public string BusObName { get; set; } = null!;
+
 	/// <summary>
 	/// DepartmentMemberEdit
 	/// </summary>
@@ -42,6 +44,7 @@ public partial class BusinessObjectPermission
 	/// </summary>
 	[DataMember(Name = "fieldPermissions", EmitDefaultValue = false)]
 	public List<FieldPermissiond> FieldPermissions { get; set; } = null!;
+
 	/// <summary>
 	/// ManagerOfOwnerEdit
 	/// </summary>

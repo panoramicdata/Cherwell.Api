@@ -16,11 +16,13 @@ public partial class SimplePromptValue
 	/// </summary>
 	[DataMember(Name = "promptDefId", EmitDefaultValue = false)]
 	public string PromptDefId { get; set; } = null!;
+
 	/// <summary>
 	/// PromptName
 	/// </summary>
 	[DataMember(Name = "promptName", EmitDefaultValue = false)]
 	public string PromptName { get; set; } = null!;
+
 	/// <summary>
 	/// Value
 	/// </summary>

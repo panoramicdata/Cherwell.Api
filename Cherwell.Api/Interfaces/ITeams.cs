@@ -12,6 +12,7 @@ public interface ITeams
 	/// </summary>
 	/// <remarks>
 	/// Operation to add users to a Team by batch. To get internal IDs for users, use “Get User Information in a Batch.” To get a Team&#39;s internal ID, use \&quot;Get all available Teams.\&quot;
+
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="request">Request object to specify a list of add user to team request objects.</param>
@@ -26,6 +27,7 @@ public interface ITeams
 	/// </summary>
 	/// <remarks>
 	/// Operation to add a user to a Team. To get the user&#39;s internal ID, use \&quot;Get a user by login ID\&quot; or \&quot;Get a user by public ID.\&quot; To get a Team&#39;s internal ID, use \&quot;Get all available Teams.\&quot;
+
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="dataRequest">Request object to specify user and team values.</param>
@@ -40,6 +42,7 @@ public interface ITeams
 	/// </summary>
 	/// <remarks>
 	/// Operation to add a user to a Team. To get the user&#39;s internal ID, use \&quot;Get a user by login ID\&quot; or \&quot;Get a user by public ID.\&quot; To get a Team&#39;s internal ID, use \&quot;Get all available Teams.\&quot;
+
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="dataRequest">Request object to specify user and team values.</param>
@@ -106,6 +109,7 @@ public interface ITeams
 	/// </summary>
 	/// <remarks>
 	/// Operation to get Team assignments for a user. To get record IDs, use \&quot;Get a user by login ID\&quot; or \&quot;Get a user by public id.\&quot;
+
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="userRecordId">Specify the user record ID.</param>
@@ -120,6 +124,7 @@ public interface ITeams
 	/// </summary>
 	/// <remarks>
 	/// Operation to get Team assignments for a user. To get record IDs, use \&quot;Get a user by login ID\&quot; or \&quot;Get a user by public id.\&quot;
+
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="userRecordId">Specify the user record ID.</param>
@@ -174,6 +179,7 @@ public interface ITeams
 	/// </summary>
 	/// <remarks>
 	/// Operation to remove a User from a Team. To get the User&#39;s record ID, use \&quot;Get a User by login ID\&quot; or \&quot;Get a User by public ID.\&quot; To get a Team&#39;s internal ID, use \&quot;Get all available Teams.\&quot;
+
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="teamId">Specify the internal ID of the Team.</param>
@@ -190,6 +196,7 @@ public interface ITeams
 	/// </summary>
 	/// <remarks>
 	/// Operation to remove a User from a Team. To get the User&#39;s record ID, use \&quot;Get a User by login ID\&quot; or \&quot;Get a User by public ID.\&quot; To get a Team&#39;s internal ID, use \&quot;Get all available Teams.\&quot;
+
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="teamId">Specify the internal ID of the Team.</param>

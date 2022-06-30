@@ -13,11 +13,13 @@ public partial class ChangedLimit
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; } = null!;
+
 	/// <summary>
 	/// Units
 	/// </summary>
 	[DataMember(Name = "units", EmitDefaultValue = false)]
 	public string Units { get; set; } = null!;
+
 	/// <summary>
 	/// Value
 	/// </summary>

@@ -13,8 +13,10 @@ public partial class QuickSearchResponse : Response
 	/// </summary>
 	[DataMember(Name = "searchResultsTable", EmitDefaultValue = false)]
 	public SearchResultsTableResponse SearchResultsTable { get; set; } = null!;
+
 	/// <summary>
 	/// SimpleResultsList
 	/// </summary>
 	[DataMember(Name = "simpleResultsList", EmitDefaultValue = false)]
-	public SimpleResultsList SimpleResultsList { get; set; } = null!;}
+	public SimpleResultsList SimpleResultsList { get; set; } = null!;
+}

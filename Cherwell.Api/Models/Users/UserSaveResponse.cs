@@ -13,11 +13,13 @@ public partial class UserSaveResponse : Response
 	/// </summary>
 	[DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
 	public string BusObPublicId { get; set; } = null!;
+
 	/// <summary>
 	/// BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; } = null!;
+
 	/// <summary>
 	/// Error
 	/// </summary>

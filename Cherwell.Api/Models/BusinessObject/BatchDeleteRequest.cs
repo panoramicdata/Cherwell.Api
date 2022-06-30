@@ -1,7 +1,4 @@
-using Newtonsoft.Json;
-using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
-using System.Text;
 
 namespace Cherwell.Api.Models.BusinessObject;
 
@@ -16,6 +13,7 @@ public partial class BatchDeleteRequest
 	/// </summary>
 	[DataMember(Name = "deleteRequests", EmitDefaultValue = false)]
 	public List<DeleteRequest> DeleteRequests { get; set; } = null!;
+
 	/// <summary>
 	/// StopOnError
 	/// </summary>

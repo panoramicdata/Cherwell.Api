@@ -13,16 +13,19 @@ public partial class Field
 	/// </summary>
 	[DataMember(Name = "caption", EmitDefaultValue = false)]
 	public string Caption { get; set; } = null!;
+
 	/// <summary>
 	/// CurrencyCulture
 	/// </summary>
 	[DataMember(Name = "currencyCulture", EmitDefaultValue = false)]
 	public string CurrencyCulture { get; set; } = null!;
+
 	/// <summary>
 	/// CurrencySymbol
 	/// </summary>
 	[DataMember(Name = "currencySymbol", EmitDefaultValue = false)]
 	public string CurrencySymbol { get; set; } = null!;
+
 	/// <summary>
 	/// DecimalDigits
 	/// </summary>
@@ -40,16 +43,19 @@ public partial class Field
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; } = null!;
+
 	/// <summary>
 	/// FieldName
 	/// </summary>
 	[DataMember(Name = "fieldName", EmitDefaultValue = false)]
 	public string FieldName { get; set; } = null!;
+
 	/// <summary>
 	/// FullFieldId
 	/// </summary>
 	[DataMember(Name = "fullFieldId", EmitDefaultValue = false)]
 	public string FullFieldId { get; set; } = null!;
+
 	/// <summary>
 	/// HasDefaultSortField
 	/// </summary>
@@ -61,6 +67,7 @@ public partial class Field
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
 	public string FieldId { get; set; } = null!;
+
 	/// <summary>
 	/// IsBinary
 	/// </summary>
@@ -126,11 +133,13 @@ public partial class Field
 	/// </summary>
 	[DataMember(Name = "sortOrder", EmitDefaultValue = false)]
 	public string SortOrder { get; set; } = null!;
+
 	/// <summary>
 	/// StorageName
 	/// </summary>
 	[DataMember(Name = "storageName", EmitDefaultValue = false)]
 	public string StorageName { get; set; } = null!;
+
 	/// <summary>
 	/// WholeDigits
 	/// </summary>

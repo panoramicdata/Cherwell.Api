@@ -13,11 +13,13 @@ public partial class RightCategory
 	/// </summary>
 	[DataMember(Name = "categoryDescription", EmitDefaultValue = false)]
 	public string CategoryDescription { get; set; } = null!;
+
 	/// <summary>
 	/// CategoryId
 	/// </summary>
 	[DataMember(Name = "categoryId", EmitDefaultValue = false)]
 	public string CategoryId { get; set; } = null!;
+
 	/// <summary>
 	/// CategoryName
 	/// </summary>

@@ -22,26 +22,31 @@ public partial class FieldTemplateItem
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; } = null!;
+
 	/// <summary>
 	/// FieldId
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
 	public string FieldId { get; set; } = null!;
+
 	/// <summary>
 	/// FullFieldId
 	/// </summary>
 	[DataMember(Name = "fullFieldId", EmitDefaultValue = false)]
 	public string FullFieldId { get; set; } = null!;
+
 	/// <summary>
 	/// Html
 	/// </summary>
 	[DataMember(Name = "html", EmitDefaultValue = false)]
 	public string Html { get; set; } = null!;
+
 	/// <summary>
 	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; } = null!;
+
 	/// <summary>
 	/// Value
 	/// </summary>

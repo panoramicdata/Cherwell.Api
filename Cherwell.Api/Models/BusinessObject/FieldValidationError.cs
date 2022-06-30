@@ -16,6 +16,7 @@ public partial class FieldValidationError : Response
 	/// </summary>
 	[DataMember(Name = "error", EmitDefaultValue = false)]
 	public string Error { get; set; } = null!;
+
 	/// <summary>
 	/// FieldId
 	/// </summary>

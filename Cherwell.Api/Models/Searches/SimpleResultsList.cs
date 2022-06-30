@@ -13,6 +13,7 @@ public partial class SimpleResultsList : Response
 	/// </summary>
 	[DataMember(Name = "groups", EmitDefaultValue = false)]
 	public List<SimpleResultsListGroup> Groups { get; set; } = null!;
+
 	/// <summary>
 	/// Title
 	/// </summary>

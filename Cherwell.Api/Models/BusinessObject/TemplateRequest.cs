@@ -16,6 +16,7 @@ public partial class TemplateRequest
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; } = null!;
+
 	/// <summary>
 	/// FieldNames
 	/// </summary>

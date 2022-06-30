@@ -13,6 +13,7 @@ public partial class GetApiClientSettingsResponseItem
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; } = null!;
+
 	/// <summary>
 	/// StandInKey
 	/// </summary>

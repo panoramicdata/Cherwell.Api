@@ -1,7 +1,4 @@
-using Newtonsoft.Json;
-using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
-using System.Text;
 
 namespace Cherwell.Api.Models.BusinessObject;
 
@@ -16,6 +13,7 @@ public partial class BatchSaveRequest
 	/// </summary>
 	[DataMember(Name = "saveRequests", EmitDefaultValue = false)]
 	public List<SaveRequest> SaveRequests { get; set; } = null!;
+
 	/// <summary>
 	/// StopOnError
 	/// </summary>

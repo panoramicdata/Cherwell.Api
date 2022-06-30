@@ -28,6 +28,7 @@ public partial class FieldDefinition
 	/// </summary>
 	[DataMember(Name = "category", EmitDefaultValue = false)]
 	public string Category { get; set; } = null!;
+
 	/// <summary>
 	/// DecimalDigits
 	/// </summary>
@@ -39,16 +40,19 @@ public partial class FieldDefinition
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
 	public string Description { get; set; } = null!;
+
 	/// <summary>
 	/// Details
 	/// </summary>
 	[DataMember(Name = "details", EmitDefaultValue = false)]
 	public string Details { get; set; } = null!;
+
 	/// <summary>
 	/// DisplayName
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; } = null!;
+
 	/// <summary>
 	/// Enabled
 	/// </summary>
@@ -60,6 +64,7 @@ public partial class FieldDefinition
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
 	public string FieldId { get; set; } = null!;
+
 	/// <summary>
 	/// HasDate
 	/// </summary>
@@ -83,11 +88,13 @@ public partial class FieldDefinition
 	/// </summary>
 	[DataMember(Name = "maximumSize", EmitDefaultValue = false)]
 	public string MaximumSize { get; set; } = null!;
+
 	/// <summary>
 	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; } = null!;
+
 	/// <summary>
 	/// _ReadOnly
 	/// </summary>
@@ -105,11 +112,13 @@ public partial class FieldDefinition
 	/// </summary>
 	[DataMember(Name = "type", EmitDefaultValue = false)]
 	public string Type { get; set; } = null!;
+
 	/// <summary>
 	/// TypeLocalized
 	/// </summary>
 	[DataMember(Name = "typeLocalized", EmitDefaultValue = false)]
 	public string TypeLocalized { get; set; } = null!;
+
 	/// <summary>
 	/// Validated
 	/// </summary>

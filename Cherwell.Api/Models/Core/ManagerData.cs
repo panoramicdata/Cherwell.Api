@@ -16,6 +16,7 @@ public partial class ManagerData : Response
 	/// </summary>
 	[DataMember(Name = "root", EmitDefaultValue = false)]
 	public ManagerFolder Root { get; set; } = null!;
+
 	/// <summary>
 	/// SupportedAssociations
 	/// </summary>

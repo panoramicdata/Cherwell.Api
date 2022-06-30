@@ -13,6 +13,7 @@ public partial class Team
 	/// </summary>
 	[DataMember(Name = "teamId", EmitDefaultValue = false)]
 	public string TeamId { get; set; } = null!;
+
 	/// <summary>
 	/// TeamName
 	/// </summary>

@@ -13,11 +13,13 @@ public partial class SearchResultsRow
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; } = null!;
+
 	/// <summary>
 	/// BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
 	public string BusObRecId { get; set; } = null!;
+
 	/// <summary>
 	/// Links
 	/// </summary>
@@ -29,11 +31,13 @@ public partial class SearchResultsRow
 	/// </summary>
 	[DataMember(Name = "publicId", EmitDefaultValue = false)]
 	public string PublicId { get; set; } = null!;
+
 	/// <summary>
 	/// RowColor
 	/// </summary>
 	[DataMember(Name = "rowColor", EmitDefaultValue = false)]
 	public string RowColor { get; set; } = null!;
+
 	/// <summary>
 	/// SearchResultsFieldValues
 	/// </summary>

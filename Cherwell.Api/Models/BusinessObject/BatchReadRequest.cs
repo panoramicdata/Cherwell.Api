@@ -13,6 +13,7 @@ public partial class BatchReadRequest
 	/// </summary>
 	[DataMember(Name = "readRequests", EmitDefaultValue = false)]
 	public List<ReadRequest> ReadRequests { get; set; } = null!;
+
 	/// <summary>
 	/// StopOnError
 	/// </summary>

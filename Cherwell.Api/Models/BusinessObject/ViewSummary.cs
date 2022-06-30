@@ -16,11 +16,13 @@ public partial class ViewSummary
 	/// </summary>
 	[DataMember(Name = "groupSummaries", EmitDefaultValue = false)]
 	public List<ViewSummary> GroupSummaries { get; set; } = null!;
+
 	/// <summary>
 	/// Image
 	/// </summary>
 	[DataMember(Name = "image", EmitDefaultValue = false)]
 	public string Image { get; set; } = null!;
+
 	/// <summary>
 	/// IsPartOfView
 	/// </summary>
@@ -32,11 +34,13 @@ public partial class ViewSummary
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
 	public string BusObId { get; set; } = null!;
+
 	/// <summary>
 	/// DisplayName
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; } = null!;
+
 	/// <summary>
 	/// Group
 	/// </summary>
@@ -60,6 +64,7 @@ public partial class ViewSummary
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; } = null!;
+
 	/// <summary>
 	/// Supporting
 	/// </summary>

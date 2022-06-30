@@ -13,11 +13,13 @@ public partial class GetTransitionOptionsResponseTransition
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
 	public string Name { get; set; } = null!;
+
 	/// <summary>
 	/// Id
 	/// </summary>
 	[DataMember(Name = "id", EmitDefaultValue = false)]
 	public string Id { get; set; } = null!;
+
 	/// <summary>
 	/// IsAvailable
 	/// </summary>

@@ -13,6 +13,7 @@ public partial class UserSaveV2Response : Response
 	/// </summary>
 	[DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
 	public string BusObPublicId { get; set; } = null!;
+
 	/// <summary>
 	/// BusObRecId
 	/// </summary>

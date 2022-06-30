@@ -268,16 +268,19 @@ public partial class QuickSearchItem
 	/// </summary>
 	[DataMember(Name = "changedLimits", EmitDefaultValue = false)]
 	public List<ChangedLimit> ChangedLimits { get; set; } = null!;
+
 	/// <summary>
 	/// DisplayName
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
 	public string DisplayName { get; set; } = null!;
+
 	/// <summary>
 	/// GalleryImage
 	/// </summary>
 	[DataMember(Name = "galleryImage", EmitDefaultValue = false)]
 	public string GalleryImage { get; set; } = null!;
+
 	/// <summary>
 	/// HasAnyOptions
 	/// </summary>
@@ -289,16 +292,19 @@ public partial class QuickSearchItem
 	/// </summary>
 	[DataMember(Name = "searchTargetId", EmitDefaultValue = false)]
 	public string SearchTargetId { get; set; } = null!;
+
 	/// <summary>
 	/// SelectedChangedLimit
 	/// </summary>
 	[DataMember(Name = "selectedChangedLimit", EmitDefaultValue = false)]
 	public ChangedLimit SelectedChangedLimit { get; set; } = null!;
+
 	/// <summary>
 	/// SelectedSortByFieldId
 	/// </summary>
 	[DataMember(Name = "selectedSortByFieldId", EmitDefaultValue = false)]
 	public string SelectedSortByFieldId { get; set; } = null!;
+
 	/// <summary>
 	/// SortByFields
 	/// </summary>
