@@ -1,7 +1,4 @@
-using Newtonsoft.Json;
-using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
-using System.Text;
 
 namespace Cherwell.Api.Models.Searches;
 
@@ -12,53 +9,34 @@ namespace Cherwell.Api.Models.Searches;
 public partial class SearchResultsRow
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="SearchResultsRow" /> class.
-	/// </summary>
-	/// <param name="BusObId">BusObId.</param>
-	/// <param name="BusObRecId">BusObRecId.</param>
-	/// <param name="Links">Links.</param>
-	/// <param name="PublicId">PublicId.</param>
-	/// <param name="RowColor">RowColor.</param>
-	/// <param name="SearchResultsFieldValues">SearchResultsFieldValues.</param>
-	public SearchResultsRow(string BusObId, string BusObRecId, List<Link> Links, string PublicId, string RowColor, List<FieldTemplateItem> SearchResultsFieldValues)
-	{
-		this.BusObId = BusObId;
-		this.BusObRecId = BusObRecId;
-		this.Links = Links;
-		this.PublicId = PublicId;
-		this.RowColor = RowColor;
-		this.SearchResultsFieldValues = SearchResultsFieldValues;
-	}
-
-	/// <summary>
 	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
-	public string BusObId { get; set; }
+	public string? BusObId { get; set; }
 
 	/// <summary>
 	/// BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
-	public string BusObRecId { get; set; }
+	public string? BusObRecId { get; set; }
 
 	/// <summary>
 	/// Links
 	/// </summary>
 	[DataMember(Name = "links", EmitDefaultValue = false)]
-	public List<Link> Links { get; set; }
+	public List<Link>? Links { get; set; }
 
 	/// <summary>
 	/// PublicId
 	/// </summary>
 	[DataMember(Name = "publicId", EmitDefaultValue = false)]
-	public string PublicId { get; set; }
+	public string? PublicId { get; set; }
 
 	/// <summary>
 	/// RowColor
 	/// </summary>
 	[DataMember(Name = "rowColor", EmitDefaultValue = false)]
-	public string RowColor { get; set; }
+	public string? RowColor { get; set; }
 
 	/// <summary>
 	/// SearchResultsFieldValues
@@ -92,5 +70,5 @@ public partial class SearchResultsRow
 		}
 	}
 
-	
+
 }

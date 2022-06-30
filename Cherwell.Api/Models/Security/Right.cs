@@ -1,7 +1,4 @@
-using Newtonsoft.Json;
-using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
-using System.Text;
 
 namespace Cherwell.Api.Models.Security;
 
@@ -11,45 +8,6 @@ namespace Cherwell.Api.Models.Security;
 [DataContract]
 public partial class Right
 {
-	/// <summary>
-	/// Initializes a new instance of the <see cref="Right" /> class.
-	/// </summary>
-	/// <param name="Add">Add.</param>
-	/// <param name="Allow">Allow.</param>
-	/// <param name="CategoryDescription">CategoryDescription.</param>
-	/// <param name="CategoryId">CategoryId.</param>
-	/// <param name="CategoryName">CategoryName.</param>
-	/// <param name="Delete">Delete.</param>
-	/// <param name="Edit">Edit.</param>
-	/// <param name="IsYesNoRight">IsYesNoRight.</param>
-	/// <param name="NonScopeOwnerAdd">NonScopeOwnerAdd.</param>
-	/// <param name="NonScopeOwnerDelete">NonScopeOwnerDelete.</param>
-	/// <param name="NonScopeOwnerEdit">NonScopeOwnerEdit.</param>
-	/// <param name="NonScopeOwnerView">NonScopeOwnerView.</param>
-	/// <param name="RightId">RightId.</param>
-	/// <param name="RightName">RightName.</param>
-	/// <param name="StandardRightName">StandardRightName.</param>
-	/// <param name="ViewRunOpen">ViewRunOpen.</param>
-	public Right(bool? Add, bool? Allow, string CategoryDescription, string CategoryId, string CategoryName, bool? Delete, bool? Edit, bool? IsYesNoRight, bool? NonScopeOwnerAdd, bool? NonScopeOwnerDelete, bool? NonScopeOwnerEdit, bool? NonScopeOwnerView, string RightId, string RightName, string StandardRightName, bool? ViewRunOpen)
-	{
-		this.Add = Add;
-		this.Allow = Allow;
-		this.CategoryDescription = CategoryDescription;
-		this.CategoryId = CategoryId;
-		this.CategoryName = CategoryName;
-		this.Delete = Delete;
-		this.Edit = Edit;
-		this.IsYesNoRight = IsYesNoRight;
-		this.NonScopeOwnerAdd = NonScopeOwnerAdd;
-		this.NonScopeOwnerDelete = NonScopeOwnerDelete;
-		this.NonScopeOwnerEdit = NonScopeOwnerEdit;
-		this.NonScopeOwnerView = NonScopeOwnerView;
-		this.RightId = RightId;
-		this.RightName = RightName;
-		this.StandardRightName = StandardRightName;
-		this.ViewRunOpen = ViewRunOpen;
-	}
-
 	/// <summary>
 	/// Add
 	/// </summary>
@@ -66,19 +24,19 @@ public partial class Right
 	/// CategoryDescription
 	/// </summary>
 	[DataMember(Name = "categoryDescription", EmitDefaultValue = false)]
-	public string CategoryDescription { get; set; }
+	public string? CategoryDescription { get; set; }
 
 	/// <summary>
 	/// CategoryId
 	/// </summary>
 	[DataMember(Name = "categoryId", EmitDefaultValue = false)]
-	public string CategoryId { get; set; }
+	public string? CategoryId { get; set; }
 
 	/// <summary>
 	/// CategoryName
 	/// </summary>
 	[DataMember(Name = "categoryName", EmitDefaultValue = false)]
-	public string CategoryName { get; set; }
+	public string? CategoryName { get; set; }
 
 	/// <summary>
 	/// Delete
@@ -126,67 +84,24 @@ public partial class Right
 	/// RightId
 	/// </summary>
 	[DataMember(Name = "rightId", EmitDefaultValue = false)]
-	public string RightId { get; set; }
+	public string? RightId { get; set; }
 
 	/// <summary>
 	/// RightName
 	/// </summary>
 	[DataMember(Name = "rightName", EmitDefaultValue = false)]
-	public string RightName { get; set; }
+	public string? RightName { get; set; }
 
 	/// <summary>
 	/// StandardRightName
 	/// </summary>
 	[DataMember(Name = "standardRightName", EmitDefaultValue = false)]
-	public string StandardRightName { get; set; }
+	public string? StandardRightName { get; set; }
 
 	/// <summary>
 	/// ViewRunOpen
 	/// </summary>
 	[DataMember(Name = "viewRunOpen", EmitDefaultValue = false)]
 	public bool? ViewRunOpen { get; set; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	/// <summary>
-	/// Gets the hash code
-	/// </summary>
-	/// <returns>Hash code</returns>
-	public override int GetHashCode()
-	{
-		// credit: http://stackoverflow.com/a/263416/677735
-		unchecked // Overflow is fine, just wrap
-		{
-			int hash = 41;
-			// Suitable nullity checks etc, of course :)
-
-
-
-
-
-
-
-
-		}
-	}
-
-	
 }
 

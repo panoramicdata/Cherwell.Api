@@ -1,7 +1,4 @@
-using Newtonsoft.Json;
-using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
-using System.Text;
 
 namespace Cherwell.Api.Models.Security;
 
@@ -12,68 +9,16 @@ namespace Cherwell.Api.Models.Security;
 public partial class BusinessObjectPermission
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="BusinessObjectPermission" /> class.
-	/// </summary>
-	/// <param name="busObId">BusObId.</param>
-	/// <param name="busObName">BusObName.</param>
-	/// <param name="departmentMemberEdit">DepartmentMemberEdit.</param>
-	/// <param name="departmentMemberView">DepartmentMemberView.</param>
-	/// <param name="edit">Edit.</param>
-	/// <param name="fieldPermissions">FieldPermissions.</param>
-	/// <param name="managerOfOwnerEdit">ManagerOfOwnerEdit.</param>
-	/// <param name="managerOfOwnerView">ManagerOfOwnerView.</param>
-	/// <param name="ownerEdit">OwnerEdit.</param>
-	/// <param name="ownerView">OwnerView.</param>
-	/// <param name="teamEdit">TeamEdit.</param>
-	/// <param name="teamManagerOfOwnerEdit">TeamManagerOfOwnerEdit.</param>
-	/// <param name="teamManagerOfOwnerView">TeamManagerOfOwnerView.</param>
-	/// <param name="teamView">TeamView.</param>
-	/// <param name="view">View.</param>
-	public BusinessObjectPermission(
-		string busObId,
-		string busObName,
-		bool? departmentMemberEdit,
-		bool? departmentMemberView,
-		bool? edit,
-		List<FieldPermissiond> fieldPermissions,
-		bool? managerOfOwnerEdit,
-		bool? managerOfOwnerView,
-		bool? ownerEdit,
-		bool? ownerView,
-		bool? teamEdit,
-		bool? teamManagerOfOwnerEdit,
-		bool? teamManagerOfOwnerView,
-		bool? teamView,
-		bool? view)
-	{
-		BusObId = busObId;
-		BusObName = busObName;
-		DepartmentMemberEdit = departmentMemberEdit;
-		DepartmentMemberView = departmentMemberView;
-		Edit = edit;
-		FieldPermissions = fieldPermissions;
-		ManagerOfOwnerEdit = managerOfOwnerEdit;
-		ManagerOfOwnerView = managerOfOwnerView;
-		OwnerEdit = ownerEdit;
-		OwnerView = ownerView;
-		TeamEdit = teamEdit;
-		TeamManagerOfOwnerEdit = teamManagerOfOwnerEdit;
-		TeamManagerOfOwnerView = teamManagerOfOwnerView;
-		TeamView = teamView;
-		View = view;
-	}
-
-	/// <summary>
 	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
-	public string BusObId { get; set; }
+	public string? BusObId { get; set; }
 
 	/// <summary>
 	/// BusObName
 	/// </summary>
 	[DataMember(Name = "busObName", EmitDefaultValue = false)]
-	public string BusObName { get; set; }
+	public string? BusObName { get; set; }
 
 	/// <summary>
 	/// DepartmentMemberEdit
@@ -98,7 +43,7 @@ public partial class BusinessObjectPermission
 	/// FieldPermissions
 	/// </summary>
 	[DataMember(Name = "fieldPermissions", EmitDefaultValue = false)]
-	public List<FieldPermissiond> FieldPermissions { get; set; }
+	public List<FieldPermissiond>? FieldPermissions { get; set; }
 
 	/// <summary>
 	/// ManagerOfOwnerEdit

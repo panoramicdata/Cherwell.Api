@@ -1,8 +1,6 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
-using System.Text;
 
 namespace Cherwell.Api.Models.Searches;
 
@@ -75,50 +73,14 @@ public partial class ColumnSchema
 	public EnumType? Type { get; set; }
 
 	/// <summary>
-	/// Initializes a new instance of the <see cref="ColumnSchema" /> class.
-	/// </summary>
-	/// <param name="Name">Name.</param>
-	/// <param name="FieldId">FieldId.</param>
-	/// <param name="Type">Type.</param>
-	public ColumnSchema(string Name, string FieldId, EnumType? Type)
-	{
-		this.Name = Name;
-		this.FieldId = FieldId;
-		this.Type = Type;
-	}
-
-	/// <summary>
 	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
-	public string Name { get; set; }
+	public string? Name { get; set; }
 
 	/// <summary>
 	/// FieldId
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
-	public string FieldId { get; set; }
-
-
-
-
-
-
-
-	/// <summary>
-	/// Gets the hash code
-	/// </summary>
-	/// <returns>Hash code</returns>
-	public override int GetHashCode()
-	{
-		// credit: http://stackoverflow.com/a/263416/677735
-		unchecked // Overflow is fine, just wrap
-		{
-			int hash = 41;
-			// Suitable nullity checks etc, of course :)
-			return hash;
-		}
-	}
-
-	
+	public string? FieldId { get; set; }
 }

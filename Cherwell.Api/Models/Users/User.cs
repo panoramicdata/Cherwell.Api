@@ -1,7 +1,4 @@
-using Newtonsoft.Json;
-using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
-using System.Text;
 
 namespace Cherwell.Api.Models.Users;
 
@@ -11,47 +8,6 @@ namespace Cherwell.Api.Models.Users;
 [DataContract]
 public partial class User : Response
 {
-	/// <summary>
-	/// Initializes a new instance of the <see cref="User" /> class.
-	/// </summary>
-	/// <param name="accountLocked">AccountLocked.</param>
-	/// <param name="createDateTime">CreateDateTime.</param>
-	/// <param name="displayName">DisplayName.</param>
-	/// <param name="error">error.</param>
-	/// <param name="errorCode">ErrorCode.</param>
-	/// <param name="fields">Fields.</param>
-	/// <param name="hasError">HasError.</param>
-	/// <param name="lastPasswordResetDate">LastPasswordResetDate.</param>
-	/// <param name="lastResetDateTime">LastResetDateTime.</param>
-	/// <param name="ldapRequired">LdapRequired.</param>
-	/// <param name="passwordNeverExpires">PasswordNeverExpires.</param>
-	/// <param name="publicId">PublicId.</param>
-	/// <param name="recordId">RecordId.</param>
-	/// <param name="securityGroupId">SecurityGroupId.</param>
-	/// <param name="shortDisplayName">shortDisplayName.</param>
-	/// <param name="userCannotChangePassword">UserCannotChangePassword.</param>
-	/// <param name="userMustResetPasswordAtNextLogin">UserMustResetPasswordAtNextLogin.</param>
-	public User(bool? accountLocked, DateTime? createDateTime, string displayName, string error, string errorCode, List<FieldTemplateItem> fields, bool hasError, DateTime? lastPasswordResetDate, DateTime? lastResetDateTime, bool? ldapRequired, bool? passwordNeverExpires, string publicId, string recordId, string securityGroupId, string shortDisplayName, bool? userCannotChangePassword, bool? userMustResetPasswordAtNextLogin)
-	{
-		AccountLocked = accountLocked;
-		CreateDateTime = createDateTime;
-		DisplayName = displayName;
-		Error = error;
-		ErrorCode = errorCode;
-		Fields = fields;
-		HasError = hasError;
-		LastPasswordResetDate = lastPasswordResetDate;
-		LastResetDateTime = lastResetDateTime;
-		LdapRequired = ldapRequired;
-		PasswordNeverExpires = passwordNeverExpires;
-		PublicId = publicId;
-		RecordId = recordId;
-		SecurityGroupId = securityGroupId;
-		ShortDisplayName = shortDisplayName;
-		UserCannotChangePassword = userCannotChangePassword;
-		UserMustResetPasswordAtNextLogin = userMustResetPasswordAtNextLogin;
-	}
-
 	/// <summary>
 	/// AccountLocked
 	/// </summary>
@@ -68,19 +24,19 @@ public partial class User : Response
 	/// DisplayName
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
-	public string DisplayName { get; set; }
+	public string? DisplayName { get; set; }
 
 	/// <summary>
 	/// error
 	/// </summary>
 	[DataMember(Name = "error", EmitDefaultValue = false)]
-	public string Error { get; set; }
+	public string? Error { get; set; }
 
 	/// <summary>
 	/// Fields
 	/// </summary>
 	[DataMember(Name = "fields", EmitDefaultValue = false)]
-	public List<FieldTemplateItem> Fields { get; set; }
+	public List<FieldTemplateItem>? Fields { get; set; }
 
 	/// <summary>
 	/// LastPasswordResetDate
@@ -110,25 +66,25 @@ public partial class User : Response
 	/// PublicId
 	/// </summary>
 	[DataMember(Name = "publicId", EmitDefaultValue = false)]
-	public string PublicId { get; set; }
+	public string? PublicId { get; set; }
 
 	/// <summary>
 	/// RecordId
 	/// </summary>
 	[DataMember(Name = "recordId", EmitDefaultValue = false)]
-	public string RecordId { get; set; }
+	public string? RecordId { get; set; }
 
 	/// <summary>
 	/// SecurityGroupId
 	/// </summary>
 	[DataMember(Name = "securityGroupId", EmitDefaultValue = false)]
-	public string SecurityGroupId { get; set; }
+	public string? SecurityGroupId { get; set; }
 
 	/// <summary>
 	/// shortDisplayName
 	/// </summary>
 	[DataMember(Name = "shortDisplayName", EmitDefaultValue = false)]
-	public string ShortDisplayName { get; set; }
+	public string? ShortDisplayName { get; set; }
 
 	/// <summary>
 	/// UserCannotChangePassword

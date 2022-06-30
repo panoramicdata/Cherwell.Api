@@ -1,7 +1,4 @@
-using Newtonsoft.Json;
-using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
-using System.Text;
 
 namespace Cherwell.Api.Models.Security;
 
@@ -11,41 +8,6 @@ namespace Cherwell.Api.Models.Security;
 [DataContract]
 public partial class FieldPermissiond
 {
-	/// <summary>
-	/// Initializes a new instance of the <see cref="FieldPermissiond" /> class.
-	/// </summary>
-	/// <param name="DepartmentMemberEdit">DepartmentMemberEdit.</param>
-	/// <param name="DepartmentMemberView">DepartmentMemberView.</param>
-	/// <param name="Edit">Edit.</param>
-	/// <param name="FieldId">FieldId.</param>
-	/// <param name="FieldName">FieldName.</param>
-	/// <param name="ManagerOfOwnerEdit">ManagerOfOwnerEdit.</param>
-	/// <param name="ManagerOfOwnerView">ManagerOfOwnerView.</param>
-	/// <param name="OwnerEdit">OwnerEdit.</param>
-	/// <param name="OwnerView">OwnerView.</param>
-	/// <param name="TeamEdit">TeamEdit.</param>
-	/// <param name="TeamManagerOfOwnerEdit">TeamManagerOfOwnerEdit.</param>
-	/// <param name="TeamManagerOfOwnerView">TeamManagerOfOwnerView.</param>
-	/// <param name="TeamView">TeamView.</param>
-	/// <param name="View">View.</param>
-	public FieldPermissiond(bool? DepartmentMemberEdit, bool? DepartmentMemberView, bool? Edit, string FieldId, string FieldName, bool? ManagerOfOwnerEdit, bool? ManagerOfOwnerView, bool? OwnerEdit, bool? OwnerView, bool? TeamEdit, bool? TeamManagerOfOwnerEdit, bool? TeamManagerOfOwnerView, bool? TeamView, bool? View)
-	{
-		this.DepartmentMemberEdit = DepartmentMemberEdit;
-		this.DepartmentMemberView = DepartmentMemberView;
-		this.Edit = Edit;
-		this.FieldId = FieldId;
-		this.FieldName = FieldName;
-		this.ManagerOfOwnerEdit = ManagerOfOwnerEdit;
-		this.ManagerOfOwnerView = ManagerOfOwnerView;
-		this.OwnerEdit = OwnerEdit;
-		this.OwnerView = OwnerView;
-		this.TeamEdit = TeamEdit;
-		this.TeamManagerOfOwnerEdit = TeamManagerOfOwnerEdit;
-		this.TeamManagerOfOwnerView = TeamManagerOfOwnerView;
-		this.TeamView = TeamView;
-		this.View = View;
-	}
-
 	/// <summary>
 	/// DepartmentMemberEdit
 	/// </summary>
@@ -68,13 +30,13 @@ public partial class FieldPermissiond
 	/// FieldId
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
-	public string FieldId { get; set; }
+	public string? FieldId { get; set; }
 
 	/// <summary>
 	/// FieldName
 	/// </summary>
 	[DataMember(Name = "fieldName", EmitDefaultValue = false)]
-	public string FieldName { get; set; }
+	public string? FieldName { get; set; }
 
 	/// <summary>
 	/// ManagerOfOwnerEdit
@@ -129,44 +91,4 @@ public partial class FieldPermissiond
 	/// </summary>
 	[DataMember(Name = "view", EmitDefaultValue = false)]
 	public bool? View { get; set; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	/// <summary>
-	/// Gets the hash code
-	/// </summary>
-	/// <returns>Hash code</returns>
-	public override int GetHashCode()
-	{
-		// credit: http://stackoverflow.com/a/263416/677735
-		unchecked // Overflow is fine, just wrap
-		{
-			int hash = 41;
-			// Suitable nullity checks etc, of course :)
-
-
-
-
-
-
-
-		}
-	}
-
-	
 }

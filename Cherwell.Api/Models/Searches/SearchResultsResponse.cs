@@ -12,7 +12,7 @@ public partial class SearchResultsResponse : Response
 	/// BusinessObjects
 	/// </summary>
 	[DataMember(Name = "businessObjects", EmitDefaultValue = false)]
-	public List<ReadResponse> BusinessObjects { get; set; } = null!;
+	public List<ReadResponse>? BusinessObjects { get; set; }
 
 	/// <summary>
 	/// HasPrompts
@@ -24,25 +24,25 @@ public partial class SearchResultsResponse : Response
 	/// Links
 	/// </summary>
 	[DataMember(Name = "links", EmitDefaultValue = false)]
-	public List<Link> Links { get; set; } = null!;
+	public List<Link>? Links { get; set; }
 
 	/// <summary>
 	/// Prompts
 	/// </summary>
 	[DataMember(Name = "prompts", EmitDefaultValue = false)]
-	public List<Prompt> Prompts { get; set; } = null!;
+	public List<Prompt>? Prompts { get; set; }
 
 	/// <summary>
 	/// SearchResultsFields
 	/// </summary>
 	[DataMember(Name = "searchResultsFields", EmitDefaultValue = false)]
-	public List<Field> SearchResultsFields { get; set; } = null!;
+	public List<Field>? SearchResultsFields { get; set; }
 
 	/// <summary>
 	/// SimpleResults
 	/// </summary>
 	[DataMember(Name = "simpleResults", EmitDefaultValue = false)]
-	public SimpleResultsList SimpleResults { get; set; } = null!;
+	public SimpleResultsList? SimpleResults { get; set; }
 
 	/// <summary>
 	/// TotalRows

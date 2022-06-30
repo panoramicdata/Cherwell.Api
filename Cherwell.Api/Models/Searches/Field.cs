@@ -1,7 +1,4 @@
-using Newtonsoft.Json;
-using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
-using System.Text;
 
 namespace Cherwell.Api.Models.Searches;
 
@@ -12,75 +9,22 @@ namespace Cherwell.Api.Models.Searches;
 public partial class Field
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="Field" /> class.
-	/// </summary>
-	/// <param name="Caption">Caption.</param>
-	/// <param name="CurrencyCulture">CurrencyCulture.</param>
-	/// <param name="CurrencySymbol">CurrencySymbol.</param>
-	/// <param name="DecimalDigits">DecimalDigits.</param>
-	/// <param name="DefaultSortOrderAscending">DefaultSortOrderAscending.</param>
-	/// <param name="DisplayName">DisplayName.</param>
-	/// <param name="FieldName">FieldName.</param>
-	/// <param name="FullFieldId">FullFieldId.</param>
-	/// <param name="HasDefaultSortField">HasDefaultSortField.</param>
-	/// <param name="FieldId">FieldId.</param>
-	/// <param name="IsBinary">IsBinary.</param>
-	/// <param name="IsCurrency">IsCurrency.</param>
-	/// <param name="IsDateTime">IsDateTime.</param>
-	/// <param name="IsFilterAllowed">IsFilterAllowed.</param>
-	/// <param name="IsLogical">IsLogical.</param>
-	/// <param name="IsNumber">IsNumber.</param>
-	/// <param name="IsShortDate">IsShortDate.</param>
-	/// <param name="IsShortTime">IsShortTime.</param>
-	/// <param name="IsVisible">IsVisible.</param>
-	/// <param name="Sortable">Sortable.</param>
-	/// <param name="SortOrder">SortOrder.</param>
-	/// <param name="StorageName">StorageName.</param>
-	/// <param name="WholeDigits">WholeDigits.</param>
-	public Field(string Caption, string CurrencyCulture, string CurrencySymbol, int? DecimalDigits, bool? DefaultSortOrderAscending, string DisplayName, string FieldName, string FullFieldId, bool? HasDefaultSortField, string FieldId, bool? IsBinary, bool? IsCurrency, bool? IsDateTime, bool? IsFilterAllowed, bool? IsLogical, bool? IsNumber, bool? IsShortDate, bool? IsShortTime, bool? IsVisible, bool? Sortable, string SortOrder, string StorageName, int? WholeDigits)
-	{
-		this.Caption = Caption;
-		this.CurrencyCulture = CurrencyCulture;
-		this.CurrencySymbol = CurrencySymbol;
-		this.DecimalDigits = DecimalDigits;
-		this.DefaultSortOrderAscending = DefaultSortOrderAscending;
-		this.DisplayName = DisplayName;
-		this.FieldName = FieldName;
-		this.FullFieldId = FullFieldId;
-		this.HasDefaultSortField = HasDefaultSortField;
-		this.FieldId = FieldId;
-		this.IsBinary = IsBinary;
-		this.IsCurrency = IsCurrency;
-		this.IsDateTime = IsDateTime;
-		this.IsFilterAllowed = IsFilterAllowed;
-		this.IsLogical = IsLogical;
-		this.IsNumber = IsNumber;
-		this.IsShortDate = IsShortDate;
-		this.IsShortTime = IsShortTime;
-		this.IsVisible = IsVisible;
-		this.Sortable = Sortable;
-		this.SortOrder = SortOrder;
-		this.StorageName = StorageName;
-		this.WholeDigits = WholeDigits;
-	}
-
-	/// <summary>
 	/// Caption
 	/// </summary>
 	[DataMember(Name = "caption", EmitDefaultValue = false)]
-	public string Caption { get; set; }
+	public string? Caption { get; set; }
 
 	/// <summary>
 	/// CurrencyCulture
 	/// </summary>
 	[DataMember(Name = "currencyCulture", EmitDefaultValue = false)]
-	public string CurrencyCulture { get; set; }
+	public string? CurrencyCulture { get; set; }
 
 	/// <summary>
 	/// CurrencySymbol
 	/// </summary>
 	[DataMember(Name = "currencySymbol", EmitDefaultValue = false)]
-	public string CurrencySymbol { get; set; }
+	public string? CurrencySymbol { get; set; }
 
 	/// <summary>
 	/// DecimalDigits
@@ -98,19 +42,19 @@ public partial class Field
 	/// DisplayName
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
-	public string DisplayName { get; set; }
+	public string? DisplayName { get; set; }
 
 	/// <summary>
 	/// FieldName
 	/// </summary>
 	[DataMember(Name = "fieldName", EmitDefaultValue = false)]
-	public string FieldName { get; set; }
+	public string? FieldName { get; set; }
 
 	/// <summary>
 	/// FullFieldId
 	/// </summary>
 	[DataMember(Name = "fullFieldId", EmitDefaultValue = false)]
-	public string FullFieldId { get; set; }
+	public string? FullFieldId { get; set; }
 
 	/// <summary>
 	/// HasDefaultSortField
@@ -122,7 +66,7 @@ public partial class Field
 	/// FieldId
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
-	public string FieldId { get; set; }
+	public string? FieldId { get; set; }
 
 	/// <summary>
 	/// IsBinary
@@ -188,13 +132,13 @@ public partial class Field
 	/// SortOrder
 	/// </summary>
 	[DataMember(Name = "sortOrder", EmitDefaultValue = false)]
-	public string SortOrder { get; set; }
+	public string? SortOrder { get; set; }
 
 	/// <summary>
 	/// StorageName
 	/// </summary>
 	[DataMember(Name = "storageName", EmitDefaultValue = false)]
-	public string StorageName { get; set; }
+	public string? StorageName { get; set; }
 
 	/// <summary>
 	/// WholeDigits

@@ -1,7 +1,4 @@
-using Newtonsoft.Json;
-using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
-using System.Text;
 
 namespace Cherwell.Api.Models.Security;
 
@@ -12,74 +9,28 @@ namespace Cherwell.Api.Models.Security;
 public partial class ApiClientSettingResponse : Response
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="ApiClientSettingResponse" /> class.
-	/// </summary>
-	/// <param name="name">Name.</param>
-	/// <param name="description">Description.</param>
-	/// <param name="culture">Culture.</param>
-	/// <param name="clientKey">ClientKey.</param>
-	/// <param name="tokenLifespanMinutes">TokenLifespanMinutes.</param>
-	/// <param name="refreshTokenLifespanMinutes">RefreshTokenLifespanMinutes.</param>
-	/// <param name="apiAccessIsEnabled">ApiAccessIsEnabled.</param>
-	/// <param name="allowAnonymousAccess">AllowAnonymousAccess.</param>
-	/// <param name="standInKey">StandInKey.</param>
-	/// <param name="errorCode">ErrorCode.</param>
-	/// <param name="errorMessage">ErrorMessage.</param>
-	/// <param name="hasError">HasError.</param>
-	/// <param name="httpStatusCode">HttpStatusCode.</param>
-	public ApiClientSettingResponse(
-		string name,
-		string description,
-		string culture,
-		string clientKey,
-		int? tokenLifespanMinutes,
-		int? refreshTokenLifespanMinutes,
-		bool? apiAccessIsEnabled,
-		bool? allowAnonymousAccess,
-		string standInKey,
-		string errorCode,
-		string errorMessage,
-		bool hasError,
-		EnumHttpStatusCode? httpStatusCode)
-	{
-		Name = name;
-		Description = description;
-		Culture = culture;
-		ClientKey = clientKey;
-		TokenLifespanMinutes = tokenLifespanMinutes;
-		RefreshTokenLifespanMinutes = refreshTokenLifespanMinutes;
-		ApiAccessIsEnabled = apiAccessIsEnabled;
-		AllowAnonymousAccess = allowAnonymousAccess;
-		StandInKey = standInKey;
-		ErrorCode = errorCode;
-		ErrorMessage = errorMessage;
-		HasError = hasError;
-		HttpStatusCode = httpStatusCode;
-	}
-
-	/// <summary>
 	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
-	public string Name { get; set; }
+	public string? Name { get; set; }
 
 	/// <summary>
 	/// Description
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
-	public string Description { get; set; }
+	public string? Description { get; set; }
 
 	/// <summary>
 	/// Culture
 	/// </summary>
 	[DataMember(Name = "culture", EmitDefaultValue = false)]
-	public string Culture { get; set; }
+	public string? Culture { get; set; }
 
 	/// <summary>
 	/// ClientKey
 	/// </summary>
 	[DataMember(Name = "clientKey", EmitDefaultValue = false)]
-	public string ClientKey { get; set; }
+	public string? ClientKey { get; set; }
 
 	/// <summary>
 	/// TokenLifespanMinutes
@@ -109,5 +60,5 @@ public partial class ApiClientSettingResponse : Response
 	/// StandInKey
 	/// </summary>
 	[DataMember(Name = "standInKey", EmitDefaultValue = false)]
-	public string StandInKey { get; set; }
+	public string? StandInKey { get; set; }
 }
