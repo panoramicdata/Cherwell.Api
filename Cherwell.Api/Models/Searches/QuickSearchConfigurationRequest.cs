@@ -1,7 +1,4 @@
-using Newtonsoft.Json;
-using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
-using System.Text;
 
 namespace Cherwell.Api.Models.Searches;
 
@@ -25,12 +22,4 @@ public partial class QuickSearchConfigurationRequest
 	/// </summary>
 	[DataMember(Name = "busObIds", EmitDefaultValue = false)]
 	public List<string> BusObIds { get; set; }
-
-
-
-
-
-
-
-	
 }
