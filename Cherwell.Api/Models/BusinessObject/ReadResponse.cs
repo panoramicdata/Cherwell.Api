@@ -12,43 +12,43 @@ public partial class ReadResponse
 	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
-	public string BusObId { get; set; } = null!;
+	public string? BusObId { get; set; } = null!;
 
 	/// <summary>
 	/// BusObPublicId
 	/// </summary>
 	[DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
-	public string BusObPublicId { get; set; } = null!;
+	public string? BusObPublicId { get; set; } = null!;
 
 	/// <summary>
 	/// BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
-	public string BusObRecId { get; set; } = null!;
+	public string? BusObRecId { get; set; } = null!;
 
 	/// <summary>
 	/// Fields
 	/// </summary>
 	[DataMember(Name = "fields", EmitDefaultValue = false)]
-	public List<FieldTemplateItem> Fields { get; set; } = null!;
+	public List<FieldTemplateItem>? Fields { get; set; } = null!;
 
 	/// <summary>
 	/// Links
 	/// </summary>
 	[DataMember(Name = "links", EmitDefaultValue = false)]
-	public List<Link> Links { get; set; } = null!;
+	public List<Link>? Links { get; set; } = null!;
 
 	/// <summary>
 	/// ErrorCode
 	/// </summary>
 	[DataMember(Name = "errorCode", EmitDefaultValue = false)]
-	public string ErrorCode { get; set; } = null!;
+	public string? ErrorCode { get; set; } = null!;
 
 	/// <summary>
 	/// ErrorMessage
 	/// </summary>
 	[DataMember(Name = "errorMessage", EmitDefaultValue = false)]
-	public string ErrorMessage { get; set; } = null!;
+	public string? ErrorMessage { get; set; } = null!;
 
 	/// <summary>
 	/// HasError

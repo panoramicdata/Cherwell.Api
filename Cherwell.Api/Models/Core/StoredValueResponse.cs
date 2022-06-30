@@ -81,83 +81,50 @@ public partial class StoredValueResponse : Response
 	public EnumStoredValueType? StoredValueType { get; set; }
 
 	/// <summary>
-	/// Initializes a new instance of the <see cref="StoredValueResponse" /> class.
-	/// </summary>
-	/// <param name="Description">Description.</param>
-	/// <param name="Folder">Folder.</param>
-	/// <param name="Id">Id.</param>
-	/// <param name="Name">Name.</param>
-	/// <param name="Scope">Scope.</param>
-	/// <param name="ScopeOwner">ScopeOwner.</param>
-	/// <param name="StandInKey">StandInKey.</param>
-	/// <param name="StoredValueType">StoredValueType.</param>
-	/// <param name="Value">Value.</param>
-	/// <param name="errorCode">ErrorCode.</param>
-	/// <param name="errorMessage">ErrorMessage.</param>
-	/// <param name="hasError">HasError.</param>
-	/// <param name="HttpStatusCode">HttpStatusCode.</param>
-	public StoredValueResponse(string Description, string Folder, string Id, string Name, string Scope, string ScopeOwner, string StandInKey, EnumStoredValueType? StoredValueType, string Value, string errorCode, string errorMessage, bool? hasError, EnumHttpStatusCode HttpStatusCode)
-	{
-		this.Description = Description;
-		this.Folder = Folder;
-		this.Id = Id;
-		this.Name = Name;
-		this.Scope = Scope;
-		this.ScopeOwner = ScopeOwner;
-		this.StandInKey = StandInKey;
-		this.StoredValueType = StoredValueType;
-		this.Value = Value;
-		this.ErrorCode = errorCode;
-		this.ErrorMessage = errorMessage;
-		this.HasError = hasError;
-		this.HttpStatusCode = HttpStatusCode;
-	}
-
-	/// <summary>
 	/// Description
 	/// </summary>
 	[DataMember(Name = "description", EmitDefaultValue = false)]
-	public string Description { get; set; }
+	public string? Description { get; set; }
 
 	/// <summary>
 	/// Folder
 	/// </summary>
 	[DataMember(Name = "folder", EmitDefaultValue = false)]
-	public string Folder { get; set; }
+	public string? Folder { get; set; }
 
 	/// <summary>
 	/// Id
 	/// </summary>
 	[DataMember(Name = "id", EmitDefaultValue = false)]
-	public string Id { get; set; }
+	public string? Id { get; set; }
 
 	/// <summary>
 	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
-	public string Name { get; set; }
+	public string? Name { get; set; }
 
 	/// <summary>
 	/// Scope
 	/// </summary>
 	[DataMember(Name = "scope", EmitDefaultValue = false)]
-	public string Scope { get; set; }
+	public string? Scope { get; set; }
 
 	/// <summary>
 	/// ScopeOwner
 	/// </summary>
 	[DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
-	public string ScopeOwner { get; set; }
+	public string? ScopeOwner { get; set; }
 
 	/// <summary>
 	/// StandInKey
 	/// </summary>
 	[DataMember(Name = "standInKey", EmitDefaultValue = false)]
-	public string StandInKey { get; set; }
+	public string? StandInKey { get; set; }
 
 	/// <summary>
 	/// Value
 	/// </summary>
 	[DataMember(Name = "value", EmitDefaultValue = false)]
-	public string Value { get; set; }
+	public string? Value { get; set; }
 }

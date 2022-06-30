@@ -45,55 +45,34 @@ public partial class SaveRequest
 	public EnumCacheScope? CacheScope { get; set; }
 
 	/// <summary>
-	/// Initializes a new instance of the <see cref="SaveRequest" /> class.
-	/// </summary>
-	/// <param name="BusObId">BusObId.</param>
-	/// <param name="BusObPublicId">BusObPublicId.</param>
-	/// <param name="BusObRecId">BusObRecId.</param>
-	/// <param name="CacheKey">CacheKey.</param>
-	/// <param name="CacheScope">CacheScope.</param>
-	/// <param name="Fields">Fields.</param>
-	/// <param name="Persist">Persist.</param>
-	public SaveRequest(string BusObId, string BusObPublicId, string BusObRecId, string CacheKey, EnumCacheScope? CacheScope, List<FieldTemplateItem> Fields, bool? Persist)
-	{
-		this.BusObId = BusObId;
-		this.BusObPublicId = BusObPublicId;
-		this.BusObRecId = BusObRecId;
-		this.CacheKey = CacheKey;
-		this.CacheScope = CacheScope;
-		this.Fields = Fields;
-		this.Persist = Persist;
-	}
-
-	/// <summary>
 	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
-	public string BusObId { get; set; }
+	public string? BusObId { get; set; }
 
 	/// <summary>
 	/// BusObPublicId
 	/// </summary>
 	[DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
-	public string BusObPublicId { get; set; }
+	public string? BusObPublicId { get; set; }
 
 	/// <summary>
 	/// BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
-	public string BusObRecId { get; set; }
+	public string? BusObRecId { get; set; }
 
 	/// <summary>
 	/// CacheKey
 	/// </summary>
 	[DataMember(Name = "cacheKey", EmitDefaultValue = false)]
-	public string CacheKey { get; set; }
+	public string? CacheKey { get; set; }
 
 	/// <summary>
 	/// Fields
 	/// </summary>
 	[DataMember(Name = "fields", EmitDefaultValue = false)]
-	public List<FieldTemplateItem> Fields { get; set; }
+	public List<FieldTemplateItem>? Fields { get; set; }
 
 	/// <summary>
 	/// Persist

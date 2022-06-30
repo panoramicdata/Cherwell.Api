@@ -12,52 +12,14 @@ namespace Cherwell.Api.Models.BusinessObject;
 public partial class BarcodeLookupResponse : Response
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="BarcodeLookupResponse" /> class.
-	/// </summary>
-	/// <param name="busObId">BusObId.</param>
-	/// <param name="busObRecId">BusObRecId.</param>
-	/// <param name="errorCode">ErrorCode.</param>
-	/// <param name="errorMessage">ErrorMessage.</param>
-	/// <param name="hasError">HasError.</param>
-	/// <param name="HttpStatusCode">HttpStatusCode.</param>
-	public BarcodeLookupResponse(
-		string busObId,
-		string busObRecId,
-		string errorCode,
-		string errorMessage,
-		bool hasError,
-		EnumHttpStatusCode? httpStatusCode)
-	{
-		BusObId = busObId;
-		BusObRecId = busObRecId;
-		ErrorCode = errorCode;
-		ErrorMessage = errorMessage;
-		HasError = hasError;
-		HttpStatusCode = httpStatusCode;
-	}
-
-	/// <summary>
 	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
-	public string BusObId { get; set; }
+	public string? BusObId { get; set; } = null;
 
 	/// <summary>
 	/// BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
-	public string BusObRecId { get; set; }
-
-
-
-
-
-
-
-
-
-
-
-
-	
+	public string? BusObRecId { get; set; } = null;
 }

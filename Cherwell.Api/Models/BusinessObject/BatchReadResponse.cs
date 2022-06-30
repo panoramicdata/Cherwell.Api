@@ -13,25 +13,8 @@ public partial class BatchReadResponse : Response
 
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="BatchReadResponse" /> class.
-	/// </summary>
-	/// <param name="Responses">Responses.</param>
-	public BatchReadResponse(List<ReadResponse> Responses)
-	{
-		this.Responses = Responses;
-	}
-
-	/// <summary>
 	/// Responses
 	/// </summary>
 	[DataMember(Name = "responses", EmitDefaultValue = false)]
-	public List<ReadResponse> Responses { get; set; }
-
-
-
-
-
-
-
-	
+	public List<ReadResponse>? Responses { get; set; }
 }

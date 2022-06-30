@@ -187,47 +187,10 @@ public partial class Action
 	public EnumLoginVisibilityMode? LoginVisibilityMode { get; set; }
 
 	/// <summary>
-	/// Initializes a new instance of the <see cref="Action" /> class.
-	/// </summary>
-	/// <param name="ActionCommand">ActionCommand.</param>
-	/// <param name="ActionType">ActionType.</param>
-	/// <param name="AlwaysTextAndImage">AlwaysTextAndImage.</param>
-	/// <param name="BeginGroup">BeginGroup.</param>
-	/// <param name="ChildActions">ChildActions.</param>
-	/// <param name="Dependencies">Dependencies.</param>
-	/// <param name="DisplayText">DisplayText.</param>
-	/// <param name="Enabled">Enabled.</param>
-	/// <param name="GalleryImage">GalleryImage.</param>
-	/// <param name="HelpText">HelpText.</param>
-	/// <param name="LoginEnabledMode">LoginEnabledMode.</param>
-	/// <param name="LoginVisibilityMode">LoginVisibilityMode.</param>
-	/// <param name="Name">Name.</param>
-	/// <param name="Parameters">Parameters.</param>
-	/// <param name="Visible">Visible.</param>
-	public Action(string ActionCommand, EnumActionType? ActionType, bool? AlwaysTextAndImage, bool? BeginGroup, List<Action> ChildActions, List<string> Dependencies, string DisplayText, bool? Enabled, string GalleryImage, string HelpText, EnumLoginEnabledMode? LoginEnabledMode, EnumLoginVisibilityMode? LoginVisibilityMode, string Name, Dictionary<string, string> Parameters, bool? Visible)
-	{
-		this.ActionCommand = ActionCommand;
-		this.ActionType = ActionType;
-		this.AlwaysTextAndImage = AlwaysTextAndImage;
-		this.BeginGroup = BeginGroup;
-		this.ChildActions = ChildActions;
-		this.Dependencies = Dependencies;
-		this.DisplayText = DisplayText;
-		this.Enabled = Enabled;
-		this.GalleryImage = GalleryImage;
-		this.HelpText = HelpText;
-		this.LoginEnabledMode = LoginEnabledMode;
-		this.LoginVisibilityMode = LoginVisibilityMode;
-		this.Name = Name;
-		this.Parameters = Parameters;
-		this.Visible = Visible;
-	}
-
-	/// <summary>
 	/// ActionCommand
 	/// </summary>
 	[DataMember(Name = "actionCommand", EmitDefaultValue = false)]
-	public string ActionCommand { get; set; }
+	public string? ActionCommand { get; set; }
 
 	/// <summary>
 	/// AlwaysTextAndImage
@@ -245,19 +208,19 @@ public partial class Action
 	/// ChildActions
 	/// </summary>
 	[DataMember(Name = "childActions", EmitDefaultValue = false)]
-	public List<Action> ChildActions { get; set; }
+	public List<Action>? ChildActions { get; set; }
 
 	/// <summary>
 	/// Dependencies
 	/// </summary>
 	[DataMember(Name = "dependencies", EmitDefaultValue = false)]
-	public List<string> Dependencies { get; set; }
+	public List<string?>? Dependencies { get; set; }
 
 	/// <summary>
 	/// DisplayText
 	/// </summary>
 	[DataMember(Name = "displayText", EmitDefaultValue = false)]
-	public string DisplayText { get; set; }
+	public string? DisplayText { get; set; }
 
 	/// <summary>
 	/// Enabled
@@ -269,25 +232,25 @@ public partial class Action
 	/// GalleryImage
 	/// </summary>
 	[DataMember(Name = "galleryImage", EmitDefaultValue = false)]
-	public string GalleryImage { get; set; }
+	public string? GalleryImage { get; set; }
 
 	/// <summary>
 	/// HelpText
 	/// </summary>
 	[DataMember(Name = "helpText", EmitDefaultValue = false)]
-	public string HelpText { get; set; }
+	public string? HelpText { get; set; }
 
 	/// <summary>
 	/// Name
 	/// </summary>
 	[DataMember(Name = "name", EmitDefaultValue = false)]
-	public string Name { get; set; }
+	public string? Name { get; set; }
 
 	/// <summary>
 	/// Parameters
 	/// </summary>
 	[DataMember(Name = "parameters", EmitDefaultValue = false)]
-	public Dictionary<string, string> Parameters { get; set; }
+	public Dictionary<string?, string?>? Parameters { get; set; }
 
 	/// <summary>
 	/// Visible

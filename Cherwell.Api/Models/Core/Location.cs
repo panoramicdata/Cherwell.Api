@@ -12,23 +12,6 @@ namespace Cherwell.Api.Models.Core;
 public partial class Location
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="Location" /> class.
-	/// </summary>
-	/// <param name="Altitude">Altitude.</param>
-	/// <param name="BusObId">BusObId.</param>
-	/// <param name="BusObRecId">BusObRecId.</param>
-	/// <param name="Latitude">Latitude.</param>
-	/// <param name="Longitude">Longitude.</param>
-	public Location(double? Altitude, string BusObId, string BusObRecId, double? Latitude, double? Longitude)
-	{
-		this.Altitude = Altitude;
-		this.BusObId = BusObId;
-		this.BusObRecId = BusObRecId;
-		this.Latitude = Latitude;
-		this.Longitude = Longitude;
-	}
-
-	/// <summary>
 	/// Altitude
 	/// </summary>
 	[DataMember(Name = "altitude", EmitDefaultValue = false)]
@@ -38,13 +21,13 @@ public partial class Location
 	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
-	public string BusObId { get; set; }
+	public string? BusObId { get; set; }
 
 	/// <summary>
 	/// BusObRecId
 	/// </summary>
 	[DataMember(Name = "busObRecId", EmitDefaultValue = false)]
-	public string BusObRecId { get; set; }
+	public string? BusObRecId { get; set; }
 
 	/// <summary>
 	/// Latitude

@@ -155,51 +155,6 @@ public partial class Prompt
 	public EnumPromptType? PromptType { get; set; }
 
 	/// <summary>
-	/// Initializes a new instance of the <see cref="Prompt" /> class.
-	/// </summary>
-	/// <param name="AllowValuesOnly">AllowValuesOnly.</param>
-	/// <param name="BusObId">BusObId.</param>
-	/// <param name="CollectionStoreEntireRow">CollectionStoreEntireRow.</param>
-	/// <param name="CollectionValueField">CollectionValueField.</param>
-	/// <param name="ConstraintXml">ConstraintXml.</param>
-	/// <param name="Contents">Contents.</param>
-	/// <param name="Default">_Default.</param>
-	/// <param name="FieldId">FieldId.</param>
-	/// <param name="IsDateRange">IsDateRange.</param>
-	/// <param name="ListDisplayOption">ListDisplayOption.</param>
-	/// <param name="ListReturnFieldId">ListReturnFieldId.</param>
-	/// <param name="MultiLine">MultiLine.</param>
-	/// <param name="PromptId">PromptId.</param>
-	/// <param name="PromptType">PromptType.</param>
-	/// <param name="PromptTypeName">PromptTypeName.</param>
-	/// <param name="Required">Required.</param>
-	/// <param name="Text">Text.</param>
-	/// <param name="Value">Value.</param>
-	/// <param name="Values">Values.</param>
-	public Prompt(bool? AllowValuesOnly, string BusObId, string CollectionStoreEntireRow, string CollectionValueField, string ConstraintXml, string Contents, string Default, string FieldId, bool? IsDateRange, EnumListDisplayOption? ListDisplayOption, string ListReturnFieldId, bool? MultiLine, string PromptId, EnumPromptType? PromptType, string PromptTypeName, bool? Required, string Text, Object Value, List<string> Values)
-	{
-		this.AllowValuesOnly = AllowValuesOnly;
-		this.BusObId = BusObId;
-		this.CollectionStoreEntireRow = CollectionStoreEntireRow;
-		this.CollectionValueField = CollectionValueField;
-		this.ConstraintXml = ConstraintXml;
-		this.Contents = Contents;
-		this.Default = Default;
-		this.FieldId = FieldId;
-		this.IsDateRange = IsDateRange;
-		this.ListDisplayOption = ListDisplayOption;
-		this.ListReturnFieldId = ListReturnFieldId;
-		this.MultiLine = MultiLine;
-		this.PromptId = PromptId;
-		this.PromptType = PromptType;
-		this.PromptTypeName = PromptTypeName;
-		this.Required = Required;
-		this.Text = Text;
-		this.Value = Value;
-		this.Values = Values;
-	}
-
-	/// <summary>
 	/// AllowValuesOnly
 	/// </summary>
 	[DataMember(Name = "allowValuesOnly", EmitDefaultValue = false)]
@@ -209,43 +164,43 @@ public partial class Prompt
 	/// BusObId
 	/// </summary>
 	[DataMember(Name = "busObId", EmitDefaultValue = false)]
-	public string BusObId { get; set; }
+	public string? BusObId { get; set; }
 
 	/// <summary>
 	/// CollectionStoreEntireRow
 	/// </summary>
 	[DataMember(Name = "collectionStoreEntireRow", EmitDefaultValue = false)]
-	public string CollectionStoreEntireRow { get; set; }
+	public string? CollectionStoreEntireRow { get; set; }
 
 	/// <summary>
 	/// CollectionValueField
 	/// </summary>
 	[DataMember(Name = "collectionValueField", EmitDefaultValue = false)]
-	public string CollectionValueField { get; set; }
+	public string? CollectionValueField { get; set; }
 
 	/// <summary>
 	/// ConstraintXml
 	/// </summary>
 	[DataMember(Name = "constraintXml", EmitDefaultValue = false)]
-	public string ConstraintXml { get; set; }
+	public string? ConstraintXml { get; set; }
 
 	/// <summary>
 	/// Contents
 	/// </summary>
 	[DataMember(Name = "contents", EmitDefaultValue = false)]
-	public string Contents { get; set; }
+	public string? Contents { get; set; }
 
 	/// <summary>
 	/// _Default
 	/// </summary>
 	[DataMember(Name = "default", EmitDefaultValue = false)]
-	public string Default { get; set; }
+	public string? Default { get; set; }
 
 	/// <summary>
 	/// FieldId
 	/// </summary>
 	[DataMember(Name = "fieldId", EmitDefaultValue = false)]
-	public string FieldId { get; set; }
+	public string? FieldId { get; set; }
 
 	/// <summary>
 	/// IsDateRange
@@ -257,7 +212,7 @@ public partial class Prompt
 	/// ListReturnFieldId
 	/// </summary>
 	[DataMember(Name = "listReturnFieldId", EmitDefaultValue = false)]
-	public string ListReturnFieldId { get; set; }
+	public string? ListReturnFieldId { get; set; }
 
 	/// <summary>
 	/// MultiLine
@@ -269,13 +224,13 @@ public partial class Prompt
 	/// PromptId
 	/// </summary>
 	[DataMember(Name = "promptId", EmitDefaultValue = false)]
-	public string PromptId { get; set; }
+	public string? PromptId { get; set; }
 
 	/// <summary>
 	/// PromptTypeName
 	/// </summary>
 	[DataMember(Name = "promptTypeName", EmitDefaultValue = false)]
-	public string PromptTypeName { get; set; }
+	public string? PromptTypeName { get; set; }
 
 	/// <summary>
 	/// Required
@@ -287,17 +242,17 @@ public partial class Prompt
 	/// Text
 	/// </summary>
 	[DataMember(Name = "text", EmitDefaultValue = false)]
-	public string Text { get; set; }
+	public string? Text { get; set; }
 
 	/// <summary>
 	/// Value
 	/// </summary>
 	[DataMember(Name = "value", EmitDefaultValue = false)]
-	public Object Value { get; set; }
+	public Object? Value { get; set; }
 
 	/// <summary>
 	/// Values
 	/// </summary>
 	[DataMember(Name = "values", EmitDefaultValue = false)]
-	public List<string> Values { get; set; }
+	public List<string?>? Values { get; set; }
 }

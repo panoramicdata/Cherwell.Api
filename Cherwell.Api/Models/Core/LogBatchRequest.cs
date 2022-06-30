@@ -12,25 +12,8 @@ namespace Cherwell.Api.Models.Core;
 public partial class LogBatchRequest
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="LogBatchRequest" /> class.
-	/// </summary>
-	/// <param name="LogRequests">LogRequests.</param>
-	public LogBatchRequest(List<LogRequest> LogRequests)
-	{
-		this.LogRequests = LogRequests;
-	}
-
-	/// <summary>
 	/// LogRequests
 	/// </summary>
 	[DataMember(Name = "logRequests", EmitDefaultValue = false)]
-	public List<LogRequest> LogRequests { get; set; }
-
-
-
-
-
-
-
-	
+	public List<LogRequest>? LogRequests { get; set; }
 }

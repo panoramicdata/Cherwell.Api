@@ -63,50 +63,14 @@ public partial class LogRequest
 	public EnumLevel? Level { get; set; }
 
 	/// <summary>
-	/// Initializes a new instance of the <see cref="LogRequest" /> class.
-	/// </summary>
-	/// <param name="keyValueproperties">keyValueproperties.</param>
-	/// <param name="Level">Level.</param>
-	/// <param name="Message">Message.</param>
-	public LogRequest(List<object> keyValueproperties, EnumLevel? Level, string Message)
-	{
-		this.keyValueproperties = keyValueproperties;
-		this.Level = Level;
-		this.Message = Message;
-	}
-
-	/// <summary>
 	/// keyValueproperties
 	/// </summary>
 	[DataMember(Name = "keyValueproperties", EmitDefaultValue = false)]
-	public List<object> keyValueproperties { get; set; }
+	public List<object>? keyValueproperties { get; set; }
 
 	/// <summary>
 	/// Message
 	/// </summary>
 	[DataMember(Name = "message", EmitDefaultValue = false)]
-	public string Message { get; set; }
-
-
-
-
-
-
-
-	/// <summary>
-	/// Gets the hash code
-	/// </summary>
-	/// <returns>Hash code</returns>
-	public override int GetHashCode()
-	{
-		// credit: http://stackoverflow.com/a/263416/677735
-		unchecked // Overflow is fine, just wrap
-		{
-			int hash = 41;
-			// Suitable nullity checks etc, of course :)
-			return hash;
-		}
-	}
-
-	
+	public string? Message { get; set; }
 }
