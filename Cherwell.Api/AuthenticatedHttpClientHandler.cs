@@ -123,7 +123,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 				// Yes.
 
 				// Update the status cde if not set
-				if (response.HttpStatusCode == EnumHttpStatusCode.None)
+				if (response.HttpStatusCode is null || response.HttpStatusCode == EnumHttpStatusCode.None)
 				{
 					response.HttpStatusCode = (EnumHttpStatusCode)httpResponse.StatusCode;
 				}
