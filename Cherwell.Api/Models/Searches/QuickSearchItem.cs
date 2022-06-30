@@ -1,8 +1,6 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
-using System.Text;
 
 namespace Cherwell.Api.Models.Searches;
 
@@ -267,47 +265,6 @@ public partial class QuickSearchItem
 	public EnumSortByOption? SortByOption { get; set; }
 
 	/// <summary>
-	/// Initializes a new instance of the <see cref="QuickSearchItem" /> class.
-	/// </summary>
-	/// <param name="Ascending">Ascending.</param>
-	/// <param name="ChangedLimits">ChangedLimits.</param>
-	/// <param name="ChangedOption">ChangedOption.</param>
-	/// <param name="DisplayName">DisplayName.</param>
-	/// <param name="GalleryImage">GalleryImage.</param>
-	/// <param name="HasAnyOptions">HasAnyOptions.</param>
-	/// <param name="NonFinalStateOption">NonFinalStateOption.</param>
-	/// <param name="SearchAnyWordsOption">SearchAnyWordsOption.</param>
-	/// <param name="SearchAttachmentsOption">SearchAttachmentsOption.</param>
-	/// <param name="SearchRelatedOption">SearchRelatedOption.</param>
-	/// <param name="SearchTargetId">SearchTargetId.</param>
-	/// <param name="SearchTargetType">SearchTargetType.</param>
-	/// <param name="SelectedChangedLimit">SelectedChangedLimit.</param>
-	/// <param name="SelectedSortByFieldId">SelectedSortByFieldId.</param>
-	/// <param name="SortByFields">SortByFields.</param>
-	/// <param name="SortByOption">SortByOption.</param>
-	/// <param name="WatermarkText">WatermarkText.</param>
-	public QuickSearchItem(bool? Ascending, List<ChangedLimit> ChangedLimits, EnumChangedOption? ChangedOption, string DisplayName, string GalleryImage, bool? HasAnyOptions, EnumNonFinalStateOption? NonFinalStateOption, EnumSearchAnyWordsOption? SearchAnyWordsOption, EnumSearchAttachmentsOption? SearchAttachmentsOption, EnumSearchRelatedOption? SearchRelatedOption, string SearchTargetId, EnumSearchTargetType? SearchTargetType, ChangedLimit SelectedChangedLimit, string SelectedSortByFieldId, Dictionary<string, string> SortByFields, EnumSortByOption? SortByOption, string WatermarkText)
-	{
-		this.Ascending = Ascending;
-		this.ChangedLimits = ChangedLimits;
-		this.ChangedOption = ChangedOption;
-		this.DisplayName = DisplayName;
-		this.GalleryImage = GalleryImage;
-		this.HasAnyOptions = HasAnyOptions;
-		this.NonFinalStateOption = NonFinalStateOption;
-		this.SearchAnyWordsOption = SearchAnyWordsOption;
-		this.SearchAttachmentsOption = SearchAttachmentsOption;
-		this.SearchRelatedOption = SearchRelatedOption;
-		this.SearchTargetId = SearchTargetId;
-		this.SearchTargetType = SearchTargetType;
-		this.SelectedChangedLimit = SelectedChangedLimit;
-		this.SelectedSortByFieldId = SelectedSortByFieldId;
-		this.SortByFields = SortByFields;
-		this.SortByOption = SortByOption;
-		this.WatermarkText = WatermarkText;
-	}
-
-	/// <summary>
 	/// Ascending
 	/// </summary>
 	[DataMember(Name = "ascending", EmitDefaultValue = false)]
@@ -317,19 +274,19 @@ public partial class QuickSearchItem
 	/// ChangedLimits
 	/// </summary>
 	[DataMember(Name = "changedLimits", EmitDefaultValue = false)]
-	public List<ChangedLimit> ChangedLimits { get; set; }
+	public List<ChangedLimit>? ChangedLimits { get; set; }
 
 	/// <summary>
 	/// DisplayName
 	/// </summary>
 	[DataMember(Name = "displayName", EmitDefaultValue = false)]
-	public string DisplayName { get; set; }
+	public string? DisplayName { get; set; }
 
 	/// <summary>
 	/// GalleryImage
 	/// </summary>
 	[DataMember(Name = "galleryImage", EmitDefaultValue = false)]
-	public string GalleryImage { get; set; }
+	public string? GalleryImage { get; set; }
 
 	/// <summary>
 	/// HasAnyOptions
@@ -341,29 +298,29 @@ public partial class QuickSearchItem
 	/// SearchTargetId
 	/// </summary>
 	[DataMember(Name = "searchTargetId", EmitDefaultValue = false)]
-	public string SearchTargetId { get; set; }
+	public string? SearchTargetId { get; set; }
 
 	/// <summary>
 	/// SelectedChangedLimit
 	/// </summary>
 	[DataMember(Name = "selectedChangedLimit", EmitDefaultValue = false)]
-	public ChangedLimit SelectedChangedLimit { get; set; }
+	public ChangedLimit? SelectedChangedLimit { get; set; }
 
 	/// <summary>
 	/// SelectedSortByFieldId
 	/// </summary>
 	[DataMember(Name = "selectedSortByFieldId", EmitDefaultValue = false)]
-	public string SelectedSortByFieldId { get; set; }
+	public string? SelectedSortByFieldId { get; set; }
 
 	/// <summary>
 	/// SortByFields
 	/// </summary>
 	[DataMember(Name = "sortByFields", EmitDefaultValue = false)]
-	public Dictionary<string, string> SortByFields { get; set; }
+	public Dictionary<string, string>? SortByFields { get; set; }
 
 	/// <summary>
 	/// WatermarkText
 	/// </summary>
 	[DataMember(Name = "watermarkText", EmitDefaultValue = false)]
-	public string WatermarkText { get; set; }
+	public string? WatermarkText { get; set; }
 }
