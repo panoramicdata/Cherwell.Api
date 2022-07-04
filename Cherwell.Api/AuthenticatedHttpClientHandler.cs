@@ -24,7 +24,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		_logger = logger;
 		_authenticatingClient = new HttpClient
 		{
-			BaseAddress = new Uri(options.BaseAddress!)
+			BaseAddress = new Uri(options.BaseAddress)
 		};
 		SetUserAgent(_authenticatingClient, _options.UserAgent);
 	}
