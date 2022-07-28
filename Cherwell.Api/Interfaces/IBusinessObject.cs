@@ -126,9 +126,9 @@ public interface IBusinessObject
 	Task<List<BusObActivity>> GetActivitiesAsync(
 		[AliasAs("busobid")] string busobid,
 		[AliasAs("busobrecid")] string busobrecid,
-		[AliasAs("pageSize")] int? pageSize,
+		[AliasAs("pageSize")] int pageSize,
 		[AliasAs("pageNumber")] int? pageNumber,
-		[AliasAs("activityType")] string activityType,
+		[AliasAs("activityType")] string? activityType,
 		CancellationToken cancellationToken);
 
 	/// <summary>

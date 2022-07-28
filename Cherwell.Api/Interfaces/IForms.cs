@@ -44,7 +44,7 @@ public interface IForms
 		[AliasAs("busobid")] string busobid,
 		[AliasAs("busobrecid")] string busobrecid,
 		[AliasAs("foredit")] bool? foredit,
-		[AliasAs("formid")] string formid,
+		[AliasAs("formid")] string? formid,
 		CancellationToken cancellationToken);
 
 	/// <summary>

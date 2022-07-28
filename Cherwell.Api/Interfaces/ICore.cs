@@ -22,24 +22,6 @@ public interface ICore
 		CancellationToken cancellationToken);
 
 	/// <summary>
-	/// Get built-in images
-	/// </summary>
-	/// <remarks>
-	/// Operation that gets built-in images. If you are requesting an icon (.ico), you can specify width and height.
-	/// </remarks>
-	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
-	/// <param name="name">Image name and folder location in the Image Manager. Parameter must begin with \&quot;[PlugIn]Images;\&quot; and then a period-separated list of folders. Example: \&quot;[PlugIn]Images;Images.Common.Cherwell.ico\&quot;.</param>
-	/// <param name="width">Specify the width (icons only). (optional)</param>
-	/// <param name="height">Specify the height (icons only). (optional)</param>
-	/// <returns>Task of string</returns>
-	[Get("/api/V1/getgalleryimage/name/{name}")]
-	Task<string> GetGalleryImageAsync(
-		[AliasAs("name")] string name,
-		[AliasAs("width")] int? width,
-		[AliasAs("height")] int? height,
-		CancellationToken cancellationToken);
-
-	/// <summary>
 	/// Get gallery images by scope, scopeowner, and folder
 	/// </summary>
 	/// <remarks>
@@ -108,7 +90,25 @@ public interface ICore
 		CancellationToken cancellationToken);
 
 	/// <summary>
-	/// Get a  stored value
+	/// Get built-in images
+	/// </summary>
+	/// <remarks>
+	/// Operation that gets built-in images. If you are requesting an icon (.ico), you can specify width and height.
+	/// </remarks>
+	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
+	/// <param name="name">Image name and folder location in the Image Manager. Parameter must begin with \&quot;[PlugIn]Images;\&quot; and then a period-separated list of folders. Example: \&quot;[PlugIn]Images;Images.Common.Cherwell.ico\&quot;.</param>
+	/// <param name="width">Specify the width (icons only). (optional)</param>
+	/// <param name="height">Specify the height (icons only). (optional)</param>
+	/// <returns>Task of string</returns>
+	[Get("/api/V1/getgalleryimage/name/{name}")]
+	Task<string> GetGalleryImageAsync(
+		[AliasAs("name")] string name,
+		[AliasAs("width")] int? width,
+		[AliasAs("height")] int? height,
+		CancellationToken cancellationToken);	
+
+	/// <summary>
+	/// Get a stored value
 	/// </summary>
 	/// <remarks>
 	/// Get a stored value by its StandIn key.
