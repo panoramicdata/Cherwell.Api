@@ -6,4 +6,6 @@ public class Message
 	public const string NotFound = "The requested search was not found : ";
 	
 	public const string RecordNotFound = "Record not found";
+
+	public const string RecordNotFoundMessage = "RECORDNOTFOUND : Record not found";
 }

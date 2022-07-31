@@ -6,10 +6,182 @@ using Xunit.Abstractions;
 
 namespace Cherwell.Api.Test;
 
-public class GetSearchResultsAdHocTests : CherwellClientTest
+public class SearchTests : CherwellClientTest
 {
-	public GetSearchResultsAdHocTests(ITestOutputHelper iTestOutputHelper) : base(iTestOutputHelper)
+	public SearchTests(ITestOutputHelper iTestOutputHelper) : base(iTestOutputHelper)
 	{
+	}
+
+	[Fact]
+	public async void GetQuickSearchSpecificResults_Succeeds()
+	{
+		var response = await TestCherwellClient
+			.Searches
+			.GetQuickSearchSpecificResultsAsync(
+				new QuickSearchSpecificRequest
+				{
+					SearchText = "test",
+					SelectedChangedLimit = new ChangedLimit
+					{
+						DisplayName = "test",
+						Units = "test"
+					},
+				}, default, default, default, default)
+			.ConfigureAwait(false);
+
+		response
+			.Should()
+			.NotBeNull();
+	}
+
+	[Fact]
+	public async void GetQuickSearchSpecificResultsV2_Succeeds()
+	{
+		var response = await TestCherwellClient
+			.Searches
+			.GetQuickSearchSpecificResultsV2Async(
+				new QuickSearchSpecificRequest
+				{
+					SearchText = "test",
+					SelectedChangedLimit = new ChangedLimit
+					{
+						DisplayName = "test",
+						Units = "test"
+					},
+				}, default, default, default, default)
+			.ConfigureAwait(false);
+
+		response
+			.Should()
+			.NotBeNull();
+	}
+
+	[Fact]
+	public async void GetQuickSearchResults_NotAuth()
+	{
+		var cancellationToken = CancellationToken.None;
+
+		await ((Func<Task>)(async () =>
+		{
+			var response = await TestCherwellClient
+			.Searches
+			.GetQuickSearchResultsAsync(
+				new QuickSearchRequest
+				{
+					BusObIds = new List<string> {"93c5ca8e7dbd4cc21dead14df19c684298a78358dd"},
+					SearchText = "test"
+				}, default, cancellationToken)
+			.ConfigureAwait(false);
+		}))
+		.Should()
+		.ThrowAsync<CherwellApiException>()
+		.WithMessage(Message.Forbidden)
+		.Where(e =>
+			e.Response != null && e.Response.ErrorCode == ErrorCode.Forbidden
+			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.Forbidden
+			&& e.Response.HasError == true
+		);
+	}
+
+	[Fact]
+	public async void GetQuickSearchWithViewRights_NotAuth()
+	{
+		var cancellationToken = CancellationToken.None;
+
+		await ((Func<Task>)(async () =>
+		{
+			var response = await TestCherwellClient
+			.Searches
+			.GetQuickSearchConfigurationForBusObsWithViewRightsAsync(default)
+			.ConfigureAwait(false);
+		}))
+		.Should()
+		.ThrowAsync<CherwellApiException>()
+		.WithMessage(Message.Forbidden)
+		.Where(e =>
+			e.Response != null && e.Response.ErrorCode == ErrorCode.Forbidden
+			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.Forbidden
+			&& e.Response.HasError == true
+		);
+	}
+
+	[Fact]
+	public async void GetQuickSearchConfig_NotAuth()
+	{
+		var cancellationToken = CancellationToken.None;
+
+		await ((Func<Task>)(async () =>
+		{
+			var response = await TestCherwellClient
+			.Searches
+			.GetQuickSearchConfigurationForBusObsAsync(
+			new QuickSearchConfigurationRequest
+			{
+				BusObIds = new List<string> { "93c5ca8e7dbd4cc21dead14df19c684298a78358dd" }
+			}, default)
+			.ConfigureAwait(false);
+		}))
+		.Should()
+		.ThrowAsync<CherwellApiException>()
+		.WithMessage(Message.Forbidden)
+		.Where(e =>
+			e.Response != null && e.Response.ErrorCode == ErrorCode.Forbidden
+			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.Forbidden
+			&& e.Response.HasError == true
+		);
+	}
+
+	// GetSearchItemsByAssociationScopeScopeOwnerFolderAsync - unable to test, no association to test with
+	// GetSearchItemsByAssociationScopeScopeOwnerFolderV2Async - unable to test, no association to test with
+	// GetSearchItemsByAssociationScopeScopeOwnerAsync - unable to test, no association to test with
+	// GetSearchItemsByAssociationScopeScopeOwnerV2Async - unable to test, no association to test with
+	// GetSearchItemsByAssociationScopeAsync - unable to test, no association to test with
+	// GetSearchItemsByAssociationScopeV2Async - unable to test, no association to test with
+	// GetSearchItemsByAssociationAsync - unable to test, no association to test with
+	// GetSearchItemsByAssociationV2Async - unable to test, no association to test with
+
+	[Fact]
+	public async void GetSearchItems_NotAuth()
+	{
+		var cancellationToken = CancellationToken.None;
+
+		await ((Func<Task>)(async () =>
+		{
+			var response = await TestCherwellClient
+			.Searches
+			.GetSearchItemsAsync(default, default)
+			.ConfigureAwait(false);
+		}))
+		.Should()
+		.ThrowAsync<CherwellApiException>()
+		.WithMessage(Message.Forbidden)
+		.Where(e =>
+			e.Response != null && e.Response.ErrorCode == ErrorCode.Forbidden
+			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.Forbidden
+			&& e.Response.HasError == true
+		);
+	}
+
+	[Fact]
+	public async void GetSearchItemsV2_NotAuth()
+	{
+		var cancellationToken = CancellationToken.None;
+
+		await ((Func<Task>)(async () =>
+		{
+			var response = await TestCherwellClient
+			.Searches
+			.GetSearchItemsV2Async(default, default)
+			.ConfigureAwait(false);
+		}))
+		.Should()
+		.ThrowAsync<CherwellApiException>()
+		.WithMessage(Message.Forbidden)
+		.Where(e =>
+			e.Response != null && e.Response.ErrorCode == ErrorCode.Forbidden
+			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.Forbidden
+			&& e.Response.HasError == true
+		);
 	}
 
 	[Fact]
@@ -97,4 +269,11 @@ public class GetSearchResultsAdHocTests : CherwellClientTest
 			&& e.Response.HasError == true
 		);
 	}
+
+	// GetSearchResultsByIdAsync - unable to test, no association to test with
+	// GetSearchResultsByNameAsync - unable to test, no association to test with
+	// GetSearchResultsExportAdHocAsync - unable to test, no request to test with
+	// GetSearchResultsExportByIdAsync - unable to test, no association to test with
+	// GetSearchResultsExportByNameAsync - unable to test, no association to test with
+	// GetSearchResultsAsStringByIdV2Async - unable to test, no association to test with
 }
