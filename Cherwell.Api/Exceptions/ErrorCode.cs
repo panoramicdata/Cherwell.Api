@@ -7,4 +7,6 @@ public class ErrorCode
 	public const string NotFound = "SEARCHNOTFOUND";
 
 	public const string RecordNotFound = "RECORDNOTFOUND";
+
+	public const string InsufficientRights = "INSUFFICIENTRIGHTS";
 }

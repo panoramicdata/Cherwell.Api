@@ -8,4 +8,8 @@ public class Message
 	public const string RecordNotFound = "Record not found";
 
 	public const string RecordNotFoundMessage = "RECORDNOTFOUND : Record not found";
+
+	public const string UnknownException = "Exception of type 'Cherwell.Api.Exceptions.CherwellApiException' was thrown.";
+
+	public const string InsufficientRights = "Insufficient rights to view personas";
 }
