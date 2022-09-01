@@ -1,5 +1,6 @@
 ﻿using Cherwell.Api.Models.Searches;
 using FluentAssertions;
+using System.Text.RegularExpressions;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -9,6 +10,82 @@ public class TicketTests : CherwellClientTest
 {
 	public TicketTests(ITestOutputHelper iTestOutputHelper) : base(iTestOutputHelper)
 	{
+	}
+
+	[Theory]
+	[InlineData("")]
+	[InlineData("StateFieldId eq 'In Progress' OR StateFieldId eq 'Reopened'")]
+	[InlineData("Status eq 'Closed'")]
+	public async void GetQuickSearchSpecificResults_Succeeds(string query)
+	{
+		var summaries = await TestCherwellClient
+			.BusinessObject
+			.GetBusinessObjectSummaryByNameAsync("Incident", default)
+			.ConfigureAwait(false);
+		var summary = summaries[0];
+
+		var businessObjectId = summary.BusObId;
+
+		var businessObjectSchema = await TestCherwellClient
+			.BusinessObject
+			.GetBusinessObjectSchemaAsync(businessObjectId, true, default)
+			.ConfigureAwait(false);
+
+		var subQueryRegex = new Regex("(?<field>.+?) (?<operator>.+?) '(?<value>.+)'");
+
+		var filters = string.IsNullOrWhiteSpace(query)
+			? null
+			: query.Split(" OR ").Select(subQuery =>
+			{
+				var subQueryMatches = subQueryRegex.Matches(subQuery);
+				var fieldName = subQueryMatches[0].Groups["field"].Value;
+				var @operator = subQueryMatches[0].Groups["operator"].Value;
+				var value = subQueryMatches[0].Groups["value"].Value;
+
+				var fieldDefinition = businessObjectSchema
+					.FieldDefinitions
+					.SingleOrDefault(fd => fd.Name == fieldName);
+
+				fieldDefinition
+					.Should()
+					.NotBeNull();
+
+				var fieldId = fieldDefinition!.FieldId;
+
+				return new FilterInfo
+				{
+					FieldId = fieldId,
+					Operator = @operator,
+					Value = value
+				};
+			}
+			)
+			.ToList();
+
+		List<string>? fields = null;
+
+		var skip = 0;
+		var take = int.MaxValue;
+
+		var searchResultsRequest = new SearchResultsRequest
+		{
+			BusObId = businessObjectId,
+			Fields = fields?.Count != 0 ? fields : null,
+			Filters = filters,
+			PageNumber = (skip / take) + 1,
+			PageSize = take
+		};
+
+		var searchItemResponse = await TestCherwellClient
+			.Searches
+			.GetSearchResultsAdHocAsync(
+				searchResultsRequest,
+				default)
+			.ConfigureAwait(false);
+
+		searchItemResponse
+			.Should()
+			.NotBeNull();
 	}
 
 	[Theory]

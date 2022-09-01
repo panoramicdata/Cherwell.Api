@@ -48,7 +48,7 @@ public partial class SearchResultsRequest
 	/// Fields
 	/// </summary>
 	[DataMember(Name = "fields", EmitDefaultValue = false)]
-	public List<string> Fields { get; set; } = null!;
+	public List<string>? Fields { get; set; }
 
 	/// <summary>
 	/// Filters
