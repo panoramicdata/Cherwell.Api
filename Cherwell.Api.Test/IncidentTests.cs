@@ -5,43 +5,46 @@ using Xunit.Abstractions;
 
 namespace Cherwell.Api.Test;
 
-public class IncidentTests : CherwellClientTest
+public class TicketTests : CherwellClientTest
 {
-	public IncidentTests(ITestOutputHelper iTestOutputHelper) : base(iTestOutputHelper)
+	public TicketTests(ITestOutputHelper iTestOutputHelper) : base(iTestOutputHelper)
 	{
 	}
 
-	[Fact]
-	public async void GetIncidents_Succeeds()
+	[Theory]
+	[InlineData("Event")]
+	[InlineData("ChangeRequest")]
+	[InlineData("Incident")]
+	public async void GetTickets_Succeeds(string ticketType)
 	{
 		var cancellationToken = CancellationToken.None;
 
-		// Get a summary of the 'Incident' object type, if there is one
-		var objectSummaries = await TestCherwellClient
+		// Get a summary of the given object type, if there is one
+		var businessObjectSummaries = await TestCherwellClient
 			.BusinessObject
-			.GetBusinessObjectSummaryByNameAsync("Incident", cancellationToken)
+			.GetBusinessObjectSummaryByNameAsync(ticketType, cancellationToken)
 			.ConfigureAwait(false);
 
-		objectSummaries
+		businessObjectSummaries
 			.Should()
 			.NotBeNull();
 
-		objectSummaries
+		businessObjectSummaries
 			.Should()
 			.ContainSingle();
 
-		var incidentSummary = objectSummaries[0];
+		var businessObjectSummary = businessObjectSummaries[0];
 
 		// Possible statuses for the Incident object type
-		var possibleStatuses = incidentSummary
+		var possibleStatuses = businessObjectSummary
 			.States
 			.Split(",", StringSplitOptions.RemoveEmptyEntries);
 
 		// Retrieve the schema that explains the available fields on the object
-		var incidentSchema = await TestCherwellClient
+		var businessObjectSchema = await TestCherwellClient
 			.BusinessObject
 			.GetBusinessObjectSchemaAsync(
-			incidentSummary.BusObId,
+			businessObjectSummary.BusObId,
 			true,
 			cancellationToken)
 			.ConfigureAwait(false);
@@ -51,8 +54,8 @@ public class IncidentTests : CherwellClientTest
 			.GetSearchResultsAdHocAsync(
 			new SearchResultsRequest
 			{
-				BusObId = incidentSummary.BusObId,
-				Fields = incidentSchema
+				BusObId = businessObjectSummary.BusObId,
+				Fields = businessObjectSchema
 					.FieldDefinitions
 					.Take(5)
 					.Select(f => f.FieldId)
