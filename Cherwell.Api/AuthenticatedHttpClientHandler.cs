@@ -5,6 +5,7 @@ using Newtonsoft.Json.Linq;
 using System.Net.Http.Headers;
 using System.Security.Authentication;
 using System.Text;
+using System.Web;
 
 namespace Cherwell.Api;
 
@@ -72,6 +73,16 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 				url,
 				headers,
 				body);
+		}
+
+		if (_options.Culture is not null)
+		{
+			// Add the culture as a query parameter
+			var uriBuilder = new UriBuilder(request.RequestUri);
+			var query = HttpUtility.ParseQueryString(uriBuilder.Query);
+			query["locale"] = _options.Culture.Name;
+			uriBuilder.Query = query.ToString();
+			request.RequestUri = uriBuilder.Uri;
 		}
 
 		// Make the HTTP call

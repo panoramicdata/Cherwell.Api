@@ -1,5 +1,6 @@
 ﻿using Cherwell.Api.Exceptions;
 using Microsoft.Extensions.Logging;
+using System.Globalization;
 
 namespace Cherwell.Api;
 
@@ -45,9 +46,14 @@ public class CherwellClientOptions
 	public JsonMissingMemberHandling JsonMissingMemberHandling { get; set; }
 
 	/// <summary>
-	/// The logging level to use when members are found to be missing 
+	/// The logging level to use when members are found to be missing
 	/// </summary>
 	public LogLevel JsonMissingMemberResponseLogLevel { get; set; }
+
+	/// <summary>
+	/// An optional culture to use when parsing dates
+	/// </summary>
+	public CultureInfo? Culture { get; set; }
 
 	/// <summary>
 	/// Validate that all of the necessary options have been specified
