@@ -18,6 +18,9 @@
 		<Authors>Panoramic Data Limited</Authors>
 		<Company>Panoramic Data Limited</Company>
 		<NeutralLanguage>en</NeutralLanguage>
+		<AnalysisLevel>latest-recommended</AnalysisLevel>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 	</PropertyGroup>
 
 	<ItemGroup>
