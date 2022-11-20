@@ -46,10 +46,10 @@ public class BusObIntegrationTests : CherwellClientTest
 	public async Task BusOb_GetAttachmentsByIdAndRec_Error()
 	{
 		var cancellationToken = CancellationToken.None;
-		
+
 		await ((Func<Task>)(async () =>
 		{
-			var response = await TestCherwellClient
+			_ = await TestCherwellClient
 			.BusinessObject
 			.GetBusinessObjectAttachmentsByIdAndRecIdAsync("93c5ca8e7dbd4cc21dead14df19c684298a78358dd", "93c5ca8e7d6f942534ba214e2787b6d38dba666dab", "File", "Imported", false, cancellationToken)
 			.ConfigureAwait(false);
@@ -72,7 +72,7 @@ public class BusObIntegrationTests : CherwellClientTest
 
 		await ((Func<Task>)(async () =>
 		{
-			var response = await TestCherwellClient
+			_ = await TestCherwellClient
 			.BusinessObject
 			.GetBusinessObjectAttachmentsByNameAndPublicIdAsync("Building", "93e8652ccb6ffc759c6b544437bfa25c2e60ca36f0", "File", "Imported", false, cancellationToken)
 			.ConfigureAwait(false);
@@ -93,7 +93,7 @@ public class BusObIntegrationTests : CherwellClientTest
 
 		await ((Func<Task>)(async () =>
 		{
-			var response = await TestCherwellClient
+			_ = await TestCherwellClient
 			.BusinessObject
 			.GetBusinessObjectAttachmentsAsync(
 				new Models.BusinessObject.AttachmentsRequest
@@ -115,7 +115,7 @@ public class BusObIntegrationTests : CherwellClientTest
 	public async Task GetBusObBatch_Succeeds()
 	{
 		var cancellationToken = CancellationToken.None;
-		
+
 		var response = await TestCherwellClient
 			.BusinessObject
 			.GetBusinessObjectBatchAsync(
@@ -146,7 +146,7 @@ public class BusObIntegrationTests : CherwellClientTest
 
 		await ((Func<Task>)(async () =>
 		{
-			var response = await TestCherwellClient
+			_ = await TestCherwellClient
 			.BusinessObject
 			.GetBusinessObjectByRecIdAsync("944e0f0f214f53100758de4c81b78466866323bccf", "944e0f1424e236ce71b3c6484d875764a57ce45e51", cancellationToken)
 			.ConfigureAwait(false);
@@ -284,6 +284,4 @@ public class BusObIntegrationTests : CherwellClientTest
 	// UploadBusinessObjectAttachmentByNameAndPublicIdAsync - unable to test, we don't want to modify the business objects
 
 	// UploadBusinessObjectAttachmentByNameAndRecIdAsync - unable to test, we don't want to modify the business objects
-
-	
 }

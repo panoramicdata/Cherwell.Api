@@ -183,7 +183,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 	/// <exception cref="AuthenticationException">The authentication attempt was not successful</exception>
 	private async Task GenerateAccessTokenAsync(GrantTypes grantType, CancellationToken cancellationToken)
 	{
-		using var httpClient = new HttpClient()
+		using var httpClient = new HttpClient
 		{
 			BaseAddress = new($"{_options.BaseAddress}/token"),
 		};

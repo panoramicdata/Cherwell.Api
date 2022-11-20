@@ -23,10 +23,10 @@ public class CoreIntegrationTests : CherwellClientTest
 	public async Task Core_GetImages()
 	{
 		var cancellationToken = CancellationToken.None;
-		
+
 		await ((Func<Task>)(async () =>
 		{
-			var response = await TestCherwellClient
+			_ = await TestCherwellClient
 			.Core
 			.GetGalleryImagesAsync(true, cancellationToken)
 			.ConfigureAwait(false);
@@ -72,7 +72,7 @@ public class CoreIntegrationTests : CherwellClientTest
 			&& e.Response.HasError == true
 		);
 	}
-	
+
 	[Fact]
 	public async Task Core_GetViews()
 	{
