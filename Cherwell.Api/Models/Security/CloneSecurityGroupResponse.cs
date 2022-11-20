@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Security;
 /// CloneSecurityGroupResponse
 /// </summary>
 [DataContract]
-public partial class CloneSecurityGroupResponse : Response
+public class CloneSecurityGroupResponse : Response
 {
 	/// <summary>
 	/// SecurityGroupId

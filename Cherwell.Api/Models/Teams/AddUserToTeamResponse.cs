@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Teams;
 /// AddUserToTeamResponse
 /// </summary>
 [DataContract]
-public partial class AddUserToTeamResponse : Response
+public class AddUserToTeamResponse : Response
 {
 }
 

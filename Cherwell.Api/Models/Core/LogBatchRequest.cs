@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Core;
 /// LogBatchRequest
 /// </summary>
 [DataContract]
-public partial class LogBatchRequest
+public class LogBatchRequest
 {
 	/// <summary>
 	/// LogRequests

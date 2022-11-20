@@ -6,6 +6,6 @@ namespace Cherwell.Api.Models.Security;
 /// DeleteApiClientSettingsResponse
 /// </summary>
 [DataContract]
-public partial class DeleteApiClientSettingsResponse : Response
+public class DeleteApiClientSettingsResponse : Response
 {
 }

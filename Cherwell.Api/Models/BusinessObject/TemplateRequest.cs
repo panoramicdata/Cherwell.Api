@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// TemplateRequest
 /// </summary>
 [DataContract]
-public partial class TemplateRequest
+public class TemplateRequest
 {
 	/// <summary>
 	/// BusObId

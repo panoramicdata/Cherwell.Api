@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models;
 /// ResponseBase
 /// </summary>
 [DataContract]
-public partial class ResponseBase : Response
+public class ResponseBase : Response
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="ResponseBase" /> class.

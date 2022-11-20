@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Users;
 /// UserListResponse
 /// </summary>
 [DataContract]
-public partial class UserListResponse : Response
+public class UserListResponse : Response
 {
 	/// <summary>
 	/// Users

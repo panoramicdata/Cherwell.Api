@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Forms;
 /// FormsSectionField
 /// </summary>
 [DataContract]
-public partial class SectionField
+public class SectionField
 {
 	/// <summary>
 	/// Attributes

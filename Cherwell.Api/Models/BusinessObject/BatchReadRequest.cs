@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// BatchReadRequest
 /// </summary>
 [DataContract]
-public partial class BatchReadRequest
+public class BatchReadRequest
 {
 	/// <summary>
 	/// ReadRequests

@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Core;
 /// SimplePromptValue
 /// </summary>
 [DataContract]
-public partial class SimplePromptValue
+public class SimplePromptValue
 {
 	/// <summary>
 	/// PromptDefId

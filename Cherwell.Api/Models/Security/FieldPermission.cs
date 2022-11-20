@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Security;
 /// FieldPermissiond
 /// </summary>
 [DataContract]
-public partial class FieldPermissiond
+public class FieldPermissiond
 {
 	/// <summary>
 	/// DepartmentMemberEdit

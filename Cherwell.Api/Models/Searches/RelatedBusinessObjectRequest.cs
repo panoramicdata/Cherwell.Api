@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesRelatedBusinessObjectRequest
 /// </summary>
 [DataContract]
-public partial class RelatedBusinessObjectRequest
+public class RelatedBusinessObjectRequest
 {
 	/// <summary>
 	/// AllFields

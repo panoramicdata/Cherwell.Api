@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Teams;
 /// SaveWorkgroupMemberResponse
 /// </summary>
 [DataContract]
-public partial class SaveWorkgroupMemberResponse : Response
+public class SaveWorkgroupMemberResponse : Response
 {
 }
 

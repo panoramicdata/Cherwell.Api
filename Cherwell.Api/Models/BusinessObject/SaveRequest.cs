@@ -10,7 +10,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// SaveRequest
 /// </summary>
 [DataContract]
-public partial class SaveRequest
+public class SaveRequest
 {
 	/// <summary>
 	/// CacheScope

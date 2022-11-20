@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Queues;
 /// QueuesCheckInQueueItemResponse
 /// </summary>
 [DataContract]
-public partial class CheckInQueueItemResponse : Response
+public class CheckInQueueItemResponse : Response
 {
 	/// <summary>
 	/// HistoryRecId

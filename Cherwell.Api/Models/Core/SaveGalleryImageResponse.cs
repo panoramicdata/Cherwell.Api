@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Core;
 /// SaveGalleryImageResponse
 /// </summary>
 [DataContract]
-public partial class SaveGalleryImageResponse : Response
+public class SaveGalleryImageResponse : Response
 {
 	/// <summary>
 	/// Name

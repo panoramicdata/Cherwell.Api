@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesQuickSearchConfigSavedRequest
 /// </summary>
 [DataContract]
-public partial class QuickSearchConfigSavedRequest
+public class QuickSearchConfigSavedRequest
 {
 	/// <summary>
 	/// StandIn

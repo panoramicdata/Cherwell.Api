@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Core;
 /// PromptValue
 /// </summary>
 [DataContract]
-public partial class PromptValue
+public class PromptValue
 {
 	/// <summary>
 	/// BusObId

@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Teams;
 /// RemoveCustomerFromWorkgroupResponse
 /// </summary>
 [DataContract]
-public partial class RemoveCustomerFromWorkgroupResponse : Response
+public class RemoveCustomerFromWorkgroupResponse : Response
 {
 	/// <summary>
 	/// WorkgroupId

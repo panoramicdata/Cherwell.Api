@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Core;
 /// Location
 /// </summary>
 [DataContract]
-public partial class Location
+public class Location
 {
 	/// <summary>
 	/// Altitude

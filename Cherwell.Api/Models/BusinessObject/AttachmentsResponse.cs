@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// Attachments Response
 /// </summary>
 [DataContract]
-public partial class AttachmentsResponse : Response
+public class AttachmentsResponse : Response
 {
 	/// <summary>
 	/// Attachments

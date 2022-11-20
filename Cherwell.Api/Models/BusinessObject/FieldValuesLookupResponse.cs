@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// FieldValuesLookupResponse
 /// </summary>
 [DataContract]
-public partial class FieldValuesLookupResponse : Response
+public class FieldValuesLookupResponse : Response
 {
 	/// <summary>
 	/// Values

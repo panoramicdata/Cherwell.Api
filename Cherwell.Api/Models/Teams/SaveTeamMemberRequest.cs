@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Teams;
 /// SaveTeamMemberRequest
 /// </summary>
 [DataContract]
-public partial class SaveTeamMemberRequest
+public class SaveTeamMemberRequest
 {
 	/// <summary>
 	/// IsTeamManager

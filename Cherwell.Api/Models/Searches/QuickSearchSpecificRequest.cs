@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesQuickSearchSpecificRequest
 /// </summary>
 [DataContract]
-public partial class QuickSearchSpecificRequest
+public class QuickSearchSpecificRequest
 {
 	/// <summary>
 	/// Ascending

@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Teams;
 /// RemoveUserFromTeamResponse
 /// </summary>
 [DataContract]
-public partial class RemoveUserFromTeamResponse : Response
+public class RemoveUserFromTeamResponse : Response
 {
 	/// <summary>
 	/// TeamId

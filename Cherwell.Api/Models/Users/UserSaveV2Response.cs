@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Users;
 /// UserSaveV2Response
 /// </summary>
 [DataContract]
-public partial class UserSaveV2Response : Response
+public class UserSaveV2Response : Response
 {
 	/// <summary>
 	/// BusObPublicId

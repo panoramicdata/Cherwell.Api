@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Teams;
 /// AddUserToTeamRequest
 /// </summary>
 [DataContract]
-public partial class AddUserToTeamRequest
+public class AddUserToTeamRequest
 {
 	/// <summary>
 	/// TeamId

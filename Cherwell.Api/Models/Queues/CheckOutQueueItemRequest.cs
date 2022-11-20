@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Queues;
 /// QueuesCheckOutQueueItemRequest
 /// </summary>
 [DataContract]
-public partial class CheckOutQueueItemRequest
+public class CheckOutQueueItemRequest
 {
 	/// <summary>
 	/// BusObId

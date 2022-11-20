@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// DeleteResponse
 /// </summary>
 [DataContract]
-public partial class DeleteResponse : Response
+public class DeleteResponse : Response
 {
 	/// <summary>
 	/// BusObId

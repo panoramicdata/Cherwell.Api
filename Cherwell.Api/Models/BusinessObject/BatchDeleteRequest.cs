@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// BatchDeleteRequest
 /// </summary>
 [DataContract]
-public partial class BatchDeleteRequest
+public class BatchDeleteRequest
 {
 	/// <summary>
 	/// DeleteRequests

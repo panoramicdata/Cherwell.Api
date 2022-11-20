@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Lifecycle;
 /// LifecycleTransitionRecordRequest
 /// </summary>
 [DataContract]
-public partial class TransitionRecordRequest
+public class TransitionRecordRequest
 {
 	/// <summary>
 	/// TransitionOptionId

@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// RelatedSaveResponse
 /// </summary>
 [DataContract]
-public partial class RelatedSaveResponse : Response
+public class RelatedSaveResponse : Response
 {
 	/// <summary>
 	/// ParentBusObId

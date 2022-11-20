@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Security;
 /// RoleReadResponse
 /// </summary>
 [DataContract]
-public partial class RoleReadResponse : Response
+public class RoleReadResponse : Response
 {
 	/// <summary>
 	/// Error

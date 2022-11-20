@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Teams;
 /// Team
 /// </summary>
 [DataContract]
-public partial class Team
+public class Team
 {
 	/// <summary>
 	/// TeamId

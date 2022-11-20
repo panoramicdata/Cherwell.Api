@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Security;
 /// Right
 /// </summary>
 [DataContract]
-public partial class Right
+public class Right
 {
 	/// <summary>
 	/// Add

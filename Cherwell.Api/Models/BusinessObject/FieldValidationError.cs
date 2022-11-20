@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// FieldValidationError
 /// </summary>
 [DataContract]
-public partial class FieldValidationError : Response
+public class FieldValidationError : Response
 {
 	/// <summary>
 	/// Error

@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesStoredSearchRequest
 /// </summary>
 [DataContract]
-public partial class StoredSearchRequest
+public class StoredSearchRequest
 {
 	/// <summary>
 	/// AssociationId

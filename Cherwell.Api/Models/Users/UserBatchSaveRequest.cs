@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Users;
 /// UserBatchSaveRequest
 /// </summary>
 [DataContract]
-public partial class UserBatchSaveRequest
+public class UserBatchSaveRequest
 {
 	/// <summary>
 	/// SaveRequests

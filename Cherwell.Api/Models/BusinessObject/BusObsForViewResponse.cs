@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// BusObsForViewResponse
 /// </summary>
 [DataContract]
-public partial class BusObsForViewResponse : Response
+public class BusObsForViewResponse : Response
 {
 	/// <summary>
 	/// Summaries

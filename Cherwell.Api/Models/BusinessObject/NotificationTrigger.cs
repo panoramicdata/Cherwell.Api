@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// NotificationTrigger
 /// </summary>
 [DataContract]
-public partial class NotificationTrigger
+public class NotificationTrigger
 {
 	/// <summary>
 	/// SourceType

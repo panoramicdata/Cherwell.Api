@@ -8,7 +8,7 @@ namespace Cherwell.Api.Models.Teams;
 /// TeamResponse
 /// </summary>
 [DataContract]
-public partial class TeamResponse : Response
+public class TeamResponse : Response
 {
 	/// <summary>
 	/// TeamType

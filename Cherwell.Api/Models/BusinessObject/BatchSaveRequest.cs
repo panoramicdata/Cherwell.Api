@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// BatchSaveRequest
 /// </summary>
 [DataContract]
-public partial class BatchSaveRequest
+public class BatchSaveRequest
 {
 	/// <summary>
 	/// SaveRequests

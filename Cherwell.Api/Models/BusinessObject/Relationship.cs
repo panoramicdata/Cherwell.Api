@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// Relationship
 /// </summary>
 [DataContract]
-public partial class BusinessObjectRelationship
+public class BusinessObjectRelationship
 {
 	/// <summary>
 	/// Cardinality

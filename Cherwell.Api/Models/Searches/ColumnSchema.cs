@@ -8,7 +8,7 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesColumnSchema
 /// </summary>
 [DataContract]
-public partial class ColumnSchema
+public class ColumnSchema
 {
 	/// <summary>
 	/// Type

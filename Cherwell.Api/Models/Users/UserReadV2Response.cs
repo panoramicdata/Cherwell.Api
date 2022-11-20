@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Users;
 /// UserReadV2Response
 /// </summary>
 [DataContract]
-public partial class UserReadV2Response : Response
+public class UserReadV2Response : Response
 {
 	/// <summary>
 	/// Users

@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// FieldTemplateItem
 /// </summary>
 [DataContract]
-public partial class FieldTemplateItem
+public class FieldTemplateItem
 {
 	/// <summary>
 	/// Dirty

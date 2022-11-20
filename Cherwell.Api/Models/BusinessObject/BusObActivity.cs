@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// BusObActivity
 /// </summary>
 [DataContract]
-public partial class BusObActivity
+public class BusObActivity
 {
 	/// <summary>
 	/// Id

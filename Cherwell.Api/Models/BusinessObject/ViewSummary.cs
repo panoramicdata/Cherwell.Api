@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// ViewSummary
 /// </summary>
 [DataContract]
-public partial class ViewSummary
+public class ViewSummary
 {
 	/// <summary>
 	/// GroupSummaries

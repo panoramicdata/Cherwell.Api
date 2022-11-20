@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// SaveResponse
 /// </summary>
 [DataContract]
-public partial class SaveResponse : Response
+public class SaveResponse : Response
 {
 	/// <summary>
 	/// BusObPublicId

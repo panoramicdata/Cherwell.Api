@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.OneStepActions;
 /// OneStepActionsOneStepActionResponse
 /// </summary>
 [DataContract]
-public partial class OneStepActionResponse : Response
+public class OneStepActionResponse : Response
 {
 	/// <summary>
 	/// Completed

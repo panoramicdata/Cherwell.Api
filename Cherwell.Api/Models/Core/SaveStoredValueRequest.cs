@@ -10,7 +10,7 @@ namespace Cherwell.Api.Models.Core;
 /// SaveStoredValueRequest
 /// </summary>
 [DataContract]
-public partial class SaveStoredValueRequest
+public class SaveStoredValueRequest
 {
 	/// <summary>
 	/// StoredValueType

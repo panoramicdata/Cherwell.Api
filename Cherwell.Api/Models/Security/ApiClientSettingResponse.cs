@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Security;
 /// ApiClientSettingResponse
 /// </summary>
 [DataContract]
-public partial class ApiClientSettingResponse : Response
+public class ApiClientSettingResponse : Response
 {
 	/// <summary>
 	/// Name

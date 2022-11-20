@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Forms;
 /// FormsMobileFormResponse
 /// </summary>
 [DataContract]
-public partial class MobileFormResponse : Response
+public class MobileFormResponse : Response
 {
 	/// <summary>
 	/// Actions

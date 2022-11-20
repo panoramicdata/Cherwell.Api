@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Approval;
 /// ApprovalReadResponse
 /// </summary>
 [DataContract]
-public partial class ApprovalReadResponse : Response
+public class ApprovalReadResponse : Response
 {
 	/// <summary>
 	/// properties

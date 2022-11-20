@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// DeleteRequest
 /// </summary>
 [DataContract]
-public partial class DeleteRequest
+public class DeleteRequest
 {
 	/// <summary>
 	/// BusObId

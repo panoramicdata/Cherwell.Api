@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Teams;
 /// SaveWorkgroupMemberRequest
 /// </summary>
 [DataContract]
-public partial class SaveWorkgroupMemberRequest
+public class SaveWorkgroupMemberRequest
 {
 	/// <summary>
 	/// CustomerRecordId

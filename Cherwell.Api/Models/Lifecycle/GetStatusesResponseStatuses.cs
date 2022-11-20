@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Lifecycle;
 /// LifecycleGetStatusesResponseStatuses
 /// </summary>
 [DataContract]
-public partial class GetStatusesResponseStatuses
+public class GetStatusesResponseStatuses
 {
 	/// <summary>
 	/// Id

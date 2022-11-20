@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// ReadRequest
 /// </summary>
 [DataContract]
-public partial class ReadRequest
+public class ReadRequest
 {
 	/// <summary>
 	/// BusObId

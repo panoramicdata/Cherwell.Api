@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// FieldValuesLookupRequest
 /// </summary>
 [DataContract]
-public partial class FieldValuesLookupRequest
+public class FieldValuesLookupRequest
 {
 	/// <summary>
 	/// BusbPublicId

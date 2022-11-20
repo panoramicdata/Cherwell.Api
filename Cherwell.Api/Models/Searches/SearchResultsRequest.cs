@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesSearchResultsRequest
 /// </summary>
 [DataContract]
-public partial class SearchResultsRequest
+public class SearchResultsRequest
 {
 	/// <summary>
 	/// Association
@@ -54,7 +54,7 @@ public partial class SearchResultsRequest
 	/// Filters
 	/// </summary>
 	[DataMember(Name = "filters", EmitDefaultValue = false)]
-	public List<FilterInfo> Filters { get; set; } = null!;
+	public List<FilterInfo>? Filters { get; set; }
 
 	/// <summary>
 	/// IncludeAllFields

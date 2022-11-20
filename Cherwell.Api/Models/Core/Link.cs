@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Core;
 /// Link
 /// </summary>
 [DataContract]
-public partial class Link
+public class Link
 {
 	/// <summary>
 	/// Name

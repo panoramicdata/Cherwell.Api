@@ -8,7 +8,7 @@ namespace Cherwell.Api.Models.Teams;
 /// TeamSaveRequest
 /// </summary>
 [DataContract]
-public partial class TeamSaveRequest
+public class TeamSaveRequest
 {
 	/// <summary>
 	/// TeamType

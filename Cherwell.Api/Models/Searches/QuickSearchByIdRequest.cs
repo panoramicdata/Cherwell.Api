@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesQuickSearchByIdRequest
 /// </summary>
 [DataContract]
-public partial class QuickSearchByIdRequest
+public class QuickSearchByIdRequest
 {
 	/// <summary>
 	/// BusObIds

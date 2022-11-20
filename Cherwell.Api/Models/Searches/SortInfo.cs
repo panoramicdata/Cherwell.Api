@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesSortInfo
 /// </summary>
 [DataContract]
-public partial class SortInfo
+public class SortInfo
 {
 	/// <summary>
 	/// FieldId

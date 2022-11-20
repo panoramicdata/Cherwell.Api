@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Security;
 /// MobileCredentialsModeResponse
 /// </summary>
 [DataContract]
-public partial class MobileCredentialsModeResponse : Response
+public class MobileCredentialsModeResponse : Response
 {
 	/// <summary>
 	/// CredentialsMode

@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// Summary
 /// </summary>
 [DataContract]
-public partial class Summary
+public class Summary
 {
 	/// <summary>
 	/// FirstRecIdField

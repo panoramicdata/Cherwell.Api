@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Users;
 /// UserReadRequest
 /// </summary>
 [DataContract]
-public partial class UserReadRequest
+public class UserReadRequest
 {
 	/// <summary>
 	/// LoginId

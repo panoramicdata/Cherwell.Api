@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Security;
 /// Role
 /// </summary>
 [DataContract]
-public partial class Role
+public class Role
 {
 	/// <summary>
 	/// BrowserClientCustomViewId

@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesSearchResultsRow
 /// </summary>
 [DataContract]
-public partial class SearchResultsRow
+public class SearchResultsRow
 {
 	/// <summary>
 	/// BusObId

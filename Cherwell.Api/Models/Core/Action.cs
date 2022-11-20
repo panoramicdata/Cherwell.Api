@@ -10,7 +10,7 @@ namespace Cherwell.Api.Models.Core;
 /// Action
 /// </summary>
 [DataContract]
-public partial class Action
+public class Action
 {
 	/// <summary>
 	/// ActionType

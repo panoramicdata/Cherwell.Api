@@ -8,7 +8,7 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesQuickSearchItem
 /// </summary>
 [DataContract]
-public partial class QuickSearchItem
+public class QuickSearchItem
 {
 	/// <summary>
 	/// ChangedOption

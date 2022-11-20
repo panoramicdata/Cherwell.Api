@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// BatchDeleteResponse
 /// </summary>
 [DataContract]
-public partial class BatchDeleteResponse : Response
+public class BatchDeleteResponse : Response
 {
 	/// <summary>
 	/// Responses

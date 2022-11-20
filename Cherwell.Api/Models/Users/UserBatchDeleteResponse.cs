@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Users;
 /// UserBatchDeleteResponse
 /// </summary>
 [DataContract]
-public partial class UserBatchDeleteResponse : Response
+public class UserBatchDeleteResponse : Response
 {
 	/// <summary>
 	/// Responses

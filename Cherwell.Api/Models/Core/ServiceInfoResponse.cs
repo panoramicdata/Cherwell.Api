@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Core;
 /// ServiceInfoResponse
 /// </summary>
 [DataContract]
-public partial class ServiceInfoResponse : Response
+public class ServiceInfoResponse : Response
 {
 	/// <summary>
 	/// ApiVersion

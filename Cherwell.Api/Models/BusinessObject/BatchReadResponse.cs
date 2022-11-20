@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// BatchReadResponse
 /// </summary>
 [DataContract]
-public partial class BatchReadResponse : Response
+public class BatchReadResponse : Response
 
 {
 	/// <summary>

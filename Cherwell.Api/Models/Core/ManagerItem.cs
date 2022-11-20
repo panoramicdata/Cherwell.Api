@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Core;
 /// ManagerItem
 /// </summary>
 [DataContract]
-public partial class ManagerItem
+public class ManagerItem
 {
 	/// <summary>
 	/// Association

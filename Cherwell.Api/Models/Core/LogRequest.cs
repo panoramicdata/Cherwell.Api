@@ -10,7 +10,7 @@ namespace Cherwell.Api.Models.Core;
 /// LogRequest
 /// </summary>
 [DataContract]
-public partial class LogRequest
+public class LogRequest
 {
 	/// <summary>
 	/// Level

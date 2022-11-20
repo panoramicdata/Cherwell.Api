@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Security;
 /// TokenResponse
 /// </summary>
 [DataContract]
-public partial class TokenResponse : Response
+public class TokenResponse : Response
 {
 	/// <summary>
 	/// AccessToken

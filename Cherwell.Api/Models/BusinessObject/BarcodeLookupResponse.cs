@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// BarcodeLookupResponse
 /// </summary>
 [DataContract]
-public partial class BarcodeLookupResponse : Response
+public class BarcodeLookupResponse : Response
 {
 	/// <summary>
 	/// BusObId

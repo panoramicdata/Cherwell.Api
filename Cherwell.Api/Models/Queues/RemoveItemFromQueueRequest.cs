@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Queues;
 /// QueuesRemoveItemFromQueueRequest
 /// </summary>
 [DataContract]
-public partial class RemoveItemFromQueueRequest
+public class RemoveItemFromQueueRequest
 {
 	/// <summary>
 	/// BusObId

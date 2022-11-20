@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Security;
 /// GetApiClientSettingsResponseItem
 /// </summary>
 [DataContract]
-public partial class GetApiClientSettingsResponseItem
+public class GetApiClientSettingsResponseItem
 {
 	/// <summary>
 	/// Name

@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesChangedLimit
 /// </summary>
 [DataContract]
-public partial class ChangedLimit
+public class ChangedLimit
 {
 	/// <summary>
 	/// DisplayName

@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Security;
 /// BusinessObjectPermission
 /// </summary>
 [DataContract]
-public partial class BusinessObjectPermission
+public class BusinessObjectPermission
 {
 	/// <summary>
 	/// BusObId

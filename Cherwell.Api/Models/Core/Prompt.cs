@@ -10,7 +10,7 @@ namespace Cherwell.Api.Models.Core;
 /// Prompt
 /// </summary>
 [DataContract]
-public partial class Prompt
+public class Prompt
 {
 	/// <summary>
 	/// ListDisplayOption

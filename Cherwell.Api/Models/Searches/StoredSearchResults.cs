@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesStoredSearchResults
 /// </summary>
 [DataContract]
-public partial class StoredSearchResults
+public class StoredSearchResults
 {
 	/// <summary>
 	/// Columns

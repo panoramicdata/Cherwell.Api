@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Users;
 /// UserDeleteResponse
 /// </summary>
 [DataContract]
-public partial class UserDeleteResponse : Response
+public class UserDeleteResponse : Response
 {
 	/// <summary>
 	/// Error

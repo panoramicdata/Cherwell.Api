@@ -8,7 +8,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// Attachment
 /// </summary>
 [DataContract]
-public partial class Attachment
+public class Attachment
 {
 	/// <summary>
 	/// AttachmentType

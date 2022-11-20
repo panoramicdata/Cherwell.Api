@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesSimpleResultsListGroup
 /// </summary>
 [DataContract]
-public partial class SimpleResultsListGroup : Response
+public class SimpleResultsListGroup : Response
 {
 	/// <summary>
 	/// IsBusObTarget

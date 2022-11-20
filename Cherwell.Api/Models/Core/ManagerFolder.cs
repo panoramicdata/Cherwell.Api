@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Core;
 /// ManagerFolder
 /// </summary>
 [DataContract]
-public partial class ManagerFolder
+public class ManagerFolder
 {
 	/// <summary>
 	/// Association

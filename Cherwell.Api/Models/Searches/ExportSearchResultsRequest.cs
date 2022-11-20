@@ -8,7 +8,7 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesExportSearchResultsRequest
 /// </summary>
 [DataContract]
-public partial class ExportSearchResultsRequest
+public class ExportSearchResultsRequest
 {
 	/// <summary>
 	/// ExportFormat

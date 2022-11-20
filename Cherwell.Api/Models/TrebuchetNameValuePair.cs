@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models;
 /// TrebuchetNameValuePair
 /// </summary>
 [DataContract]
-public partial class TrebuchetNameValuePair
+public class TrebuchetNameValuePair
 {
 	/// <summary>
 	/// Name

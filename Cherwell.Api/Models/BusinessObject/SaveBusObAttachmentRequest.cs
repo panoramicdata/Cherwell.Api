@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// SaveBusObAttachmentRequest
 /// </summary>
 [DataContract]
-public partial class SaveBusObAttachmentRequest
+public class SaveBusObAttachmentRequest
 {
 	/// <summary>
 	/// AttachBusObId

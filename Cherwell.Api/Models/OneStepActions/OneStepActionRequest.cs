@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.OneStepActions;
 /// OneStepActionsOneStepActionRequest
 /// </summary>
 [DataContract]
-public partial class OneStepActionRequest
+public class OneStepActionRequest
 {
 	/// <summary>
 	/// AcquireLicense

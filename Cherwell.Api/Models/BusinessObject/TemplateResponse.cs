@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// TemplateResponse
 /// </summary>
 [DataContract]
-public partial class TemplateResponse : Response
+public class TemplateResponse : Response
 {
 	/// <summary>
 	/// Fields

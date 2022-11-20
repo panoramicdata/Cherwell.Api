@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Users;
 /// UserSaveV2Request
 /// </summary>
 [DataContract]
-public partial class UserSaveV2Request
+public class UserSaveV2Request
 {
 	/// <summary>
 	/// AccountLocked

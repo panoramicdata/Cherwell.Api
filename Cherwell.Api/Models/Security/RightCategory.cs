@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Security;
 /// RightCategory
 /// </summary>
 [DataContract]
-public partial class RightCategory
+public class RightCategory
 {
 	/// <summary>
 	/// CategoryDescription

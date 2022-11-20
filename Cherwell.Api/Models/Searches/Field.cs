@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesField
 /// </summary>
 [DataContract]
-public partial class Field
+public class Field
 {
 	/// <summary>
 	/// Caption

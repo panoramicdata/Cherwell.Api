@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesSearchFolder
 /// </summary>
 [DataContract]
-public partial class SearchFolder
+public class SearchFolder
 {
 	/// <summary>
 	/// Association

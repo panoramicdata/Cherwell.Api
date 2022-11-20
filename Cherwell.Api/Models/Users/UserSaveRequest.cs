@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Users;
 /// UserSaveRequest
 /// </summary>
 [DataContract]
-public partial class UserSaveRequest : Response
+public class UserSaveRequest : Response
 {
 	/// <summary>
 	/// AccountLocked

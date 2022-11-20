@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Security;
 /// SecurityRightsResponse
 /// </summary>
 [DataContract]
-public partial class SecurityRightsResponse : Response
+public class SecurityRightsResponse : Response
 {
 	/// <summary>
 	/// Rights

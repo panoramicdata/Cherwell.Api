@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Security;
 /// SecurityGroupV2Response
 /// </summary>
 [DataContract]
-public partial class SecurityGroupV2Response : Response
+public class SecurityGroupV2Response : Response
 {
 	/// <summary>
 	/// SecurityGroups

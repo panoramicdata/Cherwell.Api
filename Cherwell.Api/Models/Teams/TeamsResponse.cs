@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Teams;
 /// TeamsResponse
 /// </summary>
 [DataContract]
-public partial class TeamsResponse : Response
+public class TeamsResponse : Response
 {
 	/// <summary>
 	/// Error

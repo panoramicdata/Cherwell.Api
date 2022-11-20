@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// GridDefinition
 /// </summary>
 [DataContract]
-public partial class GridDefinition
+public class GridDefinition
 {
 	/// <summary>
 	/// GridId

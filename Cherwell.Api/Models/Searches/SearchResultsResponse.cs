@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesSearchResultsResponse
 /// </summary>
 [DataContract]
-public partial class SearchResultsResponse : Response
+public class SearchResultsResponse : Response
 {
 	/// <summary>
 	/// BusinessObjects

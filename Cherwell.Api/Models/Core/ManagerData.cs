@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Core;
 /// ManagerData
 /// </summary>
 [DataContract]
-public partial class ManagerData : Response
+public class ManagerData : Response
 {
 	/// <summary>
 	/// Root

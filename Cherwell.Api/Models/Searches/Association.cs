@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Searches;
 /// Searches Association
 /// </summary>
 [DataContract]
-public partial class Association
+public class Association
 {
 	/// <summary>
 	/// BusOb Id

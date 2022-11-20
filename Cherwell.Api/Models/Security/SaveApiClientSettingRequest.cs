@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Security;
 /// SaveApiClientSettingRequest
 /// </summary>
 [DataContract]
-public partial class SaveApiClientSettingRequest
+public class SaveApiClientSettingRequest
 {
 	/// <summary>
 	/// AllowAnonymousAccess

@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Queues;
 /// QueuesRemoveItemFromQueueResponse
 /// </summary>
 [DataContract]
-public partial class RemoveItemFromQueueResponse : Response
+public class RemoveItemFromQueueResponse : Response
 {
 	/// <summary>
 	/// HistoryRecId

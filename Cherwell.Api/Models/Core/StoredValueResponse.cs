@@ -10,7 +10,7 @@ namespace Cherwell.Api.Models.Core;
 /// StoredValueResponse
 /// </summary>
 [DataContract]
-public partial class StoredValueResponse : Response
+public class StoredValueResponse : Response
 {
 	/// <summary>
 	/// StoredValueType

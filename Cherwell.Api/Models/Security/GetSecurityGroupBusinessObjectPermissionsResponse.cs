@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Security;
 /// GetSecurityGroupBusinessObjectPermissionsResponse
 /// </summary>
 [DataContract]
-public partial class GetSecurityGroupBusinessObjectPermissionsResponse : Response
+public class GetSecurityGroupBusinessObjectPermissionsResponse : Response
 {
 	/// <summary>
 	/// BusinessObjectPermissions

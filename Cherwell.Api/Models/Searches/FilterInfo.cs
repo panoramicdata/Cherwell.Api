@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesFilterInfo
 /// </summary>
 [DataContract]
-public partial class FilterInfo
+public class FilterInfo
 {
 	/// <summary>
 	/// FieldId

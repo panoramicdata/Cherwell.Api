@@ -10,7 +10,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// AttachmentsRequest
 /// </summary>
 [DataContract]
-public partial class AttachmentsRequest
+public class AttachmentsRequest
 {
 
 	/// <summary>

@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.Core;
 /// View
 /// </summary>
 [DataContract]
-public partial class View
+public class View
 {
 	/// <summary>
 	/// Name

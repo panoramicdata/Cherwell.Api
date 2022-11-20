@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Users;
 /// UserBatchDeleteRequest
 /// </summary>
 [DataContract]
-public partial class UserBatchDeleteRequest
+public class UserBatchDeleteRequest
 {
 	/// <summary>
 	/// StopOnError

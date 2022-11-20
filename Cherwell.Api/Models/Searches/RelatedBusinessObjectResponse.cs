@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Searches;
 /// SearchesRelatedBusinessObjectResponse
 /// </summary>
 [DataContract]
-public partial class RelatedBusinessObjectResponse : Response
+public class RelatedBusinessObjectResponse : Response
 {
 	/// <summary>
 	/// Links

@@ -9,7 +9,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// FieldDefinition
 /// </summary>
 [DataContract]
-public partial class FieldDefinition
+public class FieldDefinition
 {
 	/// <summary>
 	/// AutoFill

@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Security;
 /// ClientSecuritySettingsResponse
 /// </summary>
 [DataContract]
-public partial class ClientSecuritySettingsResponse : Response
+public class ClientSecuritySettingsResponse : Response
 {
 	/// <summary>
 	/// InternalLoginAllowed

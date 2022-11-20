@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Teams;
 /// TeamSaveResponse
 /// </summary>
 [DataContract]
-public partial class TeamSaveResponse : Response
+public class TeamSaveResponse : Response
 {
 	/// <summary>
 	/// TeamId

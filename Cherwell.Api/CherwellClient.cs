@@ -8,7 +8,7 @@ namespace Cherwell.Api;
 /// <summary>
 /// API client is mainly responsible for making the HTTP call to the API backend.
 /// </summary>
-public partial class CherwellClient : IDisposable
+public class CherwellClient : IDisposable
 {
 	private readonly ILogger _logger;
 	private readonly HttpClient _httpClient;

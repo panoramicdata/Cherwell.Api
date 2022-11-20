@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Users;
 /// UserBatchSaveV2Response
 /// </summary>
 [DataContract]
-public partial class UserBatchSaveV2Response : Response
+public class UserBatchSaveV2Response : Response
 {
 	/// <summary>
 	/// Responses

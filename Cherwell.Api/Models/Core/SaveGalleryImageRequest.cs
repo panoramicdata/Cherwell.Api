@@ -10,7 +10,7 @@ namespace Cherwell.Api.Models.Core;
 /// SaveGalleryImageRequest
 /// </summary>
 [DataContract]
-public partial class SaveGalleryImageRequest
+public class SaveGalleryImageRequest
 {
 	/// <summary>
 	/// ImageType

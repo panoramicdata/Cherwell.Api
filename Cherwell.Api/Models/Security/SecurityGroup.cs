@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Security;
 /// SecurityGroup
 /// </summary>
 [DataContract]
-public partial class SecurityGroup
+public class SecurityGroup
 {
 	/// <summary>
 	/// Description

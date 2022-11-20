@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Queues;
 /// QueuesAddItemToQueueRequest
 /// </summary>
 [DataContract]
-public partial class AddItemToQueueRequest
+public class AddItemToQueueRequest
 {
 	/// <summary>
 	/// BusObId

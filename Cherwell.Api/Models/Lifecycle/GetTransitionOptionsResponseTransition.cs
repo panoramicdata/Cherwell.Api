@@ -6,7 +6,7 @@ namespace Cherwell.Api.Models.Lifecycle;
 /// LifecycleGetTransitionOptionsResponseTransition
 /// </summary>
 [DataContract]
-public partial class GetTransitionOptionsResponseTransition
+public class GetTransitionOptionsResponseTransition
 {
 	/// <summary>
 	/// Name
