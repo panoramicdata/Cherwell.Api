@@ -10,9 +10,9 @@ To use the Cherwell API nuget package:
 
 ## Visual Studio
 
-1. Open your project in Visual Studio
-1. Right-click on the project and click "Manage Nuget packages"
-1. Find the package "Cherwell.Api" - install the latest version
+ 1. Open your project in Visual Studio
+ 2. Right-click on the project and click "Manage Nuget packages"
+ 3. Find the package "Cherwell.Api" - install the latest version
 
 ## Example code (C# 10.0):
 
@@ -48,4 +48,4 @@ namespace My.Project
 
 The Cherwell API documentation can be found here:
 
-- [Cherwell API Documentation v1](https://help.cherwell.com/bundle/cherwell_rest_api_10_1_help_only/page/content/system_administration/rest_api)
+  - [Cherwell API Documentation v1](https://help.cherwell.com/bundle/cherwell_rest_api_10_1_help_only/page/content/system_administration/rest_api)

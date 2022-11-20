@@ -26,7 +26,7 @@ For an example see `/organizations/{organizationId}/inventory/devices` in
 
 For this endpoint we would
 
-1. Create the normal endpoint as per the API documentation called `GetOrganizationInventoryDevicesAsync`.
+ 1. Create the normal endpoint as per the API documentation called `GetOrganizationInventoryDevicesAsync`.
 ```c#
 [Get("/organizations/{organizationId}/inventory/devices")]
 Task<List<InventoryDevice>> GetOrganizationInventoryDevicesAsync(
@@ -38,7 +38,7 @@ Task<List<InventoryDevice>> GetOrganizationInventoryDevicesAsync(
 	string? search = null,
 	CancellationToken cancellationToken);
 ```
-2. Create a second copy of the endpoint called `GetInventoryDevicesApiResponseAsync` and marked `internal`.
+ 2. Create a second copy of the endpoint called `GetInventoryDevicesApiResponseAsync` and marked `internal`.
 Exclude the paging parameters `perPage` and `endingBefore` and just leave the filtering parameters.
 ```c#
 [Get("/organizations/{organizationId}/inventory/devices")]
@@ -49,9 +49,9 @@ internal Task<ApiResponse<List<InventoryDevice>>> GetOrganizationInventoryDevice
 	string? search = null,
 	CancellationToken cancellationToken);
 ```
-3. Change the second copy return type to wrap it in a Refit `ApiResponse`.
-4. This second copy will be used by an extension method that uses the `ApiReponse` to get the response headers and handle paging.
-5. Create an extension method, adding `All` to the method name, in an appropriately named file in `Extensions`; in this case `IOrganizationsInventoryDevicesExtensions.cs`
+ 3. Change the second copy return type to wrap it in a Refit `ApiResponse`.
+ 4. This second copy will be used by an extension method that uses the `ApiReponse` to get the response headers and handle paging.
+ 5. Create an extension method, adding `All` to the method name, in an appropriately named file in `Extensions`; in this case `IOrganizationsInventoryDevicesExtensions.cs`
 ```c#
 namespace Cherwell.Api.Extensions;
 
@@ -83,8 +83,8 @@ public static class IOrganizationsInventoryDevicesExtensions
 		);
 }
 ```
-6. This will allow people to call this method from the `IOrganizationsInventoryDevices` interface and 
-7. it will appear to be on the interface directly.
+ 6. This will allow people to call this method from the `IOrganizationsInventoryDevices` interface and 
+ 7. it will appear to be on the interface directly.
 
 ## ENUMS
 
@@ -115,17 +115,17 @@ which returned properties can be used as part of create/update/delete requests.
 ### Property attributes
 API attributes should be added to indicate their usage.
 
-- `[ApiKey]` - Used to identify the primary key for the API resource.
-- `[ApiForeignKey(typeof(xxx))`] - Used to identify another resource linked to by this Id, this can be useful to store for later use.
-- `[ApiAccess(ApiAccess.Read)]` - Used to indicate that the returned property value is informational only and cannot be used as part of a Create or Update request.
-- `[ApiAccess(ApiAccess.Create)]` - Used to indicate that the property can only be used as part of a Create request.
-- `[ApiAccess(ApiAccess.ReadCreate)]` - Used to indicate that the property is returned and can only be used as part of a Create request.
-- `[ApiAccess(ApiAccess.Update)]` - Used to indicate that the property can only be used as part of an Update request.
-- `[ApiAccess(ApiAccess.ReadUpdate)]` - Used to indicate that the property is returned and can only be used as part of a Update request.
-- `[ApiAccess(ApiAccess.CreateUpdate)]` - Used to indicate that the property can only be used as part of a Create or Update request.
-- `[ApiAccess(ApiAccess.ReadWrite)]` - Used to indicate that the returned property value can be used as part of a Create or Update request.
+  - `[ApiKey]` - Used to identify the primary key for the API resource.
+  - `[ApiForeignKey(typeof(xxx))`] - Used to identify another resource linked to by this Id, this can be useful to store for later use.
+  - `[ApiAccess(ApiAccess.Read)]` - Used to indicate that the returned property value is informational only and cannot be used as part of a Create or Update request.
+  - `[ApiAccess(ApiAccess.Create)]` - Used to indicate that the property can only be used as part of a Create request.
+  - `[ApiAccess(ApiAccess.ReadCreate)]` - Used to indicate that the property is returned and can only be used as part of a Create request.
+  - `[ApiAccess(ApiAccess.Update)]` - Used to indicate that the property can only be used as part of an Update request.
+  - `[ApiAccess(ApiAccess.ReadUpdate)]` - Used to indicate that the property is returned and can only be used as part of a Update request.
+  - `[ApiAccess(ApiAccess.CreateUpdate)]` - Used to indicate that the property can only be used as part of a Create or Update request.
+  - `[ApiAccess(ApiAccess.ReadWrite)]` - Used to indicate that the returned property value can be used as part of a Create or Update request.
 
 
 ### Class attributes
-- `[ApiAccessReadOnlyClass]` - This can be set at the class level to indicate that all properties are read only. Useful for
+  - `[ApiAccessReadOnlyClass]` - This can be set at the class level to indicate that all properties are read only. Useful for
 Monitor endpoints.

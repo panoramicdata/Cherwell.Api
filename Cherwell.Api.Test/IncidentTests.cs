@@ -161,11 +161,6 @@ public class TicketTests : CherwellClientTest
 			.Should()
 			.BeNullOrEmpty();
 
-		//searchItemResponse
-		//	.HttpStatusCode
-		//	.Should()
-		//	.NotBeNull();
-
 		searchItemResponse
 			.BusinessObjects
 			.Should()
@@ -178,7 +173,7 @@ public class TicketTests : CherwellClientTest
 	}
 
 	[Fact]
-	public async void GetIncidentSchema_Succeeds()
+	public async Task GetIncidentSchema_Succeeds()
 	{
 		var cancellationToken = CancellationToken.None;
 
