@@ -2,11 +2,11 @@
 
 public class ErrorCode
 {
-	public const string Forbidden = "INSUFFICIENTRIGHTS";
+	public static readonly string Forbidden = "INSUFFICIENTRIGHTS";
 
-	public const string NotFound = "SEARCHNOTFOUND";
+	public static readonly string NotFound = "SEARCHNOTFOUND";
 
-	public const string RecordNotFound = "RECORDNOTFOUND";
+	public static readonly string RecordNotFound = "RECORDNOTFOUND";
 
-	public const string InsufficientRights = "INSUFFICIENTRIGHTS";
+	public static readonly string InsufficientRights = "INSUFFICIENTRIGHTS";
 }
