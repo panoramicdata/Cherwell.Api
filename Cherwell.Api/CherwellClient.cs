@@ -20,7 +20,11 @@ public class CherwellClient : IDisposable
 	/// <param name="logger">Optional logger to which to output details of the operations performed</param>
 	public CherwellClient(CherwellClientOptions options, ILogger? logger = null)
 	{
-		ArgumentNullException.ThrowIfNull(options);
+		if (options is null)
+		{
+			throw new ArgumentNullException(nameof(options));
+		}
+
 		_logger = logger ?? NullLogger.Instance;
 
 		// Validate that all of the necessary configuration has been provided

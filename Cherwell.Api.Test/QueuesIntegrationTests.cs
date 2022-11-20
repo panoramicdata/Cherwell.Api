@@ -1,5 +1,4 @@
-﻿using Cherwell.Api.Models.Searches;
-using FluentAssertions;
+﻿using FluentAssertions;
 using Xunit;
 using Xunit.Abstractions;
 

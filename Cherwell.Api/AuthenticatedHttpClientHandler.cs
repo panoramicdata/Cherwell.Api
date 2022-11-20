@@ -59,7 +59,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			var url = request.RequestUri!.ToString();
 			var headers = string.Join("\n", request.Headers.Select(h => $"{h.Key}: {string.Join(", ", h.Value.Select(v => v))}"));
 			var body = request.Content is not null
-				? await request.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false)
+				? await request.Content.ReadAsStringAsync().ConfigureAwait(false)
 				: string.Empty;
 			var jObject = JsonConvert.DeserializeObject<JObject>(body);
 			if (jObject is not null)
@@ -96,7 +96,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		{
 			var headers = string.Join("\n", httpResponse.Headers.Select(h => $"{h.Key}: {string.Join(", ", h.Value.Select(v => v))}"));
 			var body = httpResponse.Content is not null
-				? await httpResponse.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false)
+				? await httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false)
 				: string.Empty;
 			try
 			{
@@ -126,7 +126,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 
 			// Is this a Cherwell Response?
 			var body = httpResponse.Content is not null
-				? await httpResponse.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false)
+				? await httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false)
 				: string.Empty;
 			var response = JsonConvert.DeserializeObject<Response>(body);
 			if (response is not null)
@@ -231,7 +231,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 
 		var stringResponse = await response
 			.Content
-			.ReadAsStringAsync(cancellationToken)
+			.ReadAsStringAsync()
 			.ConfigureAwait(false);
 
 		var tokenResponse = JsonConvert.DeserializeObject<TokenResponse>(stringResponse);
