@@ -13,7 +13,7 @@ public class SecurityIntegrationTests : CherwellClientTest
 	}
 
 	[Fact]
-	public async void GetClientSecuritySettings_Succeeds()
+	public async Task GetClientSecuritySettings_Succeeds()
 	{
 		var cancellationToken = CancellationToken.None;
 
@@ -28,7 +28,7 @@ public class SecurityIntegrationTests : CherwellClientTest
 	}
 
 	[Fact]
-	public async void GetRolesV1_NotAuth()
+	public async Task GetRolesV1_NotAuth()
 	{
 		var cancellationToken = CancellationToken.None;
 
@@ -49,7 +49,7 @@ public class SecurityIntegrationTests : CherwellClientTest
 	}
 
 	[Fact]
-	public async void GetRolesV2_NotAuth()
+	public async Task GetRolesV2_NotAuth()
 	{
 		var cancellationToken = CancellationToken.None;
 
@@ -75,7 +75,7 @@ public class SecurityIntegrationTests : CherwellClientTest
 	// GetSecurityGroupBusinessObjectPermissionsByBusObNameV2Async - unable to test, no groupName to test with
 
 	[Fact]
-	public async void GetBusinessObjectPermissions_Succeeds()
+	public async Task GetBusinessObjectPermissions_Succeeds()
 	{
 		var cancellationToken = CancellationToken.None;
 
@@ -90,7 +90,7 @@ public class SecurityIntegrationTests : CherwellClientTest
 	}
 
 	[Fact]
-	public async void GetBusinessObjectPermissionsV2_Succeeds()
+	public async Task GetBusinessObjectPermissionsV2_Succeeds()
 	{
 		var cancellationToken = CancellationToken.None;
 
@@ -105,7 +105,7 @@ public class SecurityIntegrationTests : CherwellClientTest
 	}
 
 	[Fact]
-	public async void GetBusinessObjectPermissionsByName_Succeeds()
+	public async Task GetBusinessObjectPermissionsByName_Succeeds()
 	{
 		var cancellationToken = CancellationToken.None;
 
@@ -120,7 +120,7 @@ public class SecurityIntegrationTests : CherwellClientTest
 	}
 
 	[Fact]
-	public async void GetBusinessObjectPermissionsByNameV2_Succeeds()
+	public async Task GetBusinessObjectPermissionsByNameV2_Succeeds()
 	{
 		var cancellationToken = CancellationToken.None;
 
@@ -135,7 +135,7 @@ public class SecurityIntegrationTests : CherwellClientTest
 	}
 
 	[Fact]
-	public async void GetSecurityGroupCategories_Succeeds()
+	public async Task GetSecurityGroupCategories_Succeeds()
 	{
 		var cancellationToken = CancellationToken.None;
 
@@ -150,7 +150,7 @@ public class SecurityIntegrationTests : CherwellClientTest
 	}
 
 	[Fact]
-	public async void GetSecurityGroupCategoriesV2_Succeeds()
+	public async Task GetSecurityGroupCategoriesV2_Succeeds()
 	{
 		var cancellationToken = CancellationToken.None;
 
@@ -174,7 +174,7 @@ public class SecurityIntegrationTests : CherwellClientTest
 	// GetSecurityGroupRightsForCurrentUserByCategoryNameV2Async - unable to test, no categoryName to test with
 
 	[Fact]
-	public async void GetSecurityGroups_Succeeds()
+	public async Task GetSecurityGroups_Succeeds()
 	{
 		var cancellationToken = CancellationToken.None;
 
@@ -189,7 +189,7 @@ public class SecurityIntegrationTests : CherwellClientTest
 	}
 
 	[Fact]
-	public async void GetSecurityGroupsV2_Succeeds()
+	public async Task GetSecurityGroupsV2_Succeeds()
 	{
 		var cancellationToken = CancellationToken.None;
 

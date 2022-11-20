@@ -25,7 +25,7 @@ public class BusObIntegrationTests : CherwellClientTest
 	// BusinessObjectFieldValuesLookupAsync - unable to test, insufficient rights to add a business object
 
 	[Fact]
-	public async void RetrieveActivities_Succeeds()
+	public async Task RetrieveActivities_Succeeds()
 	{
 		var cancellationToken = CancellationToken.None;
 
@@ -44,7 +44,7 @@ public class BusObIntegrationTests : CherwellClientTest
 	// GetBusinessObjectAttachmentsByIdAndRecIdAsync - unable to test, the business objects we're testing with don't have any attachment
 
 	[Fact]
-	public async void BusOb_GetAttachmentsByIdAndRec_Error()
+	public async Task BusOb_GetAttachmentsByIdAndRec_Error()
 	{
 		var cancellationToken = CancellationToken.None;
 		
@@ -67,7 +67,7 @@ public class BusObIntegrationTests : CherwellClientTest
 	// GetBusinessObjectAttachmentsByNameAndPublicIdAsync - unable to test, as we don't have a publicId to test with
 
 	[Fact]
-	public async void BusOb_GetAttachmentsByNameAndRec_Error()
+	public async Task BusOb_GetAttachmentsByNameAndRec_Error()
 	{
 		var cancellationToken = CancellationToken.None;
 
@@ -88,7 +88,7 @@ public class BusObIntegrationTests : CherwellClientTest
 	}
 
 	[Fact]
-	public async void BusOb_GetAttachments_Error()
+	public async Task BusOb_GetAttachments_Error()
 	{
 		var cancellationToken = CancellationToken.None;
 
@@ -113,7 +113,7 @@ public class BusObIntegrationTests : CherwellClientTest
 	}
 
 	[Fact]
-	public async void GetBusObBatch_Succeeds()
+	public async Task GetBusObBatch_Succeeds()
 	{
 		var cancellationToken = CancellationToken.None;
 		
@@ -141,7 +141,7 @@ public class BusObIntegrationTests : CherwellClientTest
 	// GetBusinessObjectByPublicIdAsync - unable to test, we don't have a publicId to test with
 
 	[Fact]
-	public async void BusOb_GetObjectByRecId_Error()
+	public async Task BusOb_GetObjectByRecId_Error()
 	{
 		var cancellationToken = CancellationToken.None;
 
@@ -166,7 +166,7 @@ public class BusObIntegrationTests : CherwellClientTest
 	// GetBusinessObjectByScanCodeBusObNameAsync - unable to test, we don't have a scanCode to test with
 
 	[Fact]
-	public async void GetBusObSchema_Succeeds()
+	public async Task GetBusObSchema_Succeeds()
 	{
 		var cancellationToken = CancellationToken.None;
 
@@ -181,7 +181,7 @@ public class BusObIntegrationTests : CherwellClientTest
 	}
 
 	[Fact]
-	public async void GetBusObSummaries_Succeeds()
+	public async Task GetBusObSummaries_Succeeds()
 	{
 		var cancellationToken = CancellationToken.None;
 
@@ -196,7 +196,7 @@ public class BusObIntegrationTests : CherwellClientTest
 	}
 
 	[Fact]
-	public async void GetBusObSummary_Succeeds()
+	public async Task GetBusObSummary_Succeeds()
 	{
 		var cancellationToken = CancellationToken.None;
 
@@ -211,7 +211,7 @@ public class BusObIntegrationTests : CherwellClientTest
 	}
 
 	[Fact]
-	public async void GetBusObByName_Succeeds()
+	public async Task GetBusObByName_Succeeds()
 	{
 		var cancellationToken = CancellationToken.None;
 
@@ -226,7 +226,7 @@ public class BusObIntegrationTests : CherwellClientTest
 	}
 
 	[Fact]
-	public async void GetBusObTemplate_Succeeds()
+	public async Task GetBusObTemplate_Succeeds()
 	{
 		var cancellationToken = CancellationToken.None;
 

@@ -19,7 +19,7 @@ public class QueuesIntegrationTests : CherwellClientTest
 	// GetQueuesScopeAsync - unable to test, no scope to test with
 
 	[Fact]
-	public async void GetQueues_Succeeds()
+	public async Task GetQueues_Succeeds()
 	{
 		var cancellationToken = CancellationToken.None;
 

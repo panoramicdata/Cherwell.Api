@@ -21,7 +21,7 @@ public class CoreIntegrationTests : CherwellClientTest
 	// GetGalleryImagesScopeAsync - unable to test, we don't have a scope to test with
 
 	[Fact]
-	public async void Core_GetImages()
+	public async Task Core_GetImages()
 	{
 		var cancellationToken = CancellationToken.None;
 		
@@ -53,7 +53,7 @@ public class CoreIntegrationTests : CherwellClientTest
 	// GetStoredValuesScopeAsync - unable to test, we don't have a scope to test with
 
 	[Fact]
-	public async void Core_GetStoredValues()
+	public async Task Core_GetStoredValues()
 	{
 		var cancellationToken = CancellationToken.None;
 
@@ -75,7 +75,7 @@ public class CoreIntegrationTests : CherwellClientTest
 	}
 	
 	[Fact]
-	public async void Core_GetViews()
+	public async Task Core_GetViews()
 	{
 		await ((Func<Task>)(async () =>
 		{

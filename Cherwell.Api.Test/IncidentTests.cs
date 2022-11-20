@@ -16,7 +16,7 @@ public class TicketTests : CherwellClientTest
 	[InlineData("")]
 	[InlineData("StateFieldId eq 'In Progress' OR StateFieldId eq 'Reopened'")]
 	[InlineData("Status eq 'Closed'")]
-	public async void GetQuickSearchSpecificResults_Succeeds(string query)
+	public async Task GetQuickSearchSpecificResults_Succeeds(string query)
 	{
 		var summaries = await TestCherwellClient
 			.BusinessObject
@@ -92,7 +92,7 @@ public class TicketTests : CherwellClientTest
 	[InlineData("Event")]
 	[InlineData("ChangeRequest")]
 	[InlineData("Incident")]
-	public async void GetTickets_Succeeds(string ticketType)
+	public async Task GetTickets_Succeeds(string ticketType)
 	{
 		var cancellationToken = CancellationToken.None;
 

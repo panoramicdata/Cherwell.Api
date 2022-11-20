@@ -17,7 +17,7 @@ public class OneStepActionsIntegrationTests : CherwellClientTest
 	// GetOneStepActionsByAssociationAsync - unable to test, no association to test with
 
 	[Fact]
-	public async void GetOneStepActions_Succeeds()
+	public async Task GetOneStepActions_Succeeds()
 	{
 		var cancellationToken = CancellationToken.None;
 

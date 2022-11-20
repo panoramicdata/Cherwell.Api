@@ -13,7 +13,7 @@ public class SearchTests : CherwellClientTest
 	}
 
 	[Fact]
-	public async void GetQuickSearchSpecificResults_Succeeds()
+	public async Task GetQuickSearchSpecificResults_Succeeds()
 	{
 		var response = await TestCherwellClient
 			.Searches
@@ -35,7 +35,7 @@ public class SearchTests : CherwellClientTest
 	}
 
 	[Fact]
-	public async void GetQuickSearchSpecificResultsV2_Succeeds()
+	public async Task GetQuickSearchSpecificResultsV2_Succeeds()
 	{
 		var response = await TestCherwellClient
 			.Searches
@@ -57,7 +57,7 @@ public class SearchTests : CherwellClientTest
 	}
 
 	[Fact]
-	public async void GetQuickSearchResults_NotAuth()
+	public async Task GetQuickSearchResults_NotAuth()
 	{
 		var cancellationToken = CancellationToken.None;
 
@@ -68,7 +68,7 @@ public class SearchTests : CherwellClientTest
 			.GetQuickSearchResultsAsync(
 				new QuickSearchRequest
 				{
-					BusObIds = new List<string> {"93c5ca8e7dbd4cc21dead14df19c684298a78358dd"},
+					BusObIds = new List<string> { "93c5ca8e7dbd4cc21dead14df19c684298a78358dd" },
 					SearchText = "test"
 				}, default, cancellationToken)
 			.ConfigureAwait(false);
@@ -84,7 +84,7 @@ public class SearchTests : CherwellClientTest
 	}
 
 	[Fact]
-	public async void GetQuickSearchWithViewRights_NotAuth()
+	public async Task GetQuickSearchWithViewRights_NotAuth()
 	{
 		var cancellationToken = CancellationToken.None;
 
@@ -106,7 +106,7 @@ public class SearchTests : CherwellClientTest
 	}
 
 	[Fact]
-	public async void GetQuickSearchConfig_NotAuth()
+	public async Task GetQuickSearchConfig_NotAuth()
 	{
 		var cancellationToken = CancellationToken.None;
 
@@ -141,7 +141,7 @@ public class SearchTests : CherwellClientTest
 	// GetSearchItemsByAssociationV2Async - unable to test, no association to test with
 
 	[Fact]
-	public async void GetSearchItems_NotAuth()
+	public async Task GetSearchItems_NotAuth()
 	{
 		var cancellationToken = CancellationToken.None;
 
@@ -163,7 +163,7 @@ public class SearchTests : CherwellClientTest
 	}
 
 	[Fact]
-	public async void GetSearchItemsV2_NotAuth()
+	public async Task GetSearchItemsV2_NotAuth()
 	{
 		var cancellationToken = CancellationToken.None;
 
@@ -185,7 +185,7 @@ public class SearchTests : CherwellClientTest
 	}
 
 	[Fact]
-	public async void SimpleSearch_Succeeds()
+	public async Task SimpleSearch_Succeeds()
 	{
 		var searchResults = await TestCherwellClient
 		.Searches
@@ -249,7 +249,7 @@ public class SearchTests : CherwellClientTest
 	}
 
 	[Fact]
-	public async void WideSearch_Fails()
+	public async Task WideSearch_Fails()
 	{
 		await ((Func<Task>)(async () =>
 		{
