@@ -1,7 +1,9 @@
 # Cherwell.Api
 
 [![Nuget](https://img.shields.io/nuget/v/Cherwell.Api)](https://www.nuget.org/packages/Cherwell.Api/)
-
+[![Nuget](https://img.shields.io/nuget/dt/Cherwell.Api)](https://www.nuget.org/packages/Cherwell.Api/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/f9e0cac6cd5d4b988e077b0394358882)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=panoramicdata/Cherwell.Api&amp;utm_campaign=Badge_Grade)
 This project implements access to the v1 Cherwell API
 
 See the [contribution guide](CONTRIBUTING.md) for more information regarding contributing to this project
@@ -48,4 +50,4 @@ namespace My.Project
 
 The Cherwell API documentation can be found here:
 
-  - [Cherwell API Documentation v1](https://help.cherwell.com/bundle/cherwell_rest_api_10_1_help_only/page/content/system_administration/rest_api)
+  - [Cherwell API Documentation v1](https://help.cherwell.com/bundle/cherwell_rest_api_10_help_only/page/content/system_administration/rest_api/csm_rest_api_landing_page.html)

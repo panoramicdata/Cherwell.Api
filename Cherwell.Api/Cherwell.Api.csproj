@@ -21,6 +21,7 @@
 		<NeutralLanguage>en</NeutralLanguage>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<PackageReleaseNotes>Released at v1.0</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<ItemGroup>
