@@ -321,7 +321,7 @@ public interface IBusinessObject
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="scanCode">The scan code for a Business Object record.</param>
-	/// <param name="busobname">The Business Bbject name.</param>
+	/// <param name="busobname">The Business Object name.</param>
 	/// <returns>Task of BarcodeLookupResponse</returns>
 	[Get("/api/V1/getbusinessobject/scancode/{scanCode}/busobname/{busobname}")]
 	Task<BarcodeLookupResponse> GetBusinessObjectByScanCodeBusObNameAsync(
@@ -349,7 +349,7 @@ public interface IBusinessObject
 	/// Get Business Object summaries by type
 	/// </summary>
 	/// <remarks>
-	/// Operation that returns a list of Business Object summaries by type (Major, Supporting, Lookup, Groups, and All). 
+	/// Operation that returns a list of Business Object summaries by type (Major, Supporting, Lookup, Groups, and All).
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="type">Use to show:&lt;br /&gt;All - All objects&lt;br /&gt;Major - Major objects only&lt;br /&gt;Supporting - Supporting objects only&lt;br /&gt;Lookup - Lookup objects only&lt;br /&gt;Groups - Groups only</param>
@@ -475,7 +475,7 @@ public interface IBusinessObject
 	/// Link related Business Objects
 	/// </summary>
 	/// <remarks>
-	/// Operation to link related Business Objects. 
+	/// Operation to link related Business Objects.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="parentbusobid">Specify the Business Object ID for the parent Business Object.</param>
@@ -497,7 +497,7 @@ public interface IBusinessObject
 	/// Link related Business Objects
 	/// </summary>
 	/// <remarks>
-	/// Operation to link related Business Objects. 
+	/// Operation to link related Business Objects.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="parentbusobid">Specify the Business Object ID for the parent Business Object.</param>

@@ -226,7 +226,7 @@ public interface ITeams
 	/// Create or update a team
 	/// </summary>
 	/// <remarks>
-	/// Operation to create or update a Team or Workgroup. 
+	/// Operation to create or update a Team or Workgroup.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="request">Request object to create Teams or Workgroups. To create a Team, use teamType and teamName. To update a team, use teamID. Team type values must be User or CustomerWorkgroup. The teamType cannot be changed for existing Teams or Workgroups.</param>

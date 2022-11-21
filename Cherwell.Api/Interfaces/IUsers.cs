@@ -218,7 +218,7 @@ public interface IUsers
 	/// Create or update a user
 	/// </summary>
 	/// <remarks>
-	/// Operation to create or update a user.  The response is a collection because if you use a public ID, more than one user could be updated since public IDs may not be unique. 
+	/// Operation to create or update a user.  The response is a collection because if you use a public ID, more than one user could be updated since public IDs may not be unique.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="request">Request object to specify user parameters and Fields with values to be created or updated. The loginId and either the Business Object record ID or Public ID are required.</param>
@@ -232,7 +232,7 @@ public interface IUsers
 	/// Create or update a user
 	/// </summary>
 	/// <remarks>
-	/// Operation to create or update a user.  The response is a collection because if you use a public ID, more than one user could be updated since public IDs may not be unique. 
+	/// Operation to create or update a user.  The response is a collection because if you use a public ID, more than one user could be updated since public IDs may not be unique.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="request">Request object to specify user parameters and Fields with values to be created or updated. The loginId and either the Business Object record ID or Public ID are required.</param>

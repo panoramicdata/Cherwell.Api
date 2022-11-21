@@ -49,7 +49,7 @@ public interface ISecurity
 	/// Get Business Object permissions by Security Group
 	/// </summary>
 	/// <remarks>
-	/// Operation to get specific Business Object permissions for a Security Group. 
+	/// Operation to get specific Business Object permissions for a Security Group.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="groupid">Specify the Security Group ID. </param>
@@ -65,7 +65,7 @@ public interface ISecurity
 	/// Get Business Object permissions by Security Group
 	/// </summary>
 	/// <remarks>
-	/// Operation to get specific Business Object permissions for a Security Group. 
+	/// Operation to get specific Business Object permissions for a Security Group.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="groupid">Specify the Security Group ID. </param>
@@ -81,7 +81,7 @@ public interface ISecurity
 	/// Get Business Object permissions by Security Group
 	/// </summary>
 	/// <remarks>
-	/// Operation to get specific Business Object permissions for a Security Group. 
+	/// Operation to get specific Business Object permissions for a Security Group.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="groupname">Specify the Security Group name. </param>
@@ -97,7 +97,7 @@ public interface ISecurity
 	/// Get Business Object permissions by Security Group
 	/// </summary>
 	/// <remarks>
-	/// Operation to get specific Business Object permissions for a Security Group. 
+	/// Operation to get specific Business Object permissions for a Security Group.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="groupname">Specify the Security Group name. </param>
@@ -169,7 +169,7 @@ public interface ISecurity
 	/// Get all Security Group categories
 	/// </summary>
 	/// <remarks>
-	/// Operation to get IDs and names for all available Security Group categories. 
+	/// Operation to get IDs and names for all available Security Group categories.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <returns>Task of List&lt;RightCategory&gt;</returns>
@@ -181,7 +181,7 @@ public interface ISecurity
 	/// Get all Security Group categories
 	/// </summary>
 	/// <remarks>
-	/// Operation to get IDs and names for all available Security Group categories. 
+	/// Operation to get IDs and names for all available Security Group categories.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <returns>Task of SecurityRightCategoriesResponse</returns>
@@ -341,7 +341,7 @@ public interface ISecurity
 	/// Get users in a Security Group
 	/// </summary>
 	/// <remarks>
-	/// Operation to get the users in a specified Security Group. Use \&quot;Get all available Security Groups\&quot; to get Security Group record IDs. 
+	/// Operation to get the users in a specified Security Group. Use \&quot;Get all available Security Groups\&quot; to get Security Group record IDs.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="groupid">Specify the Security Group ID.</param>
@@ -355,7 +355,7 @@ public interface ISecurity
 	/// Get users in a Security Group
 	/// </summary>
 	/// <remarks>
-	/// Operation to get the users in a specified Security Group. Use \&quot;Get all available Security Groups\&quot; to get Security Group record IDs. 
+	/// Operation to get the users in a specified Security Group. Use \&quot;Get all available Security Groups\&quot; to get Security Group record IDs.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="groupid">Specify the Security Group ID.</param>

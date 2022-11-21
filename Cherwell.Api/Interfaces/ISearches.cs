@@ -288,7 +288,7 @@ public interface ISearches
 	/// Get results of a saved search
 	/// </summary>
 	/// <remarks>
-	/// Operation that returns the results of a saved search in JSON format.&lt;/br&gt; This API is protected by a rate limiter and will reject any requests sent from an IP Address when a certain threshold of active concurrent requests has been hit.&lt;/br&gt; This value can be configured by the Max Concurrent Requests configuration value in the Web API config.&lt;/br&gt; Once this limit has been reached, all subsequent requests will receive a status code of 429 (Too Many Requests).&lt;/br&gt; This version is not subject to row limits and will return the entire result set of the stored search. 
+	/// Operation that returns the results of a saved search in JSON format.&lt;/br&gt; This API is protected by a rate limiter and will reject any requests sent from an IP Address when a certain threshold of active concurrent requests has been hit.&lt;/br&gt; This value can be configured by the Max Concurrent Requests configuration value in the Web API config.&lt;/br&gt; Once this limit has been reached, all subsequent requests will receive a status code of 429 (Too Many Requests).&lt;/br&gt; This version is not subject to row limits and will return the entire result set of the stored search.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="searchRequest">Request object to specify search parameters.</param>
@@ -302,7 +302,7 @@ public interface ISearches
 	/// Get results of a saved search
 	/// </summary>
 	/// <remarks>
-	/// Operation that returns the results of a saved search in JSON format.&lt;/br&gt;    This API is protected by a rate limiter and will reject any requests sent from an IP Address when a certain threshold of active concurrent requests has been hit.&lt;/br&gt;    This value can be configured by the Max Concurrent Requests configuration value in the Web API config.&lt;/br&gt;    Once this limit has been reached, all subsequent requests will receive a status code of 429 (Too Many Requests).  
+	/// Operation that returns the results of a saved search in JSON format.&lt;/br&gt;    This API is protected by a rate limiter and will reject any requests sent from an IP Address when a certain threshold of active concurrent requests has been hit.&lt;/br&gt;    This value can be configured by the Max Concurrent Requests configuration value in the Web API config.&lt;/br&gt;    Once this limit has been reached, all subsequent requests will receive a status code of 429 (Too Many Requests).
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="scope">Specify the scope name for the saved search.</param>
@@ -322,7 +322,7 @@ public interface ISearches
 	/// Get results of a saved search
 	/// </summary>
 	/// <remarks>
-	/// Operation that returns the results of a saved search in JSON format.&lt;/br&gt; This API is protected by a rate limiter and will reject any requests sent from an IP Address when a certain threshold of active concurrent requests has been hit.&lt;/br&gt; This value can be configured by the Max Concurrent Requests configuration value in the Web API config.&lt;/br&gt; Once this limit has been reached, all subsequent requests will receive a status code of 429 (Too Many Requests).&lt;/br&gt; This version is not subject to row limits and will return the entire result set of the stored search. 
+	/// Operation that returns the results of a saved search in JSON format.&lt;/br&gt; This API is protected by a rate limiter and will reject any requests sent from an IP Address when a certain threshold of active concurrent requests has been hit.&lt;/br&gt; This value can be configured by the Max Concurrent Requests configuration value in the Web API config.&lt;/br&gt; Once this limit has been reached, all subsequent requests will receive a status code of 429 (Too Many Requests).&lt;/br&gt; This version is not subject to row limits and will return the entire result set of the stored search.
 	/// </remarks>
 	/// <exception cref="Client.ApiException">Thrown when fails to make API call</exception>
 	/// <param name="scope">Specify the scope name for the saved search.</param>

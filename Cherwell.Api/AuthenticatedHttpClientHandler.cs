@@ -133,7 +133,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			{
 				// Yes.
 
-				// Update the status cde if not set
+				// Update the status code if not set
 				if (response.HttpStatusCode is null || response.HttpStatusCode == EnumHttpStatusCode.None)
 				{
 					response.HttpStatusCode = (EnumHttpStatusCode)httpResponse.StatusCode;
