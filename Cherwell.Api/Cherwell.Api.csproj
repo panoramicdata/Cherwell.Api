@@ -22,7 +22,7 @@
 		<NeutralLanguage>en</NeutralLanguage>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-		<PackageReleaseNotes>Moved to .netdstandard2.0</PackageReleaseNotes>
+		<PackageReleaseNotes>Decreased the time to obtain a refreshed token by 25 seconds to mitigate occasional authentication failures.</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<ItemGroup>

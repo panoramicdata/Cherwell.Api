@@ -18,6 +18,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 	private string? _refreshToken;
 	private DateTime _tokenRefreshRequiredAt = DateTime.MaxValue;
 	private const string _authenticationType = "Bearer";
+	private const int _tokenSubtractSeconds = 30;	// Used as a 'safe window' to refresh the token N seconds before expiry. Was previously 5
 
 	public AuthenticatedHttpClientHandler(CherwellClientOptions options, ILogger logger)
 	{
@@ -243,7 +244,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 
 		_accessToken = tokenResponse.AccessToken;
 		_refreshToken = tokenResponse.RefreshToken;
-		_tokenRefreshRequiredAt = DateTime.Now.AddSeconds((tokenResponse.ExpiresIn) - 5);
+		_tokenRefreshRequiredAt = DateTime.Now.AddSeconds((tokenResponse.ExpiresIn) - _tokenSubtractSeconds);
 	}
 
 	private static void SetUserAgent(HttpClient httpClient, string? userAgentString)
