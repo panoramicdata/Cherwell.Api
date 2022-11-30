@@ -22,7 +22,7 @@
 		<NeutralLanguage>en</NeutralLanguage>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-		<PackageReleaseNotes>Decreased the time to obtain a refreshed token by 25 seconds to mitigate occasional authentication failures.</PackageReleaseNotes>
+		<PackageReleaseNotes>Added TimeoutSeconds to CherwellClientOptions (default is 100).</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<ItemGroup>

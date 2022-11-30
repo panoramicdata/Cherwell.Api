@@ -32,7 +32,8 @@ public class CherwellClient : IDisposable
 
 		_httpClient = new HttpClient(new AuthenticatedHttpClientHandler(options, _logger))
 		{
-			BaseAddress = new Uri(options.BaseAddress!)
+			BaseAddress = new Uri(options.BaseAddress!),
+			Timeout = TimeSpan.FromSeconds(options.TimeoutSeconds)
 		};
 
 		Approval = RestService.For<IApproval>(_httpClient);
