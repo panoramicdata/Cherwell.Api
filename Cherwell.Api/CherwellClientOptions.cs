@@ -61,6 +61,11 @@ public class CherwellClientOptions
 	public int TimeoutSeconds { get; set; } = 100;
 
 	/// <summary>
+	/// Maximum number of attempts when a failure occurs
+	/// </summary>
+	public int MaxAttempts { get; set; } = 5;
+
+	/// <summary>
 	/// Validate that all of the necessary options have been specified
 	/// </summary>
 	/// <exception cref="ConfigurationException">A problem has been identified with the options provided</exception>

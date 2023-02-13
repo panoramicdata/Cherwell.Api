@@ -22,7 +22,7 @@
 		<NeutralLanguage>en</NeutralLanguage>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-		<PackageReleaseNotes>Added TimeoutSeconds to CherwellClientOptions (default is 100).</PackageReleaseNotes>
+		<PackageReleaseNotes>MaxAttempts option to CherwellClientOptions (default is 5). Upon failure, code will retry accordingly.</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<ItemGroup>

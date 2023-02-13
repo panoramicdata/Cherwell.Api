@@ -18,12 +18,15 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 	private string? _refreshToken;
 	private DateTime _tokenRefreshRequiredAt = DateTime.MaxValue;
 	private const string _authenticationType = "Bearer";
-	private const int _tokenSubtractSeconds = 30;	// Used as a 'safe window' to refresh the token N seconds before expiry. Was previously 5
+	private const int _tokenSubtractSeconds = 30;   // Used as a 'safe window' to refresh the token N seconds before expiry. Was previously 5
+	private readonly int _maxAttempts = 5;
 
 	public AuthenticatedHttpClientHandler(CherwellClientOptions options, ILogger logger)
 	{
 		_options = options;
 		_logger = logger;
+		_maxAttempts = options.MaxAttempts;
+
 		_authenticatingClient = new HttpClient
 		{
 			BaseAddress = new Uri(options.BaseAddress)
@@ -220,15 +223,38 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			CharSet = "UTF-8"
 		};
 
-		var response = await httpClient
-			.SendAsync(request, cancellationToken)
-			.ConfigureAwait(false);
-
-		// TODO: Investigate - and better handle - unsuccessful auth requests
-		if (!response.IsSuccessStatusCode)
+		HttpResponseMessage? response = null;
+		var attemptCount = 0;
+		do
 		{
-			throw new AuthenticationException();
+			attemptCount++;
+
+			response = await httpClient
+				.SendAsync(request, cancellationToken)
+				.ConfigureAwait(false);
+
+			if (response.IsSuccessStatusCode)
+			{
+				// Exit the while loop
+				break;
+			}
+
+			// Was not successful
+			if (attemptCount >= _maxAttempts)
+			{
+				if (!string.IsNullOrWhiteSpace(response.ReasonPhrase))
+				{
+					_logger.LogError("Response unsuccessfull: {Reason}", response.ReasonPhrase);
+					throw new AuthenticationException(response.ReasonPhrase);
+				}
+
+				throw new AuthenticationException("Response unsuccessful. No reason phrase was provided by the server.");
+			}
+
+			// Wait 10 seconds
+			await Task.Delay(10000, cancellationToken).ConfigureAwait(false);
 		}
+		while (attemptCount <= _maxAttempts);
 
 		var stringResponse = await response
 			.Content
