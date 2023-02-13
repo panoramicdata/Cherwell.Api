@@ -22,7 +22,7 @@
 		<NeutralLanguage>en</NeutralLanguage>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-		<PackageReleaseNotes>MaxAttempts option to CherwellClientOptions (default is 5). Upon failure, code will retry accordingly.</PackageReleaseNotes>
+		<PackageReleaseNotes>Better logging when generating access tokens and attempt counts.</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<ItemGroup>

@@ -228,6 +228,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		do
 		{
 			attemptCount++;
+			_logger.LogInformation("Cherwell 'GenerateAccessTokenAsync' (attempt # {Attempt})", attemptCount);
 
 			response = await httpClient
 				.SendAsync(request, cancellationToken)
@@ -244,11 +245,13 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			{
 				if (!string.IsNullOrWhiteSpace(response.ReasonPhrase))
 				{
-					_logger.LogError("Response unsuccessfull: {Reason}", response.ReasonPhrase);
+					_logger.LogError("Cherwell 'GenerateAccessTokenAsync' response unsuccessfull: {Reason}", response.ReasonPhrase);
 					throw new AuthenticationException(response.ReasonPhrase);
 				}
 
-				throw new AuthenticationException("Response unsuccessful. No reason phrase was provided by the server.");
+				throw new AuthenticationException(
+					"Cherwell 'GenerateAccessTokenAsync' response unsuccessful. " +
+					"No reason phrase was provided by the server.");
 			}
 
 			// Wait 10 seconds
