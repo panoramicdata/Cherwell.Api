@@ -22,7 +22,7 @@
 		<NeutralLanguage>en</NeutralLanguage>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-		<PackageReleaseNotes>Better logging when generating access tokens and attempt counts.</PackageReleaseNotes>
+		<PackageReleaseNotes>Updated .NET version to 7.0.200 and better handling of HTTP Request messages during access token retries.</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<ItemGroup>
