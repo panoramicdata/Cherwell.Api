@@ -203,26 +203,6 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			_ => throw new ArgumentOutOfRangeException(nameof(grantType))
 		};
 
-		var request = new HttpRequestMessage(HttpMethod.Post, "token");
-
-		var keyValues = new List<KeyValuePair<string, string>>
-		{
-			new KeyValuePair<string, string>("grant_type", grantTypeString),
-			new KeyValuePair<string, string>("username", _options.UserName!),
-			new KeyValuePair<string, string>("password", _options.Password!)
-		};
-
-		if (_refreshToken is not null)
-		{
-			keyValues.Add(new KeyValuePair<string, string>("refresh_token", _refreshToken!));
-		}
-
-		request.Content = new FormUrlEncodedContent(keyValues);
-		request.Content.Headers.ContentType = new MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded")
-		{
-			CharSet = "UTF-8"
-		};
-
 		HttpResponseMessage? response = null;
 		var attemptCount = 0;
 		do
@@ -230,9 +210,31 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			attemptCount++;
 			_logger.LogInformation("Cherwell 'GenerateAccessTokenAsync' (attempt # {Attempt})", attemptCount);
 
-			response = await httpClient
-				.SendAsync(request, cancellationToken)
-				.ConfigureAwait(false);
+			using (var request = new HttpRequestMessage(HttpMethod.Post, "token"))
+			{
+
+				var keyValues = new List<KeyValuePair<string, string>>
+				{
+					new KeyValuePair<string, string>("grant_type", grantTypeString),
+					new KeyValuePair<string, string>("username", _options.UserName!),
+					new KeyValuePair<string, string>("password", _options.Password!)
+				};
+
+				if (_refreshToken is not null)
+				{
+					keyValues.Add(new KeyValuePair<string, string>("refresh_token", _refreshToken!));
+				}
+
+				request.Content = new FormUrlEncodedContent(keyValues);
+				request.Content.Headers.ContentType = new MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded")
+				{
+					CharSet = "UTF-8"
+				};
+
+				response = await httpClient
+					.SendAsync(request, cancellationToken)
+					.ConfigureAwait(false);
+			}
 
 			if (response.IsSuccessStatusCode)
 			{
