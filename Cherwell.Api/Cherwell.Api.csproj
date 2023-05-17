@@ -22,7 +22,7 @@
 		<NeutralLanguage>en</NeutralLanguage>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-		<PackageReleaseNotes>Updated .NET version to 7.0.200 and better handling of HTTP Request messages during access token retries.</PackageReleaseNotes>
+		<PackageReleaseNotes>When a retry is required, the delay doubles each time (starts at 10 seconds).</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<ItemGroup>

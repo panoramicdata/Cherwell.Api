@@ -205,6 +205,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 
 		HttpResponseMessage? response = null;
 		var attemptCount = 0;
+		var retryDelayMs = 10000;
 		do
 		{
 			attemptCount++;
@@ -256,8 +257,10 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 					"No reason phrase was provided by the server.");
 			}
 
-			// Wait 10 seconds
-			await Task.Delay(10000, cancellationToken).ConfigureAwait(false);
+			// Wait N seconds
+			_logger.LogInformation("Cherwell 'GenerateAccessTokenAsync': waiting {Seconds} before retrying...", retryDelayMs);
+			await Task.Delay(retryDelayMs, cancellationToken).ConfigureAwait(false);
+			retryDelayMs *= 2;
 		}
 		while (attemptCount <= _maxAttempts);
 
@@ -266,13 +269,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			.ReadAsStringAsync()
 			.ConfigureAwait(false);
 
-		var tokenResponse = JsonConvert.DeserializeObject<TokenResponse>(stringResponse);
-		if (tokenResponse is null)
-		{
-			// TODO: Move exception text to Resources file
-			throw new AuthenticationException("No body in the response!");
-		}
-
+		var tokenResponse = JsonConvert.DeserializeObject<TokenResponse>(stringResponse) ?? throw new AuthenticationException("No body in the response!");
 		_accessToken = tokenResponse.AccessToken;
 		_refreshToken = tokenResponse.RefreshToken;
 		_tokenRefreshRequiredAt = DateTime.Now.AddSeconds((tokenResponse.ExpiresIn) - _tokenSubtractSeconds);
