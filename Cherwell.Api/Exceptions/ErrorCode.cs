@@ -1,6 +1,6 @@
 ﻿namespace Cherwell.Api.Exceptions;
 
-public class ErrorCode
+public static class ErrorCode
 {
 	public static readonly string Forbidden = "INSUFFICIENTRIGHTS";
 

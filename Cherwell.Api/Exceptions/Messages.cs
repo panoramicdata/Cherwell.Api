@@ -1,5 +1,5 @@
 ﻿namespace Cherwell.Api.Exceptions;
-public class Message
+public static class Message
 {
 	public static readonly string Forbidden = "You are not authorized to view this object";
 
