@@ -86,11 +86,9 @@ public class SearchTests : CherwellClientTest
 	[Fact]
 	public async Task GetQuickSearchWithViewRights_NotAuth()
 	{
-		_ = CancellationToken.None;
-
 		await ((Func<Task>)(async () =>
 		{
-			var response = await TestCherwellClient
+			_ = await TestCherwellClient
 			.Searches
 			.GetQuickSearchConfigurationForBusObsWithViewRightsAsync(default)
 			.ConfigureAwait(false);
@@ -108,8 +106,6 @@ public class SearchTests : CherwellClientTest
 	[Fact]
 	public async Task GetQuickSearchConfig_NotAuth()
 	{
-		var cancellationToken = CancellationToken.None;
-
 		await ((Func<Task>)(async () =>
 		{
 			var response = await TestCherwellClient
@@ -143,8 +139,6 @@ public class SearchTests : CherwellClientTest
 	[Fact]
 	public async Task GetSearchItems_NotAuth()
 	{
-		var cancellationToken = CancellationToken.None;
-
 		await ((Func<Task>)(async () =>
 		{
 			var response = await TestCherwellClient
@@ -165,8 +159,6 @@ public class SearchTests : CherwellClientTest
 	[Fact]
 	public async Task GetSearchItemsV2_NotAuth()
 	{
-		var cancellationToken = CancellationToken.None;
-
 		await ((Func<Task>)(async () =>
 		{
 			var response = await TestCherwellClient
