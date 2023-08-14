@@ -63,7 +63,7 @@ public class SearchTests : CherwellClientTest
 
 		await ((Func<Task>)(async () =>
 		{
-			var response = await TestCherwellClient
+			_ = await TestCherwellClient
 			.Searches
 			.GetQuickSearchResultsAsync(
 				new QuickSearchRequest
@@ -86,7 +86,7 @@ public class SearchTests : CherwellClientTest
 	[Fact]
 	public async Task GetQuickSearchWithViewRights_NotAuth()
 	{
-		var cancellationToken = CancellationToken.None;
+		_ = CancellationToken.None;
 
 		await ((Func<Task>)(async () =>
 		{
@@ -253,7 +253,7 @@ public class SearchTests : CherwellClientTest
 	{
 		await ((Func<Task>)(async () =>
 		{
-			var views = await TestCherwellClient
+			_ = await TestCherwellClient
 			.Searches
 			.GetSearchResultsAdHocAsync(
 				new SearchResultsRequest(),

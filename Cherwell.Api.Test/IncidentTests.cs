@@ -113,7 +113,7 @@ public class TicketTests : CherwellClientTest
 		var businessObjectSummary = businessObjectSummaries[0];
 
 		// Possible statuses for the Incident object type
-		var possibleStatuses = businessObjectSummary
+		_ = businessObjectSummary
 			.States
 			.Split(",", StringSplitOptions.RemoveEmptyEntries);
 

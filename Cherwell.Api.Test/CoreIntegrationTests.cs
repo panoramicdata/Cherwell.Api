@@ -58,7 +58,7 @@ public class CoreIntegrationTests : CherwellClientTest
 
 		await ((Func<Task>)(async () =>
 		{
-			var response = await TestCherwellClient
+			_ = await TestCherwellClient
 			.Core
 			.GetStoredValuesAsync(true, cancellationToken)
 			.ConfigureAwait(false);

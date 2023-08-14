@@ -33,7 +33,7 @@ public class SecurityIntegrationTests : CherwellClientTest
 
 		await ((Func<Task>)(async () =>
 		{
-			var response = await TestCherwellClient
+			_ = await TestCherwellClient
 			.Security
 			.GetRolesAsync(cancellationToken)
 			.ConfigureAwait(false);
