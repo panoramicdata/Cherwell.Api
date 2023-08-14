@@ -18,7 +18,9 @@ public class CherwellClient : IDisposable
 	/// </summary>
 	/// <param name="options">The options to be used when accessing the API</param>
 	/// <param name="logger">Optional logger to which to output details of the operations performed</param>
-	public CherwellClient(CherwellClientOptions options, ILogger? logger = null)
+
+	public CherwellClient(CherwellClientOptions options) : this(options, null) { }
+	public CherwellClient(CherwellClientOptions options, ILogger? logger)
 	{
 		if (options is null)
 		{
