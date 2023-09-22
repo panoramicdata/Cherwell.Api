@@ -1,13 +1,4 @@
-﻿using Cherwell.Api.Exceptions;
-using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System.Net.Http.Headers;
-using System.Security.Authentication;
-using System.Text;
-using System.Web;
-
-namespace Cherwell.Api;
+﻿namespace Cherwell.Api;
 
 public class AuthenticatedHttpClientHandler : HttpClientHandler
 {
@@ -40,7 +31,8 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 	/// <param name="request">The request that is to be sent</param>
 	/// <param name="cancellationToken">A cancellation token for the operation</param>
 	/// <returns>The response to the request that was sent</returns>
-	protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request,
+	protected override async Task<HttpResponseMessage> SendAsync(
+		HttpRequestMessage request,
 		CancellationToken cancellationToken)
 	{
 		// Generate a unique request id
