@@ -242,7 +242,6 @@ public class SearchTests : CherwellClientTest
 		searchResults.SearchResultsFields.Should().BeEmpty();
 		searchResults.SimpleResults.Should().BeNull();
 		searchResults.TotalRows.Should().NotBe(0);
-		//searchResults.HasMoreRecords.Should().BeFalse();
 		searchResults.ErrorCode.Should().BeNull();
 		searchResults.ErrorMessage.Should().BeNull();
 		searchResults.HasError.Should().BeFalse();
