@@ -155,7 +155,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 					}
 
 					// Throw a CherwellApiException before Refit can get hold of it.
-					throw new CherwellApiException(response);
+					throw new CherwellApiException(response, $"Cherwell returned a {response.ErrorCode} ({response.HttpStatusCode}) error, with message: {response.ErrorMessage}");
 				}
 			}
 

@@ -9,7 +9,7 @@ public class CherwellApiException : Exception
 	{
 	}
 
-	public CherwellApiException(Response response) : base(response.ErrorMessage)
+	public CherwellApiException(Response response, string message) : base(message)
 	{
 		Response = response;
 	}
