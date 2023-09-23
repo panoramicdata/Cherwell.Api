@@ -14,6 +14,7 @@ backend
 barcode
 behaviour
 br
+Busb
 busobid
 busobname
 busobrecid
@@ -25,6 +26,7 @@ checkoutqueueitem
 Cherwell
 Codacy
 config
+CSM
 culturecode
 customerrecordid
 Datetime
@@ -110,6 +112,7 @@ Installshield
 Ionide
 Json
 lang
+LDAP
 lifecycle
 linkrelatedbusinessobject
 loginid
@@ -142,6 +145,7 @@ removeuserfromteam
 resheader
 resx
 runonestepaction
+SAML
 savebusinessobject
 savebusinessobjectattachmentbusob
 savebusinessobjectattachmentlink
@@ -173,7 +177,9 @@ storedvalues
 sublicense
 teamid
 totalsize
+Trebuchet
 typeof
+UNC
 unlinkrelatedbusinessobject
 uploadbusinessobjectattachment
 Url

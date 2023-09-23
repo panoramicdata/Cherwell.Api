@@ -8,6 +8,7 @@
 		<Nullable>enable</Nullable>
 		<AnalysisMode>Recommended</AnalysisMode>
 		<AnalysisLevel>latest-recommended</AnalysisLevel>
+		<Version>1.0</Version>
 	</PropertyGroup>
 
 	<ItemGroup>

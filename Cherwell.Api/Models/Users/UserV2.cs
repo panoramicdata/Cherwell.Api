@@ -78,7 +78,7 @@ public class UserV2 : Response
 	/// ShortdisplayName
 	/// </summary>
 	[DataMember(Name = "shortdisplayName", EmitDefaultValue = false)]
-	public string ShortdisplayName { get; set; } = null!;
+	public string ShortDisplayName { get; set; } = null!;
 
 	/// <summary>
 	/// UserCannotChangePassword

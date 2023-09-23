@@ -43,7 +43,7 @@ public class BusinessObjectPermission
 	/// FieldPermissions
 	/// </summary>
 	[DataMember(Name = "fieldPermissions", EmitDefaultValue = false)]
-	public List<FieldPermissiond> FieldPermissions { get; set; } = null!;
+	public List<FieldPermissionValue> FieldPermissions { get; set; } = null!;
 
 	/// <summary>
 	/// ManagerOfOwnerEdit

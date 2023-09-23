@@ -18,7 +18,7 @@ public class TokenResponse : Response
 	/// AsclientId
 	/// </summary>
 	[DataMember(Name = "as:client_id", EmitDefaultValue = false)]
-	public string AsclientId { get; set; } = null!;
+	public string AsClientId { get; set; } = null!;
 
 	/// <summary>
 	/// Expires

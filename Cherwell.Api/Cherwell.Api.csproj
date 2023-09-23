@@ -8,7 +8,7 @@
 		<AnalysisMode>Recommended</AnalysisMode>
 		<AnalysisLevel>latest-recommended</AnalysisLevel>
 		<PackageIcon>Icon.png</PackageIcon>
-		<Copyright>Panoramic Data Limited 2021-2022</Copyright>
+		<Copyright>Panoramic Data Limited 2021-2023</Copyright>
 		<PackageProjectUrl>https://github.com/panoramicdata/Cherwell.Api</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/panoramicdata/Cherwell.Api</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
@@ -16,13 +16,15 @@
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<Description>Cherwell API</Description>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
 		<Authors>Panoramic Data Limited</Authors>
 		<Company>Panoramic Data Limited</Company>
-		<NeutralLanguage>en</NeutralLanguage>
+		<NeutralLanguage>en-US</NeutralLanguage>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-		<PackageReleaseNotes>When a retry is required, the delay doubles each time (starts at 10 seconds).</PackageReleaseNotes>
+		<PackageReleaseNotes>Code tidy</PackageReleaseNotes>
+		<Title>Cherwell.Api</Title>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -36,6 +38,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<None Include="..\README.md">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
 		<None Include="Icon.png" Pack="true" PackagePath="\" />
 	</ItemGroup>
 

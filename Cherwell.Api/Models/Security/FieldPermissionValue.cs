@@ -3,10 +3,10 @@ using System.Runtime.Serialization;
 namespace Cherwell.Api.Models.Security;
 
 /// <summary>
-/// FieldPermissiond
+/// FieldPermission
 /// </summary>
 [DataContract]
-public class FieldPermissiond
+public class FieldPermissionValue
 {
 	/// <summary>
 	/// DepartmentMemberEdit
