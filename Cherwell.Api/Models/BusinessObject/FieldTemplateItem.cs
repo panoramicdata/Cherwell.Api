@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Runtime.Serialization;
 
 namespace Cherwell.Api.Models.BusinessObject;
@@ -6,6 +7,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// FieldTemplateItem
 /// </summary>
 [DataContract]
+[DebuggerDisplay("{Name} \"{DisplayName}\" ({FieldId}) = {Value}")]
 public class FieldTemplateItem
 {
 	/// <summary>
