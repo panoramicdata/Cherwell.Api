@@ -6,7 +6,7 @@ using Xunit.Abstractions;
 
 namespace Cherwell.Api.Test;
 
-public class TicketTests : CherwellClientTest
+public partial class TicketTests : CherwellClientTest
 {
 	public TicketTests(ITestOutputHelper iTestOutputHelper) : base(iTestOutputHelper)
 	{
@@ -31,13 +31,11 @@ public class TicketTests : CherwellClientTest
 			.GetBusinessObjectSchemaAsync(businessObjectId, true, default)
 			.ConfigureAwait(false);
 
-		var subQueryRegex = new Regex("(?<field>.+?) (?<operator>.+?) '(?<value>.+)'");
-
 		var filters = string.IsNullOrWhiteSpace(query)
 			? null
 			: query.Split(" OR ").Select(subQuery =>
 			{
-				var subQueryMatches = subQueryRegex.Matches(subQuery);
+				var subQueryMatches = SubQueryRegex().Matches(subQuery);
 				var fieldName = subQueryMatches[0].Groups["field"].Value;
 				var @operator = subQueryMatches[0].Groups["operator"].Value;
 				var value = subQueryMatches[0].Groups["value"].Value;
@@ -72,7 +70,7 @@ public class TicketTests : CherwellClientTest
 			BusObId = businessObjectId,
 			Fields = fields?.Count != 0 ? fields : null,
 			Filters = filters,
-			PageNumber = (skip / take) + 1,
+			PageNumber = skip / take + 1,
 			PageSize = take
 		};
 
@@ -274,4 +272,6 @@ public class TicketTests : CherwellClientTest
 
 	}
 
+	[GeneratedRegex("(?<field>.+?) (?<operator>.+?) '(?<value>.+)'")]
+	private static partial Regex SubQueryRegex();
 }

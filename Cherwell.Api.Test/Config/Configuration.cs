@@ -2,7 +2,7 @@
 
 namespace Cherwell.Api.Test.Config;
 
-internal class Configuration
+internal sealed class Configuration
 {
 	public CherwellClientOptions? CherwellClientOptions { get; set; }
 

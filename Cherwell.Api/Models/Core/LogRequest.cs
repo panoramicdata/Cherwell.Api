@@ -59,11 +59,12 @@ public class LogRequest
 	/// </summary>
 	[DataMember(Name = "level", EmitDefaultValue = false)]
 	public EnumLevel Level { get; set; }
+
 	/// <summary>
 	/// keyValueproperties
 	/// </summary>
 	[DataMember(Name = "keyValueproperties", EmitDefaultValue = false)]
-	public List<object> keyValueproperties { get; set; } = null!;
+	public List<object> KeyValueProperties { get; set; } = null!;
 
 	/// <summary>
 	/// Message

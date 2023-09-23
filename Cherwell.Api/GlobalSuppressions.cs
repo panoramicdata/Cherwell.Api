@@ -19,3 +19,11 @@ using System.Diagnostics.CodeAnalysis;
 	Scope = "type",
 	Target = "~T:Cherwell.Api.Models.Security.BusinessObjectPermission")
 ]
+
+[assembly: SuppressMessage(
+	"Design",
+	"CA1069:Enums values should not be duplicated",
+	Justification = "When deserializing multiple values into one member, they should",
+	Scope = "type",
+	Target = "~T:Cherwell.Api.Models.EnumHttpStatusCode")
+]

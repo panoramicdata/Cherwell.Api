@@ -6,7 +6,7 @@ using Xunit.Abstractions;
 
 namespace Cherwell.Api.Test;
 
-public class CherwellClientTest
+public class CherwellClientTest : IDisposable
 {
 	protected DateTimeOffset UtcNow { get; } = DateTimeOffset.UtcNow;
 
@@ -15,6 +15,8 @@ public class CherwellClientTest
 	private CherwellClient? _cherwellClient;
 
 	private Configuration? _configuration;
+
+	private bool _disposedValue;
 
 	protected ICacheLogger Logger { get; }
 
@@ -74,5 +76,34 @@ public class CherwellClientTest
 
 			return _cherwellClient = new CherwellClient(Configuration.CherwellClientOptions, Logger);
 		}
+	}
+
+	protected virtual void Dispose(bool disposing)
+	{
+		if (!_disposedValue)
+		{
+			if (disposing)
+			{
+				// TODO: dispose managed state (managed objects)
+			}
+
+			// TODO: free unmanaged resources (unmanaged objects) and override finalizer
+			// TODO: set large fields to null
+			_disposedValue = true;
+		}
+	}
+
+	// // TODO: override finalizer only if 'Dispose(bool disposing)' has code to free unmanaged resources
+	// ~CherwellClientTest()
+	// {
+	//     // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
+	//     Dispose(disposing: false);
+	// }
+
+	public void Dispose()
+	{
+		// Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
+		Dispose(disposing: true);
+		GC.SuppressFinalize(this);
 	}
 }

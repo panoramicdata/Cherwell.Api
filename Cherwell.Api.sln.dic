@@ -11,6 +11,7 @@ attachmentid
 attachmenttype
 auth
 backend
+barcode
 behaviour
 br
 busobid
@@ -157,6 +158,7 @@ saveworkgroupmember
 scancode
 schemas
 scopeowner
+searchable
 searchid
 searchname
 serviceinfo
@@ -180,6 +182,7 @@ usedefaultgrid
 Username
 userrecordid
 usings
+Utc
 workflows
 Workgroup
 workgroupid
