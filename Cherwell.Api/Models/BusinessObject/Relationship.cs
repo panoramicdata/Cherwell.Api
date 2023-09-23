@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Runtime.Serialization;
 
 namespace Cherwell.Api.Models.BusinessObject;
@@ -6,6 +7,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// Relationship
 /// </summary>
 [DataContract]
+[DebuggerDisplay("{DisplayName} ({RelationshipId})")]
 public class BusinessObjectRelationship
 {
 	/// <summary>

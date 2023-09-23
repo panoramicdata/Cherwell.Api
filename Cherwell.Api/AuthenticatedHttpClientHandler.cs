@@ -1,4 +1,13 @@
-﻿namespace Cherwell.Api;
+﻿using Cherwell.Api.Exceptions;
+using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Net.Http.Headers;
+using System.Security.Authentication;
+using System.Text;
+using System.Web;
+
+namespace Cherwell.Api;
 
 public class AuthenticatedHttpClientHandler : HttpClientHandler
 {
@@ -12,7 +21,9 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 	private const int _tokenSubtractSeconds = 30;   // Used as a 'safe window' to refresh the token N seconds before expiry. Was previously 5
 	private readonly int _maxAttempts = 5;
 
-	public AuthenticatedHttpClientHandler(CherwellClientOptions options, ILogger logger)
+	public AuthenticatedHttpClientHandler(
+		CherwellClientOptions options,
+		ILogger logger)
 	{
 		_options = options;
 		_logger = logger;
@@ -55,7 +66,10 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			var url = request.RequestUri!.ToString();
 			var headers = string.Join("\n", request.Headers.Select(h => $"{h.Key}: {string.Join(", ", h.Value.Select(v => v))}"));
 			var body = request.Content is not null
-				? await request.Content.ReadAsStringAsync().ConfigureAwait(false)
+				? await request
+					.Content
+					.ReadAsStringAsync()
+					.ConfigureAwait(false)
 				: string.Empty;
 			var jObject = JsonConvert.DeserializeObject<JObject>(body);
 			if (jObject is not null)
@@ -122,7 +136,10 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 
 			// Is this a Cherwell Response?
 			var body = httpResponse.Content is not null
-				? await httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false)
+				? await httpResponse
+					.Content
+					.ReadAsStringAsync()
+					.ConfigureAwait(false)
 				: string.Empty;
 			var response = JsonConvert.DeserializeObject<Response>(body);
 			if (response is not null)
@@ -240,7 +257,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			{
 				if (!string.IsNullOrWhiteSpace(response.ReasonPhrase))
 				{
-					_logger.LogError("Cherwell 'GenerateAccessTokenAsync' response unsuccessfull: {Reason}", response.ReasonPhrase);
+					_logger.LogError("Cherwell 'GenerateAccessTokenAsync' response unsuccessful: {Reason}", response.ReasonPhrase);
 					throw new AuthenticationException(response.ReasonPhrase);
 				}
 

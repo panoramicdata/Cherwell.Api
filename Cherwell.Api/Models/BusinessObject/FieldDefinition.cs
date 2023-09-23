@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Runtime.Serialization;
 
 namespace Cherwell.Api.Models.BusinessObject;
@@ -5,6 +6,7 @@ namespace Cherwell.Api.Models.BusinessObject;
 /// <summary>
 /// FieldDefinition
 /// </summary>
+[DebuggerDisplay("{DisplayName} ({Name})")]
 [DataContract]
 public class FieldDefinition
 {

@@ -1,3 +1,8 @@
+[*]
+# VSSPELL: Spell checker settings from Cherwell.Api.sln.vsspell
+vsspell_section_id = f1c64143643f4870a89ddd1f8698b457
+vsspell_ignored_words_f1c64143643f4870a89ddd1f8698b457 = File:Cherwell.Api.sln.dic
+
 # Remove the line below if you want to inherit .editorconfig settings from higher directories
 root = true
 

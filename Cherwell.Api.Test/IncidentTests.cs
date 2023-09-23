@@ -14,7 +14,7 @@ public class TicketTests : CherwellClientTest
 
 	[Theory]
 	[InlineData("")]
-	[InlineData("StateFieldId eq 'In Progress' OR StateFieldId eq 'Reopened'")]
+	[InlineData("Status eq 'In Progress' OR Status eq 'Reopened'")]
 	[InlineData("Status eq 'Closed'")]
 	public async Task GetQuickSearchSpecificResults_Succeeds(string query)
 	{
