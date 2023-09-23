@@ -46,118 +46,129 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		HttpRequestMessage request,
 		CancellationToken cancellationToken)
 	{
-		// Generate a unique request id
-		var requestId = Guid.NewGuid();
-
-		// Does the request has an authorize header?
-		var auth = request.Headers.Authorization;
-		if (auth is null)
+		try
 		{
-			// No.  Add one.
-			var accessToken = await GetAccessTokenAsync(cancellationToken);
-			request.Headers.Authorization = new AuthenticationHeaderValue(_authenticationType, accessToken);
-		}
-		// The request now has an authorize header
+			// Generate a unique request id
+			var requestId = Guid.NewGuid();
 
-		// Check the logging level as the operation to
-		// extract the content is expensive
-		if (_logger.IsEnabled(LogLevel.Debug))
-		{
-			var url = request.RequestUri!.ToString();
-			var headers = string.Join("\n", request.Headers.Select(h => $"{h.Key}: {string.Join(", ", h.Value.Select(v => v))}"));
-			var body = request.Content is not null
-				? await request
-					.Content
-					.ReadAsStringAsync()
-					.ConfigureAwait(false)
-				: string.Empty;
-			var jObject = JsonConvert.DeserializeObject<JObject>(body);
-			if (jObject is not null)
+			// Does the request has an authorize header?
+			var auth = request.Headers.Authorization;
+			if (auth is null)
 			{
-				body = JsonConvert.SerializeObject(jObject, Formatting.Indented);
+				// No.  Add one.
+				var accessToken = await GetAccessTokenAsync(cancellationToken);
+				request.Headers.Authorization = new AuthenticationHeaderValue(_authenticationType, accessToken);
 			}
+			// The request now has an authorize header
 
-			_logger.LogDebug(
-				"{RequestId}: REQUEST: Url:{Url}\nHeaders:{Headers}\nBody: {Body}",
-				requestId,
-				url,
-				headers,
-				body);
-		}
-
-		if (_options.Culture is not null)
-		{
-			// Add the culture as a query parameter
-			var uriBuilder = new UriBuilder(request.RequestUri);
-			var query = HttpUtility.ParseQueryString(uriBuilder.Query);
-			query["locale"] = _options.Culture.Name;
-			uriBuilder.Query = query.ToString();
-			request.RequestUri = uriBuilder.Uri;
-		}
-
-		// Make the HTTP call
-		var httpResponse = await base
-			.SendAsync(request, cancellationToken)
-			.ConfigureAwait(false);
-
-		// Check the logging level as the operation to
-		// extract the content is expensive
-		if (_logger.IsEnabled(LogLevel.Debug))
-		{
-			var headers = string.Join("\n", httpResponse.Headers.Select(h => $"{h.Key}: {string.Join(", ", h.Value.Select(v => v))}"));
-			var body = httpResponse.Content is not null
-				? await httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false)
-				: string.Empty;
-			try
+			// Check the logging level as the operation to
+			// extract the content is expensive
+			if (_logger.IsEnabled(LogLevel.Debug))
 			{
+				var url = request.RequestUri!.ToString();
+				var headers = string.Join("\n", request.Headers.Select(h => $"{h.Key}: {string.Join(", ", h.Value.Select(v => v))}"));
+				var body = request.Content is not null
+					? await request
+						.Content
+						.ReadAsStringAsync()
+						.ConfigureAwait(false)
+					: string.Empty;
 				var jObject = JsonConvert.DeserializeObject<JObject>(body);
 				if (jObject is not null)
 				{
 					body = JsonConvert.SerializeObject(jObject, Formatting.Indented);
 				}
+
+				_logger.LogDebug(
+					"{RequestId}: REQUEST: Url:{Url}\nHeaders:{Headers}\nBody: {Body}",
+					requestId,
+					url,
+					headers,
+					body);
 			}
-			catch (Exception)
+
+			if (_options.Culture is not null)
 			{
-				// This doesn't work for arrays, which return the JArray type
+				// Add the culture as a query parameter
+				var uriBuilder = new UriBuilder(request.RequestUri);
+				var query = HttpUtility.ParseQueryString(uriBuilder.Query);
+				query["locale"] = _options.Culture.Name;
+				uriBuilder.Query = query.ToString();
+				request.RequestUri = uriBuilder.Uri;
 			}
 
-			_logger.LogDebug(
-				"{RequestId}: RESPONSE: {StatusCode}\nHeaders:{Headers}\nBody: {Body}",
-				requestId,
-				httpResponse.StatusCode,
-				headers,
-				body);
-		}
+			// Make the HTTP call
+			var httpResponse = await base
+				.SendAsync(request, cancellationToken)
+				.ConfigureAwait(false);
 
-		// Was the request successful?
-		if (!httpResponse.IsSuccessStatusCode)
-		{
-			// No.
-
-			// Is this a Cherwell Response?
-			var body = httpResponse.Content is not null
-				? await httpResponse
-					.Content
-					.ReadAsStringAsync()
-					.ConfigureAwait(false)
-				: string.Empty;
-			var response = JsonConvert.DeserializeObject<Response>(body);
-			if (response is not null)
+			// Check the logging level as the operation to
+			// extract the content is expensive
+			if (_logger.IsEnabled(LogLevel.Debug))
 			{
-				// Yes.
-
-				// Update the status code if not set
-				if (response.HttpStatusCode is null || response.HttpStatusCode == EnumHttpStatusCode.None)
+				var headers = string.Join("\n", httpResponse.Headers.Select(h => $"{h.Key}: {string.Join(", ", h.Value.Select(v => v))}"));
+				var body = httpResponse.Content is not null
+					? await httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false)
+					: string.Empty;
+				try
 				{
-					response.HttpStatusCode = (EnumHttpStatusCode)httpResponse.StatusCode;
+					var jObject = JsonConvert.DeserializeObject<JObject>(body);
+					if (jObject is not null)
+					{
+						body = JsonConvert.SerializeObject(jObject, Formatting.Indented);
+					}
+				}
+				catch (Exception)
+				{
+					// This doesn't work for arrays, which return the JArray type
 				}
 
-				// Throw a CherwellApiException before Refit can get hold of it.
-				throw new CherwellApiException(response);
+				_logger.LogDebug(
+					"{RequestId}: RESPONSE: {StatusCode}\nHeaders:{Headers}\nBody: {Body}",
+					requestId,
+					httpResponse.StatusCode,
+					headers,
+					body);
 			}
-		}
 
-		return httpResponse;
+			// Was the request successful?
+			if (!httpResponse.IsSuccessStatusCode)
+			{
+				// No.
+
+				// Is this a Cherwell Response?
+				var body = httpResponse.Content is not null
+					? await httpResponse
+						.Content
+						.ReadAsStringAsync()
+						.ConfigureAwait(false)
+					: string.Empty;
+				var response = JsonConvert.DeserializeObject<Response>(body);
+				if (response is not null)
+				{
+					// Yes.
+
+					// Update the status code if not set
+					if (response.HttpStatusCode is null || response.HttpStatusCode == EnumHttpStatusCode.None)
+					{
+						response.HttpStatusCode = (EnumHttpStatusCode)httpResponse.StatusCode;
+					}
+
+					// Throw a CherwellApiException before Refit can get hold of it.
+					throw new CherwellApiException(response);
+				}
+			}
+
+			return httpResponse;
+		}
+		catch (CherwellApiException)
+		{
+			throw;
+		}
+		catch (Exception ex)
+		{
+			throw new CherwellApiException("Unexpected Cherwell API exception.", ex);
+		}
 	}
 
 	/// <summary>
@@ -278,7 +289,8 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			.ReadAsStringAsync()
 			.ConfigureAwait(false);
 
-		var tokenResponse = JsonConvert.DeserializeObject<TokenResponse>(stringResponse) ?? throw new AuthenticationException("No body in the response!");
+		var tokenResponse = JsonConvert.DeserializeObject<TokenResponse>(stringResponse)
+			?? throw new AuthenticationException("Could not deserialize content as a TokenResponse.");
 		_accessToken = tokenResponse.AccessToken;
 		_refreshToken = tokenResponse.RefreshToken;
 		_tokenRefreshRequiredAt = DateTime.Now.AddSeconds((tokenResponse.ExpiresIn) - _tokenSubtractSeconds);
