@@ -5,12 +5,8 @@ using Xunit.Abstractions;
 
 namespace Cherwell.Api.Test;
 
-public class SecurityIntegrationTests : CherwellClientTest
+public class SecurityIntegrationTests(ITestOutputHelper iTestOutputHelper) : CherwellClientTest(iTestOutputHelper)
 {
-	public SecurityIntegrationTests(ITestOutputHelper iTestOutputHelper) : base(iTestOutputHelper)
-	{
-	}
-
 	[Fact]
 	public async Task GetClientSecuritySettings_Succeeds()
 	{
@@ -19,7 +15,7 @@ public class SecurityIntegrationTests : CherwellClientTest
 		var response = await TestCherwellClient
 			.Security
 			.GetClientSecuritySettingsAsync("RichClient", cancellationToken)
-			.ConfigureAwait(false);
+			;
 
 		response
 			.Should()
@@ -36,7 +32,7 @@ public class SecurityIntegrationTests : CherwellClientTest
 			var response = await TestCherwellClient
 			.Security
 			.GetRolesAsync(cancellationToken)
-			.ConfigureAwait(false);
+			;
 		}))
 		.Should()
 		.ThrowAsync<CherwellApiException>()
@@ -57,7 +53,7 @@ public class SecurityIntegrationTests : CherwellClientTest
 			var response = await TestCherwellClient
 			.Security
 			.GetRolesV2Async(cancellationToken)
-			.ConfigureAwait(false);
+			;
 		}))
 		.Should()
 		.ThrowAsync<CherwellApiException>()
@@ -81,7 +77,7 @@ public class SecurityIntegrationTests : CherwellClientTest
 		var response = await TestCherwellClient
 			.Security
 			.GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdAsync("93c5ca8e7dbd4cc21dead14df19c684298a78358dd", cancellationToken)
-			.ConfigureAwait(false);
+			;
 
 		response
 			.Should()
@@ -96,7 +92,7 @@ public class SecurityIntegrationTests : CherwellClientTest
 		var response = await TestCherwellClient
 			.Security
 			.GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV2Async("93c5ca8e7dbd4cc21dead14df19c684298a78358dd", cancellationToken)
-			.ConfigureAwait(false);
+			;
 
 		response
 			.Should()
@@ -111,7 +107,7 @@ public class SecurityIntegrationTests : CherwellClientTest
 		var response = await TestCherwellClient
 			.Security
 			.GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameAsync("Announcement", cancellationToken)
-			.ConfigureAwait(false);
+			;
 
 		response
 			.Should()
@@ -126,7 +122,7 @@ public class SecurityIntegrationTests : CherwellClientTest
 		var response = await TestCherwellClient
 			.Security
 			.GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV2Async("Announcement", cancellationToken)
-			.ConfigureAwait(false);
+			;
 
 		response
 			.Should()
@@ -141,7 +137,7 @@ public class SecurityIntegrationTests : CherwellClientTest
 		var response = await TestCherwellClient
 			.Security
 			.GetSecurityGroupCategoriesAsync(cancellationToken)
-			.ConfigureAwait(false);
+			;
 
 		response
 			.Should()
@@ -156,7 +152,7 @@ public class SecurityIntegrationTests : CherwellClientTest
 		var response = await TestCherwellClient
 			.Security
 			.GetSecurityGroupCategoriesV2Async(cancellationToken)
-			.ConfigureAwait(false);
+			;
 
 		response
 			.Should()
@@ -180,7 +176,7 @@ public class SecurityIntegrationTests : CherwellClientTest
 		var response = await TestCherwellClient
 			.Security
 			.GetSecurityGroupsAsync(cancellationToken)
-			.ConfigureAwait(false);
+			;
 
 		response
 			.Should()
@@ -195,7 +191,7 @@ public class SecurityIntegrationTests : CherwellClientTest
 		var response = await TestCherwellClient
 			.Security
 			.GetSecurityGroupsV2Async(cancellationToken)
-			.ConfigureAwait(false);
+			;
 
 		response
 			.Should()

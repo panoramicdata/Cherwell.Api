@@ -6,12 +6,8 @@ using Xunit.Abstractions;
 
 namespace Cherwell.Api.Test;
 
-public class SearchTests : CherwellClientTest
+public class SearchTests(ITestOutputHelper iTestOutputHelper) : CherwellClientTest(iTestOutputHelper)
 {
-	public SearchTests(ITestOutputHelper iTestOutputHelper) : base(iTestOutputHelper)
-	{
-	}
-
 	[Fact]
 	public async Task GetQuickSearchSpecificResults_Succeeds()
 	{
@@ -27,7 +23,7 @@ public class SearchTests : CherwellClientTest
 						Units = "test"
 					},
 				}, default, default, default, default)
-			.ConfigureAwait(false);
+			;
 
 		response
 			.Should()
@@ -49,7 +45,7 @@ public class SearchTests : CherwellClientTest
 						Units = "test"
 					},
 				}, default, default, default, default)
-			.ConfigureAwait(false);
+			;
 
 		response
 			.Should()
@@ -68,10 +64,10 @@ public class SearchTests : CherwellClientTest
 			.GetQuickSearchResultsAsync(
 				new QuickSearchRequest
 				{
-					BusObIds = new List<string> { "93c5ca8e7dbd4cc21dead14df19c684298a78358dd" },
+					BusObIds = ["93c5ca8e7dbd4cc21dead14df19c684298a78358dd"],
 					SearchText = "test"
 				}, default, cancellationToken)
-			.ConfigureAwait(false);
+			;
 		}))
 		.Should()
 		.ThrowAsync<CherwellApiException>()
@@ -93,7 +89,7 @@ public class SearchTests : CherwellClientTest
 			var response = await TestCherwellClient
 			.Searches
 			.GetQuickSearchConfigurationForBusObsWithViewRightsAsync(default)
-			.ConfigureAwait(false);
+			;
 		}))
 		.Should()
 		.ThrowAsync<CherwellApiException>()
@@ -117,9 +113,9 @@ public class SearchTests : CherwellClientTest
 			.GetQuickSearchConfigurationForBusObsAsync(
 			new QuickSearchConfigurationRequest
 			{
-				BusObIds = new List<string> { "93c5ca8e7dbd4cc21dead14df19c684298a78358dd" }
+				BusObIds = ["93c5ca8e7dbd4cc21dead14df19c684298a78358dd"]
 			}, default)
-			.ConfigureAwait(false);
+			;
 		}))
 		.Should()
 		.ThrowAsync<CherwellApiException>()
@@ -150,7 +146,7 @@ public class SearchTests : CherwellClientTest
 			var response = await TestCherwellClient
 			.Searches
 			.GetSearchItemsAsync(default, default)
-			.ConfigureAwait(false);
+			;
 		}))
 		.Should()
 		.ThrowAsync<CherwellApiException>()
@@ -172,7 +168,7 @@ public class SearchTests : CherwellClientTest
 			var response = await TestCherwellClient
 			.Searches
 			.GetSearchItemsV2Async(default, default)
-			.ConfigureAwait(false);
+			;
 		}))
 		.Should()
 		.ThrowAsync<CherwellApiException>()
@@ -193,10 +189,10 @@ public class SearchTests : CherwellClientTest
 			new SearchResultsRequest
 			{
 				BusObId = "6dd53665c0c24cab86870a21cf6434ae",
-				Filters = new List<FilterInfo>()
+				Filters = []
 			},
 			default)
-		.ConfigureAwait(false);
+		;
 
 		searchResults
 			.Should()
@@ -257,7 +253,7 @@ public class SearchTests : CherwellClientTest
 			.GetSearchResultsAdHocAsync(
 				new SearchResultsRequest(),
 				default)
-			.ConfigureAwait(false);
+			;
 		}))
 		.Should()
 		.ThrowAsync<CherwellApiException>()

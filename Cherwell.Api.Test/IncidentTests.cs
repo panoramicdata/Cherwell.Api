@@ -6,12 +6,8 @@ using Xunit.Abstractions;
 
 namespace Cherwell.Api.Test;
 
-public partial class TicketTests : CherwellClientTest
+public partial class TicketTests(ITestOutputHelper iTestOutputHelper) : CherwellClientTest(iTestOutputHelper)
 {
-	public TicketTests(ITestOutputHelper iTestOutputHelper) : base(iTestOutputHelper)
-	{
-	}
-
 	[Theory]
 	[InlineData("")]
 	[InlineData("Status eq 'In Progress' OR Status eq 'Reopened'")]
@@ -21,7 +17,7 @@ public partial class TicketTests : CherwellClientTest
 		var summaries = await TestCherwellClient
 			.BusinessObject
 			.GetBusinessObjectSummaryByNameAsync("Incident", default)
-			.ConfigureAwait(false);
+			;
 		var summary = summaries[0];
 
 		var businessObjectId = summary.BusObId;
@@ -29,7 +25,7 @@ public partial class TicketTests : CherwellClientTest
 		var businessObjectSchema = await TestCherwellClient
 			.BusinessObject
 			.GetBusinessObjectSchemaAsync(businessObjectId, true, default)
-			.ConfigureAwait(false);
+			;
 
 		var filters = string.IsNullOrWhiteSpace(query)
 			? null
@@ -79,7 +75,7 @@ public partial class TicketTests : CherwellClientTest
 			.GetSearchResultsAdHocAsync(
 				searchResultsRequest,
 				default)
-			.ConfigureAwait(false);
+			;
 
 		searchItemResponse
 			.Should()
@@ -98,7 +94,7 @@ public partial class TicketTests : CherwellClientTest
 		var businessObjectSummaries = await TestCherwellClient
 			.BusinessObject
 			.GetBusinessObjectSummaryByNameAsync(ticketType, cancellationToken)
-			.ConfigureAwait(false);
+			;
 
 		businessObjectSummaries
 			.Should()
@@ -122,7 +118,7 @@ public partial class TicketTests : CherwellClientTest
 			businessObjectSummary.BusObId,
 			true,
 			cancellationToken)
-			.ConfigureAwait(false);
+			;
 
 		var searchItemResponse = await TestCherwellClient
 			.Searches
@@ -135,10 +131,10 @@ public partial class TicketTests : CherwellClientTest
 					.Take(5)
 					.Select(f => f.FieldId)
 					.ToList(),
-				Filters = new List<FilterInfo>()
+				Filters = []
 			},
 			cancellationToken)
-		.ConfigureAwait(false);
+		;
 
 		searchItemResponse
 			.Should()
@@ -179,7 +175,7 @@ public partial class TicketTests : CherwellClientTest
 		var objectSummaries = await TestCherwellClient
 			.BusinessObject
 			.GetBusinessObjectSummaryByNameAsync("Incident", cancellationToken)
-			.ConfigureAwait(false);
+			;
 
 		objectSummaries
 			.Should()
@@ -198,7 +194,7 @@ public partial class TicketTests : CherwellClientTest
 			incidentSummary.BusObId,
 			true,
 			cancellationToken)
-			.ConfigureAwait(false);
+			;
 
 		incidentSchema
 			.Should()

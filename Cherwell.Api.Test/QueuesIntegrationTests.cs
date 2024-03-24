@@ -4,11 +4,8 @@ using Xunit.Abstractions;
 
 namespace Cherwell.Api.Test;
 
-public class QueuesIntegrationTests : CherwellClientTest
+public class QueuesIntegrationTests(ITestOutputHelper iTestOutputHelper) : CherwellClientTest(iTestOutputHelper)
 {
-	public QueuesIntegrationTests(ITestOutputHelper iTestOutputHelper) : base(iTestOutputHelper)
-	{
-	}
 
 	// AddItemToQueueAsync - unable to test, no queueStandInKey to test with
 	// CheckInQueueItemAsync - unable to test, no queueStandInKey to test with
@@ -25,7 +22,7 @@ public class QueuesIntegrationTests : CherwellClientTest
 		var response = await TestCherwellClient
 			.Queues
 			.GetQueuesAsync(null, cancellationToken)
-			.ConfigureAwait(false);
+			;
 
 		response
 			.Should()

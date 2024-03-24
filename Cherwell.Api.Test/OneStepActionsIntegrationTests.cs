@@ -4,11 +4,8 @@ using Xunit.Abstractions;
 
 namespace Cherwell.Api.Test;
 
-public class OneStepActionsIntegrationTests : CherwellClientTest
+public class OneStepActionsIntegrationTests(ITestOutputHelper iTestOutputHelper) : CherwellClientTest(iTestOutputHelper)
 {
-	public OneStepActionsIntegrationTests(ITestOutputHelper iTestOutputHelper) : base(iTestOutputHelper)
-	{
-	}
 
 	// GetOneStepActionsByAssociationScopeScopeOwnerFolderAsync - unable to test, no association to test with
 	// GetOneStepActionsByAssociationScopeScopeOwnerAsync - unable to test, no association to test with
@@ -23,7 +20,7 @@ public class OneStepActionsIntegrationTests : CherwellClientTest
 		var response = await TestCherwellClient
 			.OneStepActions
 			.GetOneStepActionsAsync(null, cancellationToken)
-			.ConfigureAwait(false);
+			;
 
 		response
 			.Should()

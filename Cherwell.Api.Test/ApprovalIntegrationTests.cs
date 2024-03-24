@@ -2,11 +2,8 @@
 
 namespace Cherwell.Api.Test;
 
-public class ApprovalIntegrationTests : CherwellClientTest
+public class ApprovalIntegrationTests(ITestOutputHelper iTestOutputHelper) : CherwellClientTest(iTestOutputHelper)
 {
-	public ApprovalIntegrationTests(ITestOutputHelper iTestOutputHelper) : base(iTestOutputHelper)
-	{
-	}
 
 	// ActionApprovalAsync - requires an approval rec id, which we do not currently have
 
@@ -15,5 +12,5 @@ public class ApprovalIntegrationTests : CherwellClientTest
 	// GetMyApprovalsAsync - returns "You do not have rights to query for this business object."
 
 	// GetMyPendingApprovalsAsync - returns "You do not have rights to query for this business object."
-	
+
 }

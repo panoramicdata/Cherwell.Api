@@ -6,7 +6,7 @@ using Xunit.Abstractions;
 
 namespace Cherwell.Api.Test;
 
-public class CherwellClientTest : IDisposable
+public class CherwellClientTest(ITestOutputHelper iTestOutputHelper) : IDisposable
 {
 	protected DateTimeOffset UtcNow { get; } = DateTimeOffset.UtcNow;
 
@@ -18,12 +18,7 @@ public class CherwellClientTest : IDisposable
 
 	private bool _disposedValue;
 
-	protected ICacheLogger Logger { get; }
-
-	public CherwellClientTest(ITestOutputHelper iTestOutputHelper)
-	{
-		Logger = iTestOutputHelper.BuildLogger();
-	}
+	protected ICacheLogger Logger { get; } = iTestOutputHelper.BuildLogger();
 
 	internal Configuration Configuration
 	{

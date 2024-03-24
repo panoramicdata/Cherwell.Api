@@ -40,7 +40,7 @@ namespace My.Project
 			var views = await cherwellClient
 				.Core
 				.GetViewsAsync()
-				.ConfigureAwait(false);
+				;
 		}
 	}
 }

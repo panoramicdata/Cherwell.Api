@@ -100,7 +100,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			// Make the HTTP call
 			var httpResponse = await base
 				.SendAsync(request, cancellationToken)
-				.ConfigureAwait(false);
+				;
 
 			// Check the logging level as the operation to
 			// extract the content is expensive
@@ -185,7 +185,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			// First connection; we need to create a token
 			_logger.LogDebug("Requesting authentication token");
 			await GenerateAccessTokenAsync(GrantTypes.Password, cancellationToken)
-				.ConfigureAwait(false);
+				;
 			return _accessToken!;
 		}
 
@@ -197,7 +197,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		// The time has come to refresh the token
 		_logger.LogDebug("Refreshing authentication token");
 		await GenerateAccessTokenAsync(GrantTypes.RefreshToken, cancellationToken)
-			.ConfigureAwait(false);
+			;
 		return _accessToken;
 	}
 
@@ -238,9 +238,9 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 
 				var keyValues = new List<KeyValuePair<string, string>>
 				{
-					new KeyValuePair<string, string>("grant_type", grantTypeString),
-					new KeyValuePair<string, string>("username", _options.UserName!),
-					new KeyValuePair<string, string>("password", _options.Password!)
+					new("grant_type", grantTypeString),
+					new("username", _options.UserName!),
+					new("password", _options.Password!)
 				};
 
 				if (_refreshToken is not null)
@@ -256,7 +256,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 
 				response = await httpClient
 					.SendAsync(request, cancellationToken)
-					.ConfigureAwait(false);
+					;
 			}
 
 			if (response.IsSuccessStatusCode)
@@ -289,7 +289,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		var stringResponse = await response
 			.Content
 			.ReadAsStringAsync()
-			.ConfigureAwait(false);
+			;
 
 		var tokenResponse = JsonConvert.DeserializeObject<TokenResponse>(stringResponse)
 			?? throw new AuthenticationException("Could not deserialize content as a TokenResponse.");
@@ -334,7 +334,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 
 		var response = await _authenticatingClient
 			.SendAsync(request)
-			.ConfigureAwait(false);
+			;
 		if (!response.IsSuccessStatusCode)
 		{
 			_logger.LogWarning("Could not log out: {Message}", Resources.FailedToLogOut);
@@ -350,7 +350,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 	{
 		// Tidy up, including logging out
 		await LogoutAsync()
-			.ConfigureAwait(false);
+			;
 		_authenticatingClient?.Dispose();
 
 		base.Dispose(disposing);

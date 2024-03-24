@@ -2,11 +2,8 @@
 
 namespace Cherwell.Api.Test;
 
-public class LifecycleIntegrationTests : CherwellClientTest
+public class LifecycleIntegrationTests(ITestOutputHelper iTestOutputHelper) : CherwellClientTest(iTestOutputHelper)
 {
-	public LifecycleIntegrationTests(ITestOutputHelper iTestOutputHelper) : base(iTestOutputHelper)
-	{
-	}
 
 	// GetStagesAsync - unable to test, no businessObjectDefinitionId to test with
 	// GetStatusesAsync - unable to test, no businessObjectDefinitionId to test with
