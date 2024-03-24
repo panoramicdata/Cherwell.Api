@@ -27,3 +27,10 @@ using System.Diagnostics.CodeAnalysis;
 	Scope = "type",
 	Target = "~T:Cherwell.Api.Models.EnumHttpStatusCode")
 ]
+[assembly: SuppressMessage(
+	"Style",
+	"IDE1006:Naming Styles",
+	Justification = "Pascal casing for error message text.",
+	Scope = "namespaceanddescendants",
+	Target = "~N:Cherwell.Api.Exceptions")
+]
