@@ -28,7 +28,7 @@ public class CherwellClientOptions
 	/// <summary>
 	/// The base address of the API instance to which we are to connect
 	/// </summary>
-	public required string BaseAddress { get; set; }
+	public string BaseAddress { get; set; } = string.Empty;
 
 	/// <summary>
 	/// The authentication mode in use for connection attempts
