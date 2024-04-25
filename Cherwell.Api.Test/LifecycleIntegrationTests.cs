@@ -1,9 +1,8 @@
-﻿using Xunit.Abstractions;
+﻿namespace Cherwell.Api.Test;
 
-namespace Cherwell.Api.Test;
-
-public class LifecycleIntegrationTests(ITestOutputHelper iTestOutputHelper) : CherwellClientTest(iTestOutputHelper)
+public class LifecycleIntegrationTests(CherwellClient cherwellClient)
 {
+	private readonly CherwellClient _testCherwellClient = cherwellClient;
 
 	// GetStagesAsync - unable to test, no businessObjectDefinitionId to test with
 	// GetStatusesAsync - unable to test, no businessObjectDefinitionId to test with

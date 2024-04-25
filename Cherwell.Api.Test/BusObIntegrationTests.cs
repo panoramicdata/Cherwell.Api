@@ -1,12 +1,12 @@
 ﻿using Cherwell.Api.Exceptions;
 using FluentAssertions;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace Cherwell.Api.Test;
 
-public class BusObIntegrationTests(ITestOutputHelper iTestOutputHelper) : CherwellClientTest(iTestOutputHelper)
+public class BusObIntegrationTests(CherwellClient testCherwellClient)
 {
+	private readonly CherwellClient _testCherwellClient = testCherwellClient;
 
 	// DeleteBusinessObjectBatchAsync - unable to test, as we don't want to delete anything
 
@@ -25,7 +25,7 @@ public class BusObIntegrationTests(ITestOutputHelper iTestOutputHelper) : Cherwe
 	{
 		var cancellationToken = CancellationToken.None;
 
-		var response = await TestCherwellClient
+		var response = await _testCherwellClient
 			.BusinessObject
 			.GetActivitiesAsync("944e02d8537d17b3384143451180f87eda564c5798", "944e02da60578af7d7bc4644b6ae07ed4eb2648fc3", 1, null, null, cancellationToken)
 			;
@@ -46,7 +46,7 @@ public class BusObIntegrationTests(ITestOutputHelper iTestOutputHelper) : Cherwe
 
 		await ((Func<Task>)(async () =>
 		{
-			_ = await TestCherwellClient
+			_ = await _testCherwellClient
 			.BusinessObject
 			.GetBusinessObjectAttachmentsByIdAndRecIdAsync("93c5ca8e7dbd4cc21dead14df19c684298a78358dd", "93c5ca8e7d6f942534ba214e2787b6d38dba666dab", "File", "Imported", false, cancellationToken)
 			;
@@ -69,7 +69,7 @@ public class BusObIntegrationTests(ITestOutputHelper iTestOutputHelper) : Cherwe
 
 		await ((Func<Task>)(async () =>
 		{
-			_ = await TestCherwellClient
+			_ = await _testCherwellClient
 			.BusinessObject
 			.GetBusinessObjectAttachmentsByNameAndPublicIdAsync("Building", "93e8652ccb6ffc759c6b544437bfa25c2e60ca36f0", "File", "Imported", false, cancellationToken)
 			;
@@ -90,7 +90,7 @@ public class BusObIntegrationTests(ITestOutputHelper iTestOutputHelper) : Cherwe
 
 		await ((Func<Task>)(async () =>
 		{
-			_ = await TestCherwellClient
+			_ = await _testCherwellClient
 			.BusinessObject
 			.GetBusinessObjectAttachmentsAsync(
 				new Models.BusinessObject.AttachmentsRequest
@@ -113,7 +113,7 @@ public class BusObIntegrationTests(ITestOutputHelper iTestOutputHelper) : Cherwe
 	{
 		var cancellationToken = CancellationToken.None;
 
-		var response = await TestCherwellClient
+		var response = await _testCherwellClient
 			.BusinessObject
 			.GetBusinessObjectBatchAsync(
 				new Models.BusinessObject.BatchReadRequest
@@ -143,7 +143,7 @@ public class BusObIntegrationTests(ITestOutputHelper iTestOutputHelper) : Cherwe
 
 		await ((Func<Task>)(async () =>
 		{
-			_ = await TestCherwellClient
+			_ = await _testCherwellClient
 			.BusinessObject
 			.GetBusinessObjectByRecIdAsync("944e0f0f214f53100758de4c81b78466866323bccf", "944e0f1424e236ce71b3c6484d875764a57ce45e51", cancellationToken)
 			;
@@ -166,7 +166,7 @@ public class BusObIntegrationTests(ITestOutputHelper iTestOutputHelper) : Cherwe
 	{
 		var cancellationToken = CancellationToken.None;
 
-		var response = await TestCherwellClient
+		var response = await _testCherwellClient
 			.BusinessObject
 			.GetBusinessObjectSchemaAsync("93c5ca8e7dbd4cc21dead14df19c684298a78358dd", true, cancellationToken)
 			;
@@ -181,7 +181,7 @@ public class BusObIntegrationTests(ITestOutputHelper iTestOutputHelper) : Cherwe
 	{
 		var cancellationToken = CancellationToken.None;
 
-		var response = await TestCherwellClient
+		var response = await _testCherwellClient
 			.BusinessObject
 			.GetBusinessObjectSummariesAsync("Major", cancellationToken)
 			;
@@ -196,7 +196,7 @@ public class BusObIntegrationTests(ITestOutputHelper iTestOutputHelper) : Cherwe
 	{
 		var cancellationToken = CancellationToken.None;
 
-		var response = await TestCherwellClient
+		var response = await _testCherwellClient
 			.BusinessObject
 			.GetBusinessObjectSummaryByIdAsync("944e02d8537d17b3384143451180f87eda564c5798", cancellationToken)
 			;
@@ -211,7 +211,7 @@ public class BusObIntegrationTests(ITestOutputHelper iTestOutputHelper) : Cherwe
 	{
 		var cancellationToken = CancellationToken.None;
 
-		var response = await TestCherwellClient
+		var response = await _testCherwellClient
 			.BusinessObject
 			.GetBusinessObjectSummaryByNameAsync("Building", cancellationToken)
 			;
@@ -226,7 +226,7 @@ public class BusObIntegrationTests(ITestOutputHelper iTestOutputHelper) : Cherwe
 	{
 		var cancellationToken = CancellationToken.None;
 
-		var response = await TestCherwellClient
+		var response = await _testCherwellClient
 			.BusinessObject
 			.GetBusinessObjectTemplateAsync(
 				new Models.BusinessObject.TemplateRequest

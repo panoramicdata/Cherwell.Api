@@ -9,19 +9,25 @@
 		<AnalysisMode>Recommended</AnalysisMode>
 		<AnalysisLevel>latest-recommended</AnalysisLevel>
 		<Version>1.0</Version>
+		<UserSecretsId>37c7e161-87d9-4818-bcce-ca1f4dc49233</UserSecretsId>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Divergic.Logging.Xunit" Version="4.3.0" />
 		<PackageReference Include="FluentAssertions" Version="6.12.0" />
 		<PackageReference Include="FluentAssertions.Analyzers" Version="0.31.0">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 		<PackageReference Include="xunit" Version="2.7.1" />
 		<PackageReference Include="xunit.analyzers" Version="1.12.0" />
+		<PackageReference Include="Xunit.DependencyInjection" Version="9.1.0" />
+		<PackageReference Include="Xunit.DependencyInjection.Logging" Version="9.0.0" />
 		<PackageReference Include="xunit.extensibility.core" Version="2.7.1" />
 		<PackageReference Include="xunit.runner.visualstudio" Version="2.5.8">
 			<PrivateAssets>all</PrivateAssets>

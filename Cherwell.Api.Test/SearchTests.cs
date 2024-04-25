@@ -2,16 +2,17 @@
 using Cherwell.Api.Models.Searches;
 using FluentAssertions;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace Cherwell.Api.Test;
 
-public class SearchTests(ITestOutputHelper iTestOutputHelper) : CherwellClientTest(iTestOutputHelper)
+public class SearchTests(CherwellClient cherwellClient)
 {
+	private readonly CherwellClient _testCherwellClient = cherwellClient;
+
 	[Fact]
 	public async Task GetQuickSearchSpecificResults_Succeeds()
 	{
-		var response = await TestCherwellClient
+		var response = await _testCherwellClient
 			.Searches
 			.GetQuickSearchSpecificResultsAsync(
 				new QuickSearchSpecificRequest
@@ -33,7 +34,7 @@ public class SearchTests(ITestOutputHelper iTestOutputHelper) : CherwellClientTe
 	[Fact]
 	public async Task GetQuickSearchSpecificResultsV2_Succeeds()
 	{
-		var response = await TestCherwellClient
+		var response = await _testCherwellClient
 			.Searches
 			.GetQuickSearchSpecificResultsV2Async(
 				new QuickSearchSpecificRequest
@@ -59,7 +60,7 @@ public class SearchTests(ITestOutputHelper iTestOutputHelper) : CherwellClientTe
 
 		await ((Func<Task>)(async () =>
 		{
-			var response = await TestCherwellClient
+			var response = await _testCherwellClient
 			.Searches
 			.GetQuickSearchResultsAsync(
 				new QuickSearchRequest
@@ -86,7 +87,7 @@ public class SearchTests(ITestOutputHelper iTestOutputHelper) : CherwellClientTe
 
 		await ((Func<Task>)(async () =>
 		{
-			var response = await TestCherwellClient
+			var response = await _testCherwellClient
 			.Searches
 			.GetQuickSearchConfigurationForBusObsWithViewRightsAsync(default)
 			;
@@ -108,7 +109,7 @@ public class SearchTests(ITestOutputHelper iTestOutputHelper) : CherwellClientTe
 
 		await ((Func<Task>)(async () =>
 		{
-			var response = await TestCherwellClient
+			var response = await _testCherwellClient
 			.Searches
 			.GetQuickSearchConfigurationForBusObsAsync(
 			new QuickSearchConfigurationRequest
@@ -143,7 +144,7 @@ public class SearchTests(ITestOutputHelper iTestOutputHelper) : CherwellClientTe
 
 		await ((Func<Task>)(async () =>
 		{
-			var response = await TestCherwellClient
+			var response = await _testCherwellClient
 			.Searches
 			.GetSearchItemsAsync(default, default)
 			;
@@ -165,7 +166,7 @@ public class SearchTests(ITestOutputHelper iTestOutputHelper) : CherwellClientTe
 
 		await ((Func<Task>)(async () =>
 		{
-			var response = await TestCherwellClient
+			var response = await _testCherwellClient
 			.Searches
 			.GetSearchItemsV2Async(default, default)
 			;
@@ -183,7 +184,7 @@ public class SearchTests(ITestOutputHelper iTestOutputHelper) : CherwellClientTe
 	[Fact]
 	public async Task SimpleSearch_Succeeds()
 	{
-		var searchResults = await TestCherwellClient
+		var searchResults = await _testCherwellClient
 		.Searches
 		.GetSearchResultsAdHocAsync(
 			new SearchResultsRequest
@@ -248,7 +249,7 @@ public class SearchTests(ITestOutputHelper iTestOutputHelper) : CherwellClientTe
 	{
 		await ((Func<Task>)(async () =>
 		{
-			var views = await TestCherwellClient
+			var views = await _testCherwellClient
 			.Searches
 			.GetSearchResultsAdHocAsync(
 				new SearchResultsRequest(),

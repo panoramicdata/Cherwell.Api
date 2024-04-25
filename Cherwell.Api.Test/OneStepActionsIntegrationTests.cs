@@ -1,11 +1,11 @@
 ﻿using FluentAssertions;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace Cherwell.Api.Test;
 
-public class OneStepActionsIntegrationTests(ITestOutputHelper iTestOutputHelper) : CherwellClientTest(iTestOutputHelper)
+public class OneStepActionsIntegrationTests(CherwellClient cherwellClient)
 {
+	private readonly CherwellClient _testCherwellClient = cherwellClient;
 
 	// GetOneStepActionsByAssociationScopeScopeOwnerFolderAsync - unable to test, no association to test with
 	// GetOneStepActionsByAssociationScopeScopeOwnerAsync - unable to test, no association to test with
@@ -17,7 +17,7 @@ public class OneStepActionsIntegrationTests(ITestOutputHelper iTestOutputHelper)
 	{
 		var cancellationToken = CancellationToken.None;
 
-		var response = await TestCherwellClient
+		var response = await _testCherwellClient
 			.OneStepActions
 			.GetOneStepActionsAsync(null, cancellationToken)
 			;

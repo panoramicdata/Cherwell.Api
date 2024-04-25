@@ -2,19 +2,20 @@
 using FluentAssertions;
 using System.Text.RegularExpressions;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace Cherwell.Api.Test;
 
-public partial class TicketTests(ITestOutputHelper iTestOutputHelper) : CherwellClientTest(iTestOutputHelper)
+public partial class TicketTests(CherwellClient cherwellClient)
 {
+	private readonly CherwellClient _testCherwellClient = cherwellClient;
+
 	[Theory]
 	[InlineData("")]
 	[InlineData("Status eq 'In Progress' OR Status eq 'Reopened'")]
 	[InlineData("Status eq 'Closed'")]
 	public async Task GetQuickSearchSpecificResults_Succeeds(string query)
 	{
-		var summaries = await TestCherwellClient
+		var summaries = await _testCherwellClient
 			.BusinessObject
 			.GetBusinessObjectSummaryByNameAsync("Incident", default)
 			;
@@ -22,7 +23,7 @@ public partial class TicketTests(ITestOutputHelper iTestOutputHelper) : Cherwell
 
 		var businessObjectId = summary.BusObId;
 
-		var businessObjectSchema = await TestCherwellClient
+		var businessObjectSchema = await _testCherwellClient
 			.BusinessObject
 			.GetBusinessObjectSchemaAsync(businessObjectId, true, default)
 			;
@@ -70,7 +71,7 @@ public partial class TicketTests(ITestOutputHelper iTestOutputHelper) : Cherwell
 			PageSize = take
 		};
 
-		var searchItemResponse = await TestCherwellClient
+		var searchItemResponse = await _testCherwellClient
 			.Searches
 			.GetSearchResultsAdHocAsync(
 				searchResultsRequest,
@@ -91,7 +92,7 @@ public partial class TicketTests(ITestOutputHelper iTestOutputHelper) : Cherwell
 		var cancellationToken = CancellationToken.None;
 
 		// Get a summary of the given object type, if there is one
-		var businessObjectSummaries = await TestCherwellClient
+		var businessObjectSummaries = await _testCherwellClient
 			.BusinessObject
 			.GetBusinessObjectSummaryByNameAsync(ticketType, cancellationToken)
 			;
@@ -112,7 +113,7 @@ public partial class TicketTests(ITestOutputHelper iTestOutputHelper) : Cherwell
 			.Split(",", StringSplitOptions.RemoveEmptyEntries);
 
 		// Retrieve the schema that explains the available fields on the object
-		var businessObjectSchema = await TestCherwellClient
+		var businessObjectSchema = await _testCherwellClient
 			.BusinessObject
 			.GetBusinessObjectSchemaAsync(
 			businessObjectSummary.BusObId,
@@ -120,7 +121,7 @@ public partial class TicketTests(ITestOutputHelper iTestOutputHelper) : Cherwell
 			cancellationToken)
 			;
 
-		var searchItemResponse = await TestCherwellClient
+		var searchItemResponse = await _testCherwellClient
 			.Searches
 			.GetSearchResultsAdHocAsync(
 			new SearchResultsRequest
@@ -172,7 +173,7 @@ public partial class TicketTests(ITestOutputHelper iTestOutputHelper) : Cherwell
 		var cancellationToken = CancellationToken.None;
 
 		// Get a summary of the 'Incident' object type, if there is one
-		var objectSummaries = await TestCherwellClient
+		var objectSummaries = await _testCherwellClient
 			.BusinessObject
 			.GetBusinessObjectSummaryByNameAsync("Incident", cancellationToken)
 			;
@@ -188,7 +189,7 @@ public partial class TicketTests(ITestOutputHelper iTestOutputHelper) : Cherwell
 		var incidentSummary = objectSummaries[0];
 
 		// Retrieve the schema that explains the available fields on the object
-		var incidentSchema = await TestCherwellClient
+		var incidentSchema = await _testCherwellClient
 			.BusinessObject
 			.GetBusinessObjectSchemaAsync(
 			incidentSummary.BusObId,

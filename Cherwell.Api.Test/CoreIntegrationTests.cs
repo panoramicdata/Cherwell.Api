@@ -1,12 +1,12 @@
 ﻿using Cherwell.Api.Exceptions;
 using FluentAssertions;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace Cherwell.Api.Test;
 
-public class CoreIntegrationTests(ITestOutputHelper iTestOutputHelper) : CherwellClientTest(iTestOutputHelper)
+public class CoreIntegrationTests(CherwellClient cherwellClient)
 {
+	private readonly CherwellClient _testCherwellClient = cherwellClient;
 
 	// DeleteGalleryImageByStandInKeyAsync - unable to test, we don't want to delete anything
 
@@ -23,7 +23,7 @@ public class CoreIntegrationTests(ITestOutputHelper iTestOutputHelper) : Cherwel
 
 		await ((Func<Task>)(async () =>
 		{
-			_ = await TestCherwellClient
+			_ = await _testCherwellClient
 			.Core
 			.GetGalleryImagesAsync(true, cancellationToken)
 			;
@@ -55,7 +55,7 @@ public class CoreIntegrationTests(ITestOutputHelper iTestOutputHelper) : Cherwel
 
 		await ((Func<Task>)(async () =>
 		{
-			var response = await TestCherwellClient
+			var response = await _testCherwellClient
 			.Core
 			.GetStoredValuesAsync(true, cancellationToken)
 			;
@@ -75,7 +75,7 @@ public class CoreIntegrationTests(ITestOutputHelper iTestOutputHelper) : Cherwel
 	{
 		await ((Func<Task>)(async () =>
 		{
-			var response = await TestCherwellClient
+			var response = await _testCherwellClient
 			.Core
 			.GetViewsAsync(default)
 			;

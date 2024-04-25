@@ -1,11 +1,11 @@
 ﻿using FluentAssertions;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace Cherwell.Api.Test;
 
-public class QueuesIntegrationTests(ITestOutputHelper iTestOutputHelper) : CherwellClientTest(iTestOutputHelper)
+public class QueuesIntegrationTests(CherwellClient cherwellClient)
 {
+	private readonly CherwellClient _testCherwellClient = cherwellClient;
 
 	// AddItemToQueueAsync - unable to test, no queueStandInKey to test with
 	// CheckInQueueItemAsync - unable to test, no queueStandInKey to test with
@@ -19,7 +19,7 @@ public class QueuesIntegrationTests(ITestOutputHelper iTestOutputHelper) : Cherw
 	{
 		var cancellationToken = CancellationToken.None;
 
-		var response = await TestCherwellClient
+		var response = await _testCherwellClient
 			.Queues
 			.GetQueuesAsync(null, cancellationToken)
 			;

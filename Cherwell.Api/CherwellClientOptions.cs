@@ -28,7 +28,7 @@ public class CherwellClientOptions
 	/// <summary>
 	/// The base address of the API instance to which we are to connect
 	/// </summary>
-	public string BaseAddress { get; set; } = null!;
+	public required string BaseAddress { get; set; }
 
 	/// <summary>
 	/// The authentication mode in use for connection attempts
@@ -56,7 +56,7 @@ public class CherwellClientOptions
 	public CultureInfo? Culture { get; set; }
 
 	/// <summary>
-	/// Controls the timeout 
+	/// Controls the timeout
 	/// </summary>
 	public int TimeoutSeconds { get; set; } = 100;
 
