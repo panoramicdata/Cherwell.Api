@@ -182,7 +182,7 @@ public class SearchTests(CherwellClient cherwellClient)
 	}
 
 	[Fact]
-	public async Task SimpleSearch_Succeeds()
+	public async Task GetSearchResultsAdHocAsync_SimpleSearch_Succeeds()
 	{
 		var searchResults = await _testCherwellClient
 		.Searches
@@ -245,7 +245,117 @@ public class SearchTests(CherwellClient cherwellClient)
 	}
 
 	[Fact]
-	public async Task WideSearch_Fails()
+	public async Task GetSearchResultsAdhocAsync_FilteredSearch_ReturnsValidStatusCode()
+	{
+		var searchResults = await _testCherwellClient
+		.Searches
+		.GetSearchResultsAdHocAsync(
+			new SearchResultsRequest
+			{
+				BusObId = "6dd53665c0c24cab86870a21cf6434ae",
+				Filters = [
+					new FilterInfo
+					{
+						FieldId = "BO:6dd53665c0c24cab86870a21cf6434ae,FI:9487d346f460643b684abe471c821dbf0ef05ec471",
+						Operator = "eq",
+						Value = "LMD1234567890"
+					}
+				]
+			},
+			default)
+		;
+
+		searchResults
+			.Should()
+			.NotBeNull();
+
+		searchResults.HasPrompts.Should().BeFalse();
+		searchResults.Links.Should().BeEmpty();
+		searchResults.Prompts.Should().BeEmpty();
+		searchResults.SearchResultsFields.Should().BeEmpty();
+		searchResults.SimpleResults.Should().BeNull();
+		searchResults.ErrorCode.Should().BeNull();
+		searchResults.ErrorMessage.Should().BeNull();
+		searchResults.HasError.Should().BeFalse();
+	}
+
+	[Fact]
+	public async Task GetSearchResultsAdhocAsync_FilteredSearchWithPageNumber_ReturnsValidStatusCode()
+	{
+		var searchResults = await _testCherwellClient
+		.Searches
+		.GetSearchResultsAdHocAsync(
+			new SearchResultsRequest
+			{
+				BusObId = "6dd53665c0c24cab86870a21cf6434ae",
+				Filters = [
+					new FilterInfo
+					{
+						FieldId = "BO:6dd53665c0c24cab86870a21cf6434ae,FI:9487d346f460643b684abe471c821dbf0ef05ec471",
+						Operator = "eq",
+						Value = "LMD1234567890"
+					}
+				],
+				PageNumber = 0,
+				PageSize = 100,
+			},
+			default)
+		;
+
+		searchResults
+			.Should()
+			.NotBeNull();
+
+		searchResults.HasPrompts.Should().BeFalse();
+		searchResults.Links.Should().BeEmpty();
+		searchResults.Prompts.Should().BeEmpty();
+		searchResults.SearchResultsFields.Should().BeEmpty();
+		searchResults.SimpleResults.Should().BeNull();
+		searchResults.ErrorCode.Should().BeNull();
+		searchResults.ErrorMessage.Should().BeNull();
+		searchResults.HasError.Should().BeFalse();
+	}
+
+	[Fact]
+	public async Task GetSearchResultsAdhocAsync_FilteredSearchExcludingSchema_ReturnsValidStatusCode()
+	{
+		var searchResults = await _testCherwellClient
+		.Searches
+		.GetSearchResultsAdHocAsync(
+			new SearchResultsRequest
+			{
+				BusObId = "6dd53665c0c24cab86870a21cf6434ae",
+				Filters = [
+					new FilterInfo
+					{
+						FieldId = "BO:6dd53665c0c24cab86870a21cf6434ae,FI:9487d346f460643b684abe471c821dbf0ef05ec471",
+						Operator = "eq",
+						Value = "LMD1234567890"
+					}
+				],
+				IncludeSchema = false,
+				PageNumber = 0,
+				PageSize = 100,
+			},
+			default)
+		;
+
+		searchResults
+			.Should()
+			.NotBeNull();
+
+		searchResults.HasPrompts.Should().BeFalse();
+		searchResults.Links.Should().BeEmpty();
+		searchResults.Prompts.Should().BeEmpty();
+		searchResults.SearchResultsFields.Should().BeEmpty();
+		searchResults.SimpleResults.Should().BeNull();
+		searchResults.ErrorCode.Should().BeNull();
+		searchResults.ErrorMessage.Should().BeNull();
+		searchResults.HasError.Should().BeFalse();
+	}
+
+	[Fact]
+	public async Task GetSearchResultsAdHocAsync_WideSearch_Fails()
 	{
 		await ((Func<Task>)(async () =>
 		{
