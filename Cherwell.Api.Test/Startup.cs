@@ -22,7 +22,7 @@ public class Startup
 				.AddFilter(level => level >= LogLevel.Debug)
 				.AddXunitOutput()
 			)
-			.AddTransient(s =>
+			.AddSingleton(s =>
 			{
 				var options = config.GetSection("CherwellClientOptions").Get<CherwellClientOptions>()
 					?? throw new FormatException("Configuration is missing a valid CherwellClientOptions section");

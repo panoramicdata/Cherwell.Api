@@ -349,8 +349,11 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 	protected override async void Dispose(bool disposing)
 	{
 		// Tidy up, including logging out
-		await LogoutAsync()
-			;
+		if (_accessToken is not null)
+		{
+			await LogoutAsync();
+		}
+
 		_authenticatingClient?.Dispose();
 
 		base.Dispose(disposing);
