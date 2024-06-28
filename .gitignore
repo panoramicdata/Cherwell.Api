@@ -399,4 +399,5 @@ FodyWeavers.xsd
 
 /.vs
 
+appsettings.json
 appsettings.jsonc
