@@ -231,7 +231,11 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		do
 		{
 			attemptCount++;
-			_logger.LogInformation("Cherwell 'GenerateAccessTokenAsync' (attempt # {Attempt})", attemptCount);
+			_logger.LogInformation(
+				"Cherwell 'GenerateAccessTokenAsync' (attempt {Attempt}/{MaxAttempts})",
+				attemptCount,
+				_maxAttempts
+			);
 
 			using (var request = new HttpRequestMessage(HttpMethod.Post, "token"))
 			{
@@ -259,43 +263,66 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 					;
 			}
 
+			var stringResponse = await response
+				.Content
+				.ReadAsStringAsync()
+				;
+
+			// Did auth succeed?
 			if (response.IsSuccessStatusCode)
 			{
-				// Exit the while loop
-				break;
-			}
+				// Yes.  Try to parse the response
+				var tokenResponse = JsonConvert.DeserializeObject<TokenResponse>(stringResponse);
 
-			// Was not successful
-			if (attemptCount >= _maxAttempts)
+				// Did we parse the token?
+				if (tokenResponse is null)
+				{
+					// No.
+					_logger.LogError("Could not deserialize content as a TokenResponse.");
+					throw new AuthenticationException("Could not deserialize content as a TokenResponse.");
+				}
+				// Yes
+
+				// Store and return
+				_accessToken = tokenResponse.AccessToken;
+				_refreshToken = tokenResponse.RefreshToken;
+				_tokenRefreshRequiredAt = DateTime.Now.AddSeconds((tokenResponse.ExpiresIn) - _tokenSubtractSeconds);
+				return;
+			}
+			// No.
+
+			// Is it a 4xx error?
+			if ((int)response.StatusCode / 100 == 4)
 			{
+				// Yes.  Log the error and throw an exception
 				if (!string.IsNullOrWhiteSpace(response.ReasonPhrase))
 				{
-					_logger.LogError("Cherwell 'GenerateAccessTokenAsync' response unsuccessful: {Reason}", response.ReasonPhrase);
-					throw new AuthenticationException(response.ReasonPhrase);
+					_logger.LogError(
+						"Cherwell 'GenerateAccessTokenAsync' response unsuccessful: {Reason}: {Content}",
+						response.ReasonPhrase,
+						stringResponse);
+
+					throw new AuthenticationException($"Cherwell 'GenerateAccessTokenAsync' response unsuccessful: {response.ReasonPhrase}: {stringResponse}");
 				}
 
 				throw new AuthenticationException(
-					"Cherwell 'GenerateAccessTokenAsync' response unsuccessful. " +
-					"No reason phrase was provided by the server.");
+					$"Cherwell 'GenerateAccessTokenAsync' response unsuccessful: {stringResponse}");
 			}
 
-			// Wait N seconds
-			_logger.LogInformation("Cherwell 'GenerateAccessTokenAsync': waiting {Seconds} before retrying...", retryDelayMs);
+			// Wait before retrying
+			_logger.LogInformation(
+				"Cherwell 'GenerateAccessTokenAsync' failed with status code {StatusCode}: waiting {RetryDelayMs}ms before retrying...",
+				response.StatusCode,
+				retryDelayMs);
+
 			await Task.Delay(retryDelayMs, cancellationToken).ConfigureAwait(false);
 			retryDelayMs *= 2;
+			continue;
 		}
 		while (attemptCount <= _maxAttempts);
 
-		var stringResponse = await response
-			.Content
-			.ReadAsStringAsync()
-			;
-
-		var tokenResponse = JsonConvert.DeserializeObject<TokenResponse>(stringResponse)
-			?? throw new AuthenticationException("Could not deserialize content as a TokenResponse.");
-		_accessToken = tokenResponse.AccessToken;
-		_refreshToken = tokenResponse.RefreshToken;
-		_tokenRefreshRequiredAt = DateTime.Now.AddSeconds((tokenResponse.ExpiresIn) - _tokenSubtractSeconds);
+		throw new AuthenticationException(
+			$"Authentication failed after {_maxAttempts} attempts");
 	}
 
 	private static void SetUserAgent(HttpClient httpClient, string? userAgentString)
@@ -333,8 +360,8 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		request.Headers.Authorization = new AuthenticationHeaderValue(_authenticationType, _accessToken);
 
 		var response = await _authenticatingClient
-			.SendAsync(request)
-			;
+			.SendAsync(request);
+
 		if (!response.IsSuccessStatusCode)
 		{
 			_logger.LogWarning("Could not log out: {Message}", Resources.FailedToLogOut);
