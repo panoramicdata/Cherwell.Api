@@ -26,7 +26,7 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 
 		<PackageReleaseNotes>
-			Improvements to handling of authentication failures
+			Disabled chunked transfer encoding
 		</PackageReleaseNotes>
 
 	</PropertyGroup>
