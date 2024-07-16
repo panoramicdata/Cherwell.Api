@@ -68,6 +68,8 @@ public class CherwellClientOptions
 	/// <summary>
 	/// The level at which request logging is emitted
 	/// </summary>
+	[Obsolete("This setting is not intended for production use")]
+	[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
 	public LogLevel RequestLogLevel { get; set; } = LogLevel.Debug;
 
 	/// <summary>
