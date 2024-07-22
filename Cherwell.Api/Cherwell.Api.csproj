@@ -26,7 +26,7 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 
 		<PackageReleaseNotes>
-			Disabled chunked transfer encoding
+			Removed obsolete members
 		</PackageReleaseNotes>
 
 	</PropertyGroup>

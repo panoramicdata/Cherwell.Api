@@ -63,7 +63,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 
 			// Check the logging level as the operation to
 			// extract the content is expensive
-			if (_logger.IsEnabled(_options.RequestLogLevel))
+			if (_logger.IsEnabled(LogLevel.Debug))
 			{
 				var url = request.RequestUri!.ToString();
 				var headers = string.Join("\n", request.Headers.Select(h => $"{h.Key}: {string.Join(", ", h.Value.Select(v => v))}"));
@@ -79,7 +79,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 					body = JsonConvert.SerializeObject(jObject, Formatting.Indented);
 				}
 
-				_logger.Log(_options.RequestLogLevel,
+				_logger.Log(LogLevel.Debug,
 					"{RequestId}: REQUEST: Url:{Url}\nHeaders:{Headers}\nBody: {Body}",
 					requestId,
 					url,
@@ -104,7 +104,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 
 			// Check the logging level as the operation to
 			// extract the content is expensive
-			if (_logger.IsEnabled(_options.RequestLogLevel))
+			if (_logger.IsEnabled(LogLevel.Debug))
 			{
 				var headers = string.Join("\n", httpResponse.Headers.Select(h => $"{h.Key}: {string.Join(", ", h.Value.Select(v => v))}"));
 				var body = httpResponse.Content is not null
@@ -123,7 +123,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 					// This doesn't work for arrays, which return the JArray type
 				}
 
-				_logger.Log(_options.RequestLogLevel,
+				_logger.Log(LogLevel.Debug,
 					"{RequestId}: RESPONSE: {StatusCode}\nHeaders:{Headers}\nBody: {Body}",
 					requestId,
 					httpResponse.StatusCode,
