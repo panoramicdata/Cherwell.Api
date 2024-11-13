@@ -36,18 +36,20 @@ public class CherwellClient : IDisposable
 			Timeout = TimeSpan.FromSeconds(options.TimeoutSeconds)
 		};
 
-		Approval = RestService.For<IApproval>(_httpClient);
-		BusinessObject = RestService.For<IBusinessObject>(_httpClient);
-		Core = RestService.For<ICore>(_httpClient);
-		Forms = RestService.For<IForms>(_httpClient);
-		Lifecycle = RestService.For<ILifecycle>(_httpClient);
-		OneStepActions = RestService.For<IOneStepActions>(_httpClient);
-		Queues = RestService.For<IQueues>(_httpClient);
-		Searches = RestService.For<ISearches>(_httpClient);
-		Security = RestService.For<ISecurity>(_httpClient);
-		Service = RestService.For<IService>(_httpClient);
-		Teams = RestService.For<ITeams>(_httpClient);
-		Users = RestService.For<IUsers>(_httpClient);
+		var refitSettings = new RefitSettings { Buffered = true };
+
+		Approval = RestService.For<IApproval>(_httpClient, refitSettings);
+		BusinessObject = RestService.For<IBusinessObject>(_httpClient, refitSettings);
+		Core = RestService.For<ICore>(_httpClient, refitSettings);
+		Forms = RestService.For<IForms>(_httpClient, refitSettings);
+		Lifecycle = RestService.For<ILifecycle>(_httpClient, refitSettings);
+		OneStepActions = RestService.For<IOneStepActions>(_httpClient, refitSettings);
+		Queues = RestService.For<IQueues>(_httpClient, refitSettings);
+		Searches = RestService.For<ISearches>(_httpClient, refitSettings);
+		Security = RestService.For<ISecurity>(_httpClient, refitSettings);
+		Service = RestService.For<IService>(_httpClient, refitSettings);
+		Teams = RestService.For<ITeams>(_httpClient, refitSettings);
+		Users = RestService.For<IUsers>(_httpClient, refitSettings);
 	}
 
 	/// <inheritdoc />

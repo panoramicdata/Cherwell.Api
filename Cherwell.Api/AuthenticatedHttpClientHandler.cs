@@ -79,7 +79,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 					body = JsonConvert.SerializeObject(jObject, Formatting.Indented);
 				}
 
-				_logger.LogDebug(
+				_logger.Log(LogLevel.Debug,
 					"{RequestId}: REQUEST: Url:{Url}\nHeaders:{Headers}\nBody: {Body}",
 					requestId,
 					url,
@@ -123,7 +123,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 					// This doesn't work for arrays, which return the JArray type
 				}
 
-				_logger.LogDebug(
+				_logger.Log(LogLevel.Debug,
 					"{RequestId}: RESPONSE: {StatusCode}\nHeaders:{Headers}\nBody: {Body}",
 					requestId,
 					httpResponse.StatusCode,
