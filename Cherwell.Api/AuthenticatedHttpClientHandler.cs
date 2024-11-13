@@ -17,8 +17,8 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 	private string? _accessToken;
 	private string? _refreshToken;
 	private DateTime _tokenRefreshRequiredAt = DateTime.MaxValue;
-	private const string _authenticationType = "Bearer";
-	private const int _tokenSubtractSeconds = 30;   // Used as a 'safe window' to refresh the token N seconds before expiry. Was previously 5
+	private const string AuthenticationType = "Bearer";
+	private const int TokenSubtractSeconds = 30;   // Used as a 'safe window' to refresh the token N seconds before expiry. Was previously 5
 	private readonly int _maxAttempts = 5;
 
 	public AuthenticatedHttpClientHandler(
@@ -57,7 +57,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			{
 				// No.  Add one.
 				var accessToken = await GetAccessTokenAsync(cancellationToken);
-				request.Headers.Authorization = new AuthenticationHeaderValue(_authenticationType, accessToken);
+				request.Headers.Authorization = new AuthenticationHeaderValue(AuthenticationType, accessToken);
 			}
 			// The request now has an authorize header
 
@@ -149,7 +149,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 					// Yes.
 
 					// Update the status code if not set
-					if (response.HttpStatusCode is null || response.HttpStatusCode == EnumHttpStatusCode.None)
+					if (response.HttpStatusCode is null or EnumHttpStatusCode.None)
 					{
 						response.HttpStatusCode = (EnumHttpStatusCode)httpResponse.StatusCode;
 					}
@@ -286,7 +286,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 				// Store and return
 				_accessToken = tokenResponse.AccessToken;
 				_refreshToken = tokenResponse.RefreshToken;
-				_tokenRefreshRequiredAt = DateTime.Now.AddSeconds((tokenResponse.ExpiresIn) - _tokenSubtractSeconds);
+				_tokenRefreshRequiredAt = DateTime.Now.AddSeconds(tokenResponse.ExpiresIn - TokenSubtractSeconds);
 				return;
 			}
 			// No.
@@ -357,7 +357,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 
 		// TODO: Should we parameterise the version of the API in use?
 		var request = new HttpRequestMessage(HttpMethod.Delete, "api/V1/logout");
-		request.Headers.Authorization = new AuthenticationHeaderValue(_authenticationType, _accessToken);
+		request.Headers.Authorization = new AuthenticationHeaderValue(AuthenticationType, _accessToken);
 
 		var response = await _authenticatingClient
 			.SendAsync(request);

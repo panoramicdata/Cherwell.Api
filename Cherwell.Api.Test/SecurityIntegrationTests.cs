@@ -39,8 +39,7 @@ public class SecurityIntegrationTests(CherwellClient cherwellClient)
 		.WithMessage(Message.UnknownException)
 		.Where(e =>
 			e.Response != null && e.Response.ErrorCode == ErrorCode.InsufficientRights
-			&& e.Response.HasError == true
-		);
+			&& e.Response.HasError);
 	}
 
 	[Fact]
@@ -60,8 +59,7 @@ public class SecurityIntegrationTests(CherwellClient cherwellClient)
 		.WithMessage(Message.InsufficientRights)
 		.Where(e =>
 			e.Response != null && e.Response.ErrorCode == ErrorCode.InsufficientRights
-			&& e.Response.HasError == true
-		);
+			&& e.Response.HasError);
 	}
 
 	// GetSecurityGroupBusinessObjectPermissionsByBusObIdAsync - unable to test, no groupId to test with

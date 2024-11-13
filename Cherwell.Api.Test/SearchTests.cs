@@ -76,7 +76,7 @@ public class SearchTests(CherwellClient cherwellClient)
 		.Where(e =>
 			e.Response != null && e.Response.ErrorCode == ErrorCode.Forbidden
 			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.Forbidden
-			&& e.Response.HasError == true
+			&& e.Response.HasError
 		);
 	}
 
@@ -98,8 +98,7 @@ public class SearchTests(CherwellClient cherwellClient)
 		.Where(e =>
 			e.Response != null && e.Response.ErrorCode == ErrorCode.Forbidden
 			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.Forbidden
-			&& e.Response.HasError == true
-		);
+			&& e.Response.HasError);
 	}
 
 	[Fact]
@@ -124,8 +123,7 @@ public class SearchTests(CherwellClient cherwellClient)
 		.Where(e =>
 			e.Response != null && e.Response.ErrorCode == ErrorCode.Forbidden
 			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.Forbidden
-			&& e.Response.HasError == true
-		);
+			&& e.Response.HasError);
 	}
 
 	// GetSearchItemsByAssociationScopeScopeOwnerFolderAsync - unable to test, no association to test with
@@ -155,8 +153,7 @@ public class SearchTests(CherwellClient cherwellClient)
 		.Where(e =>
 			e.Response != null && e.Response.ErrorCode == ErrorCode.Forbidden
 			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.Forbidden
-			&& e.Response.HasError == true
-		);
+			&& e.Response.HasError);
 	}
 
 	[Fact]
@@ -177,8 +174,7 @@ public class SearchTests(CherwellClient cherwellClient)
 		.Where(e =>
 			e.Response != null && e.Response.ErrorCode == ErrorCode.Forbidden
 			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.Forbidden
-			&& e.Response.HasError == true
-		);
+			&& e.Response.HasError);
 	}
 
 	[Fact]
@@ -356,8 +352,7 @@ public class SearchTests(CherwellClient cherwellClient)
 
 	[Fact]
 	public async Task GetSearchResultsAdHocAsync_WideSearch_Fails()
-	{
-		await ((Func<Task>)(async () =>
+		=> await ((Func<Task>)(async () =>
 		{
 			var views = await _testCherwellClient
 			.Searches
@@ -372,9 +367,7 @@ public class SearchTests(CherwellClient cherwellClient)
 		.Where(e =>
 			e.Response != null && e.Response.ErrorCode == ErrorCode.NotFound
 			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.InternalServerError
-			&& e.Response.HasError == true
-		);
-	}
+			&& e.Response.HasError);
 
 	// GetSearchResultsByIdAsync - unable to test, no association to test with
 	// GetSearchResultsByNameAsync - unable to test, no association to test with

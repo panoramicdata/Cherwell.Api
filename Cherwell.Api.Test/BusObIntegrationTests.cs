@@ -56,7 +56,7 @@ public class BusObIntegrationTests(CherwellClient testCherwellClient)
 		.WithMessage(Message.RecordNotFound)
 		.Where(e =>
 			e.Response != null && e.Response.ErrorCode == ErrorCode.RecordNotFound
-			&& e.Response.HasError == true
+			&& e.Response.HasError
 		);
 	}
 
@@ -79,7 +79,7 @@ public class BusObIntegrationTests(CherwellClient testCherwellClient)
 		.WithMessage(Message.RecordNotFound)
 		.Where(e =>
 			e.Response != null && e.Response.ErrorCode == ErrorCode.RecordNotFound
-			&& e.Response.HasError == true
+			&& e.Response.HasError
 		);
 	}
 
@@ -104,7 +104,7 @@ public class BusObIntegrationTests(CherwellClient testCherwellClient)
 		.WithMessage(Message.RecordNotFound)
 		.Where(e =>
 			e.Response != null && e.Response.ErrorCode == ErrorCode.RecordNotFound
-			&& e.Response.HasError == true
+			&& e.Response.HasError
 		);
 	}
 
@@ -153,7 +153,7 @@ public class BusObIntegrationTests(CherwellClient testCherwellClient)
 		.WithMessage(Message.RecordNotFound)
 		.Where(e =>
 			e.Response != null && e.Response.ErrorCode == ErrorCode.RecordNotFound
-			&& e.Response.HasError == true
+			&& e.Response.HasError
 		);
 	}
 

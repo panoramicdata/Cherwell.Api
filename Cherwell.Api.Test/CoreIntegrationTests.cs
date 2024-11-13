@@ -34,7 +34,7 @@ public class CoreIntegrationTests(CherwellClient cherwellClient)
 		.Where(e =>
 			e.Response != null && e.Response.ErrorCode == ErrorCode.Forbidden
 			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.Forbidden
-			&& e.Response.HasError == true
+			&& e.Response.HasError
 		);
 	}
 
@@ -66,13 +66,12 @@ public class CoreIntegrationTests(CherwellClient cherwellClient)
 		.Where(e =>
 			e.Response != null && e.Response.ErrorCode == ErrorCode.Forbidden
 			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.Forbidden
-			&& e.Response.HasError == true
+			&& e.Response.HasError
 		);
 	}
 
 	[Fact]
-	public async Task Core_GetViews()
-	{
+	public async Task Core_GetViews() =>
 		await ((Func<Task>)(async () =>
 		{
 			var response = await _testCherwellClient
@@ -86,9 +85,8 @@ public class CoreIntegrationTests(CherwellClient cherwellClient)
 		.Where(e =>
 			e.Response != null && e.Response.ErrorCode == ErrorCode.Forbidden
 			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.Forbidden
-			&& e.Response.HasError == true
+			&& e.Response.HasError
 		);
-	}
 	// SaveGalleryImageAsync - unable to test, we don't want to modify anything
 
 	// SaveStoredValueAsync - unable to test, we don't want to modify anything
