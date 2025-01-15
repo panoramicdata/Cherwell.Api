@@ -25,7 +25,7 @@
 		<Title>Cherwell.Api</Title>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 
-		<PackageReleaseNotes>Updated all nuget packages.</PackageReleaseNotes>
+		<PackageReleaseNotes>Fixed an issue where when doing a search / request, the error message (when you do not have rights to query for a business object) is now propagated properly.</PackageReleaseNotes>
 
 	</PropertyGroup>
 

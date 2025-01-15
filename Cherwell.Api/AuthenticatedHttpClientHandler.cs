@@ -1,4 +1,5 @@
 ﻿using Cherwell.Api.Exceptions;
+using Cherwell.Api.Models;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -143,21 +144,35 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 						.ReadAsStringAsync()
 						.ConfigureAwait(false)
 					: string.Empty;
-				var response = JsonConvert.DeserializeObject<Response>(body);
-				if (response is not null)
+
+				try
 				{
-					// Yes.
-
-					// Update the status code if not set
-					if (response.HttpStatusCode is null or EnumHttpStatusCode.None)
+					// This may fail
+					var response = JsonConvert.DeserializeObject<Response>(body);
+					if (response is not null)
 					{
-						response.HttpStatusCode = (EnumHttpStatusCode)httpResponse.StatusCode;
-					}
+						// Yes.
 
-					// Throw a CherwellApiException before Refit can get hold of it.
-					throw string.IsNullOrWhiteSpace(response.ErrorMessage)
-						? new CherwellApiException(response, $"Cherwell responded with {response.ErrorCode} ({response.HttpStatusCode})")
-						: new CherwellApiException(response, $"Cherwell responded with {response.ErrorCode} ({response.HttpStatusCode}), with message: {response.ErrorMessage}");
+						// Update the status code if not set
+						if (response.HttpStatusCode is null or EnumHttpStatusCode.None)
+						{
+							response.HttpStatusCode = (EnumHttpStatusCode)httpResponse.StatusCode;
+						}
+
+						// Throw a CherwellApiException before Refit can get hold of it.
+						throw string.IsNullOrWhiteSpace(response.ErrorMessage)
+							? new CherwellApiException(response, $"Cherwell responded with {response.ErrorCode} ({response.HttpStatusCode})")
+							: new CherwellApiException(response, $"Cherwell responded with {response.ErrorCode} ({response.HttpStatusCode}), with message: {response.ErrorMessage}");
+					}
+				}
+				catch (JsonReaderException)
+				{
+					var reason = $"Cherwell responded with {httpResponse.StatusCode} ({httpResponse.ReasonPhrase})";
+					if (!string.IsNullOrWhiteSpace(body))
+					{
+						reason += $" - {body}";
+					}
+					throw new CherwellApiException(reason);
 				}
 			}
 
