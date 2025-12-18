@@ -54,13 +54,17 @@ Write-Host "Git working directory is clean" -ForegroundColor Green
 # Step 2: Determine Nerdbank git version
 Write-Step "Determining Nerdbank git version"
 
-$versionOutput = dotnet nbgv get-version -f json 2>&1
-if ($LASTEXITCODE -ne 0) {
+try {
+    $versionOutput = & nbgv get-version -f json 2>$null
+    if ($LASTEXITCODE -ne 0) {
+        throw "nbgv returned non-zero exit code"
+    }
+    $versionInfo = $versionOutput | ConvertFrom-Json
+    $version = $versionInfo.NuGetPackageVersion
+}
+catch {
     Exit-WithError "Failed to get Nerdbank git version. Ensure nbgv tool is installed: dotnet tool install -g nbgv"
 }
-
-$versionInfo = $versionOutput | ConvertFrom-Json
-$version = $versionInfo.NuGetPackageVersion
 
 if (-not $version) {
     Exit-WithError "Could not determine NuGet package version"
