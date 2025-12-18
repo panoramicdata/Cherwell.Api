@@ -1,18 +1,11 @@
-﻿using Cherwell.Api.Exceptions;
-using Cherwell.Api.Models.Searches;
-using FluentAssertions;
-using Xunit;
+﻿namespace Cherwell.Api.Test;
 
-namespace Cherwell.Api.Test;
-
-public class SearchTests(CherwellClient cherwellClient)
+public class SearchTests : TestBase
 {
-	private readonly CherwellClient _testCherwellClient = cherwellClient;
-
 	[Fact]
 	public async Task GetQuickSearchSpecificResults_Succeeds()
 	{
-		var response = await _testCherwellClient
+		var response = await Client
 			.Searches
 			.GetQuickSearchSpecificResultsAsync(
 				new QuickSearchSpecificRequest
@@ -23,7 +16,7 @@ public class SearchTests(CherwellClient cherwellClient)
 						DisplayName = "test",
 						Units = "test"
 					},
-				}, default, default, default, default)
+				}, default, default, default, CancellationToken)
 			;
 
 		response
@@ -34,7 +27,7 @@ public class SearchTests(CherwellClient cherwellClient)
 	[Fact]
 	public async Task GetQuickSearchSpecificResultsV2_Succeeds()
 	{
-		var response = await _testCherwellClient
+		var response = await Client
 			.Searches
 			.GetQuickSearchSpecificResultsV2Async(
 				new QuickSearchSpecificRequest
@@ -45,7 +38,7 @@ public class SearchTests(CherwellClient cherwellClient)
 						DisplayName = "test",
 						Units = "test"
 					},
-				}, default, default, default, default)
+				}, default, default, default, CancellationToken)
 			;
 
 		response
@@ -54,22 +47,18 @@ public class SearchTests(CherwellClient cherwellClient)
 	}
 
 	[Fact]
-	public async Task GetQuickSearchResults_NotAuth()
-	{
-		var cancellationToken = CancellationToken.None;
-
-		await ((Func<Task>)(async () =>
-		{
-			var response = await _testCherwellClient
-			.Searches
-			.GetQuickSearchResultsAsync(
-				new QuickSearchRequest
-				{
-					BusObIds = ["93c5ca8e7dbd4cc21dead14df19c684298a78358dd"],
-					SearchText = "test"
-				}, default, cancellationToken)
-			;
-		}))
+	public async Task GetQuickSearchResults_NotAuth() => await ((Func<Task>)(async () =>
+														 {
+															 var response = await Client
+															 .Searches
+															 .GetQuickSearchResultsAsync(
+																 new QuickSearchRequest
+																 {
+																	 BusObIds = ["93c5ca8e7dbd4cc21dead14df19c684298a78358dd"],
+																	 SearchText = "test"
+																 }, default, CancellationToken)
+															 ;
+														 }))
 		.Should()
 		.ThrowAsync<CherwellApiException>()
 		.WithMessage(Message.Forbidden)
@@ -78,20 +67,15 @@ public class SearchTests(CherwellClient cherwellClient)
 			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.Forbidden
 			&& e.Response.HasError
 		);
-	}
 
 	[Fact]
-	public async Task GetQuickSearchWithViewRights_NotAuth()
-	{
-		var cancellationToken = CancellationToken.None;
-
-		await ((Func<Task>)(async () =>
-		{
-			var response = await _testCherwellClient
-			.Searches
-			.GetQuickSearchConfigurationForBusObsWithViewRightsAsync(default)
-			;
-		}))
+	public async Task GetQuickSearchWithViewRights_NotAuth() => await ((Func<Task>)(async () =>
+																{
+																	var response = await Client
+																	.Searches
+																	.GetQuickSearchConfigurationForBusObsWithViewRightsAsync(CancellationToken)
+																	;
+																}))
 		.Should()
 		.ThrowAsync<CherwellApiException>()
 		.WithMessage(Message.Forbidden)
@@ -99,24 +83,19 @@ public class SearchTests(CherwellClient cherwellClient)
 			e.Response != null && e.Response.ErrorCode == ErrorCode.Forbidden
 			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.Forbidden
 			&& e.Response.HasError);
-	}
 
 	[Fact]
-	public async Task GetQuickSearchConfig_NotAuth()
-	{
-		var cancellationToken = CancellationToken.None;
-
-		await ((Func<Task>)(async () =>
-		{
-			var response = await _testCherwellClient
-			.Searches
-			.GetQuickSearchConfigurationForBusObsAsync(
-			new QuickSearchConfigurationRequest
-			{
-				BusObIds = ["93c5ca8e7dbd4cc21dead14df19c684298a78358dd"]
-			}, default)
-			;
-		}))
+	public async Task GetQuickSearchConfig_NotAuth() => await ((Func<Task>)(async () =>
+														{
+															var response = await Client
+															.Searches
+															.GetQuickSearchConfigurationForBusObsAsync(
+															new QuickSearchConfigurationRequest
+															{
+																BusObIds = ["93c5ca8e7dbd4cc21dead14df19c684298a78358dd"]
+															}, CancellationToken)
+															;
+														}))
 		.Should()
 		.ThrowAsync<CherwellApiException>()
 		.WithMessage(Message.Forbidden)
@@ -124,7 +103,6 @@ public class SearchTests(CherwellClient cherwellClient)
 			e.Response != null && e.Response.ErrorCode == ErrorCode.Forbidden
 			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.Forbidden
 			&& e.Response.HasError);
-	}
 
 	// GetSearchItemsByAssociationScopeScopeOwnerFolderAsync - unable to test, no association to test with
 	// GetSearchItemsByAssociationScopeScopeOwnerFolderV2Async - unable to test, no association to test with
@@ -136,17 +114,13 @@ public class SearchTests(CherwellClient cherwellClient)
 	// GetSearchItemsByAssociationV2Async - unable to test, no association to test with
 
 	[Fact]
-	public async Task GetSearchItems_NotAuth()
-	{
-		var cancellationToken = CancellationToken.None;
-
-		await ((Func<Task>)(async () =>
-		{
-			var response = await _testCherwellClient
-			.Searches
-			.GetSearchItemsAsync(default, default)
-			;
-		}))
+	public async Task GetSearchItems_NotAuth() => await ((Func<Task>)(async () =>
+												  {
+													  var response = await Client
+													  .Searches
+													  .GetSearchItemsAsync(default, CancellationToken)
+													  ;
+												  }))
 		.Should()
 		.ThrowAsync<CherwellApiException>()
 		.WithMessage(Message.Forbidden)
@@ -154,20 +128,15 @@ public class SearchTests(CherwellClient cherwellClient)
 			e.Response != null && e.Response.ErrorCode == ErrorCode.Forbidden
 			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.Forbidden
 			&& e.Response.HasError);
-	}
 
 	[Fact]
-	public async Task GetSearchItemsV2_NotAuth()
-	{
-		var cancellationToken = CancellationToken.None;
-
-		await ((Func<Task>)(async () =>
-		{
-			var response = await _testCherwellClient
-			.Searches
-			.GetSearchItemsV2Async(default, default)
-			;
-		}))
+	public async Task GetSearchItemsV2_NotAuth() => await ((Func<Task>)(async () =>
+													{
+														var response = await Client
+														.Searches
+														.GetSearchItemsV2Async(default, CancellationToken)
+														;
+													}))
 		.Should()
 		.ThrowAsync<CherwellApiException>()
 		.WithMessage(Message.Forbidden)
@@ -175,12 +144,11 @@ public class SearchTests(CherwellClient cherwellClient)
 			e.Response != null && e.Response.ErrorCode == ErrorCode.Forbidden
 			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.Forbidden
 			&& e.Response.HasError);
-	}
 
 	[Fact]
 	public async Task GetSearchResultsAdHocAsync_SimpleSearch_Succeeds()
 	{
-		var searchResults = await _testCherwellClient
+		var searchResults = await Client
 		.Searches
 		.GetSearchResultsAdHocAsync(
 			new SearchResultsRequest
@@ -188,7 +156,7 @@ public class SearchTests(CherwellClient cherwellClient)
 				BusObId = "6dd53665c0c24cab86870a21cf6434ae",
 				Filters = []
 			},
-			default)
+			CancellationToken)
 		;
 
 		searchResults
@@ -243,7 +211,7 @@ public class SearchTests(CherwellClient cherwellClient)
 	[Fact]
 	public async Task GetSearchResultsAdhocAsync_FilteredSearch_ReturnsValidStatusCode()
 	{
-		var searchResults = await _testCherwellClient
+		var searchResults = await Client
 		.Searches
 		.GetSearchResultsAdHocAsync(
 			new SearchResultsRequest
@@ -258,7 +226,7 @@ public class SearchTests(CherwellClient cherwellClient)
 					}
 				]
 			},
-			default)
+			CancellationToken)
 		;
 
 		searchResults
@@ -278,7 +246,7 @@ public class SearchTests(CherwellClient cherwellClient)
 	[Fact]
 	public async Task GetSearchResultsAdhocAsync_FilteredSearchWithPageNumber_ReturnsValidStatusCode()
 	{
-		var searchResults = await _testCherwellClient
+		var searchResults = await Client
 		.Searches
 		.GetSearchResultsAdHocAsync(
 			new SearchResultsRequest
@@ -295,7 +263,7 @@ public class SearchTests(CherwellClient cherwellClient)
 				PageNumber = 0,
 				PageSize = 100,
 			},
-			default)
+			CancellationToken)
 		;
 
 		searchResults
@@ -315,7 +283,7 @@ public class SearchTests(CherwellClient cherwellClient)
 	[Fact]
 	public async Task GetSearchResultsAdhocAsync_FilteredSearchExcludingSchema_ReturnsValidStatusCode()
 	{
-		var searchResults = await _testCherwellClient
+		var searchResults = await Client
 		.Searches
 		.GetSearchResultsAdHocAsync(
 			new SearchResultsRequest
@@ -333,7 +301,7 @@ public class SearchTests(CherwellClient cherwellClient)
 				PageNumber = 0,
 				PageSize = 100,
 			},
-			default)
+			CancellationToken)
 		;
 
 		searchResults
@@ -354,11 +322,11 @@ public class SearchTests(CherwellClient cherwellClient)
 	public async Task GetSearchResultsAdHocAsync_WideSearch_Fails()
 		=> await ((Func<Task>)(async () =>
 		{
-			var views = await _testCherwellClient
+			var views = await Client
 			.Searches
 			.GetSearchResultsAdHocAsync(
 				new SearchResultsRequest(),
-				default)
+				CancellationToken)
 			;
 		}))
 		.Should()

@@ -1,13 +1,7 @@
-﻿using Cherwell.Api.Exceptions;
-using FluentAssertions;
-using Xunit;
+﻿namespace Cherwell.Api.Test;
 
-namespace Cherwell.Api.Test;
-
-public class BusObIntegrationTests(CherwellClient testCherwellClient)
+public class BusObIntegrationTests : TestBase
 {
-	private readonly CherwellClient _testCherwellClient = testCherwellClient;
-
 	// DeleteBusinessObjectBatchAsync - unable to test, as we don't want to delete anything
 
 	// DeleteBusinessObjectByPublicIdAsync - unable to test, as we don't want to delete anything
@@ -23,11 +17,9 @@ public class BusObIntegrationTests(CherwellClient testCherwellClient)
 	[Fact]
 	public async Task RetrieveActivities_Succeeds()
 	{
-		var cancellationToken = CancellationToken.None;
-
-		var response = await _testCherwellClient
+		var response = await Client
 			.BusinessObject
-			.GetActivitiesAsync("944e02d8537d17b3384143451180f87eda564c5798", "944e02da60578af7d7bc4644b6ae07ed4eb2648fc3", 1, null, null, cancellationToken)
+			.GetActivitiesAsync("944e02d8537d17b3384143451180f87eda564c5798", "944e02da60578af7d7bc4644b6ae07ed4eb2648fc3", 1, null, null, CancellationToken)
 			;
 
 		response
@@ -40,17 +32,13 @@ public class BusObIntegrationTests(CherwellClient testCherwellClient)
 	// GetBusinessObjectAttachmentsByIdAndRecIdAsync - unable to test, the business objects we're testing with don't have any attachment
 
 	[Fact]
-	public async Task BusOb_GetAttachmentsByIdAndRec_Error()
-	{
-		var cancellationToken = CancellationToken.None;
-
-		await ((Func<Task>)(async () =>
-		{
-			_ = await _testCherwellClient
-			.BusinessObject
-			.GetBusinessObjectAttachmentsByIdAndRecIdAsync("93c5ca8e7dbd4cc21dead14df19c684298a78358dd", "93c5ca8e7d6f942534ba214e2787b6d38dba666dab", "File", "Imported", false, cancellationToken)
-			;
-		}))
+	public async Task BusOb_GetAttachmentsByIdAndRec_Error() => await ((Func<Task>)(async () =>
+																	 {
+																		 _ = await Client
+																		 .BusinessObject
+																		 .GetBusinessObjectAttachmentsByIdAndRecIdAsync("93c5ca8e7dbd4cc21dead14df19c684298a78358dd", "93c5ca8e7d6f942534ba214e2787b6d38dba666dab", "File", "Imported", false, CancellationToken)
+																		 ;
+																	 }))
 		.Should()
 		.ThrowAsync<CherwellApiException>()
 		.WithMessage(Message.RecordNotFound)
@@ -58,22 +46,17 @@ public class BusObIntegrationTests(CherwellClient testCherwellClient)
 			e.Response != null && e.Response.ErrorCode == ErrorCode.RecordNotFound
 			&& e.Response.HasError
 		);
-	}
 
 	// GetBusinessObjectAttachmentsByNameAndPublicIdAsync - unable to test, as we don't have a publicId to test with
 
 	[Fact]
-	public async Task BusOb_GetAttachmentsByNameAndRec_Error()
-	{
-		var cancellationToken = CancellationToken.None;
-
-		await ((Func<Task>)(async () =>
-		{
-			_ = await _testCherwellClient
-			.BusinessObject
-			.GetBusinessObjectAttachmentsByNameAndPublicIdAsync("Building", "93e8652ccb6ffc759c6b544437bfa25c2e60ca36f0", "File", "Imported", false, cancellationToken)
-			;
-		}))
+	public async Task BusOb_GetAttachmentsByNameAndRec_Error() => await ((Func<Task>)(async () =>
+																	   {
+																		   _ = await Client
+																		   .BusinessObject
+																		   .GetBusinessObjectAttachmentsByNameAndPublicIdAsync("Building", "93e8652ccb6ffc759c6b544437bfa25c2e60ca36f0", "File", "Imported", false, CancellationToken)
+																		   ;
+																	   }))
 		.Should()
 		.ThrowAsync<CherwellApiException>()
 		.WithMessage(Message.RecordNotFound)
@@ -81,24 +64,19 @@ public class BusObIntegrationTests(CherwellClient testCherwellClient)
 			e.Response != null && e.Response.ErrorCode == ErrorCode.RecordNotFound
 			&& e.Response.HasError
 		);
-	}
 
 	[Fact]
-	public async Task BusOb_GetAttachments_Error()
-	{
-		var cancellationToken = CancellationToken.None;
-
-		await ((Func<Task>)(async () =>
-		{
-			_ = await _testCherwellClient
-			.BusinessObject
-			.GetBusinessObjectAttachmentsAsync(
-				new Models.BusinessObject.AttachmentsRequest
-				{
-					BusObId = "93e8652ccb6ffc759c6b544437bfa25c2e60ca36f0"
-				}, cancellationToken)
-			;
-		}))
+	public async Task BusOb_GetAttachments_Error() => await ((Func<Task>)(async () =>
+														   {
+															   _ = await Client
+															   .BusinessObject
+															   .GetBusinessObjectAttachmentsAsync(
+																   new Models.BusinessObject.AttachmentsRequest
+																   {
+																	   BusObId = "93e8652ccb6ffc759c6b544437bfa25c2e60ca36f0"
+																   }, CancellationToken)
+															   ;
+														   }))
 		.Should()
 		.ThrowAsync<CherwellApiException>()
 		.WithMessage(Message.RecordNotFound)
@@ -106,14 +84,11 @@ public class BusObIntegrationTests(CherwellClient testCherwellClient)
 			e.Response != null && e.Response.ErrorCode == ErrorCode.RecordNotFound
 			&& e.Response.HasError
 		);
-	}
 
 	[Fact]
 	public async Task GetBusObBatch_Succeeds()
 	{
-		var cancellationToken = CancellationToken.None;
-
-		var response = await _testCherwellClient
+		var response = await Client
 			.BusinessObject
 			.GetBusinessObjectBatchAsync(
 				new Models.BusinessObject.BatchReadRequest
@@ -126,7 +101,7 @@ public class BusObIntegrationTests(CherwellClient testCherwellClient)
 						}
 					]
 				},
-				cancellationToken)
+				CancellationToken)
 			;
 
 		response
@@ -137,17 +112,13 @@ public class BusObIntegrationTests(CherwellClient testCherwellClient)
 	// GetBusinessObjectByPublicIdAsync - unable to test, we don't have a publicId to test with
 
 	[Fact]
-	public async Task BusOb_GetObjectByRecId_Error()
-	{
-		var cancellationToken = CancellationToken.None;
-
-		await ((Func<Task>)(async () =>
-		{
-			_ = await _testCherwellClient
-			.BusinessObject
-			.GetBusinessObjectByRecIdAsync("944e0f0f214f53100758de4c81b78466866323bccf", "944e0f1424e236ce71b3c6484d875764a57ce45e51", cancellationToken)
-			;
-		}))
+	public async Task BusOb_GetObjectByRecId_Error() => await ((Func<Task>)(async () =>
+															 {
+																 _ = await Client
+																 .BusinessObject
+																 .GetBusinessObjectByRecIdAsync("944e0f0f214f53100758de4c81b78466866323bccf", "944e0f1424e236ce71b3c6484d875764a57ce45e51", CancellationToken)
+																 ;
+															 }))
 		.Should()
 		.ThrowAsync<CherwellApiException>()
 		.WithMessage(Message.RecordNotFound)
@@ -155,7 +126,6 @@ public class BusObIntegrationTests(CherwellClient testCherwellClient)
 			e.Response != null && e.Response.ErrorCode == ErrorCode.RecordNotFound
 			&& e.Response.HasError
 		);
-	}
 
 	// GetBusinessObjectByScanCodeBusObIdAsync - unable to test, we don't have a scanCode to test with
 
@@ -164,11 +134,9 @@ public class BusObIntegrationTests(CherwellClient testCherwellClient)
 	[Fact]
 	public async Task GetBusObSchema_Succeeds()
 	{
-		var cancellationToken = CancellationToken.None;
-
-		var response = await _testCherwellClient
+		var response = await Client
 			.BusinessObject
-			.GetBusinessObjectSchemaAsync("93c5ca8e7dbd4cc21dead14df19c684298a78358dd", true, cancellationToken)
+			.GetBusinessObjectSchemaAsync("93c5ca8e7dbd4cc21dead14df19c684298a78358dd", true, CancellationToken)
 			;
 
 		response
@@ -179,11 +147,9 @@ public class BusObIntegrationTests(CherwellClient testCherwellClient)
 	[Fact]
 	public async Task GetBusObSummaries_Succeeds()
 	{
-		var cancellationToken = CancellationToken.None;
-
-		var response = await _testCherwellClient
+		var response = await Client
 			.BusinessObject
-			.GetBusinessObjectSummariesAsync("Major", cancellationToken)
+			.GetBusinessObjectSummariesAsync("Major", CancellationToken)
 			;
 
 		response
@@ -194,11 +160,9 @@ public class BusObIntegrationTests(CherwellClient testCherwellClient)
 	[Fact]
 	public async Task GetBusObSummary_Succeeds()
 	{
-		var cancellationToken = CancellationToken.None;
-
-		var response = await _testCherwellClient
+		var response = await Client
 			.BusinessObject
-			.GetBusinessObjectSummaryByIdAsync("944e02d8537d17b3384143451180f87eda564c5798", cancellationToken)
+			.GetBusinessObjectSummaryByIdAsync("944e02d8537d17b3384143451180f87eda564c5798", CancellationToken)
 			;
 
 		response
@@ -209,11 +173,9 @@ public class BusObIntegrationTests(CherwellClient testCherwellClient)
 	[Fact]
 	public async Task GetBusObByName_Succeeds()
 	{
-		var cancellationToken = CancellationToken.None;
-
-		var response = await _testCherwellClient
+		var response = await Client
 			.BusinessObject
-			.GetBusinessObjectSummaryByNameAsync("Building", cancellationToken)
+			.GetBusinessObjectSummaryByNameAsync("Building", CancellationToken)
 			;
 
 		response
@@ -224,9 +186,7 @@ public class BusObIntegrationTests(CherwellClient testCherwellClient)
 	[Fact]
 	public async Task GetBusObTemplate_Succeeds()
 	{
-		var cancellationToken = CancellationToken.None;
-
-		var response = await _testCherwellClient
+		var response = await Client
 			.BusinessObject
 			.GetBusinessObjectTemplateAsync(
 				new Models.BusinessObject.TemplateRequest
@@ -234,7 +194,7 @@ public class BusObIntegrationTests(CherwellClient testCherwellClient)
 					BusObId = "93c5ca8e7dbd4cc21dead14df19c684298a78358dd",
 					FieldNames = ["Field1", "Field2"],
 					FieldIds = ["Field1", "Field2"],
-				}, cancellationToken)
+				}, CancellationToken)
 			;
 
 		response

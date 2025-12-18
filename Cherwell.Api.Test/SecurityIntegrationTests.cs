@@ -1,20 +1,13 @@
-﻿using Cherwell.Api.Exceptions;
-using FluentAssertions;
-using Xunit;
+﻿namespace Cherwell.Api.Test;
 
-namespace Cherwell.Api.Test;
-
-public class SecurityIntegrationTests(CherwellClient cherwellClient)
+public class SecurityIntegrationTests : TestBase
 {
-	private readonly CherwellClient _testCherwellClient = cherwellClient;
 	[Fact]
 	public async Task GetClientSecuritySettings_Succeeds()
 	{
-		var cancellationToken = CancellationToken.None;
-
-		var response = await _testCherwellClient
+		var response = await Client
 			.Security
-			.GetClientSecuritySettingsAsync("RichClient", cancellationToken)
+			.GetClientSecuritySettingsAsync("RichClient", CancellationToken)
 			;
 
 		response
@@ -23,44 +16,34 @@ public class SecurityIntegrationTests(CherwellClient cherwellClient)
 	}
 
 	[Fact]
-	public async Task GetRolesV1_NotAuth()
-	{
-		var cancellationToken = CancellationToken.None;
-
-		await ((Func<Task>)(async () =>
-		{
-			var response = await _testCherwellClient
-			.Security
-			.GetRolesAsync(cancellationToken)
-			;
-		}))
+	public async Task GetRolesV1_NotAuth() => await ((Func<Task>)(async () =>
+												   {
+													   var response = await Client
+													   .Security
+													   .GetRolesAsync(CancellationToken)
+													   ;
+												   }))
 		.Should()
 		.ThrowAsync<CherwellApiException>()
 		.WithMessage(Message.UnknownException)
 		.Where(e =>
 			e.Response != null && e.Response.ErrorCode == ErrorCode.InsufficientRights
 			&& e.Response.HasError);
-	}
 
 	[Fact]
-	public async Task GetRolesV2_NotAuth()
-	{
-		var cancellationToken = CancellationToken.None;
-
-		await ((Func<Task>)(async () =>
-		{
-			var response = await _testCherwellClient
-			.Security
-			.GetRolesV2Async(cancellationToken)
-			;
-		}))
+	public async Task GetRolesV2_NotAuth() => await ((Func<Task>)(async () =>
+												   {
+													   var response = await Client
+													   .Security
+													   .GetRolesV2Async(CancellationToken)
+													   ;
+												   }))
 		.Should()
 		.ThrowAsync<CherwellApiException>()
 		.WithMessage(Message.InsufficientRights)
 		.Where(e =>
 			e.Response != null && e.Response.ErrorCode == ErrorCode.InsufficientRights
 			&& e.Response.HasError);
-	}
 
 	// GetSecurityGroupBusinessObjectPermissionsByBusObIdAsync - unable to test, no groupId to test with
 	// GetSecurityGroupBusinessObjectPermissionsByBusObIdV2Async - unable to test, no groupId to test with
@@ -70,11 +53,9 @@ public class SecurityIntegrationTests(CherwellClient cherwellClient)
 	[Fact]
 	public async Task GetBusinessObjectPermissions_Succeeds()
 	{
-		var cancellationToken = CancellationToken.None;
-
-		var response = await _testCherwellClient
+		var response = await Client
 			.Security
-			.GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdAsync("93c5ca8e7dbd4cc21dead14df19c684298a78358dd", cancellationToken)
+			.GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdAsync("93c5ca8e7dbd4cc21dead14df19c684298a78358dd", CancellationToken)
 			;
 
 		response
@@ -85,11 +66,9 @@ public class SecurityIntegrationTests(CherwellClient cherwellClient)
 	[Fact]
 	public async Task GetBusinessObjectPermissionsV2_Succeeds()
 	{
-		var cancellationToken = CancellationToken.None;
-
-		var response = await _testCherwellClient
+		var response = await Client
 			.Security
-			.GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV2Async("93c5ca8e7dbd4cc21dead14df19c684298a78358dd", cancellationToken)
+			.GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV2Async("93c5ca8e7dbd4cc21dead14df19c684298a78358dd", CancellationToken)
 			;
 
 		response
@@ -100,11 +79,9 @@ public class SecurityIntegrationTests(CherwellClient cherwellClient)
 	[Fact]
 	public async Task GetBusinessObjectPermissionsByName_Succeeds()
 	{
-		var cancellationToken = CancellationToken.None;
-
-		var response = await _testCherwellClient
+		var response = await Client
 			.Security
-			.GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameAsync("Announcement", cancellationToken)
+			.GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameAsync("Announcement", CancellationToken)
 			;
 
 		response
@@ -115,11 +92,9 @@ public class SecurityIntegrationTests(CherwellClient cherwellClient)
 	[Fact]
 	public async Task GetBusinessObjectPermissionsByNameV2_Succeeds()
 	{
-		var cancellationToken = CancellationToken.None;
-
-		var response = await _testCherwellClient
+		var response = await Client
 			.Security
-			.GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV2Async("Announcement", cancellationToken)
+			.GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV2Async("Announcement", CancellationToken)
 			;
 
 		response
@@ -130,11 +105,9 @@ public class SecurityIntegrationTests(CherwellClient cherwellClient)
 	[Fact]
 	public async Task GetSecurityGroupCategories_Succeeds()
 	{
-		var cancellationToken = CancellationToken.None;
-
-		var response = await _testCherwellClient
+		var response = await Client
 			.Security
-			.GetSecurityGroupCategoriesAsync(cancellationToken)
+			.GetSecurityGroupCategoriesAsync(CancellationToken)
 			;
 
 		response
@@ -145,11 +118,9 @@ public class SecurityIntegrationTests(CherwellClient cherwellClient)
 	[Fact]
 	public async Task GetSecurityGroupCategoriesV2_Succeeds()
 	{
-		var cancellationToken = CancellationToken.None;
-
-		var response = await _testCherwellClient
+		var response = await Client
 			.Security
-			.GetSecurityGroupCategoriesV2Async(cancellationToken)
+			.GetSecurityGroupCategoriesV2Async(CancellationToken)
 			;
 
 		response
@@ -169,11 +140,9 @@ public class SecurityIntegrationTests(CherwellClient cherwellClient)
 	[Fact]
 	public async Task GetSecurityGroups_Succeeds()
 	{
-		var cancellationToken = CancellationToken.None;
-
-		var response = await _testCherwellClient
+		var response = await Client
 			.Security
-			.GetSecurityGroupsAsync(cancellationToken)
+			.GetSecurityGroupsAsync(CancellationToken)
 			;
 
 		response
@@ -184,11 +153,9 @@ public class SecurityIntegrationTests(CherwellClient cherwellClient)
 	[Fact]
 	public async Task GetSecurityGroupsV2_Succeeds()
 	{
-		var cancellationToken = CancellationToken.None;
-
-		var response = await _testCherwellClient
+		var response = await Client
 			.Security
-			.GetSecurityGroupsV2Async(cancellationToken)
+			.GetSecurityGroupsV2Async(CancellationToken)
 			;
 
 		response

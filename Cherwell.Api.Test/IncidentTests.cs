@@ -1,31 +1,24 @@
-﻿using Cherwell.Api.Models.Searches;
-using FluentAssertions;
-using System.Text.RegularExpressions;
-using Xunit;
+﻿namespace Cherwell.Api.Test;
 
-namespace Cherwell.Api.Test;
-
-public partial class TicketTests(CherwellClient cherwellClient)
+public partial class TicketTests : TestBase
 {
-	private readonly CherwellClient _testCherwellClient = cherwellClient;
-
 	[Theory]
 	[InlineData("")]
 	[InlineData("Status eq 'In Progress' OR Status eq 'Reopened'")]
 	[InlineData("Status eq 'Closed'")]
 	public async Task GetQuickSearchSpecificResults_Succeeds(string query)
 	{
-		var summaries = await _testCherwellClient
+		var summaries = await Client
 			.BusinessObject
-			.GetBusinessObjectSummaryByNameAsync("Incident", default)
+			.GetBusinessObjectSummaryByNameAsync("Incident", CancellationToken)
 			;
 		var summary = summaries[0];
 
 		var businessObjectId = summary.BusObId;
 
-		var businessObjectSchema = await _testCherwellClient
+		var businessObjectSchema = await Client
 			.BusinessObject
-			.GetBusinessObjectSchemaAsync(businessObjectId, true, default)
+			.GetBusinessObjectSchemaAsync(businessObjectId, true, CancellationToken)
 			;
 
 		var filters = string.IsNullOrWhiteSpace(query)
@@ -71,11 +64,11 @@ public partial class TicketTests(CherwellClient cherwellClient)
 			PageSize = take
 		};
 
-		var searchItemResponse = await _testCherwellClient
+		var searchItemResponse = await Client
 			.Searches
 			.GetSearchResultsAdHocAsync(
 				searchResultsRequest,
-				default)
+				CancellationToken)
 			;
 
 		searchItemResponse
@@ -89,12 +82,10 @@ public partial class TicketTests(CherwellClient cherwellClient)
 	[InlineData("Incident")]
 	public async Task GetTickets_Succeeds(string ticketType)
 	{
-		var cancellationToken = CancellationToken.None;
-
 		// Get a summary of the given object type, if there is one
-		var businessObjectSummaries = await _testCherwellClient
+		var businessObjectSummaries = await Client
 			.BusinessObject
-			.GetBusinessObjectSummaryByNameAsync(ticketType, cancellationToken)
+			.GetBusinessObjectSummaryByNameAsync(ticketType, CancellationToken)
 			;
 
 		businessObjectSummaries
@@ -113,28 +104,27 @@ public partial class TicketTests(CherwellClient cherwellClient)
 			.Split(",", StringSplitOptions.RemoveEmptyEntries);
 
 		// Retrieve the schema that explains the available fields on the object
-		var businessObjectSchema = await _testCherwellClient
+		var businessObjectSchema = await Client
 			.BusinessObject
 			.GetBusinessObjectSchemaAsync(
 			businessObjectSummary.BusObId,
 			true,
-			cancellationToken)
+			CancellationToken)
 			;
 
-		var searchItemResponse = await _testCherwellClient
+		var searchItemResponse = await Client
 			.Searches
 			.GetSearchResultsAdHocAsync(
 			new SearchResultsRequest
 			{
 				BusObId = businessObjectSummary.BusObId,
-				Fields = businessObjectSchema
+				Fields = [.. businessObjectSchema
 					.FieldDefinitions
 					.Take(5)
-					.Select(f => f.FieldId)
-					.ToList(),
+					.Select(f => f.FieldId)],
 				Filters = []
 			},
-			cancellationToken)
+			CancellationToken)
 		;
 
 		searchItemResponse
@@ -170,12 +160,10 @@ public partial class TicketTests(CherwellClient cherwellClient)
 	[Fact]
 	public async Task GetIncidentSchema_Succeeds()
 	{
-		var cancellationToken = CancellationToken.None;
-
 		// Get a summary of the 'Incident' object type, if there is one
-		var objectSummaries = await _testCherwellClient
+		var objectSummaries = await Client
 			.BusinessObject
-			.GetBusinessObjectSummaryByNameAsync("Incident", cancellationToken)
+			.GetBusinessObjectSummaryByNameAsync("Incident", CancellationToken)
 			;
 
 		objectSummaries
@@ -189,12 +177,12 @@ public partial class TicketTests(CherwellClient cherwellClient)
 		var incidentSummary = objectSummaries[0];
 
 		// Retrieve the schema that explains the available fields on the object
-		var incidentSchema = await _testCherwellClient
+		var incidentSchema = await Client
 			.BusinessObject
 			.GetBusinessObjectSchemaAsync(
 			incidentSummary.BusObId,
 			true,
-			cancellationToken)
+			CancellationToken)
 			;
 
 		incidentSchema

@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path="Cherwell.Api.sln.dic" />
+    <File Path="CONTRIBUTING.md" />
+    <File Path="global.json" />
+    <File Path="LICENSE" />
+    <File Path="README.md" />
+    <File Path="version.json" />
+  </Folder>
+  <Project Path="Cherwell.Api.Test/Cherwell.Api.Test.csproj" />
+  <Project Path="Cherwell.Api/Cherwell.Api.csproj" />
+</Solution>

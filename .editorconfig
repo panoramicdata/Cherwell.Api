@@ -172,9 +172,9 @@ vsspell_cad_treat_unrecognized_words_as_misspelled = true
 vsspell_cad_treat_deprecated_terms_as_misspelled = false
 vsspell_cad_treat_compound_terms_as_misspelled = false
 vsspell_cad_treat_casing_exceptions_as_ignored_words = false
-vsspell_additional_dictionary_folders_24bfe3a339004957ab34f7654481307f = .\
-vsspell_ignored_words_24bfe3a339004957ab34f7654481307f = File:MagicSuite.dic
-vsspell_dictionary_languages_24bfe3a339004957ab34f7654481307f = en-GB
+vsspell_additional_dictionary_folders_9880e3a339004957ab34f7654481307f = .\
+vsspell_ignored_words_9880e3a339004957ab34f7654481307f = File:Cherwell.Api.dic
+vsspell_dictionary_languages_9880e3a339004957ab34f7654481307f = en-GB
 
 [*.js]
 vsspell_spell_check_as_you_type = false

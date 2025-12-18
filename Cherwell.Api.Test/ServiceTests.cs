@@ -1,18 +1,13 @@
-﻿using FluentAssertions;
-using Xunit;
+﻿namespace Cherwell.Api.Test;
 
-namespace Cherwell.Api.Test;
-
-public class ServiceTests(CherwellClient cherwellClient)
+public class ServiceTests : TestBase
 {
-	private readonly CherwellClient _cherwellClient = cherwellClient;
-
 	[Fact]
 	public async Task GetServiceInfoAsync_RequestServiceInfo_GetsNotNullResponse()
 	{
-		var response = await _cherwellClient
+		var response = await Client
 			.Service
-			.GetServiceInfoAsync(CancellationToken.None);
+			.GetServiceInfoAsync(CancellationToken);
 
 		response
 			.Should()
@@ -22,9 +17,9 @@ public class ServiceTests(CherwellClient cherwellClient)
 	[Fact]
 	public async Task GetServiceInfoAsync_RequestServiceInfo_GetsValidApiVersion()
 	{
-		var response = await _cherwellClient
+		var response = await Client
 			.Service
-			.GetServiceInfoAsync(CancellationToken.None);
+			.GetServiceInfoAsync(CancellationToken);
 
 		response
 			.ApiVersion
@@ -35,9 +30,9 @@ public class ServiceTests(CherwellClient cherwellClient)
 	[Fact]
 	public async Task GetServiceInfoAsync_RequestServiceInfo_GetsSystemDateThatIsToday()
 	{
-		var response = await _cherwellClient
+		var response = await Client
 			.Service
-			.GetServiceInfoAsync(CancellationToken.None);
+			.GetServiceInfoAsync(CancellationToken);
 
 		response
 			.SystemDateTime

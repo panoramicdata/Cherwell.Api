@@ -1,5 +1,4 @@
 ﻿using Cherwell.Api.Exceptions;
-using Cherwell.Api.Models;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
