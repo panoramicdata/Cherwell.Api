@@ -20,10 +20,7 @@ public class CherwellClient : IDisposable
 	/// <param name="logger">Optional logger to which to output details of the operations performed</param>
 	public CherwellClient(CherwellClientOptions options, ILogger? logger = null)
 	{
-		if (options is null)
-		{
-			throw new ArgumentNullException(nameof(options));
-		}
+		ArgumentNullException.ThrowIfNull(options);
 
 		_logger = logger ?? NullLogger.Instance;
 
@@ -94,9 +91,9 @@ public class CherwellClient : IDisposable
 	{
 		if (disposing)
 		{
-			/// _logger.LogTrace("{Message}", Resources.Disposing);
+			// _logger.LogTrace("{Message}", Resources.Disposing);
 			_httpClient.Dispose();
-			/// _logger.LogTrace("{Message}", Resources.Disposed);
+			// _logger.LogTrace("{Message}", Resources.Disposed);
 		}
 	}
 

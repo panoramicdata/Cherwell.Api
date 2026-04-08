@@ -1,6 +1,4 @@
-﻿using System.Runtime.Serialization;
-
-namespace Cherwell.Api.Exceptions;
+﻿namespace Cherwell.Api.Exceptions;
 
 [Serializable]
 public class ConfigurationException : Exception
@@ -14,10 +12,6 @@ public class ConfigurationException : Exception
 	}
 
 	public ConfigurationException(string? message, Exception? innerException) : base(message, innerException)
-	{
-	}
-
-	protected ConfigurationException(SerializationInfo info, StreamingContext context) : base(info, context)
 	{
 	}
 }

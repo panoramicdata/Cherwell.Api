@@ -8,6 +8,7 @@
 		<Nullable>enable</Nullable>
 		<AnalysisMode>Recommended</AnalysisMode>
 		<AnalysisLevel>latest-recommended</AnalysisLevel>
+		<NoWarn>$(NoWarn);CS1591</NoWarn>
 		<Version>1.0</Version>
 		<UserSecretsId>37c7e161-87d9-4818-bcce-ca1f4dc49233</UserSecretsId>
 	</PropertyGroup>

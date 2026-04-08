@@ -1,6 +1,4 @@
-﻿using System.Runtime.Serialization;
-
-namespace Cherwell.Api.Exceptions;
+﻿namespace Cherwell.Api.Exceptions;
 
 [Serializable]
 public class CherwellApiException : Exception
@@ -19,10 +17,6 @@ public class CherwellApiException : Exception
 	}
 
 	public CherwellApiException(string? message, Exception? innerException) : base(message, innerException)
-	{
-	}
-
-	protected CherwellApiException(SerializationInfo info, StreamingContext context) : base(info, context)
 	{
 	}
 

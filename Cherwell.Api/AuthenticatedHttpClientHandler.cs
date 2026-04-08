@@ -70,7 +70,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 				var body = request.Content is not null
 					? await request
 						.Content
-						.ReadAsStringAsync()
+						.ReadAsStringAsync(cancellationToken)
 						.ConfigureAwait(false)
 					: string.Empty;
 				var jObject = JsonConvert.DeserializeObject<JObject>(body);
@@ -90,7 +90,8 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			if (_options.Culture is not null)
 			{
 				// Add the culture as a query parameter
-				var uriBuilder = new UriBuilder(request.RequestUri);
+				var requestUri = request.RequestUri ?? throw new InvalidOperationException("RequestUri must be set before sending the request.");
+				var uriBuilder = new UriBuilder(requestUri);
 				var query = HttpUtility.ParseQueryString(uriBuilder.Query);
 				query["locale"] = _options.Culture.Name;
 				uriBuilder.Query = query.ToString();
@@ -108,7 +109,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			{
 				var headers = string.Join("\n", httpResponse.Headers.Select(h => $"{h.Key}: {string.Join(", ", h.Value.Select(v => v))}"));
 				var body = httpResponse.Content is not null
-					? await httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false)
+					? await httpResponse.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false)
 					: string.Empty;
 				try
 				{
@@ -140,7 +141,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 				var body = httpResponse.Content is not null
 					? await httpResponse
 						.Content
-						.ReadAsStringAsync()
+						.ReadAsStringAsync(cancellationToken)
 						.ConfigureAwait(false)
 					: string.Empty;
 
@@ -245,11 +246,14 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		do
 		{
 			attemptCount++;
-			_logger.LogInformation(
-				"Cherwell 'GenerateAccessTokenAsync' (attempt {Attempt}/{MaxAttempts})",
-				attemptCount,
-				_maxAttempts
-			);
+			if (_logger.IsEnabled(LogLevel.Information))
+			{
+				_logger.LogInformation(
+					"Cherwell 'GenerateAccessTokenAsync' (attempt {Attempt}/{MaxAttempts})",
+					attemptCount,
+					_maxAttempts
+				);
+			}
 
 			using (var request = new HttpRequestMessage(HttpMethod.Post, "token"))
 			{
@@ -279,7 +283,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 
 			var stringResponse = await response
 				.Content
-				.ReadAsStringAsync()
+				.ReadAsStringAsync(cancellationToken)
 				;
 
 			// Did auth succeed?
@@ -324,10 +328,13 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			}
 
 			// Wait before retrying
-			_logger.LogInformation(
-				"Cherwell 'GenerateAccessTokenAsync' failed with status code {StatusCode}: waiting {RetryDelayMs}ms before retrying...",
-				response.StatusCode,
-				retryDelayMs);
+			if (_logger.IsEnabled(LogLevel.Information))
+			{
+				_logger.LogInformation(
+					"Cherwell 'GenerateAccessTokenAsync' failed with status code {StatusCode}: waiting {RetryDelayMs}ms before retrying...",
+					response.StatusCode,
+					retryDelayMs);
+			}
 
 			await Task.Delay(retryDelayMs, cancellationToken).ConfigureAwait(false);
 			retryDelayMs *= 2;
