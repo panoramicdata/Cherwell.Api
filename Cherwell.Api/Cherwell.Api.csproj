@@ -9,7 +9,7 @@
     <AnalysisLevel>latest-recommended</AnalysisLevel>
     <NoWarn>$(NoWarn);CS1573;CS1574;CS1591</NoWarn>
     <PackageIcon>Icon.png</PackageIcon>
-    <Copyright>Panoramic Data Limited 2021-2025</Copyright>
+    <Copyright>Panoramic Data Limited 2021-2026</Copyright>
     <PackageProjectUrl>https://github.com/panoramicdata/Cherwell.Api</PackageProjectUrl>
     <RepositoryUrl>https://github.com/panoramicdata/Cherwell.Api</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -25,7 +25,7 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <Title>Cherwell.Api</Title>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageReleaseNotes>Fixed an issue where when doing a search / request, the error message (when you do not have rights to query for a business object) is now propagated properly.</PackageReleaseNotes>
+    <PackageReleaseNotes>Removed internal error-level logging of token-refresh (GenerateAccessTokenAsync) failures - callers already catch and log this with context, so it was being logged twice.</PackageReleaseNotes>
     <PackageId>Cherwell.Api</PackageId>
     <NeutralResourcesLanguage>en</NeutralResourcesLanguage>
   </PropertyGroup>

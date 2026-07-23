@@ -312,14 +312,9 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			// Is it a 4xx error?
 			if ((int)response.StatusCode / 100 == 4)
 			{
-				// Yes.  Log the error and throw an exception
+				// Yes. Throw an exception - no need to log as the callers log
 				if (!string.IsNullOrWhiteSpace(response.ReasonPhrase))
 				{
-					_logger.LogError(
-						"Cherwell 'GenerateAccessTokenAsync' response unsuccessful: {Reason}: {Content}",
-						response.ReasonPhrase,
-						stringResponse);
-
 					throw new AuthenticationException($"Cherwell 'GenerateAccessTokenAsync' response unsuccessful: {response.ReasonPhrase}: {stringResponse}");
 				}
 
