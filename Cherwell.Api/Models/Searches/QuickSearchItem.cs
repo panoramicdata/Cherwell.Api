@@ -1,5 +1,4 @@
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+using System.Text.Json.Serialization;
 using System.Runtime.Serialization;
 
 namespace Cherwell.Api.Models.Searches;
@@ -13,7 +12,7 @@ public class QuickSearchItem
 	/// <summary>
 	/// ChangedOption
 	/// </summary>
-	[JsonConverter(typeof(StringEnumConverter))]
+	[JsonConverter(typeof(JsonStringEnumConverter))]
 	public enum EnumChangedOption
 	{
 
@@ -45,7 +44,7 @@ public class QuickSearchItem
 	/// <summary>
 	/// NonFinalStateOption
 	/// </summary>
-	[JsonConverter(typeof(StringEnumConverter))]
+	[JsonConverter(typeof(JsonStringEnumConverter))]
 	public enum EnumNonFinalStateOption
 	{
 
@@ -77,7 +76,7 @@ public class QuickSearchItem
 	/// <summary>
 	/// SearchAnyWordsOption
 	/// </summary>
-	[JsonConverter(typeof(StringEnumConverter))]
+	[JsonConverter(typeof(JsonStringEnumConverter))]
 	public enum EnumSearchAnyWordsOption
 	{
 
@@ -109,7 +108,7 @@ public class QuickSearchItem
 	/// <summary>
 	/// SearchAttachmentsOption
 	/// </summary>
-	[JsonConverter(typeof(StringEnumConverter))]
+	[JsonConverter(typeof(JsonStringEnumConverter))]
 	public enum EnumSearchAttachmentsOption
 	{
 
@@ -141,7 +140,7 @@ public class QuickSearchItem
 	/// <summary>
 	/// SearchRelatedOption
 	/// </summary>
-	[JsonConverter(typeof(StringEnumConverter))]
+	[JsonConverter(typeof(JsonStringEnumConverter))]
 	public enum EnumSearchRelatedOption
 	{
 
@@ -173,7 +172,7 @@ public class QuickSearchItem
 	/// <summary>
 	/// SearchTargetType
 	/// </summary>
-	[JsonConverter(typeof(StringEnumConverter))]
+	[JsonConverter(typeof(JsonStringEnumConverter))]
 	public enum EnumSearchTargetType
 	{
 
@@ -193,7 +192,7 @@ public class QuickSearchItem
 	/// <summary>
 	/// SortByOption
 	/// </summary>
-	[JsonConverter(typeof(StringEnumConverter))]
+	[JsonConverter(typeof(JsonStringEnumConverter))]
 	public enum EnumSortByOption
 	{
 

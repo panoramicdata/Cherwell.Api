@@ -1,4 +1,3 @@
-﻿using Newtonsoft.Json.Converters;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
@@ -7,7 +6,7 @@ namespace Cherwell.Api.Models;
 /// <summary>
 /// HttpStatusCode
 /// </summary>
-[JsonConverter(typeof(StringEnumConverter))]
+[JsonConverter(typeof(JsonStringEnumConverter))]
 public enum EnumHttpStatusCode
 {
 	/// <summary>

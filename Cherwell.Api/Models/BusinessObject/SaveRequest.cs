@@ -1,5 +1,4 @@
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+using System.Text.Json.Serialization;
 using System.Runtime.Serialization;
 
 namespace Cherwell.Api.Models.BusinessObject;
@@ -13,7 +12,7 @@ public class SaveRequest
 	/// <summary>
 	/// CacheScope
 	/// </summary>
-	[JsonConverter(typeof(StringEnumConverter))]
+	[JsonConverter(typeof(JsonStringEnumConverter))]
 	public enum EnumCacheScope
 	{
 

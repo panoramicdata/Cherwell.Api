@@ -1,3 +1,4 @@
+using Cherwell.Api.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
@@ -42,6 +43,43 @@ public abstract class TestBase : IAsyncLifetime
 
 		return ValueTask.CompletedTask;
 	}
+
+	/// <summary>
+	/// Asserts that <paramref name="action"/> fails with a <see cref="CherwellApiException"/> carrying the
+	/// expected message, error code and (optionally) HTTP status code.
+	/// </summary>
+	/// <remarks>
+	/// Every "not authorised" test in this suite makes the same four-part assertion, so it lives here rather
+	/// than being copied into each one.
+	/// </remarks>
+	protected static async Task AssertThrowsCherwellAsync(
+		Func<Task> action,
+		string expectedMessage,
+		string expectedErrorCode,
+		EnumHttpStatusCode? expectedStatusCode = null)
+	{
+		var assertion = await action
+			.Should()
+			.ThrowAsync<CherwellApiException>()
+			.WithMessage(expectedMessage);
+
+		assertion.Which.Response.Should().NotBeNull();
+		assertion.Which.Response!.ErrorCode.Should().Be(expectedErrorCode);
+		assertion.Which.Response.HasError.Should().BeTrue();
+		if (expectedStatusCode is not null)
+		{
+			assertion.Which.Response.HttpStatusCode.Should().Be(expectedStatusCode);
+		}
+	}
+
+	/// <summary>
+	/// Asserts that <paramref name="action"/> is rejected as forbidden.
+	/// </summary>
+	protected static Task AssertForbiddenAsync(Func<Task> action) => AssertThrowsCherwellAsync(
+		action,
+		Message.Forbidden,
+		ErrorCode.Forbidden,
+		EnumHttpStatusCode.Forbidden);
 
 	public ValueTask DisposeAsync()
 	{

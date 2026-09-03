@@ -1,5 +1,4 @@
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+using System.Text.Json.Serialization;
 using System.Runtime.Serialization;
 
 namespace Cherwell.Api.Models.Core;
@@ -13,7 +12,7 @@ public class Action
 	/// <summary>
 	/// ActionType
 	/// </summary>
-	[JsonConverter(typeof(StringEnumConverter))]
+	[JsonConverter(typeof(JsonStringEnumConverter))]
 	public enum EnumActionType
 	{
 
@@ -117,7 +116,7 @@ public class Action
 	/// <summary>
 	/// LoginEnabledMode
 	/// </summary>
-	[JsonConverter(typeof(StringEnumConverter))]
+	[JsonConverter(typeof(JsonStringEnumConverter))]
 	public enum EnumLoginEnabledMode
 	{
 
@@ -143,7 +142,7 @@ public class Action
 	/// <summary>
 	/// LoginVisibilityMode
 	/// </summary>
-	[JsonConverter(typeof(StringEnumConverter))]
+	[JsonConverter(typeof(JsonStringEnumConverter))]
 	public enum EnumLoginVisibilityMode
 	{
 

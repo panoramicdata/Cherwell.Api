@@ -1,5 +1,4 @@
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+using System.Text.Json.Serialization;
 using System.Runtime.Serialization;
 
 namespace Cherwell.Api.Models.Searches;
@@ -13,7 +12,7 @@ public class ColumnSchema
 	/// <summary>
 	/// Type
 	/// </summary>
-	[JsonConverter(typeof(StringEnumConverter))]
+	[JsonConverter(typeof(JsonStringEnumConverter))]
 	public enum EnumType
 	{
 
@@ -39,6 +38,7 @@ public class ColumnSchema
 		/// Enum Integer for "Integer"
 		/// </summary>
 		[EnumMember(Value = "Integer")]
+		[JsonStringEnumMemberName("Integer")]
 		EnumInteger,
 
 		/// <summary>

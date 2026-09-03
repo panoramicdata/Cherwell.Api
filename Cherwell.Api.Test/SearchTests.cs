@@ -1,23 +1,42 @@
-﻿namespace Cherwell.Api.Test;
+namespace Cherwell.Api.Test;
 
 public class SearchTests : TestBase
 {
+	private const string IncidentBusObId = "6dd53665c0c24cab86870a21cf6434ae";
+	private const string PermissionedBusObId = "93c5ca8e7dbd4cc21dead14df19c684298a78358dd";
+	private const string IncidentIdFieldId =
+		"BO:6dd53665c0c24cab86870a21cf6434ae,FI:9487d346f460643b684abe471c821dbf0ef05ec471";
+
+	private static QuickSearchSpecificRequest CreateQuickSearchSpecificRequest() => new()
+	{
+		SearchText = "test",
+		SelectedChangedLimit = new ChangedLimit
+		{
+			DisplayName = "test",
+			Units = "test"
+		},
+	};
+
+	/// <summary>
+	/// A filter that matches no incident, so the search succeeds but returns nothing.
+	/// </summary>
+	private static List<FilterInfo> CreateNonMatchingFilter() =>
+	[
+		new FilterInfo
+		{
+			FieldId = IncidentIdFieldId,
+			Operator = "eq",
+			Value = "LMD1234567890"
+		}
+	];
+
 	[Fact]
 	public async Task GetQuickSearchSpecificResults_Succeeds()
 	{
 		var response = await Client
 			.Searches
 			.GetQuickSearchSpecificResultsAsync(
-				new QuickSearchSpecificRequest
-				{
-					SearchText = "test",
-					SelectedChangedLimit = new ChangedLimit
-					{
-						DisplayName = "test",
-						Units = "test"
-					},
-				}, default, default, default, CancellationToken)
-			;
+				CreateQuickSearchSpecificRequest(), default, default, default, CancellationToken);
 
 		response
 			.Should()
@@ -30,16 +49,7 @@ public class SearchTests : TestBase
 		var response = await Client
 			.Searches
 			.GetQuickSearchSpecificResultsV2Async(
-				new QuickSearchSpecificRequest
-				{
-					SearchText = "test",
-					SelectedChangedLimit = new ChangedLimit
-					{
-						DisplayName = "test",
-						Units = "test"
-					},
-				}, default, default, default, CancellationToken)
-			;
+				CreateQuickSearchSpecificRequest(), default, default, default, CancellationToken);
 
 		response
 			.Should()
@@ -47,62 +57,25 @@ public class SearchTests : TestBase
 	}
 
 	[Fact]
-	public async Task GetQuickSearchResults_NotAuth() => await ((Func<Task>)(async () =>
-														 {
-															 var response = await Client
-															 .Searches
-															 .GetQuickSearchResultsAsync(
-																 new QuickSearchRequest
-																 {
-																	 BusObIds = ["93c5ca8e7dbd4cc21dead14df19c684298a78358dd"],
-																	 SearchText = "test"
-																 }, default, CancellationToken)
-															 ;
-														 }))
-		.Should()
-		.ThrowAsync<CherwellApiException>()
-		.WithMessage(Message.Forbidden)
-		.Where(e =>
-			e.Response != null && e.Response.ErrorCode == ErrorCode.Forbidden
-			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.Forbidden
-			&& e.Response.HasError
-		);
+	public Task GetQuickSearchResults_NotAuth() => AssertForbiddenAsync(
+		() => Client.Searches.GetQuickSearchResultsAsync(
+			new QuickSearchRequest
+			{
+				BusObIds = [PermissionedBusObId],
+				SearchText = "test"
+			}, default, CancellationToken));
 
 	[Fact]
-	public async Task GetQuickSearchWithViewRights_NotAuth() => await ((Func<Task>)(async () =>
-																{
-																	var response = await Client
-																	.Searches
-																	.GetQuickSearchConfigurationForBusObsWithViewRightsAsync(CancellationToken)
-																	;
-																}))
-		.Should()
-		.ThrowAsync<CherwellApiException>()
-		.WithMessage(Message.Forbidden)
-		.Where(e =>
-			e.Response != null && e.Response.ErrorCode == ErrorCode.Forbidden
-			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.Forbidden
-			&& e.Response.HasError);
+	public Task GetQuickSearchWithViewRights_NotAuth() => AssertForbiddenAsync(
+		() => Client.Searches.GetQuickSearchConfigurationForBusObsWithViewRightsAsync(CancellationToken));
 
 	[Fact]
-	public async Task GetQuickSearchConfig_NotAuth() => await ((Func<Task>)(async () =>
-														{
-															var response = await Client
-															.Searches
-															.GetQuickSearchConfigurationForBusObsAsync(
-															new QuickSearchConfigurationRequest
-															{
-																BusObIds = ["93c5ca8e7dbd4cc21dead14df19c684298a78358dd"]
-															}, CancellationToken)
-															;
-														}))
-		.Should()
-		.ThrowAsync<CherwellApiException>()
-		.WithMessage(Message.Forbidden)
-		.Where(e =>
-			e.Response != null && e.Response.ErrorCode == ErrorCode.Forbidden
-			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.Forbidden
-			&& e.Response.HasError);
+	public Task GetQuickSearchConfig_NotAuth() => AssertForbiddenAsync(
+		() => Client.Searches.GetQuickSearchConfigurationForBusObsAsync(
+			new QuickSearchConfigurationRequest
+			{
+				BusObIds = [PermissionedBusObId]
+			}, CancellationToken));
 
 	// GetSearchItemsByAssociationScopeScopeOwnerFolderAsync - unable to test, no association to test with
 	// GetSearchItemsByAssociationScopeScopeOwnerFolderV2Async - unable to test, no association to test with
@@ -114,228 +87,85 @@ public class SearchTests : TestBase
 	// GetSearchItemsByAssociationV2Async - unable to test, no association to test with
 
 	[Fact]
-	public async Task GetSearchItems_NotAuth() => await ((Func<Task>)(async () =>
-												  {
-													  var response = await Client
-													  .Searches
-													  .GetSearchItemsAsync(default, CancellationToken)
-													  ;
-												  }))
-		.Should()
-		.ThrowAsync<CherwellApiException>()
-		.WithMessage(Message.Forbidden)
-		.Where(e =>
-			e.Response != null && e.Response.ErrorCode == ErrorCode.Forbidden
-			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.Forbidden
-			&& e.Response.HasError);
+	public Task GetSearchItems_NotAuth() => AssertForbiddenAsync(
+		() => Client.Searches.GetSearchItemsAsync(default, CancellationToken));
 
 	[Fact]
-	public async Task GetSearchItemsV2_NotAuth() => await ((Func<Task>)(async () =>
-													{
-														var response = await Client
-														.Searches
-														.GetSearchItemsV2Async(default, CancellationToken)
-														;
-													}))
-		.Should()
-		.ThrowAsync<CherwellApiException>()
-		.WithMessage(Message.Forbidden)
-		.Where(e =>
-			e.Response != null && e.Response.ErrorCode == ErrorCode.Forbidden
-			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.Forbidden
-			&& e.Response.HasError);
+	public Task GetSearchItemsV2_NotAuth() => AssertForbiddenAsync(
+		() => Client.Searches.GetSearchItemsV2Async(default, CancellationToken));
 
 	[Fact]
 	public async Task GetSearchResultsAdHocAsync_SimpleSearch_Succeeds()
 	{
 		var searchResults = await Client
-		.Searches
-		.GetSearchResultsAdHocAsync(
-			new SearchResultsRequest
-			{
-				BusObId = "6dd53665c0c24cab86870a21cf6434ae",
-				Filters = []
-			},
-			CancellationToken)
-		;
-
-		searchResults
-			.Should()
-			.NotBeNull();
-
-		searchResults
-			.BusinessObjects
-			.Should()
-			.NotBeNullOrEmpty();
-
-		searchResults
-			.BusinessObjects
-			.ForEach(bo =>
-			{
-				bo.BusObId.Should().NotBeNullOrEmpty();
-				bo.BusObPublicId.Should().NotBeNullOrEmpty();
-				bo.BusObRecId.Should().NotBeNullOrEmpty();
-				bo.Fields.Should().NotBeNullOrEmpty();
-				bo.Fields.ForEach(f =>
-				{
-					f.Dirty.Should().BeFalse();
-					f.DisplayName.Should().NotBeNullOrEmpty();
-					f.FieldId.Should().NotBeNullOrEmpty();
-					f.FullFieldId.Should().NotBeNullOrEmpty();
-					f.Html.Should().BeNull();
-					f.Name.Should().NotBeNullOrEmpty();
-					f.Value.Should().NotBeNull();
-				});
-				bo.Links.Should().NotBeNullOrEmpty();
-				bo.Links.ForEach(l =>
-				{
-					l.Name.Should().NotBeNullOrEmpty();
-					l.Url.Should().NotBeNullOrEmpty();
-				});
-				bo.ErrorCode.Should().BeNull();
-				bo.ErrorMessage.Should().BeNull();
-				bo.HasError.Should().BeFalse();
-			});
-
-		searchResults.HasPrompts.Should().BeFalse();
-		searchResults.Links.Should().BeEmpty();
-		searchResults.Prompts.Should().BeEmpty();
-		searchResults.SearchResultsFields.Should().BeEmpty();
-		searchResults.SimpleResults.Should().BeNull();
-		searchResults.TotalRows.Should().NotBe(0);
-		searchResults.ErrorCode.Should().BeNull();
-		searchResults.ErrorMessage.Should().BeNull();
-		searchResults.HasError.Should().BeFalse();
-	}
-
-	[Fact]
-	public async Task GetSearchResultsAdhocAsync_FilteredSearch_ReturnsValidStatusCode()
-	{
-		var searchResults = await Client
-		.Searches
-		.GetSearchResultsAdHocAsync(
-			new SearchResultsRequest
-			{
-				BusObId = "6dd53665c0c24cab86870a21cf6434ae",
-				Filters = [
-					new FilterInfo
-					{
-						FieldId = "BO:6dd53665c0c24cab86870a21cf6434ae,FI:9487d346f460643b684abe471c821dbf0ef05ec471",
-						Operator = "eq",
-						Value = "LMD1234567890"
-					}
-				]
-			},
-			CancellationToken)
-		;
-
-		searchResults
-			.Should()
-			.NotBeNull();
-
-		searchResults.HasPrompts.Should().BeFalse();
-		searchResults.Links.Should().BeEmpty();
-		searchResults.Prompts.Should().BeEmpty();
-		searchResults.SearchResultsFields.Should().BeEmpty();
-		searchResults.SimpleResults.Should().BeNull();
-		searchResults.ErrorCode.Should().BeNull();
-		searchResults.ErrorMessage.Should().BeNull();
-		searchResults.HasError.Should().BeFalse();
-	}
-
-	[Fact]
-	public async Task GetSearchResultsAdhocAsync_FilteredSearchWithPageNumber_ReturnsValidStatusCode()
-	{
-		var searchResults = await Client
-		.Searches
-		.GetSearchResultsAdHocAsync(
-			new SearchResultsRequest
-			{
-				BusObId = "6dd53665c0c24cab86870a21cf6434ae",
-				Filters = [
-					new FilterInfo
-					{
-						FieldId = "BO:6dd53665c0c24cab86870a21cf6434ae,FI:9487d346f460643b684abe471c821dbf0ef05ec471",
-						Operator = "eq",
-						Value = "LMD1234567890"
-					}
-				],
-				PageNumber = 0,
-				PageSize = 100,
-			},
-			CancellationToken)
-		;
-
-		searchResults
-			.Should()
-			.NotBeNull();
-
-		searchResults.HasPrompts.Should().BeFalse();
-		searchResults.Links.Should().BeEmpty();
-		searchResults.Prompts.Should().BeEmpty();
-		searchResults.SearchResultsFields.Should().BeEmpty();
-		searchResults.SimpleResults.Should().BeNull();
-		searchResults.ErrorCode.Should().BeNull();
-		searchResults.ErrorMessage.Should().BeNull();
-		searchResults.HasError.Should().BeFalse();
-	}
-
-	[Fact]
-	public async Task GetSearchResultsAdhocAsync_FilteredSearchExcludingSchema_ReturnsValidStatusCode()
-	{
-		var searchResults = await Client
-		.Searches
-		.GetSearchResultsAdHocAsync(
-			new SearchResultsRequest
-			{
-				BusObId = "6dd53665c0c24cab86870a21cf6434ae",
-				Filters = [
-					new FilterInfo
-					{
-						FieldId = "BO:6dd53665c0c24cab86870a21cf6434ae,FI:9487d346f460643b684abe471c821dbf0ef05ec471",
-						Operator = "eq",
-						Value = "LMD1234567890"
-					}
-				],
-				IncludeSchema = false,
-				PageNumber = 0,
-				PageSize = 100,
-			},
-			CancellationToken)
-		;
-
-		searchResults
-			.Should()
-			.NotBeNull();
-
-		searchResults.HasPrompts.Should().BeFalse();
-		searchResults.Links.Should().BeEmpty();
-		searchResults.Prompts.Should().BeEmpty();
-		searchResults.SearchResultsFields.Should().BeEmpty();
-		searchResults.SimpleResults.Should().BeNull();
-		searchResults.ErrorCode.Should().BeNull();
-		searchResults.ErrorMessage.Should().BeNull();
-		searchResults.HasError.Should().BeFalse();
-	}
-
-	[Fact]
-	public async Task GetSearchResultsAdHocAsync_WideSearch_Fails()
-		=> await ((Func<Task>)(async () =>
-		{
-			var views = await Client
 			.Searches
 			.GetSearchResultsAdHocAsync(
-				new SearchResultsRequest(),
-				CancellationToken)
-			;
-		}))
-		.Should()
-		.ThrowAsync<CherwellApiException>()
-		.WithMessage(Message.NotFound)
-		.Where(e =>
-			e.Response != null && e.Response.ErrorCode == ErrorCode.NotFound
-			&& e.Response.HttpStatusCode == Models.EnumHttpStatusCode.InternalServerError
-			&& e.Response.HasError);
+				new SearchResultsRequest
+				{
+					BusObId = IncidentBusObId,
+					Filters = []
+				},
+				CancellationToken);
+
+		AssertValidBusinessObjects(searchResults);
+		AssertNoPromptsOrErrors(searchResults);
+		searchResults.TotalRows.Should().NotBe(0);
+	}
+
+	public static TheoryData<string, SearchResultsRequest> FilteredSearchRequests => new()
+	{
+		{
+			"filter only",
+			new SearchResultsRequest
+			{
+				BusObId = IncidentBusObId,
+				Filters = CreateNonMatchingFilter()
+			}
+		},
+		{
+			"filter with paging",
+			new SearchResultsRequest
+			{
+				BusObId = IncidentBusObId,
+				Filters = CreateNonMatchingFilter(),
+				PageNumber = 0,
+				PageSize = 100
+			}
+		},
+		{
+			"filter with paging, excluding schema",
+			new SearchResultsRequest
+			{
+				BusObId = IncidentBusObId,
+				Filters = CreateNonMatchingFilter(),
+				IncludeSchema = false,
+				PageNumber = 0,
+				PageSize = 100
+			}
+		}
+	};
+
+	[Theory]
+	[MemberData(nameof(FilteredSearchRequests))]
+	public async Task GetSearchResultsAdhocAsync_FilteredSearch_ReturnsValidStatusCode(
+		string description,
+		SearchResultsRequest request)
+	{
+		description.Should().NotBeNullOrWhiteSpace();
+
+		var searchResults = await Client
+			.Searches
+			.GetSearchResultsAdHocAsync(request, CancellationToken);
+
+		AssertNoPromptsOrErrors(searchResults);
+	}
+
+	[Fact]
+	public Task GetSearchResultsAdHocAsync_WideSearch_Fails() => AssertThrowsCherwellAsync(
+		() => Client.Searches.GetSearchResultsAdHocAsync(new SearchResultsRequest(), CancellationToken),
+		Message.NotFound,
+		ErrorCode.NotFound,
+		Models.EnumHttpStatusCode.InternalServerError);
 
 	// GetSearchResultsByIdAsync - unable to test, no association to test with
 	// GetSearchResultsByNameAsync - unable to test, no association to test with
@@ -343,4 +173,51 @@ public class SearchTests : TestBase
 	// GetSearchResultsExportByIdAsync - unable to test, no association to test with
 	// GetSearchResultsExportByNameAsync - unable to test, no association to test with
 	// GetSearchResultsAsStringByIdV2Async - unable to test, no association to test with
+
+	private static void AssertNoPromptsOrErrors(SearchResultsResponse searchResults)
+	{
+		searchResults.Should().NotBeNull();
+		searchResults.HasPrompts.Should().BeFalse();
+		searchResults.Links.Should().BeEmpty();
+		searchResults.Prompts.Should().BeEmpty();
+		searchResults.SearchResultsFields.Should().BeEmpty();
+		searchResults.SimpleResults.Should().BeNull();
+		searchResults.ErrorCode.Should().BeNull();
+		searchResults.ErrorMessage.Should().BeNull();
+		searchResults.HasError.Should().BeFalse();
+	}
+
+	private static void AssertValidBusinessObjects(SearchResultsResponse searchResults)
+	{
+		searchResults.BusinessObjects.Should().NotBeNullOrEmpty();
+		foreach (var businessObject in searchResults.BusinessObjects)
+		{
+			businessObject.BusObId.Should().NotBeNullOrEmpty();
+			businessObject.BusObPublicId.Should().NotBeNullOrEmpty();
+			businessObject.BusObRecId.Should().NotBeNullOrEmpty();
+			businessObject.Fields.Should().NotBeNullOrEmpty();
+			AssertValidFields(businessObject.Fields);
+
+			businessObject.Links.Should().NotBeNullOrEmpty();
+			businessObject.Links.Should().OnlyContain(link =>
+				!string.IsNullOrEmpty(link.Name) && !string.IsNullOrEmpty(link.Url));
+			businessObject.ErrorCode.Should().BeNull();
+			businessObject.ErrorMessage.Should().BeNull();
+			businessObject.HasError.Should().BeFalse();
+		}
+	}
+
+	private static void AssertValidFields(IEnumerable<Models.BusinessObject.FieldTemplateItem> fields)
+	{
+		foreach (var field in fields)
+		{
+			field.Dirty.Should().BeFalse();
+			field.DisplayName.Should().NotBeNullOrEmpty();
+			field.FieldId.Should().NotBeNullOrEmpty();
+			field.FullFieldId.Should().NotBeNullOrEmpty();
+			field.Html.Should().BeNull();
+			field.Name.Should().NotBeNullOrEmpty();
+			field.Value.Should().NotBeNull();
+		}
+	}
 }

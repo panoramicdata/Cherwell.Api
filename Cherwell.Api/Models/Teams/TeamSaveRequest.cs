@@ -1,5 +1,4 @@
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+using System.Text.Json.Serialization;
 using System.Runtime.Serialization;
 
 namespace Cherwell.Api.Models.Teams;
@@ -13,7 +12,7 @@ public class TeamSaveRequest
 	/// <summary>
 	/// TeamType
 	/// </summary>
-	[JsonConverter(typeof(StringEnumConverter))]
+	[JsonConverter(typeof(JsonStringEnumConverter))]
 	public enum EnumTeamType
 	{
 
@@ -66,4 +65,3 @@ public class TeamSaveRequest
 	[DataMember(Name = "teamName", EmitDefaultValue = false)]
 	public string TeamName { get; set; } = null!;
 }
-

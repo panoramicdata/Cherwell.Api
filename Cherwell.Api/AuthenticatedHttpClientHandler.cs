@@ -1,206 +1,195 @@
-﻿using Cherwell.Api.Exceptions;
+using Cherwell.Api.Exceptions;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System.Net.Http.Headers;
 using System.Security.Authentication;
 using System.Text;
+using System.Text.Json;
 using System.Web;
 
 namespace Cherwell.Api;
 
 public class AuthenticatedHttpClientHandler : HttpClientHandler
 {
+	private const string AuthenticationType = "Bearer";
+	private const int TokenSubtractSeconds = 30;
+	private static readonly JsonSerializerOptions JsonOptions = CherwellJson.CreateSerializerOptions();
+	private static readonly JsonSerializerOptions IndentedJsonOptions = CherwellJson.CreateSerializerOptions(true);
+
 	private readonly CherwellClientOptions _options;
 	private readonly ILogger _logger;
 	private readonly HttpClient _authenticatingClient;
+	private readonly int _maxAttempts;
 	private string? _accessToken;
 	private string? _refreshToken;
 	private DateTime _tokenRefreshRequiredAt = DateTime.MaxValue;
-	private const string AuthenticationType = "Bearer";
-	private const int TokenSubtractSeconds = 30;   // Used as a 'safe window' to refresh the token N seconds before expiry. Was previously 5
-	private readonly int _maxAttempts = 5;
 
-	public AuthenticatedHttpClientHandler(
-		CherwellClientOptions options,
-		ILogger logger)
+	public AuthenticatedHttpClientHandler(CherwellClientOptions options, ILogger logger)
 	{
 		_options = options;
 		_logger = logger;
 		_maxAttempts = options.MaxAttempts;
-
-		_authenticatingClient = new HttpClient
-		{
-			BaseAddress = new Uri(options.BaseAddress)
-		};
+		_authenticatingClient = new HttpClient { BaseAddress = new Uri(options.BaseAddress) };
 		SetUserAgent(_authenticatingClient, _options.UserAgent);
 	}
 
 	/// <summary>
-	/// Override of the base method that is used to handle the sending of a request
+	/// Override of the base method that is used to handle the sending of a request.
 	/// </summary>
-	/// <param name="request">The request that is to be sent</param>
-	/// <param name="cancellationToken">A cancellation token for the operation</param>
-	/// <returns>The response to the request that was sent</returns>
-	protected override async Task<HttpResponseMessage> SendAsync(
-		HttpRequestMessage request,
-		CancellationToken cancellationToken)
+	/// <param name="request">The request that is to be sent.</param>
+	/// <param name="cancellationToken">A cancellation token for the operation.</param>
+	/// <returns>The response to the request that was sent.</returns>
+	protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
 	{
 		try
 		{
-			// Generate a unique request id
 			var requestId = Guid.NewGuid();
-
-			// Does the request has an authorize header?
-			var auth = request.Headers.Authorization;
-			if (auth is null)
-			{
-				// No.  Add one.
-				var accessToken = await GetAccessTokenAsync(cancellationToken);
-				request.Headers.Authorization = new AuthenticationHeaderValue(AuthenticationType, accessToken);
-			}
-			// The request now has an authorize header
-
-			// Check the logging level as the operation to
-			// extract the content is expensive
-			if (_logger.IsEnabled(LogLevel.Debug))
-			{
-				var url = request.RequestUri!.ToString();
-				var headers = string.Join("\n", request.Headers.Select(h => $"{h.Key}: {string.Join(", ", h.Value.Select(v => v))}"));
-				var body = request.Content is not null
-					? await request
-						.Content
-						.ReadAsStringAsync(cancellationToken)
-						.ConfigureAwait(false)
-					: string.Empty;
-				var jObject = JsonConvert.DeserializeObject<JObject>(body);
-				if (jObject is not null)
-				{
-					body = JsonConvert.SerializeObject(jObject, Formatting.Indented);
-				}
-
-				_logger.Log(LogLevel.Debug,
-					"{RequestId}: REQUEST: Url:{Url}\nHeaders:{Headers}\nBody: {Body}",
-					requestId,
-					url,
-					headers,
-					body);
-			}
-
-			if (_options.Culture is not null)
-			{
-				// Add the culture as a query parameter
-				var requestUri = request.RequestUri ?? throw new InvalidOperationException("RequestUri must be set before sending the request.");
-				var uriBuilder = new UriBuilder(requestUri);
-				var query = HttpUtility.ParseQueryString(uriBuilder.Query);
-				query["locale"] = _options.Culture.Name;
-				uriBuilder.Query = query.ToString();
-				request.RequestUri = uriBuilder.Uri;
-			}
-
-			// Make the HTTP call
-			var httpResponse = await base
-				.SendAsync(request, cancellationToken)
-				;
-
-			// Check the logging level as the operation to
-			// extract the content is expensive
-			if (_logger.IsEnabled(LogLevel.Debug))
-			{
-				var headers = string.Join("\n", httpResponse.Headers.Select(h => $"{h.Key}: {string.Join(", ", h.Value.Select(v => v))}"));
-				var body = httpResponse.Content is not null
-					? await httpResponse.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false)
-					: string.Empty;
-				try
-				{
-					var jObject = JsonConvert.DeserializeObject<JObject>(body);
-					if (jObject is not null)
-					{
-						body = JsonConvert.SerializeObject(jObject, Formatting.Indented);
-					}
-				}
-				catch (Exception)
-				{
-					// This doesn't work for arrays, which return the JArray type
-				}
-
-				_logger.Log(LogLevel.Debug,
-					"{RequestId}: RESPONSE: {StatusCode}\nHeaders:{Headers}\nBody: {Body}",
-					requestId,
-					httpResponse.StatusCode,
-					headers,
-					body);
-			}
-
-			// Was the request successful?
-			if (!httpResponse.IsSuccessStatusCode)
-			{
-				// No.
-
-				// Is this a Cherwell Response?
-				var body = httpResponse.Content is not null
-					? await httpResponse
-						.Content
-						.ReadAsStringAsync(cancellationToken)
-						.ConfigureAwait(false)
-					: string.Empty;
-
-				try
-				{
-					// This may fail
-					var response = JsonConvert.DeserializeObject<Response>(body);
-					if (response is not null)
-					{
-						// Yes.
-
-						// Update the status code if not set
-						if (response.HttpStatusCode is null or EnumHttpStatusCode.None)
-						{
-							response.HttpStatusCode = (EnumHttpStatusCode)httpResponse.StatusCode;
-						}
-
-						// Throw a CherwellApiException before Refit can get hold of it.
-						throw string.IsNullOrWhiteSpace(response.ErrorMessage)
-							? new CherwellApiException(response, $"Cherwell responded with {response.ErrorCode} ({response.HttpStatusCode})")
-							: new CherwellApiException(response, $"Cherwell responded with {response.ErrorCode} ({response.HttpStatusCode}), with message: {response.ErrorMessage}");
-					}
-				}
-				catch (JsonReaderException)
-				{
-					var reason = $"Cherwell responded with {httpResponse.StatusCode} ({httpResponse.ReasonPhrase})";
-					if (!string.IsNullOrWhiteSpace(body))
-					{
-						reason += $" - {body}";
-					}
-					throw new CherwellApiException(reason);
-				}
-			}
-
-			return httpResponse;
+			await AddAuthenticationAsync(request, cancellationToken).ConfigureAwait(false);
+			AddCulture(request);
+			await LogRequestAsync(requestId, request, cancellationToken).ConfigureAwait(false);
+			var response = await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
+			await LogResponseAsync(requestId, response, cancellationToken).ConfigureAwait(false);
+			await ThrowIfUnsuccessfulAsync(response, cancellationToken).ConfigureAwait(false);
+			return response;
 		}
-		catch (CherwellApiException)
-		{
-			throw;
-		}
-		catch (Exception ex)
+		catch (Exception ex) when (ex is not CherwellApiException)
 		{
 			throw new CherwellApiException("Unexpected Cherwell API exception.", ex);
 		}
 	}
 
-	/// <summary>
-	/// Get the access token, either a cached value, or one requested from the source
-	/// </summary>
-	/// <param name="cancellationToken">The token used to manage cancellation</param>
-	/// <returns>The required access token for access to the Cherwell API</returns>
+	private async Task AddAuthenticationAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+	{
+		if (request.Headers.Authorization is null)
+		{
+			var accessToken = await GetAccessTokenAsync(cancellationToken).ConfigureAwait(false);
+			request.Headers.Authorization = new AuthenticationHeaderValue(AuthenticationType, accessToken);
+		}
+	}
+
+	private void AddCulture(HttpRequestMessage request)
+	{
+		if (_options.Culture is null)
+		{
+			return;
+		}
+
+		var requestUri = request.RequestUri
+			?? throw new InvalidOperationException("RequestUri must be set before sending the request.");
+		var uriBuilder = new UriBuilder(requestUri);
+		var query = HttpUtility.ParseQueryString(uriBuilder.Query);
+		query["locale"] = _options.Culture.Name;
+		uriBuilder.Query = query.ToString();
+		request.RequestUri = uriBuilder.Uri;
+	}
+
+	private async Task LogRequestAsync(Guid requestId, HttpRequestMessage request, CancellationToken cancellationToken)
+	{
+		if (!_logger.IsEnabled(LogLevel.Debug))
+		{
+			return;
+		}
+
+		var body = request.Content is null
+			? string.Empty
+			: await request.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+		_logger.LogDebug(
+			"{RequestId}: REQUEST: Url:{Url}\nHeaders:{Headers}\nBody: {Body}",
+			requestId,
+			request.RequestUri,
+			FormatHeaders(request.Headers),
+			FormatJson(body));
+	}
+
+	private async Task LogResponseAsync(Guid requestId, HttpResponseMessage response, CancellationToken cancellationToken)
+	{
+		if (!_logger.IsEnabled(LogLevel.Debug))
+		{
+			return;
+		}
+
+		var body = response.Content is null
+			? string.Empty
+			: await response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+		_logger.LogDebug(
+			"{RequestId}: RESPONSE: {StatusCode}\nHeaders:{Headers}\nBody: {Body}",
+			requestId,
+			response.StatusCode,
+			FormatHeaders(response.Headers),
+			FormatJson(body));
+	}
+
+	private static string FormatHeaders(HttpHeaders headers) =>
+		string.Join("\n", headers.Select(header => $"{header.Key}: {string.Join(", ", header.Value)}"));
+
+	private static string FormatJson(string body)
+	{
+		try
+		{
+			using var document = JsonDocument.Parse(body);
+			return JsonSerializer.Serialize(document.RootElement, IndentedJsonOptions);
+		}
+		catch (JsonException)
+		{
+			return body;
+		}
+	}
+
+	private static async Task ThrowIfUnsuccessfulAsync(HttpResponseMessage httpResponse, CancellationToken cancellationToken)
+	{
+		if (httpResponse.IsSuccessStatusCode)
+		{
+			return;
+		}
+
+		var body = httpResponse.Content is null
+			? string.Empty
+			: await httpResponse.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+		Response? response;
+		try
+		{
+			response = JsonSerializer.Deserialize<Response>(body, JsonOptions);
+		}
+		catch (JsonException)
+		{
+			throw CreateUnstructuredResponseException(httpResponse, body);
+		}
+
+		if (response is null)
+		{
+			throw CreateUnstructuredResponseException(httpResponse, body);
+		}
+
+		if (response.HttpStatusCode is null or EnumHttpStatusCode.None)
+		{
+			response.HttpStatusCode = (EnumHttpStatusCode)httpResponse.StatusCode;
+		}
+
+		var reason = $"Cherwell responded with {response.ErrorCode} ({response.HttpStatusCode})";
+		if (!string.IsNullOrWhiteSpace(response.ErrorMessage))
+		{
+			reason += $", with message: {response.ErrorMessage}";
+		}
+
+		throw new CherwellApiException(response, reason);
+	}
+
+	private static CherwellApiException CreateUnstructuredResponseException(HttpResponseMessage response, string body)
+	{
+		var reason = $"Cherwell responded with {response.StatusCode} ({response.ReasonPhrase})";
+		if (!string.IsNullOrWhiteSpace(body))
+		{
+			reason += $" - {body}";
+		}
+
+		return new CherwellApiException(reason);
+	}
+
 	private async Task<string> GetAccessTokenAsync(CancellationToken cancellationToken)
 	{
 		if (_accessToken is null)
 		{
-			// First connection; we need to create a token
 			_logger.LogDebug("Requesting authentication token");
-			await GenerateAccessTokenAsync(GrantTypes.Password, cancellationToken)
-				;
+			await GenerateAccessTokenAsync(GrantTypes.Password, cancellationToken).ConfigureAwait(false);
 			return _accessToken!;
 		}
 
@@ -209,141 +198,124 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			return _accessToken;
 		}
 
-		// The time has come to refresh the token
 		_logger.LogDebug("Refreshing authentication token");
-		await GenerateAccessTokenAsync(GrantTypes.RefreshToken, cancellationToken)
-			;
+		await GenerateAccessTokenAsync(GrantTypes.RefreshToken, cancellationToken).ConfigureAwait(false);
 		return _accessToken;
 	}
 
-	/// <summary>
-	/// Generate an access token by attempting to get one from the remote service
-	/// </summary>
-	/// <param name="grantType">The type of grant required</param>
-	/// <param name="cancellationToken">The token used to manage cancellation</param>
-	/// <exception cref="AuthenticationException">The authentication attempt was not successful</exception>
 	private async Task GenerateAccessTokenAsync(GrantTypes grantType, CancellationToken cancellationToken)
 	{
-		using var httpClient = new HttpClient
-		{
-			BaseAddress = new($"{_options.BaseAddress}/token"),
-		};
-		SetUserAgent(httpClient, _options.UserAgent);
+		using var httpClient = CreateTokenClient();
+		var grantTypeString = GetGrantTypeValue(grantType);
+		var retryDelay = TimeSpan.FromSeconds(10);
 
-		var base64String = (string?)Convert.ToBase64String(Encoding.UTF8.GetBytes($"{_options.ClientId}:"));
-		httpClient.DefaultRequestHeaders.Add("Authorization", $"Basic {base64String}");
-
-		var grantTypeString = grantType switch
+		for (var attempt = 1; attempt <= _maxAttempts; attempt++)
 		{
-			GrantTypes.Password => "password",
-			GrantTypes.RefreshToken => "refresh_token",
-			_ => throw new ArgumentOutOfRangeException(nameof(grantType))
-		};
-
-		HttpResponseMessage? response = null;
-		var attemptCount = 0;
-		var retryDelayMs = 10000;
-		do
-		{
-			attemptCount++;
 			if (_logger.IsEnabled(LogLevel.Information))
 			{
 				_logger.LogInformation(
 					"Cherwell 'GenerateAccessTokenAsync' (attempt {Attempt}/{MaxAttempts})",
-					attemptCount,
-					_maxAttempts
-				);
+					attempt,
+					_maxAttempts);
 			}
+			using var response = await SendTokenRequestAsync(
+				httpClient,
+				grantTypeString,
+				cancellationToken).ConfigureAwait(false);
+			var responseBody = await response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-			using (var request = new HttpRequestMessage(HttpMethod.Post, "token"))
-			{
-
-				var keyValues = new List<KeyValuePair<string, string>>
-				{
-					new("grant_type", grantTypeString),
-					new("username", _options.UserName!),
-					new("password", _options.Password!)
-				};
-
-				if (_refreshToken is not null)
-				{
-					keyValues.Add(new KeyValuePair<string, string>("refresh_token", _refreshToken!));
-				}
-
-				request.Content = new FormUrlEncodedContent(keyValues);
-				request.Content.Headers.ContentType = new MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded")
-				{
-					CharSet = "UTF-8"
-				};
-
-				response = await httpClient
-					.SendAsync(request, cancellationToken)
-					;
-			}
-
-			var stringResponse = await response
-				.Content
-				.ReadAsStringAsync(cancellationToken)
-				;
-
-			// Did auth succeed?
 			if (response.IsSuccessStatusCode)
 			{
-				// Yes.  Try to parse the response
-				var tokenResponse = JsonConvert.DeserializeObject<TokenResponse>(stringResponse);
-
-				// Did we parse the token?
-				if (tokenResponse is null)
-				{
-					// No.
-					_logger.LogError("Could not deserialize content as a TokenResponse.");
-					throw new AuthenticationException("Could not deserialize content as a TokenResponse.");
-				}
-				// Yes
-
-				// Store and return
-				_accessToken = tokenResponse.AccessToken;
-				_refreshToken = tokenResponse.RefreshToken;
-				_tokenRefreshRequiredAt = DateTime.Now.AddSeconds(tokenResponse.ExpiresIn - TokenSubtractSeconds);
+				StoreToken(responseBody);
 				return;
 			}
-			// No.
 
-			// Is it a 4xx error?
-			if ((int)response.StatusCode / 100 == 4)
+			ThrowIfAuthenticationRejected(response, responseBody);
+			if (attempt < _maxAttempts)
 			{
-				// Yes. Throw an exception - no need to log as the callers log
-				if (!string.IsNullOrWhiteSpace(response.ReasonPhrase))
+				if (_logger.IsEnabled(LogLevel.Information))
 				{
-					throw new AuthenticationException($"Cherwell 'GenerateAccessTokenAsync' response unsuccessful: {response.ReasonPhrase}: {stringResponse}");
+					_logger.LogInformation(
+						"Cherwell 'GenerateAccessTokenAsync' failed with status code {StatusCode}: waiting {RetryDelayMs}ms before retrying...",
+						response.StatusCode,
+						retryDelay.TotalMilliseconds);
 				}
-
-				throw new AuthenticationException(
-					$"Cherwell 'GenerateAccessTokenAsync' response unsuccessful: {stringResponse}");
+				await Task.Delay(retryDelay, cancellationToken).ConfigureAwait(false);
+				retryDelay *= 2;
 			}
-
-			// Wait before retrying
-			if (_logger.IsEnabled(LogLevel.Information))
-			{
-				_logger.LogInformation(
-					"Cherwell 'GenerateAccessTokenAsync' failed with status code {StatusCode}: waiting {RetryDelayMs}ms before retrying...",
-					response.StatusCode,
-					retryDelayMs);
-			}
-
-			await Task.Delay(retryDelayMs, cancellationToken).ConfigureAwait(false);
-			retryDelayMs *= 2;
-			continue;
 		}
-		while (attemptCount <= _maxAttempts);
 
+		throw new AuthenticationException($"Authentication failed after {_maxAttempts} attempts");
+	}
+
+	private HttpClient CreateTokenClient()
+	{
+		var httpClient = new HttpClient { BaseAddress = new Uri($"{_options.BaseAddress}/token") };
+		SetUserAgent(httpClient, _options.UserAgent);
+		var credentials = Convert.ToBase64String(Encoding.UTF8.GetBytes($"{_options.ClientId}:"));
+		httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", credentials);
+		return httpClient;
+	}
+
+	private static string GetGrantTypeValue(GrantTypes grantType) => grantType switch
+	{
+		GrantTypes.Password => "password",
+		GrantTypes.RefreshToken => "refresh_token",
+		_ => throw new ArgumentOutOfRangeException(nameof(grantType))
+	};
+
+	private async Task<HttpResponseMessage> SendTokenRequestAsync(
+		HttpClient httpClient,
+		string grantType,
+		CancellationToken cancellationToken)
+	{
+		var values = new List<KeyValuePair<string, string>>
+		{
+			new("grant_type", grantType),
+			new("username", _options.UserName!),
+			new("password", _options.Password!)
+		};
+		if (_refreshToken is not null)
+		{
+			values.Add(new("refresh_token", _refreshToken));
+		}
+
+		using var request = new HttpRequestMessage(HttpMethod.Post, "token")
+		{
+			Content = new FormUrlEncodedContent(values)
+		};
+		request.Content.Headers.ContentType = new MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded")
+		{
+			CharSet = "UTF-8"
+		};
+		return await httpClient.SendAsync(request, cancellationToken).ConfigureAwait(false);
+	}
+
+	private void StoreToken(string responseBody)
+	{
+		var tokenResponse = JsonSerializer.Deserialize<TokenResponse>(responseBody, JsonOptions)
+			?? throw new AuthenticationException("Could not deserialize content as a TokenResponse.");
+		_accessToken = tokenResponse.AccessToken;
+		_refreshToken = tokenResponse.RefreshToken;
+		_tokenRefreshRequiredAt = DateTime.Now.AddSeconds(tokenResponse.ExpiresIn - TokenSubtractSeconds);
+	}
+
+	private static void ThrowIfAuthenticationRejected(HttpResponseMessage response, string responseBody)
+	{
+		if ((int)response.StatusCode / 100 != 4)
+		{
+			return;
+		}
+
+		var reason = string.IsNullOrWhiteSpace(response.ReasonPhrase)
+			? responseBody
+			: $"{response.ReasonPhrase}: {responseBody}";
 		throw new AuthenticationException(
-			$"Authentication failed after {_maxAttempts} attempts");
+			$"Cherwell 'GenerateAccessTokenAsync' response unsuccessful: {reason}");
 	}
 
 	private static void SetUserAgent(HttpClient httpClient, string? userAgentString)
 	{
-		// Add a user agent to ensure consistent behaviour
 		if (userAgentString is null)
 		{
 			return;
@@ -352,18 +324,14 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		var userAgentArray = userAgentString.Split('/');
 		if (userAgentArray.Length != 2)
 		{
-			throw new FormatException("UserAgent should be in the form 'SystemName/1.0', where 1.0 is the system version in the form 'Major.Minor'");
+			throw new FormatException(
+				"UserAgent should be in the form 'SystemName/1.0', where 1.0 is the system version in the form 'Major.Minor'");
 		}
 
-		httpClient
-			.DefaultRequestHeaders
-			.UserAgent
-			.Add(new ProductInfoHeaderValue(userAgentArray[0], userAgentArray[1]));
+		httpClient.DefaultRequestHeaders.UserAgent.Add(
+			new ProductInfoHeaderValue(userAgentArray[0], userAgentArray[1]));
 	}
 
-	/// <summary>
-	/// Log out, invalidating the access token for improved security
-	/// </summary>
 	private async Task LogoutAsync()
 	{
 		if (_accessToken is null)
@@ -371,13 +339,9 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			return;
 		}
 
-		// TODO: Should we parameterise the version of the API in use?
-		var request = new HttpRequestMessage(HttpMethod.Delete, "api/V1/logout");
+		using var request = new HttpRequestMessage(HttpMethod.Delete, "api/V1/logout");
 		request.Headers.Authorization = new AuthenticationHeaderValue(AuthenticationType, _accessToken);
-
-		var response = await _authenticatingClient
-			.SendAsync(request);
-
+		using var response = await _authenticatingClient.SendAsync(request).ConfigureAwait(false);
 		if (!response.IsSuccessStatusCode)
 		{
 			_logger.LogWarning("Could not log out: {Message}", Resources.FailedToLogOut);
@@ -387,30 +351,20 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		}
 	}
 
-	#region Dispose
-
-	protected override async void Dispose(bool disposing)
+	protected override void Dispose(bool disposing)
 	{
-		// Tidy up, including logging out
-		if (_accessToken is not null)
+		if (disposing)
 		{
-			await LogoutAsync();
+			LogoutAsync().GetAwaiter().GetResult();
+			_authenticatingClient.Dispose();
 		}
-
-		_authenticatingClient?.Dispose();
 
 		base.Dispose(disposing);
 	}
 
-	#endregion
-
-	#region Private Enums
-
 	private enum GrantTypes
 	{
-		Password = 0,
-		RefreshToken = 1
+		Password,
+		RefreshToken
 	}
-
-	#endregion
 }

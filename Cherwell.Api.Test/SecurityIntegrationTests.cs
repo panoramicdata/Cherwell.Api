@@ -1,4 +1,4 @@
-﻿namespace Cherwell.Api.Test;
+namespace Cherwell.Api.Test;
 
 public class SecurityIntegrationTests : TestBase
 {
@@ -16,34 +16,16 @@ public class SecurityIntegrationTests : TestBase
 	}
 
 	[Fact]
-	public async Task GetRolesV1_NotAuth() => await ((Func<Task>)(async () =>
-												   {
-													   var response = await Client
-													   .Security
-													   .GetRolesAsync(CancellationToken)
-													   ;
-												   }))
-		.Should()
-		.ThrowAsync<CherwellApiException>()
-		.WithMessage(Message.UnknownException)
-		.Where(e =>
-			e.Response != null && e.Response.ErrorCode == ErrorCode.InsufficientRights
-			&& e.Response.HasError);
+	public Task GetRolesV1_NotAuth() => AssertThrowsCherwellAsync(
+		() => Client.Security.GetRolesAsync(CancellationToken),
+		Message.UnknownException,
+		ErrorCode.InsufficientRights);
 
 	[Fact]
-	public async Task GetRolesV2_NotAuth() => await ((Func<Task>)(async () =>
-												   {
-													   var response = await Client
-													   .Security
-													   .GetRolesV2Async(CancellationToken)
-													   ;
-												   }))
-		.Should()
-		.ThrowAsync<CherwellApiException>()
-		.WithMessage(Message.InsufficientRights)
-		.Where(e =>
-			e.Response != null && e.Response.ErrorCode == ErrorCode.InsufficientRights
-			&& e.Response.HasError);
+	public Task GetRolesV2_NotAuth() => AssertThrowsCherwellAsync(
+		() => Client.Security.GetRolesV2Async(CancellationToken),
+		Message.InsufficientRights,
+		ErrorCode.InsufficientRights);
 
 	// GetSecurityGroupBusinessObjectPermissionsByBusObIdAsync - unable to test, no groupId to test with
 	// GetSecurityGroupBusinessObjectPermissionsByBusObIdV2Async - unable to test, no groupId to test with

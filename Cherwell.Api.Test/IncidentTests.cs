@@ -1,79 +1,34 @@
-﻿namespace Cherwell.Api.Test;
+namespace Cherwell.Api.Test;
 
-public partial class TicketTests : TestBase
+public class TicketTests : TestBase
 {
+	private static readonly Regex SubQueryRegex = new(
+		"(?<field>.+?) (?<operator>.+?) '(?<value>.+)'",
+		RegexOptions.Compiled);
+
 	[Theory]
 	[InlineData("")]
 	[InlineData("Status eq 'In Progress' OR Status eq 'Reopened'")]
 	[InlineData("Status eq 'Closed'")]
 	public async Task GetQuickSearchSpecificResults_Succeeds(string query)
 	{
-		var summaries = await Client
-			.BusinessObject
-			.GetBusinessObjectSummaryByNameAsync("Incident", CancellationToken)
-			;
-		var summary = summaries[0];
-
-		var businessObjectId = summary.BusObId;
-
-		var businessObjectSchema = await Client
-			.BusinessObject
-			.GetBusinessObjectSchemaAsync(businessObjectId, true, CancellationToken)
-			;
-
-		var filters = string.IsNullOrWhiteSpace(query)
-			? null
-			: query.Split(" OR ").Select(subQuery =>
-			{
-				var subQueryMatches = SubQueryRegex().Matches(subQuery);
-				var fieldName = subQueryMatches[0].Groups["field"].Value;
-				var @operator = subQueryMatches[0].Groups["operator"].Value;
-				var value = subQueryMatches[0].Groups["value"].Value;
-
-				var fieldDefinition = businessObjectSchema
-					.FieldDefinitions
-					.SingleOrDefault(fd => fd.Name == fieldName);
-
-				fieldDefinition
-					.Should()
-					.NotBeNull();
-
-				var fieldId = fieldDefinition!.FieldId;
-
-				return new FilterInfo
-				{
-					FieldId = fieldId,
-					Operator = @operator,
-					Value = value
-				};
-			}
-			)
-			.ToList();
-
-		List<string>? fields = null;
-
-		var skip = 0;
-		var take = int.MaxValue;
-
-		var searchResultsRequest = new SearchResultsRequest
+		var summaries = await Client.BusinessObject
+			.GetBusinessObjectSummaryByNameAsync("Incident", CancellationToken);
+		var businessObjectId = summaries[0].BusObId;
+		var schema = await Client.BusinessObject.GetBusinessObjectSchemaAsync(
+			businessObjectId,
+			true,
+			CancellationToken);
+		var request = new SearchResultsRequest
 		{
 			BusObId = businessObjectId,
-			Fields = fields?.Count != 0 ? fields : null,
-			Filters = filters,
-			PageNumber = skip / take + 1,
-			PageSize = take
+			Filters = CreateFilters(query, schema),
+			PageNumber = 1,
+			PageSize = int.MaxValue
 		};
 
-		var searchItemResponse = await Client
-			.Searches
-			.GetSearchResultsAdHocAsync(
-				searchResultsRequest,
-				CancellationToken)
-			;
-
-		searchItemResponse
-			.Should()
-			.NotBeNull();
+		var response = await Client.Searches.GetSearchResultsAdHocAsync(request, CancellationToken);
+		response.Should().NotBeNull();
 	}
 
 	[Theory]
@@ -82,181 +37,90 @@ public partial class TicketTests : TestBase
 	[InlineData("Incident")]
 	public async Task GetTickets_Succeeds(string ticketType)
 	{
-		// Get a summary of the given object type, if there is one
-		var businessObjectSummaries = await Client
-			.BusinessObject
-			.GetBusinessObjectSummaryByNameAsync(ticketType, CancellationToken)
-			;
-
-		businessObjectSummaries
-			.Should()
-			.NotBeNull();
-
-		businessObjectSummaries
-			.Should()
-			.ContainSingle();
-
-		var businessObjectSummary = businessObjectSummaries[0];
-
-		// Possible statuses for the Incident object type
-		var possibleStatuses = businessObjectSummary
-			.States
-			.Split(",", StringSplitOptions.RemoveEmptyEntries);
-
-		// Retrieve the schema that explains the available fields on the object
-		var businessObjectSchema = await Client
-			.BusinessObject
-			.GetBusinessObjectSchemaAsync(
-			businessObjectSummary.BusObId,
+		var summaries = await Client.BusinessObject
+			.GetBusinessObjectSummaryByNameAsync(ticketType, CancellationToken);
+		summaries.Should().ContainSingle();
+		var summary = summaries[0];
+		var schema = await Client.BusinessObject.GetBusinessObjectSchemaAsync(
+			summary.BusObId,
 			true,
-			CancellationToken)
-			;
+			CancellationToken);
+		var request = new SearchResultsRequest
+		{
+			BusObId = summary.BusObId,
+			Fields = [.. schema.FieldDefinitions.Take(5).Select(field => field.FieldId)],
+			Filters = []
+		};
 
-		var searchItemResponse = await Client
-			.Searches
-			.GetSearchResultsAdHocAsync(
-			new SearchResultsRequest
-			{
-				BusObId = businessObjectSummary.BusObId,
-				Fields = [.. businessObjectSchema
-					.FieldDefinitions
-					.Take(5)
-					.Select(f => f.FieldId)],
-				Filters = []
-			},
-			CancellationToken)
-		;
-
-		searchItemResponse
-			.Should()
-			.NotBeNull();
-
-		searchItemResponse
-			.HasError
-			.Should()
-			.BeFalse();
-
-		searchItemResponse
-			.ErrorCode
-			.Should()
-			.BeNullOrEmpty();
-
-		searchItemResponse
-			.ErrorMessage
-			.Should()
-			.BeNullOrEmpty();
-
-		searchItemResponse
-			.BusinessObjects
-			.Should()
-			.NotBeNull();
-
-		searchItemResponse
-			.Links
-			.Should()
-			.NotBeNull();
+		var response = await Client.Searches.GetSearchResultsAdHocAsync(request, CancellationToken);
+		AssertSuccessfulSearch(response);
 	}
 
 	[Fact]
 	public async Task GetIncidentSchema_Succeeds()
 	{
-		// Get a summary of the 'Incident' object type, if there is one
-		var objectSummaries = await Client
-			.BusinessObject
-			.GetBusinessObjectSummaryByNameAsync("Incident", CancellationToken)
-			;
-
-		objectSummaries
-			.Should()
-			.NotBeNull();
-
-		objectSummaries
-			.Should()
-			.ContainSingle();
-
-		var incidentSummary = objectSummaries[0];
-
-		// Retrieve the schema that explains the available fields on the object
-		var incidentSchema = await Client
-			.BusinessObject
-			.GetBusinessObjectSchemaAsync(
-			incidentSummary.BusObId,
+		var summaries = await Client.BusinessObject
+			.GetBusinessObjectSummaryByNameAsync("Incident", CancellationToken);
+		summaries.Should().ContainSingle();
+		var schema = await Client.BusinessObject.GetBusinessObjectSchemaAsync(
+			summaries[0].BusObId,
 			true,
-			CancellationToken)
-			;
+			CancellationToken);
 
-		incidentSchema
-			.Should()
-			.NotBeNull();
-
-		incidentSchema
-			.HasError
-			.Should()
-			.BeFalse();
-
-		incidentSchema
-			.ErrorCode
-			.Should()
-			.BeNullOrEmpty();
-
-		incidentSchema
-			.ErrorMessage
-			.Should()
-			.BeNullOrEmpty();
-
-		incidentSchema
-			.BusObId
-			.Should()
-			.NotBeNullOrWhiteSpace();
-
-		incidentSchema
-			.FieldDefinitions
-			.Should()
-			.NotBeNull();
-
-		incidentSchema
-			.FieldDefinitions
-			.Count
-			.Should()
-			.BePositive();
-
-		incidentSchema
-			.FirstRecIdField
-			.Should()
-			.NotBeNullOrWhiteSpace();
-
-		incidentSchema
-			.GridDefinitions
-			.Should()
-			.NotBeNull();
-
-		incidentSchema
-			.Name
-			.Should()
-			.NotBeNullOrWhiteSpace();
-
-		incidentSchema
-			.RecIdFields
-			.Should()
-			.NotBeNullOrWhiteSpace();
-
-		incidentSchema
-			.Relationships
-			.Should()
-			.NotBeNull();
-
-		incidentSchema
-			.StateFieldId
-			.Should()
-			.NotBeNullOrWhiteSpace();
-
-		incidentSchema
-			.States
-			.Should()
-			.NotBeNullOrWhiteSpace();
-
+		AssertValidSchema(schema);
 	}
 
-	[GeneratedRegex("(?<field>.+?) (?<operator>.+?) '(?<value>.+)'")]
-	private static partial Regex SubQueryRegex();
+	private static List<FilterInfo>? CreateFilters(
+		string query,
+		Models.BusinessObject.SchemaResponse schema)
+	{
+		if (string.IsNullOrWhiteSpace(query))
+		{
+			return null;
+		}
+
+		return [.. query.Split(" OR ").Select(subQuery => CreateFilter(subQuery, schema))];
+	}
+
+	private static FilterInfo CreateFilter(string subQuery, Models.BusinessObject.SchemaResponse schema)
+	{
+		var match = SubQueryRegex.Match(subQuery);
+		match.Success.Should().BeTrue();
+		var fieldName = match.Groups["field"].Value;
+		var field = schema.FieldDefinitions.SingleOrDefault(definition => definition.Name == fieldName);
+		field.Should().NotBeNull();
+		return new FilterInfo
+		{
+			FieldId = field!.FieldId,
+			Operator = match.Groups["operator"].Value,
+			Value = match.Groups["value"].Value
+		};
+	}
+
+	private static void AssertSuccessfulSearch(SearchResultsResponse response)
+	{
+		response.Should().NotBeNull();
+		response.HasError.Should().BeFalse();
+		response.ErrorCode.Should().BeNullOrEmpty();
+		response.ErrorMessage.Should().BeNullOrEmpty();
+		response.BusinessObjects.Should().NotBeNull();
+		response.Links.Should().NotBeNull();
+	}
+
+	private static void AssertValidSchema(Models.BusinessObject.SchemaResponse schema)
+	{
+		schema.Should().NotBeNull();
+		schema.HasError.Should().BeFalse();
+		schema.ErrorCode.Should().BeNullOrEmpty();
+		schema.ErrorMessage.Should().BeNullOrEmpty();
+		schema.BusObId.Should().NotBeNullOrWhiteSpace();
+		schema.FieldDefinitions.Should().NotBeNullOrEmpty();
+		schema.FirstRecIdField.Should().NotBeNullOrWhiteSpace();
+		schema.GridDefinitions.Should().NotBeNull();
+		schema.Name.Should().NotBeNullOrWhiteSpace();
+		schema.RecIdFields.Should().NotBeNullOrWhiteSpace();
+		schema.Relationships.Should().NotBeNull();
+		schema.StateFieldId.Should().NotBeNullOrWhiteSpace();
+		schema.States.Should().NotBeNullOrWhiteSpace();
+	}
 }

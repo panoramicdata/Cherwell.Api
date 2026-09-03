@@ -1,5 +1,4 @@
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+using System.Text.Json.Serialization;
 using System.Runtime.Serialization;
 
 namespace Cherwell.Api.Models.Core;
@@ -13,7 +12,7 @@ public class Prompt
 	/// <summary>
 	/// ListDisplayOption
 	/// </summary>
-	[JsonConverter(typeof(StringEnumConverter))]
+	[JsonConverter(typeof(JsonStringEnumConverter))]
 	public enum EnumListDisplayOption
 	{
 
@@ -57,7 +56,7 @@ public class Prompt
 	/// <summary>
 	/// PromptType
 	/// </summary>
-	[JsonConverter(typeof(StringEnumConverter))]
+	[JsonConverter(typeof(JsonStringEnumConverter))]
 	public enum EnumPromptType
 	{
 

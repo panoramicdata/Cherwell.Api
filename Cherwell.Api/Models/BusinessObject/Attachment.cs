@@ -1,5 +1,4 @@
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+using System.Text.Json.Serialization;
 using System.Runtime.Serialization;
 
 namespace Cherwell.Api.Models.BusinessObject;
@@ -13,7 +12,7 @@ public class Attachment
 	/// <summary>
 	/// AttachmentType
 	/// </summary>
-	[JsonConverter(typeof(StringEnumConverter))]
+	[JsonConverter(typeof(JsonStringEnumConverter))]
 	public enum EnumAttachmentType
 	{
 
@@ -39,7 +38,7 @@ public class Attachment
 	/// <summary>
 	/// Scope
 	/// </summary>
-	[JsonConverter(typeof(StringEnumConverter))]
+	[JsonConverter(typeof(JsonStringEnumConverter))]
 	public enum AttachmentScope
 	{
 
@@ -131,7 +130,7 @@ public class Attachment
 	/// <summary>
 	/// Type
 	/// </summary>
-	[JsonConverter(typeof(StringEnumConverter))]
+	[JsonConverter(typeof(JsonStringEnumConverter))]
 	public enum ObjectType
 	{
 

@@ -10,30 +10,42 @@ namespace Cherwell.Api;
 /// </summary>
 public class CherwellClient : IDisposable
 {
-	private readonly ILogger _logger;
 	private readonly HttpClient _httpClient;
 
 	/// <summary>
 	/// Create an instance of the client for accessing the Cherwell API
 	/// </summary>
 	/// <param name="options">The options to be used when accessing the API</param>
-	/// <param name="logger">Optional logger to which to output details of the operations performed</param>
-	public CherwellClient(CherwellClientOptions options, ILogger? logger = null)
+	public CherwellClient(CherwellClientOptions options)
+		: this(options, null)
+	{
+	}
+
+	/// <summary>
+	/// Create an instance of the client for accessing the Cherwell API.
+	/// </summary>
+	/// <param name="options">The options to be used when accessing the API.</param>
+	/// <param name="logger">Logger to which to output details of the operations performed.</param>
+	public CherwellClient(CherwellClientOptions options, ILogger? logger)
 	{
 		ArgumentNullException.ThrowIfNull(options);
-
-		_logger = logger ?? NullLogger.Instance;
+		var effectiveLogger = logger ?? NullLogger.Instance;
 
 		// Validate that all of the necessary configuration has been provided
 		options.Validate();
 
-		_httpClient = new HttpClient(new AuthenticatedHttpClientHandler(options, _logger))
+		_httpClient = new HttpClient(new AuthenticatedHttpClientHandler(options, effectiveLogger))
 		{
 			BaseAddress = new Uri(options.BaseAddress!),
 			Timeout = TimeSpan.FromSeconds(options.TimeoutSeconds)
 		};
 
-		var refitSettings = new RefitSettings { Buffered = true };
+		var refitSettings = new RefitSettings
+		{
+			Buffered = true,
+			ContentSerializer = new SystemTextJsonContentSerializer(
+				CherwellJson.CreateSerializerOptions())
+		};
 
 		Approval = RestService.For<IApproval>(_httpClient, refitSettings);
 		BusinessObject = RestService.For<IBusinessObject>(_httpClient, refitSettings);
@@ -91,9 +103,7 @@ public class CherwellClient : IDisposable
 	{
 		if (disposing)
 		{
-			// _logger.LogTrace("{Message}", Resources.Disposing);
 			_httpClient.Dispose();
-			// _logger.LogTrace("{Message}", Resources.Disposed);
 		}
 	}
 
