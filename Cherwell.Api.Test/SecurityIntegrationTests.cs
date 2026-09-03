@@ -2,18 +2,11 @@ namespace Cherwell.Api.Test;
 
 public class SecurityIntegrationTests : TestBase
 {
-	[Fact]
-	public async Task GetClientSecuritySettings_Succeeds()
-	{
-		var response = await Client
-			.Security
-			.GetClientSecuritySettingsAsync("RichClient", CancellationToken)
-			;
+	private const string AnnouncementBusObId = "93c5ca8e7dbd4cc21dead14df19c684298a78358dd";
 
-		response
-			.Should()
-			.NotBeNull();
-	}
+	[Fact]
+	public Task GetClientSecuritySettings_Succeeds() => AssertSucceedsAsync(
+		() => Client.Security.GetClientSecuritySettingsAsync("RichClient", CancellationToken));
 
 	[Fact]
 	public Task GetRolesV1_NotAuth() => AssertThrowsCherwellAsync(
@@ -33,82 +26,28 @@ public class SecurityIntegrationTests : TestBase
 	// GetSecurityGroupBusinessObjectPermissionsByBusObNameV2Async - unable to test, no groupName to test with
 
 	[Fact]
-	public async Task GetBusinessObjectPermissions_Succeeds()
-	{
-		var response = await Client
-			.Security
-			.GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdAsync("93c5ca8e7dbd4cc21dead14df19c684298a78358dd", CancellationToken)
-			;
-
-		response
-			.Should()
-			.NotBeNull();
-	}
+	public Task GetBusinessObjectPermissions_Succeeds() => AssertSucceedsAsync(
+		() => Client.Security.GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdAsync(AnnouncementBusObId, CancellationToken));
 
 	[Fact]
-	public async Task GetBusinessObjectPermissionsV2_Succeeds()
-	{
-		var response = await Client
-			.Security
-			.GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV2Async("93c5ca8e7dbd4cc21dead14df19c684298a78358dd", CancellationToken)
-			;
-
-		response
-			.Should()
-			.NotBeNull();
-	}
+	public Task GetBusinessObjectPermissionsV2_Succeeds() => AssertSucceedsAsync(
+		() => Client.Security.GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV2Async(AnnouncementBusObId, CancellationToken));
 
 	[Fact]
-	public async Task GetBusinessObjectPermissionsByName_Succeeds()
-	{
-		var response = await Client
-			.Security
-			.GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameAsync("Announcement", CancellationToken)
-			;
-
-		response
-			.Should()
-			.NotBeNull();
-	}
+	public Task GetBusinessObjectPermissionsByName_Succeeds() => AssertSucceedsAsync(
+		() => Client.Security.GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameAsync("Announcement", CancellationToken));
 
 	[Fact]
-	public async Task GetBusinessObjectPermissionsByNameV2_Succeeds()
-	{
-		var response = await Client
-			.Security
-			.GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV2Async("Announcement", CancellationToken)
-			;
-
-		response
-			.Should()
-			.NotBeNull();
-	}
+	public Task GetBusinessObjectPermissionsByNameV2_Succeeds() => AssertSucceedsAsync(
+		() => Client.Security.GetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV2Async("Announcement", CancellationToken));
 
 	[Fact]
-	public async Task GetSecurityGroupCategories_Succeeds()
-	{
-		var response = await Client
-			.Security
-			.GetSecurityGroupCategoriesAsync(CancellationToken)
-			;
-
-		response
-			.Should()
-			.NotBeNull();
-	}
+	public Task GetSecurityGroupCategories_Succeeds() => AssertSucceedsAsync(
+		() => Client.Security.GetSecurityGroupCategoriesAsync(CancellationToken));
 
 	[Fact]
-	public async Task GetSecurityGroupCategoriesV2_Succeeds()
-	{
-		var response = await Client
-			.Security
-			.GetSecurityGroupCategoriesV2Async(CancellationToken)
-			;
-
-		response
-			.Should()
-			.NotBeNull();
-	}
+	public Task GetSecurityGroupCategoriesV2_Succeeds() => AssertSucceedsAsync(
+		() => Client.Security.GetSecurityGroupCategoriesV2Async(CancellationToken));
 
 	// GetSecurityGroupRightsByGroupIdAndCategoryIdAsync - unable to test, no groupId to test with
 	// GetSecurityGroupRightsByGroupIdAndCategoryIdV2Async - unable to test, no groupId to test with
@@ -120,30 +59,12 @@ public class SecurityIntegrationTests : TestBase
 	// GetSecurityGroupRightsForCurrentUserByCategoryNameV2Async - unable to test, no categoryName to test with
 
 	[Fact]
-	public async Task GetSecurityGroups_Succeeds()
-	{
-		var response = await Client
-			.Security
-			.GetSecurityGroupsAsync(CancellationToken)
-			;
-
-		response
-			.Should()
-			.NotBeNull();
-	}
+	public Task GetSecurityGroups_Succeeds() => AssertSucceedsAsync(
+		() => Client.Security.GetSecurityGroupsAsync(CancellationToken));
 
 	[Fact]
-	public async Task GetSecurityGroupsV2_Succeeds()
-	{
-		var response = await Client
-			.Security
-			.GetSecurityGroupsV2Async(CancellationToken)
-			;
-
-		response
-			.Should()
-			.NotBeNull();
-	}
+	public Task GetSecurityGroupsV2_Succeeds() => AssertSucceedsAsync(
+		() => Client.Security.GetSecurityGroupsV2Async(CancellationToken));
 
 	// GetUsersInSecurityGroupAsync - unable to test, no groupId to test with
 	// GetUsersInSecurityGroupV2Async - unable to test, no groupId to test with

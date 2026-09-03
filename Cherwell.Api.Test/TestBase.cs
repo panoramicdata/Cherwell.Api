@@ -46,17 +46,85 @@ public abstract class TestBase : IAsyncLifetime
 
 	/// <summary>
 	/// Asserts that <paramref name="action"/> fails with a <see cref="CherwellApiException"/> carrying the
-	/// expected message, error code and (optionally) HTTP status code.
+	/// expected message and error code.
 	/// </summary>
 	/// <remarks>
-	/// Every "not authorised" test in this suite makes the same four-part assertion, so it lives here rather
-	/// than being copied into each one.
+	/// Every "not authorised" test in this suite makes the same assertion, so it lives here rather than
+	/// being copied into each one.
 	/// </remarks>
+	/// <param name="action">The call expected to fail.</param>
+	/// <param name="expectedMessage">The exception message expected.</param>
+	/// <param name="expectedErrorCode">The Cherwell error code expected on the response.</param>
+	protected static async Task AssertThrowsCherwellAsync(
+		Func<Task> action,
+		string expectedMessage,
+		string expectedErrorCode)
+	{
+		var response = await AssertThrowsCherwellResponseAsync(action, expectedMessage);
+		response.ErrorCode.Should().Be(expectedErrorCode);
+	}
+
+	/// <summary>
+	/// Asserts that <paramref name="action"/> fails with a <see cref="CherwellApiException"/> carrying the
+	/// expected message, error code and HTTP status code.
+	/// </summary>
+	/// <param name="action">The call expected to fail.</param>
+	/// <param name="expectedMessage">The exception message expected.</param>
+	/// <param name="expectedErrorCode">The Cherwell error code expected on the response.</param>
+	/// <param name="expectedStatusCode">The HTTP status code expected on the response.</param>
 	protected static async Task AssertThrowsCherwellAsync(
 		Func<Task> action,
 		string expectedMessage,
 		string expectedErrorCode,
-		EnumHttpStatusCode? expectedStatusCode = null)
+		EnumHttpStatusCode expectedStatusCode)
+	{
+		var response = await AssertThrowsCherwellResponseAsync(action, expectedMessage);
+		response.ErrorCode.Should().Be(expectedErrorCode);
+		response.HttpStatusCode.Should().Be(expectedStatusCode);
+	}
+
+	/// <summary>
+	/// Asserts that <paramref name="action"/> is rejected as forbidden.
+	/// </summary>
+	/// <param name="action">The call expected to be rejected.</param>
+	protected static Task AssertForbiddenAsync(Func<Task> action) => AssertThrowsCherwellAsync(
+		action,
+		Message.Forbidden,
+		ErrorCode.Forbidden,
+		EnumHttpStatusCode.Forbidden);
+
+	/// <summary>
+	/// Asserts that <paramref name="action"/> is rejected because the record does not exist.
+	/// </summary>
+	/// <param name="action">The call expected to be rejected.</param>
+	protected static Task AssertRecordNotFoundAsync(Func<Task> action) => AssertThrowsCherwellAsync(
+		action,
+		Message.RecordNotFound,
+		ErrorCode.RecordNotFound);
+
+	/// <summary>
+	/// Asserts that <paramref name="action"/> succeeds and returns a response.
+	/// </summary>
+	/// <remarks>
+	/// Many endpoints can only be smoke-tested against the live instance, because the test account has no
+	/// fixture data to assert against. For those, that the call succeeds and returns something is the
+	/// assertion.
+	/// </remarks>
+	/// <typeparam name="TResponse">The response type of the call.</typeparam>
+	/// <param name="action">The call expected to succeed.</param>
+	protected static async Task AssertSucceedsAsync<TResponse>(Func<Task<TResponse>> action)
+	{
+		var response = await action();
+		response.Should().NotBeNull();
+	}
+
+	/// <summary>
+	/// Asserts that <paramref name="action"/> throws a <see cref="CherwellApiException"/> whose message
+	/// matches and which carries an error-bearing response, and returns that response for further checks.
+	/// </summary>
+	private static async Task<Response> AssertThrowsCherwellResponseAsync(
+		Func<Task> action,
+		string expectedMessage)
 	{
 		var assertion = await action
 			.Should()
@@ -64,22 +132,9 @@ public abstract class TestBase : IAsyncLifetime
 			.WithMessage(expectedMessage);
 
 		assertion.Which.Response.Should().NotBeNull();
-		assertion.Which.Response!.ErrorCode.Should().Be(expectedErrorCode);
-		assertion.Which.Response.HasError.Should().BeTrue();
-		if (expectedStatusCode is not null)
-		{
-			assertion.Which.Response.HttpStatusCode.Should().Be(expectedStatusCode);
-		}
+		assertion.Which.Response!.HasError.Should().BeTrue();
+		return assertion.Which.Response;
 	}
-
-	/// <summary>
-	/// Asserts that <paramref name="action"/> is rejected as forbidden.
-	/// </summary>
-	protected static Task AssertForbiddenAsync(Func<Task> action) => AssertThrowsCherwellAsync(
-		action,
-		Message.Forbidden,
-		ErrorCode.Forbidden,
-		EnumHttpStatusCode.Forbidden);
 
 	public ValueTask DisposeAsync()
 	{

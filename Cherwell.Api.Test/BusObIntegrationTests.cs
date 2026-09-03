@@ -1,7 +1,14 @@
-﻿namespace Cherwell.Api.Test;
+using Cherwell.Api.Models.BusinessObject;
+
+namespace Cherwell.Api.Test;
 
 public class BusObIntegrationTests : TestBase
 {
+	private const string AnnouncementBusObId = "93c5ca8e7dbd4cc21dead14df19c684298a78358dd";
+	private const string BuildingBusObId = "93e8652ccb6ffc759c6b544437bfa25c2e60ca36f0";
+	private const string ActivityBusObId = "944e02d8537d17b3384143451180f87eda564c5798";
+	private const string ActivityBusObRecId = "944e02da60578af7d7bc4644b6ae07ed4eb2648fc3";
+
 	// DeleteBusinessObjectBatchAsync - unable to test, as we don't want to delete anything
 
 	// DeleteBusinessObjectByPublicIdAsync - unable to test, as we don't want to delete anything
@@ -15,192 +22,98 @@ public class BusObIntegrationTests : TestBase
 	// BusinessObjectFieldValuesLookupAsync - unable to test, insufficient rights to add a business object
 
 	[Fact]
-	public async Task RetrieveActivities_Succeeds()
-	{
-		var response = await Client
-			.BusinessObject
-			.GetActivitiesAsync("944e02d8537d17b3384143451180f87eda564c5798", "944e02da60578af7d7bc4644b6ae07ed4eb2648fc3", 1, null, null, CancellationToken)
-			;
-
-		response
-			.Should()
-			.NotBeNull();
-	}
+	public Task RetrieveActivities_Succeeds() => AssertSucceedsAsync(
+		() => Client.BusinessObject.GetActivitiesAsync(
+			ActivityBusObId, ActivityBusObRecId, 1, null, null, CancellationToken));
 
 	// GetBusinessObjectAttachmentByAttachmentIdAsync - unable to test, as we don't have any attachmentIds to test with
 
 	// GetBusinessObjectAttachmentsByIdAndRecIdAsync - unable to test, the business objects we're testing with don't have any attachment
 
 	[Fact]
-	public async Task BusOb_GetAttachmentsByIdAndRec_Error() => await ((Func<Task>)(async () =>
-																	 {
-																		 _ = await Client
-																		 .BusinessObject
-																		 .GetBusinessObjectAttachmentsByIdAndRecIdAsync("93c5ca8e7dbd4cc21dead14df19c684298a78358dd", "93c5ca8e7d6f942534ba214e2787b6d38dba666dab", "File", "Imported", false, CancellationToken)
-																		 ;
-																	 }))
-		.Should()
-		.ThrowAsync<CherwellApiException>()
-		.WithMessage(Message.RecordNotFound)
-		.Where(e =>
-			e.Response != null && e.Response.ErrorCode == ErrorCode.RecordNotFound
-			&& e.Response.HasError
-		);
+	public Task BusOb_GetAttachmentsByIdAndRec_Error() => AssertRecordNotFoundAsync(
+		() => Client.BusinessObject.GetBusinessObjectAttachmentsByIdAndRecIdAsync(
+			AnnouncementBusObId,
+			"93c5ca8e7d6f942534ba214e2787b6d38dba666dab",
+			"File",
+			"Imported",
+			false,
+			CancellationToken));
 
 	// GetBusinessObjectAttachmentsByNameAndPublicIdAsync - unable to test, as we don't have a publicId to test with
 
 	[Fact]
-	public async Task BusOb_GetAttachmentsByNameAndRec_Error() => await ((Func<Task>)(async () =>
-																	   {
-																		   _ = await Client
-																		   .BusinessObject
-																		   .GetBusinessObjectAttachmentsByNameAndPublicIdAsync("Building", "93e8652ccb6ffc759c6b544437bfa25c2e60ca36f0", "File", "Imported", false, CancellationToken)
-																		   ;
-																	   }))
-		.Should()
-		.ThrowAsync<CherwellApiException>()
-		.WithMessage(Message.RecordNotFound)
-		.Where(e =>
-			e.Response != null && e.Response.ErrorCode == ErrorCode.RecordNotFound
-			&& e.Response.HasError
-		);
+	public Task BusOb_GetAttachmentsByNameAndRec_Error() => AssertRecordNotFoundAsync(
+		() => Client.BusinessObject.GetBusinessObjectAttachmentsByNameAndPublicIdAsync(
+			"Building",
+			BuildingBusObId,
+			"File",
+			"Imported",
+			false,
+			CancellationToken));
 
 	[Fact]
-	public async Task BusOb_GetAttachments_Error() => await ((Func<Task>)(async () =>
-														   {
-															   _ = await Client
-															   .BusinessObject
-															   .GetBusinessObjectAttachmentsAsync(
-																   new Models.BusinessObject.AttachmentsRequest
-																   {
-																	   BusObId = "93e8652ccb6ffc759c6b544437bfa25c2e60ca36f0"
-																   }, CancellationToken)
-															   ;
-														   }))
-		.Should()
-		.ThrowAsync<CherwellApiException>()
-		.WithMessage(Message.RecordNotFound)
-		.Where(e =>
-			e.Response != null && e.Response.ErrorCode == ErrorCode.RecordNotFound
-			&& e.Response.HasError
-		);
+	public Task BusOb_GetAttachments_Error() => AssertRecordNotFoundAsync(
+		() => Client.BusinessObject.GetBusinessObjectAttachmentsAsync(
+			new AttachmentsRequest
+			{
+				BusObId = BuildingBusObId
+			}, CancellationToken));
 
 	[Fact]
-	public async Task GetBusObBatch_Succeeds()
-	{
-		var response = await Client
-			.BusinessObject
-			.GetBusinessObjectBatchAsync(
-				new Models.BusinessObject.BatchReadRequest
-				{
-					ReadRequests = [
-						new Models.BusinessObject.ReadRequest
-						{
-							BusObId = "9474671b302f46f59878e54249a1139bca30b2f21a",
-							BusObRecId = "94746720483d08a3aa090740a6bf174ec536843461"
-						}
-					]
-				},
-				CancellationToken)
-			;
-
-		response
-			.Should()
-			.NotBeNull();
-	}
+	public Task GetBusObBatch_Succeeds() => AssertSucceedsAsync(
+		() => Client.BusinessObject.GetBusinessObjectBatchAsync(
+			new BatchReadRequest
+			{
+				ReadRequests = [
+					new ReadRequest
+					{
+						BusObId = "9474671b302f46f59878e54249a1139bca30b2f21a",
+						BusObRecId = "94746720483d08a3aa090740a6bf174ec536843461"
+					}
+				]
+			},
+			CancellationToken));
 
 	// GetBusinessObjectByPublicIdAsync - unable to test, we don't have a publicId to test with
 
 	[Fact]
-	public async Task BusOb_GetObjectByRecId_Error() => await ((Func<Task>)(async () =>
-															 {
-																 _ = await Client
-																 .BusinessObject
-																 .GetBusinessObjectByRecIdAsync("944e0f0f214f53100758de4c81b78466866323bccf", "944e0f1424e236ce71b3c6484d875764a57ce45e51", CancellationToken)
-																 ;
-															 }))
-		.Should()
-		.ThrowAsync<CherwellApiException>()
-		.WithMessage(Message.RecordNotFound)
-		.Where(e =>
-			e.Response != null && e.Response.ErrorCode == ErrorCode.RecordNotFound
-			&& e.Response.HasError
-		);
+	public Task BusOb_GetObjectByRecId_Error() => AssertRecordNotFoundAsync(
+		() => Client.BusinessObject.GetBusinessObjectByRecIdAsync(
+			"944e0f0f214f53100758de4c81b78466866323bccf",
+			"944e0f1424e236ce71b3c6484d875764a57ce45e51",
+			CancellationToken));
 
 	// GetBusinessObjectByScanCodeBusObIdAsync - unable to test, we don't have a scanCode to test with
 
 	// GetBusinessObjectByScanCodeBusObNameAsync - unable to test, we don't have a scanCode to test with
 
 	[Fact]
-	public async Task GetBusObSchema_Succeeds()
-	{
-		var response = await Client
-			.BusinessObject
-			.GetBusinessObjectSchemaAsync("93c5ca8e7dbd4cc21dead14df19c684298a78358dd", true, CancellationToken)
-			;
-
-		response
-			.Should()
-			.NotBeNull();
-	}
+	public Task GetBusObSchema_Succeeds() => AssertSucceedsAsync(
+		() => Client.BusinessObject.GetBusinessObjectSchemaAsync(
+			AnnouncementBusObId, true, CancellationToken));
 
 	[Fact]
-	public async Task GetBusObSummaries_Succeeds()
-	{
-		var response = await Client
-			.BusinessObject
-			.GetBusinessObjectSummariesAsync("Major", CancellationToken)
-			;
-
-		response
-			.Should()
-			.NotBeNull();
-	}
+	public Task GetBusObSummaries_Succeeds() => AssertSucceedsAsync(
+		() => Client.BusinessObject.GetBusinessObjectSummariesAsync("Major", CancellationToken));
 
 	[Fact]
-	public async Task GetBusObSummary_Succeeds()
-	{
-		var response = await Client
-			.BusinessObject
-			.GetBusinessObjectSummaryByIdAsync("944e02d8537d17b3384143451180f87eda564c5798", CancellationToken)
-			;
-
-		response
-			.Should()
-			.NotBeNull();
-	}
+	public Task GetBusObSummary_Succeeds() => AssertSucceedsAsync(
+		() => Client.BusinessObject.GetBusinessObjectSummaryByIdAsync(ActivityBusObId, CancellationToken));
 
 	[Fact]
-	public async Task GetBusObByName_Succeeds()
-	{
-		var response = await Client
-			.BusinessObject
-			.GetBusinessObjectSummaryByNameAsync("Building", CancellationToken)
-			;
-
-		response
-			.Should()
-			.NotBeNull();
-	}
+	public Task GetBusObByName_Succeeds() => AssertSucceedsAsync(
+		() => Client.BusinessObject.GetBusinessObjectSummaryByNameAsync("Building", CancellationToken));
 
 	[Fact]
-	public async Task GetBusObTemplate_Succeeds()
-	{
-		var response = await Client
-			.BusinessObject
-			.GetBusinessObjectTemplateAsync(
-				new Models.BusinessObject.TemplateRequest
-				{
-					BusObId = "93c5ca8e7dbd4cc21dead14df19c684298a78358dd",
-					FieldNames = ["Field1", "Field2"],
-					FieldIds = ["Field1", "Field2"],
-				}, CancellationToken)
-			;
-
-		response
-			.Should()
-			.NotBeNull();
-	}
+	public Task GetBusObTemplate_Succeeds() => AssertSucceedsAsync(
+		() => Client.BusinessObject.GetBusinessObjectTemplateAsync(
+			new TemplateRequest
+			{
+				BusObId = AnnouncementBusObId,
+				FieldNames = ["Field1", "Field2"],
+				FieldIds = ["Field1", "Field2"],
+			}, CancellationToken));
 
 	// GetRelatedBusinessObjectByRequestAsync - unable to test, we don't have a relationship to test on
 
