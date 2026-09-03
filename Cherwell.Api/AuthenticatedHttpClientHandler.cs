@@ -96,7 +96,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			"{RequestId}: REQUEST: Url:{Url}\nHeaders:{Headers}\nBody: {Body}",
 			requestId,
 			request.RequestUri,
-			FormatHeaders(request.Headers),
+			request.Headers.ToDebugString(),
 			FormatJson(body));
 	}
 
@@ -114,12 +114,9 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			"{RequestId}: RESPONSE: {StatusCode}\nHeaders:{Headers}\nBody: {Body}",
 			requestId,
 			response.StatusCode,
-			FormatHeaders(response.Headers),
+			response.Headers.ToDebugString(),
 			FormatJson(body));
 	}
-
-	private static string FormatHeaders(HttpHeaders headers) =>
-		string.Join("\n", headers.Select(header => $"{header.Key}: {string.Join(", ", header.Value)}"));
 
 	private static string FormatJson(string body)
 	{
