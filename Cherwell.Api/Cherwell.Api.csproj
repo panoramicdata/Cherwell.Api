@@ -25,7 +25,25 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <Title>Cherwell.Api</Title>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageReleaseNotes>Removed internal error-level logging of token-refresh (GenerateAccessTokenAsync) failures - callers already catch and log this with context, so it was being logged twice.</PackageReleaseNotes>
+    <PackageReleaseNotes>
+      Security fix: sensitive HTTP headers are now redacted in diagnostic output.
+
+      Previously AuthenticatedHttpClientHandler joined every request and response header, key and
+      value, into its Debug level log message. The handler assigns the Authorization header a bearer
+      token nine lines earlier, so a usable access token was written verbatim. Any consumer running at
+      Debug retained usable credentials for the life of its log store.
+
+      Authorization, Proxy-Authorization, Cookie, Set-Cookie and common API key headers are now
+      redacted, case-insensitively, on request and response, along with any vendor-prefixed variant
+      whose name ends in "Authorization". The scheme and credential length are retained, so requests
+      remain diagnosable. The log line format is otherwise unchanged.
+
+      Consumers should upgrade and then review existing Debug logs for previously captured tokens.
+
+      Also in this release: removed internal error-level logging of token-refresh
+      (GenerateAccessTokenAsync) failures - callers already catch and log this with context, so it was
+      being logged twice.
+    </PackageReleaseNotes>
     <PackageId>Cherwell.Api</PackageId>
     <NeutralResourcesLanguage>en</NeutralResourcesLanguage>
   </PropertyGroup>
@@ -37,6 +55,9 @@
     <PackageReference Include="Newtonsoft.Json" />
     <PackageReference Include="Refit" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+  </ItemGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="Cherwell.Api.Test" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" Pack="true" PackagePath="\" />

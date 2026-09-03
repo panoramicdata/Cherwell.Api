@@ -66,7 +66,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			if (_logger.IsEnabled(LogLevel.Debug))
 			{
 				var url = request.RequestUri!.ToString();
-				var headers = string.Join("\n", request.Headers.Select(h => $"{h.Key}: {string.Join(", ", h.Value.Select(v => v))}"));
+				var headers = request.Headers.ToDebugString();
 				var body = request.Content is not null
 					? await request
 						.Content
@@ -107,7 +107,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			// extract the content is expensive
 			if (_logger.IsEnabled(LogLevel.Debug))
 			{
-				var headers = string.Join("\n", httpResponse.Headers.Select(h => $"{h.Key}: {string.Join(", ", h.Value.Select(v => v))}"));
+				var headers = httpResponse.Headers.ToDebugString();
 				var body = httpResponse.Content is not null
 					? await httpResponse.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false)
 					: string.Empty;
