@@ -266,9 +266,27 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		string grantType,
 		CancellationToken cancellationToken)
 	{
+		using var request = CreateTokenRequest(grantType);
+		return await httpClient.SendAsync(request, cancellationToken).ConfigureAwait(false);
+	}
+
+	/// <summary>
+	/// Builds the OAuth2 token request.
+	/// </summary>
+	/// <remarks>
+	/// Cherwell expects the authentication mode as the "auth_mode" query parameter and the API client id
+	/// as the "client_id" form field. Sending the client id only as an HTTP Basic credential, and omitting
+	/// auth_mode entirely, is rejected by Windows and LDAP configured instances - which is what made
+	/// AuthenticationMode a setting that validated but did nothing. See
+	/// https://help.ivanti.com/ch/help/en_US/CSM/10.5/documentation_bundle/system_administration/rest_api/csm_rest_oauth2_windows_ldap_entered_credentials_authentication.html
+	/// </remarks>
+	/// <param name="grantType">The OAuth2 grant type being requested.</param>
+	internal HttpRequestMessage CreateTokenRequest(string grantType)
+	{
 		var values = new List<KeyValuePair<string, string>>
 		{
 			new("grant_type", grantType),
+			new("client_id", _options.ClientId!),
 			new("username", _options.UserName!),
 			new("password", _options.Password!)
 		};
@@ -277,7 +295,8 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			values.Add(new("refresh_token", _refreshToken));
 		}
 
-		using var request = new HttpRequestMessage(HttpMethod.Post, "token")
+		var requestUri = $"token?auth_mode={Uri.EscapeDataString(_options.AuthenticationMode)}";
+		var request = new HttpRequestMessage(HttpMethod.Post, requestUri)
 		{
 			Content = new FormUrlEncodedContent(values)
 		};
@@ -285,7 +304,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		{
 			CharSet = "UTF-8"
 		};
-		return await httpClient.SendAsync(request, cancellationToken).ConfigureAwait(false);
+		return request;
 	}
 
 	private void StoreToken(string responseBody)
