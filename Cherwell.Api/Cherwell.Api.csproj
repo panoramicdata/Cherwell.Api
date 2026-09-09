@@ -26,6 +26,17 @@
     <Title>Cherwell.Api</Title>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
+      Bug fix (issue #1): the OAuth2 token request now sends the "auth_mode" query parameter and the
+      "client_id" form field that Cherwell documents.
+
+      Previously the client id was sent only as an HTTP Basic credential and auth_mode was not sent at
+      all, so CherwellClientOptions.AuthenticationMode was validated but never applied - setting it to
+      Windows or LDAP had no effect, and instances configured for those modes rejected the request.
+      Against Cherwell 10.5 this presented as authentication that never succeeded.
+
+      AuthenticationMode continues to default to "Internal", which is the mode Cherwell assumes when
+      auth_mode is absent, so instances that authenticate successfully today are unaffected.
+
       Security fix: sensitive HTTP headers are now redacted in diagnostic output.
 
       Previously AuthenticatedHttpClientHandler joined every request and response header, key and

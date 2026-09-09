@@ -1,0 +1,19 @@
+---
+# Cherwell.Api/Models holds the data transfer objects for Cherwell's REST API. They are a
+# one-to-one transcription of Cherwell's own published contract, so their shape is not ours to
+# choose: SaveLinkAttachmentRequest and SaveUrlAttachmentRequest, for instance, are reported as
+# ~104% duplicates of each other because they differ only in their final property.
+#
+# Codacy's duplication detector reads that correctly - the text really is repeated - but the
+# remedy it implies does not apply here. Factoring the shared properties into base classes would
+# change the public API surface of a published NuGet package, and would make the types stop
+# mirroring the vendor contract they exist to mirror, in exchange for a metric that Codacy itself
+# reports as informational.
+#
+# Duplication analysis is therefore disabled for this directory only. Every other check, including
+# all issue patterns, still runs against these files, and duplication analysis still runs
+# everywhere else in the repository.
+engines:
+  duplication:
+    exclude_paths:
+      - 'Cherwell.Api/Models/**'

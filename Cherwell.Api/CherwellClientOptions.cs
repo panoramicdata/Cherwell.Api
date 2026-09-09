@@ -31,8 +31,13 @@ public class CherwellClientOptions
 	public string BaseAddress { get; set; } = string.Empty;
 
 	/// <summary>
-	/// The authentication mode in use for connection attempts
+	/// The authentication mode in use for connection attempts.
 	/// </summary>
+	/// <remarks>
+	/// Sent as the "auth_mode" query parameter on the token request. Cherwell documents "Internal"
+	/// (the default), "Windows", "LDAP" and "SAML". "Internal" is what Cherwell assumes when the
+	/// parameter is absent.
+	/// </remarks>
 	public string AuthenticationMode { get; set; } = "Internal";
 
 	/// <summary>
