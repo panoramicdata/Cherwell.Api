@@ -141,10 +141,11 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		var body = httpResponse.Content is null
 			? string.Empty
 			: await httpResponse.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+
 		Response? response;
 		try
 		{
-			response = JsonSerializer.Deserialize<Response>(body, JsonOptions);
+			response = DeserializeResponse(body);
 		}
 		catch (JsonException)
 		{
@@ -156,6 +157,16 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			throw CreateUnstructuredResponseException(httpResponse, body);
 		}
 
+		ThrowForStructuredResponse(response, httpResponse);
+	}
+
+	private static Response? DeserializeResponse(string body)
+	{
+		return JsonSerializer.Deserialize<Response>(body, JsonOptions);
+	}
+
+	private static void ThrowForStructuredResponse(Response response, HttpResponseMessage httpResponse)
+	{
 		if (response.HttpStatusCode is null or EnumHttpStatusCode.None)
 		{
 			response.HttpStatusCode = (EnumHttpStatusCode)httpResponse.StatusCode;
@@ -208,13 +219,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 
 		for (var attempt = 1; attempt <= _maxAttempts; attempt++)
 		{
-			if (_logger.IsEnabled(LogLevel.Information))
-			{
-				_logger.LogInformation(
-					"Cherwell 'GenerateAccessTokenAsync' (attempt {Attempt}/{MaxAttempts})",
-					attempt,
-					_maxAttempts);
-			}
+			LogTokenAttempt(attempt);
 			using var response = await SendTokenRequestAsync(
 				httpClient,
 				grantTypeString,
@@ -230,19 +235,35 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			ThrowIfAuthenticationRejected(response, responseBody);
 			if (attempt < _maxAttempts)
 			{
-				if (_logger.IsEnabled(LogLevel.Information))
-				{
-					_logger.LogInformation(
-						"Cherwell 'GenerateAccessTokenAsync' failed with status code {StatusCode}: waiting {RetryDelayMs}ms before retrying...",
-						response.StatusCode,
-						retryDelay.TotalMilliseconds);
-				}
+				LogTokenRetry(response, retryDelay);
 				await Task.Delay(retryDelay, cancellationToken).ConfigureAwait(false);
 				retryDelay *= 2;
 			}
 		}
 
 		throw new AuthenticationException($"Authentication failed after {_maxAttempts} attempts");
+	}
+
+	private void LogTokenAttempt(int attempt)
+	{
+		if (_logger.IsEnabled(LogLevel.Information))
+		{
+			_logger.LogInformation(
+				"Cherwell 'GenerateAccessTokenAsync' (attempt {Attempt}/{MaxAttempts})",
+				attempt,
+				_maxAttempts);
+		}
+	}
+
+	private void LogTokenRetry(HttpResponseMessage response, TimeSpan retryDelay)
+	{
+		if (_logger.IsEnabled(LogLevel.Information))
+		{
+			_logger.LogInformation(
+				"Cherwell 'GenerateAccessTokenAsync' failed with status code {StatusCode}: waiting {RetryDelayMs}ms before retrying...",
+				response.StatusCode,
+				retryDelay.TotalMilliseconds);
+		}
 	}
 
 	private HttpClient CreateTokenClient()
