@@ -14,6 +14,7 @@
     <File Path="Directory.Packages.props" />
     <File Path="Publish.ps1" />
     <File Path="SECURITY.md" />
+    <File Path=".codacy.yml" />
   </Folder>
   <Project Path="Cherwell.Api.Test/Cherwell.Api.Test.csproj" />
   <Project Path="Cherwell.Api/Cherwell.Api.csproj" />
