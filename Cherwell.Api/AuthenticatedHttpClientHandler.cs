@@ -232,16 +232,29 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 				return;
 			}
 
-			ThrowIfAuthenticationRejected(response, responseBody);
-			if (attempt < _maxAttempts)
-			{
-				LogTokenRetry(response, retryDelay);
-				await Task.Delay(retryDelay, cancellationToken).ConfigureAwait(false);
-				retryDelay *= 2;
-			}
+			retryDelay = await HandleTokenFailureAsync(response, responseBody, attempt, retryDelay, cancellationToken)
+				.ConfigureAwait(false);
 		}
 
 		throw new AuthenticationException($"Authentication failed after {_maxAttempts} attempts");
+	}
+
+	private async Task<TimeSpan> HandleTokenFailureAsync(
+		HttpResponseMessage response,
+		string responseBody,
+		int attempt,
+		TimeSpan retryDelay,
+		CancellationToken cancellationToken)
+	{
+		ThrowIfAuthenticationRejected(response, responseBody);
+		if (attempt < _maxAttempts)
+		{
+			LogTokenRetry(response, retryDelay);
+			await Task.Delay(retryDelay, cancellationToken).ConfigureAwait(false);
+			retryDelay *= 2;
+		}
+
+		return retryDelay;
 	}
 
 	private void LogTokenAttempt(int attempt)
@@ -304,17 +317,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 	/// <param name="grantType">The OAuth2 grant type being requested.</param>
 	internal HttpRequestMessage CreateTokenRequest(string grantType)
 	{
-		var values = new List<KeyValuePair<string, string>>
-		{
-			new("grant_type", grantType),
-			new("client_id", _options.ClientId!),
-			new("username", _options.UserName!),
-			new("password", _options.Password!)
-		};
-		if (_refreshToken is not null)
-		{
-			values.Add(new("refresh_token", _refreshToken));
-		}
+		var values = CreateTokenValues(grantType);
 
 		var requestUri = $"token?auth_mode={Uri.EscapeDataString(_options.AuthenticationMode)}";
 		var request = new HttpRequestMessage(HttpMethod.Post, requestUri)
@@ -326,6 +329,27 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			CharSet = "UTF-8"
 		};
 		return request;
+	}
+
+	private List<KeyValuePair<string, string>> CreateTokenValues(string grantType)
+	{
+		var values = new List<KeyValuePair<string, string>>
+		{
+			new("grant_type", grantType),
+			new("client_id", _options.ClientId!),
+			new("username", _options.UserName!),
+			new("password", _options.Password!)
+		};
+		AddRefreshTokenValue(values);
+		return values;
+	}
+
+	private void AddRefreshTokenValue(List<KeyValuePair<string, string>> values)
+	{
+		if (_refreshToken is not null)
+		{
+			values.Add(new("refresh_token", _refreshToken));
+		}
 	}
 
 	private void StoreToken(string responseBody)
