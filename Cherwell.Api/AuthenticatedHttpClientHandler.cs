@@ -42,19 +42,24 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 	{
 		try
 		{
-			var requestId = Guid.NewGuid();
-			await AddAuthenticationAsync(request, cancellationToken).ConfigureAwait(false);
-			AddCulture(request);
-			await LogRequestAsync(requestId, request, cancellationToken).ConfigureAwait(false);
-			var response = await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
-			await LogResponseAsync(requestId, response, cancellationToken).ConfigureAwait(false);
-			await ThrowIfUnsuccessfulAsync(response, cancellationToken).ConfigureAwait(false);
-			return response;
+			return await SendRequestAsync(request, cancellationToken).ConfigureAwait(false);
 		}
 		catch (Exception ex) when (ex is not CherwellApiException)
 		{
 			throw new CherwellApiException("Unexpected Cherwell API exception.", ex);
 		}
+	}
+
+	private async Task<HttpResponseMessage> SendRequestAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+	{
+		var requestId = Guid.NewGuid();
+		await AddAuthenticationAsync(request, cancellationToken).ConfigureAwait(false);
+		AddCulture(request);
+		await LogRequestAsync(requestId, request, cancellationToken).ConfigureAwait(false);
+		var response = await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
+		await LogResponseAsync(requestId, response, cancellationToken).ConfigureAwait(false);
+		await ThrowIfUnsuccessfulAsync(response, cancellationToken).ConfigureAwait(false);
+		return response;
 	}
 
 	private async Task AddAuthenticationAsync(HttpRequestMessage request, CancellationToken cancellationToken)
