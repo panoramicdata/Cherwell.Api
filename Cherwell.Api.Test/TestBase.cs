@@ -4,6 +4,9 @@ using Microsoft.Extensions.Logging;
 
 namespace Cherwell.Api.Test;
 
+// Every test deriving from this class calls the live Cherwell API with credentials from user
+// secrets, which CI does not have. CI excludes them with --filter "Category!=Integration".
+[Trait("Category", "Integration")]
 public abstract class TestBase : IAsyncLifetime
 {
 	private CherwellClient? _cherwellClient;
