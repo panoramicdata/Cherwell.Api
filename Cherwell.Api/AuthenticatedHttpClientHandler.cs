@@ -244,6 +244,15 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		throw new AuthenticationException($"Authentication failed after {_maxAttempts} attempts");
 	}
 
+	private async Task<HttpResponseMessage> SendTokenRequestAsync(
+		HttpClient httpClient,
+		string grantType,
+		CancellationToken cancellationToken)
+	{
+		using var request = CreateTokenRequest(grantType);
+		return await httpClient.SendAsync(request, cancellationToken).ConfigureAwait(false);
+	}
+
 	private async Task<TimeSpan> HandleTokenFailureAsync(
 		HttpResponseMessage response,
 		string responseBody,
@@ -299,15 +308,6 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		GrantTypes.RefreshToken => "refresh_token",
 		_ => throw new ArgumentOutOfRangeException(nameof(grantType))
 	};
-
-	private async Task<HttpResponseMessage> SendTokenRequestAsync(
-		HttpClient httpClient,
-		string grantType,
-		CancellationToken cancellationToken)
-	{
-		using var request = CreateTokenRequest(grantType);
-		return await httpClient.SendAsync(request, cancellationToken).ConfigureAwait(false);
-	}
 
 	/// <summary>
 	/// Builds the OAuth2 token request.
