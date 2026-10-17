@@ -94,9 +94,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			return;
 		}
 
-		var body = request.Content is null
-			? string.Empty
-			: await request.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+		var body = await ReadBodyAsync(request.Content, cancellationToken).ConfigureAwait(false);
 		_logger.LogDebug(
 			"{RequestId}: REQUEST: Url:{Url}\nHeaders:{Headers}\nBody: {Body}",
 			requestId,
@@ -112,15 +110,23 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			return;
 		}
 
-		var body = response.Content is null
-			? string.Empty
-			: await response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+		var body = await ReadBodyAsync(response.Content, cancellationToken).ConfigureAwait(false);
 		_logger.LogDebug(
 			"{RequestId}: RESPONSE: {StatusCode}\nHeaders:{Headers}\nBody: {Body}",
 			requestId,
 			response.StatusCode,
 			response.Headers.ToDebugString(),
 			FormatJson(body));
+	}
+
+	private static async Task<string> ReadBodyAsync(HttpContent? content, CancellationToken cancellationToken)
+	{
+		if (content is null)
+		{
+			return string.Empty;
+		}
+
+		return await content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 	}
 
 	private static string FormatJson(string body)
@@ -143,9 +149,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 			return;
 		}
 
-		var body = httpResponse.Content is null
-			? string.Empty
-			: await httpResponse.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+		var body = await ReadBodyAsync(httpResponse.Content, cancellationToken).ConfigureAwait(false);
 
 		Response? response;
 		try
@@ -229,7 +233,7 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 				httpClient,
 				grantTypeString,
 				cancellationToken).ConfigureAwait(false);
-			var responseBody = await response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+			var responseBody = await ReadBodyAsync(response.Content, cancellationToken).ConfigureAwait(false);
 
 			if (response.IsSuccessStatusCode)
 			{
