@@ -71,6 +71,11 @@ public class CherwellClientOptions
 	public int MaxAttempts { get; set; } = 5;
 
 	/// <summary>
+	/// Whether to refuse every request that could modify Cherwell, before it is sent
+	/// </summary>
+	public bool IsReadOnly { get; set; }
+
+	/// <summary>
 	/// Validate that all of the necessary options have been specified
 	/// </summary>
 	/// <exception cref="ConfigurationException">A problem has been identified with the options provided</exception>

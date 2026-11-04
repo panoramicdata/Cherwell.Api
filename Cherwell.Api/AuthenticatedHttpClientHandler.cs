@@ -40,6 +40,11 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 	/// <returns>The response to the request that was sent.</returns>
 	protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
 	{
+		if (_options.IsReadOnly && !IsReadRequest(request))
+		{
+			throw new InvalidOperationException($"{request.Method} {request.RequestUri} is refused because CherwellClientOptions.IsReadOnly is set.");
+		}
+
 		try
 		{
 			return await SendRequestAsync(request, cancellationToken).ConfigureAwait(false);
@@ -48,6 +53,40 @@ public class AuthenticatedHttpClientHandler : HttpClientHandler
 		{
 			throw new CherwellApiException("Unexpected Cherwell API exception.", ex);
 		}
+	}
+
+	private static readonly HashSet<string> ReadOnlyPostOperations = new(StringComparer.OrdinalIgnoreCase)
+	{
+		"fieldvalueslookup",
+		"getbusinessobjectattachments",
+		"getbusinessobjectbatch",
+		"getbusinessobjecttemplate",
+		"getquicksearchconfigurationforbusobs",
+		"getquicksearchresults",
+		"getquicksearchspecificresults",
+		"getrelatedbusinessobject",
+		"getsearchresults",
+		"getsearchresultsexport",
+		"getuserbatch",
+		"storedsearches"
+	};
+
+	// Cherwell reads some data with POST, so those operations are allowed by name.
+	internal static bool IsReadRequest(HttpRequestMessage request)
+	{
+		if (request.Method == HttpMethod.Get || request.Method == HttpMethod.Head || request.Method == HttpMethod.Options)
+		{
+			return true;
+		}
+
+		if (request.Method != HttpMethod.Post)
+		{
+			return false;
+		}
+
+		var uri = request.RequestUri;
+		var path = uri is null ? string.Empty : uri.IsAbsoluteUri ? uri.AbsolutePath : uri.OriginalString.Split('?')[0];
+		return ReadOnlyPostOperations.Contains(path.TrimEnd('/').Split('/')[^1]);
 	}
 
 	private async Task<HttpResponseMessage> SendRequestAsync(HttpRequestMessage request, CancellationToken cancellationToken)
