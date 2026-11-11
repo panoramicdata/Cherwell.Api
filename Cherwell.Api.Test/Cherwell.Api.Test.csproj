@@ -1,40 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-
-	<PropertyGroup>
-		<OutputType>Exe</OutputType>
-		<TargetFramework>net10.0</TargetFramework>
-		<UseMicrosoftTestingPlatformRunner>true</UseMicrosoftTestingPlatformRunner>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<LangVersion>latest</LangVersion>
-		<Nullable>enable</Nullable>
-		<AnalysisMode>Recommended</AnalysisMode>
-		<AnalysisLevel>latest-recommended</AnalysisLevel>
-		<NoWarn>$(NoWarn);CS1591</NoWarn>
-		<Version>1.0</Version>
-		<UserSecretsId>37c7e161-87d9-4818-bcce-ca1f4dc49233</UserSecretsId>
-	</PropertyGroup>
-
-	<ItemGroup>
-		<PackageReference Include="AwesomeAssertions" />
-		<PackageReference Include="AwesomeAssertions.Analyzers">
-			<PrivateAssets>all</PrivateAssets>
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-		</PackageReference>
-		<PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Json" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" />
-		<PackageReference Include="Microsoft.NET.Test.Sdk" />
-		<PackageReference Include="xunit.v3" />
-		<PackageReference Include="xunit.runner.visualstudio">
-			<PrivateAssets>all</PrivateAssets>
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-		</PackageReference>
-	<PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" PrivateAssets="all" /></ItemGroup>
-
-	<ItemGroup>
-		<ProjectReference Include="..\Cherwell.Api\Cherwell.Api.csproj" />
-	</ItemGroup>
-
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net11.0</TargetFramework>
+    <UseMicrosoftTestingPlatformRunner>true</UseMicrosoftTestingPlatformRunner>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <AnalysisMode>Recommended</AnalysisMode>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <Version>1.0</Version>
+    <UserSecretsId>37c7e161-87d9-4818-bcce-ca1f4dc49233</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AwesomeAssertions" />
+    <PackageReference Include="AwesomeAssertions.Analyzers">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="xunit.runner.visualstudio">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cherwell.Api\Cherwell.Api.csproj" />
+  </ItemGroup>
 </Project>
