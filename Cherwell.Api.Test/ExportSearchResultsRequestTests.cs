@@ -11,40 +11,7 @@ public class ExportSearchResultsRequestTests
 	[Fact]
 	public void Properties_SettingValues_ReadBack()
 	{
-		var request = new ExportSearchResultsRequest
-		{
-			ExportFormat = ExportSearchResultsRequest.EnumExportFormat.Excel,
-			CustomSeparator = "|",
-			ExportTitle = "export",
-			Association = "inc",
-			AssociationName = "Incident",
-			BusObId = "busob",
-			CustomGridDefId = "grid",
-			DateTimeFormatting = "ISO",
-			FieldId = "field",
-			Fields = new List<string> { "f1", "f2" },
-			Filters = new List<FilterInfo>
-			{
-				new() { FieldId = "f1", Operator = "eq", Value = "v1" }
-			},
-			IncludeAllFields = true,
-			IncludeSchema = true,
-			PageNumber = 2,
-			PageSize = 50,
-			Scope = "global",
-			ScopeOwner = "owner",
-			SearchId = "search",
-			SearchName = "my search",
-			SearchText = "filter text",
-			Sorting = new List<SortInfo>
-			{
-				new() { FieldId = "f1", SortDirection = 1 }
-			},
-			PromptValues = new List<PromptValue>
-			{
-				new() { PromptId = "p1", Value = 7 }
-			}
-		};
+		var request = BuildRequest();
 
 		request.ExportFormat.Should().Be(ExportSearchResultsRequest.EnumExportFormat.Excel);
 		request.CustomSeparator.Should().Be("|");
@@ -69,4 +36,39 @@ public class ExportSearchResultsRequestTests
 		request.Sorting.Should().ContainSingle().Which.FieldId.Should().Be("f1");
 		request.PromptValues.Should().ContainSingle().Which.PromptId.Should().Be("p1");
 	}
+
+	private static ExportSearchResultsRequest BuildRequest() => new()
+	{
+		ExportFormat = ExportSearchResultsRequest.EnumExportFormat.Excel,
+		CustomSeparator = "|",
+		ExportTitle = "export",
+		Association = "inc",
+		AssociationName = "Incident",
+		BusObId = "busob",
+		CustomGridDefId = "grid",
+		DateTimeFormatting = "ISO",
+		FieldId = "field",
+		Fields = new List<string> { "f1", "f2" },
+		Filters = new List<FilterInfo>
+		{
+			new() { FieldId = "f1", Operator = "eq", Value = "v1" }
+		},
+		IncludeAllFields = true,
+		IncludeSchema = true,
+		PageNumber = 2,
+		PageSize = 50,
+		Scope = "global",
+		ScopeOwner = "owner",
+		SearchId = "search",
+		SearchName = "my search",
+		SearchText = "filter text",
+		Sorting = new List<SortInfo>
+		{
+			new() { FieldId = "f1", SortDirection = 1 }
+		},
+		PromptValues = new List<PromptValue>
+		{
+			new() { PromptId = "p1", Value = 7 }
+		}
+	};
 }

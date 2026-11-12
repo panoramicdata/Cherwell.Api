@@ -10,32 +10,7 @@ public class FieldTests
 	[Fact]
 	public void Properties_SettingValues_ReadBack()
 	{
-		var field = new Field
-		{
-			Caption = "Caption",
-			CurrencyCulture = "en-US",
-			CurrencySymbol = "$",
-			DecimalDigits = 2,
-			DefaultSortOrderAscending = true,
-			DisplayName = "Display",
-			FieldName = "field",
-			FullFieldId = "full",
-			HasDefaultSortField = true,
-			FieldId = "field-id",
-			IsBinary = true,
-			IsCurrency = true,
-			IsDateTime = true,
-			IsFilterAllowed = true,
-			IsLogical = true,
-			IsNumber = true,
-			IsShortDate = true,
-			IsShortTime = true,
-			IsVisible = true,
-			Sortable = true,
-			SortOrder = "asc",
-			StorageName = "storage",
-			WholeDigits = 6
-		};
+		var field = BuildField();
 
 		field.Caption.Should().Be("Caption");
 		field.CurrencyCulture.Should().Be("en-US");
@@ -61,4 +36,31 @@ public class FieldTests
 		field.StorageName.Should().Be("storage");
 		field.WholeDigits.Should().Be(6);
 	}
+
+	private static Field BuildField() => new()
+	{
+		Caption = "Caption",
+		CurrencyCulture = "en-US",
+		CurrencySymbol = "$",
+		DecimalDigits = 2,
+		DefaultSortOrderAscending = true,
+		DisplayName = "Display",
+		FieldName = "field",
+		FullFieldId = "full",
+		HasDefaultSortField = true,
+		FieldId = "field-id",
+		IsBinary = true,
+		IsCurrency = true,
+		IsDateTime = true,
+		IsFilterAllowed = true,
+		IsLogical = true,
+		IsNumber = true,
+		IsShortDate = true,
+		IsShortTime = true,
+		IsVisible = true,
+		Sortable = true,
+		SortOrder = "asc",
+		StorageName = "storage",
+		WholeDigits = 6
+	};
 }
