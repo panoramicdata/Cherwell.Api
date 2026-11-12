@@ -76,6 +76,7 @@ public class CherwellClientOptionsTests
 			case RequiredSetting.ClientId: options.ClientId = ""; break;
 			case RequiredSetting.BaseAddress: options.BaseAddress = string.Empty; break;
 			case RequiredSetting.AuthenticationMode: options.AuthenticationMode = " "; break;
+			default: throw new ArgumentOutOfRangeException(nameof(which));
 		}
 
 		ConfigurationException? exception = null;
