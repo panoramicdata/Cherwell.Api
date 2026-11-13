@@ -7,6 +7,8 @@
 
 This project implements access to the v1 Cherwell API
 
+Supports .NET 11.0.
+
 See the [contribution guide](CONTRIBUTING.md) for more information regarding contributing to this project
 
 To use the Cherwell API nuget package:
