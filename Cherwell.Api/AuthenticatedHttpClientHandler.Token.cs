@@ -9,6 +9,11 @@ namespace Cherwell.Api;
 
 public partial class AuthenticatedHttpClientHandler
 {
+	private const int TokenSubtractSeconds = 30;
+	private string? _accessToken;
+	private string? _refreshToken;
+	private DateTime _tokenRefreshRequiredAt = DateTime.MaxValue;
+
 	private async Task<string> GetAccessTokenAsync(CancellationToken cancellationToken)
 	{
 		if (_accessToken is null)

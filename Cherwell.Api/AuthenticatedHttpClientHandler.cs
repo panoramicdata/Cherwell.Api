@@ -10,16 +10,12 @@ namespace Cherwell.Api;
 public partial class AuthenticatedHttpClientHandler : HttpClientHandler
 {
 	private const string AuthenticationType = "Bearer";
-	private const int TokenSubtractSeconds = 30;
 	private static readonly JsonSerializerOptions JsonOptions = CherwellJson.CreateSerializerOptions();
 
 	private readonly CherwellClientOptions _options;
 	private readonly ILogger _logger;
 	private readonly HttpClient _authenticatingClient;
 	private readonly int _maxAttempts;
-	private string? _accessToken;
-	private string? _refreshToken;
-	private DateTime _tokenRefreshRequiredAt = DateTime.MaxValue;
 
 	public AuthenticatedHttpClientHandler(CherwellClientOptions options, ILogger logger)
 	{
