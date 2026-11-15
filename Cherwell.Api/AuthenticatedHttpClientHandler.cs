@@ -2,6 +2,7 @@ using Cherwell.Api.Exceptions;
 using Microsoft.Extensions.Logging;
 using System.Net.Http.Headers;
 using System.Security.Authentication;
+using System.Text.Json;
 using System.Web;
 
 namespace Cherwell.Api;
